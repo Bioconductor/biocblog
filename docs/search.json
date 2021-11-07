@@ -1,0 +1,20 @@
+{
+  "articles": [
+    {
+      "path": "about.html",
+      "title": "About this blog",
+      "description": "Some additional details about the blog",
+      "author": [],
+      "contents": "\r\n\r\n\r\n\r\n",
+      "last_modified": "2021-11-08T01:54:45+09:00"
+    },
+    {
+      "path": "index.html",
+      "title": "Bioconductor Blog",
+      "author": [],
+      "contents": "\r\n\r\n\r\n\r\n",
+      "last_modified": "2021-11-08T02:10:26+09:00"
+    }
+  ],
+  "collections": ["posts/posts.json"]
+}
