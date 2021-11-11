@@ -1,0 +1,84 @@
+---
+title: "Contributing articles"
+editor_options:
+  markdown:
+    wrap: 72
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+We very much appreciate contributions to the RStudio AI Blog from the
+broader R community. If you are interested in publishing some of your
+own work or insights, we'd love to hear from you!
+
+Articles posted on the RStudio AI Blog are authored using [Distill for R
+Markdown](https://rstudio.github.io/distill). The easiest way to
+contribute a new article is as follows:
+
+1.  Create a fork of the [RStudio AI blog
+    repository](https://github.com/rstudio/ai-blog) on GitHub.
+
+2.  In your fork, create a new branch that will contain your [distill
+    article](https://rstudio.github.io/distill). When you're done,
+    please check in the raw `Rmd` plus any static files you might have added to the
+    post's source directory. Don't check in any generated files, such as html.
+
+3.  Be sure that you've included all required [article metadata] (see
+    below for details).
+
+4.  [Post an issue](https://github.com/rstudio/ai-blog/issues) on the
+    RStudio AI Blog repo requesting that we accept your article (be sure
+    to include a link back to your article's GitHub repo!).
+
+Once we see your issue we'll take a look at your article, suggest
+changes as necessary, then publish it when it's ready.
+
+### Article metadata
+
+To be included in the blog, your article should include some standard
+metadata fields. Here's an example of a post that includes all required
+metadata:
+
+``` {.markup}
+---
+title: "Classifying physical activity from smartphone data with Keras"
+description: |
+  Using Keras to train a convolutional neural network to classify physical
+  activity. The dataset was built from the recordings of 30 subjects
+  performing basic activities and postural transitions while carrying a
+  waist-mounted smartphone with embedded inertial sensors.
+author:
+  - name: Nick Strayer
+    url: http://nickstrayer.me
+    affiliation: Vanderbilt University
+    affiliation_url: https://www.vanderbilt.edu/biostatistics-graduate/
+date: 07-17-2018
+creative_commons: CC BY
+repository_url: https://github.com/nstrayer/activity_detection_post
+output:
+  distill::distill_article:
+    self_contained: false
+---
+```
+
+Note that the `author` field includes a URL for the author as well as
+their affiliation (you can include multiple authors). Note also the
+`creative_commons` field which marks the article as being share-able
+(all contributed posts must have a [Creative
+Commons](https://creativecommons.org/) license). Finally, the
+`repository_url` is used to provide links from the article back to
+GitHub.
+
+### Article preview
+
+Please note after submitting a PR for this repository, GitHub workflow will
+start building a preview version of RStudio AI blog that includes your article.
+Once this build completes, a directory named 'ai-blog-preview' will be uploaded
+in a zip file as the build artifact. If you would like to browse this preview
+version locally, please follow the steps in
+[Downloading workflow artifacts](https://docs.github.com/en/actions/managing-workflow-runs/downloading-workflow-artifacts)
+to download ai-blog-preview.zip, unzip it, and open ai-blog-preview/index.html
+in your browser. You should then be able to see your article on the landing page
+of the preview.
