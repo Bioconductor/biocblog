@@ -1,14 +1,18 @@
 name: "biocblog"
-title: "Bioconductor Blog"
+title: "Bioconductor community blog"
 description: |
-  Bioconductor Blog
+  Bioconductor community blog
 output_dir: "docs"
 navbar:
   right:
     - text: "Home"
       href: index.html
+    - text: "Gallery"
+      href: gallery.html
     - text: "About"
       href: about.html
+    - text: "Contributing"
+      href: contributing.html
 output:
   distill::distill_article:
     css: styles.css

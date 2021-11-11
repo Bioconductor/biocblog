@@ -1,5 +1,5 @@
 ---
-title: "Bioconductor Blog"
+title: "Bioconductor community blog"
 site: distill::distill_website
 listing: posts
 ---

@@ -87,22 +87,22 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 
 
   <!--radix_placeholder_meta_tags-->
-  <title>Bioconductor Blog: About this blog</title>
+  <title>Bioconductor community blog: About this blog</title>
 
   <meta property="description" itemprop="description" content="Some additional details about the blog"/>
 
 
 
   <!--  https://developers.facebook.com/docs/sharing/webmasters#markup -->
-  <meta property="og:title" content="Bioconductor Blog: About this blog"/>
+  <meta property="og:title" content="Bioconductor community blog: About this blog"/>
   <meta property="og:type" content="article"/>
   <meta property="og:description" content="Some additional details about the blog"/>
   <meta property="og:locale" content="en_US"/>
-  <meta property="og:site_name" content="Bioconductor Blog"/>
+  <meta property="og:site_name" content="Bioconductor community blog"/>
 
   <!--  https://dev.twitter.com/cards/types/summary -->
   <meta property="twitter:card" content="summary"/>
-  <meta property="twitter:title" content="Bioconductor Blog: About this blog"/>
+  <meta property="twitter:title" content="Bioconductor community blog: About this blog"/>
   <meta property="twitter:description" content="Some additional details about the blog"/>
 
   <!--/radix_placeholder_meta_tags-->
@@ -2047,8 +2047,14 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   <script src="site_libs/webcomponents-2.0.0/webcomponents.js"></script>
   <script src="site_libs/distill-2.2.21/template.v2.js"></script>
   <!--radix_placeholder_site_in_header-->
+  <style type="text/css">
+  .distill-site-nav {
+    background-color: #0093AD;
+  }
+  </style>
   <!--/radix_placeholder_site_in_header-->
 
+  <link rel="stylesheet" href="styles.css" type="text/css"/>
 
 </head>
 
@@ -2065,12 +2071,14 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <header class="header header--fixed" role="banner">
 <nav class="distill-site-nav distill-site-header">
 <div class="nav-left">
-<a href="index.html" class="title">Bioconductor Blog</a>
+<a href="index.html" class="title">Bioconductor community blog</a>
 <input id="distill-search" class="nav-search hidden" type="text" placeholder="Search..."/>
 </div>
 <div class="nav-right">
 <a href="index.html">Home</a>
+<a href="gallery.html">Gallery</a>
 <a href="about.html">About</a>
+<a href="contributing.html">Contributing</a>
 <a href="javascript:void(0);" class="nav-toggle">&#9776;</a>
 </div>
 </nav>
@@ -2088,6 +2096,92 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 
 
 <div class="d-article">
+<p>Welcome to our blog! Here you’ll find the latest news, insights, and examples of using AI-related technologies (deep learning frameworks such as <a href="https://github.com/rstudio/tensorflow">TensorFlow</a>, <a href="https://github.com/rstudio/keras">Keras</a>, and <a href="https://torch.mlverse.com">torch</a>, as well as distributed-computing and automation-related frameworks like <a href="https://github.com/sparklyr/sparklyr">sparklyr</a> and <a href="https://github.com/mlflow/mlflow">mlflow</a>) from R.</p>
+<p>We also like to draw from a wide variety of contributors (so please consider submitting a post if so motivated!). Here is an alphabetic list of authors so far:</p>
+<table>
+<thead>
+<tr class="header">
+<th>Author</th>
+<th>Affiliation</th>
+<th>GitHub</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Turgut Abdullayev</td>
+<td>QSS Analytics</td>
+<td><a href="https://github.com/henry090" class="uri">https://github.com/henry090</a></td>
+</tr>
+<tr class="even">
+<td>J.J. Allaire</td>
+<td>RStudio</td>
+<td><a href="https://github.com/jjallaire" class="uri">https://github.com/jjallaire</a></td>
+</tr>
+<tr class="odd">
+<td>François Chollet</td>
+<td>Google Brain</td>
+<td><a href="https://github.com/fchollet" class="uri">https://github.com/fchollet</a></td>
+</tr>
+<tr class="even">
+<td>Athos Petri Damiani</td>
+<td>Curso-R</td>
+<td><a href="https://github.com/Athospd" class="uri">https://github.com/Athospd</a></td>
+</tr>
+<tr class="odd">
+<td>Matt Dancho</td>
+<td>Business Science</td>
+<td><a href="https://github.com/mdancho84" class="uri">https://github.com/mdancho84</a></td>
+</tr>
+<tr class="even">
+<td>Daniel Falbel</td>
+<td>RStudio</td>
+<td><a href="https://github.com/dfalbel" class="uri">https://github.com/dfalbel</a></td>
+</tr>
+<tr class="odd">
+<td>Leon Eyrich Jessen</td>
+<td>Tech. U of Denmark</td>
+<td><a href="https://github.com/leonjessen" class="uri">https://github.com/leonjessen</a></td>
+</tr>
+<tr class="even">
+<td>Sigrid Keydana</td>
+<td>RStudio</td>
+<td><a href="https://github.com/skeydan" class="uri">https://github.com/skeydan</a></td>
+</tr>
+<tr class="odd">
+<td>Yitao Li</td>
+<td>RStudio</td>
+<td><a href="https://github.com/yitao-li" class="uri">https://github.com/yitao-li</a></td>
+</tr>
+<tr class="even">
+<td>Javier Luraschi</td>
+<td>RStudio</td>
+<td><a href="https://github.com/javierluraschi" class="uri">https://github.com/javierluraschi</a></td>
+</tr>
+<tr class="odd">
+<td>Pete Mohanty</td>
+<td>Stanford</td>
+<td><a href="https://github.com/rdrr1990" class="uri">https://github.com/rdrr1990</a></td>
+</tr>
+<tr class="even">
+<td>Thomas Lin Pedersen</td>
+<td>RStudio</td>
+<td><a href="https://github.com/thomasp85" class="uri">https://github.com/thomasp85</a></td>
+</tr>
+<tr class="odd">
+<td>Nick Strayer</td>
+<td>Vanderbilt</td>
+<td><a href="https://github.com/nstrayer/" class="uri">https://github.com/nstrayer/</a></td>
+</tr>
+<tr class="even">
+<td>Yuan Tang</td>
+<td>Ant Group</td>
+<td><a href="https://github.com/terrytangyuan" class="uri">https://github.com/terrytangyuan</a></td>
+</tr>
+</tbody>
+</table>
+<p>If you are interested in publishing some of your own work or insights on the RStudio AI Blog, we’d love to hear from you! See the article on <a href="contributing.html">contributing posts</a> for additional details.</p>
+<p>The RStudio AI Blog was created using <a href="https://rstudio.github.io/distill">Distill for R Markdown</a>.</p>
+<p><br/></p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
 <!--radix_placeholder_article_footer-->
 <!--/radix_placeholder_article_footer-->

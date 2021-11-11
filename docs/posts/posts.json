@@ -1,6 +1,6 @@
 [
   {
-    "path": "posts/welcome/",
+    "path": "posts/2021-11-11-biocasia2021/",
     "title": "Review of BioC Asia 2021",
     "description": "Welcome to our new blog, Bioconductor Blog. We hope you enjoy \nreading what we have to say!",
     "author": [
@@ -9,11 +9,11 @@
         "url": "https://example.com/norajones"
       }
     ],
-    "date": "2021-11-08",
+    "date": "2021-11-11",
     "categories": [],
-    "contents": "\r\n\r\n\r\n\r\n",
+    "contents": "\r\nI haven’t written this review yet…\r\n\r\n\r\n\r\n",
     "preview": {},
-    "last_modified": "2021-11-08T02:00:29+09:00",
+    "last_modified": "2021-11-11T21:57:38+09:00",
     "input_file": {}
   }
 ]
