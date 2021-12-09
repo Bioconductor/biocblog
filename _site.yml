@@ -1,7 +1,8 @@
 name: "biocblog"
 title: "Bioconductor community blog"
 description: |
-  Bioconductor community blog
+  A chance for people to give a shoutout to something great that happened
+  recently in the community
 output_dir: "docs"
 navbar:
   right:
