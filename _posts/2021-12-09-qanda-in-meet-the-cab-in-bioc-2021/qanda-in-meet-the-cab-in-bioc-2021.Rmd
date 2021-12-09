@@ -16,6 +16,11 @@ output:
 knitr::opts_chunk$set(echo = FALSE)
 ```
 
+The content of 
+https://github.com/BioconductorBoards/CABWorkingGroups/discussions
+should be copied here and made known to many in this blog.
+
+
 Distill is a publication format for scientific and technical writing, native to the web.
 
 Learn more about using Distill at <https://rstudio.github.io/distill>.
