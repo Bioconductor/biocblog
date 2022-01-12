@@ -1,5 +1,25 @@
 [
   {
+    "path": "posts/2022-01-12-bioc-asia-2021/",
+    "title": "BioC Asia 2021 を振り返る",
+    "description": "A short description of the post.",
+    "author": [
+      {
+        "name": "Kozo Nishida",
+        "url": "https://example.com/norajones"
+      }
+    ],
+    "date": "2022-01-12",
+    "categories": [
+      "Japanese",
+      "BioC"
+    ],
+    "contents": "\r\n\r\nDistill is a publication format for scientific and technical writing, native to the web.\r\nLearn more about using Distill at https://rstudio.github.io/distill.\r\n\r\n\r\n\r\n",
+    "preview": "posts/2022-01-12-bioc-asia-2021/paineis.png",
+    "last_modified": "2022-01-12T03:50:05+09:00",
+    "input_file": {}
+  },
+  {
     "path": "posts/2021-11-11-biocasia2021/",
     "title": "Review of BioC Asia 2021",
     "description": "Welcome to our new blog, Bioconductor Blog. We hope you enjoy \nreading what we have to say!",
@@ -13,7 +33,7 @@
     "categories": [],
     "contents": "\r\nI haven’t written this review yet…\r\n\r\n\r\n\r\n",
     "preview": {},
-    "last_modified": "2021-11-11T22:42:57+09:00",
-    "input_file": "biocasia2021.knit.md"
+    "last_modified": "2021-12-09T21:56:04+09:00",
+    "input_file": {}
   }
 ]
