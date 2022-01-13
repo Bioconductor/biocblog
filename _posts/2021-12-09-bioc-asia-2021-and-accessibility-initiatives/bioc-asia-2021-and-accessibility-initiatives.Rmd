@@ -1,14 +1,21 @@
 ---
-title: "BioC Asia 2021 and accessibility initiatives"
+title: "BioC Asia 2021 challenged to overcoming language barriers and respected diversity"
 description: |
-  A short description of the post.
+  BioC Asia 2021 organizing committee used Zoom and YouTube to "add real-time English
+  captions", "add Japanese translation captions for English keynote", and "run 3 parallel
+  workshops: English, Japanese, and Mandarin".
 author:
   - name: Kozo Nishida
-    url: https://example.com/norajones
+    url: https://github.com/kozo2
 date: 2021-12-09
 output:
   distill::distill_article:
     self_contained: false
+categories:
+  - English
+  - BioC
+  - Diversity
+preview: "Lori_Japanese_caption.png"
 ---
 
 
