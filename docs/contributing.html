@@ -101,6 +101,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   <!--  https://dev.twitter.com/cards/types/summary -->
   <meta property="twitter:card" content="summary"/>
   <meta property="twitter:title" content="Bioconductor community blog: Contributing articles"/>
+  <meta property="twitter:site" content="@bioconductor"/>
 
   <!--/radix_placeholder_meta_tags-->
   <!--radix_placeholder_rmarkdown_metadata-->
@@ -2048,6 +2049,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   .distill-site-nav {
     background-color: #0093AD;
   }
+
   </style>
   <!--/radix_placeholder_site_in_header-->
 
@@ -2075,6 +2077,18 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <a href="index.html">Home</a>
 <a href="about.html">About</a>
 <a href="contributing.html">Contributing</a>
+<a href="https://github.com/bioconductor">
+<i class="fa fa-github" aria-hidden="true"></i>
+</a>
+<a href="https://twitter.com/bioconductor">
+<i class="fa fa-twitter" aria-hidden="true"></i>
+</a>
+<a href="https://www.youtube.com/user/bioconductor">
+<i class="fa fa-youtube-square" aria-hidden="true"></i>
+</a>
+<a href="https://bioc-community.herokuapp.com/">
+<i class="fa fa-slack" aria-hidden="true"></i>
+</a>
 <a href="javascript:void(0);" class="nav-toggle">&#9776;</a>
 </div>
 </nav>
@@ -2092,13 +2106,13 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 
 
 <div class="d-article">
-<p>We very much appreciate contributions to the RStudio AI Blog from the broader R community. If you are interested in publishing some of your own work or insights, we’d love to hear from you!</p>
-<p>Articles posted on the RStudio AI Blog are authored using <a href="https://rstudio.github.io/distill">Distill for R Markdown</a>. The easiest way to contribute a new article is as follows:</p>
+<p>We very much appreciate contributions to the Bioconductor community blog from the broader community. If you are interested in publishing some of your own work or insights, we’d love to hear from you!</p>
+<p>Articles posted on the Bioconductor community blog are authored using <a href="https://rstudio.github.io/distill">Distill for R Markdown</a>. The easiest way to contribute a new article is as follows:</p>
 <ol type="1">
-<li><p>Create a fork of the <a href="https://github.com/rstudio/ai-blog">RStudio AI blog repository</a> on GitHub.</p></li>
+<li><p>Create a fork of the <a href="https://github.com/kozo2/biocblog">biocblog repository</a> on GitHub.</p></li>
 <li><p>In your fork, create a new branch that will contain your <a href="https://rstudio.github.io/distill">distill article</a>. When you’re done, please check in the raw <code>Rmd</code> plus any static files you might have added to the post’s source directory. Don’t check in any generated files, such as html.</p></li>
 <li><p>Be sure that you’ve included all required <a href="#article-metadata">article metadata</a> (see below for details).</p></li>
-<li><p><a href="https://github.com/rstudio/ai-blog/issues">Post an issue</a> on the RStudio AI Blog repo requesting that we accept your article (be sure to include a link back to your article’s GitHub repo!).</p></li>
+<li><p><a href="https://github.com/kozo2/biocblog/issues">Post an issue</a> on the Bioconductor community blog repo requesting that we accept your article (be sure to include a link back to your article’s GitHub repo!).</p></li>
 </ol>
 <p>Once we see your issue we’ll take a look at your article, suggest changes as necessary, then publish it when it’s ready.</p>
 <h3 id="article-metadata">Article metadata</h3>
@@ -2123,8 +2137,6 @@ output:
     self_contained: false
 ---</code></pre>
 <p>Note that the <code>author</code> field includes a URL for the author as well as their affiliation (you can include multiple authors). Note also the <code>creative_commons</code> field which marks the article as being share-able (all contributed posts must have a <a href="https://creativecommons.org/">Creative Commons</a> license). Finally, the <code>repository_url</code> is used to provide links from the article back to GitHub.</p>
-<h3 id="article-preview">Article preview</h3>
-<p>Please note after submitting a PR for this repository, GitHub workflow will start building a preview version of RStudio AI blog that includes your article. Once this build completes, a directory named ‘ai-blog-preview’ will be uploaded in a zip file as the build artifact. If you would like to browse this preview version locally, please follow the steps in <a href="https://docs.github.com/en/actions/managing-workflow-runs/downloading-workflow-artifacts">Downloading workflow artifacts</a> to download ai-blog-preview.zip, unzip it, and open ai-blog-preview/index.html in your browser. You should then be able to see your article on the landing page of the preview.</p>
 <div class="sourceCode" id="cb2"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
 <!--radix_placeholder_article_footer-->
 <!--/radix_placeholder_article_footer-->
@@ -2137,7 +2149,10 @@ output:
 <!--radix_placeholder_site_after_body-->
 <!--/radix_placeholder_site_after_body-->
 <!--radix_placeholder_appendices-->
-<div class="appendix-bottom"></div>
+<div class="appendix-bottom">
+<h3 id="updates-and-corrections">Corrections</h3>
+<p>If you see mistakes or want to suggest changes, please <a href="https://github.com/kozo2/biocblog/issues/new">create an issue</a> on the source repository.</p>
+</div>
 <!--/radix_placeholder_appendices-->
 <!--radix_placeholder_navigation_after_body-->
 <!--/radix_placeholder_navigation_after_body-->

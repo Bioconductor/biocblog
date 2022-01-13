@@ -2,8 +2,11 @@ name: "biocblog"
 title: "Bioconductor community blog"
 description: |
   A chance for people to give a shoutout to something great that happened
-  recently in the community
+  recently in the Bioconductor community
 output_dir: "docs"
+repository_url: https://github.com/kozo2/biocblog
+twitter:
+  site: "@bioconductor"
 navbar:
   right:
     - text: "Home"
@@ -12,6 +15,14 @@ navbar:
       href: about.html
     - text: "Contributing"
       href: contributing.html
+    - icon: fa fa-github
+      href: https://github.com/bioconductor
+    - icon: fa fa-twitter
+      href: https://twitter.com/bioconductor
+    - icon: fa-youtube-square
+      href: https://www.youtube.com/user/bioconductor
+    - icon: fa fa-slack
+      href: https://bioc-community.herokuapp.com/
 output:
   distill::distill_article:
     css: styles.css
