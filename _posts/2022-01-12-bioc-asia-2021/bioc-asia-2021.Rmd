@@ -22,6 +22,15 @@ knitr::opts_chunk$set(echo = FALSE)
 
 ![](paineis.png)
 
+私達は昨年11月1日から4日まで Bioconductor のアジア地域のカンファレンス BioC Asia
+2021 を開催しました。
+この投稿では私達が BioC Asia 2021 で挑戦した言語障壁の克服の試みを紹介します。
+
+- Zoom の字幕
+- YouTube を用いた字幕
+
+
+
 Distill is a publication format for scientific and technical writing, native to the web.
 
 Learn more about using Distill at <https://rstudio.github.io/distill>.
