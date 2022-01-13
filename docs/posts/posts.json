@@ -1,22 +1,23 @@
 [
   {
     "path": "posts/2022-01-12-bioc-asia-2021/",
-    "title": "BioC Asia 2021 を振り返る",
-    "description": "A short description of the post.",
+    "title": "BioC Asia 2021 は言語障壁の緩和に挑戦し、多様性を実現した",
+    "description": "BioC Asia 2021 の運営委員会は Zoom や YouTube を用いて「英語のリアルタイムキャプションの追加」\n「英語キーノートスピーチの日本語翻訳キャプションの追加」「英語、日本語、中国語の3カ国語での並行ワークショップ」を行い、\nカンファレンスの多言語対応を実現しました。",
     "author": [
       {
-        "name": "Kozo Nishida",
-        "url": "https://example.com/norajones"
+        "name": "西田 孝三",
+        "url": "https://github.com/kozo2"
       }
     ],
     "date": "2022-01-12",
     "categories": [
       "Japanese",
-      "BioC"
+      "BioC",
+      "Diversity"
     ],
-    "contents": "\r\n\r\nDistill is a publication format for scientific and technical writing, native to the web.\r\nLearn more about using Distill at https://rstudio.github.io/distill.\r\n\r\n\r\n\r\n",
-    "preview": "posts/2022-01-12-bioc-asia-2021/paineis.png",
-    "last_modified": "2022-01-12T03:50:05+09:00",
+    "contents": "\r\n私達 BioC Asia 2021 運営委員会 は 2021 年 11 月 1 日から 4 日まで Bioconductor のアジア地域のカンファレンス BioC Asia 2021 を 2020年と同様に バーチャル開催しました。 この投稿では私達が BioC Asia 2021 で多様性の実現のために挑戦した言語障壁の克服の試みを紹介します。\r\n私達は下記の3つを用いて言語障壁の緩和を試みました。\r\nZoom の live transcription\r\nYouTube を用いた英語スピーチの日本語翻訳の字幕 (ただしライブ翻訳ではなく事前の人力での翻訳)\r\n複数の Zoom Meeting を用いた 3 言語のパラレルワークショップ (日本語、英語、Mandarin)\r\nZoom の live transcription\r\nZoom には live transcription と呼ばれるライブ文字起こし機能が備わっています。 私達は英語を用いた発表者にこの機能を適用し、英語の理解の障壁を下げることを試みました。\r\n\r\nYouTube を用いた英語スピーチの日本語翻訳の字幕\r\n2021 年 11 月 2 日 のキーノートスピーカー Lori Ann Shepherd の発表は、 英語スピーチの事前録画物に日本語翻訳字幕をつけた YouTube 動画を放送する形で行いました。\r\n\r\nこの日本語翻訳字幕は https://www.youtube.com/watch?v=NMv27jgHRb4 を開き、下記画像のように YouTube で字幕設定を行っていただくことでご覧いただけます。\r\n\r\n複数の Zoom Meeting を用いた 3 言語のパラレルワークショップ (日本語、英語、Mandarin)\r\nまた 2020年度から試みが始まった非英語言語でのパラレルワークショップの開催 をさらに推し進めました。 2020年度は英語とMandarinでワークショップが行われたのですが、 2021年度、私達はそれにさらに日本語を加えた 3 つの言語でのパラレルワークショップを開催しました。\r\n\r\nまとめ\r\nBioC Asia 2021 は BioC Asia 2020 の Mandarin 言語でのワークショップ開催から始まった多様性の実現をさらに推し進め、 「英語トークのライブ字幕の表示」「非ライブの非英語言語への翻訳字幕の表示」「より多様な言語でのワークショップ開催」 を新たに実現しました。 Bioconductor は多様性を尊重するコミュニティです。 このような多様性を実現する試みを歓迎します。\r\n\r\n\r\n\r\n",
+    "preview": "posts/2022-01-12-bioc-asia-2021/Lori_Japanese_caption.png",
+    "last_modified": "2022-01-13T21:38:50+09:00",
     "input_file": {}
   },
   {
