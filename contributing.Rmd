@@ -9,27 +9,23 @@ editor_options:
 knitr::opts_chunk$set(echo = FALSE)
 ```
 
-We very much appreciate contributions to the RStudio AI Blog from the
-broader R community. If you are interested in publishing some of your
-own work or insights, we'd love to hear from you!
+We very much appreciate contributions to the Bioconductor community blog from the broader community.
+If you are interested in publishing some of your own work or insights, we'd love to hear from you!
 
-Articles posted on the RStudio AI Blog are authored using [Distill for R
-Markdown](https://rstudio.github.io/distill). The easiest way to
-contribute a new article is as follows:
+Articles posted on the Bioconductor community blog are authored using
+[Distill for R Markdown](https://rstudio.github.io/distill).
+The easiest way to contribute a new article is as follows:
 
-1.  Create a fork of the [RStudio AI blog
-    repository](https://github.com/rstudio/ai-blog) on GitHub.
+1.  Create a fork of the [biocblog repository](https://github.com/kozo2/biocblog) on GitHub.
 
-2.  In your fork, create a new branch that will contain your [distill
-    article](https://rstudio.github.io/distill). When you're done,
-    please check in the raw `Rmd` plus any static files you might have added to the
-    post's source directory. Don't check in any generated files, such as html.
+2.  In your fork, create a new branch that will contain your [distill article](https://rstudio.github.io/distill).
+    When you're done, please check in the raw `Rmd` plus any static files you might have added to the post's source directory.
+    Don't check in any generated files, such as html.
 
-3.  Be sure that you've included all required [article metadata] (see
-    below for details).
+3.  Be sure that you've included all required [article metadata] (see below for details).
 
-4.  [Post an issue](https://github.com/rstudio/ai-blog/issues) on the
-    RStudio AI Blog repo requesting that we accept your article (be sure
+4.  [Post an issue](https://github.com/kozo2/biocblog/issues)
+    on the Bioconductor community blog repo requesting that we accept your article (be sure
     to include a link back to your article's GitHub repo!).
 
 Once we see your issue we'll take a look at your article, suggest
@@ -70,15 +66,3 @@ their affiliation (you can include multiple authors). Note also the
 Commons](https://creativecommons.org/) license). Finally, the
 `repository_url` is used to provide links from the article back to
 GitHub.
-
-### Article preview
-
-Please note after submitting a PR for this repository, GitHub workflow will
-start building a preview version of RStudio AI blog that includes your article.
-Once this build completes, a directory named 'ai-blog-preview' will be uploaded
-in a zip file as the build artifact. If you would like to browse this preview
-version locally, please follow the steps in
-[Downloading workflow artifacts](https://docs.github.com/en/actions/managing-workflow-runs/downloading-workflow-artifacts)
-to download ai-blog-preview.zip, unzip it, and open ai-blog-preview/index.html
-in your browser. You should then be able to see your article on the landing page
-of the preview.
