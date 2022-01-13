@@ -16,7 +16,7 @@ Articles posted on the Bioconductor community blog are authored using
 [Distill for R Markdown](https://rstudio.github.io/distill).
 The easiest way to contribute a new article is as follows:
 
-1.  Create a fork of the [biocblog repository](https://github.com/kozo2/biocblog) on GitHub.
+1.  Create a fork of the [biocblog repository](https://github.com/Bioconductor/biocblog) on GitHub.
 
 2.  In your fork, create a new branch that will contain your [distill article](https://rstudio.github.io/distill).
     When you're done, please check in the raw `Rmd` plus any static files you might have added to the post's source directory.
@@ -24,7 +24,7 @@ The easiest way to contribute a new article is as follows:
 
 3.  Be sure that you've included all required [article metadata] (see below for details).
 
-4.  [Post an issue](https://github.com/kozo2/biocblog/issues)
+4.  [Post an issue](https://github.com/Bioconductor/biocblog/issues)
     on the Bioconductor community blog repo requesting that we accept your article (be sure
     to include a link back to your article's GitHub repo!).
 

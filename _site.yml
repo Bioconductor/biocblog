@@ -4,7 +4,7 @@ description: |
   A chance for people to give a shoutout to something great that happened
   recently in the Bioconductor community
 output_dir: "docs"
-repository_url: https://github.com/kozo2/biocblog
+repository_url: https://github.com/Bioconductor/biocblog/
 twitter:
   site: "@bioconductor"
 navbar:
@@ -16,11 +16,11 @@ navbar:
     - text: "Contributing"
       href: contributing.html
     - icon: fa fa-github
-      href: https://github.com/bioconductor
+      href: https://github.com/Bioconductor
     - icon: fa fa-twitter
-      href: https://twitter.com/bioconductor
+      href: https://twitter.com/Bioconductor
     - icon: fa-youtube-square
-      href: https://www.youtube.com/user/bioconductor
+      href: https://www.youtube.com/user/Bioconductor
     - icon: fa fa-slack
       href: https://bioc-community.herokuapp.com/
 output:
