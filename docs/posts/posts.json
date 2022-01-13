@@ -17,24 +17,28 @@
     ],
     "contents": "\r\n私達 BioC Asia 2021 運営委員会 は 2021 年 11 月 1 日から 4 日まで Bioconductor のアジア地域のカンファレンス BioC Asia 2021 を 2020年と同様に バーチャル開催しました。 この投稿では私達が BioC Asia 2021 で多様性の実現のために挑戦した言語障壁の克服の試みを紹介します。\r\n私達は下記の3つを用いて言語障壁の緩和を試みました。\r\nZoom の live transcription\r\nYouTube を用いた英語スピーチの日本語翻訳の字幕 (ただしライブ翻訳ではなく事前の人力での翻訳)\r\n複数の Zoom Meeting を用いた 3 言語のパラレルワークショップ (日本語、英語、Mandarin)\r\nZoom の live transcription\r\nZoom には live transcription と呼ばれるライブ文字起こし機能が備わっています。 私達は英語を用いた発表者にこの機能を適用し、英語の理解の障壁を下げることを試みました。\r\n\r\nYouTube を用いた英語スピーチの日本語翻訳の字幕\r\n2021 年 11 月 2 日 のキーノートスピーカー Lori Ann Shepherd の発表は、 英語スピーチの事前録画物に日本語翻訳字幕をつけた YouTube 動画を放送する形で行いました。\r\n\r\nこの日本語翻訳字幕は https://www.youtube.com/watch?v=NMv27jgHRb4 を開き、下記画像のように YouTube で字幕設定を行っていただくことでご覧いただけます。\r\n\r\n複数の Zoom Meeting を用いた 3 言語のパラレルワークショップ (日本語、英語、Mandarin)\r\nまた 2020年度から試みが始まった非英語言語でのパラレルワークショップの開催 をさらに推し進めました。 2020年度は英語とMandarinでワークショップが行われたのですが、 2021年度、私達はそれにさらに日本語を加えた 3 つの言語でのパラレルワークショップを開催しました。\r\n\r\nまとめ\r\nBioC Asia 2021 は BioC Asia 2020 の Mandarin 言語でのワークショップ開催から始まった多様性の実現をさらに推し進め、 「英語トークのライブ字幕の表示」「非ライブの非英語言語への翻訳字幕の表示」「より多様な言語でのワークショップ開催」 を新たに実現しました。 Bioconductor は多様性を尊重するコミュニティです。 このような多様性を実現する試みを歓迎します。\r\n\r\n\r\n\r\n",
     "preview": "posts/2022-01-12-bioc-asia-2021/Lori_Japanese_caption.png",
-    "last_modified": "2022-01-13T21:38:50+09:00",
+    "last_modified": "2022-01-13T22:37:03+09:00",
     "input_file": {}
   },
   {
     "path": "posts/2021-11-11-biocasia2021/",
-    "title": "Review of BioC Asia 2021",
-    "description": "Welcome to our new blog, Bioconductor Blog. We hope you enjoy \nreading what we have to say!",
+    "title": "BioC Asia 2021 challenged to overcoming language barriers and respected diversity",
+    "description": "BioC Asia 2021 organizing committee used Zoom and YouTube to \"add real-time English\ncaptions\", \"add Japanese translation captions for English keynote\", and \"run 3 parallel\nworkshops: English, Japanese, and Mandarin\".",
     "author": [
       {
         "name": "Kozo Nishida",
-        "url": "https://example.com/norajones"
+        "url": "https://github.com/kozo2"
       }
     ],
-    "date": "2021-11-11",
-    "categories": [],
-    "contents": "\r\nI haven’t written this review yet…\r\n\r\n\r\n\r\n",
-    "preview": {},
-    "last_modified": "2021-12-09T21:56:04+09:00",
+    "date": "2021-12-09",
+    "categories": [
+      "English",
+      "BioC",
+      "Diversity"
+    ],
+    "contents": "\r\nWe, the BioC Asia 2021 organizing Committee, held the Bioconductor Asia regional conference BioC Asia 2021 virtually from November 1st to 4th, 2021. In this post, I present our attempt to overcome the language barriers to respect diversity in BioC Asia 2021.\r\nWe have tried to overcome language barriers using the following three.\r\nZoom live transcription\r\nSubtitles for Japanese translation of English speech using YouTube (however, the translation by manually in advance, not live translation)\r\nParallel workshops in 3 languages with multiple Zoom Meetings (Japanese, English, Mandarin)\r\nZoom live transcription\r\nZoom has a live transcription feature. We have applied this feature to English-speaking presenters in an attempt to lower the barriers for understanding English.\r\n\r\nSubtitles for Japanese translation of English speech using YouTube\r\nThe talk of the keynote speaker Lori Ann Shepherd on November 2, 2021 was made by broadcasting a YouTube video with Japanese translation subtitles on a pre-recorded English speech.\r\n\r\nYou can see this Japanese translation subtitles by opening https://www.youtube.com/watch?v=NMv27jgHRb4 and setting the subtitles on YouTube as shown in the image below.\r\n\r\nParallel workshops in 3 languages with multiple Zoom Meetings\r\nWe also promoted the parallel workshops in non-English languages, which began in BioC Asia 2020. In 2020, the parallel workshops were held in English and Mandarin, but in 2021, we held parallel workshops in his three languages, including Japanese.\r\n\r\nConclusion\r\nBioC Asia 2021 respects language diversity that began from the BioC Asia 2020 Mandarin workshop, and newly realized “live transcription for English talk”, “Japanese subtitles of recoreded English keynote”, and “3 parallel workshops in more diverse languages”. Bioconductor is a community that respects diversity. We welcome attempts to achieve such diversity.\r\n\r\n\r\n\r\n",
+    "preview": "posts/2021-11-11-biocasia2021/Lori_Japanese_caption.png",
+    "last_modified": "2022-01-13T22:37:13+09:00",
     "input_file": {}
   }
 ]
