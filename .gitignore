@@ -5,3 +5,4 @@
 .Rprofile
 renv
 renv.lock
+.DS_Store
