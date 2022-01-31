@@ -1,0 +1,44 @@
+---
+title: "Join the Bioconductor Community Advisory Board"
+description: |
+  CAB is looking for new members. This post will show you what a CAB looks like.
+author:
+  - name: Matt Ritchie
+    url: https://www.wehi.edu.au/people/matthew-ritchie
+date: 2022-01-31
+output:
+  distill::distill_article:
+    self_contained: false
+categories:
+  - English
+  - BioC
+  - CAB
+preview: "MeetTheCabBioc2021.png"
+---
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+The [Community Advisory Board](https://bioconductor.org/about/community-advisory-board/)
+(established in 2020) is seeking nominations from new members.
+
+See [this post in Bioconductor Forum](https://support.bioconductor.org/p/9141753/)
+from Lori Shepherd (Secretary of Community Advisory Board) for how to apply.
+
+We were asked what the CAB looks like at
+[last year's BioC2021 "Meet the CAB"](https://www.youtube.com/watch?v=LTT1i_ACpxc).
+
+<iframe src="https://www.youtube.com/embed/LTT1i_ACpxc" width="600" height="500" data-external= "1" > </iframe>
+
+You can see the recording on YouTube above.
+The Q&A transcription is on
+[the CAB introduction page in bioconductor.org](https://www.bioconductor.org/about/community-advisory-board/#:~:text=EMBL%2C%20Germany.%20website-,Q%26A,-The%20following%20Q).
+
+If you are interested in CAB and would like to know more about CAB,
+you can also ask it interactively in
+[our community Slack](https://bioc-community.herokuapp.com/).
+(In the Slack workspace there is a channel named **community-advisory-board**.)
+
+We look forward to receiving your nomination!

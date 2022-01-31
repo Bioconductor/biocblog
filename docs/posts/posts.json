@@ -1,5 +1,26 @@
 [
   {
+    "path": "posts/2022-01-31-join-the-bioconductor-community-advisory-board/",
+    "title": "Join the Bioconductor Community Advisory Board",
+    "description": "CAB is looking for new members. This post will show you what a CAB looks like.",
+    "author": [
+      {
+        "name": "Matt Ritchie",
+        "url": "https://www.wehi.edu.au/people/matthew-ritchie"
+      }
+    ],
+    "date": "2022-01-31",
+    "categories": [
+      "English",
+      "BioC",
+      "CAB"
+    ],
+    "contents": "\r\nThe Community\r\nAdvisory Board (established in 2020) is seeking nominations from new\r\nmembers.\r\nSee this post\r\nin Bioconductor Forum from Lori Shepherd (Secretary of Community\r\nAdvisory Board) for how to apply.\r\nWe were asked what the CAB looks like at last year’s BioC2021\r\n“Meet the CAB”.\r\n\r\n\r\nYou can see the recording on YouTube above. The Q&A transcription\r\nis on the\r\nCAB introduction page in bioconductor.org.\r\nIf you are interested in CAB and would like to know more about CAB,\r\nyou can also ask it interactively in our community Slack.\r\n(In the Slack workspace there is a channel named\r\ncommunity-advisory-board.)\r\nWe look forward to receiving your nomination!\r\n\r\n\r\n\r\n",
+    "preview": "posts/2022-01-31-join-the-bioconductor-community-advisory-board/MeetTheCabBioc2021.png",
+    "last_modified": "2022-02-01T01:28:07+09:00",
+    "input_file": {}
+  },
+  {
     "path": "posts/2022-01-18-metaRbolomics-2021/",
     "title": "metaRbolomics hackathon to improve interoperability of metabolomics-related R packages",
     "description": "The 3rd metaRbolomics hackathon took place as a in-person workshop in\nWittenberg (Germany) in November 2021. The aim was to improve interoperability\nof metabolomics/mass spectrometry-related R packages, combine development\nefforts and identify gaps and needs in current available functionality. It was\na fun event with a lot of discussions and coding as well as socializing and\nnetworking.",
@@ -38,10 +59,10 @@
       "BioC",
       "Diversity"
     ],
-    "contents": "\r\n私達 BioC Asia 2021 運営委員会 は 2021 年 11 月 1 日から 4 日まで Bioconductor のアジア地域のカンファレンス BioC Asia 2021 を 2020年と同様に バーチャル開催しました。 この投稿では私達が BioC Asia 2021 で多様性の実現のために挑戦した言語障壁の克服の試みを紹介します。\r\n私達は下記の3つを用いて言語障壁の緩和を試みました。\r\nZoom の live transcription\r\nYouTube を用いた英語スピーチの日本語翻訳の字幕 (ただしライブ翻訳ではなく事前の人力での翻訳)\r\n複数の Zoom Meeting を用いた 3 言語のパラレルワークショップ (日本語、英語、Mandarin)\r\nZoom の live transcription\r\nZoom には live transcription と呼ばれるライブ文字起こし機能が備わっています。 私達は英語を用いた発表者にこの機能を適用し、英語の理解の障壁を下げることを試みました。\r\n\r\nYouTube を用いた英語スピーチの日本語翻訳の字幕\r\n2021 年 11 月 2 日 のキーノートスピーカー Lori Ann Shepherd の発表は、 英語スピーチの事前録画物に日本語翻訳字幕をつけた YouTube 動画を放送する形で行いました。\r\n\r\nこの日本語翻訳字幕は https://www.youtube.com/watch?v=NMv27jgHRb4 を開き、下記画像のように YouTube で字幕設定を行っていただくことでご覧いただけます。\r\n\r\n複数の Zoom Meeting を用いた 3 言語のパラレルワークショップ (日本語、英語、Mandarin)\r\nまた 2020年度から試みが始まった非英語言語でのパラレルワークショップの開催 をさらに推し進めました。 2020年度は英語とMandarinでワークショップが行われたのですが、 2021年度、私達はそれにさらに日本語を加えた 3 つの言語でのパラレルワークショップを開催しました。\r\n\r\nまとめ\r\nBioC Asia 2021 は BioC Asia 2020 の Mandarin 言語でのワークショップ開催から始まった多様性の実現をさらに推し進め、 「英語トークのライブ字幕の表示」「非ライブの非英語言語への翻訳字幕の表示」「より多様な言語でのワークショップ開催」 を新たに実現しました。 Bioconductor は多様性を尊重するコミュニティです。 このような多様性を実現する試みを歓迎します。\r\n\r\n\r\n\r\n",
+    "contents": "\r\n私達 BioC\r\nAsia 2021 運営委員会 は 2021 年 11 月 1 日から 4 日まで Bioconductor\r\nのアジア地域のカンファレンス BioC Asia 2021 を 2020年と同様に\r\nバーチャル開催しました。 この投稿では私達が BioC Asia 2021\r\nで多様性の実現のために挑戦した言語障壁の克服の試みを紹介します。\r\n私達は下記の3つを用いて言語障壁の緩和を試みました。\r\nZoom の live transcription\r\nYouTube を用いた英語スピーチの日本語翻訳の字幕\r\n(ただしライブ翻訳ではなく事前の人力での翻訳)\r\n複数の Zoom Meeting を用いた 3 言語のパラレルワークショップ\r\n(日本語、英語、Mandarin)\r\nZoom の live transcription\r\nZoom には live\r\ntranscription と呼ばれるライブ文字起こし機能が備わっています。\r\n私達は英語を用いた発表者にこの機能を適用し、英語の理解の障壁を下げることを試みました。\r\n\r\nYouTube\r\nを用いた英語スピーチの日本語翻訳の字幕\r\n2021 年 11 月 2 日 のキーノートスピーカー Lori Ann Shepherd\r\nの発表は、 英語スピーチの事前録画物に日本語翻訳字幕をつけた YouTube\r\n動画を放送する形で行いました。\r\n\r\nこの日本語翻訳字幕は https://www.youtube.com/watch?v=NMv27jgHRb4\r\nを開き、下記画像のように YouTube\r\nで字幕設定を行っていただくことでご覧いただけます。\r\n\r\n複数の\r\nZoom Meeting を用いた 3 言語のパラレルワークショップ\r\n(日本語、英語、Mandarin)\r\nまた 2020年度から試みが始まった非英語言語でのパラレルワークショップの開催\r\nをさらに推し進めました。\r\n2020年度は英語とMandarinでワークショップが行われたのですが、\r\n2021年度、私達はそれにさらに日本語を加えた 3\r\nつの言語でのパラレルワークショップを開催しました。\r\n\r\nまとめ\r\nBioC Asia 2021 は BioC Asia 2020 の Mandarin\r\n言語でのワークショップ開催から始まった多様性の実現をさらに推し進め、\r\n「英語トークのライブ字幕の表示」「非ライブの非英語言語への翻訳字幕の表示」「より多様な言語でのワークショップ開催」\r\nを新たに実現しました。 Bioconductor は多様性を尊重するコミュニティです。\r\nこのような多様性を実現する試みを歓迎します。\r\n\r\n\r\n\r\n",
     "preview": "posts/2022-01-12-bioc-asia-2021/Lori_Japanese_caption.png",
-    "last_modified": "2022-01-14T02:28:17+09:00",
-    "input_file": {}
+    "last_modified": "2022-02-01T01:29:44+09:00",
+    "input_file": "bioc-asia-2021.knit.md"
   },
   {
     "path": "posts/2021-11-11-biocasia2021/",
