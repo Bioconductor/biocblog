@@ -12,7 +12,6 @@ output:
   distill::distill_article:
     self_contained: false
 categories:
-  - English
   - BioC
   - Diversity
 preview: "Lori_Japanese_caption.png"

@@ -10,7 +10,6 @@ output:
   distill::distill_article:
     self_contained: false
 categories:
-  - English
   - BioC
   - CAB
 preview: "MeetTheCabBioc2021.png"
