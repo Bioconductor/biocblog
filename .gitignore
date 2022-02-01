@@ -2,3 +2,7 @@
 .Rhistory
 .RData
 .Ruserdata
+.Rprofile
+renv
+renv.lock
+.DS_Store
