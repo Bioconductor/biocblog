@@ -1,11 +1,11 @@
 ---
 title: "Join the Bioconductor Community Advisory Board"
 description: |
-  CAB is looking for new members. This post will show you what a CAB looks like.
+  Each year the Bioconductor Community Advisory Board (CAB) puts out a public call for new board members. This post tells you more about what the CAB does and how you can apply to become a member.
 author:
-  - name: Matt Ritchie
-    url: https://www.wehi.edu.au/people/matthew-ritchie
-date: 2022-01-31
+  - name: Kozo Nishida and Matt Ritchie
+    url: https://bioconductor.org/about/community-advisory-board/
+date: 2022-02-01
 output:
   distill::distill_article:
     self_contained: false
@@ -21,24 +21,23 @@ preview: "MeetTheCabBioc2021.png"
 knitr::opts_chunk$set(echo = FALSE)
 ```
 
-The [Community Advisory Board](https://bioconductor.org/about/community-advisory-board/)
+The Bioconductor [Community Advisory Board](https://bioconductor.org/about/community-advisory-board/)
 (established in 2020) is seeking nominations from new members.
 
-See [this post in Bioconductor Forum](https://support.bioconductor.org/p/9141753/)
-from Lori Shepherd (Secretary of Community Advisory Board) for how to apply.
+The board's goal is to coordinate training and outreach activities that serve the global Bioconductor community and to ensure that interactions between community members are productive and respectful at all times.
 
 We were asked what the CAB looks like at
-[last year's BioC2021 "Meet the CAB"](https://www.youtube.com/watch?v=LTT1i_ACpxc).
-
+[last year's BioC2021 "Meet the CAB" session](https://www.youtube.com/watch?v=LTT1i_ACpxc).
 <iframe src="https://www.youtube.com/embed/LTT1i_ACpxc" width="600" height="500" data-external= "1" > </iframe>
+You can see the recording of this presentation on YouTube above.
 
-You can see the recording on YouTube above.
-The Q&A transcription is on
-[the CAB introduction page in bioconductor.org](https://www.bioconductor.org/about/community-advisory-board/#:~:text=EMBL%2C%20Germany.%20website-,Q%26A,-The%20following%20Q).
+A transcript of Questions and Answers from this presentation is summarised on 
+[the CAB introduction page on bioconductor.org](https://www.bioconductor.org/about/community-advisory-board/#:~:text=EMBL%2C%20Germany.%20website-,Q%26A,-The%20following%20Q).
 
-If you are interested in CAB and would like to know more about CAB,
-you can also ask it interactively in
-[our community Slack](https://bioc-community.herokuapp.com/).
-(In the Slack workspace there is a channel named **community-advisory-board**.)
+If you have further questions about how the CAB works, you can also ask them interactively in
+[our community Slack](https://bioc-community.herokuapp.com/) (via the channel named **community-advisory-board**) or by emailing the current board (cab at bioconductor.org).
+
+Also see [this post on the Bioconductor Support Forum](https://support.bioconductor.org/p/9141753/)
+from Lori Shepherd (CAB Secretary) for instructions on how to apply to become a CAB member. Applications for the current round close on 25th Feb 2022.
 
 We look forward to receiving your nomination!
