@@ -24,12 +24,12 @@ knitr::opts_chunk$set(echo = FALSE)
 The Bioconductor [Community Advisory Board](https://bioconductor.org/about/community-advisory-board/)
 (established in 2020) is seeking nominations from new members.
 
-The board's goal is to coordinate training and outreach activities that serve the gloabl Bioconductor community and to ensure that interactions between community members are productive and respectful at all times.
+The board's goal is to coordinate training and outreach activities that serve the global Bioconductor community and to ensure that interactions between community members are productive and respectful at all times.
 
 We were asked what the CAB looks like at
 [last year's BioC2021 "Meet the CAB" session](https://www.youtube.com/watch?v=LTT1i_ACpxc).
 <iframe src="https://www.youtube.com/embed/LTT1i_ACpxc" width="600" height="500" data-external= "1" > </iframe>
-You can see the recording on YouTube above.
+You can see the recording of this presentation on YouTube above.
 
 A transcript of Questions and Answers from this presentation is summarised on 
 [the CAB introduction page on bioconductor.org](https://www.bioconductor.org/about/community-advisory-board/#:~:text=EMBL%2C%20Germany.%20website-,Q%26A,-The%20following%20Q).
@@ -37,7 +37,7 @@ A transcript of Questions and Answers from this presentation is summarised on
 If you have further questions about how the CAB works, you can also ask them interactively in
 [our community Slack](https://bioc-community.herokuapp.com/) (via the channel named **community-advisory-board**) or by emailing the current board (cab at bioconductor.org).
 
-See [this post in Bioconductor Forum](https://support.bioconductor.org/p/9141753/)
-from Lori Shepherd (CAB Secretary) for instructions on how to apply to become CAB member (applications close on 25th Feb 2022).
+Also see [this post on the Bioconductor Support Forum](https://support.bioconductor.org/p/9141753/)
+from Lori Shepherd (CAB Secretary) for instructions on how to apply to become a CAB member. Applications for the current round close on 25th Feb 2022.
 
 We look forward to receiving your nomination!
