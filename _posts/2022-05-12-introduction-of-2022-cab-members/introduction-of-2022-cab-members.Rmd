@@ -33,7 +33,11 @@ In this article, we will first introduce the newly joined members as well as the
 
 
 ### Janani Ravi (From 2022)
+Janani Ravi is currently an Assistant Professor at the Departments of Pathobiology and Diagnostic Investigation, Microbiology and Molecular Genetics, Michigan State University. She completed her PhD in Computational Biology at Virginia Tech and her postdoctoral research at the Public Health Research Institute, Rutgers Biomedical and Health Sciences. Her research group at MSU works on developing computational approaches to study the molecular basis of pathogenesis and intervention of infectious diseases, using protein sequence-structure-function relationships, comparative genomics, and drug repurposing.
 
+Janani is also actively engaged in training, education, and outreach. She is committed to creating and sustaining a diverse and inclusive ecosystem in data science and R for learners and professionals alike, focusing on increasing the participation of underrepresented minorities in data science and R programming. Towards this effort, she founded R-Ladies East Lansing and co-founded Women+ Data Science and AsiaR.
+
+<jravilab.github.io> | [@janani137](//twitter.com/janani137)
 
 ### Hedia Tnani (From 2022)
 
