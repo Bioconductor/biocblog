@@ -28,6 +28,10 @@ In this article, we will first introduce the newly joined members as well as the
 
 ### Leo Lahti (From 2022)
 
+Leo Lahti (PhD 2010; machine learning & bioinformatics) has contributed to R & Bioconductor since early 2000's. He is now leading a research team at the Department of Computing, University of Turku, Finland and actively engaged in national and international networks in open data science. The team has developed statistical software in particular for microbiome studies and computational humanities, and provides regular training on these topics. Lahti is committed to strengthening the R/Bioconductor networks especially in the Northern Europe.
+
+<datascience.utu.fi> | [@antagomir](//twitter.com/antagomir)
+
 
 ### Nicole Ortogero (From 2022)
 
