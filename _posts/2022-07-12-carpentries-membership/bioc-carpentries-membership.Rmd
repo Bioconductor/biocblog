@@ -1,0 +1,32 @@
+---
+title: "Bioconductor becomes a Carpentries member organization"
+description: |
+  Starting from August 1, 2022, Bioconductor will be a member of The 
+  Carpentries. Among other things, the membership enables us to allow 
+  15 individuals to follow the Carpentries' Instructor Training program and 
+  become certified Carpentries Instructors.
+author:
+  - name: Charlotte Soneson
+    url: http://csoneson.github.io/
+  - name: Laurent Gatto
+    url: https://lgatto.github.io/
+  - name: Toby Hodges
+  - name: Jenny Drnevich
+  - name: Robert Castelo
+  - name: Susan Holmes
+date: 2022-07-12
+creative_commons: CC BY
+categories:
+  - education
+output:
+  distill::distill_article:
+    self_contained: false
+---
+
+The [Bioconductor Teaching Committee](https://bioconductor.org/help/education-training/) is happy to announce that starting from August 1, 2022 and [supported by the Chan Zuckerberg Initiative](https://chanzuckerberg.com/eoss/proposals/bioconductor-high-quality-training-and-support-for-a-worldwide-community/), Bioconductor will be a member of [The Carpentries](https://carpentries.org/), a global community of volunteers who develop and teach interactive, hands-on workshops on computing and data skills, addressing basic training needs that are unmet in most disciplines.
+
+Among other things, The Carpentries membership enables us to give 15 people from the Bioconductor community the opportunity to follow [The Carpentries' Instructor Training program](https://carpentries.org/become-instructor/) and become certified Carpentries Instructors. Certified Instructors can co-teach Carpentries workshops associated with Bioconductor events, and also have the opportunity to teach as part of a team at other institutions in The Carpentries network, meeting others with similar skills who enjoy sharing them. We would also encourage you to engage with the Bioconductor Teaching Committee and community in other ways, e.g. by participating in our monthly meetings and [contributing](https://carpentries.org/blog/2021/07/incubator-lesson-spotlight-rna-seq-data-analysis/) to the Bioconductor-focused [training material](https://bioconductor.org/help/education-training/) currently in development.
+
+The Carpentries Instructor Training is primarily focused on evidence-based teaching practices and does not include technical skills training. It is expected that trainees will have or will develop the technical skills necessary to guide learners through the entry level curricula for one or more Data Carpentry, Library Carpentry, or Software Carpentry workshops. Instructor Training is held remotely in either a 2-day, full day format or a 4-day, half-day format, and will be free-of-charge to selected Bioconductor community members.
+
+If you are interested in education and want to get involved in the Bioconductor teaching community as a certified Carpentries Instructor, please fill [this form](https://forms.gle/HvnhkZZkhEE54vqL9) to express your interest. Suitable candidates will be selected on a rolling basis until all spots are filled and before January 2023. If you have questions, don't hesitate to reach out to education@bioconductor.org. 
