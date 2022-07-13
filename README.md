@@ -10,8 +10,10 @@ A Distill Blog for Bioconductor community
   library(distill)
   create_post("FILL YOUR POST TITLE")
   ```
-4. Git add and commit the Rmd created by 3.
-5. Send 4. as a pull request.
+4. Write your article into `_posts > DATE-YOURTITLE > YOURTITLE.Rmd`
+5. Click "Knit" button under the RStudio YOURTITLE.Rmd tab.
+6. Git add and commit the whole `_posts > DATE-YOURTITLE` folder.
+7. Send 6. as a pull request.
 
 ## How to build biocblog
 
