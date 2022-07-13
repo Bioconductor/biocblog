@@ -6,7 +6,3 @@
 renv
 renv.lock
 .DS_Store
-_posts/**/*.html
-_posts/**/*.js
-_posts/**/*.map
-_posts/**/*.css
