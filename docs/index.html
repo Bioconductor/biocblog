@@ -50,16 +50,17 @@ pre.numberSource code > span > a:first-child::before
   }
 pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
 div.sourceCode
-  {   }
+  { color: #00769e; background-color: #f1f3f5; }
 @media screen {
 pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
+code span { color: #00769e; } /* Normal */
 code span.al { color: #ad0000; } /* Alert */
 code span.an { color: #5e5e5e; } /* Annotation */
-code span.at { } /* Attribute */
+code span.at { color: #657422; } /* Attribute */
 code span.bn { color: #ad0000; } /* BaseN */
 code span.bu { } /* BuiltIn */
-code span.cf { color: #007ba5; } /* ControlFlow */
+code span.cf { color: #00769e; } /* ControlFlow */
 code span.ch { color: #20794d; } /* Char */
 code span.cn { color: #8f5902; } /* Constant */
 code span.co { color: #5e5e5e; } /* Comment */
@@ -73,9 +74,9 @@ code span.fl { color: #ad0000; } /* Float */
 code span.fu { color: #4758ab; } /* Function */
 code span.im { } /* Import */
 code span.in { color: #5e5e5e; } /* Information */
-code span.kw { color: #007ba5; } /* Keyword */
+code span.kw { color: #00769e; } /* Keyword */
 code span.op { color: #5e5e5e; } /* Operator */
-code span.ot { color: #007ba5; } /* Other */
+code span.ot { color: #00769e; } /* Other */
 code span.pp { color: #ad0000; } /* Preprocessor */
 code span.sc { color: #5e5e5e; } /* SpecialChar */
 code span.ss { color: #20794d; } /* SpecialString */
@@ -1028,10 +1029,6 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
     margin-top: 1.5em;
   }
 
-  .figure img {
-    width: 100%;
-  }
-
   .figure .caption {
     color: rgba(0, 0, 0, 0.6);
     font-size: 12px;
@@ -1861,6 +1858,12 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 
       // hoverable references
       $('span.citation[data-cites]').each(function() {
+        if ($(this).children()[0].nodeName == "D-FOOTNOTE") {
+          var fn = $(this).children()[0]
+          $(this).html(fn.shadowRoot.querySelector("sup"))
+          $(this).id = fn.id
+          fn.remove()
+        }
         var refs = $(this).attr('data-cites').split(" ");
         var refHtml = refs.map(function(ref) {
           return "<p>" + $('#ref-' + ref).html() + "</p>";
@@ -1875,6 +1878,31 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
           placement: 'bottom-start'
         });
       });
+
+      // fix footnotes in tables (#411)
+      // replacing broken distill.pub feature
+      $('table d-footnote').each(function() {
+        // we replace internal showAtNode methode which is triggered when hovering a footnote
+        this.hoverBox.showAtNode = function(node) {
+          // ported from https://github.com/distillpub/template/pull/105/files
+          calcOffset = function(elem) {
+              let x = elem.offsetLeft;
+              let y = elem.offsetTop;
+              // Traverse upwards until an `absolute` element is found or `elem`
+              // becomes null.
+              while (elem = elem.offsetParent && elem.style.position != 'absolute') {
+                  x += elem.offsetLeft;
+                  y += elem.offsetTop;
+              }
+
+              return { left: x, top: y };
+          }
+          // https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/offsetTop
+          const bbox = node.getBoundingClientRect();
+          const offset = calcOffset(node);
+          this.show([offset.left + bbox.width, offset.top + bbox.height]);
+        }
+      })
 
       // clear polling timer
       clearInterval(tid);
@@ -1974,6 +2002,8 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
     // mark non-body figures created by knitr chunks as 100% width
     $('.layout-chunk').each(function(i, val) {
       var figures = $(this).find('img, .html-widget');
+      // ignore leaflet img layers (#106)
+      figures = figures.filter(':not(img[class*="leaflet"])')
       if ($(this).attr('data-layout') !== "l-body") {
         figures.css('width', '100%');
       } else {
@@ -1996,7 +2026,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
     // get rid of index.html references in header
     if (window.location.protocol !== "file:") {
       $('.distill-site-header a[href]').each(function(i,val) {
-        $(this).attr('href', $(this).attr('href').replace("index.html", "./"));
+        $(this).attr('href', $(this).attr('href').replace(/^index[.]html/, "./"));
       });
     }
 
@@ -2035,7 +2065,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   </script>
 
   <!--/radix_placeholder_distill-->
-  <script src="site_libs/header-attrs-2.11/header-attrs.js"></script>
+  <script src="site_libs/header-attrs-2.14/header-attrs.js"></script>
   <script src="site_libs/popper-2.6.0/popper.min.js"></script>
   <link href="site_libs/tippy-6.2.7/tippy.css" rel="stylesheet" />
   <link href="site_libs/tippy-6.2.7/tippy-light-border.css" rel="stylesheet" />
@@ -2236,6 +2266,33 @@ function init_posts_list() {
 <div class="posts-container posts-with-sidebar posts-apply-limit l-screen-inset">
 <div class="posts-list">
 <h1 class="posts-list-caption" data-caption="Bioconductor community blog">Bioconductor community blog</h1>
+<a href="posts/2022-07-12-carpentries-membership/" class="post-preview">
+<script class="post-metadata" type="text/json">{"categories":["education"]}</script>
+<div class="metadata">
+<div class="publishedDate">July 12, 2022</div>
+<div class="dt-authors">
+<div class="dt-author">Charlotte Soneson</div>
+<div class="dt-author">Laurent Gatto</div>
+<div class="dt-author">Toby Hodges</div>
+<div class="dt-author">Jenny Drnevich</div>
+<div class="dt-author">Robert Castelo</div>
+<div class="dt-author">Susan Holmes</div>
+</div>
+</div>
+<div class="thumbnail">
+<img/>
+</div>
+<div class="description">
+<h2>Bioconductor becomes a Carpentries member organization</h2>
+<div class="dt-tags">
+<div class="dt-tag">education</div>
+</div>
+<p>Starting from August 1, 2022, Bioconductor will be a member of The 
+Carpentries. Among other things, the membership enables us to allow 
+15 individuals to follow the Carpentries' Instructor Training program and 
+become certified Carpentries Instructors.</p>
+</div>
+</a>
 <a href="posts/2022-01-31-join-the-bioconductor-community-advisory-board/" class="post-preview">
 <script class="post-metadata" type="text/json">{"categories":["BioC","CAB"]}</script>
 <div class="metadata">
@@ -2307,7 +2364,7 @@ open development software.".</p>
 <a href="posts/2022-01-12-biocasia2021-ja/" class="post-preview">
 <script class="post-metadata" type="text/json">{"categories":["Japanese","BioC","Diversity"]}</script>
 <div class="metadata">
-<div class="publishedDate">Jan. 11, 2022</div>
+<div class="publishedDate">Jan. 12, 2022</div>
 <div class="dt-authors">
 <div class="dt-author">西田 孝三</div>
 </div>
@@ -2336,7 +2393,7 @@ open development software.".</p>
 </div>
 </div>
 <div class="thumbnail">
-<img src="posts/2021-11-11-biocasia2021/Lori_Japanese_caption.png"/>
+<img data-src="posts/2021-11-11-biocasia2021/Lori_Japanese_caption.png"/>
 </div>
 <div class="description">
 <h2>BioC Asia 2021 challenged to overcoming language barriers and respected diversity</h2>
@@ -2356,7 +2413,7 @@ workshops: English, Japanese, and Mandarin".</p>
 <ul>
 <li>
 <a href="#category:Articles">Articles</a>
-<span class="category-count">(5)</span>
+<span class="category-count">(6)</span>
 </li>
 <li>
 <a href="#category:BioC">BioC</a>
@@ -2369,6 +2426,10 @@ workshops: English, Japanese, and Mandarin".</p>
 <li>
 <a href="#category:Diversity">Diversity</a>
 <span class="category-count">(2)</span>
+</li>
+<li>
+<a href="#category:education">education</a>
+<span class="category-count">(1)</span>
 </li>
 <li>
 <a href="#category:events">events</a>
@@ -2401,7 +2462,7 @@ workshops: English, Japanese, and Mandarin".</p>
 <a href="#">More articles &raquo;</a>
 </div>
 </div>
-<!--/radix_placeholder_article_listing-->
+<!--/radix_placeholder_article_listing-->
 
 <div class="d-title">
 <h1>Bioconductor community blog</h1>
@@ -2427,4 +2488,12 @@ class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"><
 <!--radix_placeholder_appendices-->
 <div class="appendix-bottom">
 <h3 id="updates-and-corrections">Corrections</h3>
-<p>If you see mistakes or want to suggest changes, please <a h
+<p>If you see mistakes or want to suggest changes, please <a href="https://github.com/Bioconductor/biocblog/issues/new">create an issue</a> on the source repository.</p>
+</div>
+<!--/radix_placeholder_appendices-->
+<!--radix_placeholder_navigation_after_body-->
+<!--/radix_placeholder_navigation_after_body-->
+
+</body>
+
+</html>
