@@ -33,7 +33,7 @@ knitr::opts_chunk$set(echo = FALSE)
 
 ```
 
-The 3rd metaRbolomics hackathon was organized by Steffen Neumann (@sneumann) to
+The 3rd metaRbolomics hackathon was organized by Steffen Neumann to
 bring developers and users of mass spectrometry and metabolomics-related R
 packages together to improve interoperability between packages, identify gaps
 and needs in current functionality and to foster collaboration between
