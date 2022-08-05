@@ -6,10 +6,10 @@ about:
   links:
     - icon: twitter
       text: Twitter
-      href: https://twitter.com
+      href: https://twitter.com/bioconductor
     - icon: github
       text: Github
-      href: https://github.com
+      href: https://github.com/bioconductor/biocblog
 
 ---
 
