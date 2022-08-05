@@ -6,6 +6,7 @@ website:
   navbar:
     right:
       - about.qmd
+      - contributing.qmd
       - icon: github
         href: https://github.com/bioconductor/biocblog
       - icon: twitter
