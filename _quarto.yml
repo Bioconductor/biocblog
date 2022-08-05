@@ -13,4 +13,5 @@ website:
 format:
   html:
     theme: cosmo
+    background-color: #0093AD
     css: styles.css
