@@ -1,5 +1,5 @@
 ---
-title: "About this blog"
+title: "About"
 ---
 
 Welcome to the Bioconductor community blog!
