@@ -1,5 +1,5 @@
 ---
-title: "Contributing articles"
+title: "Contributing"
 ---
 
 We very much appreciate contributions to the Bioconductor community blog from the broader community.
@@ -11,7 +11,7 @@ The easiest way to contribute a new article is as follows:
 
 1.  Create a fork of the [biocblog repository](https://github.com/Bioconductor/biocblog) on GitHub.
 
-2.  In your fork, create a new branch that will contain your [quarto blog article]([https://rstudio.github.io/distill](https://quarto.org/docs/websites/website-blog.html)).
+2.  In your fork, create a new branch that will contain your [quarto blog article](https://quarto.org/docs/websites/website-blog.html).
     When you're done, please check in the raw `qmd` plus any static files you might have added to the post's source directory.
     Don't check in any generated files, such as html.
 
