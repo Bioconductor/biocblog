@@ -1,25 +1,18 @@
 ---
 title: "Contributing articles"
-editor_options:
-  markdown:
-    wrap: 72
 ---
-
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = FALSE)
-```
 
 We very much appreciate contributions to the Bioconductor community blog from the broader community.
 If you are interested in publishing some of your own work or insights, we'd love to hear from you!
 
 Articles posted on the Bioconductor community blog are authored using
-[Distill for R Markdown](https://rstudio.github.io/distill).
+[Quarto](https://quarto.org).
 The easiest way to contribute a new article is as follows:
 
 1.  Create a fork of the [biocblog repository](https://github.com/Bioconductor/biocblog) on GitHub.
 
-2.  In your fork, create a new branch that will contain your [distill article](https://rstudio.github.io/distill).
-    When you're done, please check in the raw `Rmd` plus any static files you might have added to the post's source directory.
+2.  In your fork, create a new branch that will contain your [quarto blog article]([https://rstudio.github.io/distill](https://quarto.org/docs/websites/website-blog.html)).
+    When you're done, please check in the raw `qmd` plus any static files you might have added to the post's source directory.
     Don't check in any generated files, such as html.
 
 3.  Be sure that you've included all required [article metadata] (see below for details).
