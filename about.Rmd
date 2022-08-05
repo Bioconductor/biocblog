@@ -1,12 +1,6 @@
 ---
 title: "About this blog"
-description: |
-  Some additional details about the blog
 ---
-
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = FALSE)
-```
 
 Welcome to the Bioconductor community blog!
 Here you'll find the small contributions, highlight a package functionality, etc.
@@ -21,6 +15,4 @@ the Bioconductor community blog, we'd love to hear from you!
 See the article on [contributing posts](contributing.html) for additional details.
 
 The Bioconductor community blog was created using
-[Distill for R Markdown](https://rstudio.github.io/distill).
-
-<br/>
+[Quarto](https://quarto.org/).
