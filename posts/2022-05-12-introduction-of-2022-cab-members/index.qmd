@@ -6,15 +6,8 @@ author:
   - name: Bioconductor Community Advisory Board
     url: https://bioconductor.org/about/community-advisory-board/
 date: 2022-05-12
-output:
-  distill::distill_article:
-    self_contained: false
+draft: true
 ---
-
-
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = FALSE)
-```
 
 The Bioconductor [Community Advisory Board](https://bioconductor.org/about/community-advisory-board/)
 adds new members every year.

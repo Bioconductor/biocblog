@@ -1,24 +1,16 @@
 ---
 title: "Join the Bioconductor Community Advisory Board"
+image: MeetTheCabBioc2021.png
 description: |
   Each year the Bioconductor Community Advisory Board (CAB) puts out a public call for new board members. This post tells you more about what the CAB does and how you can apply to become a member.
 author:
-  - name: Kozo Nishida and Matt Ritchie
-    url: https://bioconductor.org/about/community-advisory-board/
+  - name: Kozo Nishida
+  - name: Matt Ritchie
 date: 2022-02-01
-output:
-  distill::distill_article:
-    self_contained: false
 categories:
   - BioC
   - CAB
-preview: "MeetTheCabBioc2021.png"
 ---
-
-
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = FALSE)
-```
 
 The Bioconductor [Community Advisory Board](https://bioconductor.org/about/community-advisory-board/)
 (established in 2020) is seeking nominations from new members.

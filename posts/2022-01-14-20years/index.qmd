@@ -8,9 +8,6 @@ author:
   - name: Kevin Rue-Albrecht
     url: https://github.com/kevinrue
 date: 2022-01-14
-output:
-  distill::distill_article:
-    self_contained: false
 categories:
   - events
 preview: "cover.png"

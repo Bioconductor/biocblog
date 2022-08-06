@@ -18,9 +18,6 @@ date: 2022-07-12
 creative_commons: CC BY
 categories:
   - education
-output:
-  distill::distill_article:
-    self_contained: false
 ---
 
 The [Bioconductor Teaching Committee](https://bioconductor.org/help/education-training/) is happy to announce that starting from August 1, 2022 and [supported by the Chan Zuckerberg Initiative](https://chanzuckerberg.com/eoss/proposals/bioconductor-high-quality-training-and-support-for-a-worldwide-community/), Bioconductor will be a member of [The Carpentries](https://carpentries.org/), a global community of volunteers who develop and teach interactive, hands-on workshops on computing and data skills, addressing basic training needs that are unmet in most disciplines.

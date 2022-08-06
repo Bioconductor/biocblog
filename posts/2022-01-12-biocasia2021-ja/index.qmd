@@ -8,20 +8,12 @@ author:
   - name: 西田 孝三
     url: https://github.com/kozo2
 date: 2022-01-12
-output:
-  distill::distill_article:
-    self_contained: false
 categories:
   - Japanese
   - BioC
   - Diversity
 preview: "Lori_Japanese_caption.png"
 ---
-
-
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = FALSE)
-```
 
 [私達 BioC Asia 2021 運営委員会](https://biocasia2021.bioconductor.org/organizers/) は
 2021 年 11 月 1 日から 4 日まで [Bioconductor](https://www.bioconductor.org/) のアジア地域のカンファレンス

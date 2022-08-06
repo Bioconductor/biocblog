@@ -1,0 +1,12 @@
+---
+title: "Introducing Bioconductor community events in June"
+description: |
+  A short description of the post.
+author:
+  - name: Kozo Nishida
+    url: https://bioconductor.org/about/community-advisory-board/
+date: 2022-06-09
+draft: true
+---
+
+Quarto is a publication format for scientific and technical writing, native to the web.
