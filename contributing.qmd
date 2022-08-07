@@ -1,0 +1,25 @@
+---
+title: "Contributing"
+---
+
+We very much appreciate contributions to the Bioconductor community blog from the broader community.
+If you are interested in publishing some of your own work or insights, we'd love to hear from you!
+
+Articles posted on the Bioconductor community blog are authored using
+[Quarto](https://quarto.org).
+The easiest way to contribute a new article is as follows:
+
+1.  Create a fork of the [biocblog repository](https://github.com/Bioconductor/biocblog) on GitHub.
+
+2.  In your fork, create a new branch that will contain your [quarto blog article](https://quarto.org/docs/websites/website-blog.html).
+    When you're done, please check in the raw `qmd` plus any static files you might have added to the post's source directory.
+    Don't check in any generated files, such as html.
+
+3.  Be sure that you've included all required [article metadata] (see below for details).
+
+4.  [Post an issue](https://github.com/Bioconductor/biocblog/issues)
+    on the Bioconductor community blog repo requesting that we accept your article (be sure
+    to include a link back to your article's GitHub repo!).
+
+Once we see your issue we'll take a look at your article, suggest
+changes as necessary, then publish it when it's ready.

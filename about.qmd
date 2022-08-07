@@ -1,0 +1,29 @@
+---
+title: "About"
+image: profile.jpg
+about:
+  template: jolla
+  links:
+    - icon: twitter
+      text: Twitter
+      href: https://twitter.com/bioconductor
+    - icon: github
+      text: Github
+      href: https://github.com/bioconductor/biocblog
+
+---
+
+Welcome to the Bioconductor community blog!
+Here you'll find the small contributions, highlight a package functionality, etc.
+There is a chance for people to give a shoutout to something great that happened
+recently in the community.
+
+We also like to draw from a wide variety of contributors
+(so please consider submitting a post if so motivated!).
+
+If you are interested in publishing some of your own work or insights on
+the Bioconductor community blog, we'd love to hear from you!
+See the article on [contributing posts](contributing.html) for additional details.
+
+The Bioconductor community blog was created using
+[Quarto](https://quarto.org/).

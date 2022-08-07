@@ -1,0 +1,21 @@
+project:
+  type: website
+
+website:
+  title: "Bioconductor community blog"
+  navbar:
+    right:
+      - about.qmd
+      - contributing.qmd
+      - icon: github
+        href: https://github.com/bioconductor/biocblog
+      - icon: twitter
+        href: https://twitter.com/bioconductor
+      - icon: youtube
+        href: https://www.youtube.com/user/bioconductor
+      - icon: slack
+        href: https://bioc-community.herokuapp.com/
+format:
+  html:
+    theme: yeti
+    css: styles.css
