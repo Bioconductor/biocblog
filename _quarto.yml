@@ -11,10 +11,10 @@ website:
         href: https://github.com/bioconductor/biocblog
       - icon: twitter
         href: https://twitter.com/bioconductor
-      - icon: slack
-        href: https://bioc-community.herokuapp.com/
       - icon: youtube
         href: https://www.youtube.com/user/bioconductor
+      - icon: slack
+        href: https://bioc-community.herokuapp.com/
 format:
   html:
     theme: yeti
