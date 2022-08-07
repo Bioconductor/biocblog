@@ -1,0 +1,27 @@
+{
+  "articles": [
+    {
+      "path": "about.html",
+      "title": "About this blog",
+      "description": "Some additional details about the blog",
+      "author": [],
+      "contents": "\r\nWelcome to the Bioconductor community blog! Here you’ll find the\r\nsmall contributions, highlight a package functionality, etc. There is a\r\nchance for people to give a shoutout to something great that happened\r\nrecently in the community.\r\nWe also like to draw from a wide variety of contributors (so please\r\nconsider submitting a post if so motivated!).\r\nIf you are interested in publishing some of your own work or insights\r\non the Bioconductor community blog, we’d love to hear from you! See the\r\narticle on contributing posts for\r\nadditional details.\r\nThe Bioconductor community blog was created using Distill for R Markdown.\r\n\r\n\r\n\r\n\r\n",
+      "last_modified": "2022-07-26T11:25:07+09:00"
+    },
+    {
+      "path": "contributing.html",
+      "title": "Contributing articles",
+      "author": [],
+      "contents": "\r\nWe very much appreciate contributions to the Bioconductor community\r\nblog from the broader community. If you are interested in publishing\r\nsome of your own work or insights, we’d love to hear from you!\r\nArticles posted on the Bioconductor community blog are authored using\r\nDistill for R Markdown.\r\nThe easiest way to contribute a new article is as follows:\r\nCreate a fork of the biocblog repository\r\non GitHub.\r\nIn your fork, create a new branch that will contain your distill article. When\r\nyou’re done, please check in the raw Rmd plus any static\r\nfiles you might have added to the post’s source directory. Don’t check\r\nin any generated files, such as html.\r\nBe sure that you’ve included all required article metadata (see below for\r\ndetails).\r\nPost an\r\nissue on the Bioconductor community blog repo requesting that we\r\naccept your article (be sure to include a link back to your article’s\r\nGitHub repo!).\r\nOnce we see your issue we’ll take a look at your article, suggest\r\nchanges as necessary, then publish it when it’s ready.\r\nArticle metadata\r\nTo be included in the blog, your article should include some standard\r\nmetadata fields. Here’s an example of a post that includes all required\r\nmetadata:\r\n---\r\ntitle: \"Classifying physical activity from smartphone data with Keras\"\r\ndescription: |\r\n  Using Keras to train a convolutional neural network to classify physical\r\n  activity. The dataset was built from the recordings of 30 subjects\r\n  performing basic activities and postural transitions while carrying a\r\n  waist-mounted smartphone with embedded inertial sensors.\r\nauthor:\r\n  - name: Nick Strayer\r\n    url: http://nickstrayer.me\r\n    affiliation: Vanderbilt University\r\n    affiliation_url: https://www.vanderbilt.edu/biostatistics-graduate/\r\ndate: 07-17-2018\r\ncreative_commons: CC BY\r\nrepository_url: https://github.com/nstrayer/activity_detection_post\r\noutput:\r\n  distill::distill_article:\r\n    self_contained: false\r\n---\r\nNote that the author field includes a URL for the author\r\nas well as their affiliation (you can include multiple authors). Note\r\nalso the creative_commons field which marks the article as\r\nbeing share-able (all contributed posts must have a Creative Commons license).\r\nFinally, the repository_url is used to provide links from\r\nthe article back to GitHub.\r\n\r\n\r\n\r\n",
+      "last_modified": "2022-07-26T11:25:07+09:00"
+    },
+    {
+      "path": "index.html",
+      "title": "Bioconductor community blog",
+      "author": [],
+      "contents": "\r\n\r\n\r\n\r\n",
+      "last_modified": "2022-07-26T15:35:36+09:00"
+    }
+  ],
+  "collections": ["posts/posts.json"]
+}
