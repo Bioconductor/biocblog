@@ -3,6 +3,8 @@ project:
 
 website:
   title: "Bioconductor community blog"
+  site-url: https://bioconductor.github.io/biocblog/
+  description: "A blog for the Bioconductor community!"
   navbar:
     right:
       - about.qmd
@@ -15,6 +17,8 @@ website:
         href: https://www.youtube.com/user/bioconductor
       - icon: slack
         href: https://bioc-community.herokuapp.com/
+      - icon: rss
+        href: index.xml
 format:
   html:
     theme: yeti
