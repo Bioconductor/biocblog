@@ -1,1 +1,1 @@
-Sitemap: https://Bioconductor.github.io/biocblog/sitemap.xml
+Sitemap: https://bioconductor.github.io/biocblog/sitemap.xml

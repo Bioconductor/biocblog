@@ -134,14 +134,15 @@ ul.task-list{list-style: none;}
 </header>
 
 <p>We very much appreciate contributions to the Bioconductor community blog from the broader community. If you are interested in publishing some of your own work or insights, we’d love to hear from you!</p>
-<p>Articles posted on the Bioconductor community blog are authored using <a href="https://quarto.org">Quarto</a>. The easiest way to contribute a new article is as follows:</p>
+<p>Articles posted on the Bioconductor community blog are authored using <a href="https://quarto.org">Quarto</a>. The way to contribute a new article is as follows:</p>
 <ol type="1">
-<li><p>Create a fork of the <a href="https://github.com/Bioconductor/biocblog">biocblog repository</a> on GitHub.</p></li>
-<li><p>In your fork, create a new branch that will contain your <a href="https://quarto.org/docs/websites/website-blog.html">quarto blog article</a>. When you’re done, please check in the raw <code>qmd</code> plus any static files you might have added to the post’s source directory. Don’t check in any generated files, such as html.</p></li>
-<li><p>Be sure that you’ve included all required [article metadata] (see below for details).</p></li>
-<li><p><a href="https://github.com/Bioconductor/biocblog/issues">Post an issue</a> on the Bioconductor community blog repo requesting that we accept your article (be sure to include a link back to your article’s GitHub repo!).</p></li>
+<li><p>Create a fork of the <a href="https://github.com/Bioconductor/biocblog">biocblog repository</a> on GitHub. <img src="./GitHubForkButton.png" class="img-fluid"> And Git clone it to your local environment!</p></li>
+<li><p><a href="https://rstudio.com/products/rstudio/download/">Install RStudio</a> and double click the <code>biocblog.Rproj</code> file in the cloned repo. The latest release of RStudio (v2022.07 at this point) includes support for editing and preview of <a href="https://quarto.org">Quarto</a> documents.</p></li>
+<li><p><a href="https://quarto.org/docs/websites/website-blog.html#posts-directory">Create a new <code>qmd</code> file</a> in your RStudio, and check the content with clicking <code>Preview Website</code> button under the <code>Build</code> tab! <img src="./PreviewWebsiteButton.png" class="img-fluid"></p></li>
+<li><p>When you’re done, please <code>git commit</code> the raw <code>qmd</code> plus any static files you might have added to the post’s source directory. Don’t commit any generated files, such as html.</p></li>
+<li><p>Send a Pull Request requesting that we accept your article!</p></li>
 </ol>
-<p>Once we see your issue we’ll take a look at your article, suggest changes as necessary, then publish it when it’s ready.</p>
+<p>Once we see your Pull Request we’ll take a look at your article, suggest changes as necessary, then publish it when it’s ready.</p>
 
 
 

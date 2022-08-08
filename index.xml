@@ -6,8 +6,8 @@
       version="2.0">
 <channel>
 <title>Bioconductor community blog</title>
-<link>https://Bioconductor.github.io/biocblog/index.html</link>
-<atom:link href="https://Bioconductor.github.io/biocblog/index.xml" rel="self" type="application/rss+xml"/>
+<link>https://bioconductor.github.io/biocblog/index.html</link>
+<atom:link href="https://bioconductor.github.io/biocblog/index.xml" rel="self" type="application/rss+xml"/>
 <description>A blog for the Bioconductor community!</description>
 <generator>quarto-1.0.38</generator>
 <lastBuildDate>Mon, 11 Jul 2022 15:00:00 GMT</lastBuildDate>
@@ -19,7 +19,7 @@
   <dc:creator>Jenny Drnevich</dc:creator>
   <dc:creator>Robert Castelo</dc:creator>
   <dc:creator>Susan Holmes</dc:creator>
-  <link>https://Bioconductor.github.io/biocblog/posts/2022-07-12-carpentries-membership/index.html</link>
+  <link>https://bioconductor.github.io/biocblog/posts/2022-07-12-carpentries-membership/index.html</link>
   <description><![CDATA[ 
 
 
@@ -34,14 +34,14 @@
 
  ]]></description>
   <category>education</category>
-  <guid>https://Bioconductor.github.io/biocblog/posts/2022-07-12-carpentries-membership/index.html</guid>
+  <guid>https://bioconductor.github.io/biocblog/posts/2022-07-12-carpentries-membership/index.html</guid>
   <pubDate>Mon, 11 Jul 2022 15:00:00 GMT</pubDate>
 </item>
 <item>
   <title>Join the Bioconductor Community Advisory Board</title>
   <dc:creator>Kozo Nishida</dc:creator>
   <dc:creator>Matt Ritchie</dc:creator>
-  <link>https://Bioconductor.github.io/biocblog/posts/2022-01-31-join-the-bioconductor-community-advisory-board/index.html</link>
+  <link>https://bioconductor.github.io/biocblog/posts/2022-01-31-join-the-bioconductor-community-advisory-board/index.html</link>
   <description><![CDATA[ 
 
 
@@ -60,14 +60,14 @@
  ]]></description>
   <category>BioC</category>
   <category>CAB</category>
-  <guid>https://Bioconductor.github.io/biocblog/posts/2022-01-31-join-the-bioconductor-community-advisory-board/index.html</guid>
+  <guid>https://bioconductor.github.io/biocblog/posts/2022-01-31-join-the-bioconductor-community-advisory-board/index.html</guid>
   <pubDate>Mon, 31 Jan 2022 15:00:00 GMT</pubDate>
-  <media:content url="https://Bioconductor.github.io/biocblog/posts/2022-01-31-join-the-bioconductor-community-advisory-board/MeetTheCabBioc2021.png" medium="image" type="image/png" height="83" width="144"/>
+  <media:content url="https://bioconductor.github.io/biocblog/posts/2022-01-31-join-the-bioconductor-community-advisory-board/MeetTheCabBioc2021.png" medium="image" type="image/png" height="83" width="144"/>
 </item>
 <item>
   <title>metaRbolomics hackathon to improve interoperability of metabolomics-related R packages</title>
   <dc:creator>Johannes Rainer</dc:creator>
-  <link>https://Bioconductor.github.io/biocblog/posts/2022-01-18-metaRbolomics-2021/index.html</link>
+  <link>https://bioconductor.github.io/biocblog/posts/2022-01-18-metaRbolomics-2021/index.html</link>
   <description><![CDATA[ 
 
 
@@ -75,10 +75,10 @@
 
 <p>The 3rd metaRbolomics hackathon was organized by Steffen Neumann to bring developers and users of mass spectrometry and metabolomics-related R packages together to improve interoperability between packages, identify gaps and needs in current functionality and to foster collaboration between developers. The event took place from the 22-24 of November, with funding from the <a href="https://www.denbi.de/">de.NBI ELIXIR-DE</a> in Wittenberg (Germany) as an in-person event. As a safety measure, participants had the opportunity for on-site fast COVID-19 self-tests and all participants wore masks during the whole event.</p>
 <p>Participants were also allowed to give flash talks presenting either R packages or approaches and concepts such as <a href="https://github.com/mariallr">Maria Llambrich</a> presenting the <a href="https://cran.r-project.org/web/packages/amanida/index.html"><code>amanida</code></a> R package for meta-analysis of metabolomics studies or <a href="https://github.com/hechth">Helge Hecht</a> giving an overview of machine learning approaches for annotation of small compounds in mass spectrometry data.</p>
-<p><img src="https://Bioconductor.github.io/biocblog/posts/2022-01-18-metaRbolomics-2021/MLlambrich.jpg" class="img-fluid"></p>
-<p><img src="https://Bioconductor.github.io/biocblog/posts/2022-01-18-metaRbolomics-2021/HHecht.jpg" class="img-fluid"></p>
+<p><img src="https://bioconductor.github.io/biocblog/posts/2022-01-18-metaRbolomics-2021/MLlambrich.jpg" class="img-fluid"></p>
+<p><img src="https://bioconductor.github.io/biocblog/posts/2022-01-18-metaRbolomics-2021/HHecht.jpg" class="img-fluid"></p>
 <p>After the actual hacking session participants socialized for example on the Christmas Market in Wittenberg.</p>
-<p><img src="https://Bioconductor.github.io/biocblog/posts/2022-01-18-metaRbolomics-2021/market.jpg" class="img-fluid"></p>
+<p><img src="https://bioconductor.github.io/biocblog/posts/2022-01-18-metaRbolomics-2021/market.jpg" class="img-fluid"></p>
 <p>Among projects and collaborations that were started at the hackathon were a new <code>MsBackend</code> for the <a href="https://doi.org/doi:10.18129/B9.bioc.Spectra"><code>Spectra</code></a> Bioconductor package allowing handling of TimsTOF data (<a href="https://github.com/rformassspectrometry/MsBackendTimsTof/"><code>MsBackendTimsTOF</code></a>), updates and fixes for the <a href="https://github.com/tnaake/MsQuality/"><code>MsQuality</code></a> package as well as further development and expansion of the <a href="https://github.com/mengchen18/xcmsViewer"><code>xcmsViewer</code></a>.</p>
 <p>Summarizing, the hackathon was a very nice event fostering open science and open development in the metabolomics community.</p>
 
@@ -89,14 +89,14 @@
   <category>Mass Spectrometry</category>
   <category>Hackathon</category>
   <category>Open Science</category>
-  <guid>https://Bioconductor.github.io/biocblog/posts/2022-01-18-metaRbolomics-2021/index.html</guid>
+  <guid>https://bioconductor.github.io/biocblog/posts/2022-01-18-metaRbolomics-2021/index.html</guid>
   <pubDate>Mon, 17 Jan 2022 15:00:00 GMT</pubDate>
-  <media:content url="https://Bioconductor.github.io/biocblog/posts/2022-01-18-metaRbolomics-2021/MLlambrich.jpg" medium="image" type="image/jpeg"/>
+  <media:content url="https://bioconductor.github.io/biocblog/posts/2022-01-18-metaRbolomics-2021/MLlambrich.jpg" medium="image" type="image/jpeg"/>
 </item>
 <item>
   <title>Celebrating 20 years of Bioconductor</title>
   <dc:creator>Kevin Rue-Albrecht</dc:creator>
-  <link>https://Bioconductor.github.io/biocblog/posts/2022-01-14-20years/index.html</link>
+  <link>https://bioconductor.github.io/biocblog/posts/2022-01-14-20years/index.html</link>
   <description><![CDATA[ 
 
 
@@ -107,7 +107,7 @@
 <p>I will skip over the first 10 years years, and redirect the nostalgic ones to the Wayback Machine snapshot of <a href="http://web.archive.org/web/20020327093500/https://bioconductor.org/">the Bioconductor website in March 2002</a> and the first published article describing the aims and methods of the project at its inception <a id="cite-Gentleman2004"></a>Gentleman, et al.&nbsp;(2004)</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="https://Bioconductor.github.io/biocblog/posts/2022-01-14-20years/bioconductor-website-2002.png" class="img-fluid figure-img"></p>
+<p><img src="https://bioconductor.github.io/biocblog/posts/2022-01-14-20years/bioconductor-website-2002.png" class="img-fluid figure-img"></p>
 <p></p><figcaption class="figure-caption">The Bioconductor website in 2002.</figcaption><p></p>
 </figure>
 </div>
@@ -131,7 +131,7 @@
 <p>That is about 1 new package every other day for the past twenty years. Way to go!</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="https://Bioconductor.github.io/biocblog/posts/2022-01-14-20years/bioconductor-website-2022.png" class="img-fluid figure-img"></p>
+<p><img src="https://bioconductor.github.io/biocblog/posts/2022-01-14-20years/bioconductor-website-2022.png" class="img-fluid figure-img"></p>
 <p></p><figcaption class="figure-caption">The Bioconductor website in 2022.</figcaption><p></p>
 </figure>
 </div>
@@ -140,7 +140,7 @@
 <p>And speaking of conference, let me close on the celebrations of the 20th anniversary of the Bioconductor project, as a <a href="https://kevinrue.github.io/Bioconductor20YearsSlides/">collection of photos contributed by community members</a> presented during the BioC 2021 conference <a href="https://youtu.be/LTT1i_ACpxc?t=1059">Meet the Community Advisory Board (CAB) session</a>. I’m sure this will bring up memories for some of the earliest contributors to the Bioconductor project, and I hope that it will show even the most recent users how open and welcoming the Bioconductor community is!</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="https://Bioconductor.github.io/biocblog/posts/2022-01-14-20years/cover.png" class="img-fluid figure-img"></p>
+<p><img src="https://bioconductor.github.io/biocblog/posts/2022-01-14-20years/cover.png" class="img-fluid figure-img"></p>
 <p></p><figcaption class="figure-caption">Slides of photos celebrating 20 years of Bioconductor (link above).</figcaption><p></p>
 </figure>
 </div>
@@ -155,14 +155,14 @@
 
  ]]></description>
   <category>events</category>
-  <guid>https://Bioconductor.github.io/biocblog/posts/2022-01-14-20years/index.html</guid>
+  <guid>https://bioconductor.github.io/biocblog/posts/2022-01-14-20years/index.html</guid>
   <pubDate>Thu, 13 Jan 2022 15:00:00 GMT</pubDate>
-  <media:content url="https://Bioconductor.github.io/biocblog/posts/2022-01-14-20years/cover.png" medium="image" type="image/png" height="108" width="144"/>
+  <media:content url="https://bioconductor.github.io/biocblog/posts/2022-01-14-20years/cover.png" medium="image" type="image/png" height="108" width="144"/>
 </item>
 <item>
   <title>BioC Asia 2021 は言語障壁の緩和に挑戦し、多様性を実現した</title>
   <dc:creator>西田 孝三</dc:creator>
-  <link>https://Bioconductor.github.io/biocblog/posts/2022-01-12-biocasia2021-ja/index.html</link>
+  <link>https://bioconductor.github.io/biocblog/posts/2022-01-12-biocasia2021-ja/index.html</link>
   <description><![CDATA[ 
 
 
@@ -178,19 +178,19 @@
 <section id="zoom-の-live-transcription" class="level2">
 <h2 class="anchored" data-anchor-id="zoom-の-live-transcription">Zoom の live transcription</h2>
 <p>Zoom には <a href="https://support.zoom.us/hc/en-us/articles/4409683389709-Enabling-or-disabling-closed-captioning-and-live-transcription-services">live transcription</a> と呼ばれるライブ文字起こし機能が備わっています。 私達は英語を用いた発表者にこの機能を適用し、英語の理解の障壁を下げることを試みました。</p>
-<p><img src="https://Bioconductor.github.io/biocblog/posts/2022-01-12-biocasia2021-ja/Zoom_caption.png" class="img-fluid"></p>
+<p><img src="https://bioconductor.github.io/biocblog/posts/2022-01-12-biocasia2021-ja/Zoom_caption.png" class="img-fluid"></p>
 </section>
 <section id="youtube-を用いた英語スピーチの日本語翻訳の字幕" class="level2">
 <h2 class="anchored" data-anchor-id="youtube-を用いた英語スピーチの日本語翻訳の字幕">YouTube を用いた英語スピーチの日本語翻訳の字幕</h2>
 <p>2021 年 11 月 2 日 のキーノートスピーカー Lori Ann Shepherd の発表は、 英語スピーチの事前録画物に日本語翻訳字幕をつけた YouTube 動画を放送する形で行いました。</p>
-<p><img src="https://Bioconductor.github.io/biocblog/posts/2022-01-12-biocasia2021-ja/Lori_Japanese_caption.png" class="img-fluid"></p>
+<p><img src="https://bioconductor.github.io/biocblog/posts/2022-01-12-biocasia2021-ja/Lori_Japanese_caption.png" class="img-fluid"></p>
 <p>この日本語翻訳字幕は https://www.youtube.com/watch?v=NMv27jgHRb4 を開き、下記画像のように YouTube で字幕設定を行っていただくことでご覧いただけます。</p>
-<p><img src="https://Bioconductor.github.io/biocblog/posts/2022-01-12-biocasia2021-ja/YouTube_Japanese_caption.png" class="img-fluid"></p>
+<p><img src="https://bioconductor.github.io/biocblog/posts/2022-01-12-biocasia2021-ja/YouTube_Japanese_caption.png" class="img-fluid"></p>
 </section>
 <section id="複数の-zoom-meeting-を用いた-3-言語のパラレルワークショップ-日本語英語mandarin" class="level2">
 <h2 class="anchored" data-anchor-id="複数の-zoom-meeting-を用いた-3-言語のパラレルワークショップ-日本語英語mandarin">複数の Zoom Meeting を用いた 3 言語のパラレルワークショップ (日本語、英語、Mandarin)</h2>
 <p>また <a href="https://www.r-consortium.org/blog/2021/05/28/bioconductor-asia-membership-increasing-due-to-going-virtual">2020年度から試みが始まった非英語言語でのパラレルワークショップの開催</a> をさらに推し進めました。 2020年度は英語とMandarinでワークショップが行われたのですが、 2021年度、私達はそれにさらに日本語を加えた 3 つの言語でのパラレルワークショップを開催しました。</p>
-<p><img src="https://Bioconductor.github.io/biocblog/posts/2022-01-12-biocasia2021-ja/parallel_workshop.png" class="img-fluid"></p>
+<p><img src="https://bioconductor.github.io/biocblog/posts/2022-01-12-biocasia2021-ja/parallel_workshop.png" class="img-fluid"></p>
 </section>
 <section id="まとめ" class="level2">
 <h2 class="anchored" data-anchor-id="まとめ">まとめ</h2>
@@ -203,14 +203,14 @@
   <category>Japanese</category>
   <category>BioC</category>
   <category>Diversity</category>
-  <guid>https://Bioconductor.github.io/biocblog/posts/2022-01-12-biocasia2021-ja/index.html</guid>
+  <guid>https://bioconductor.github.io/biocblog/posts/2022-01-12-biocasia2021-ja/index.html</guid>
   <pubDate>Tue, 11 Jan 2022 15:00:00 GMT</pubDate>
-  <media:content url="https://Bioconductor.github.io/biocblog/posts/2022-01-12-biocasia2021-ja/Zoom_caption.png" medium="image" type="image/png" height="108" width="144"/>
+  <media:content url="https://bioconductor.github.io/biocblog/posts/2022-01-12-biocasia2021-ja/Zoom_caption.png" medium="image" type="image/png" height="108" width="144"/>
 </item>
 <item>
   <title>BioC Asia 2021 challenged to overcoming language barriers and respected diversity</title>
   <dc:creator>Kozo Nishida</dc:creator>
-  <link>https://Bioconductor.github.io/biocblog/posts/2021-11-11-biocasia2021/index.html</link>
+  <link>https://bioconductor.github.io/biocblog/posts/2021-11-11-biocasia2021/index.html</link>
   <description><![CDATA[ 
 
 
@@ -226,19 +226,19 @@
 <section id="zoom-live-transcription" class="level2">
 <h2 class="anchored" data-anchor-id="zoom-live-transcription">Zoom live transcription</h2>
 <p>Zoom has a <a href="https://support.zoom.us/hc/en-us/articles/4409683389709-Enabling-or-disabling-closed-captioning-and-live-transcription-services">live transcription feature</a>. We have applied this feature to English-speaking presenters in an attempt to lower the barriers for understanding English.</p>
-<p><img src="https://Bioconductor.github.io/biocblog/posts/2021-11-11-biocasia2021/Zoom_caption.png" class="img-fluid"></p>
+<p><img src="https://bioconductor.github.io/biocblog/posts/2021-11-11-biocasia2021/Zoom_caption.png" class="img-fluid"></p>
 </section>
 <section id="subtitles-for-japanese-translation-of-english-speech-using-youtube" class="level2">
 <h2 class="anchored" data-anchor-id="subtitles-for-japanese-translation-of-english-speech-using-youtube">Subtitles for Japanese translation of English speech using YouTube</h2>
 <p>The talk of the keynote speaker Lori Ann Shepherd on November 2, 2021 was made by broadcasting a YouTube video with Japanese translation subtitles on a pre-recorded English speech.</p>
-<p><img src="https://Bioconductor.github.io/biocblog/posts/2021-11-11-biocasia2021/Lori_Japanese_caption.png" class="img-fluid"></p>
+<p><img src="https://bioconductor.github.io/biocblog/posts/2021-11-11-biocasia2021/Lori_Japanese_caption.png" class="img-fluid"></p>
 <p>You can see this Japanese translation subtitles by opening https://www.youtube.com/watch?v=NMv27jgHRb4 and setting the subtitles on YouTube as shown in the image below.</p>
-<p><img src="https://Bioconductor.github.io/biocblog/posts/2021-11-11-biocasia2021/YouTube_Japanese_caption.png" class="img-fluid"></p>
+<p><img src="https://bioconductor.github.io/biocblog/posts/2021-11-11-biocasia2021/YouTube_Japanese_caption.png" class="img-fluid"></p>
 </section>
 <section id="parallel-workshops-in-3-languages-with-multiple-zoom-meetings" class="level2">
 <h2 class="anchored" data-anchor-id="parallel-workshops-in-3-languages-with-multiple-zoom-meetings">Parallel workshops in 3 languages with multiple Zoom Meetings</h2>
 <p>We also promoted the parallel workshops in non-English languages, <a href="https://www.r-consortium.org/blog/2021/05/28/bioconductor-asia-membership-increasing-due-to-going-virtual">which began in BioC Asia 2020</a>. In 2020, the parallel workshops were held in English and Mandarin, but in 2021, we held parallel workshops in his <strong>three</strong> languages, including Japanese.</p>
-<p><img src="https://Bioconductor.github.io/biocblog/posts/2021-11-11-biocasia2021/parallel_workshop.png" class="img-fluid"></p>
+<p><img src="https://bioconductor.github.io/biocblog/posts/2021-11-11-biocasia2021/parallel_workshop.png" class="img-fluid"></p>
 </section>
 <section id="conclusion" class="level2">
 <h2 class="anchored" data-anchor-id="conclusion">Conclusion</h2>
@@ -250,9 +250,9 @@
  ]]></description>
   <category>BioC</category>
   <category>Diversity</category>
-  <guid>https://Bioconductor.github.io/biocblog/posts/2021-11-11-biocasia2021/index.html</guid>
+  <guid>https://bioconductor.github.io/biocblog/posts/2021-11-11-biocasia2021/index.html</guid>
   <pubDate>Wed, 08 Dec 2021 15:00:00 GMT</pubDate>
-  <media:content url="https://Bioconductor.github.io/biocblog/posts/2021-11-11-biocasia2021/Lori_Japanese_caption.png" medium="image" type="image/png" height="109" width="144"/>
+  <media:content url="https://bioconductor.github.io/biocblog/posts/2021-11-11-biocasia2021/Lori_Japanese_caption.png" medium="image" type="image/png" height="109" width="144"/>
 </item>
 </channel>
 </rss>
