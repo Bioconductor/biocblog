@@ -6,7 +6,8 @@ date: "8/11/2022"
 draft: true
 ---
 
-We plan to provide high-quality, community-driven Bioconcudtor training in local languages. [This plan is supported by funding from CZI Essential Open Source Software for Science (EOSS)](https://chanzuckerberg.com/eoss/proposals/bioconductor-high-quality-training-and-support-for-a-worldwide-community/).
+We plan to provide high-quality, community-driven Bioconcudtor training in local languages.
+[This plan is supported by funding from CZI Essential Open Source Software for Science (EOSS)](https://chanzuckerberg.com/eoss/proposals/bioconductor-high-quality-training-and-support-for-a-worldwide-community/).
 
 So we hold the first Translation-a-thon last month.
 
@@ -18,7 +19,8 @@ In this Translation-a-thon, we have used a translation web-platform Crowdin, and
 ![](biocCrowdin.png)
 ![](crowdinEditor.png)
 
-Among the participants, the language that made the most progress was Chinese simplified/traditional. Then there was also the Portuguese contribution.
+Among the participants, the language that made the most progress was Chinese simplified/traditional.
+Then there was also the Portuguese contribution.
 
 ![](pkgrevdocsProgress.png)
 
@@ -26,7 +28,8 @@ We plan to hold this Translation-a-thon on a monthly basis in the future.
 And the next hackathon will be held on August 27th.
 You can apply for participation from the following meetup.com URL.
 
-We have [become a member organization of the Carpentries](https://bioconductor.github.io/biocblog/posts/2022-07-12-carpentries-membership/), and we also make the Carpentries-style teaching materials. (See also [bioconductor.org/help/education-training/](https://bioconductor.org/help/education-training/).)
+We have [become a member organization of the Carpentries](https://bioconductor.github.io/biocblog/posts/2022-07-12-carpentries-membership/), and we also make the Carpentries-style teaching materials.
+(See also [bioconductor.org/help/education-training/](https://bioconductor.org/help/education-training/).)
 In the future, we plan to add the Carpentries-style teaching materials as translation targets.
 
 I would love to get help from the community so that people around the world can learn Bioconductor in their local languages.
