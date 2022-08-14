@@ -1,5 +1,6 @@
 ---
-title: "Bioconductor community blog"
+title: "This blog welcomes contributions in languages other than English."
+description: "See the links on the top menu for how to contribute."
 listing:
   contents: posts
   sort: "date desc"

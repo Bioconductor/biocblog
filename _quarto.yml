@@ -9,6 +9,11 @@ website:
     right:
       - about.qmd
       - contributing.qmd
+      - contributing-zh.qmd
+      - contributing-es.qmd
+      - contributing-fr.qmd
+      - contributing-ja.qmd
+      - contributing-pt.qmd
       - icon: github
         href: https://github.com/bioconductor/biocblog
       - icon: twitter

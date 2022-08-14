@@ -1,0 +1,23 @@
+---
+title: "貢献の仕方"
+lang: ja
+author: "Kozo Nishida"
+---
+
+私達は Bioconductor コミュニティブログへの幅広いコミュニティからの 貢献を歓迎します。
+自分の作品や洞察を公開することに興味がある場合は、ぜひご連絡ください。
+
+Bioconductor コミュニティブログに投稿された記事は、[Quarto](https://quarto.org) を使用して作成されています。
+新しい記事を寄稿する方法は次のとおりです。
+
+1.  GitHub で [biocblog repository](https://github.com/Bioconductor/biocblog) リポジトリの Fork をあなたのアカウントに作ります。 ![](./GitHubForkButton.png) そしてそれをあなたのローカル環境にクローンします。
+
+2. [RStudio をインストール](https://rstudio.com/products/rstudio/download/) します。そして先程クローンしたリポジトリ内にある `biocblog.Rproj` というファイルをダブルクリックします。最新リリースの RStudio (現時点では v2022.07) は [Quarto](https://quarto.org) の編集とプレビューを標準でサポートしています。
+
+3. [新しく `qmd` ファイルを](https://quarto.org/docs/websites/website-blog.html#posts-directory) RStudio の中で作ります。qmd が書けたら RStudio の `Build` タブ下の `Preview Website` ボタンをクリックしてレンダリングされる内容を確認します。 ![](./PreviewWebsiteButton.png)
+
+4. 事を終えたら、その `qmd` ファイルと画像ファイル等を `posts` に含めるように `git commit` してください。プレビューで生成されるファイル(例えばhtml)はコミットに含めないようにしてください。
+    
+5. 私達があなたの記事を受け入れるためにプルリクエストを送ってください！ 
+
+プルリクエストを確認したら、記事を確認し、必要に応じて変更を提案し、準備ができたら公開します。
