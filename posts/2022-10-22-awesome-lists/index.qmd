@@ -32,6 +32,8 @@ Omics data is known to be heterogenous, available in numerous forms such as geno
 
 ## Lipidomics
 
+Bioconductor packages like [`lipidr`](https://www.bioconductor.org/packages/release/bioc/html/lipidr.html) and [`rgoslin`](https://bioconductor.org/packages/release/bioc/html/rgoslin.html) can be found in the lipidomics list.
+
 -   <https://github.com/lifs-tools/awesome-lipidomics>
 
 ## Spatial Omics
