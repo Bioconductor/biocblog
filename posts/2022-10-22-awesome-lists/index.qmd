@@ -28,6 +28,8 @@ Omics data is known to be heterogenous, available in numerous forms such as geno
 
 ## Proteomics
 
+Bioconductor package [`PGA`](https://bioconductor.org/packages/3.12/bioc/html/PGA.html) was mentioned but the package was deprecated on version 3.12 of Bioconductor.
+
 -   <https://github.com/anuragraj/awesome-proteomics>
 
 ## Lipidomics
