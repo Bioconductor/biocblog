@@ -1,0 +1,129 @@
+---
+title: "Recommended Awesome Lists for Bioconductor Community"
+description: |
+  This blog post consolidates web links to different Awesome Lists that may be useful to those just starting up in bioinformatics and those experienced in the field. 
+author:
+  - name: Jeremy Selva
+    url: https://jeremy-selva.netlify.app/
+date: 2022-10-22
+creative_commons: CC BY
+categories:
+  - education
+---
+
+# Introdution
+
+Initiated by [Sindre Sorhus](https://twitter.com/sindresorhus), an awesome list repository is a list of specific applications or resources that is curated by a domain/field specific community to be useful. They are a great place for those new to the domain to find out what tools others are using. Likewise a curated list of awesome lists can be found in this [web page](https://github.com/topics/awesome) in alphabetical order. There is even a [Twitter account](https://twitter.com/awesome__re) giving updates to new awesome lists.
+
+However, with more than 5000 public repository of awesome lists, it can be hard to navigate them to find lists that are relevant to the field of bioinformatics and computational biology. This post aims to lighten the work load by providing a manageable list grouped by specific fields of bioinformatics that is of interest to the Bioconductor Community.
+
+# Omics
+
+Omics data is known to be heterogenous, available in numerous forms such as genome, proteome, transcriptome, and metabolome. Recently, imaging or spatial omics have recent joined into the omics family, making multi omics analysis far more challenging. Here we list up some awesome list from the different groups.
+
+## Genomics
+
+-   <https://github.com/seandavi/awesome-single-cell>
+
+## Proteomics
+
+-   <https://github.com/anuragraj/awesome-proteomics>
+
+## Lipidomics
+
+-   <https://github.com/lifs-tools/awesome-lipidomics>
+
+## Spatial Omics
+
+-   <https://github.com/crazyhottommy/awesome_spatial_omics>
+
+## Multi-omics
+
+-   <https://github.com/mikelove/awesome-multi-omics>
+
+# Bioimaging
+
+Bioimaging is useful in helping researcher understand biological processes in real time. Here are a list of useful resources with respect to thier specific domain.
+
+## Microscopy
+
+-   <https://github.com/hallvaaw/awesome-biological-image-analysis>
+
+## Medical Images
+
+-   <https://github.com/fepegar/awesome-medical-imaging>
+
+## Cytodata
+
+-   <https://github.com/cytodata/awesome-cytodata>
+
+# Biological Visualisation
+
+Visualisation of biological data can be complex. While there are many web based visualisation tools, they can be hard to find on the Internet. Thankfully, [Mark Keller](http://markk.co/#/) has consolidated them based on different fields of biological research from genomics, microscopy, to mass spectrometry.
+
+-   <https://github.com/keller-mark/awesome-biological-visualizations>
+
+-   <http://genocat.tools/tools/3dviewer/>
+
+# Dynamic Reports
+
+[Jupyter](https://jupyter.org/) and [Quarto](https://quarto.org/) are few of the most popular tools used in creating dynamic reports that is compatible with several programming languages like [R](https://www.r-project.org/) and [Python](https://www.python.org/). Here are some of the links to their awesome lists.
+
+## Jupyter
+
+-   <https://github.com/ml-tooling/best-of-jupyter>
+-   <https://github.com/markusschanta/awesome-jupyter>
+
+## Quarto
+
+-   <https://github.com/mcanouil/awesome-quarto>
+
+# Code Version Control
+
+Version control systems (VCS) are software tools that help data analysts manage changes to their programming code over time. One of the most popular VCS tools in use today is [Git](https://git-scm.com/). [GitHub](https://github.com/) and [GitLab](https://about.gitlab.com/) are one of many cloud-based Git repository hosting services. 
+
+## Git
+
+-   <https://github.com/dictcp/awesome-git>
+
+## GitHub
+
+-   <https://github.com/tiimgreen/github-cheat-sheet>
+-   <https://github.com/xhacker/awesome-github-extensions>
+
+## GitLab
+
+-   <https://gitlab.com/Andorka/awesome-gitlab>
+-   <https://gitlab.com/fkromer/awesome-gitlab>
+
+## Gitea
+
+-   <https://gitea.com/gitea/awesome-gitea>
+
+Unfortunately, I could not find awesome list specific to [Bitbucket](https://bitbucket.org/product/) and [Gitee](https://gitee.com/)
+
+# Reproducible Research
+
+[Jeremy Leipzig](https://twitter.com/jermdemo) have created a small [encyclopedia](https://github.com/leipzig/awesome-reproducible-research) of reproducible research resources from journals, data repositories, relevant organisations and other awesome lists like the [Awesome Reproducible R](https://github.com/datasnakes/awesome-reproducible-R) and [Awesome Docker](https://github.com/veggiemonk/awesome-docker) . 
+
+-   <https://github.com/leipzig/awesome-reproducible-research>
+-   <https://github.com/datasnakes/awesome-reproducible-R>
+-   <https://github.com/veggiemonk/awesome-docker>
+
+# Research Software
+
+It can be daunting task to create a R package as there are many things to do like creating the package skeleton correctly, writing documentation and unit test etc. While there are many R packages created to make this process easily. It is nice to organise these R packages based on their specific roles and [Indrajeet Patil](https://twitter.com/patilindrajeets) has done just that. 
+
+In addition, it is also important for research software, no matter how useful it is to be deployed in the right registry so that the right group of people can find the software easily. In the case of R, we are blessed with many places to deploy an R package [CRAN](https://cran.r-project.org/submit.html), [Bioconductor](https://www.bioconductor.org/), [Neuroconductor](https://neuroconductor.org/), [R-universe](https://ropensci.org/r-universe/). Similar things are also done on other programming languages as well. The Netherlands eScience Center have created a [list](https://github.com/NLeSC/awesome-research-software-registries) of relevant registries based on location, domain and programming language.        
+
+## Developing R packages
+
+-   <https://github.com/IndrajeetPatil/awesome-r-pkgtools>
+
+## Research Software Registry
+
+-   <https://github.com/NLeSC/awesome-research-software-registries>
+
+# Moving Foward
+
+We hope that the information listed above is helpful. The creation of these awesome lists is made possible with the hard work of volunteers and unconditional help from contributors. If there are any suggestions for improving or new information to add, do let the respective maintainers know.
