@@ -1,5 +1,5 @@
 ---
-title: "Recommended Awesome Lists for Bioconductor Community"
+title: "Recommended Awesome Lists for Bioconductor Community: Oct 2022 Edition"
 description: |
   This blog post consolidates web links to different Awesome Lists that may be useful to those just starting up in bioinformatics and those experienced in the field. 
 author:
@@ -43,7 +43,7 @@ Omics data is known to be heterogenous, available in numerous forms such as geno
 
 # Bioimaging
 
-Bioimaging is useful in helping researcher understand biological processes in real time. Here are a list of useful resources with respect to thier specific domain.
+Bioimaging is useful in helping researcher understand biological processes in real time. Here are a list of useful resources with respect to their specific domain.
 
 ## Microscopy
 
@@ -72,6 +72,7 @@ Visualisation of biological data can be complex. While there are many web based 
 ## Jupyter
 
 -   <https://github.com/ml-tooling/best-of-jupyter>
+
 -   <https://github.com/markusschanta/awesome-jupyter>
 
 ## Quarto
@@ -89,11 +90,13 @@ Version control systems (VCS) are software tools that help data analysts manage 
 ## GitHub
 
 -   <https://github.com/tiimgreen/github-cheat-sheet>
+
 -   <https://github.com/xhacker/awesome-github-extensions>
 
 ## GitLab
 
 -   <https://gitlab.com/Andorka/awesome-gitlab>
+
 -   <https://gitlab.com/fkromer/awesome-gitlab>
 
 ## Gitea
@@ -107,7 +110,9 @@ Unfortunately, I could not find awesome list specific to [Bitbucket](https://bit
 [Jeremy Leipzig](https://twitter.com/jermdemo) have created a small [encyclopedia](https://github.com/leipzig/awesome-reproducible-research) of reproducible research resources from journals, data repositories, relevant organisations and other awesome lists like the [Awesome Reproducible R](https://github.com/datasnakes/awesome-reproducible-R) and [Awesome Docker](https://github.com/veggiemonk/awesome-docker) . 
 
 -   <https://github.com/leipzig/awesome-reproducible-research>
+
 -   <https://github.com/datasnakes/awesome-reproducible-R>
+
 -   <https://github.com/veggiemonk/awesome-docker>
 
 # Research Software
@@ -126,4 +131,6 @@ In addition, it is also important for research software, no matter how useful it
 
 # Moving Foward
 
-We hope that the information listed above is helpful. The creation of these awesome lists is made possible with the hard work of volunteers and unconditional help from contributors. If there are any suggestions for improving or new information to add, do let the respective maintainers know.
+We hope that the information listed above are helpful. The creation of these awesome lists is made possible with the hard work of volunteers and the unconditional help from contributors. If there are any suggestions for improving or new information to add, do let the respective maintainers know.
+
+
