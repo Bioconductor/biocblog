@@ -130,11 +130,13 @@ Bioconductor packages found in the `awesome-lipidomics` lists are
 
 ### Bioconductor Packages
 
-Bioconductor packages that made it in this `awesome_spatial_omics` lists are
+Bioconductor packages that made it in `crazyhottommy/awesome_spatial_omics` lists are
 
 -   [`nnSVG`](https://bioconductor.org/packages/release/bioc/html/nnSVG.html)
 
 -   [`SpotClean`](https://bioconductor.org/packages/devel/bioc/html/SpotClean.html) in version 3.16 of Bioconductor
+
+Bioconductor packages that made it in `drighelli/awesome-spatial-omics` lists are
 
 -   [`mistyR`](https://bioconductor.org/packages/release/bioc/html/mistyR.html) It is called `MISTy` in `drighelli`'s list.
 
