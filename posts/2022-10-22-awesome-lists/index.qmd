@@ -9,7 +9,7 @@ date: 2022-10-22
 creative_commons: CC BY
 categories:
   - education
-preview: ""
+image: "awesome.png"
 ---
 
 # Introdution
@@ -26,25 +26,175 @@ Omics data is known to be heterogenous, available in numerous forms such as geno
 
 -   <https://github.com/seandavi/awesome-single-cell>
 
-## Proteomics
+:::{.callout-tip collapse="true"}
 
-Bioconductor package [`PGA`](https://bioconductor.org/packages/3.12/bioc/html/PGA.html) was mentioned but the package was deprecated on version 3.12 of Bioconductor.
+### Bioconductor Packages
+
+There are many Bioconductor packages that made it in the `awesome-single-cell` list.
+
+-   RNA-seq
+
+    -   [`cellTree`](https://www.bioconductor.org/packages/release/bioc/html/cellTree.html)
+
+    -   [`countsimQC`](https://www.bioconductor.org/packages/release/bioc/html/countsimQC.html)
+
+    -   [`dittoSeq`](https://bioconductor.org/packages/release/bioc/html/dittoSeq.html)
+
+    -   [`scran`](https://bioconductor.org/packages/release/bioc/html/scran.html)
+
+    -   [`sincell`](https://bioconductor.org/packages/release/bioc/html/sincell.html)
+
+-   Quality Control
+
+    -   [`scater`](https://bioconductor.org/packages/release/bioc/html/scater.html)
+
+-   Dimension Reduction
+
+    -   [`destiny`](https://bioconductor.org/packages/release/bioc/html/destiny.html)
+
+-   Cell Projection And Unimodal Integration
+
+    -   [`scmap`](https://bioconductor.org/packages/release/bioc/html/scmap.html)
+
+-   Simulation
+
+    -   [`splatter`](https://bioconductor.org/packages/release/bioc/html/splatter.html)
+
+-   Cell Type Identification and Classification
+
+    -   [`SingleR`](https://bioconductor.org/packages/release/bioc/html/SingleR.html)
+
+-   Copy Number Analysis
+
+    -   [`SingleR`](https://bioconductor.org/packages/release/bioc/html/AneuFinder.html)
+
+-   Epigenomics
+
+    -   [`chromVAR`](https://bioconductor.org/packages/release/bioc/html/chromVAR.html)
+    
+:::
+
+## Proteomics
 
 -   <https://github.com/anuragraj/awesome-proteomics>
 
+:::{.callout-tip collapse="true"}
+
+### Bioconductor Packages
+
+Bioconductor package [`PGA`](https://bioconductor.org/packages/3.12/bioc/html/PGA.html) is mentioned in the `awesome-proteomics` list but the package is deprecated on version 3.12 of Bioconductor.
+
+:::
+
 ## Lipidomics
 
-Bioconductor packages like [`lipidr`](https://www.bioconductor.org/packages/release/bioc/html/lipidr.html) and [`rgoslin`](https://bioconductor.org/packages/release/bioc/html/rgoslin.html) can be found in the lipidomics list.
-
 -   <https://github.com/lifs-tools/awesome-lipidomics>
+
+:::{.callout-tip collapse="true"}
+
+### Bioconductor Packages
+
+Bioconductor packages found in the `awesome-lipidomics` lists are
+
+-   Programs & Libraries For Lipid Identification
+
+    -    [`LOBSTAHS`](https://bioconductor.org/packages/release/bioc/html/LOBSTAHS.html)
+    
+    -    [`xcms`](http://bioconductor.org/packages/release/bioc/html/xcms.html)
+    
+-   Post Processing, Visualization And Statistical Analysis
+
+    -    [`rgoslin`](https://bioconductor.org/packages/release/bioc/html/rgoslin.html)
+    
+    -    [`lipidr`](https://www.bioconductor.org/packages/release/bioc/html/lipidr.html)
+
+-   Databases, Repositories And Other Resources
+
+    -    [`biodbHmdb`](https://bioconductor.org/packages/release/bioc/html/biodbHmdb.html)
+    
+    -    [`biodbLipidMaps`](https://bioconductor.org/packages/release/bioc/html/biodbLipidmaps.html)
+    
+    -    [`RMassBank`](https://bioconductor.org/packages/release/bioc/html/RMassBank.html)
+    
+    -    [`mtbls2`](https://bioconductor.org/packages/release/data/experiment/html/mtbls2.html)
+
+:::
 
 ## Spatial Omics
 
 -   <https://github.com/crazyhottommy/awesome_spatial_omics>
 
+-   <https://github.com/drighelli/awesome-spatial-omics>
+
+:::{.callout-tip collapse="true"}
+
+### Bioconductor Packages
+
+Bioconductor packages that made it in this `awesome_spatial_omics` lists are
+
+-   [`nnSVG`](https://bioconductor.org/packages/release/bioc/html/nnSVG.html)
+
+-   [`SpotClean`](https://bioconductor.org/packages/devel/bioc/html/SpotClean.html) in version 3.16 of Bioconductor
+
+-   [`mistyR`](https://bioconductor.org/packages/release/bioc/html/mistyR.html) It is called `MISTy` in `drighelli`'s list.
+
+:::
+
 ## Multi-omics
 
 -   <https://github.com/mikelove/awesome-multi-omics>
+
+:::{.callout-tip collapse="true"}
+
+### Bioconductor Packages
+
+Bioconductor packages in the `awesome-multi-omics` lists are
+
+-   Multi-omics Correlation or Factor Analysis
+
+     -   [`pandaR`](https://bioconductor.org/packages/release/bioc/html/pandaR.html)
+     
+     -   [`omicade4`](https://bioconductor.org/packages/release/bioc/html/omicade4.html)
+     
+     -   [`STATegRa`](https://bioconductor.org/packages/release/bioc/html/STATegRa.html)
+     
+     -   [`mogsa`](https://bioconductor.org/packages/release/bioc/html/mogsa.html)
+     
+     -   [`mixOmics`](https://bioconductor.org/packages/release/bioc/html/mixOmics.html)
+     
+     -   [`fCCAC`](https://bioconductor.org/packages/release/bioc/html/fCCAC.html)
+     
+     -   [`MOFA2`](https://www.bioconductor.org/packages/release/bioc/html/MOFA2.html)
+     
+     -   [`combi`](https://bioconductor.org/packages/release/bioc/html/combi.html)
+     
+-   Multi-Omics Clustering/Classification/Prediction
+
+     -   [`iClusterPlus`](https://www.bioconductor.org/packages/release/bioc/html/iClusterPlus.html)
+     
+-   Multi-Omics Networks
+
+     -   [`MOGAMUN`](https://bioconductor.org/packages/release/bioc/html/MOGAMUN.html)
+
+-   Single Cell Multi-Omics
+
+     -   [`cardelino`](https://www.bioconductor.org/packages/devel/bioc/html/cardelino.html) in version 3.16 of Bioconductor
+
+     -   [`CiteFuse`](https://bioconductor.org/packages/release/bioc/html/CiteFuse.html)
+
+-   Multi-Omics Simulation
+  
+     -   [`MOSim`](https://bioconductor.org/packages/release/bioc/html/MOSim.html)
+
+-   Multi-Omics Data Management
+
+     -   [`MultiAssayExperiment`](https://bioconductor.org/packages/release/bioc/html/MultiAssayExperiment.html)
+     
+-   Batch Effect Correction
+
+     -   [`MultiBaC`](https://bioconductor.org/packages/release/bioc/html/MultiBaC.html)
+
+:::
 
 # Bioimaging
 
@@ -54,13 +204,35 @@ Bioimaging is useful in helping researcher understand biological processes in re
 
 -   <https://github.com/hallvaaw/awesome-biological-image-analysis>
 
+:::{.callout-tip collapse="true"}
+
+### Bioconductor Packages
+
+Only Bioconductor package [`EBImage`](https://bioconductor.org/packages/release/bioc/html/EBImage.html) is mentioned in the `awesome-biological-image-analysis` list.
+
+:::
+
 ## Medical Images
 
 -   <https://github.com/fepegar/awesome-medical-imaging>
 
+:::{.callout-important}
+
+### No Bioconductor packages are found in this list
+
+:::
+
 ## Cytodata
 
 -   <https://github.com/cytodata/awesome-cytodata>
+
+:::{.callout-tip collapse="true"}
+
+### Bioconductor Packages
+
+Only Bioconductor package [`EBImage`](https://bioconductor.org/packages/release/bioc/html/EBImage.html) is mentioned in the `awesome-cytodata` list.
+
+:::
 
 # Biological Visualisation
 
@@ -69,6 +241,14 @@ Visualisation of biological data can be complex. While there are many web based 
 -   <https://github.com/keller-mark/awesome-biological-visualizations>
 
 -   <http://genocat.tools/tools/3dviewer/>
+
+:::{.callout-tip collapse="true"}
+
+### Bioconductor Packages
+
+Only Bioconductor package [`iSEE`](https://bioconductor.org/packages/release/bioc/html/iSEE.html) is mentioned in the `awesome-biological-visualizations` list.
+
+:::
 
 # Dynamic Reports
 
@@ -84,9 +264,15 @@ Visualisation of biological data can be complex. While there are many web based 
 
 -   <https://github.com/mcanouil/awesome-quarto>
 
+:::{.callout-note}
+
+The [Bioconductor Community Blog](https://github.com/Bioconductor/biocblog) is mentioned.
+
+:::
+
 # Code Version Control
 
-Version control systems (VCS) are software tools that help data analysts manage changes to their programming code over time. One of the most popular VCS tools in use today is [Git](https://git-scm.com/). [GitHub](https://github.com/) and [GitLab](https://about.gitlab.com/) are one of many cloud-based Git repository hosting services. 
+Version control systems (VCS) are software tools that help data analysts manage changes to their programming code over time. One of the most popular VCS tools in use today is [Git](https://git-scm.com/). [GitHub](https://github.com/) and [GitLab](https://about.gitlab.com/) are one of many cloud-based Git repository hosting services.
 
 ## Git
 
@@ -108,11 +294,16 @@ Version control systems (VCS) are software tools that help data analysts manage 
 
 -   <https://gitea.com/gitea/awesome-gitea>
 
+:::{.callout-note}
+
 Unfortunately, I could not find awesome list specific to [Bitbucket](https://bitbucket.org/product/) and [Gitee](https://gitee.com/)
+
+:::
+
 
 # Reproducible Research
 
-[Jeremy Leipzig](https://twitter.com/jermdemo) have created a small [encyclopedia](https://github.com/leipzig/awesome-reproducible-research) of reproducible research resources from journals, data repositories, relevant organisations and other awesome lists like the [Awesome Reproducible R](https://github.com/datasnakes/awesome-reproducible-R) and [Awesome Docker](https://github.com/veggiemonk/awesome-docker) . 
+[Jeremy Leipzig](https://twitter.com/jermdemo) have created a small [encyclopedia](https://github.com/leipzig/awesome-reproducible-research) of reproducible research resources from journals, data repositories, relevant organisations and other awesome lists like the [Awesome Reproducible R](https://github.com/datasnakes/awesome-reproducible-R) and [Awesome Docker](https://github.com/veggiemonk/awesome-docker) .
 
 -   <https://github.com/leipzig/awesome-reproducible-research>
 
@@ -122,22 +313,36 @@ Unfortunately, I could not find awesome list specific to [Bitbucket](https://bit
 
 # Research Software
 
-It can be daunting task to create a R package as there are many things to do like creating the package skeleton correctly, writing documentation and unit test etc. While there are many R packages created to make this process easily. It is nice to organise these R packages based on their specific roles and [Indrajeet Patil](https://twitter.com/patilindrajeets) has done just that. 
+It can be daunting task to create a R package as there are many things to do like creating the package skeleton correctly, writing documentation and unit test etc. While there are many R packages created to make this process easily. It is nice to organise these R packages based on their specific roles and [Indrajeet Patil](https://twitter.com/patilindrajeets) has done just that.
 
-In addition, it is also important for research software, no matter how useful it is to be deployed in the right registry so that the right group of people can find the software easily. In the case of R, we are blessed with many places to deploy an R package [CRAN](https://cran.r-project.org/submit.html), [Bioconductor](https://www.bioconductor.org/), [Neuroconductor](https://neuroconductor.org/), [R-universe](https://ropensci.org/r-universe/). Similar things are also done on other programming languages as well. The Netherlands eScience Center have created a [list](https://github.com/NLeSC/awesome-research-software-registries) of relevant registries based on location, domain and programming language.        
+In addition, it is also important for research software, no matter how useful it is to be deployed in the right registry so that the right group of people can find the software easily. In the case of R, we are blessed with many places to deploy an R package [CRAN](https://cran.r-project.org/submit.html), [Bioconductor](https://www.bioconductor.org/), [Neuroconductor](https://neuroconductor.org/), [R-universe](https://ropensci.org/r-universe/). Similar things are also done on other programming languages as well. The Netherlands eScience Center have created a [list](https://github.com/NLeSC/awesome-research-software-registries) of relevant registries based on location, domain and programming language.
 
 ## Developing R packages
 
 -   <https://github.com/IndrajeetPatil/awesome-r-pkgtools>
 
+:::{.callout-tip collapse="true"}
+
+### Bioconductor Packages
+
+Only Bioconductor package [`biocthis`](https://bioconductor.org/packages/release/bioc/html/biocthis.html) is mentioned in the `awesome-r-pkgtools` list.
+
+:::
+
 ## Research Software Registry
 
 -   <https://github.com/NLeSC/awesome-research-software-registries>
+
+:::{.callout-note}
+
+The [Bioconductor](https://www.bioconductor.org/packages/release/BiocViews.html#___Software) repository is mentioned in the `awesome-research-software-registries` list.
+
+:::
 
 # Moving Foward
 
 We hope that the information listed above are helpful. The creation of these awesome lists is made possible with the hard work of volunteers and the unconditional help from contributors. If there are any suggestions for improving or new information to add, do let the respective maintainers know.
 
+# Acknowlegments
 
-
-
+This blog post is made possible from an online Biocondutor meetup on 26 October 2022.
