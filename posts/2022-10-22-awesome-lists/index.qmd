@@ -3,7 +3,7 @@ title: "Recommended Awesome Lists for Bioconductor Community: Oct 2022 Edition"
 description: |
   This blog post consolidates web links to different Awesome Lists that may be useful to those just starting up in bioinformatics and those experienced in the field. 
 author:
-  - name: Jeremy Selva [`r fontawesome::fa(name = "github")`](https://github.com/JauntyJJS) [`r fontawesome::fa(name = "linkedin")`](https://www.linkedin.com/in/jeremy-selva-085b9112a/) [`r fontawesome::fa(name = "link")`](https://jeremy-selva.netlify.app/) [`r fontawesome::fa(name = "twitter")`](https://twitter.com/JauntyJJS)
+  - name: Jeremy Selva
     url: https://jeremy-selva.netlify.app/
 date: 2022-10-22
 creative_commons: CC BY
