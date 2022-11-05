@@ -20,6 +20,10 @@ jobs:
           # version: 0.9.600
       
       # add software dependencies here
+      - name: Install R dependencies
+        run: |
+            install.packages("jsonlite")
+        shell: Rscript {0}
 
       - name: Publish to GitHub Pages (and render)
         uses: quarto-dev/quarto-actions/publish@v2
