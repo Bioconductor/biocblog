@@ -24,7 +24,7 @@ jobs:
         with:
           use-public-rspm: true
       - name: Install R dependencies
-        run: Rscript -e 'install.packages("jsonlite")'
+        run: Rscript -e 'install.packages(c("jsonlite", "htmltools", "rmarkdown"))'
 
       - name: Publish to GitHub Pages (and render)
         uses: quarto-dev/quarto-actions/publish@v2
