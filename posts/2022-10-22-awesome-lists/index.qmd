@@ -347,4 +347,4 @@ We hope that the information listed above are helpful. The creation of these awe
 
 # Acknowlegments
 
-This blog post is made possible from an online Biocondutor meetup on 26 October 2022.
+This blog post is made possible from [an online Biocondutor meetup](https://www.meetup.com/bioconductor-community-in-asia/events/288949678/) for [Hacktoberfest](https://hacktoberfest.com/) on 26 October 2022.
