@@ -1,0 +1,15 @@
+---
+title: "Bioconductor Hacktoberfest looking ahead to next year"
+description: |
+  FILLME.
+author:
+  - name: Kozo Nishida
+    url: https://github.com/kozo2
+  - name: Maria Doyle
+    url: https://github.com/mblue9
+date: 2023-01-11
+categories:
+  - events
+---
+
+FILL QMD HERE.
