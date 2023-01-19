@@ -8,6 +8,8 @@ author:
     url: https://github.com/mblue9
   - name: Kozo Nishida
     url: https://github.com/kozo2
+  - name: Kevin Rue-Albrecht
+    url: https://github.com/kevinrue
 date: 2023-01-11
 categories:
   - events
@@ -20,6 +22,8 @@ Hacktoberfest is a worldwide celebration of open-source projects that is held du
 To take part, people had to [register](https://hacktoberfest.com/auth/) before October, 31<sup>st</sup>,
 have four pull requests accepted (i.e., merged) between October 1<sup>st</sup> and October 31<sup>st</sup>.
 The first 40,000 participants (both maintainers and contributors) who complete Hacktoberfest can choose a prize that is either a tree planted in their name or a t-shirt.
+
+![](hacktoberfest_website.png)
 
 ## Why did Bioconductor join?
 
@@ -40,9 +44,9 @@ Bioconductor chose to highlight some Bioconductor projects that people could con
 
 Community member, [Kevin Rue-Albrecht](https://github.com/kevinrue) hosted a Meetup event on [the Carpentries bioc-project](https://github.com/carpentries-incubator/bioc-project). 
 
-![](https://user-images.githubusercontent.com/12192/212072573-7038f78e-654a-42e7-890f-ace45cbf609d.png)
+![](biocproject_github.png)
 
-![](https://user-images.githubusercontent.com/12192/212077077-fd6d9b73-7557-4868-92c3-18e63cacd2d4.png)
+![](biocproject_carpentries.png)
 
 Community member, [Kozo Nishida](https://github.com/kozo2) hosted a Meetup event on [the Bioconductor community blog](https://bioconductor.github.io/biocblog/).
 
