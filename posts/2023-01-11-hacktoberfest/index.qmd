@@ -1,0 +1,74 @@
+---
+title: "Bioconductor Hacktoberfest 2022 review and looking ahead to 2023"
+description: |
+  Last October, Bioconductor joined Hacktoberfest and got great community contributions there.
+  Here, we describe its success and notify the community we plan to participate in 2023.
+author:
+  - name: Maria Doyle
+    url: https://github.com/mblue9
+  - name: Kozo Nishida
+    url: https://github.com/kozo2
+date: 2023-01-11
+categories:
+  - events
+---
+
+## What is Hacktoberfest?
+
+In October last year, Bioconductor participated in [Hacktoberfest](https://hacktoberfest.com/).
+Hacktoberfest is a worldwide celebration of open-source projects that is held during the month of October.
+To take part, people had to [register](https://hacktoberfest.com/auth/) before October, 31<sup>st</sup>,
+have four pull requests accepted (i.e., merged) between October 1<sup>st</sup> and October 31<sup>st</sup>.
+The first 40,000 participants (both maintainers and contributors) who complete Hacktoberfest can choose a prize that is either a tree planted in their name or a t-shirt.
+
+## Why did Bioconductor join?
+
+As described in [the Bioconductor Code of Conduct](https://bioconductor.github.io/bioc_coc_multilingual/en-US.html),
+the Bioconductor community values an open approach to science that promotes:
+
+- sharing of ideas, code, software and expertise
+- collaboration
+- diversity and inclusivity
+- a kind and welcoming environment
+- community contributions
+
+Since the Hacktoberfest fits these values, we decided to join it.
+
+## What did Bioconductor do for Hacktoberfest?
+
+Bioconductor chose to highlight some Bioconductor projects that people could contribute to. 
+
+Community member, [Kevin Rue-Albrecht](https://github.com/kevinrue) hosted a Meetup event on [the Carpentries bioc-project](https://github.com/carpentries-incubator/bioc-project). 
+
+![](https://user-images.githubusercontent.com/12192/212072573-7038f78e-654a-42e7-890f-ace45cbf609d.png)
+
+![](https://user-images.githubusercontent.com/12192/212077077-fd6d9b73-7557-4868-92c3-18e63cacd2d4.png)
+
+Community member, [Kozo Nishida](https://github.com/kozo2) hosted a Meetup event on [the Bioconductor community blog](https://bioconductor.github.io/biocblog/).
+
+![](https://user-images.githubusercontent.com/12192/212077271-6c71efc9-174d-4bf4-98ab-bf21d1cd9566.png)
+
+![](https://user-images.githubusercontent.com/12192/212077578-dd13697e-eddb-40c6-af93-e5af993fd8ab.png)
+
+## What were the outcome and learnings?
+
+One participant at the Carpentries bioc-project meetup, Milan Malfait [@MilanMlft](https://github.com/MilanMlft) from Belgium, created Hacktoberfest pull requests to proofread every single episode of the Carpentries bioc-project lesson and fix typos.
+
+![](https://user-images.githubusercontent.com/12192/212073022-e37a9785-fa5e-4b2e-86a9-b9714073e8b9.png)
+
+A participant at the blog meetup, Jeremy Selva [@JauntyJJS](https://github.com/JauntyJJS) from Singapore, created a great contribution for [the biocblog](https://bioconductor.github.io/biocblog/).
+
+- [The contribution post](https://bioconductor.github.io/biocblog/posts/2022-10-22-awesome-lists/)
+- [The PR](https://github.com/Bioconductor/biocblog/pull/24)
+
+![](https://user-images.githubusercontent.com/12192/212075013-dc62e631-d83b-4f48-9b3c-dea85d2e908d.png)
+
+The contributions from the above participants were excellent and we would like to encourage more people to take part in 2023.
+In support of that, we will create greater awareness of Bioconductor's plans to participate in Hacktoberfest, such as through this blog, advertise and take suggestions for Bioconductor projects earlier, such as in the new `#hacktoberfest` channel in [Bioconductor Slack](https://slack.bioconductor.org/) and at the [BioC2023 conference August 2nd-4th](https://support.bioconductor.org/p/9147691/).
+We also learnt that in order to get people to contribute it really helps to have well-defined issues in the repositories, so we aim to do that for Hacktoberfest 2023.
+
+## Conclusion
+
+We joined Hacktoberfest as an opportunity to take part in an event that aligns with Bioconductor values and to connect with community members.
+The participants of Hacktoberfest made great contributions to Bioconductor projects.
+We will advertise and plan the event earlier this year so stay tuned for updates!
