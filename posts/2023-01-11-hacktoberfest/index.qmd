@@ -17,8 +17,8 @@ categories:
 
 In October last year, Bioconductor participated in [Hacktoberfest](https://hacktoberfest.com/).
 Hacktoberfest is a worldwide celebration of open-source projects that is held during the month of October.
-To take part people had to [register](https://hacktoberfest.com/auth/) before October, 31<sup>st</sup>,
-have four pull requests accepted (i.e., merged) between October 1<sup>st</sup> and Oct 31<sup>st</sup>.
+To take part, people had to [register](https://hacktoberfest.com/auth/) before October, 31<sup>st</sup>,
+have four pull requests accepted (i.e., merged) between October 1<sup>st</sup> and October 31<sup>st</sup>.
 The first 40,000 participants (both maintainers and contributors) who complete Hacktoberfest can choose a prize that is either a tree planted in their name or a t-shirt.
 
 ## Why did Bioconductor join?
