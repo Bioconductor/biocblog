@@ -10,7 +10,7 @@
 <atom:link href="https://bioconductor.github.io/biocblog/index.xml" rel="self" type="application/rss+xml"/>
 <description>A blog for the Bioconductor community!</description>
 <generator>quarto-1.2.313</generator>
-<lastBuildDate>Wed, 11 Jan 2023 00:00:00 GMT</lastBuildDate>
+<lastBuildDate>Tue, 10 Jan 2023 15:00:00 GMT</lastBuildDate>
 <item>
   <title>Bioconductor Hacktoberfest 2022 review and looking ahead to 2023</title>
   <dc:creator>Maria Doyle</dc:creator>
@@ -71,7 +71,7 @@
  ]]></description>
   <category>events</category>
   <guid>https://bioconductor.github.io/biocblog/posts/2023-01-11-hacktoberfest/index.html</guid>
-  <pubDate>Wed, 11 Jan 2023 00:00:00 GMT</pubDate>
+  <pubDate>Tue, 10 Jan 2023 15:00:00 GMT</pubDate>
   <media:content url="https://bioconductor.github.io/biocblog/posts/2023-01-11-hacktoberfest/hacktoberfest_website.png" medium="image" type="image/png" height="106" width="144"/>
 </item>
 <item>
@@ -539,7 +539,7 @@ Note
  ]]></description>
   <category>education</category>
   <guid>https://bioconductor.github.io/biocblog/posts/2022-10-22-awesome-lists/index.html</guid>
-  <pubDate>Sat, 22 Oct 2022 00:00:00 GMT</pubDate>
+  <pubDate>Fri, 21 Oct 2022 15:00:00 GMT</pubDate>
   <media:content url="https://bioconductor.github.io/biocblog/posts/2022-10-22-awesome-lists/awesome.png" medium="image" type="image/png" height="72" width="144"/>
 </item>
 <item>
@@ -566,7 +566,7 @@ Note
  ]]></description>
   <category>education</category>
   <guid>https://bioconductor.github.io/biocblog/posts/2022-07-12-carpentries-membership/index.html</guid>
-  <pubDate>Tue, 12 Jul 2022 00:00:00 GMT</pubDate>
+  <pubDate>Mon, 11 Jul 2022 15:00:00 GMT</pubDate>
 </item>
 <item>
   <title>Join the Bioconductor Community Advisory Board</title>
@@ -592,7 +592,7 @@ Note
   <category>BioC</category>
   <category>CAB</category>
   <guid>https://bioconductor.github.io/biocblog/posts/2022-01-31-join-the-bioconductor-community-advisory-board/index.html</guid>
-  <pubDate>Tue, 01 Feb 2022 00:00:00 GMT</pubDate>
+  <pubDate>Mon, 31 Jan 2022 15:00:00 GMT</pubDate>
   <media:content url="https://bioconductor.github.io/biocblog/posts/2022-01-31-join-the-bioconductor-community-advisory-board/MeetTheCabBioc2021.png" medium="image" type="image/png" height="83" width="144"/>
 </item>
 <item>
@@ -621,7 +621,7 @@ Note
   <category>Hackathon</category>
   <category>Open Science</category>
   <guid>https://bioconductor.github.io/biocblog/posts/2022-01-18-metaRbolomics-2021/index.html</guid>
-  <pubDate>Tue, 18 Jan 2022 00:00:00 GMT</pubDate>
+  <pubDate>Mon, 17 Jan 2022 15:00:00 GMT</pubDate>
   <media:content url="https://bioconductor.github.io/biocblog/posts/2022-01-18-metaRbolomics-2021/MLlambrich.jpg" medium="image" type="image/jpeg"/>
 </item>
 <item>
@@ -687,7 +687,7 @@ Note
  ]]></description>
   <category>events</category>
   <guid>https://bioconductor.github.io/biocblog/posts/2022-01-14-20years/index.html</guid>
-  <pubDate>Fri, 14 Jan 2022 00:00:00 GMT</pubDate>
+  <pubDate>Thu, 13 Jan 2022 15:00:00 GMT</pubDate>
   <media:content url="https://bioconductor.github.io/biocblog/posts/2022-01-14-20years/cover.png" medium="image" type="image/png" height="108" width="144"/>
 </item>
 <item>
@@ -735,7 +735,7 @@ Note
   <category>BioC</category>
   <category>Diversity</category>
   <guid>https://bioconductor.github.io/biocblog/posts/2022-01-12-biocasia2021-ja/index.html</guid>
-  <pubDate>Wed, 12 Jan 2022 00:00:00 GMT</pubDate>
+  <pubDate>Tue, 11 Jan 2022 15:00:00 GMT</pubDate>
   <media:content url="https://bioconductor.github.io/biocblog/posts/2022-01-12-biocasia2021-ja/Zoom_caption.png" medium="image" type="image/png" height="108" width="144"/>
 </item>
 <item>
@@ -782,7 +782,7 @@ Note
   <category>BioC</category>
   <category>Diversity</category>
   <guid>https://bioconductor.github.io/biocblog/posts/2021-11-11-biocasia2021/index.html</guid>
-  <pubDate>Thu, 09 Dec 2021 00:00:00 GMT</pubDate>
+  <pubDate>Wed, 08 Dec 2021 15:00:00 GMT</pubDate>
   <media:content url="https://bioconductor.github.io/biocblog/posts/2021-11-11-biocasia2021/Lori_Japanese_caption.png" medium="image" type="image/png" height="109" width="144"/>
 </item>
 </channel>
