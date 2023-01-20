@@ -60,4 +60,3 @@ package as well as further development and expansion of the
 Summarizing, the hackathon was a very nice event fostering open science and
 open development in the metabolomics community.
 
-
