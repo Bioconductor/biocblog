@@ -2,46 +2,46 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://bioconductor.github.io/biocblog/contributing.html</loc>
-    <lastmod>2023-01-20T06:55:23.215Z</lastmod>
+    <lastmod>2023-01-20T13:34:29.371Z</lastmod>
   </url>
   <url>
     <loc>https://bioconductor.github.io/biocblog/index.html</loc>
-    <lastmod>2023-01-20T06:55:24.107Z</lastmod>
+    <lastmod>2023-01-20T13:34:30.315Z</lastmod>
   </url>
   <url>
     <loc>https://bioconductor.github.io/biocblog/posts/2022-07-12-carpentries-membership/index.html</loc>
-    <lastmod>2023-01-20T06:55:24.435Z</lastmod>
+    <lastmod>2023-01-20T13:34:30.679Z</lastmod>
+  </url>
+  <url>
+    <loc>https://bioconductor.github.io/biocblog/posts/2023-01-20-hacktoberfest/index.html</loc>
+    <lastmod>2023-01-20T13:34:31.403Z</lastmod>
   </url>
   <url>
     <loc>https://bioconductor.github.io/biocblog/posts/2022-10-22-awesome-lists/index.html</loc>
-    <lastmod>2023-01-20T06:55:25.523Z</lastmod>
+    <lastmod>2023-01-20T13:34:32.287Z</lastmod>
   </url>
   <url>
     <loc>https://bioconductor.github.io/biocblog/posts/2022-01-31-join-the-bioconductor-community-advisory-board/index.html</loc>
-    <lastmod>2023-01-20T06:55:25.811Z</lastmod>
+    <lastmod>2023-01-20T13:34:32.623Z</lastmod>
   </url>
   <url>
     <loc>https://bioconductor.github.io/biocblog/posts/2022-01-18-metaRbolomics-2021/index.html</loc>
-    <lastmod>2023-01-20T06:55:26.391Z</lastmod>
+    <lastmod>2023-01-20T13:34:33.271Z</lastmod>
   </url>
   <url>
     <loc>https://bioconductor.github.io/biocblog/posts/2022-01-14-20years/index.html</loc>
-    <lastmod>2023-01-20T06:55:28.111Z</lastmod>
+    <lastmod>2023-01-20T13:34:35.255Z</lastmod>
   </url>
   <url>
     <loc>https://bioconductor.github.io/biocblog/posts/2021-11-11-biocasia2021/index.html</loc>
-    <lastmod>2023-01-20T06:55:28.415Z</lastmod>
+    <lastmod>2023-01-20T13:34:35.627Z</lastmod>
   </url>
   <url>
     <loc>https://bioconductor.github.io/biocblog/posts/2022-01-12-biocasia2021-ja/index.html</loc>
-    <lastmod>2023-01-20T06:55:28.707Z</lastmod>
-  </url>
-  <url>
-    <loc>https://bioconductor.github.io/biocblog/posts/2023-01-11-hacktoberfest/index.html</loc>
-    <lastmod>2023-01-20T06:55:29.067Z</lastmod>
+    <lastmod>2023-01-20T13:34:35.959Z</lastmod>
   </url>
   <url>
     <loc>https://bioconductor.github.io/biocblog/about.html</loc>
-    <lastmod>2023-01-20T06:55:29.347Z</lastmod>
+    <lastmod>2023-01-20T13:34:36.267Z</lastmod>
   </url>
 </urlset>
