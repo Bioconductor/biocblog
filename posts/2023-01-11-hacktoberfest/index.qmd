@@ -44,28 +44,28 @@ Bioconductor chose to highlight some Bioconductor projects that people could con
 
 Community member, [Kevin Rue-Albrecht](https://github.com/kevinrue) hosted a Meetup event on [the Carpentries bioc-project](https://github.com/carpentries-incubator/bioc-project). 
 
-![](biocproject_github.png)
+![biocproject_github](biocproject_github.png)
 
-![](biocproject_carpentries.png)
+![biocproject_carpentries](biocproject_carpentries.png)
 
 Community member, [Kozo Nishida](https://github.com/kozo2) hosted a Meetup event on [the Bioconductor community blog](https://bioconductor.github.io/biocblog/).
 
-![](https://user-images.githubusercontent.com/12192/212077271-6c71efc9-174d-4bf4-98ab-bf21d1cd9566.png)
+![biocblog_github](biocblog_github.png)
 
-![](https://user-images.githubusercontent.com/12192/212077578-dd13697e-eddb-40c6-af93-e5af993fd8ab.png)
+![biocblog_website](biocblog_website.png)
 
 ## What were the outcome and learnings?
 
 One participant at the Carpentries bioc-project meetup, Milan Malfait [@MilanMlft](https://github.com/MilanMlft) from Belgium, created Hacktoberfest pull requests to proofread every single episode of the Carpentries bioc-project lesson and fix typos.
 
-![](https://user-images.githubusercontent.com/12192/212073022-e37a9785-fa5e-4b2e-86a9-b9714073e8b9.png)
+![biocproject_contribution](biocproject_contribution.png)
 
 A participant at the blog meetup, Jeremy Selva [@JauntyJJS](https://github.com/JauntyJJS) from Singapore, created a great contribution for [the biocblog](https://bioconductor.github.io/biocblog/).
 
 - [The contribution post](https://bioconductor.github.io/biocblog/posts/2022-10-22-awesome-lists/)
 - [The PR](https://github.com/Bioconductor/biocblog/pull/24)
 
-![](https://user-images.githubusercontent.com/12192/212075013-dc62e631-d83b-4f48-9b3c-dea85d2e908d.png)
+![biocproject_contribution](biocblog_contribution.png)
 
 The contributions from the above participants were excellent and we would like to encourage more people to take part in 2023.
 In support of that, we will create greater awareness of Bioconductor's plans to participate in Hacktoberfest, such as through this blog, advertise and take suggestions for Bioconductor projects earlier, such as in the new `#hacktoberfest` channel in [Bioconductor Slack](https://slack.bioconductor.org/) and at the [BioC2023 conference August 2nd-4th](https://support.bioconductor.org/p/9147691/).
