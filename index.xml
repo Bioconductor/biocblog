@@ -10,7 +10,7 @@
 <atom:link href="https://bioconductor.github.io/biocblog/index.xml" rel="self" type="application/rss+xml"/>
 <description>A blog for the Bioconductor community!</description>
 <generator>quarto-1.2.313</generator>
-<lastBuildDate>Tue, 10 Jan 2023 15:00:00 GMT</lastBuildDate>
+<lastBuildDate>Wed, 11 Jan 2023 00:00:00 GMT</lastBuildDate>
 <item>
   <title>Bioconductor Hacktoberfest 2022 review and looking ahead to 2023</title>
   <dc:creator>Maria Doyle</dc:creator>
@@ -43,22 +43,52 @@
 <h2 class="anchored" data-anchor-id="what-did-bioconductor-do-for-hacktoberfest">What did Bioconductor do for Hacktoberfest?</h2>
 <p>Bioconductor chose to highlight some Bioconductor projects that people could contribute to.</p>
 <p>Community member, <a href="https://github.com/kevinrue">Kevin Rue-Albrecht</a> hosted a Meetup event on <a href="https://github.com/carpentries-incubator/bioc-project">the Carpentries bioc-project</a>.</p>
-<p><img src="https://bioconductor.github.io/biocblog/posts/2023-01-11-hacktoberfest/biocproject_github.png" class="img-fluid"></p>
-<p><img src="https://bioconductor.github.io/biocblog/posts/2023-01-11-hacktoberfest/biocproject_carpentries.png" class="img-fluid"></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://bioconductor.github.io/biocblog/posts/2023-01-11-hacktoberfest/biocproject_github.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">biocproject_github</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://bioconductor.github.io/biocblog/posts/2023-01-11-hacktoberfest/biocproject_carpentries.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">biocproject_carpentries</figcaption><p></p>
+</figure>
+</div>
 <p>Community member, <a href="https://github.com/kozo2">Kozo Nishida</a> hosted a Meetup event on <a href="https://bioconductor.github.io/biocblog/">the Bioconductor community blog</a>.</p>
-<p><img src="https://bioconductor.github.io/biocblog/posts/2023-01-11-hacktoberfest/https:/user-images.githubusercontent.com/12192/212077271-6c71efc9-174d-4bf4-98ab-bf21d1cd9566.png" class="img-fluid"></p>
-<p><img src="https://bioconductor.github.io/biocblog/posts/2023-01-11-hacktoberfest/https:/user-images.githubusercontent.com/12192/212077578-dd13697e-eddb-40c6-af93-e5af993fd8ab.png" class="img-fluid"></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://bioconductor.github.io/biocblog/posts/2023-01-11-hacktoberfest/biocblog_github.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">biocblog_github</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://bioconductor.github.io/biocblog/posts/2023-01-11-hacktoberfest/biocblog_website.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">biocblog_website</figcaption><p></p>
+</figure>
+</div>
 </section>
 <section id="what-were-the-outcome-and-learnings" class="level2">
 <h2 class="anchored" data-anchor-id="what-were-the-outcome-and-learnings">What were the outcome and learnings?</h2>
 <p>One participant at the Carpentries bioc-project meetup, Milan Malfait <a href="https://github.com/MilanMlft"><span class="citation" data-cites="MilanMlft">@MilanMlft</span></a> from Belgium, created Hacktoberfest pull requests to proofread every single episode of the Carpentries bioc-project lesson and fix typos.</p>
-<p><img src="https://bioconductor.github.io/biocblog/posts/2023-01-11-hacktoberfest/https:/user-images.githubusercontent.com/12192/212073022-e37a9785-fa5e-4b2e-86a9-b9714073e8b9.png" class="img-fluid"></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://bioconductor.github.io/biocblog/posts/2023-01-11-hacktoberfest/biocproject_contribution.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">biocproject_contribution</figcaption><p></p>
+</figure>
+</div>
 <p>A participant at the blog meetup, Jeremy Selva <a href="https://github.com/JauntyJJS"><span class="citation" data-cites="JauntyJJS">@JauntyJJS</span></a> from Singapore, created a great contribution for <a href="https://bioconductor.github.io/biocblog/">the biocblog</a>.</p>
 <ul>
 <li><a href="https://bioconductor.github.io/biocblog/posts/2022-10-22-awesome-lists/">The contribution post</a></li>
 <li><a href="https://github.com/Bioconductor/biocblog/pull/24">The PR</a></li>
 </ul>
-<p><img src="https://bioconductor.github.io/biocblog/posts/2023-01-11-hacktoberfest/https:/user-images.githubusercontent.com/12192/212075013-dc62e631-d83b-4f48-9b3c-dea85d2e908d.png" class="img-fluid"></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://bioconductor.github.io/biocblog/posts/2023-01-11-hacktoberfest/biocblog_contribution.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">biocproject_contribution</figcaption><p></p>
+</figure>
+</div>
 <p>The contributions from the above participants were excellent and we would like to encourage more people to take part in 2023. In support of that, we will create greater awareness of Bioconductor’s plans to participate in Hacktoberfest, such as through this blog, advertise and take suggestions for Bioconductor projects earlier, such as in the new <code>#hacktoberfest</code> channel in <a href="https://slack.bioconductor.org/">Bioconductor Slack</a> and at the <a href="https://support.bioconductor.org/p/9147691/">BioC2023 conference August 2nd-4th</a>. We also learnt that in order to get people to contribute it really helps to have well-defined issues in the repositories, so we aim to do that for Hacktoberfest 2023.</p>
 </section>
 <section id="conclusion" class="level2">
@@ -71,7 +101,7 @@
  ]]></description>
   <category>events</category>
   <guid>https://bioconductor.github.io/biocblog/posts/2023-01-11-hacktoberfest/index.html</guid>
-  <pubDate>Tue, 10 Jan 2023 15:00:00 GMT</pubDate>
+  <pubDate>Wed, 11 Jan 2023 00:00:00 GMT</pubDate>
   <media:content url="https://bioconductor.github.io/biocblog/posts/2023-01-11-hacktoberfest/hacktoberfest_website.png" medium="image" type="image/png" height="106" width="144"/>
 </item>
 <item>
@@ -539,7 +569,7 @@ Note
  ]]></description>
   <category>education</category>
   <guid>https://bioconductor.github.io/biocblog/posts/2022-10-22-awesome-lists/index.html</guid>
-  <pubDate>Fri, 21 Oct 2022 15:00:00 GMT</pubDate>
+  <pubDate>Sat, 22 Oct 2022 00:00:00 GMT</pubDate>
   <media:content url="https://bioconductor.github.io/biocblog/posts/2022-10-22-awesome-lists/awesome.png" medium="image" type="image/png" height="72" width="144"/>
 </item>
 <item>
@@ -566,7 +596,7 @@ Note
  ]]></description>
   <category>education</category>
   <guid>https://bioconductor.github.io/biocblog/posts/2022-07-12-carpentries-membership/index.html</guid>
-  <pubDate>Mon, 11 Jul 2022 15:00:00 GMT</pubDate>
+  <pubDate>Tue, 12 Jul 2022 00:00:00 GMT</pubDate>
 </item>
 <item>
   <title>Join the Bioconductor Community Advisory Board</title>
@@ -592,7 +622,7 @@ Note
   <category>BioC</category>
   <category>CAB</category>
   <guid>https://bioconductor.github.io/biocblog/posts/2022-01-31-join-the-bioconductor-community-advisory-board/index.html</guid>
-  <pubDate>Mon, 31 Jan 2022 15:00:00 GMT</pubDate>
+  <pubDate>Tue, 01 Feb 2022 00:00:00 GMT</pubDate>
   <media:content url="https://bioconductor.github.io/biocblog/posts/2022-01-31-join-the-bioconductor-community-advisory-board/MeetTheCabBioc2021.png" medium="image" type="image/png" height="83" width="144"/>
 </item>
 <item>
@@ -621,7 +651,7 @@ Note
   <category>Hackathon</category>
   <category>Open Science</category>
   <guid>https://bioconductor.github.io/biocblog/posts/2022-01-18-metaRbolomics-2021/index.html</guid>
-  <pubDate>Mon, 17 Jan 2022 15:00:00 GMT</pubDate>
+  <pubDate>Tue, 18 Jan 2022 00:00:00 GMT</pubDate>
   <media:content url="https://bioconductor.github.io/biocblog/posts/2022-01-18-metaRbolomics-2021/MLlambrich.jpg" medium="image" type="image/jpeg"/>
 </item>
 <item>
@@ -687,7 +717,7 @@ Note
  ]]></description>
   <category>events</category>
   <guid>https://bioconductor.github.io/biocblog/posts/2022-01-14-20years/index.html</guid>
-  <pubDate>Thu, 13 Jan 2022 15:00:00 GMT</pubDate>
+  <pubDate>Fri, 14 Jan 2022 00:00:00 GMT</pubDate>
   <media:content url="https://bioconductor.github.io/biocblog/posts/2022-01-14-20years/cover.png" medium="image" type="image/png" height="108" width="144"/>
 </item>
 <item>
@@ -735,7 +765,7 @@ Note
   <category>BioC</category>
   <category>Diversity</category>
   <guid>https://bioconductor.github.io/biocblog/posts/2022-01-12-biocasia2021-ja/index.html</guid>
-  <pubDate>Tue, 11 Jan 2022 15:00:00 GMT</pubDate>
+  <pubDate>Wed, 12 Jan 2022 00:00:00 GMT</pubDate>
   <media:content url="https://bioconductor.github.io/biocblog/posts/2022-01-12-biocasia2021-ja/Zoom_caption.png" medium="image" type="image/png" height="108" width="144"/>
 </item>
 <item>
@@ -782,7 +812,7 @@ Note
   <category>BioC</category>
   <category>Diversity</category>
   <guid>https://bioconductor.github.io/biocblog/posts/2021-11-11-biocasia2021/index.html</guid>
-  <pubDate>Wed, 08 Dec 2021 15:00:00 GMT</pubDate>
+  <pubDate>Thu, 09 Dec 2021 00:00:00 GMT</pubDate>
   <media:content url="https://bioconductor.github.io/biocblog/posts/2021-11-11-biocasia2021/Lori_Japanese_caption.png" medium="image" type="image/png" height="109" width="144"/>
 </item>
 </channel>

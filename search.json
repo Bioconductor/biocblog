@@ -1,12 +1,5 @@
 [
   {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About",
-    "section": "",
-    "text": "Welcome to the Bioconductor community blog! Here you’ll find the small contributions, highlight a package functionality, etc. There is a chance for people to give a shoutout to something great that happened recently in the community.\nWe also like to draw from a wide variety of contributors (so please consider submitting a post if so motivated!).\nIf you are interested in publishing some of your own work or insights on the Bioconductor community blog, we’d love to hear from you! See the article on contributing posts for additional details.\nThe Bioconductor community blog was created using Quarto."
-  },
-  {
     "objectID": "contributing.html",
     "href": "contributing.html",
     "title": "Contributing",
@@ -19,97 +12,6 @@
     "title": "Bioconductor community blog",
     "section": "",
     "text": "Bioconductor Hacktoberfest 2022 review and looking ahead to 2023\n\n\n\n\n\n\n\nevents\n\n\n\n\nLast October, Bioconductor joined Hacktoberfest and got great community contributions there. Here, we describe its success and notify the community we plan to participate in 2023.\n\n\n\n\n\n\nJan 11, 2023\n\n\nMaria Doyle, Kozo Nishida, Kevin Rue-Albrecht\n\n\n\n\n\n\n  \n\n\n\n\nRecommended Awesome Lists for Bioconductor Community: Oct 2022 Edition\n\n\n\n\n\n\n\neducation\n\n\n\n\nThis blog post consolidates web links to different Awesome Lists that may be useful to those just starting up in bioinformatics and those experienced in the field.\n\n\n\n\n\n\nOct 22, 2022\n\n\nJeremy Selva\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nBioconductor becomes a Carpentries member organization\n\n\n\n\n\n\n\neducation\n\n\n\n\nStarting from August 1, 2022, Bioconductor will be a member of The Carpentries. Among other things, the membership enables us to allow 15 individuals to follow the Carpentries’ Instructor Training program and become certified Carpentries Instructors.\n\n\n\n\n\n\nJul 12, 2022\n\n\nCharlotte Soneson, Laurent Gatto, Toby Hodges, Jenny Drnevich, Robert Castelo, Susan Holmes\n\n\n\n\n\n\n  \n\n\n\n\nJoin the Bioconductor Community Advisory Board\n\n\n\n\n\n\n\nBioC\n\n\nCAB\n\n\n\n\nEach year the Bioconductor Community Advisory Board (CAB) puts out a public call for new board members. This post tells you more about what the CAB does and how you can apply to become a member.\n\n\n\n\n\n\nFeb 1, 2022\n\n\nKozo Nishida, Matt Ritchie\n\n\n\n\n\n\n  \n\n\n\n\nmetaRbolomics hackathon to improve interoperability of metabolomics-related R packages\n\n\n\n\n\n\n\nMetabolomics\n\n\nMass Spectrometry\n\n\nHackathon\n\n\nOpen Science\n\n\n\n\nThe 3rd metaRbolomics hackathon took place as a in-person workshop in Wittenberg (Germany) in November 2021. The aim was to improve interoperability of metabolomics/mass spectrometry-related R packages, combine development efforts and identify gaps and needs in current available functionality. It was a fun event with a lot of discussions and coding as well as socializing and networking.\n\n\n\n\n\n\nJan 18, 2022\n\n\nJohannes Rainer\n\n\n\n\n\n\n  \n\n\n\n\nCelebrating 20 years of Bioconductor\n\n\n\n\n\n\n\nevents\n\n\n\n\nThe Bioconductor project started in 2001 and, during the Bioconductor conference 2021, celebrated 20 years of collaborative work for the development of open source and open development software.”.\n\n\n\n\n\n\nJan 14, 2022\n\n\nKevin Rue-Albrecht\n\n\n\n\n\n\n  \n\n\n\n\nBioC Asia 2021 は言語障壁の緩和に挑戦し、多様性を実現した\n\n\n\n\n\n\n\nJapanese\n\n\nBioC\n\n\nDiversity\n\n\n\n\nBioC Asia 2021 の運営委員会は Zoom や YouTube を用いて「英語のリアルタイムキャプションの追加」 「英語キーノートスピーチの日本語翻訳キャプションの追加」「英語、日本語、中国語の3カ国語での並行ワークショップ」を行い、 カンファレンスの多言語対応を実現しました。\n\n\n\n\n\n\nJan 12, 2022\n\n\n西田 孝三\n\n\n\n\n\n\n  \n\n\n\n\nBioC Asia 2021 challenged to overcoming language barriers and respected diversity\n\n\n\n\n\n\n\nBioC\n\n\nDiversity\n\n\n\n\nBioC Asia 2021 organizing committee used Zoom and YouTube to “add real-time English captions”, “add Japanese translation captions for English keynote”, and “run 3 parallel workshops: English, Japanese, and Mandarin”.\n\n\n\n\n\n\nDec 9, 2021\n\n\nKozo Nishida\n\n\n\n\n\n\nNo matching items"
-  },
-  {
-    "objectID": "posts/2021-11-11-biocasia2021/index.html",
-    "href": "posts/2021-11-11-biocasia2021/index.html",
-    "title": "BioC Asia 2021 challenged to overcoming language barriers and respected diversity",
-    "section": "",
-    "text": "We, the BioC Asia 2021 organizing Committee, held the Bioconductor Asia regional conference BioC Asia 2021 virtually from November 1st to 4th, 2021. In this post, I present our attempt to overcome the language barriers to respect diversity in BioC Asia 2021.\nWe have tried to overcome language barriers using the following three."
-  },
-  {
-    "objectID": "posts/2021-11-11-biocasia2021/index.html#zoom-live-transcription",
-    "href": "posts/2021-11-11-biocasia2021/index.html#zoom-live-transcription",
-    "title": "BioC Asia 2021 challenged to overcoming language barriers and respected diversity",
-    "section": "Zoom live transcription",
-    "text": "Zoom live transcription\nZoom has a live transcription feature. We have applied this feature to English-speaking presenters in an attempt to lower the barriers for understanding English."
-  },
-  {
-    "objectID": "posts/2021-11-11-biocasia2021/index.html#subtitles-for-japanese-translation-of-english-speech-using-youtube",
-    "href": "posts/2021-11-11-biocasia2021/index.html#subtitles-for-japanese-translation-of-english-speech-using-youtube",
-    "title": "BioC Asia 2021 challenged to overcoming language barriers and respected diversity",
-    "section": "Subtitles for Japanese translation of English speech using YouTube",
-    "text": "Subtitles for Japanese translation of English speech using YouTube\nThe talk of the keynote speaker Lori Ann Shepherd on November 2, 2021 was made by broadcasting a YouTube video with Japanese translation subtitles on a pre-recorded English speech.\n\nYou can see this Japanese translation subtitles by opening https://www.youtube.com/watch?v=NMv27jgHRb4 and setting the subtitles on YouTube as shown in the image below."
-  },
-  {
-    "objectID": "posts/2021-11-11-biocasia2021/index.html#parallel-workshops-in-3-languages-with-multiple-zoom-meetings",
-    "href": "posts/2021-11-11-biocasia2021/index.html#parallel-workshops-in-3-languages-with-multiple-zoom-meetings",
-    "title": "BioC Asia 2021 challenged to overcoming language barriers and respected diversity",
-    "section": "Parallel workshops in 3 languages with multiple Zoom Meetings",
-    "text": "Parallel workshops in 3 languages with multiple Zoom Meetings\nWe also promoted the parallel workshops in non-English languages, which began in BioC Asia 2020. In 2020, the parallel workshops were held in English and Mandarin, but in 2021, we held parallel workshops in his three languages, including Japanese."
-  },
-  {
-    "objectID": "posts/2021-11-11-biocasia2021/index.html#conclusion",
-    "href": "posts/2021-11-11-biocasia2021/index.html#conclusion",
-    "title": "BioC Asia 2021 challenged to overcoming language barriers and respected diversity",
-    "section": "Conclusion",
-    "text": "Conclusion\nBioC Asia 2021 respects language diversity that began from the BioC Asia 2020 Mandarin workshop, and newly realized “live transcription for English talk”, “Japanese subtitles of recoreded English keynote”, and “3 parallel workshops in more diverse languages”. Bioconductor is a community that respects diversity. We welcome attempts to achieve such diversity."
-  },
-  {
-    "objectID": "posts/2022-01-12-biocasia2021-ja/index.html",
-    "href": "posts/2022-01-12-biocasia2021-ja/index.html",
-    "title": "BioC Asia 2021 は言語障壁の緩和に挑戦し、多様性を実現した",
-    "section": "",
-    "text": "私達 BioC Asia 2021 運営委員会 は 2021 年 11 月 1 日から 4 日まで Bioconductor のアジア地域のカンファレンス BioC Asia 2021 を 2020年と同様に バーチャル開催しました。 この投稿では私達が BioC Asia 2021 で多様性の実現のために挑戦した言語障壁の克服の試みを紹介します。\n私達は下記の3つを用いて言語障壁の緩和を試みました。"
-  },
-  {
-    "objectID": "posts/2022-01-12-biocasia2021-ja/index.html#zoom-の-live-transcription",
-    "href": "posts/2022-01-12-biocasia2021-ja/index.html#zoom-の-live-transcription",
-    "title": "BioC Asia 2021 は言語障壁の緩和に挑戦し、多様性を実現した",
-    "section": "Zoom の live transcription",
-    "text": "Zoom の live transcription\nZoom には live transcription と呼ばれるライブ文字起こし機能が備わっています。 私達は英語を用いた発表者にこの機能を適用し、英語の理解の障壁を下げることを試みました。"
-  },
-  {
-    "objectID": "posts/2022-01-12-biocasia2021-ja/index.html#youtube-を用いた英語スピーチの日本語翻訳の字幕",
-    "href": "posts/2022-01-12-biocasia2021-ja/index.html#youtube-を用いた英語スピーチの日本語翻訳の字幕",
-    "title": "BioC Asia 2021 は言語障壁の緩和に挑戦し、多様性を実現した",
-    "section": "YouTube を用いた英語スピーチの日本語翻訳の字幕",
-    "text": "YouTube を用いた英語スピーチの日本語翻訳の字幕\n2021 年 11 月 2 日 のキーノートスピーカー Lori Ann Shepherd の発表は、 英語スピーチの事前録画物に日本語翻訳字幕をつけた YouTube 動画を放送する形で行いました。\n\nこの日本語翻訳字幕は https://www.youtube.com/watch?v=NMv27jgHRb4 を開き、下記画像のように YouTube で字幕設定を行っていただくことでご覧いただけます。"
-  },
-  {
-    "objectID": "posts/2022-01-12-biocasia2021-ja/index.html#複数の-zoom-meeting-を用いた-3-言語のパラレルワークショップ-日本語英語mandarin",
-    "href": "posts/2022-01-12-biocasia2021-ja/index.html#複数の-zoom-meeting-を用いた-3-言語のパラレルワークショップ-日本語英語mandarin",
-    "title": "BioC Asia 2021 は言語障壁の緩和に挑戦し、多様性を実現した",
-    "section": "複数の Zoom Meeting を用いた 3 言語のパラレルワークショップ (日本語、英語、Mandarin)",
-    "text": "複数の Zoom Meeting を用いた 3 言語のパラレルワークショップ (日本語、英語、Mandarin)\nまた 2020年度から試みが始まった非英語言語でのパラレルワークショップの開催 をさらに推し進めました。 2020年度は英語とMandarinでワークショップが行われたのですが、 2021年度、私達はそれにさらに日本語を加えた 3 つの言語でのパラレルワークショップを開催しました。"
-  },
-  {
-    "objectID": "posts/2022-01-12-biocasia2021-ja/index.html#まとめ",
-    "href": "posts/2022-01-12-biocasia2021-ja/index.html#まとめ",
-    "title": "BioC Asia 2021 は言語障壁の緩和に挑戦し、多様性を実現した",
-    "section": "まとめ",
-    "text": "まとめ\nBioC Asia 2021 は BioC Asia 2020 の Mandarin 言語でのワークショップ開催から始まった多様性の実現をさらに推し進め、 「英語トークのライブ字幕の表示」「非ライブの非英語言語への翻訳字幕の表示」「より多様な言語でのワークショップ開催」 を新たに実現しました。 Bioconductor は多様性を尊重するコミュニティです。 このような多様性を実現する試みを歓迎します。"
-  },
-  {
-    "objectID": "posts/2022-01-14-20years/index.html",
-    "href": "posts/2022-01-14-20years/index.html",
-    "title": "Celebrating 20 years of Bioconductor",
-    "section": "",
-    "text": "What a perspective! Twenty years of continuous contributions to fields ranging from biomedical data sciences to immunology, microbiology and most recently single-cell genomics.\nWriting this as an early career postdoctoral researcher who started using Bioconductor packages as a graduate student about 10 years ago (just about half the lifetime of the Bioconductor project at this point), I feel privileged to reflect on the most recent half of the Bioconductor project lifetime that I have had the chance to witness first-hand, both as a user and a contributor.\nI will skip over the first 10 years years, and redirect the nostalgic ones to the Wayback Machine snapshot of the Bioconductor website in March 2002 and the first published article describing the aims and methods of the project at its inception Gentleman et al. (2004)\n\n\n\nThe Bioconductor website in 2002.\n\n\nOK, well, taking a brief look at the Wayback machine snapshot, let’s just take a second to acknowledge that at its inception (Bioconductor Release 1.0: May 2, 2002), the Bioconductor project included just 15 packages, broadly classified as:\n\nannotation\ndata management and organization\ndifferential expression\nanalysis of microarray data\nvisualisation and normalisation of microarray data\nstorage and retrieval of large datasets\n\nTo put that into perspective, the Bioconductor project is now (Bioconductor 3.14; October 27, 2021) strong of:\n\n2083 software packages\n408 experiment data packages\n904 annotation packages\n29 workflows\n8 books\n\nThat is about 1 new package every other day for the past twenty years. Way to go!\n\n\n\nThe Bioconductor website in 2022.\n\n\nThat collection of core-maintained and community-contributed packages has grown so large that there is now an entire hierarchy of terms to categorise those packages, called BiocViews. Check them out!\nBut the Bioconductor project has grown to become so much more than a collection of software packages for bioinformatics. The success of the Bioconductor project has also grown a welcoming and inclusive community made of a Core Team, package developers, and users of all backgrounds and experience levels. I am reminded daily of this friendly, active, and stimulating environment through the Slack workspace, the Support site, and the YouTube channel. On top of that, regular events that bring the community together are the highlight of my calendar: the annual BioC conference in North America, the regional meetings in Europe (EuroBioC), Asia (BioC Asia), and summer schools (e.g., CSAMA).\nAnd speaking of conference, let me close on the celebrations of the 20th anniversary of the Bioconductor project, as a collection of photos contributed by community members presented during the BioC 2021 conference Meet the Community Advisory Board (CAB) session. I’m sure this will bring up memories for some of the earliest contributors to the Bioconductor project, and I hope that it will show even the most recent users how open and welcoming the Bioconductor community is!\n\n\n\nSlides of photos celebrating 20 years of Bioconductor (link above).\n\n\n\nReferences\n\nGentleman, R. C. et al. (2004). “Bioconductor: open software development for computational biology and bioinformatics”. In: Genome Biol 5.10, p. R80. ISSN: 1474-760X (Electronic) 1474-7596 (Linking). DOI: 10.1186/gb-2004-5-10-r80. URL: https://www.ncbi.nlm.nih.gov/pubmed/15461798."
-  },
-  {
-    "objectID": "posts/2022-01-18-metaRbolomics-2021/index.html",
-    "href": "posts/2022-01-18-metaRbolomics-2021/index.html",
-    "title": "metaRbolomics hackathon to improve interoperability of metabolomics-related R packages",
-    "section": "",
-    "text": "The 3rd metaRbolomics hackathon was organized by Steffen Neumann to bring developers and users of mass spectrometry and metabolomics-related R packages together to improve interoperability between packages, identify gaps and needs in current functionality and to foster collaboration between developers. The event took place from the 22-24 of November, with funding from the de.NBI ELIXIR-DE in Wittenberg (Germany) as an in-person event. As a safety measure, participants had the opportunity for on-site fast COVID-19 self-tests and all participants wore masks during the whole event.\nParticipants were also allowed to give flash talks presenting either R packages or approaches and concepts such as Maria Llambrich presenting the amanida R package for meta-analysis of metabolomics studies or Helge Hecht giving an overview of machine learning approaches for annotation of small compounds in mass spectrometry data.\n\n\nAfter the actual hacking session participants socialized for example on the Christmas Market in Wittenberg.\n\nAmong projects and collaborations that were started at the hackathon were a new MsBackend for the Spectra Bioconductor package allowing handling of TimsTOF data (MsBackendTimsTOF), updates and fixes for the MsQuality package as well as further development and expansion of the xcmsViewer.\nSummarizing, the hackathon was a very nice event fostering open science and open development in the metabolomics community."
-  },
-  {
-    "objectID": "posts/2022-01-31-join-the-bioconductor-community-advisory-board/index.html",
-    "href": "posts/2022-01-31-join-the-bioconductor-community-advisory-board/index.html",
-    "title": "Join the Bioconductor Community Advisory Board",
-    "section": "",
-    "text": "The Bioconductor Community Advisory Board (established in 2020) is seeking nominations from new members.\nThe board’s goal is to coordinate training and outreach activities that serve the global Bioconductor community and to ensure that interactions between community members are productive and respectful at all times.\nWe were asked what the CAB looks like at last year’s BioC2021 “Meet the CAB” session.   You can see the recording of this presentation on YouTube above.\nA transcript of Questions and Answers from this presentation is summarised on the CAB introduction page on bioconductor.org.\nIf you have further questions about how the CAB works, you can also ask them interactively in our community Slack (via the channel named community-advisory-board) or by emailing the current board (cab at bioconductor.org).\nAlso see this post on the Bioconductor Support Forum from Lori Shepherd (CAB Secretary) for instructions on how to apply to become a CAB member. Applications for the current round close on 25th Feb 2022.\nWe look forward to receiving your nomination!"
   },
   {
     "objectID": "posts/2022-07-12-carpentries-membership/index.html",
@@ -238,6 +140,97 @@
     "text": "Research Software Registry\n\nhttps://github.com/NLeSC/awesome-research-software-registries\n\n\n\n\n\n\n\nNote\n\n\n\nThe Bioconductor repository is mentioned in the awesome-research-software-registries list."
   },
   {
+    "objectID": "posts/2022-01-31-join-the-bioconductor-community-advisory-board/index.html",
+    "href": "posts/2022-01-31-join-the-bioconductor-community-advisory-board/index.html",
+    "title": "Join the Bioconductor Community Advisory Board",
+    "section": "",
+    "text": "The Bioconductor Community Advisory Board (established in 2020) is seeking nominations from new members.\nThe board’s goal is to coordinate training and outreach activities that serve the global Bioconductor community and to ensure that interactions between community members are productive and respectful at all times.\nWe were asked what the CAB looks like at last year’s BioC2021 “Meet the CAB” session.   You can see the recording of this presentation on YouTube above.\nA transcript of Questions and Answers from this presentation is summarised on the CAB introduction page on bioconductor.org.\nIf you have further questions about how the CAB works, you can also ask them interactively in our community Slack (via the channel named community-advisory-board) or by emailing the current board (cab at bioconductor.org).\nAlso see this post on the Bioconductor Support Forum from Lori Shepherd (CAB Secretary) for instructions on how to apply to become a CAB member. Applications for the current round close on 25th Feb 2022.\nWe look forward to receiving your nomination!"
+  },
+  {
+    "objectID": "posts/2022-01-18-metaRbolomics-2021/index.html",
+    "href": "posts/2022-01-18-metaRbolomics-2021/index.html",
+    "title": "metaRbolomics hackathon to improve interoperability of metabolomics-related R packages",
+    "section": "",
+    "text": "The 3rd metaRbolomics hackathon was organized by Steffen Neumann to bring developers and users of mass spectrometry and metabolomics-related R packages together to improve interoperability between packages, identify gaps and needs in current functionality and to foster collaboration between developers. The event took place from the 22-24 of November, with funding from the de.NBI ELIXIR-DE in Wittenberg (Germany) as an in-person event. As a safety measure, participants had the opportunity for on-site fast COVID-19 self-tests and all participants wore masks during the whole event.\nParticipants were also allowed to give flash talks presenting either R packages or approaches and concepts such as Maria Llambrich presenting the amanida R package for meta-analysis of metabolomics studies or Helge Hecht giving an overview of machine learning approaches for annotation of small compounds in mass spectrometry data.\n\n\nAfter the actual hacking session participants socialized for example on the Christmas Market in Wittenberg.\n\nAmong projects and collaborations that were started at the hackathon were a new MsBackend for the Spectra Bioconductor package allowing handling of TimsTOF data (MsBackendTimsTOF), updates and fixes for the MsQuality package as well as further development and expansion of the xcmsViewer.\nSummarizing, the hackathon was a very nice event fostering open science and open development in the metabolomics community."
+  },
+  {
+    "objectID": "posts/2022-01-14-20years/index.html",
+    "href": "posts/2022-01-14-20years/index.html",
+    "title": "Celebrating 20 years of Bioconductor",
+    "section": "",
+    "text": "What a perspective! Twenty years of continuous contributions to fields ranging from biomedical data sciences to immunology, microbiology and most recently single-cell genomics.\nWriting this as an early career postdoctoral researcher who started using Bioconductor packages as a graduate student about 10 years ago (just about half the lifetime of the Bioconductor project at this point), I feel privileged to reflect on the most recent half of the Bioconductor project lifetime that I have had the chance to witness first-hand, both as a user and a contributor.\nI will skip over the first 10 years years, and redirect the nostalgic ones to the Wayback Machine snapshot of the Bioconductor website in March 2002 and the first published article describing the aims and methods of the project at its inception Gentleman et al. (2004)\n\n\n\nThe Bioconductor website in 2002.\n\n\nOK, well, taking a brief look at the Wayback machine snapshot, let’s just take a second to acknowledge that at its inception (Bioconductor Release 1.0: May 2, 2002), the Bioconductor project included just 15 packages, broadly classified as:\n\nannotation\ndata management and organization\ndifferential expression\nanalysis of microarray data\nvisualisation and normalisation of microarray data\nstorage and retrieval of large datasets\n\nTo put that into perspective, the Bioconductor project is now (Bioconductor 3.14; October 27, 2021) strong of:\n\n2083 software packages\n408 experiment data packages\n904 annotation packages\n29 workflows\n8 books\n\nThat is about 1 new package every other day for the past twenty years. Way to go!\n\n\n\nThe Bioconductor website in 2022.\n\n\nThat collection of core-maintained and community-contributed packages has grown so large that there is now an entire hierarchy of terms to categorise those packages, called BiocViews. Check them out!\nBut the Bioconductor project has grown to become so much more than a collection of software packages for bioinformatics. The success of the Bioconductor project has also grown a welcoming and inclusive community made of a Core Team, package developers, and users of all backgrounds and experience levels. I am reminded daily of this friendly, active, and stimulating environment through the Slack workspace, the Support site, and the YouTube channel. On top of that, regular events that bring the community together are the highlight of my calendar: the annual BioC conference in North America, the regional meetings in Europe (EuroBioC), Asia (BioC Asia), and summer schools (e.g., CSAMA).\nAnd speaking of conference, let me close on the celebrations of the 20th anniversary of the Bioconductor project, as a collection of photos contributed by community members presented during the BioC 2021 conference Meet the Community Advisory Board (CAB) session. I’m sure this will bring up memories for some of the earliest contributors to the Bioconductor project, and I hope that it will show even the most recent users how open and welcoming the Bioconductor community is!\n\n\n\nSlides of photos celebrating 20 years of Bioconductor (link above).\n\n\n\nReferences\n\nGentleman, R. C. et al. (2004). “Bioconductor: open software development for computational biology and bioinformatics”. In: Genome Biol 5.10, p. R80. ISSN: 1474-760X (Electronic) 1474-7596 (Linking). DOI: 10.1186/gb-2004-5-10-r80. URL: https://www.ncbi.nlm.nih.gov/pubmed/15461798."
+  },
+  {
+    "objectID": "posts/2021-11-11-biocasia2021/index.html",
+    "href": "posts/2021-11-11-biocasia2021/index.html",
+    "title": "BioC Asia 2021 challenged to overcoming language barriers and respected diversity",
+    "section": "",
+    "text": "We, the BioC Asia 2021 organizing Committee, held the Bioconductor Asia regional conference BioC Asia 2021 virtually from November 1st to 4th, 2021. In this post, I present our attempt to overcome the language barriers to respect diversity in BioC Asia 2021.\nWe have tried to overcome language barriers using the following three."
+  },
+  {
+    "objectID": "posts/2021-11-11-biocasia2021/index.html#zoom-live-transcription",
+    "href": "posts/2021-11-11-biocasia2021/index.html#zoom-live-transcription",
+    "title": "BioC Asia 2021 challenged to overcoming language barriers and respected diversity",
+    "section": "Zoom live transcription",
+    "text": "Zoom live transcription\nZoom has a live transcription feature. We have applied this feature to English-speaking presenters in an attempt to lower the barriers for understanding English."
+  },
+  {
+    "objectID": "posts/2021-11-11-biocasia2021/index.html#subtitles-for-japanese-translation-of-english-speech-using-youtube",
+    "href": "posts/2021-11-11-biocasia2021/index.html#subtitles-for-japanese-translation-of-english-speech-using-youtube",
+    "title": "BioC Asia 2021 challenged to overcoming language barriers and respected diversity",
+    "section": "Subtitles for Japanese translation of English speech using YouTube",
+    "text": "Subtitles for Japanese translation of English speech using YouTube\nThe talk of the keynote speaker Lori Ann Shepherd on November 2, 2021 was made by broadcasting a YouTube video with Japanese translation subtitles on a pre-recorded English speech.\n\nYou can see this Japanese translation subtitles by opening https://www.youtube.com/watch?v=NMv27jgHRb4 and setting the subtitles on YouTube as shown in the image below."
+  },
+  {
+    "objectID": "posts/2021-11-11-biocasia2021/index.html#parallel-workshops-in-3-languages-with-multiple-zoom-meetings",
+    "href": "posts/2021-11-11-biocasia2021/index.html#parallel-workshops-in-3-languages-with-multiple-zoom-meetings",
+    "title": "BioC Asia 2021 challenged to overcoming language barriers and respected diversity",
+    "section": "Parallel workshops in 3 languages with multiple Zoom Meetings",
+    "text": "Parallel workshops in 3 languages with multiple Zoom Meetings\nWe also promoted the parallel workshops in non-English languages, which began in BioC Asia 2020. In 2020, the parallel workshops were held in English and Mandarin, but in 2021, we held parallel workshops in his three languages, including Japanese."
+  },
+  {
+    "objectID": "posts/2021-11-11-biocasia2021/index.html#conclusion",
+    "href": "posts/2021-11-11-biocasia2021/index.html#conclusion",
+    "title": "BioC Asia 2021 challenged to overcoming language barriers and respected diversity",
+    "section": "Conclusion",
+    "text": "Conclusion\nBioC Asia 2021 respects language diversity that began from the BioC Asia 2020 Mandarin workshop, and newly realized “live transcription for English talk”, “Japanese subtitles of recoreded English keynote”, and “3 parallel workshops in more diverse languages”. Bioconductor is a community that respects diversity. We welcome attempts to achieve such diversity."
+  },
+  {
+    "objectID": "posts/2022-01-12-biocasia2021-ja/index.html",
+    "href": "posts/2022-01-12-biocasia2021-ja/index.html",
+    "title": "BioC Asia 2021 は言語障壁の緩和に挑戦し、多様性を実現した",
+    "section": "",
+    "text": "私達 BioC Asia 2021 運営委員会 は 2021 年 11 月 1 日から 4 日まで Bioconductor のアジア地域のカンファレンス BioC Asia 2021 を 2020年と同様に バーチャル開催しました。 この投稿では私達が BioC Asia 2021 で多様性の実現のために挑戦した言語障壁の克服の試みを紹介します。\n私達は下記の3つを用いて言語障壁の緩和を試みました。"
+  },
+  {
+    "objectID": "posts/2022-01-12-biocasia2021-ja/index.html#zoom-の-live-transcription",
+    "href": "posts/2022-01-12-biocasia2021-ja/index.html#zoom-の-live-transcription",
+    "title": "BioC Asia 2021 は言語障壁の緩和に挑戦し、多様性を実現した",
+    "section": "Zoom の live transcription",
+    "text": "Zoom の live transcription\nZoom には live transcription と呼ばれるライブ文字起こし機能が備わっています。 私達は英語を用いた発表者にこの機能を適用し、英語の理解の障壁を下げることを試みました。"
+  },
+  {
+    "objectID": "posts/2022-01-12-biocasia2021-ja/index.html#youtube-を用いた英語スピーチの日本語翻訳の字幕",
+    "href": "posts/2022-01-12-biocasia2021-ja/index.html#youtube-を用いた英語スピーチの日本語翻訳の字幕",
+    "title": "BioC Asia 2021 は言語障壁の緩和に挑戦し、多様性を実現した",
+    "section": "YouTube を用いた英語スピーチの日本語翻訳の字幕",
+    "text": "YouTube を用いた英語スピーチの日本語翻訳の字幕\n2021 年 11 月 2 日 のキーノートスピーカー Lori Ann Shepherd の発表は、 英語スピーチの事前録画物に日本語翻訳字幕をつけた YouTube 動画を放送する形で行いました。\n\nこの日本語翻訳字幕は https://www.youtube.com/watch?v=NMv27jgHRb4 を開き、下記画像のように YouTube で字幕設定を行っていただくことでご覧いただけます。"
+  },
+  {
+    "objectID": "posts/2022-01-12-biocasia2021-ja/index.html#複数の-zoom-meeting-を用いた-3-言語のパラレルワークショップ-日本語英語mandarin",
+    "href": "posts/2022-01-12-biocasia2021-ja/index.html#複数の-zoom-meeting-を用いた-3-言語のパラレルワークショップ-日本語英語mandarin",
+    "title": "BioC Asia 2021 は言語障壁の緩和に挑戦し、多様性を実現した",
+    "section": "複数の Zoom Meeting を用いた 3 言語のパラレルワークショップ (日本語、英語、Mandarin)",
+    "text": "複数の Zoom Meeting を用いた 3 言語のパラレルワークショップ (日本語、英語、Mandarin)\nまた 2020年度から試みが始まった非英語言語でのパラレルワークショップの開催 をさらに推し進めました。 2020年度は英語とMandarinでワークショップが行われたのですが、 2021年度、私達はそれにさらに日本語を加えた 3 つの言語でのパラレルワークショップを開催しました。"
+  },
+  {
+    "objectID": "posts/2022-01-12-biocasia2021-ja/index.html#まとめ",
+    "href": "posts/2022-01-12-biocasia2021-ja/index.html#まとめ",
+    "title": "BioC Asia 2021 は言語障壁の緩和に挑戦し、多様性を実現した",
+    "section": "まとめ",
+    "text": "まとめ\nBioC Asia 2021 は BioC Asia 2020 の Mandarin 言語でのワークショップ開催から始まった多様性の実現をさらに推し進め、 「英語トークのライブ字幕の表示」「非ライブの非英語言語への翻訳字幕の表示」「より多様な言語でのワークショップ開催」 を新たに実現しました。 Bioconductor は多様性を尊重するコミュニティです。 このような多様性を実現する試みを歓迎します。"
+  },
+  {
     "objectID": "posts/2023-01-11-hacktoberfest/index.html",
     "href": "posts/2023-01-11-hacktoberfest/index.html",
     "title": "Bioconductor Hacktoberfest 2022 review and looking ahead to 2023",
@@ -256,14 +249,14 @@
     "href": "posts/2023-01-11-hacktoberfest/index.html#what-did-bioconductor-do-for-hacktoberfest",
     "title": "Bioconductor Hacktoberfest 2022 review and looking ahead to 2023",
     "section": "What did Bioconductor do for Hacktoberfest?",
-    "text": "What did Bioconductor do for Hacktoberfest?\nBioconductor chose to highlight some Bioconductor projects that people could contribute to.\nCommunity member, Kevin Rue-Albrecht hosted a Meetup event on the Carpentries bioc-project.\n\n\nCommunity member, Kozo Nishida hosted a Meetup event on the Bioconductor community blog."
+    "text": "What did Bioconductor do for Hacktoberfest?\nBioconductor chose to highlight some Bioconductor projects that people could contribute to.\nCommunity member, Kevin Rue-Albrecht hosted a Meetup event on the Carpentries bioc-project.\n\n\n\nbiocproject_github\n\n\n\n\n\nbiocproject_carpentries\n\n\nCommunity member, Kozo Nishida hosted a Meetup event on the Bioconductor community blog.\n\n\n\nbiocblog_github\n\n\n\n\n\nbiocblog_website"
   },
   {
     "objectID": "posts/2023-01-11-hacktoberfest/index.html#what-were-the-outcome-and-learnings",
     "href": "posts/2023-01-11-hacktoberfest/index.html#what-were-the-outcome-and-learnings",
     "title": "Bioconductor Hacktoberfest 2022 review and looking ahead to 2023",
     "section": "What were the outcome and learnings?",
-    "text": "What were the outcome and learnings?\nOne participant at the Carpentries bioc-project meetup, Milan Malfait @MilanMlft from Belgium, created Hacktoberfest pull requests to proofread every single episode of the Carpentries bioc-project lesson and fix typos.\n\nA participant at the blog meetup, Jeremy Selva @JauntyJJS from Singapore, created a great contribution for the biocblog.\n\nThe contribution post\nThe PR\n\n\nThe contributions from the above participants were excellent and we would like to encourage more people to take part in 2023. In support of that, we will create greater awareness of Bioconductor’s plans to participate in Hacktoberfest, such as through this blog, advertise and take suggestions for Bioconductor projects earlier, such as in the new #hacktoberfest channel in Bioconductor Slack and at the BioC2023 conference August 2nd-4th. We also learnt that in order to get people to contribute it really helps to have well-defined issues in the repositories, so we aim to do that for Hacktoberfest 2023."
+    "text": "What were the outcome and learnings?\nOne participant at the Carpentries bioc-project meetup, Milan Malfait @MilanMlft from Belgium, created Hacktoberfest pull requests to proofread every single episode of the Carpentries bioc-project lesson and fix typos.\n\n\n\nbiocproject_contribution\n\n\nA participant at the blog meetup, Jeremy Selva @JauntyJJS from Singapore, created a great contribution for the biocblog.\n\nThe contribution post\nThe PR\n\n\n\n\nbiocproject_contribution\n\n\nThe contributions from the above participants were excellent and we would like to encourage more people to take part in 2023. In support of that, we will create greater awareness of Bioconductor’s plans to participate in Hacktoberfest, such as through this blog, advertise and take suggestions for Bioconductor projects earlier, such as in the new #hacktoberfest channel in Bioconductor Slack and at the BioC2023 conference August 2nd-4th. We also learnt that in order to get people to contribute it really helps to have well-defined issues in the repositories, so we aim to do that for Hacktoberfest 2023."
   },
   {
     "objectID": "posts/2023-01-11-hacktoberfest/index.html#conclusion",
@@ -271,5 +264,12 @@
     "title": "Bioconductor Hacktoberfest 2022 review and looking ahead to 2023",
     "section": "Conclusion",
     "text": "Conclusion\nWe joined Hacktoberfest as an opportunity to take part in an event that aligns with Bioconductor values and to connect with community members. The participants of Hacktoberfest made great contributions to Bioconductor projects. We will advertise and plan the event earlier this year so stay tuned for updates!"
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "Welcome to the Bioconductor community blog! Here you’ll find the small contributions, highlight a package functionality, etc. There is a chance for people to give a shoutout to something great that happened recently in the community.\nWe also like to draw from a wide variety of contributors (so please consider submitting a post if so motivated!).\nIf you are interested in publishing some of your own work or insights on the Bioconductor community blog, we’d love to hear from you! See the article on contributing posts for additional details.\nThe Bioconductor community blog was created using Quarto."
   }
 ]
