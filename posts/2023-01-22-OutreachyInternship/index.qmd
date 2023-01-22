@@ -44,7 +44,7 @@ The sweave2rmd project is a project for converting vignettes from sweave to Rmar
 
 ### BSgenomeForge Project
 BSgenome is a package with many uses, among which one of them is forging BSgenome data packages. BSgenome data packages are very important because computational biologists use them to search for particular DNA patterns in a genome, or to compute CG content and other basic statistics, or to extract the DNA sequences for some regions of interest like genes or CDS and translate them into amino acid sequences. However, the current process of forging a BSgenome data package is quite long and confusing, with a few redundant processes like creating a seed file before calling the forgeBSgenomeDataPkg function on the seed file to create the package.
-[] seed file Felis_catus_9.0.png
+[] seed_file_Felis_catus_9.0.png
 The BSgenomeForge project aims to simplify the whole process, by allowing the user to use one function to create the package. It’s a solution that we hope is able to cut down the time one takes to forge a package, and make the process much less confusing and error-prone to less experienced users.
 [] forgeBSgenomeDataPkgFromNCBI.png
 
