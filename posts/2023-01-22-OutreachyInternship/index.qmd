@@ -1,1 +1,44 @@
+---
+title: "Our experience as Outreachy interns with Bioconductor"
+description: |
+  Bioconductor participated in the Outreachy Internship program for the December 2022 cohort. Our interns share their experience working on their various projects and   bioconductor in general.
+author:
+  - name: Beryl Kanali
+    url: https://github.com/BerylKanali
+  - name: Atuhurira Kirabo 
+    url: https://github.com/kakopo
+date: 2023-01-22
+categories:
+  - open science
+---
+
+## Introduction
+
+The world of open source is vast and full of opportunities to change both the world and oneself, but may appear daunting to someone naive and new to the field. Thankfully, countless initiatives exist to narrow the gap between disadvantaged individuals who wish to make their first contributions, and open source communities. Outreachy is one of these projects, and it aims to provide internships to people impacted by underrepresentation in the technical industry where they are living. Through Outreachy, we were able to work for 12 weeks as interns at Bioconductor, and kickstart our introduction to the open source world of computational biology. Perhaps you're an experienced biologist who finds themselves using the tools we're working on, and would like more information about them. Or maybe you're eager to make your mark as an Outreachy applicant, interested in Bioconductor, and would like to know our experience. Whichever the reason, I hope this blog post is extra informative to whatever you're looking for!
+
+## Outreachy
+
+[Outreachy](https://www.outreachy.org/) is a program that offers a 12 week paid remote internship in open source and open science. Outreachy provides internships to people subject to systemic bias and underrepresented in tech. Outreachy interns work with experienced mentors from open source communities, and internship projects may include programming, user experience, documentation, graphical design, data science, marketing, user advocacy, or community event planning.
+
+The application process is in three stages and an applicant chooses 1-2 projects they would like to apply to and makes contributions to them to be eligible for selection.
+
+Through Outreachy, we were selected to work with Bioconductor on the different projects we had applied to.
+
+## Bioconductor
+
+[Bioconductor](https://bioconductor.org/) is an open source project that uses the R programming language to develop software used in computational biology and bioinformatics.
+
+The mission of the Bioconductor project is to develop, support, and disseminate free open source software that facilitates rigorous and reproducible analysis of data from current and emerging biological assays.
+
+Bioconductor had two projects in the application period for the December 2022 internship round. We will go through what our projects are about and our experiences so far.
+
+### Sweave2Rmd Project
+The sweave2rmd project is a project for converting vignettes from sweave to Rmarkdown. Most Bioconductor packages documentation have been written using a mixture of Latex and R code then rendered as PDF files. In this project, we are converting these files to R markdown then rendering the files as HTML files.
+
+-   Sweave- Sweave enables the embedding of R code within LaTeX documents to generate a PDF file that includes narrative and analysis, graphics, code, and the results of computations.
+
+-   Sweave files effectively let you write a file using the TeX typesetting system while directly incorporating the results of your R code into your TeX file.
+
+-   Rmarkdown(Rmd)- The .rmd files - known as RMarkdown files - let you write Markdown files similarly incorporating your R code into the file.
+
 
