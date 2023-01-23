@@ -14,7 +14,9 @@ categories:
 
 ## Introduction
 
-The world of open source is vast and full of opportunities to change both the world and oneself, but may appear daunting to someone naive and new to the field. Thankfully, countless initiatives exist to narrow the gap between disadvantaged individuals who wish to make their first contributions, and open source communities. Outreachy is one of these projects, and it aims to provide internships to people impacted by underrepresentation in the technical industry where they are living. Through Outreachy, we were able to work for 12 weeks as interns at Bioconductor, and kickstart our introduction to the open source world of computational biology. Perhaps you're an experienced biologist who finds themselves using the tools we're working on, and would like more information about them. Or maybe you're eager to make your mark as an Outreachy applicant, interested in Bioconductor, and would like to know our experience. Whichever the reason, I hope this blog post is extra informative to whatever you're looking for!
+The world of open source is vast and full of opportunities to change both the world and oneself, but may appear daunting to someone naive and new to the field. Thankfully, countless initiatives exist to narrow the gap between disadvantaged individuals who wish to make their first contributions, and open source communities. 
+
+Outreachy is one of these projects, and it aims to provide internships to people impacted by underrepresentation in the technical industry where they are living. Through Outreachy, we were able to work for 12 weeks as interns at Bioconductor, and kickstart our introduction to the open source world of computational biology. Perhaps you're an experienced biologist who finds themselves using the tools we're working on, and would like more information about them. Or maybe you're eager to make your mark as an Outreachy applicant, interested in Bioconductor, and would like to know our experience. Whichever the reason, I hope this blog post is extra informative to whatever you're looking for!
 
 ## Outreachy
 
@@ -41,4 +43,29 @@ The sweave2rmd project is a project for converting vignettes from sweave to Rmar
 
 -   Rmarkdown(Rmd)- The .rmd files - known as RMarkdown files - let you write Markdown files similarly incorporating your R code into the file.
 
+### BSgenomeForge Project
+BSgenome is a package with many uses, among which one of them is forging BSgenome data packages. BSgenome data packages are very important because computational biologists use them to search for particular DNA patterns in a genome, or to compute CG content and other basic statistics, or to extract the DNA sequences for some regions of interest like genes or CDS and translate them into amino acid sequences. However, the current process of forging a BSgenome data package is quite long and confusing, with a few redundant processes like creating a seed file before calling the forgeBSgenomeDataPkg function on the seed file to create the package.
+![example seed file for Felis_catus_9.0](seed_file_Felis_catus_9.0.png)
+The BSgenomeForge project aims to simplify the whole process, by allowing the user to use one function to create the package. It’s a solution that we hope is able to cut down the time one takes to forge a package, and make the process much less confusing and error-prone to less experienced users.
+![forgeBSgenomeDataPkgFromNCBI function](forgeBSgenomeDataPkgFromNCBI.png)
+
+### Our experience interning with Bioconductor
+Through Outreachy, we have been interning at Bioconductor for over a month now. It has been a great experience, not only to the world of open science and open source, but also learning how to work collaboratively in a remote environment. Getting up to speed with many concepts in a short period of time was an uphill task, but thanks to our incredible mentors, Jen Wokaty and Hervé Pagès, the journey has been smoother than a pebble. 
+
+-   Kirabo’s experience working on BSgenomeForge
+
+My experience on the BSgenomeForge project has been incredible. Before starting out, my knowledge of programming was mostly restricted to R, and even then I’d only used it to carry out high level data analysis and machine learning tasks.
+
+Working on the BSgenomeForge project, I feel like I have learnt a lot, not just about making packages, but how to structure my code, how to make it readable for other users, how to communicate with others, etc. Hervé certainly makes everything easier, by taking me through task workflows, and offering helpful pointers when I’m stuck. I’ve had a chance to get involved on an interesting, highly collaborative open source project, one that is used by so many people, and I have been given the opportunity to create something that makes their work just a bit easier. Everyday is an opportunity to learn something new, something I definitely do not take for granted. Overall, my experience has been a turning point 
+
+-   Beryl’s experience working on sweave2rmd
+
+I have been interning for one and a half months now and it has been awesome so far. I have improved my coding skills, communication skills and team work. Open source requires a lot of learning and I have learnt a lot so far(Git skills, R programming and writing good documentation). My mentor Jennifer Wokaty has been very supportive and helpful. Apart from my mentor, the Bioconductor team has also been helpful in terms of providing feedback and answering questions whenever I am stuck.
+
+I have had the chance to learn and interact with several Bioconductor packages and learn a few things from them. I now have a better understanding of building packages and creating documentation. 
+
+I look forward to continuing learning, contributing and helping make the Sweave2Rmd project a success.
+
+### Conclusion
+Bioconductor is made up of hundreds and thousands of software packages, and fosters an equally diverse welcoming community. It has been an awesome experience to interact with the community, contribute to the work being done within the project and learn a lot! We encourage any open source enthusiasts, or individuals with an interest in computational biology to contribute to the project, and welcome themselves to a whole new adventure!
 
