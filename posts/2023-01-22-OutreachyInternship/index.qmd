@@ -49,16 +49,16 @@ BSgenome is a package with many uses, among which one of them is forging BSgenom
 The BSgenomeForge project aims to simplify the whole process, by allowing the user to use one function to create the package. It’s a solution that we hope is able to cut down the time one takes to forge a package, and make the process much less confusing and error-prone to less experienced users.
 ![forgeBSgenomeDataPkgFromNCBI function](forgeBSgenomeDataPkgFromNCBI.png)
 
-### Our experience interning with Bioconductor
+## Our experience interning with Bioconductor
 Through Outreachy, we have been interning at Bioconductor for over a month now. It has been a great experience, not only to the world of open science and open source, but also learning how to work collaboratively in a remote environment. Getting up to speed with many concepts in a short period of time was an uphill task, but thanks to our incredible mentors, Jen Wokaty and Hervé Pagès, the journey has been smoother than a pebble. 
 
--   Kirabo’s experience working on BSgenomeForge
+### Kirabo’s experience working on BSgenomeForge
 
 My experience on the BSgenomeForge project has been incredible. Before starting out, my knowledge of programming was mostly restricted to R, and even then I’d only used it to carry out high level data analysis and machine learning tasks.
 
 Working on the BSgenomeForge project, I feel like I have learnt a lot, not just about making packages, but how to structure my code, how to make it readable for other users, how to communicate with others, etc. Hervé certainly makes everything easier, by taking me through task workflows, and offering helpful pointers when I’m stuck. I’ve had a chance to get involved on an interesting, highly collaborative open source project, one that is used by so many people, and I have been given the opportunity to create something that makes their work just a bit easier. Everyday is an opportunity to learn something new, something I definitely do not take for granted. Overall, my experience has been a turning point 
 
--   Beryl’s experience working on sweave2rmd
+### Beryl’s experience working on sweave2rmd
 
 I have been interning for one and a half months now and it has been awesome so far. I have improved my coding skills, communication skills and team work. Open source requires a lot of learning and I have learnt a lot so far(Git skills, R programming and writing good documentation). My mentor Jennifer Wokaty has been very supportive and helpful. Apart from my mentor, the Bioconductor team has also been helpful in terms of providing feedback and answering questions whenever I am stuck.
 
