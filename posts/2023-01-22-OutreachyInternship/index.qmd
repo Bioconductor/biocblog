@@ -22,7 +22,7 @@ Outreachy is one of these projects, and it aims to provide internships to people
 
 [Outreachy](https://www.outreachy.org/) is a program that offers a 12 week paid remote internship in open source and open science. Outreachy provides internships to people subject to systemic bias and underrepresented in tech. Outreachy interns work with experienced mentors from open source communities, and internship projects may include programming, user experience, documentation, graphical design, data science, marketing, user advocacy, or community event planning.
 
-![Outreachy](Outreachy.png)
+![Outreachy](outreachy_homepage.png)
 
 The application process is in three stages and an applicant chooses 1-2 projects they would like to apply to and makes contributions to them to be eligible for selection.
 
