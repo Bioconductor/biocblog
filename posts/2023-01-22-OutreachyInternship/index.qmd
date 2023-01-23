@@ -15,6 +15,7 @@ categories:
 ## Introduction
 
 The world of open source is vast and full of opportunities to change both the world and oneself, but may appear daunting to someone naive and new to the field. Thankfully, countless initiatives exist to narrow the gap between disadvantaged individuals who wish to make their first contributions, and open source communities. 
+
 Outreachy is one of these projects, and it aims to provide internships to people impacted by underrepresentation in the technical industry where they are living. Through Outreachy, we were able to work for 12 weeks as interns at Bioconductor, and kickstart our introduction to the open source world of computational biology. Perhaps you're an experienced biologist who finds themselves using the tools we're working on, and would like more information about them. Or maybe you're eager to make your mark as an Outreachy applicant, interested in Bioconductor, and would like to know our experience. Whichever the reason, I hope this blog post is extra informative to whatever you're looking for!
 
 ## Outreachy
@@ -52,10 +53,13 @@ The BSgenomeForge project aims to simplify the whole process, by allowing the us
 Through Outreachy, we have been interning at Bioconductor for over a month now. It has been a great experience, not only to the world of open science and open source, but also learning how to work collaboratively in a remote environment. Getting up to speed with many concepts in a short period of time was an uphill task, but thanks to our incredible mentors, Jen Wokaty and Hervé Pagès, the journey has been smoother than a pebble. 
 
 -   Kirabo’s experience working on BSgenomeForge
+
 My experience on the BSgenomeForge project has been incredible. Before starting out, my knowledge of programming was mostly restricted to R, and even then I’d only used it to carry out high level data analysis and machine learning tasks.
+
 Working on the BSgenomeForge project, I feel like I have learnt a lot, not just about making packages, but how to structure my code, how to make it readable for other users, how to communicate with others, etc. Hervé certainly makes everything easier, by taking me through task workflows, and offering helpful pointers when I’m stuck. I’ve had a chance to get involved on an interesting, highly collaborative open source project, one that is used by so many people, and I have been given the opportunity to create something that makes their work just a bit easier. Everyday is an opportunity to learn something new, something I definitely do not take for granted. Overall, my experience has been a turning point 
 
 -   Beryl’s experience working on sweave2rmd
+
 I have been interning for one and a half months now and it has been awesome so far. I have improved my coding skills, communication skills and team work. Open source requires a lot of learning and I have learnt a lot so far(Git skills, R programming and writing good documentation). My mentor Jennifer Wokaty has been very supportive and helpful. Apart from my mentor, the Bioconductor team has also been helpful in terms of providing feedback and answering questions whenever I am stuck.
 
 I have had the chance to learn and interact with several Bioconductor packages and learn a few things from them. I now have a better understanding of building packages and creating documentation. 
