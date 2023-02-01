@@ -107,6 +107,8 @@ journey has been smoother than a pebble.
 
 ### Kirabo's experience working on BSgenomeForge
 
+![Kirabo Atuhurira](KIRABO HEADSHOT.jpeg)
+
 Hi, my name is Atuhurira Kirabo Kakopo, and I'm from Kampala, Uganda. I am on
 the cusp of graduating with a bachelor's degree in Software Engineering.
 Academically, I thrived in my data science and artificial intelligence classes,
@@ -146,6 +148,8 @@ take for granted. Overall, my experience has been a turning point. You can read
 more about it [here](https://kakopo.wordpress.com/), on my blog.
 
 ### Beryl's experience working on sweave2rmd
+
+![Beryl Kanai](Beryl Kanali.jpg)
 
 I am Beryl Kanali from Nairobi, Kenya. I graduated in 2021 with a bachelor's
 degree in Mathematics and Computer Science which led me to choosing Data Science
