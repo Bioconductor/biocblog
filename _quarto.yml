@@ -7,7 +7,7 @@ website:
   title: "Bioconductor community blog"
   site-url: https://bioconductor.github.io/biocblog/
   description: "A blog for the Bioconductor community!"
-  twitter-card: true
+  twitter-card:
     creator: "@Bioconductor"
     image: "/images/twitter-card.png"
   open-graph: true
