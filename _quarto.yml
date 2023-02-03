@@ -1,11 +1,15 @@
 project:
   type: website
+  resources:
+    - "images/twitter-card.png"
 
 website:
   title: "Bioconductor community blog"
   site-url: https://bioconductor.github.io/biocblog/
   description: "A blog for the Bioconductor community!"
   twitter-card: true
+    creator: "@bioconductor"
+    image: /images/twitter-card.png"
   open-graph: true
   navbar:
     right:
