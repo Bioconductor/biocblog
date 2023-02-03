@@ -5,6 +5,17 @@ title: "Contributing"
 We very much appreciate contributions to the Bioconductor community blog from the broader community.
 If you are interested in publishing some of your own work or insights, we'd love to hear from you!
 
+# Requirements
+
+There are a few minimum requirements for a blog post to be considered for acceptance (adapted from [SciPy](https://blog.scientific-python.org/about/submit/)). 
+
+* The main subject must relate to Bioconductor.
+* Content is published under Creative Common CC-BY-4.0 License for the text and BSD 3-Clause License for any code.
+* The post and authors abide by the Bioconductor [Code of Conduct](https://www.bioconductor.org/about/code-of-conduct).
+* The post must be written in English or a language we have a reviewer for. If not English, please open a [GitHub issue](https://github.com/Bioconductor/biocblog/issues) to check we can review.
+
+# How to contribute
+
 Articles posted on the Bioconductor community blog are authored using
 [Quarto](https://quarto.org).
 The way to contribute a new article is as follows:
