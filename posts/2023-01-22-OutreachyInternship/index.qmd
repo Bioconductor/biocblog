@@ -1,7 +1,7 @@
 ---
 title: "Our experience as Outreachy interns with Bioconductor"
 description: |
-  Bioconductor participated in the Outreachy Internship program for the December 2022 cohort. Our interns share their experience working on their various projects and   bioconductor in general.
+  Bioconductor participated in the Outreachy Internship program for the December 2022 cohort. Our interns share their experience working on their various projects and bioconductor in general.
 author:
   - name: Beryl Kanali
     url: https://github.com/BerylKanali
@@ -60,15 +60,22 @@ experiences so far.
 
 [BSgenome](https://github.com/Bioconductor/BSgenome) is a Bioconductor package
 with many uses, among which one of them is forging BSgenome data packages.
-Forging is another word used to mean *creating* a package. There are several
-reasons the average Bioconductor user would forge a BSgenome data packages; in
-order to search for particular DNA patterns in a genome, maybe to compute GC
-content and other basic statistics or even to extract the DNA sequences for some
-regions of interest like genes or CDS and translate them into amino acid
-sequences. However, the current process of forging a BSgenome data package is
-quite long and confusing, with a few redundant processes like creating a seed
-file before calling the `forgeBSgenomeDataPkg` function on the seed file to
-create the package.
+Forging is another word used to mean *creating* a package. BSgenome is a
+combination of BS, which is short for
+[Biostrings](https://bioconductor.org/packages/release/bioc/html/Biostrings.html)
+a package used for manipulation of biological strings, and genome, which is the
+complete set of genetic material in an organism. BSgenome data packages have
+many applications in the real world, especially in light of the current COVID-19
+pandemic. They can be used to find the COVID-19 genomic sequence and study it,
+and even be used by environmental scientists to look for COVID-19 in wastewater.
+There are several reasons the average Bioconductor user would forge a BSgenome
+data packages; in order to search for particular DNA patterns in a genome, maybe
+to compute GC content and other basic statistics or even to extract the DNA
+sequences for some regions of interest like genes or CDS and translate them into
+amino acid sequences. However, the current process of forging a BSgenome data
+package is quite long and confusing, with a few redundant processes like
+creating a seed file before calling the `forgeBSgenomeDataPkg` function on the
+seed file to create the package.
 
 ![example seed file for Felis_catus_9.0](seed_file_Felis_catus_9.0.png)
 
@@ -92,9 +99,12 @@ Majority of the documentation availabe now is being writtten in markdown and
 rendered as HTML files. HTML files are easier to share, access and can be viewed
 online/offline without special applications. HTML files also offer more
 interactivity as compared to PDF files since you can include links to other
-parts of the document especially long documents. Since Bioconductor has also
-been around for over 20 years, most of the vignettes are old and need
-modernization.
+parts of the document especially long documents. Markdown and HTML files are
+also easily readable across different devices and do not need to be reformatted
+for every device type. Since Bioconductor has also been around for over 20
+years, most of the vignettes are old and need modernization. The sweave2rmd
+project will generally help bring a large number of "mature"(older) vignettes to
+the modern era.
 
 Rmarkdown also has simpler syntax as compared to Latex and beginners can find it easier to use.
 
