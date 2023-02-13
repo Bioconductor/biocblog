@@ -16,10 +16,7 @@ execute:
 
 ```{r}
 #| message: false
-library(ggplot2)
 library(dplyr)
-library(ggmap)
-library(plotly)
 ```
 
 
@@ -75,6 +72,10 @@ We are grateful to the [Chan Zuckerberg Initiative's EOSS program](https://chanz
 #| eval: false
 #| warning: false
 
+library(ggplot2)
+library(ggmap)
+library(plotly)
+
 # Generate plot locally as html, to avoid needing to install multiple packages in biocblog site, then embed as iframe
 
 world <- map_data("world")
@@ -97,10 +98,14 @@ htmlwidgets::saveWidget(pgg, file = "map.html")
 
 
 ```{r}
-instructors %>% 
+ktab <- instructors %>% 
   select(Name, Affiliation, Location) %>% 
   arrange(Name) %>% 
   knitr::kable()
+
+# save interactive plot
+htmlwidgets::saveWidget(ktab, file = "table.html")
+```
 ```
 
 
