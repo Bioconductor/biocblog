@@ -61,7 +61,7 @@ We are excited to welcome the year 1 intake of instructor trainees for our [Bioc
 
 Eighteen applicants have been selected for year 1, they are shown below in the interactive map and listed alphabetically in the table. 
 
-We initially had mainly applicants from Europe and we've been working to increase applicants from other areas such as Africa, Asia and Latin America, to provide a global distribution of instructors. Other aspects we have been taking into account for selection are, previous R/Bioconductor experience, languages they can teach in, and how they intend to contribute to Bioconductor teaching. For year 2, we plan to select some applicants in Latin America, aswell as high quality applicants from other areas. We will be selecting for year 2 in July and you can [apply in this form](https://forms.gle/SGaVkDZqCNKNSnHKA) if you're interested.
+We initially had mainly applicants from Europe and we've been working to increase applicants from other areas such as Africa, Asia and Latin America, to provide a global distribution of instructors. Other aspects we have been taking into account for selection are, previous R/Bioconductor experience, organising experience, languages they can teach in, and how they intend to contribute to Bioconductor teaching. For year 2, we will select some applicants in Latin America, as we currently have none there, aswell as other high quality applicants from other areas. We will be selecting for year 2 in July and you can still [apply in this form](https://forms.gle/SGaVkDZqCNKNSnHKA) if you're interested.
 
 The year 1 applicants are onboarding now and are at different stages of the process. The first step is attendance at an online [Carpentries instructor training workshop](https://carpentries.github.io/instructor-training/training_calendar/index.html), followed by completing [3 checkout tasks](https://carpentries.github.io/instructor-training/checkout/index.html) (teaching demo, discussion, lesson contribution) within 3 months after the workshop. So far 3/18 trainees have completed the Carpentries certification - Fabricio Almeida-Silva, Leo Lahti and Charlotte Hutchings. Once certified, the instructors will teach/co-teach one of the [Bioconductor Carpentries Modules](https://www.bioconductor.org/help/education-training/). We are looking forward to working with all of the new instructors to provide Bioconductor training to the global Bioconductor community.
 
@@ -92,10 +92,9 @@ pgg <- ggplotly(gg, tooltip = "text")
 htmlwidgets::saveWidget(pgg, file = "map.html")
 ```
 
-## Year 1 Bioconductor Carpentries instructor trainees
+### Year 1 Bioconductor Carpentries instructor trainees
 
 <iframe src="map.html" width="100%" height="500"></iframe>
-
 
 ```{r}
 instructors %>% 
@@ -103,9 +102,4 @@ instructors %>%
   arrange(Name) %>% 
   knitr::kable()
 ```
-
-
-
-
-
 
