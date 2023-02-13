@@ -47,7 +47,7 @@ instructors <- tibble::tribble(
 
 
 ```{r}
-#| include: false
+#| eval: false
 
 # how got the lon and lat coordinates above
 locations <- c("Ghent", "Heidelberg", "Oxford", "Zurich", "Turku", "New York", 
@@ -98,13 +98,10 @@ htmlwidgets::saveWidget(pgg, file = "map.html")
 
 
 ```{r}
-ktab <- instructors %>% 
+instructors %>% 
   select(Name, Affiliation, Location) %>% 
   arrange(Name) %>% 
   knitr::kable()
-
-# save interactive plot
-htmlwidgets::saveWidget(ktab, file = "table.html")
 ```
 ```
 
