@@ -9,7 +9,7 @@ date: 2023-02-22
 creative_commons: CC BY
 categories:
   - education
-preview: "map.jpg"
+image: "map.png"
 execute:
   echo: false
 ---
