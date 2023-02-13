@@ -103,7 +103,7 @@ instructors %>%
   arrange(Name) %>% 
   knitr::kable()
 ```
-```
+
 
 
 
