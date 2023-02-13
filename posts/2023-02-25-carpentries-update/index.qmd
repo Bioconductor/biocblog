@@ -91,7 +91,7 @@ pgg <- ggplotly(gg, tooltip = "text")
 htmlwidgets::saveWidget(pgg, file = "map.html")
 ```
 
-## Year 1 instructor trainees
+## Year 1 Bioconductor Carpentries instructor trainees
 
 <iframe src="map.html" width="100%" height="500"></iframe>
 
