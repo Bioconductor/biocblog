@@ -1,0 +1,90 @@
+---
+title: "Renaming the Default Branch to Devel"
+description: |
+  During the 3.17 devel cycle, Bioconductor will rename the default branch devel.
+author:
+  - name: J Wokaty
+    url: https://github.com/jwokaty
+date: 2023-02-10
+categories: BioC
+---
+
+In the next few weeks, Bioconductor will rename the default branch on
+`git.bioconductor.org` to `devel`. This change has been many discussions and a
+lot of work in the making. Here's why we're doing it and how it impacts
+developers and maintainers. Users will not be impacted by this change.
+
+## Moving Toward Inclusion
+
+You might already be familiar with others, like the
+[tidyverse](https://www.tidyverse.org/blog/2021/10/renaming-default-branch/),
+moving away from the terminology "master" to use more inclusive language. We
+realize that this language is not representative of Bioconductor and it's a
+step toward inclusion that's inline with Bioconductor's
+[Code of Conduct](https://www.bioconductor.org/about/code-of-conduct/)
+to provide a welcoming and supportive experience.
+
+We specifically chose `devel` as it more aptly describes what this branch is
+within the context of Bioconductor.
+
+## Impact on Bioconductor Package Developers and Maintainers
+
+After TBD, developers and maintainers will need to push their changes to the
+`devel` branch on `git.bioconductor.org`. If you have a repository on GitHub,
+we recommend renaming your default branch on GitHub first then renaming your
+branch in your local repository on your computer.
+
+### Rename the Default Branch on Github
+
+On GitHub, you can rename your `master` branch in your repository by going to
+`Settings > Branches` then clicking on the pencil icon.
+
+![Settings > Branches at github.com](default_branch.png)
+
+Note: Renaming the branch will also change any pull requests attempting to
+merge into your current default branch.
+
+![Rename the default branch devel](rename_branch.png)
+
+### Rename the Branch Named Master in Your Local Repository
+
+You can change your local repository with the following code, assuming your
+branch is named `master`:
+
+```
+git branch -m master devel
+git fetch origin
+git branch -u origin/devel devel
+git remote set-head origin -a
+```
+
+If you performed the prior steps to rename your default branch in GitHub, it
+will also provide you with the same code, which you can share with contributors.
+
+### Push to git.bioconductor.org
+
+After you've renamed your local branches, you can push to the `devel` branch
+at `git.bioconductor.org`.
+
+```
+git remote -v
+# origin    git@github.com:Bioconductor/BiocGenerics (fetch)
+# origin    git@github.com:Bioconductor/BiocGenerics (push)
+# upstream  git@git.bioconductor.org:packages/BiocGenerics (fetch)
+# upstream  git@git.bioconductor.org:packages/BiocGenerics (push)
+git push upstream devel
+```
+
+### Push to git.bioconductor.org Without Altering Your Local Branch
+
+It's also possible to push to `devel` without altering your local
+branch:
+
+```
+# Assuming your git.bioconductor.org remote is named upstream
+# and your branch is named 'main'
+git push upstream main:devel
+```
+
+See our [Branch Rename FAQ](https://contributions.bioconductor.org/branch-rename-faqs.html)
+for more details.
