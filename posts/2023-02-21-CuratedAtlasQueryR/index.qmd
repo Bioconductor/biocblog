@@ -1,0 +1,67 @@
+---
+title: "Introducing CuratedAtlasQueryR"
+description: |
+  CuratedAtlasQuery enables easy programmatic exploration of CELLxGENE single-cell human cell atlas data.
+author:
+  - name: Stefano Mangiola
+  - name: Maria Doyle
+date: 2023-02-21
+categories:
+  - events
+image: "CuratedAtlasQueryR_logo.png"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+```{r bib, include=FALSE}
+options(htmltools.dir.version = FALSE)
+library(RefManageR)
+library(bibtex)
+bib <- ReadBib("../bibliography.bib")
+BibOptions(
+  longnamesfirst = FALSE,
+  check.entries = FALSE,
+  bib.style = "authoryear",
+  cite.style = "authoryear",
+  max.names = 1,
+  style = "html",
+  hyperlink = "to.bib",
+  dashed = TRUE)
+```
+
+## Why package was created
+
+🧬💻🔥 We are excited to launch CuratedCellAtlasR; millions of cells are now at your fingertips. 
+
+The harmonized and reannotated CELLxGENE singlecell human atlas can be 
+explored and retrieved as SingleCellExperiment.
+
+
+## How it differs from existing packages
+
+
+### Duckdb - what it is & why we used it 
+
+
+## How you can use it
+
+
+Insert link to [Twitter thread when live](https://docs.google.com/document/d/1loWQuo751r2bh2KpEGvlcKSKH-3zvre0fBs6yiS_1Lk/edit?usp=sharing)
+
+OR (include the twitter info below)
+
+
+Step 1: Get started with #CuratedCellAtlasR by exploring the integrated metadata of 28 million cells (on-disk) using #tidyverse. The atlas includes 344 studies across 40 tissues, providing raw abundances and counts-per-million. 📊
+
+
+Step 2: Filter cells of interest using #tidyverse, whether it's a specific dataset or a cell type across tissues and diseases. #CuratedAtlasQueryR makes it easy to find what you're looking for! 🔍
+
+
+Step 3: Collect the #SingleCellExperiment for the cells of interest. Our object uses #HDF5 to keep the #R session light, making it easier to work with larger datasets. 💻
+
+
+
+Step 4: With #CuratedAtlasQueryR and #tidySingleCellExperiment, checking the transcription abundance of your favourite gene and cell type across diseases, tissues and hundreds of datasets is just a few lines of code! 🎉
+
