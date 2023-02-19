@@ -3,8 +3,8 @@ title: "Introducing CuratedAtlasQueryR package"
 description: |
   CuratedAtlasQueryR is a new package that enables easy programmatic exploration of CELLxGENE single-cell human cell atlas data.
 author:
-  - name: Stefano Mangiola
   - name: Maria Doyle
+  - name: Stefano Mangiola
 date: 2023-02-21
 categories:
   - Package
@@ -15,9 +15,12 @@ image: "overview.png"
 knitr::opts_chunk$set(echo = FALSE)
 ```
 
-*This blog post was co-written by the lead developer of CuratedCellAtlasR, Stefano Mangiola, and the Bioconductor Community Manager, Maria Doyle.*
+```{r}
+library(CuratedAtlasQueryR)
+```
+*This blog post was co-written by the lead developer of CuratedAtlasQueryR, Stefano Mangiola, and the Bioconductor Community Manager, Maria Doyle.*
 
-We are excited to announce the launch of the CuratedCellAtlasR package! Millions of cells are now at your fingertips as the harmonized and reannotated CELLxGENE single-cell human atlas can be explored and retrieved as a Bioconductor SingleCellExperiment object. 
+We are excited to announce the launch of the CuratedAtlasQueryR package! Millions of cells are now at your fingertips as the harmonized and reannotated CELLxGENE single-cell human atlas can be explored and retrieved as a Bioconductor SingleCellExperiment object. 
 
 ![](overview.png)
 
@@ -39,21 +42,78 @@ We use [DuckDB](https://duckdb.org/) in the package due to it's fast speed, and 
 
 ## How you can use it
 
-Step 1: Get started with CuratedCellAtlasR by exploring the integrated metadata of 28 million cells (on-disk) using [tidyverse](https://www.tidyverse.org/). The atlas includes 344 studies across 40 tissues, providing raw abundances and counts-per-million. 📊
+**Step 1**: Get started with CuratedAtlasQueryR by exploring the integrated metadata of 28 million cells (on-disk) using [tidyverse](https://www.tidyverse.org/). The atlas includes 344 studies across 40 tissues, providing raw abundances and counts-per-million. 📊
 
-![](get_metadata.png)
+```{r, echo=TRUE}
+metadata = get_metadata()
 
-Step 2: Filter cells of interest using tidyverse, whether it's a specific dataset or a cell type across tissues and diseases. CuratedAtlasQueryR makes it easy to find what you're looking for! 🔍
+metadata
+```
 
-![](filter.png)
+**Step 2**: Filter cells of interest using tidyverse, whether it's a specific dataset or a cell type across tissues and diseases. CuratedAtlasQueryR makes it easy to find what you're looking for! 🔍
 
-Step 3: Collect the SingleCellExperiment for the cells of interest. Our object uses [HDF5 format](https://en.wikipedia.org/wiki/Hierarchical_Data_Format) to keep the R session light, making it easier to work with larger datasets. 💻
+```{r, echo=TRUE}
+metadata |>
+  dplyr::filter(
+      ethnicity == "African" &
+      stringr::str_like(assay, "%10x%") &
+      tissue == "lung parenchyma" &
+      stringr::str_like(cell_type, "%CD4%")
+  ) 
+```
 
-![](get_SingleCellExperiment.png)
+**Step 3**: Collect the SingleCellExperiment for the cells of interest. Our object uses [HDF5 format](https://en.wikipedia.org/wiki/Hierarchical_Data_Format) to keep the R session light, making it easier to work with larger datasets. 💻
 
-Step 4: With CuratedAtlasQueryR and [tidySingleCellExperiment](https://stemangiola.github.io/tidySingleCellExperiment/articles/introduction.html), checking the transcription abundance of your favourite gene and cell type across diseases, tissues and hundreds of datasets is just a few lines of code! 🎉
+```{r, echo=TRUE}
+metadata |>
+  dplyr::filter(
+      ethnicity == "African" &
+      stringr::str_like(assay, "%10x%") &
+      tissue == "lung parenchyma" &
+      stringr::str_like(cell_type, "%CD4%")
+  ) |>
+  get_SingleCellExperiment()
+```
+
+**Step 4**: With CuratedAtlasQueryR and [tidySingleCellExperiment](https://stemangiola.github.io/tidySingleCellExperiment/articles/introduction.html), checking the transcription abundance of your favourite gene and cell type across diseases, tissues and hundreds of datasets is just a few lines of code! 🎉
+
+```{r, echo=TRUE, eval=FALSE}
+library(tidySingleCellExperiment)
+library(ggplot2)
+
+metadata |>
+  
+  # Filter and subset
+  filter(cell_type_harmonised=="cd14 mono") |>
+
+  # Get counts per million for NCAM1 gene
+  get_SingleCellExperiment(assays = "cpm", features = "HLA-A") |> 
+  
+  # Plot
+  join_features("HLA-A", shape = "wide") |> 
+  ggplot(aes( disease, `HLA.A`,color = file_id)) +
+  geom_jitter(shape=".") 
+```
 
 ![](hlaplot1.png)
+
+```{r, echo=TRUE, eval=FALSE}
+
+metadata |> 
+    
+  # Filter and subset
+  filter(cell_type_harmonised=="nk") |> 
+
+  # Get counts per million for NCAM1 gene 
+  get_SingleCellExperiment(assays = "cpm", features = "NCAM1") |> 
+
+	# Plot
+  join_features("NCAM1", shape = "wide") |> 
+  ggplot(aes( tissue_harmonised, NCAM1,color = file_id)) +
+  geom_jitter(shape=".") 
+
+```
+
 ![](hlaplot2.png)
 
 ## Acknowledgements
