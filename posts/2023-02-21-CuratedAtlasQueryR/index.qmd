@@ -1,73 +1,61 @@
 ---
-title: "Introducing CuratedAtlasQueryR"
+title: "Introducing CuratedAtlasQueryR package"
 description: |
-  CuratedAtlasQuery enables easy programmatic exploration of CELLxGENE single-cell human cell atlas data.
+  CuratedAtlasQueryR is a new package that enables easy programmatic exploration of CELLxGENE single-cell human cell atlas data.
 author:
   - name: Stefano Mangiola
   - name: Maria Doyle
 date: 2023-02-21
 categories:
-  - events
-image: "CuratedAtlasQueryR_logo.png"
+  - Package
+image: "overview.png"
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE)
 ```
 
-```{r bib, include=FALSE}
-options(htmltools.dir.version = FALSE)
-library(RefManageR)
-library(bibtex)
-bib <- ReadBib("../bibliography.bib")
-BibOptions(
-  longnamesfirst = FALSE,
-  check.entries = FALSE,
-  bib.style = "authoryear",
-  cite.style = "authoryear",
-  max.names = 1,
-  style = "html",
-  hyperlink = "to.bib",
-  dashed = TRUE)
-```
+*This blog post was co-written by the lead developer of CuratedCellAtlasR, Stefano Mangiola, and the Bioconductor Community Manager, Maria Doyle.*
 
-## Why package was created
+We are excited to announce the launch of the CuratedCellAtlasR package! Millions of cells are now at your fingertips as the harmonized and reannotated CELLxGENE single-cell human atlas can be explored and retrieved as a Bioconductor SingleCellExperiment object. 
 
-The Human Cell Atlas, a large-scale single-cell sequencing initiative, has the potential to revolutionise our understanding of human cellular biology and the immune system. Data harmonisation, curation and effective data query are essential to extract knowledge from these complex atlases. Here, we present a harmonised and curated version of the [CELLxGENE human cell atlas](https://cellxgene.cziscience.com/). To facilitate access to this atlas, we have developed CuratedAtlasQuery, a cell-resolved query system that allows researchers to select cells based on their type, tissue of origin, and demographics.
+![](overview.png)
+
+## Why this package was created
+
+The [Human Cell Atlas](https://www.humancellatlas.org/) is a large-scale single-cell sequencing initiative that aims to map every cell type in the human body. It has the potential to revolutionise our understanding of human cellular biology and the immune system. Data harmonisation, curation and effective data query are essential to extract knowledge from these complex atlases. The [CELLxGENE human cell atlas](https://cellxgene.cziscience.com/) provides a curated, searchable version of the Human Cell Atlas data. To facilitate programmatic access to this atlas through R, we have developed [CuratedAtlasQueryR](https://stemangiola.github.io/CuratedAtlasQueryR/), a cell-resolved query system that allows researchers to select cells based on their type, tissue of origin, and demographics.
  
 The rationale for our package is that, while CELLxGENE is not harmonised across dataset, we made it so, so you can do cross-dataset analyses.
 
 ## How it differs from existing packages
 
-We use cellxgenedp as download source, and we have harmonisation of that. Differently from cellxgenedp is that we can query specific cells across datasets based on annotation, all this without loading into memory. So our query resolution is at the cell level rather than dataset.
-
-🧬💻🔥 We are excited to launch CuratedCellAtlasR; millions of cells are now at your fingertips. 
+We use the existing Bioconductor package, [cellxgenedp](https://bioconductor.org/packages/release/bioc/html/cellxgenedp.html) as download source, and harmonise the data. Differently from cellxgenedp, we can query specific cells across datasets based on annotation, all this without loading into memory. So our query resolution is at the cell level rather than dataset.
 
 The harmonized and reannotated CELLxGENE singlecell human atlas can be 
-explored and retrieved as SingleCellExperiment.
+explored and retrieved as a Bioconductor [SingleCellExperiment](https://bioconductor.org/packages/release/bioc/html/SingleCellExperiment.html) object.
 
-### Duckdb - what it is & why we used it 
-
-The reason of DuckDB is similar to what their website claim, which is speed, and low disk imprint.
+We use [DuckDB](https://duckdb.org/) in the package due to it's fast speed, and low disk imprint in handling large amounts of data.
 
 
 ## How you can use it
 
+Step 1: Get started with CuratedCellAtlasR by exploring the integrated metadata of 28 million cells (on-disk) using [tidyverse](https://www.tidyverse.org/). The atlas includes 344 studies across 40 tissues, providing raw abundances and counts-per-million. 📊
 
-Insert link to [Twitter thread when live](https://docs.google.com/document/d/1loWQuo751r2bh2KpEGvlcKSKH-3zvre0fBs6yiS_1Lk/edit?usp=sharing)
+![](get_metadata.png)
 
-OR (include the twitter info below)
+Step 2: Filter cells of interest using tidyverse, whether it's a specific dataset or a cell type across tissues and diseases. CuratedAtlasQueryR makes it easy to find what you're looking for! 🔍
 
+![](filter.png)
 
-Step 1: Get started with #CuratedCellAtlasR by exploring the integrated metadata of 28 million cells (on-disk) using #tidyverse. The atlas includes 344 studies across 40 tissues, providing raw abundances and counts-per-million. 📊
+Step 3: Collect the SingleCellExperiment for the cells of interest. Our object uses [HDF5 format](https://en.wikipedia.org/wiki/Hierarchical_Data_Format) to keep the R session light, making it easier to work with larger datasets. 💻
 
+![](get_SingleCellExperiment.png)
 
-Step 2: Filter cells of interest using #tidyverse, whether it's a specific dataset or a cell type across tissues and diseases. #CuratedAtlasQueryR makes it easy to find what you're looking for! 🔍
+Step 4: With CuratedAtlasQueryR and [tidySingleCellExperiment](https://stemangiola.github.io/tidySingleCellExperiment/articles/introduction.html), checking the transcription abundance of your favourite gene and cell type across diseases, tissues and hundreds of datasets is just a few lines of code! 🎉
 
+![](hlaplot1.png)
+![](hlaplot2.png)
 
-Step 3: Collect the #SingleCellExperiment for the cells of interest. Our object uses #HDF5 to keep the #R session light, making it easier to work with larger datasets. 💻
+## Acknowledgements
 
-
-
-Step 4: With #CuratedAtlasQueryR and #tidySingleCellExperiment, checking the transcription abundance of your favourite gene and cell type across diseases, tissues and hundreds of datasets is just a few lines of code! 🎉
-
+Thanks and congratulations to Michael Milton [@multimeric](https://github.com/multimeric) (main developer), [Martin Morgan](https://www.roswellpark.org/martin-morgan), [Tony Papenfuss](https://www.wehi.edu.au/people/tony-papenfuss), [Vince Carey](https://vjcitn.github.io/), [Bioconductor](https://www.bioconductor.org/), [Julie Iskander](https://github.com/jIskCoder), [WEHI](https://www.wehi.edu.au/).
