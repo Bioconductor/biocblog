@@ -33,16 +33,22 @@ BibOptions(
 
 ## Why package was created
 
+The Human Cell Atlas, a large-scale single-cell sequencing initiative, has the potential to revolutionise our understanding of human cellular biology and the immune system. Data harmonisation, curation and effective data query are essential to extract knowledge from these complex atlases. Here, we present a harmonised and curated version of the [CELLxGENE human cell atlas](https://cellxgene.cziscience.com/). To facilitate access to this atlas, we have developed CuratedAtlasQuery, a cell-resolved query system that allows researchers to select cells based on their type, tissue of origin, and demographics.
+ 
+The rationale for our package is that, while CELLxGENE is not harmonised across dataset, we made it so, so you can do cross-dataset analyses.
+
+## How it differs from existing packages
+
+We use cellxgenedp as download source, and we have harmonisation of that. Differently from cellxgenedp is that we can query specific cells across datasets based on annotation, all this without loading into memory. So our query resolution is at the cell level rather than dataset.
+
 🧬💻🔥 We are excited to launch CuratedCellAtlasR; millions of cells are now at your fingertips. 
 
 The harmonized and reannotated CELLxGENE singlecell human atlas can be 
 explored and retrieved as SingleCellExperiment.
 
-
-## How it differs from existing packages
-
-
 ### Duckdb - what it is & why we used it 
+
+The reason of DuckDB is similar to what their website claim, which is speed, and low disk imprint.
 
 
 ## How you can use it
