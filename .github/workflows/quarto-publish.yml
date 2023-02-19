@@ -1,6 +1,8 @@
 on:
   push:
-    branches: main
+    branches: 
+    - main
+    - CuratedAtlasQueryR # allow while sharing preview
 
 name: Render and Publish
 
