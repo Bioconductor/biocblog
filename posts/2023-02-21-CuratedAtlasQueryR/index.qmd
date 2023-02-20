@@ -20,7 +20,7 @@ knitr::opts_chunk$set(echo = FALSE)
 
 We are excited to announce the launch of the [CuratedAtlasQueryR](https://github.com/stemangiola/CuratedAtlasQueryR) package! Millions of cells are now at your fingertips as the harmonized and reannotated CELLxGENE single-cell human atlas can be explored and retrieved in Bioconductor SingleCellExperiment format.
 
-![](overview.png)
+![](overview.png){fig-alt="A diagram showing the tools underlying the CuratedAtlasQueryR package and the workflow."}
 
 ## Why this package was created
 
@@ -119,7 +119,7 @@ metadata |>
   geom_jitter(shape=".") 
 ```
 
-![](hlaplot1.png)
+![](hlaplot1.png){fig-alt="A jitter plot of HLA-A expression in CD14 monocytes from different diseases."}
 
 ```{r, echo=TRUE}
 
@@ -138,7 +138,7 @@ metadata |>
 
 ```
 
-![](hlaplot2.png)
+![](hlaplot2.png){fig-alt="A jitter plot of HLA-A expression in CD14 monocytes from different tissues."}
 
 ## Acknowledgements
 
