@@ -32,16 +32,16 @@ To allow exploration and analyses across datasets, tissues and diseases through 
 
 We use the existing Bioconductor package, [cellxgenedp](https://bioconductor.org/packages/release/bioc/html/cellxgenedp.html) as the download source for datasets included in [CELLxGENE](https://cellxgene.cziscience.com/). 
 
-We then harmonised, curated and reannotated the data (immune cell labels). 
+We then harmonised, curated and reannotated the data (immune cell labels):
 
-- The column classes so they can be represented as unique table.
+- The column classes so they can be represented as a unique table.
 - We subset the columns that were most common across the atlas (the complete columns for a specific dataset can be retrieved through the [cellxgenedp](https://bioconductor.org/packages/release/bioc/html/cellxgenedp.html) package).
 - We consolidated sample identifiers.
 - We harmonised tissue labels
 - We harmonised cell-type labels under a common ontology
 - We provide a consensus-based immune cell label, and a confidence label. Consensus was established among the original annotation and three independent references ([Monaco](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE107011), [BLUEPRINT](https://rdrr.io/github/LTLA/celldex/man/BlueprintEncodeData.html), and [Azimuth PBMC](https://azimuth.hubmapconsortium.org/references/human_pbmc/))
 
-We introduced custom columns, not present in the original CELLxGENE metadata
+We introduced custom columns, not present in the original CELLxGENE metadata:
 
 - `tissue_harmonised`: a coarser tissue name for better filtering
 - `age_days`: the number of days corresponding to the age
