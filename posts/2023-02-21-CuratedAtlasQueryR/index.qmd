@@ -26,7 +26,7 @@ We are excited to announce the launch of the [CuratedAtlasQueryR](https://github
 
 The [Human Cell Atlas](https://www.humancellatlas.org/) is a large-scale single-cell sequencing initiative that aims to map every cell type in the human body. It has the potential to revolutionise our understanding of human cellular biology and the immune system. Data harmonisation, curation and effective data query are essential to extract knowledge from these complex atlases. The [CELLxGENE human cell atlas](https://cellxgene.cziscience.com/) provides an explorable and searchable human atlas. However, [CELLxGENE](https://cellxgene.cziscience.com/) is not harmonised across datasets.
 
-To allow exploration and analyses across datasets, tissues and diseases through R, we have developed [CuratedAtlasQueryR](https://stemangiola.github.io/CuratedAtlasQueryR/), a cell-resolved query system that allows researchers to select cells based on their type, tissue of origin, and demographics.
+To allow exploration and analyses across datasets, tissues and diseases through R, we have developed [CuratedAtlasQueryR](https://stemangiola.github.io/CuratedAtlasQueryR/), a cell-resolved query system that allows researchers to select cells based on their type, tissue of origin, and demographics. This package will be submitted to [Bioconductor](https://www.bioconductor.org/). We have also created a Python version of CuratedAtlasQueryR that will be launched soon.
 
 ## How it differs from existing packages
 
