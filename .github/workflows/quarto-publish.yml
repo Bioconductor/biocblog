@@ -33,7 +33,7 @@ jobs:
         
       - name: Query dependencies and update old packages
         run: |
-          #packages <- c("jsonlite", "htmltools", "rmarkdown", "RefManageR", "stemangiola/CuratedAtlasQueryR")
+          packages <- c("jsonlite", "htmltools", "rmarkdown", "RefManageR", "stemangiola/CuratedAtlasQueryR")
           #BiocManager::install(packages)
           Rscript -e 'install.packages(c("jsonlite", "htmltools", "rmarkdown", "RefManageR", "stemangiola/CuratedAtlasQueryR"))'
           saveRDS(remotes::package_deps(packages = packages, dependencies = TRUE), ".github/depends.Rds", version = 2)
