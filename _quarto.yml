@@ -3,6 +3,9 @@ project:
   resources:
     - "images/twitter-card.png"
 
+execute:
+  freeze: auto
+
 website:
   title: "Bioconductor community blog"
   site-url: https://bioconductor.github.io/biocblog/
