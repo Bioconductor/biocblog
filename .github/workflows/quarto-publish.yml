@@ -16,7 +16,7 @@ name: Render and Publish
 jobs:
   build-deploy:
     runs-on: ubuntu-latest
-    container: bioconductor/bioconductor_docker:RELEASE_3_16
+    #container: bioconductor/bioconductor_docker:RELEASE_3_16
     permissions:
       contents: write
 
@@ -34,7 +34,8 @@ jobs:
       - name: Query dependencies and update old packages
         run: |
           packages <- c("jsonlite", "htmltools", "rmarkdown", "RefManageR", "stemangiola/CuratedAtlasQueryR")
-          BiocManager::install(packages)
+          #BiocManager::install(packages)
+          Rscript -e 'install.packages(packages)'
           saveRDS(remotes::package_deps(packages = packages, dependencies = TRUE), ".github/depends.Rds", version = 2)
         shell: Rscript {0}
         
