@@ -9,12 +9,10 @@ date: 2023-02-21
 categories:
   - Package
 image: "overview.png"
-eval: false
+execute:
+  message: false
+  freeze: auto
 ---
-
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = FALSE)
-```
 
 *This blog post was co-written by the Bioconductor Community Manager, Maria Doyle, and the lead developer of CuratedAtlasQueryR, Stefano Mangiola.*
 
@@ -66,39 +64,21 @@ We use [DuckDB](https://duckdb.org/) in the package due to it's speed, and low d
 
 **Step 1**: Get started with [CuratedAtlasQueryR](https://github.com/stemangiola/CuratedAtlasQueryR) by exploring the integrated metadata of 28 million cells (on-disk) using [tidyverse](https://www.tidyverse.org/). The atlas includes 344 studies across 40 tissues, providing raw abundances and counts-per-million. 📊
 
-```{r, echo=TRUE}
+
+```{r}
 library(CuratedAtlasQueryR)
 
-metadata <- get_metadata()
+cache_dir = "~/tmp"
+
+metadata <- get_metadata(cache_directory = cache_dir)
 
 metadata
 
-#> # Source:   SQL [?? x 56]
-#> # Database: DuckDB 0.7.0 [unknown@Linux 3.10.0-1160.81.1.el7.x86_64:R 4.2.0/:memory:]
-#>    `cell_`       samp…¹ cell_…² cell_…³ confi…⁴ cell_…⁵ cell_…⁶ cell_…⁷ sampl…⁸
-#>    <chr>         <chr>   <chr>   <chr>     <dbl> <chr>   <chr>   <chr>   <chr>  
-#>  1 Arunachalam-… 36bb04… classi… cd14 m…       1 cd14 m… monocy… interm… 80ab02…
-#>  2 Arunachalam-… 36bb04… classi… cd14 m…       1 cd14 m… monocy… classi… 80ab02…
-#>  3 Arunachalam-… 36bb04… classi… cd14 m…       1 cd14 m… monocy… classi… 80ab02…
-#>  4 Arunachalam-… 36bb04… classi… cd14 m…       1 cd14 m… monocy… classi… 80ab02…
-#>  5 Arunachalam-… 36bb04… classi… cdc           1 cdc2    monocy… myeloi… 80ab02…
-#>  6 Arunachalam-… 36bb04… classi… cd14 m…       1 cd14 m… monocy… classi… 80ab02…
-#>  7 Arunachalam-… 36bb04… classi… cd14 m…       1 cd14 m… monocy… classi… 80ab02…
-#>  8 Arunachalam-… 36bb04… classi… cd14 m…       1 cd14 m… monocy… myeloi… 80ab02…
-#>  9 Arunachalam-… 36bb04… classi… cd14 m…       1 cd14 m… monocy… classi… 80ab02…
-#> 10 Arunachalam-… 36bb04… classi… cd14 m…       1 cd14 m… monocy… interm… 80ab02…
-#> # … with more rows, 47 more variables: `sample_name` <chr>, assay <chr>,
-#> #   assay_ontology_term_id <chr>, file_id_db <chr>,
-#> #   cell_type_ontology_term_id <chr>, development_stage <chr>,
-#> #   development_stage_ontology_term_id <chr>, disease <chr>,
-#> #   disease_ontology_term_id <chr>, ethnicity <chr>,
-#> #   ethnicity_ontology_term_id <chr>, experiment___ <chr>, file_id <chr>,
-#> #   is_primary_data_x <chr>, organism <chr>, organism_ontology_term_id <chr>, …
 ```
 
 **Step 2**: Filter cells of interest using tidyverse, whether it's a specific dataset or a cell type across tissues and diseases. [CuratedAtlasQueryR](https://github.com/stemangiola/CuratedAtlasQueryR) makes it easy to find what you're looking for! 🔍
 
-```{r, echo=TRUE}
+```{r}
 metadata |>
   dplyr::filter(
       ethnicity == "African" &
@@ -107,32 +87,11 @@ metadata |>
       stringr::str_like(cell_type, "%CD4%")
   ) 
 
-#> # Source:   SQL [?? x 56]
-#> # Database: DuckDB 0.7.0 [unknown@Linux 3.10.0-1160.81.1.el7.x86_64:R 4.2.0/:memory:]
-#>    `cell_`       samp…¹ cell_…² cell_…³ confi…⁴ cell_…⁵ cell_…⁶ cell_…⁷ sampl…⁸
-#>    <chr>         <chr>   <chr>   <chr>     <dbl> <chr>   <chr>   <chr>   <chr>  
-#>  1 ACAGCCGGTCCG… dc583c… CD4-po… mait          5 mait    cd8 tem mait    b41104…
-#>  2 GGGAATGAGCCC… dc583c… CD4-po… treg          3 cd4 tcm cd4 t   t regu… b41104…
-#>  3 TCTTCGGAGTAG… dc583c… CD4-po… cd4 th…       3 cd4 tcm cd4 t   th1/th… b41104…
-#>  4 CCTTACGAGAGC… dc583c… CD4-po… cd4 th…       3 cd4 tem cd8 tem th1/th… b41104…
-#>  5 ATCTACTCAATG… dc583c… CD4-po… cd4 th…       3 cd4 tcm clp     th17    b41104…
-#>  6 CATCAGACACCG… 39915d… CD4-po… immune…       5 cd8 tem cd8 tem mait    200214…
-#>  7 AGTCTTTGTTAG… 39915d… CD4-po… immune…       1 cd4 tem cd4 tem mait    200214…
-#>  8 CGCGTTTGTAAG… dc583c… CD4-po… immune…       5 cd4 tem clp     th1/th… b41104…
-#>  9 TGGCTGGCAACG… 39915d… CD4-po… immune…       5 cd8 tem cd8 tem effect… 200214…
-#> 10 TTCCCAGAGCAG… dc583c… CD4-po… cd4 th…       3 cd4 tcm cd8 tem th1/th… b41104…
-#> # … with more rows, 47 more variables: `sample_name` <chr>, assay <chr>,
-#> #   assay_ontology_term_id <chr>, file_id_db <chr>,
-#> #   cell_type_ontology_term_id <chr>, development_stage <chr>,
-#> #   development_stage_ontology_term_id <chr>, disease <chr>,
-#> #   disease_ontology_term_id <chr>, ethnicity <chr>,
-#> #   ethnicity_ontology_term_id <chr>, experiment___ <chr>, file_id <chr>,
-#> #   is_primary_data_x <chr>, organism <chr>, organism_ontology_term_id <chr>, …
 ```
 
 **Step 3**: Collect the [SingleCellExperiment](https://bioconductor.org/packages/release/bioc/html/SingleCellExperiment.html) for the cells of interest. Our object uses [HDF5 format](https://en.wikipedia.org/wiki/Hierarchical_Data_Format) to keep the R session light, making it easier to work with larger datasets. 💻
 
-```{r, echo=TRUE}
+```{r, message=FALSE}
 metadata |>
   dplyr::filter(
       ethnicity == "African" &
@@ -140,25 +99,13 @@ metadata |>
       tissue == "lung parenchyma" &
       stringr::str_like(cell_type, "%CD4%")
   ) |>
-  get_SingleCellExperiment()
+  get_SingleCellExperiment(cache_directory = cache_dir)
 
-#> class: SingleCellExperiment 
-#> dim: 35615 1571 
-#> metadata(0):
-#> assays(2): counts cpm
-#> rownames(35615): TSPAN6 TNMD ... LNCDAT HRURF
-#> rowData names(0):
-#> colnames(1571): ACAGCCGGTCCGTTAA_F02526_1 GGGAATGAGCCCAGCT_F02526_1 ...
-#>   TACAACGTCAGCATTG_SC84_1 CATTCGCTCAATACCG_F02526_1
-#> colData names(56): sample_ cell_type ... updated_at_y originalcell__id
-#> reducedDimNames(0):
-#> mainExpName: NULL
-#> altExpNames(0):
 ```
 
 **Step 4**: With [CuratedAtlasQueryR](https://github.com/stemangiola/CuratedAtlasQueryR) and [tidySingleCellExperiment](https://stemangiola.github.io/tidySingleCellExperiment/articles/introduction.html), checking the transcription abundance of your favourite gene and cell type across diseases, tissues and hundreds of datasets is just a few lines of code! 🎉
 
-```{r, echo=TRUE}
+```{r, eval=FALSE}
 library(tidySingleCellExperiment)
 library(ggplot2)
 
@@ -168,7 +115,7 @@ metadata |>
   filter(cell_type_harmonised=="cd14 mono") |>
 
   # Get counts per million for NCAM1 gene
-  get_SingleCellExperiment(assays = "cpm", features = "HLA-A") |> 
+  get_SingleCellExperiment(assays = "cpm", features = "HLA-A", cache_directory = cache_dir) |> 
   
   # Plot (styling code is omitted)
   join_features("HLA-A", shape = "wide") |> 
@@ -178,7 +125,7 @@ metadata |>
 
 ![](hlaplot1.png){fig-alt="A jitter plot of HLA-A expression in CD14 monocytes from different diseases."}
 
-```{r, echo=TRUE}
+```{r, eval=FALSE}
 
 metadata |> 
     
@@ -186,7 +133,7 @@ metadata |>
   filter(cell_type_harmonised=="nk") |> 
 
   # Get counts per million for NCAM1 gene 
-  get_SingleCellExperiment(assays = "cpm", features = "NCAM1") |> 
+  get_SingleCellExperiment(assays = "cpm", features = "NCAM1", cache_directory = cache_dir) |> 
 
 	# Plot (styling code is omitted)
   join_features("NCAM1", shape = "wide") |> 
