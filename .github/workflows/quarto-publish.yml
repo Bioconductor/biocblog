@@ -31,9 +31,9 @@ jobs:
         
       - name: Query dependencies and update old packages
         run: |
-          BiocManager::install(c("jsonlite", "htmltools", "rmarkdown", "RefManageR"))
-          BiocManager::install("stemangiola/CuratedAtlasQueryR")
-          saveRDS(remotes::dev_package_deps(dependencies = TRUE), ".github/depends.Rds", version = 2)
+          packages <- c("jsonlite", "htmltools", "rmarkdown", "RefManageR", "stemangiola/CuratedAtlasQueryR")
+          BiocManager::install(packages)
+          saveRDS(remotes::package_deps(packages = packages, dependencies = TRUE), ".github/depends.Rds", version = 2)
         shell: Rscript {0}
         
       - name: Cache R packages
