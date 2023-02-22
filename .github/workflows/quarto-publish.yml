@@ -17,6 +17,8 @@ jobs:
   build-deploy:
     runs-on: ubuntu-latest
     container: bioconductor/bioconductor_docker:RELEASE_3_16
+    permissions:
+      contents: write
 
     steps:
       - name: Check out repository
