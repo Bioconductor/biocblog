@@ -3,6 +3,9 @@ project:
   resources:
     - "images/twitter-card.png"
 
+execute:
+  freeze: auto
+
 website:
   title: "Bioconductor community blog"
   site-url: https://bioconductor.github.io/biocblog/
@@ -30,3 +33,6 @@ format:
   html:
     theme: yeti
     css: styles.css
+    include-in-header:
+      text: |
+        <script defer data-domain="bioconductor.github.io/biocblog" src="https://plausible.io/js/script.js"></script>
