@@ -1,51 +1,55 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://bioconductor.github.io/biocblog/contributing.html</loc>
-    <lastmod>2023-02-03T22:59:39.341Z</lastmod>
-  </url>
-  <url>
-    <loc>https://bioconductor.github.io/biocblog/index.html</loc>
-    <lastmod>2023-02-03T22:59:40.273Z</lastmod>
-  </url>
-  <url>
-    <loc>https://bioconductor.github.io/biocblog/posts/2022-07-12-carpentries-membership/index.html</loc>
-    <lastmod>2023-02-03T22:59:40.613Z</lastmod>
-  </url>
-  <url>
-    <loc>https://bioconductor.github.io/biocblog/posts/2023-01-20-hacktoberfest/index.html</loc>
-    <lastmod>2023-02-03T22:59:41.277Z</lastmod>
-  </url>
-  <url>
-    <loc>https://bioconductor.github.io/biocblog/posts/2022-10-22-awesome-lists/index.html</loc>
-    <lastmod>2023-02-03T22:59:42.061Z</lastmod>
-  </url>
-  <url>
     <loc>https://bioconductor.github.io/biocblog/posts/2022-01-31-join-the-bioconductor-community-advisory-board/index.html</loc>
-    <lastmod>2023-02-03T22:59:42.369Z</lastmod>
-  </url>
-  <url>
-    <loc>https://bioconductor.github.io/biocblog/posts/2022-01-18-metaRbolomics-2021/index.html</loc>
-    <lastmod>2023-02-03T22:59:42.977Z</lastmod>
+    <lastmod>2023-02-23T10:18:45.522Z</lastmod>
   </url>
   <url>
     <loc>https://bioconductor.github.io/biocblog/posts/2022-01-14-20years/index.html</loc>
-    <lastmod>2023-02-03T22:59:44.661Z</lastmod>
+    <lastmod>2023-02-23T10:18:46.214Z</lastmod>
   </url>
   <url>
-    <loc>https://bioconductor.github.io/biocblog/posts/2021-11-11-biocasia2021/index.html</loc>
-    <lastmod>2023-02-03T22:59:44.977Z</lastmod>
-  </url>
-  <url>
-    <loc>https://bioconductor.github.io/biocblog/posts/2023-01-22-OutreachyInternship/index.html</loc>
-    <lastmod>2023-02-03T22:59:45.437Z</lastmod>
+    <loc>https://bioconductor.github.io/biocblog/posts/2022-10-22-awesome-lists/index.html</loc>
+    <lastmod>2023-02-23T10:18:46.718Z</lastmod>
   </url>
   <url>
     <loc>https://bioconductor.github.io/biocblog/posts/2022-01-12-biocasia2021-ja/index.html</loc>
-    <lastmod>2023-02-03T22:59:45.745Z</lastmod>
+    <lastmod>2023-02-23T10:18:47.010Z</lastmod>
+  </url>
+  <url>
+    <loc>https://bioconductor.github.io/biocblog/posts/2022-07-12-carpentries-membership/index.html</loc>
+    <lastmod>2023-02-23T10:18:47.322Z</lastmod>
+  </url>
+  <url>
+    <loc>https://bioconductor.github.io/biocblog/posts/2023-02-23-CuratedAtlasQueryR/index.html</loc>
+    <lastmod>2023-02-23T10:18:47.882Z</lastmod>
+  </url>
+  <url>
+    <loc>https://bioconductor.github.io/biocblog/posts/2023-01-22-OutreachyInternship/index.html</loc>
+    <lastmod>2023-02-23T10:18:48.326Z</lastmod>
+  </url>
+  <url>
+    <loc>https://bioconductor.github.io/biocblog/posts/2022-01-18-metaRbolomics-2021/index.html</loc>
+    <lastmod>2023-02-23T10:18:48.622Z</lastmod>
+  </url>
+  <url>
+    <loc>https://bioconductor.github.io/biocblog/posts/2021-11-11-biocasia2021/index.html</loc>
+    <lastmod>2023-02-23T10:18:48.934Z</lastmod>
+  </url>
+  <url>
+    <loc>https://bioconductor.github.io/biocblog/posts/2023-01-20-hacktoberfest/index.html</loc>
+    <lastmod>2023-02-23T10:18:49.838Z</lastmod>
   </url>
   <url>
     <loc>https://bioconductor.github.io/biocblog/about.html</loc>
-    <lastmod>2023-02-03T22:59:46.029Z</lastmod>
+    <lastmod>2023-02-23T10:18:50.462Z</lastmod>
+  </url>
+  <url>
+    <loc>https://bioconductor.github.io/biocblog/contributing.html</loc>
+    <lastmod>2023-02-23T10:18:50.754Z</lastmod>
+  </url>
+  <url>
+    <loc>https://bioconductor.github.io/biocblog/index.html</loc>
+    <lastmod>2023-02-23T10:18:51.242Z</lastmod>
   </url>
 </urlset>
