@@ -5,7 +5,7 @@ description: |
 author:
   - name: Maria Doyle
   - name: Stefano Mangiola
-date: 2023-02-21
+date: 2023-02-23
 categories:
   - Package
 image: "overview.png"
@@ -68,7 +68,7 @@ We use [DuckDB](https://duckdb.org/) in the package due to it's speed, and low d
 ```{r}
 library(CuratedAtlasQueryR)
 
-cache_dir = "~/tmp"
+cache_dir = "~/tmp" # set the cache directory if you don't want to use default
 
 metadata <- get_metadata(cache_directory = cache_dir)
 
