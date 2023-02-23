@@ -9,6 +9,8 @@ date: 2023-02-23
 categories:
   - Package
 image: "overview.png"
+twitter-card:
+  image: "overview.png"
 execute:
   message: false
   freeze: auto
@@ -16,7 +18,7 @@ execute:
 
 *This blog post was co-written by the Bioconductor Community Manager, Maria Doyle, and the lead developer of CuratedAtlasQueryR, Stefano Mangiola.*
 
-We are excited to announce the launch of the [CuratedAtlasQueryR](https://github.com/stemangiola/CuratedAtlasQueryR) package! Millions of cells are now at your fingertips as the harmonized and reannotated CELLxGENE single-cell human atlas can be explored and retrieved in Bioconductor SingleCellExperiment format.
+We are excited to announce the launch of the [CuratedAtlasQueryR](https://stemangiola.github.io/CuratedAtlasQueryR/) package! Millions of cells are now at your fingertips as the harmonized and reannotated CELLxGENE single-cell human atlas can be explored and retrieved in Bioconductor [SingleCellExperiment](https://bioconductor.org/packages/release/bioc/vignettes/SingleCellExperiment/inst/doc/intro.html) data structure.
 
 ![](overview.png){fig-alt="A diagram showing the tools underlying the CuratedAtlasQueryR package and the workflow."}
 
@@ -30,21 +32,21 @@ To allow exploration and analyses across datasets, tissues and diseases through 
 
 We use the existing Bioconductor package, [cellxgenedp](https://bioconductor.org/packages/release/bioc/html/cellxgenedp.html) as the download source for datasets included in [CELLxGENE](https://cellxgene.cziscience.com/). 
 
-We then harmonised, curated and reannotated the data (immune cell labels):
+We then harmonised, curated and reannotated the data (immune cell labels).
 
 - The column classes so they can be represented as a unique table.
 - We subset the columns that were most common across the atlas (the complete columns for a specific dataset can be retrieved through the [cellxgenedp](https://bioconductor.org/packages/release/bioc/html/cellxgenedp.html) package).
 - We consolidated sample identifiers.
-- We harmonised tissue labels
-- We harmonised cell-type labels under a common ontology
-- We provide a consensus-based immune cell label, and a confidence label. Consensus was established among the original annotation and three independent references ([Monaco](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE107011), [BLUEPRINT](https://rdrr.io/github/LTLA/celldex/man/BlueprintEncodeData.html), and [Azimuth PBMC](https://azimuth.hubmapconsortium.org/references/human_pbmc/))
+- We harmonised tissue labels.
+- We harmonised cell-type labels under a common ontology.
+- We provide a consensus-based immune cell label, and a confidence label. Consensus was established among the original annotation and three independent references ([Monaco](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE107011), [BLUEPRINT](https://rdrr.io/github/LTLA/celldex/man/BlueprintEncodeData.html), and [Azimuth PBMC](https://azimuth.hubmapconsortium.org/references/human_pbmc/)).
 
-We introduced custom columns, not present in the original CELLxGENE metadata:
+We introduced custom columns, not present in the original CELLxGENE metadata.
 
 - `tissue_harmonised`: a coarser tissue name for better filtering
 - `age_days`: the number of days corresponding to the age
 - `cell_type_harmonised`: the consensus call identity (for immune cells) using the original and three novel annotations using Seurat Azimuth and SingleR
-- `confidence_class`: an ordinal class of how confident `cell_type_harmonised` is. 1 is complete consensus, 2 is 3 out of four and so on.
+- `confidence_class`: an ordinal class of how confident `cell_type_harmonised` is. 1 is complete consensus, 2 is three out of four and so on.
 - `cell_annotation_azimuth_l2`: Azimuth cell annotation
 - `cell_annotation_blueprint_singler`: SingleR cell annotation using Blueprint reference
 - `cell_annotation_blueprint_monaco`: SingleR cell annotation using Monaco reference
@@ -68,7 +70,7 @@ We use [DuckDB](https://duckdb.org/) in the package due to it's speed, and low d
 ```{r}
 library(CuratedAtlasQueryR)
 
-cache_dir = "~/tmp" # set the cache directory if you don't want to use default
+cache_dir = "~/tmp" # specify the cache directory if you don't want to use default
 
 metadata <- get_metadata(cache_directory = cache_dir)
 
