@@ -11,6 +11,7 @@ categories:
 image: "overview.png"
 execute:
   message: false
+  freeze: auto
 ---
 
 *This blog post was co-written by the Bioconductor Community Manager, Maria Doyle, and the lead developer of CuratedAtlasQueryR, Stefano Mangiola.*
@@ -90,7 +91,7 @@ metadata |>
 
 **Step 3**: Collect the [SingleCellExperiment](https://bioconductor.org/packages/release/bioc/html/SingleCellExperiment.html) for the cells of interest. Our object uses [HDF5 format](https://en.wikipedia.org/wiki/Hierarchical_Data_Format) to keep the R session light, making it easier to work with larger datasets. 💻
 
-```{r}
+```{r, message=FALSE}
 metadata |>
   dplyr::filter(
       ethnicity == "African" &
@@ -104,7 +105,7 @@ metadata |>
 
 **Step 4**: With [CuratedAtlasQueryR](https://github.com/stemangiola/CuratedAtlasQueryR) and [tidySingleCellExperiment](https://stemangiola.github.io/tidySingleCellExperiment/articles/introduction.html), checking the transcription abundance of your favourite gene and cell type across diseases, tissues and hundreds of datasets is just a few lines of code! 🎉
 
-```{r}
+```{r, eval=FALSE}
 library(tidySingleCellExperiment)
 library(ggplot2)
 
@@ -124,7 +125,7 @@ metadata |>
 
 ![](hlaplot1.png){fig-alt="A jitter plot of HLA-A expression in CD14 monocytes from different diseases."}
 
-```{r}
+```{r, eval=FALSE}
 
 metadata |> 
     
@@ -145,6 +146,6 @@ metadata |>
 
 ## Acknowledgements
 
-Thanks and congratulations to Michael Milton [@multimeric](https://github.com/multimeric) (main developer), [Martin Morgan](https://www.roswellpark.org/martin-morgan), [Tony Papenfuss](https://www.wehi.edu.au/people/tony-papenfuss), [Vince Carey](https://vjcitn.github.io/), [Bioconductor](https://www.bioconductor.org/), [Julie Iskander](https://github.com/jIskCoder), and Stefano Mangiola [@steman_research](https://twitter.com/steman_research) [GitHub page](https://github.com/stemangiola) (lead), [WEHI](https://www.wehi.edu.au/).
+Thanks and congratulations to [Michael Milton](https://github.com/multimeric) [@multimeric](https://twitter.com/multimeric) (main developer), [Martin Morgan](https://www.roswellpark.org/martin-morgan), [Tony Papenfuss](https://www.wehi.edu.au/people/tony-papenfuss), [Vince Carey](https://vjcitn.github.io/), [Julie Iskander](https://github.com/jIskCoder), and [Stefano Mangiola](https://github.com/stemangiola) [@steman_research](https://twitter.com/steman_research) (lead), [Bioconductor](https://www.bioconductor.org/), [WEHI](https://www.wehi.edu.au/).
 
-Thanks to funders Silicon Valley Foundation (CZF2019-002443), NIH NHGRI (5U24HG004059-18), Victoria Cancer Agency (ECRF21036), NHMRC (1116955).
+Thanks to funders CZI Silicon Valley Foundation (CZF2019-002443), NIH NHGRI (5U24HG004059-18), Victoria Cancer Agency (ECRF21036), NHMRC (1116955).
