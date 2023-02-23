@@ -18,7 +18,7 @@ execute:
 
 *This blog post was co-written by the Bioconductor Community Manager, Maria Doyle, and the lead developer of CuratedAtlasQueryR, Stefano Mangiola.*
 
-We are excited to announce the launch of the [CuratedAtlasQueryR](https://stemangiola.github.io/CuratedAtlasQueryR/) package! Millions of cells are now at your fingertips as the harmonized and reannotated CELLxGENE single-cell human atlas can be explored and retrieved in Bioconductor [SingleCellExperiment](https://bioconductor.org/packages/release/bioc/vignettes/SingleCellExperiment/inst/doc/intro.html) data structure.
+We are excited to announce the launch of the [CuratedAtlasQueryR](https://stemangiola.github.io/CuratedAtlasQueryR/) package! Millions of cells are now at your fingertips as the harmonized and reannotated CELLxGENE single-cell human atlas can be explored and retrieved in Bioconductor [SingleCellExperiment](https://bioconductor.org/packages/SingleCellExperiment) data structure.
 
 ![](overview.png){fig-alt="A diagram showing the tools underlying the CuratedAtlasQueryR package and the workflow."}
 
@@ -30,12 +30,12 @@ To allow exploration and analyses across datasets, tissues and diseases through 
 
 ## How it differs from existing packages
 
-We use the existing Bioconductor package, [cellxgenedp](https://bioconductor.org/packages/release/bioc/html/cellxgenedp.html) as the download source for datasets included in [CELLxGENE](https://cellxgene.cziscience.com/). 
+We use the existing Bioconductor package, [cellxgenedp](https://bioconductor.org/packages/cellxgenedp) as the download source for datasets included in [CELLxGENE](https://cellxgene.cziscience.com/). 
 
 We then harmonised, curated and reannotated the data (immune cell labels).
 
 - The column classes so they can be represented as a unique table.
-- We subset the columns that were most common across the atlas (the complete columns for a specific dataset can be retrieved through the [cellxgenedp](https://bioconductor.org/packages/release/bioc/html/cellxgenedp.html) package).
+- We subset the columns that were most common across the atlas (the complete columns for a specific dataset can be retrieved through the [cellxgenedp](https://bioconductor.org/packages/cellxgenedp) package).
 - We consolidated sample identifiers.
 - We harmonised tissue labels.
 - We harmonised cell-type labels under a common ontology.
@@ -56,9 +56,9 @@ We introduced custom columns, not present in the original CELLxGENE metadata.
 - `.sample_name`: How samples were defined
 
 
-Differently from [cellxgenedp](https://bioconductor.org/packages/release/bioc/html/cellxgenedp.html), we can query specific cells across datasets based on annotation, the metadata exploration and data download is done on-disk without loading into memory. 
+Differently from [cellxgenedp](https://bioconductor.org/packages/cellxgenedp), we can query specific cells across datasets based on annotation, the metadata exploration and data download is done on-disk without loading into memory. 
 
-The harmonized and reannotated [CELLxGENE](https://cellxgene.cziscience.com/) single cell human atlas can be explored and retrieved in Bioconductor [SingleCellExperiment](https://bioconductor.org/packages/release/bioc/html/SingleCellExperiment.html) format.
+The harmonized and reannotated [CELLxGENE](https://cellxgene.cziscience.com/) single cell human atlas can be explored and retrieved in Bioconductor [SingleCellExperiment](https://bioconductor.org/packages/SingleCellExperiment) format.
 
 We use [DuckDB](https://duckdb.org/) in the package due to it's speed, and low disk imprint in handling large amounts of data.
 
@@ -91,7 +91,7 @@ metadata |>
 
 ```
 
-**Step 3**: Collect the [SingleCellExperiment](https://bioconductor.org/packages/release/bioc/html/SingleCellExperiment.html) for the cells of interest. Our object uses [HDF5 format](https://en.wikipedia.org/wiki/Hierarchical_Data_Format) to keep the R session light, making it easier to work with larger datasets. 💻
+**Step 3**: Collect the [SingleCellExperiment](https://bioconductor.org/packages/SingleCellExperiment) for the cells of interest. Our object uses [HDF5 format](https://en.wikipedia.org/wiki/Hierarchical_Data_Format) to keep the R session light, making it easier to work with larger datasets. 💻
 
 ```{r, message=FALSE}
 metadata |>
