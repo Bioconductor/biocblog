@@ -4,7 +4,7 @@ project:
     - "images/twitter-card.png"
 
 execute:
-  freeze: auto
+  freeze: true
 
 website:
   title: "Bioconductor community blog"
