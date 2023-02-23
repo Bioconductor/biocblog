@@ -248,7 +248,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
 
 <p><em>This blog post was co-written by the Bioconductor Community Manager, Maria Doyle, and the lead developer of CuratedAtlasQueryR, Stefano Mangiola.</em></p>
-<p>We are excited to announce the launch of the <a href="https://stemangiola.github.io/CuratedAtlasQueryR/">CuratedAtlasQueryR</a> package! Millions of cells are now at your fingertips as the harmonized and reannotated CELLxGENE single-cell human atlas can be explored and retrieved in Bioconductor <a href="https://bioconductor.org/packages/release/bioc/vignettes/SingleCellExperiment/inst/doc/intro.html">SingleCellExperiment</a> data structure.</p>
+<p>We are excited to announce the launch of the <a href="https://stemangiola.github.io/CuratedAtlasQueryR/">CuratedAtlasQueryR</a> package! Millions of cells are now at your fingertips as the harmonized and reannotated CELLxGENE single-cell human atlas can be explored and retrieved in Bioconductor <a href="https://bioconductor.org/packages/SingleCellExperiment">SingleCellExperiment</a> data structure.</p>
 <p><img src="overview.png" class="img-fluid" alt="A diagram showing the tools underlying the CuratedAtlasQueryR package and the workflow."></p>
 <section id="why-this-package-was-created" class="level2">
 <h2 class="anchored" data-anchor-id="why-this-package-was-created">Why this package was created</h2>
@@ -257,11 +257,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </section>
 <section id="how-it-differs-from-existing-packages" class="level2">
 <h2 class="anchored" data-anchor-id="how-it-differs-from-existing-packages">How it differs from existing packages</h2>
-<p>We use the existing Bioconductor package, <a href="https://bioconductor.org/packages/release/bioc/html/cellxgenedp.html">cellxgenedp</a> as the download source for datasets included in <a href="https://cellxgene.cziscience.com/">CELLxGENE</a>.</p>
+<p>We use the existing Bioconductor package, <a href="https://bioconductor.org/packages/cellxgenedp">cellxgenedp</a> as the download source for datasets included in <a href="https://cellxgene.cziscience.com/">CELLxGENE</a>.</p>
 <p>We then harmonised, curated and reannotated the data (immune cell labels).</p>
 <ul>
 <li>The column classes so they can be represented as a unique table.</li>
-<li>We subset the columns that were most common across the atlas (the complete columns for a specific dataset can be retrieved through the <a href="https://bioconductor.org/packages/release/bioc/html/cellxgenedp.html">cellxgenedp</a> package).</li>
+<li>We subset the columns that were most common across the atlas (the complete columns for a specific dataset can be retrieved through the <a href="https://bioconductor.org/packages/cellxgenedp">cellxgenedp</a> package).</li>
 <li>We consolidated sample identifiers.</li>
 <li>We harmonised tissue labels.</li>
 <li>We harmonised cell-type labels under a common ontology.</li>
@@ -281,8 +281,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li><code>.sample</code>: Sample ID</li>
 <li><code>.sample_name</code>: How samples were defined</li>
 </ul>
-<p>Differently from <a href="https://bioconductor.org/packages/release/bioc/html/cellxgenedp.html">cellxgenedp</a>, we can query specific cells across datasets based on annotation, the metadata exploration and data download is done on-disk without loading into memory.</p>
-<p>The harmonized and reannotated <a href="https://cellxgene.cziscience.com/">CELLxGENE</a> single cell human atlas can be explored and retrieved in Bioconductor <a href="https://bioconductor.org/packages/release/bioc/html/SingleCellExperiment.html">SingleCellExperiment</a> format.</p>
+<p>Differently from <a href="https://bioconductor.org/packages/cellxgenedp">cellxgenedp</a>, we can query specific cells across datasets based on annotation, the metadata exploration and data download is done on-disk without loading into memory.</p>
+<p>The harmonized and reannotated <a href="https://cellxgene.cziscience.com/">CELLxGENE</a> single cell human atlas can be explored and retrieved in Bioconductor <a href="https://bioconductor.org/packages/SingleCellExperiment">SingleCellExperiment</a> format.</p>
 <p>We use <a href="https://duckdb.org/">DuckDB</a> in the package due to it’s speed, and low disk imprint in handling large amounts of data.</p>
 </section>
 <section id="how-you-can-use-it" class="level2">
@@ -353,7 +353,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 #   is_primary_data_x &lt;chr&gt;, organism &lt;chr&gt;, organism_ontology_term_id &lt;chr&gt;, …</code></pre>
 </div>
 </div>
-<p><strong>Step 3</strong>: Collect the <a href="https://bioconductor.org/packages/release/bioc/html/SingleCellExperiment.html">SingleCellExperiment</a> for the cells of interest. Our object uses <a href="https://en.wikipedia.org/wiki/Hierarchical_Data_Format">HDF5 format</a> to keep the R session light, making it easier to work with larger datasets. 💻</p>
+<p><strong>Step 3</strong>: Collect the <a href="https://bioconductor.org/packages/SingleCellExperiment">SingleCellExperiment</a> for the cells of interest. Our object uses <a href="https://en.wikipedia.org/wiki/Hierarchical_Data_Format">HDF5 format</a> to keep the R session light, making it easier to work with larger datasets. 💻</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>metadata <span class="sc">|&gt;</span></span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">filter</span>(</span>
