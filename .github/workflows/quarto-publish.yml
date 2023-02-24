@@ -1,9 +1,9 @@
 on:
   push:
     branches: 
-    - main
-    - CuratedAtlasQueryR # allow while sharing preview
-   
+      - main
+      - carpentries-update-feb2023 # allow while sharing preview
+
 name: Render and Publish
 
 jobs:
@@ -23,7 +23,7 @@ jobs:
         with:
           use-public-rspm: true
       - name: Install R dependencies
-        run: Rscript -e 'install.packages(c("jsonlite", "htmltools", "rmarkdown", "RefManageR"))'
+        run: Rscript -e 'install.packages(c("jsonlite", "htmltools", "rmarkdown", "RefManageR", "dplyr"))'
 
       - name: Publish to GitHub Pages (and render)
         uses: quarto-dev/quarto-actions/publish@v2

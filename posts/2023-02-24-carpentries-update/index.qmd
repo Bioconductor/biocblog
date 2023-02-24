@@ -1,0 +1,110 @@
+---
+title: "Bioconductor Carpentries instructors Year 1"
+description: |
+  An update on the Bioconductor Carpentries global training program - applicants selected for Year 1
+author:
+  - name: Maria Doyle
+    url: https://github.com/mblue9
+date: 2023-02-24
+creative_commons: CC BY
+categories:
+  - education
+image: "map.png"
+execute:
+  echo: false
+---
+
+
+```{r}
+#| message: false
+library(dplyr)
+```
+
+
+```{r}
+#| echo: false
+instructors <- tibble::tribble(
+                                  ~Name,                                                   ~Affiliation,    ~Location,        ~lon,        ~lat,
+               "Fabricio Almeida-Silva",                   "VIB-UGent Center for Plant Systems Biology",      "Ghent",   3.7303351,  51.0500182,
+                  "Anand Ruban Agarvas",                               "University Hospital Heidelberg", "Heidelberg",   8.6724335,  49.3987524,
+                         "Oliver Crook",                                          "University of Oxford",     "Oxford",  -1.2577263,  51.7520209,
+                          "Almut Lütge", "University of Zürich, Departement of Molecular Life Sciences",     "Zurich",    8.541694,  47.3768866,
+                            "Leo Lahti",                                          "University of Turku",      "Turku",  22.2666303,  60.4518126,
+                            "Sehyun Oh",                                  "City University of New York",   "New York", -74.0059728,  40.7127753,
+                           "Umar Ahmad",                                      "Bauchi State University",      "Gadau",  10.1661239,  11.8328495,
+                        "Chia Sin Liew",                               "University of Nebraska-Lincoln",   "Nebraska", -99.9018131,  41.4925374,
+                  "Charlotte Hutchings",                                      "University of Cambridge",  "Cambridge",   0.1312729,  52.1950788,
+                   "Mercilena Benjamin",                       "All India Institute of Medical Science",  "New Delhi",  77.2090212,  28.6139391,
+                           "David Shih",                                      "University of Hong Kong",  "Hong Kong", 114.1693611,  22.3193039,
+  "Rodrigo Arcoverde Cerveira da Silva",                                        "Karolinska Institute",  "Stockholm",  18.0685808,  59.3293235,
+             "Javier Carpinteyro Ponce",                                       "University of Maryland",   "Maryland", -76.6412712,  39.0457549,
+                           "Zuguang Gu",                                "German Cancer Research Center", "Heidelberg",   8.6724335,  49.3987524,
+                        "Givanna Putri",          "Walter and Eliza Hall Institute of Medical Research",  "Melbourne", 144.9630576, -37.8136276,
+                     "Zedias Chikwambi",                            "Chinhoyi University of Technology",   "Chinhoyi",  30.1987245, -17.3622214,
+                  "Pageneck Chikondowa",       "African institute of Biomedical Science and Technology",     "Harare",  31.0492259, -17.8216288,
+                          "Marie Hidjo",       "African Institute of Biomedical Science and Technology",     "Harare",  31.0492259, -17.8216288
+  )
+```
+
+
+```{r}
+#| eval: false
+
+# how got the lon and lat coordinates above
+locations <- c("Ghent", "Heidelberg", "Oxford", "Zurich", "Turku", "New York", 
+"Gadau", "Nebraska", "Cambridge, UK", "New Delhi", "Hong Kong", "Stockholm", 
+"Maryland", "Heidelberg", "Melbourne", "Chinhoyi", "Harare", "Harare") %>%
+    geocode()
+```
+
+
+We are excited to welcome the Year 1 intake of instructor trainees for our [Bioconductor Carpentries global training program](https://bioconductor.github.io/biocblog/posts/2022-07-12-carpentries-membership/)! 🎉
+
+Eighteen applicants have been selected for Year 1, they are shown below, in the interactive map and listed alphabetically in the table.
+
+## Selection of applicants
+
+We have been thrilled to receive many excellent applicants. We initially had mainly applicants from Europe, however, because we aim to provide a global distribution of instructors to support the global community, we've been working to increase applicants from other areas such as Africa, Asia and Latin America. Other aspects we have been taking into account for selection are, previous R/Bioconductor experience, organising experience, languages they can teach in, and how they intend to contribute to Bioconductor teaching. For Year 2, we aim to select some applicants in Latin America, as we currently have none there, aswell as applicants from other areas. We will be selecting for Year 2 in July and you can still [apply in this form](https://forms.gle/SGaVkDZqCNKNSnHKA) if you're interested.
+
+## Training of selected applicants
+
+The Year 1 applicants are onboarding now and are at different stages of the process. The first step is attendance at an online [Carpentries instructor training workshop](https://carpentries.github.io/instructor-training/training_calendar/index.html), followed by completing [3 checkout tasks](https://carpentries.github.io/instructor-training/checkout/index.html) (teaching demo, discussion, lesson contribution) within 3 months after the workshop. So far 3/18 trainees have completed the Carpentries certification - Fabricio Almeida-Silva, Leo Lahti and Charlotte Hutchings 👏👏👏. Once certified, the instructors will teach/co-teach one of the [Bioconductor Carpentries Modules](https://www.bioconductor.org/help/education-training/) within one year of certification. We connect with the trainees at the [monthly teaching meetings](https://docs.google.com/document/d/1s2QMk5XA-uhBVprAO3ZDk1Yfv1cnUWLp9zdvYq9Feu4/) and in the [Bioconductor Slack group](https://slack.bioconductor.org/). We are looking forward to working with all of the new instructors and supporting them to provide Bioconductor training to the global Bioconductor community.
+
+We are grateful to the [Chan Zuckerberg Initiative's EOSS program](https://chanzuckerberg.com/eoss/proposals/bioconductor-high-quality-training-and-support-for-a-worldwide-community/) for funding this initiative.
+
+
+```{r}
+#| eval: false
+#| warning: false
+
+library(ggplot2)
+library(ggmap)
+library(plotly)
+
+# Generate plot locally as html, to avoid needing to install multiple packages in biocblog site, then embed as iframe
+
+world <- map_data("world")
+
+gg <- ggplot() +
+  geom_polygon(data = world, aes(x = long, y = lat, group = group), fill = "grey") +
+  geom_jitter(data = instructors, aes(x = lon, y = lat, text = paste(Name, Affiliation, sep = "\n")), color = 'red') +
+  theme_void()
+
+ggplotly(gg, tooltip = "text")
+
+# save interactive plot
+pgg <- ggplotly(gg, tooltip = "text")
+htmlwidgets::saveWidget(pgg, file = "map.html")
+```
+
+#### Year 1 Bioconductor Carpentries instructor trainees
+
+<iframe src="map.html" width="100%" height="500"></iframe>
+
+```{r}
+instructors %>% 
+  select(Name, Affiliation, Location) %>% 
+  arrange(Name) %>% 
+  knitr::kable()
+```
+

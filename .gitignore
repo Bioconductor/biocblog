@@ -2,4 +2,6 @@
 /_site/
 .Rproj.user
 .Rprofile
+.Rhistory
 renv
+.DS_Store
