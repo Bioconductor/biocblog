@@ -2,6 +2,7 @@
   {
     "listing": "/index.html",
     "items": [
+      "/posts/2023-02-24-carpentries-update/index.html",
       "/posts/2023-02-23-CuratedAtlasQueryR/index.html",
       "/posts/2023-01-22-OutreachyInternship/index.html",
       "/posts/2023-01-20-hacktoberfest/index.html",

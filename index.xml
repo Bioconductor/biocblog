@@ -10,7 +10,163 @@
 <atom:link href="https://bioconductor.github.io/biocblog/index.xml" rel="self" type="application/rss+xml"/>
 <description>A blog for the Bioconductor community!</description>
 <generator>quarto-1.2.335</generator>
-<lastBuildDate>Thu, 23 Feb 2023 00:00:00 GMT</lastBuildDate>
+<lastBuildDate>Fri, 24 Feb 2023 00:00:00 GMT</lastBuildDate>
+<item>
+  <title>Bioconductor Carpentries instructors Year 1</title>
+  <dc:creator>Maria Doyle</dc:creator>
+  <link>https://bioconductor.github.io/biocblog/posts/2023-02-24-carpentries-update/index.html</link>
+  <description><![CDATA[ 
+
+
+
+
+<div class="cell">
+
+</div>
+<div class="cell">
+
+</div>
+<div class="cell">
+
+</div>
+<p>We are excited to welcome the Year 1 intake of instructor trainees for our <a href="https://bioconductor.github.io/biocblog/posts/2022-07-12-carpentries-membership/">Bioconductor Carpentries global training program</a>! 🎉</p>
+<p>Eighteen applicants have been selected for Year 1, they are shown below, in the interactive map and listed alphabetically in the table.</p>
+<section id="selection-of-applicants" class="level2">
+<h2 class="anchored" data-anchor-id="selection-of-applicants">Selection of applicants</h2>
+<p>We have been thrilled to receive many excellent applicants. We initially had mainly applicants from Europe, however, because we aim to provide a global distribution of instructors to support the global community, we’ve been working to increase applicants from other areas such as Africa, Asia and Latin America. Other aspects we have been taking into account for selection are, previous R/Bioconductor experience, organising experience, languages they can teach in, and how they intend to contribute to Bioconductor teaching. For Year 2, we aim to select some applicants in Latin America, as we currently have none there, aswell as applicants from other areas. We will be selecting for Year 2 in July and you can still <a href="https://forms.gle/SGaVkDZqCNKNSnHKA">apply in this form</a> if you’re interested.</p>
+</section>
+<section id="training-of-selected-applicants" class="level2">
+<h2 class="anchored" data-anchor-id="training-of-selected-applicants">Training of selected applicants</h2>
+<p>The Year 1 applicants are onboarding now and are at different stages of the process. The first step is attendance at an online <a href="https://carpentries.github.io/instructor-training/training_calendar/index.html">Carpentries instructor training workshop</a>, followed by completing <a href="https://carpentries.github.io/instructor-training/checkout/index.html">3 checkout tasks</a> (teaching demo, discussion, lesson contribution) within 3 months after the workshop. So far 3/18 trainees have completed the Carpentries certification - Fabricio Almeida-Silva, Leo Lahti and Charlotte Hutchings 👏👏👏. Once certified, the instructors will teach/co-teach one of the <a href="https://www.bioconductor.org/help/education-training/">Bioconductor Carpentries Modules</a> within one year of certification. We connect with the trainees at the <a href="https://docs.google.com/document/d/1s2QMk5XA-uhBVprAO3ZDk1Yfv1cnUWLp9zdvYq9Feu4/">monthly teaching meetings</a> and in the <a href="https://slack.bioconductor.org/">Bioconductor Slack group</a>. We are looking forward to working with all of the new instructors and supporting them to provide Bioconductor training to the global Bioconductor community.</p>
+<p>We are grateful to the <a href="https://chanzuckerberg.com/eoss/proposals/bioconductor-high-quality-training-and-support-for-a-worldwide-community/">Chan Zuckerberg Initiative’s EOSS program</a> for funding this initiative.</p>
+<div class="cell">
+
+</div>
+<section id="year-1-bioconductor-carpentries-instructor-trainees" class="level4">
+<h4 class="anchored" data-anchor-id="year-1-bioconductor-carpentries-instructor-trainees">Year 1 Bioconductor Carpentries instructor trainees</h4>
+<iframe src="map.html" width="100%" height="500">
+</iframe>
+<div class="cell">
+<div class="cell-output-display">
+<table class="table table-sm table-striped">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 56%">
+<col style="width: 10%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Name</th>
+<th style="text-align: left;">Affiliation</th>
+<th style="text-align: left;">Location</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Almut Lütge</td>
+<td style="text-align: left;">University of Zürich, Departement of Molecular Life Sciences</td>
+<td style="text-align: left;">Zurich</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Anand Ruban Agarvas</td>
+<td style="text-align: left;">University Hospital Heidelberg</td>
+<td style="text-align: left;">Heidelberg</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Charlotte Hutchings</td>
+<td style="text-align: left;">University of Cambridge</td>
+<td style="text-align: left;">Cambridge</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Chia Sin Liew</td>
+<td style="text-align: left;">University of Nebraska-Lincoln</td>
+<td style="text-align: left;">Nebraska</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">David Shih</td>
+<td style="text-align: left;">University of Hong Kong</td>
+<td style="text-align: left;">Hong Kong</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Fabricio Almeida-Silva</td>
+<td style="text-align: left;">VIB-UGent Center for Plant Systems Biology</td>
+<td style="text-align: left;">Ghent</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Givanna Putri</td>
+<td style="text-align: left;">Walter and Eliza Hall Institute of Medical Research</td>
+<td style="text-align: left;">Melbourne</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Javier Carpinteyro Ponce</td>
+<td style="text-align: left;">University of Maryland</td>
+<td style="text-align: left;">Maryland</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Leo Lahti</td>
+<td style="text-align: left;">University of Turku</td>
+<td style="text-align: left;">Turku</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Marie Hidjo</td>
+<td style="text-align: left;">African Institute of Biomedical Science and Technology</td>
+<td style="text-align: left;">Harare</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Mercilena Benjamin</td>
+<td style="text-align: left;">All India Institute of Medical Science</td>
+<td style="text-align: left;">New Delhi</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Oliver Crook</td>
+<td style="text-align: left;">University of Oxford</td>
+<td style="text-align: left;">Oxford</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Pageneck Chikondowa</td>
+<td style="text-align: left;">African institute of Biomedical Science and Technology</td>
+<td style="text-align: left;">Harare</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Rodrigo Arcoverde Cerveira da Silva</td>
+<td style="text-align: left;">Karolinska Institute</td>
+<td style="text-align: left;">Stockholm</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Sehyun Oh</td>
+<td style="text-align: left;">City University of New York</td>
+<td style="text-align: left;">New York</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Umar Ahmad</td>
+<td style="text-align: left;">Bauchi State University</td>
+<td style="text-align: left;">Gadau</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Zedias Chikwambi</td>
+<td style="text-align: left;">Chinhoyi University of Technology</td>
+<td style="text-align: left;">Chinhoyi</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Zuguang Gu</td>
+<td style="text-align: left;">German Cancer Research Center</td>
+<td style="text-align: left;">Heidelberg</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+
+</section>
+</section>
+
+ ]]></description>
+  <category>education</category>
+  <guid>https://bioconductor.github.io/biocblog/posts/2023-02-24-carpentries-update/index.html</guid>
+  <pubDate>Fri, 24 Feb 2023 00:00:00 GMT</pubDate>
+  <media:content url="https://bioconductor.github.io/biocblog/posts/2023-02-24-carpentries-update/map.png" medium="image" type="image/png" height="90" width="144"/>
+</item>
 <item>
   <title>Introducing CuratedAtlasQueryR package</title>
   <dc:creator>Maria Doyle</dc:creator>
