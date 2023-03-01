@@ -22,5 +22,9 @@ Again, thanks for contributing!
 
 - [ ] The main subject relates to at least one project affiliated to the Bioconductor Ecosystem.
 - [ ] I have the right to publish the content under BSD 3-Clause License for the code and Creative Common CC-BY-4.0 License for the text.
-- [ ] Images have been compressed using a tool like `pngquant`.
-- [ ] Images [have alt text for images](bhttps://blog.scientific-python.org/about/submit/#images).
+- [ ] The post and I abide by the Bioconductor [Code of Conduct](https://www.bioconductor.org/about/code-of-conduct).
+If images are included:
+- [ ] I have the right to publish the images.
+- [ ] I have compressed the images using a tool like `pngquant`. 
+- [ ] I have added alt text.
+
