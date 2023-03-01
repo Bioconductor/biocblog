@@ -9,7 +9,7 @@ date: 2023-03-01
 categories: BioC
 ---
 
-Next week March 8th, Bioconductor will rename the default branch on
+On March 8th, Bioconductor will rename the default branch on
 `git.bioconductor.org` to `devel`. This change has been many discussions and a
 lot of work in the making. Here's why we're doing it and how it impacts
 developers and maintainers. Users will not be impacted by this change.
