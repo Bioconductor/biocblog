@@ -10,7 +10,79 @@
 <atom:link href="https://bioconductor.github.io/biocblog/index.xml" rel="self" type="application/rss+xml"/>
 <description>A blog for the Bioconductor community!</description>
 <generator>quarto-1.2.335</generator>
-<lastBuildDate>Fri, 24 Feb 2023 00:00:00 GMT</lastBuildDate>
+<lastBuildDate>Wed, 01 Mar 2023 00:00:00 GMT</lastBuildDate>
+<item>
+  <title>Renaming the Default Branch to Devel</title>
+  <dc:creator>J Wokaty</dc:creator>
+  <link>https://bioconductor.github.io/biocblog/posts/2023-03-01-transition-to-devel/index.html</link>
+  <description><![CDATA[ 
+
+
+
+
+<p>On March 8th, Bioconductor will rename the default branch on <code>git.bioconductor.org</code> to <code>devel</code>. This change has been many discussions and a lot of work in the making. Here’s why we’re doing it and how it impacts developers and maintainers. Users will not be impacted by this change.</p>
+<section id="moving-toward-inclusion" class="level2">
+<h2 class="anchored" data-anchor-id="moving-toward-inclusion">Moving Toward Inclusion</h2>
+<p>You might already be familiar with others, like the <a href="https://www.tidyverse.org/blog/2021/10/renaming-default-branch/">tidyverse</a>, moving away from the terminology “master” to use more inclusive language. We realize that this language is not representative of Bioconductor and it’s a step toward inclusion that’s inline with Bioconductor’s <a href="https://www.bioconductor.org/about/code-of-conduct/">Code of Conduct</a> to provide a welcoming and supportive experience.</p>
+<p>We specifically chose <code>devel</code> as it more aptly describes what this branch is within the context of Bioconductor.</p>
+</section>
+<section id="impact-on-bioconductor-package-developers-and-maintainers" class="level2">
+<h2 class="anchored" data-anchor-id="impact-on-bioconductor-package-developers-and-maintainers">Impact on Bioconductor Package Developers and Maintainers</h2>
+<p>After March 8th, developers and maintainers will need to push their changes to the <code>devel</code> branch on <code>git.bioconductor.org</code>. If you have a repository on GitHub, we recommend renaming your default branch on GitHub first then renaming your branch in your local repository on your computer.</p>
+<section id="rename-the-default-branch-on-github" class="level3">
+<h3 class="anchored" data-anchor-id="rename-the-default-branch-on-github">Rename the Default Branch on Github</h3>
+<p>On GitHub, you can rename your <code>master</code> branch in your repository by going to <code>Settings &gt; Branches</code> then clicking on the pencil icon.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://bioconductor.github.io/biocblog/posts/2023-03-01-transition-to-devel/default_branch.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Settings &gt; Branches at github.com</figcaption><p></p>
+</figure>
+</div>
+<p>Note: Renaming the branch will also change any pull requests attempting to merge into your current default branch.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://bioconductor.github.io/biocblog/posts/2023-03-01-transition-to-devel/rename_branch.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Rename the default branch devel</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="rename-the-branch-named-master-in-your-local-repository" class="level3">
+<h3 class="anchored" data-anchor-id="rename-the-branch-named-master-in-your-local-repository">Rename the Branch Named Master in Your Local Repository</h3>
+<p>You can change your local repository with the following code, assuming your branch is named <code>master</code>:</p>
+<pre><code>git branch -m master devel
+git fetch origin
+git branch -u origin/devel devel
+git remote set-head origin -a</code></pre>
+<p>If you performed the prior steps to rename your default branch in GitHub, it will also provide you with the same code, which you can share with contributors.</p>
+</section>
+<section id="push-to-git.bioconductor.org" class="level3">
+<h3 class="anchored" data-anchor-id="push-to-git.bioconductor.org">Push to git.bioconductor.org</h3>
+<p>After you’ve renamed your local branches, you can push to the <code>devel</code> branch at <code>git.bioconductor.org</code>.</p>
+<pre><code>git remote -v
+# origin    git@github.com:Bioconductor/BiocGenerics (fetch)
+# origin    git@github.com:Bioconductor/BiocGenerics (push)
+# upstream  git@git.bioconductor.org:packages/BiocGenerics (fetch)
+# upstream  git@git.bioconductor.org:packages/BiocGenerics (push)
+git push upstream devel</code></pre>
+</section>
+<section id="push-to-git.bioconductor.org-without-altering-your-local-branch" class="level3">
+<h3 class="anchored" data-anchor-id="push-to-git.bioconductor.org-without-altering-your-local-branch">Push to git.bioconductor.org Without Altering Your Local Branch</h3>
+<p>It’s also possible to push to <code>devel</code> without altering your local branch:</p>
+<pre><code># Assuming your git.bioconductor.org remote is named upstream
+# and your branch is named 'main'
+git push upstream main:devel</code></pre>
+<p>See our <a href="https://contributions.bioconductor.org/branch-rename-faqs.html">Branch Rename FAQ</a> for more details.</p>
+
+
+</section>
+</section>
+
+ ]]></description>
+  <category>BioC</category>
+  <guid>https://bioconductor.github.io/biocblog/posts/2023-03-01-transition-to-devel/index.html</guid>
+  <pubDate>Wed, 01 Mar 2023 00:00:00 GMT</pubDate>
+  <media:content url="https://bioconductor.github.io/biocblog/posts/2023-03-01-transition-to-devel/default_branch.png" medium="image" type="image/png" height="35" width="144"/>
+</item>
 <item>
   <title>Bioconductor Carpentries instructors Year 1</title>
   <dc:creator>Maria Doyle</dc:creator>
