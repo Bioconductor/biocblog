@@ -5,11 +5,11 @@ description: |
 author:
   - name: J Wokaty
     url: https://github.com/jwokaty
-date: 2023-02-10
+date: 2023-03-01
 categories: BioC
 ---
 
-In the next few weeks, Bioconductor will rename the default branch on
+Next week March 8th, Bioconductor will rename the default branch on
 `git.bioconductor.org` to `devel`. This change has been many discussions and a
 lot of work in the making. Here's why we're doing it and how it impacts
 developers and maintainers. Users will not be impacted by this change.
@@ -29,10 +29,10 @@ within the context of Bioconductor.
 
 ## Impact on Bioconductor Package Developers and Maintainers
 
-After TBD, developers and maintainers will need to push their changes to the
-`devel` branch on `git.bioconductor.org`. If you have a repository on GitHub,
-we recommend renaming your default branch on GitHub first then renaming your
-branch in your local repository on your computer.
+After March 8th, developers and maintainers will need to push their changes to
+the `devel` branch on `git.bioconductor.org`. If you have a repository on
+GitHub, we recommend renaming your default branch on GitHub first then renaming
+your branch in your local repository on your computer.
 
 ### Rename the Default Branch on Github
 
