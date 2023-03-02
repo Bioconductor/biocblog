@@ -11,6 +11,9 @@ There are a few minimum requirements for a blog post to be considered for accept
 
 * The main subject must relate to Bioconductor.
 * Content is published under Creative Common CC-BY-4.0 License for the text and BSD 3-Clause License for any code.
+* You have the right to publish any images included. 
+* Images must be compressed using a tool like `pngquant`.
+* Images must contain alt text for accessibility.
 * The post and authors abide by the Bioconductor [Code of Conduct](https://www.bioconductor.org/about/code-of-conduct).
 * The post must be written in English or a language we have a reviewer for. If not English, please open a [GitHub issue](https://github.com/Bioconductor/biocblog/issues) to check we can review.
 
@@ -26,9 +29,18 @@ The way to contribute a new article is as follows:
 
 3. [Create a new `qmd` file](https://quarto.org/docs/websites/website-blog.html#posts-directory) in your RStudio, and check the content with clicking `Preview Website` button under the `Build` tab! ![](./PreviewWebsiteButton.png)
 
-4. When you're done, please `git commit` the raw `qmd` plus any static files you might have added to the post's source directory. Don't commit any generated files, such as html.
-    
-5. Send a Pull Request requesting that we accept your article! 
+4. If including images:
 
-Once we see your Pull Request we'll take a look at your article, suggest
+   i) compress the images with a tool like `pngquant`
+   `pngquant --ext .png --force my_figure.png`
+   
+   ii) add [Alt Text](https://quarto.org/docs/computations/execution-options.html#caption-and-alt-text).
+   
+5. If including code, render the `qmd` locally and commit files changed in the [`_freeze` directory](https://quarto.org/docs/projects/code-execution.html#using-freeze). 
+
+6. When you're done, please `git commit` the raw `qmd` plus any static files you might have added/updated in the post's source directory or `_freeze` directory. Don't commit any generated files, such as html.
+    
+7. Send a Pull Request requesting that we accept your article! 
+
+Once we see your Pull Request, we'll take a look at your article, suggest
 changes as necessary, then publish it when it's ready.
