@@ -161,6 +161,9 @@ ul.task-list li input[type="checkbox"] {
 <ul>
 <li>The main subject must relate to Bioconductor.</li>
 <li>Content is published under Creative Common CC-BY-4.0 License for the text and BSD 3-Clause License for any code.</li>
+<li>You have the right to publish any images included.</li>
+<li>Images must be compressed using a tool like <code>pngquant</code>.</li>
+<li>Images must contain alt text for accessibility.</li>
 <li>The post and authors abide by the Bioconductor <a href="https://www.bioconductor.org/about/code-of-conduct">Code of Conduct</a>.</li>
 <li>The post must be written in English or a language we have a reviewer for. If not English, please open a <a href="https://github.com/Bioconductor/biocblog/issues">GitHub issue</a> to check we can review.</li>
 </ul>
@@ -172,10 +175,16 @@ ul.task-list li input[type="checkbox"] {
 <li><p>Create a fork of the <a href="https://github.com/Bioconductor/biocblog">biocblog repository</a> on GitHub. <img src="./GitHubForkButton.png" class="img-fluid"> And Git clone it to your local environment!</p></li>
 <li><p><a href="https://rstudio.com/products/rstudio/download/">Install RStudio</a> and double click the <code>biocblog.Rproj</code> file in the cloned repo. The latest release of RStudio (v2022.07 at this point) includes support for editing and preview of <a href="https://quarto.org">Quarto</a> documents.</p></li>
 <li><p><a href="https://quarto.org/docs/websites/website-blog.html#posts-directory">Create a new <code>qmd</code> file</a> in your RStudio, and check the content with clicking <code>Preview Website</code> button under the <code>Build</code> tab! <img src="./PreviewWebsiteButton.png" class="img-fluid"></p></li>
-<li><p>When you’re done, please <code>git commit</code> the raw <code>qmd</code> plus any static files you might have added to the post’s source directory. Don’t commit any generated files, such as html.</p></li>
+<li><p>If including images:</p>
+<ol type="i">
+<li><p>compress the images with a tool like <code>pngquant</code> <code>pngquant --ext .png --force my_figure.png</code></p></li>
+<li><p>add <a href="https://quarto.org/docs/computations/execution-options.html#caption-and-alt-text">Alt Text</a>.</p></li>
+</ol></li>
+<li><p>If including code, render the <code>qmd</code> locally and commit files changed in the <a href="https://quarto.org/docs/projects/code-execution.html#using-freeze"><code>_freeze</code> directory</a>.</p></li>
+<li><p>When you’re done, please <code>git commit</code> the raw <code>qmd</code> plus any static files you might have added/updated in the post’s source directory or <code>_freeze</code> directory. Don’t commit any generated files, such as html.</p></li>
 <li><p>Send a Pull Request requesting that we accept your article!</p></li>
 </ol>
-<p>Once we see your Pull Request we’ll take a look at your article, suggest changes as necessary, then publish it when it’s ready.</p>
+<p>Once we see your Pull Request, we’ll take a look at your article, suggest changes as necessary, then publish it when it’s ready.</p>
 
 
 </section>
