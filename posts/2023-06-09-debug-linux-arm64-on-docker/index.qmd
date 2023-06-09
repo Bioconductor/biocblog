@@ -1,0 +1,100 @@
+---
+title: "Emulated build and test of Bioconductor packages for Linux ARM64"
+description: |
+  Build and test for Linux ARM64 with Docker on x86_64 host
+author:
+  - name: Martin Grigorov
+    url: https://github.com/martin-g
+date: 2023-06-09
+categories: BioC
+---
+
+![Bioconductor on Linux ARM64](bioconductor_logo_cmyk.png)
+
+Since June 8th 2023 the Bioconductor project has added a Linux ARM64 builder to 
+the daily [builds](https://bioconductor.org/checkResults/3.18/bioc-LATEST/long-report.html)
+
+
+## Build on Linux ARM64
+
+If you have access to a Linux ARM64 [virtual] machine (e.g. AWS Graviton, 
+OracleCloud A1 Compute, etc.) then you can easily setup R 4.3.0 and start 
+working on your Bioconductor package.
+
+In this article I am going to explain the steps needed in case you work on 
+x86_64 host machine by using the Bioconductor Docker Linux ARM64 image, 
+i.e. using emulation.
+
+### Fetch the image:
+
+```
+$ docker pull --platform linux/arm64 ghcr.io/bioconductor/bioconductor:devel-r-latest
+```
+
+Note the `--platform` argument! It tells the Docker client to pull the `arm64` 
+flavor of the image. If omitted it will download the `amd64` flavor that 
+matches the architecture of the host.
+
+### Run the image (unsuccessful)
+
+If you try to run this image you will see an error about the wrong binary 
+format:
+
+```
+$ docker run -it --rm ghcr.io/bioconductor/bioconductor:devel-r-latest bash
+WARNING: The requested image’s platform (linux/arm64) does not match the detected host platform (linux/amd64/v4) and no specific platform was requested
+exec /usr/bin/bash: exec format error
+```
+
+### Run the image (successful)
+
+To make it possible to run arm64 Docker images on x86_64 host we will need to 
+install QEMU (qemu-user-static):
+
+```
+$ docker run --rm --privileged aptman/qus -s -- -p aarch64
+cat ./qemu-binfmt-conf.sh | sh -s -- --path=/qus/bin -p aarch64 --suffix -static
+Setting /qus/bin/qemu-aarch64-static as binfmt interpreter for aarch64
+```
+
+Now it is possible to run the image:
+
+```
+$ docker run -it --rm ghcr.io/bioconductor/bioconductor:devel-r-latest bash
+WARNING: The requested image’s platform (linux/arm64) does not match the detected host platform (linux/amd64/v4) and no specific platform was requested
+root@b40c553def79:/# uname -a
+Linux b40c553def79 6.2.0 #5 SMP PREEMPT_DYNAMIC Wed Mar 22 12:42:40 UTC 2023 aarch64 aarch64 aarch64 GNU/Linux
+```
+
+### Build Bioconductor packages
+
+The Docker image comes with R pre-installed:
+
+```
+root@b40c553def79:/# R --version
+R version 4.3.0 (2023–04–21) — “Already Tomorrow”
+```
+
+To build and test a Bioconductor package you will need to git clone it locally:
+
+```
+root@b40c553def79:/# mkdir bioc && cd bioc
+root@b40c553def79:/# git clone https://git.bioconductor.org/packages/xyz
+root@b40c553def79:/# R CMD build xyz
+root@b40c553def79:/# R CMD check xyz_VERSION.tar.gz
+```
+
+That’s it!
+
+## Optimization
+
+For easier and faster development it would be better to clone the package on 
+your x86_64 host and mount the folder:
+
+```
+$ docker run -it --rm -v /path/to/package:/dev ghcr.io/bioconductor/bioconductor:devel-r-latest bash
+```
+
+This way it will be easier to edit the source files with your preferred text 
+editor on your workstation.
+
