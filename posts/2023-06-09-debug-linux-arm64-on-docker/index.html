@@ -6,14 +6,11 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Kozo Nishida">
-<meta name="author" content="Janani Ravi">
-<meta name="author" content="Lori Shepherd">
-<meta name="author" content="Hedia Tnani">
-<meta name="dcterms.date" content="2022-05-13">
-<meta name="description" content="A short description of the post.">
+<meta name="author" content="Martin Grigorov">
+<meta name="dcterms.date" content="2023-06-09">
+<meta name="description" content="Build and test for Linux ARM64 with Docker on x86_64 host">
 
-<title>Bioconductor community blog - Invitation to the 1st Bioconductor Translation-a-thon</title>
+<title>Bioconductor community blog - Emulated build and test of Bioconductor packages for Linux ARM64</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -69,11 +66,14 @@ ul.task-list li input[type="checkbox"] {
 
 
 <link rel="stylesheet" href="../../styles.css">
-<meta property="og:title" content="Bioconductor community blog - Invitation to the 1st Bioconductor Translation-a-thon">
-<meta property="og:description" content="A short description of the post.">
+<meta property="og:title" content="Bioconductor community blog - Emulated build and test of Bioconductor packages for Linux ARM64">
+<meta property="og:description" content="Build and test for Linux ARM64 with Docker on x86_64 host">
+<meta property="og:image" content="https://bioconductor.github.io/biocblog/posts/2023-06-09-debug-linux-arm64-on-docker/bioconductor_logo_cmyk.png">
 <meta property="og:site-name" content="Bioconductor community blog">
-<meta name="twitter:title" content="Bioconductor community blog - Invitation to the 1st Bioconductor Translation-a-thon">
-<meta name="twitter:description" content="A short description of the post.">
+<meta property="og:image:height" content="124">
+<meta property="og:image:width" content="430">
+<meta name="twitter:title" content="Bioconductor community blog - Emulated build and test of Bioconductor packages for Linux ARM64">
+<meta name="twitter:description" content="Build and test for Linux ARM64 with Docker on x86_64 host">
 <meta name="twitter:image" content="https://bioconductor.github.io/biocblog//images/twitter-card.png">
 <meta name="twitter:creator" content="@Bioconductor">
 <meta name="twitter:image-height" content="124">
@@ -142,32 +142,32 @@ ul.task-list li input[type="checkbox"] {
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">Invitation to the 1st Bioconductor Translation-a-thon</h1>
+      <h1 class="title">Emulated build and test of Bioconductor packages for Linux ARM64</h1>
                   <div>
         <div class="description">
-          <p>A short description of the post.</p>
+          <p>Build and test for Linux ARM64 with Docker on x86_64 host</p>
         </div>
       </div>
-                </div>
+                          <div class="quarto-categories">
+                <div class="quarto-category">tech-notes</div>
+              </div>
+                  </div>
   </div>
     
   
   <div class="quarto-title-meta">
 
       <div>
-      <div class="quarto-title-meta-heading">Authors</div>
+      <div class="quarto-title-meta-heading">Author</div>
       <div class="quarto-title-meta-contents">
-               <p><a href="https://bioconductor.org/about/community-advisory-board/">Kozo Nishida</a> </p>
-               <p><a href="https://bioconductor.org/about/community-advisory-board/">Janani Ravi</a> </p>
-               <p><a href="https://bioconductor.org/about/community-advisory-board/">Lori Shepherd</a> </p>
-               <p><a href="https://bioconductor.org/about/community-advisory-board/">Hedia Tnani</a> </p>
+               <p><a href="https://github.com/martin-g">Martin Grigorov</a> </p>
             </div>
     </div>
       
       <div>
       <div class="quarto-title-meta-heading">Published</div>
       <div class="quarto-title-meta-contents">
-        <p class="date">May 13, 2022</p>
+        <p class="date">June 9, 2023</p>
       </div>
     </div>
     
@@ -185,8 +185,63 @@ ul.task-list li input[type="checkbox"] {
 
 
 
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="bioconductor_logo_cmyk.png" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">Bioconductor on Linux ARM64</figcaption>
+</figure>
+</div>
+<p><code>ARM64</code>, also known as <code>aarch64</code>, architecture is used in almost all mobile devices because of its lower electricity consumption compared to <code>x86_64</code>. In the last few years it is also being introduced more and more in server/cloud environments for the same reason.</p>
+<p>Since June 8th 2023 the Bioconductor project has added a Linux ARM64 builder to the daily <a href="https://bioconductor.org/checkResults/3.18/bioc-LATEST/long-report.html">builds</a></p>
+<section id="build-on-linux-arm64" class="level2">
+<h2 class="anchored" data-anchor-id="build-on-linux-arm64">Build on Linux ARM64</h2>
+<p>If you have access to a Linux ARM64 [virtual] machine (e.g.&nbsp;AWS Graviton, OracleCloud A1 Compute, etc.) then you can easily setup R 4.3.0 and start working on your Bioconductor package.</p>
+<p>In this article I am going to explain the steps needed in case you work on x86_64 host machine by using the Bioconductor Docker Linux ARM64 image, i.e.&nbsp;using emulation.</p>
+<section id="fetch-the-image" class="level3">
+<h3 class="anchored" data-anchor-id="fetch-the-image">Fetch the image:</h3>
+<pre><code>$ docker pull --platform linux/arm64 ghcr.io/bioconductor/bioconductor:devel-r-latest</code></pre>
+<p>Note the <code>--platform</code> argument! It tells the Docker client to pull the <code>arm64</code> flavor of the image. If omitted it will download the <code>amd64</code> flavor that matches the architecture of the host.</p>
+</section>
+<section id="run-the-image-unsuccessful" class="level3">
+<h3 class="anchored" data-anchor-id="run-the-image-unsuccessful">Run the image (unsuccessful)</h3>
+<p>If you try to run this image you will see an error about the wrong binary format:</p>
+<pre><code>$ docker run -it --rm ghcr.io/bioconductor/bioconductor:devel-r-latest bash
+WARNING: The requested image’s platform (linux/arm64) does not match the detected host platform (linux/amd64/v4) and no specific platform was requested
+exec /usr/bin/bash: exec format error</code></pre>
+</section>
+<section id="run-the-image-successful" class="level3">
+<h3 class="anchored" data-anchor-id="run-the-image-successful">Run the image (successful)</h3>
+<p>To make it possible to run arm64 Docker images on x86_64 host we will need to install QEMU (qemu-user-static):</p>
+<pre><code>$ docker run --rm --privileged aptman/qus -s -- -p aarch64
+cat ./qemu-binfmt-conf.sh | sh -s -- --path=/qus/bin -p aarch64 --suffix -static
+Setting /qus/bin/qemu-aarch64-static as binfmt interpreter for aarch64</code></pre>
+<p>Now it is possible to run the image:</p>
+<pre><code>$ docker run -it --rm ghcr.io/bioconductor/bioconductor:devel-r-latest bash
+WARNING: The requested image’s platform (linux/arm64) does not match the detected host platform (linux/amd64/v4) and no specific platform was requested
+root@b40c553def79:/# uname -a
+Linux b40c553def79 6.2.0 #5 SMP PREEMPT_DYNAMIC Wed Mar 22 12:42:40 UTC 2023 aarch64 aarch64 aarch64 GNU/Linux</code></pre>
+</section>
+<section id="build-bioconductor-packages" class="level3">
+<h3 class="anchored" data-anchor-id="build-bioconductor-packages">Build Bioconductor packages</h3>
+<p>The Docker image comes with R pre-installed:</p>
+<pre><code>root@b40c553def79:/# R --version
+R version 4.3.0 (2023–04–21) — “Already Tomorrow”</code></pre>
+<p>To build and test a Bioconductor package you will need to git clone it locally:</p>
+<pre><code>root@b40c553def79:/# mkdir bioc &amp;&amp; cd bioc
+root@b40c553def79:/# git clone https://git.bioconductor.org/packages/xyz
+root@b40c553def79:/# R CMD build xyz
+root@b40c553def79:/# R CMD check xyz_VERSION.tar.gz</code></pre>
+<p>That’s it!</p>
+</section>
+</section>
+<section id="optimization" class="level2">
+<h2 class="anchored" data-anchor-id="optimization">Optimization</h2>
+<p>For easier and faster development it would be better to clone the package on your x86_64 host and mount the folder:</p>
+<pre><code>$ docker run -it --rm -v /path/to/package:/dev ghcr.io/bioconductor/bioconductor:devel-r-latest bash</code></pre>
+<p>This way it will be easier to edit the source files with your preferred text editor on your workstation.</p>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

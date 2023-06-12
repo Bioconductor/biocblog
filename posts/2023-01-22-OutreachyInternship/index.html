@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.2.335">
+<meta name="generator" content="quarto-1.3.361">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -21,7 +21,7 @@ div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
   width: 0.8em;
-  margin: 0 0.8em 0.2em -1.6em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
 </style>
@@ -59,7 +59,8 @@ ul.task-list li input[type="checkbox"] {
     "search-more-matches-text": "more matches in this document",
     "search-clear-button-title": "Clear",
     "search-detached-cancel-button-title": "Cancel",
-    "search-submit-button-title": "Submit"
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
   }
 }</script>
 <script defer="" data-domain="bioconductor.github.io/biocblog" src="https://plausible.io/js/script.js"></script>
@@ -68,7 +69,10 @@ ul.task-list li input[type="checkbox"] {
 <link rel="stylesheet" href="../../styles.css">
 <meta property="og:title" content="Bioconductor community blog - Our experience as Outreachy interns with Bioconductor">
 <meta property="og:description" content="Bioconductor participated in the Outreachy Internship program for the December 2022 cohort. Our interns share their experience working on their various projects and bioconductor in general.">
+<meta property="og:image" content="https://bioconductor.github.io/biocblog/posts/2023-01-22-OutreachyInternship/outreachy_homepage.png">
 <meta property="og:site-name" content="Bioconductor community blog">
+<meta property="og:image:height" content="657">
+<meta property="og:image:width" content="1294">
 <meta name="twitter:title" content="Bioconductor community blog - Our experience as Outreachy interns with Bioconductor">
 <meta name="twitter:description" content="Bioconductor participated in the Outreachy Internship program for the December 2022 cohort. Our interns share their experience working on their various projects and bioconductor in general.">
 <meta name="twitter:image" content="https://bioconductor.github.io/biocblog//images/twitter-card.png">
@@ -89,46 +93,48 @@ ul.task-list li input[type="checkbox"] {
     <span class="navbar-title">Bioconductor community blog</span>
     </a>
   </div>
+            <div id="quarto-search" class="" title="Search"></div>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../../about.html">
+    <a class="nav-link" href="../../about.html" rel="" target="">
  <span class="menu-text">About</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../contributing.html">
+    <a class="nav-link" href="../../contributing.html" rel="" target="">
  <span class="menu-text">Contributing</span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="https://github.com/bioconductor/biocblog"><i class="bi bi-github" role="img">
+    <a class="nav-link" href="https://github.com/bioconductor/biocblog" rel="" target=""><i class="bi bi-github" role="img">
 </i> 
  <span class="menu-text"></span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="https://twitter.com/bioconductor"><i class="bi bi-twitter" role="img">
+    <a class="nav-link" href="https://twitter.com/bioconductor" rel="" target=""><i class="bi bi-twitter" role="img">
 </i> 
  <span class="menu-text"></span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="https://www.youtube.com/user/bioconductor"><i class="bi bi-youtube" role="img">
+    <a class="nav-link" href="https://www.youtube.com/user/bioconductor" rel="" target=""><i class="bi bi-youtube" role="img">
 </i> 
  <span class="menu-text"></span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="https://bioc-community.herokuapp.com/"><i class="bi bi-slack" role="img">
+    <a class="nav-link" href="https://bioc-community.herokuapp.com/" rel="" target=""><i class="bi bi-slack" role="img">
 </i> 
  <span class="menu-text"></span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="../../index.xml"><i class="bi bi-rss" role="img">
+    <a class="nav-link" href="../../index.xml" rel="" target=""><i class="bi bi-rss" role="img">
 </i> 
  <span class="menu-text"></span></a>
   </li>  
 </ul>
-              <div id="quarto-search" class="" title="Search"></div>
+            <div class="quarto-navbar-tools">
+</div>
           </div> <!-- /navcollapse -->
       </div> <!-- /container-fluid -->
     </nav>
@@ -155,8 +161,8 @@ ul.task-list li input[type="checkbox"] {
       <div>
       <div class="quarto-title-meta-heading">Authors</div>
       <div class="quarto-title-meta-contents">
-               <p>Beryl Kanali </p>
-               <p>Atuhurira Kirabo </p>
+               <p><a href="https://github.com/BerylKanali">Beryl Kanali</a> </p>
+               <p><a href="https://github.com/kakopo">Atuhurira Kirabo</a> </p>
             </div>
     </div>
       
@@ -192,7 +198,7 @@ ul.task-list li input[type="checkbox"] {
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="outreachy_homepage.png" class="img-fluid figure-img"></p>
-<p></p><figcaption class="figure-caption">Outreachy</figcaption><p></p>
+<figcaption class="figure-caption">Outreachy</figcaption>
 </figure>
 </div>
 <p>The application process is in three stages and an applicant chooses 1-2 projects they would like to apply to and makes contributions to them to be eligible for selection.</p>
@@ -207,14 +213,14 @@ ul.task-list li input[type="checkbox"] {
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="seed_file_Felis_catus_9.0.png" class="img-fluid figure-img"></p>
-<p></p><figcaption class="figure-caption">example seed file for Felis_catus_9.0</figcaption><p></p>
+<figcaption class="figure-caption">example seed file for Felis_catus_9.0</figcaption>
 </figure>
 </div>
 <p>The <a href="https://github.com/Bioconductor/BSgenomeForge">BSgenomeForge project</a> aims to simplify the whole process, by allowing the user to use one function to create the package. It’s a solution that we hope is able to cut down the time one takes to forge a package, and make the process much less confusing and error-prone to less experienced users.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="forgeBSgenomeDataPkgFromNCBI.png" class="img-fluid figure-img"></p>
-<p></p><figcaption class="figure-caption">forgeBSgenomeDataPkgFromNCBI function</figcaption><p></p>
+<figcaption class="figure-caption">forgeBSgenomeDataPkgFromNCBI function</figcaption>
 </figure>
 </div>
 </section>
@@ -238,7 +244,7 @@ ul.task-list li input[type="checkbox"] {
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="KIRABO HEADSHOT.jpeg" class="img-fluid figure-img"></p>
-<p></p><figcaption class="figure-caption">Kirabo Atuhurira</figcaption><p></p>
+<figcaption class="figure-caption">Kirabo Atuhurira</figcaption>
 </figure>
 </div>
 <p>Hi, my name is Atuhurira Kirabo Kakopo, and I’m from Kampala, Uganda. I am on the cusp of graduating with a bachelor’s degree in Software Engineering. Academically, I thrived in my data science and artificial intelligence classes, which was because I found these topics extra interesting. Because of this, R ended up as my programming language of choice, because it was used extensively in the aforementioned class projects.</p>
@@ -251,7 +257,7 @@ ul.task-list li input[type="checkbox"] {
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="Beryl Kanali.jpg" class="img-fluid figure-img"></p>
-<p></p><figcaption class="figure-caption">Beryl Kanai</figcaption><p></p>
+<figcaption class="figure-caption">Beryl Kanai</figcaption>
 </figure>
 </div>
 <p>I am Beryl Kanali from Nairobi, Kenya. I graduated in 2021 with a bachelor’s degree in Mathematics and Computer Science which led me to choosing Data Science as a career of choice. I have always been interested in biology, life sciences and research in these areas and even thought of doing medicine at some point but I was more drawn to Mathematics and technology. After school I wanted to practice data science in areas related to biology, life sciences or pharmacy. Unfortunately, Data Science is not widely used in those areas in my country.</p>
@@ -302,9 +308,23 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     icon: icon
   };
   anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
   const clipboard = new window.ClipboardJS('.code-copy-button', {
-    target: function(trigger) {
-      return trigger.previousElementSibling;
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
     }
   });
   clipboard.on('success', function(e) {
@@ -369,6 +389,92 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       return note.innerHTML;
     });
   }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
   const findCites = (el) => {
     const parentEl = el.parentElement;
     if (parentEl) {

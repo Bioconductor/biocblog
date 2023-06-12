@@ -9,8 +9,80 @@
 <link>https://bioconductor.github.io/biocblog/index.html</link>
 <atom:link href="https://bioconductor.github.io/biocblog/index.xml" rel="self" type="application/rss+xml"/>
 <description>A blog for the Bioconductor community!</description>
-<generator>quarto-1.2.335</generator>
-<lastBuildDate>Wed, 01 Mar 2023 00:00:00 GMT</lastBuildDate>
+<generator>quarto-1.3.361</generator>
+<lastBuildDate>Fri, 09 Jun 2023 00:00:00 GMT</lastBuildDate>
+<item>
+  <title>Emulated build and test of Bioconductor packages for Linux ARM64</title>
+  <dc:creator>Martin Grigorov</dc:creator>
+  <link>https://bioconductor.github.io/biocblog/posts/2023-06-09-debug-linux-arm64-on-docker/index.html</link>
+  <description><![CDATA[ 
+
+
+
+
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://bioconductor.github.io/biocblog/posts/2023-06-09-debug-linux-arm64-on-docker/bioconductor_logo_cmyk.png" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">Bioconductor on Linux ARM64</figcaption>
+</figure>
+</div>
+<p><code>ARM64</code>, also known as <code>aarch64</code>, architecture is used in almost all mobile devices because of its lower electricity consumption compared to <code>x86_64</code>. In the last few years it is also being introduced more and more in server/cloud environments for the same reason.</p>
+<p>Since June 8th 2023 the Bioconductor project has added a Linux ARM64 builder to the daily <a href="https://bioconductor.org/checkResults/3.18/bioc-LATEST/long-report.html">builds</a></p>
+<section id="build-on-linux-arm64" class="level2">
+<h2 class="anchored" data-anchor-id="build-on-linux-arm64">Build on Linux ARM64</h2>
+<p>If you have access to a Linux ARM64 [virtual] machine (e.g.&nbsp;AWS Graviton, OracleCloud A1 Compute, etc.) then you can easily setup R 4.3.0 and start working on your Bioconductor package.</p>
+<p>In this article I am going to explain the steps needed in case you work on x86_64 host machine by using the Bioconductor Docker Linux ARM64 image, i.e.&nbsp;using emulation.</p>
+<section id="fetch-the-image" class="level3">
+<h3 class="anchored" data-anchor-id="fetch-the-image">Fetch the image:</h3>
+<pre><code>$ docker pull --platform linux/arm64 ghcr.io/bioconductor/bioconductor:devel-r-latest</code></pre>
+<p>Note the <code>--platform</code> argument! It tells the Docker client to pull the <code>arm64</code> flavor of the image. If omitted it will download the <code>amd64</code> flavor that matches the architecture of the host.</p>
+</section>
+<section id="run-the-image-unsuccessful" class="level3">
+<h3 class="anchored" data-anchor-id="run-the-image-unsuccessful">Run the image (unsuccessful)</h3>
+<p>If you try to run this image you will see an error about the wrong binary format:</p>
+<pre><code>$ docker run -it --rm ghcr.io/bioconductor/bioconductor:devel-r-latest bash
+WARNING: The requested image’s platform (linux/arm64) does not match the detected host platform (linux/amd64/v4) and no specific platform was requested
+exec /usr/bin/bash: exec format error</code></pre>
+</section>
+<section id="run-the-image-successful" class="level3">
+<h3 class="anchored" data-anchor-id="run-the-image-successful">Run the image (successful)</h3>
+<p>To make it possible to run arm64 Docker images on x86_64 host we will need to install QEMU (qemu-user-static):</p>
+<pre><code>$ docker run --rm --privileged aptman/qus -s -- -p aarch64
+cat ./qemu-binfmt-conf.sh | sh -s -- --path=/qus/bin -p aarch64 --suffix -static
+Setting /qus/bin/qemu-aarch64-static as binfmt interpreter for aarch64</code></pre>
+<p>Now it is possible to run the image:</p>
+<pre><code>$ docker run -it --rm ghcr.io/bioconductor/bioconductor:devel-r-latest bash
+WARNING: The requested image’s platform (linux/arm64) does not match the detected host platform (linux/amd64/v4) and no specific platform was requested
+root@b40c553def79:/# uname -a
+Linux b40c553def79 6.2.0 #5 SMP PREEMPT_DYNAMIC Wed Mar 22 12:42:40 UTC 2023 aarch64 aarch64 aarch64 GNU/Linux</code></pre>
+</section>
+<section id="build-bioconductor-packages" class="level3">
+<h3 class="anchored" data-anchor-id="build-bioconductor-packages">Build Bioconductor packages</h3>
+<p>The Docker image comes with R pre-installed:</p>
+<pre><code>root@b40c553def79:/# R --version
+R version 4.3.0 (2023–04–21) — “Already Tomorrow”</code></pre>
+<p>To build and test a Bioconductor package you will need to git clone it locally:</p>
+<pre><code>root@b40c553def79:/# mkdir bioc &amp;&amp; cd bioc
+root@b40c553def79:/# git clone https://git.bioconductor.org/packages/xyz
+root@b40c553def79:/# R CMD build xyz
+root@b40c553def79:/# R CMD check xyz_VERSION.tar.gz</code></pre>
+<p>That’s it!</p>
+</section>
+</section>
+<section id="optimization" class="level2">
+<h2 class="anchored" data-anchor-id="optimization">Optimization</h2>
+<p>For easier and faster development it would be better to clone the package on your x86_64 host and mount the folder:</p>
+<pre><code>$ docker run -it --rm -v /path/to/package:/dev ghcr.io/bioconductor/bioconductor:devel-r-latest bash</code></pre>
+<p>This way it will be easier to edit the source files with your preferred text editor on your workstation.</p>
+
+
+</section>
+
+ ]]></description>
+  <category>tech-notes</category>
+  <guid>https://bioconductor.github.io/biocblog/posts/2023-06-09-debug-linux-arm64-on-docker/index.html</guid>
+  <pubDate>Fri, 09 Jun 2023 00:00:00 GMT</pubDate>
+</item>
 <item>
   <title>Renaming the Default Branch to Devel</title>
   <dc:creator>J Wokaty</dc:creator>
@@ -35,14 +107,14 @@
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="https://bioconductor.github.io/biocblog/posts/2023-03-01-transition-to-devel/default_branch.png" class="img-fluid figure-img"></p>
-<p></p><figcaption class="figure-caption">Settings &gt; Branches at github.com</figcaption><p></p>
+<figcaption class="figure-caption">Settings &gt; Branches at github.com</figcaption>
 </figure>
 </div>
 <p>Note: Renaming the branch will also change any pull requests attempting to merge into your current default branch.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="https://bioconductor.github.io/biocblog/posts/2023-03-01-transition-to-devel/rename_branch.png" class="img-fluid figure-img"></p>
-<p></p><figcaption class="figure-caption">Rename the default branch devel</figcaption><p></p>
+<figcaption class="figure-caption">Rename the default branch devel</figcaption>
 </figure>
 </div>
 </section>
@@ -81,7 +153,6 @@ git push upstream main:devel</code></pre>
   <category>BioC</category>
   <guid>https://bioconductor.github.io/biocblog/posts/2023-03-01-transition-to-devel/index.html</guid>
   <pubDate>Wed, 01 Mar 2023 00:00:00 GMT</pubDate>
-  <media:content url="https://bioconductor.github.io/biocblog/posts/2023-03-01-transition-to-devel/default_branch.png" medium="image" type="image/png" height="35" width="144"/>
 </item>
 <item>
   <title>Bioconductor Carpentries instructors Year 1</title>
@@ -92,15 +163,6 @@ git push upstream main:devel</code></pre>
 
 
 
-<div class="cell">
-
-</div>
-<div class="cell">
-
-</div>
-<div class="cell">
-
-</div>
 <p>We are excited to welcome the Year 1 intake of instructor trainees for our <a href="https://bioconductor.github.io/biocblog/posts/2022-07-12-carpentries-membership/">Bioconductor Carpentries global training program</a>! 🎉</p>
 <p>Eighteen applicants have been selected for Year 1, they are shown below, in the interactive map and listed alphabetically in the table.</p>
 <section id="selection-of-applicants" class="level2">
@@ -111,16 +173,13 @@ git push upstream main:devel</code></pre>
 <h2 class="anchored" data-anchor-id="training-of-selected-applicants">Training of selected applicants</h2>
 <p>The Year 1 applicants are onboarding now and are at different stages of the process. The first step is attendance at an online <a href="https://carpentries.github.io/instructor-training/training_calendar/index.html">Carpentries instructor training workshop</a>, followed by completing <a href="https://carpentries.github.io/instructor-training/checkout/index.html">3 checkout tasks</a> (teaching demo, discussion, lesson contribution) within 3 months after the workshop. So far 3/18 trainees have completed the Carpentries certification - Fabricio Almeida-Silva, Leo Lahti and Charlotte Hutchings 👏👏👏. Once certified, the instructors will teach/co-teach one of the <a href="https://www.bioconductor.org/help/education-training/">Bioconductor Carpentries Modules</a> within one year of certification. We connect with the trainees at the <a href="https://docs.google.com/document/d/1s2QMk5XA-uhBVprAO3ZDk1Yfv1cnUWLp9zdvYq9Feu4/">monthly teaching meetings</a> and in the <a href="https://slack.bioconductor.org/">Bioconductor Slack group</a>. We are looking forward to working with all of the new instructors and supporting them to provide Bioconductor training to the global Bioconductor community.</p>
 <p>We are grateful to the <a href="https://chanzuckerberg.com/eoss/proposals/bioconductor-high-quality-training-and-support-for-a-worldwide-community/">Chan Zuckerberg Initiative’s EOSS program</a> for funding this initiative.</p>
-<div class="cell">
-
-</div>
 <section id="year-1-bioconductor-carpentries-instructor-trainees" class="level4">
 <h4 class="anchored" data-anchor-id="year-1-bioconductor-carpentries-instructor-trainees">Year 1 Bioconductor Carpentries instructor trainees</h4>
 <iframe src="map.html" width="100%" height="500">
 </iframe>
 <div class="cell">
 <div class="cell-output-display">
-<table class="table table-sm table-striped">
+<table class="table table-sm table-striped small">
 <colgroup>
 <col style="width: 33%">
 <col style="width: 56%">
@@ -291,11 +350,25 @@ git push upstream main:devel</code></pre>
 <h2 class="anchored" data-anchor-id="how-you-can-use-it">How you can use it</h2>
 <p><strong>Step 1</strong>: Get started with <a href="https://github.com/stemangiola/CuratedAtlasQueryR">CuratedAtlasQueryR</a> by exploring the integrated metadata of 28 million cells (on-disk) using <a href="https://www.tidyverse.org/">tidyverse</a>. The atlas includes 344 studies across 40 tissues, providing raw abundances and counts-per-million. 📊</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><span class="fu" style="color: #4758AB;">library</span>(CuratedAtlasQueryR)</span>
+<div class="sourceCode cell-code" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">library</span>(CuratedAtlasQueryR)</span>
 <span id="cb1-2"></span>
-<span id="cb1-3">cache_dir <span class="ot" style="color: #003B4F;">=</span> <span class="st" style="color: #20794D;">"~/tmp"</span> <span class="co" style="color: #5E5E5E;"># specify the cache directory if you don't want to use default</span></span>
+<span id="cb1-3">cache_dir <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">=</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"~/tmp"</span> <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># specify the cache directory if you don't want to use default</span></span>
 <span id="cb1-4"></span>
-<span id="cb1-5">metadata <span class="ot" style="color: #003B4F;">&lt;-</span> <span class="fu" style="color: #4758AB;">get_metadata</span>(<span class="at" style="color: #657422;">cache_directory =</span> cache_dir)</span>
+<span id="cb1-5">metadata <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">get_metadata</span>(<span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">cache_directory =</span> cache_dir)</span>
 <span id="cb1-6"></span>
 <span id="cb1-7">metadata</span></code></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -324,12 +397,44 @@ git push upstream main:devel</code></pre>
 </div>
 <p><strong>Step 2</strong>: Filter cells of interest using tidyverse, whether it’s a specific dataset or a cell type across tissues and diseases. <a href="https://github.com/stemangiola/CuratedAtlasQueryR">CuratedAtlasQueryR</a> makes it easy to find what you’re looking for! 🔍</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb3" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1">metadata <span class="sc" style="color: #5E5E5E;">|&gt;</span></span>
-<span id="cb3-2">  dplyr<span class="sc" style="color: #5E5E5E;">::</span><span class="fu" style="color: #4758AB;">filter</span>(</span>
-<span id="cb3-3">      ethnicity <span class="sc" style="color: #5E5E5E;">==</span> <span class="st" style="color: #20794D;">"African"</span> <span class="sc" style="color: #5E5E5E;">&amp;</span></span>
-<span id="cb3-4">      stringr<span class="sc" style="color: #5E5E5E;">::</span><span class="fu" style="color: #4758AB;">str_like</span>(assay, <span class="st" style="color: #20794D;">"%10x%"</span>) <span class="sc" style="color: #5E5E5E;">&amp;</span></span>
-<span id="cb3-5">      tissue <span class="sc" style="color: #5E5E5E;">==</span> <span class="st" style="color: #20794D;">"lung parenchyma"</span> <span class="sc" style="color: #5E5E5E;">&amp;</span></span>
-<span id="cb3-6">      stringr<span class="sc" style="color: #5E5E5E;">::</span><span class="fu" style="color: #4758AB;">str_like</span>(cell_type, <span class="st" style="color: #20794D;">"%CD4%"</span>)</span>
+<div class="sourceCode cell-code" id="cb3" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1">metadata <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">|&gt;</span></span>
+<span id="cb3-2">  dplyr<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">filter</span>(</span>
+<span id="cb3-3">      ethnicity <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">==</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"African"</span> <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">&amp;</span></span>
+<span id="cb3-4">      stringr<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">str_like</span>(assay, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"%10x%"</span>) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">&amp;</span></span>
+<span id="cb3-5">      tissue <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">==</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"lung parenchyma"</span> <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">&amp;</span></span>
+<span id="cb3-6">      stringr<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">str_like</span>(cell_type, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"%CD4%"</span>)</span>
 <span id="cb3-7">  ) </span></code></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># Source:   SQL [?? x 56]
@@ -357,14 +462,52 @@ git push upstream main:devel</code></pre>
 </div>
 <p><strong>Step 3</strong>: Collect the <a href="https://bioconductor.org/packages/SingleCellExperiment">SingleCellExperiment</a> for the cells of interest. Our object uses <a href="https://en.wikipedia.org/wiki/Hierarchical_Data_Format">HDF5 format</a> to keep the R session light, making it easier to work with larger datasets. 💻</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb5" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1">metadata <span class="sc" style="color: #5E5E5E;">|&gt;</span></span>
-<span id="cb5-2">  dplyr<span class="sc" style="color: #5E5E5E;">::</span><span class="fu" style="color: #4758AB;">filter</span>(</span>
-<span id="cb5-3">      ethnicity <span class="sc" style="color: #5E5E5E;">==</span> <span class="st" style="color: #20794D;">"African"</span> <span class="sc" style="color: #5E5E5E;">&amp;</span></span>
-<span id="cb5-4">      stringr<span class="sc" style="color: #5E5E5E;">::</span><span class="fu" style="color: #4758AB;">str_like</span>(assay, <span class="st" style="color: #20794D;">"%10x%"</span>) <span class="sc" style="color: #5E5E5E;">&amp;</span></span>
-<span id="cb5-5">      tissue <span class="sc" style="color: #5E5E5E;">==</span> <span class="st" style="color: #20794D;">"lung parenchyma"</span> <span class="sc" style="color: #5E5E5E;">&amp;</span></span>
-<span id="cb5-6">      stringr<span class="sc" style="color: #5E5E5E;">::</span><span class="fu" style="color: #4758AB;">str_like</span>(cell_type, <span class="st" style="color: #20794D;">"%CD4%"</span>)</span>
-<span id="cb5-7">  ) <span class="sc" style="color: #5E5E5E;">|&gt;</span></span>
-<span id="cb5-8">  <span class="fu" style="color: #4758AB;">get_SingleCellExperiment</span>(<span class="at" style="color: #657422;">cache_directory =</span> cache_dir)</span></code></pre></div>
+<div class="sourceCode cell-code" id="cb5" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1">metadata <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">|&gt;</span></span>
+<span id="cb5-2">  dplyr<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">filter</span>(</span>
+<span id="cb5-3">      ethnicity <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">==</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"African"</span> <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">&amp;</span></span>
+<span id="cb5-4">      stringr<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">str_like</span>(assay, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"%10x%"</span>) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">&amp;</span></span>
+<span id="cb5-5">      tissue <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">==</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"lung parenchyma"</span> <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">&amp;</span></span>
+<span id="cb5-6">      stringr<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">str_like</span>(cell_type, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"%CD4%"</span>)</span>
+<span id="cb5-7">  ) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">|&gt;</span></span>
+<span id="cb5-8">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">get_SingleCellExperiment</span>(<span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">cache_directory =</span> cache_dir)</span></code></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>class: SingleCellExperiment 
 dim: 36229 1571 
@@ -382,36 +525,154 @@ altExpNames(0):</code></pre>
 </div>
 <p><strong>Step 4</strong>: With <a href="https://github.com/stemangiola/CuratedAtlasQueryR">CuratedAtlasQueryR</a> and <a href="https://stemangiola.github.io/tidySingleCellExperiment/articles/introduction.html">tidySingleCellExperiment</a>, checking the transcription abundance of your favourite gene and cell type across diseases, tissues and hundreds of datasets is just a few lines of code! 🎉</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb7" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><span class="fu" style="color: #4758AB;">library</span>(tidySingleCellExperiment)</span>
-<span id="cb7-2"><span class="fu" style="color: #4758AB;">library</span>(ggplot2)</span>
+<div class="sourceCode cell-code" id="cb7" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">library</span>(tidySingleCellExperiment)</span>
+<span id="cb7-2"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">library</span>(ggplot2)</span>
 <span id="cb7-3"></span>
-<span id="cb7-4">metadata <span class="sc" style="color: #5E5E5E;">|&gt;</span></span>
+<span id="cb7-4">metadata <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">|&gt;</span></span>
 <span id="cb7-5">  </span>
-<span id="cb7-6">  <span class="co" style="color: #5E5E5E;"># Filter and subset</span></span>
-<span id="cb7-7">  <span class="fu" style="color: #4758AB;">filter</span>(cell_type_harmonised<span class="sc" style="color: #5E5E5E;">==</span><span class="st" style="color: #20794D;">"cd14 mono"</span>) <span class="sc" style="color: #5E5E5E;">|&gt;</span></span>
+<span id="cb7-6">  <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Filter and subset</span></span>
+<span id="cb7-7">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">filter</span>(cell_type_harmonised<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">==</span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"cd14 mono"</span>) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">|&gt;</span></span>
 <span id="cb7-8"></span>
-<span id="cb7-9">  <span class="co" style="color: #5E5E5E;"># Get counts per million for NCAM1 gene</span></span>
-<span id="cb7-10">  <span class="fu" style="color: #4758AB;">get_SingleCellExperiment</span>(<span class="at" style="color: #657422;">assays =</span> <span class="st" style="color: #20794D;">"cpm"</span>, <span class="at" style="color: #657422;">features =</span> <span class="st" style="color: #20794D;">"HLA-A"</span>, <span class="at" style="color: #657422;">cache_directory =</span> cache_dir) <span class="sc" style="color: #5E5E5E;">|&gt;</span> </span>
+<span id="cb7-9">  <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Get counts per million for NCAM1 gene</span></span>
+<span id="cb7-10">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">get_SingleCellExperiment</span>(<span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">assays =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"cpm"</span>, <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">features =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"HLA-A"</span>, <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">cache_directory =</span> cache_dir) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">|&gt;</span> </span>
 <span id="cb7-11">  </span>
-<span id="cb7-12">  <span class="co" style="color: #5E5E5E;"># Plot (styling code is omitted)</span></span>
-<span id="cb7-13">  <span class="fu" style="color: #4758AB;">join_features</span>(<span class="st" style="color: #20794D;">"HLA-A"</span>, <span class="at" style="color: #657422;">shape =</span> <span class="st" style="color: #20794D;">"wide"</span>) <span class="sc" style="color: #5E5E5E;">|&gt;</span> </span>
-<span id="cb7-14">  <span class="fu" style="color: #4758AB;">ggplot</span>(<span class="fu" style="color: #4758AB;">aes</span>( disease, <span class="st" style="color: #20794D;">`</span><span class="at" style="color: #657422;">HLA.A</span><span class="st" style="color: #20794D;">`</span>,<span class="at" style="color: #657422;">color =</span> file_id)) <span class="sc" style="color: #5E5E5E;">+</span></span>
-<span id="cb7-15">  <span class="fu" style="color: #4758AB;">geom_jitter</span>(<span class="at" style="color: #657422;">shape=</span><span class="st" style="color: #20794D;">"."</span>) </span></code></pre></div>
+<span id="cb7-12">  <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Plot (styling code is omitted)</span></span>
+<span id="cb7-13">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">join_features</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"HLA-A"</span>, <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">shape =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"wide"</span>) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">|&gt;</span> </span>
+<span id="cb7-14">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">ggplot</span>(<span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">aes</span>( disease, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">`</span><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">HLA.A</span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">`</span>,<span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">color =</span> file_id)) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span></span>
+<span id="cb7-15">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">geom_jitter</span>(<span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">shape=</span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"."</span>) </span></code></pre></div>
 </div>
 <p><img src="https://bioconductor.github.io/biocblog/posts/2023-02-23-CuratedAtlasQueryR/hlaplot1.png" class="img-fluid" alt="A jitter plot of HLA-A expression in CD14 monocytes from different diseases."></p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb8" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1">metadata <span class="sc" style="color: #5E5E5E;">|&gt;</span> </span>
+<div class="sourceCode cell-code" id="cb8" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1">metadata <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">|&gt;</span> </span>
 <span id="cb8-2">    </span>
-<span id="cb8-3">  <span class="co" style="color: #5E5E5E;"># Filter and subset</span></span>
-<span id="cb8-4">  <span class="fu" style="color: #4758AB;">filter</span>(cell_type_harmonised<span class="sc" style="color: #5E5E5E;">==</span><span class="st" style="color: #20794D;">"nk"</span>) <span class="sc" style="color: #5E5E5E;">|&gt;</span> </span>
+<span id="cb8-3">  <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Filter and subset</span></span>
+<span id="cb8-4">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">filter</span>(cell_type_harmonised<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">==</span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"nk"</span>) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">|&gt;</span> </span>
 <span id="cb8-5"></span>
-<span id="cb8-6">  <span class="co" style="color: #5E5E5E;"># Get counts per million for NCAM1 gene </span></span>
-<span id="cb8-7">  <span class="fu" style="color: #4758AB;">get_SingleCellExperiment</span>(<span class="at" style="color: #657422;">assays =</span> <span class="st" style="color: #20794D;">"cpm"</span>, <span class="at" style="color: #657422;">features =</span> <span class="st" style="color: #20794D;">"NCAM1"</span>, <span class="at" style="color: #657422;">cache_directory =</span> cache_dir) <span class="sc" style="color: #5E5E5E;">|&gt;</span> </span>
+<span id="cb8-6">  <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Get counts per million for NCAM1 gene </span></span>
+<span id="cb8-7">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">get_SingleCellExperiment</span>(<span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">assays =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"cpm"</span>, <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">features =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"NCAM1"</span>, <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">cache_directory =</span> cache_dir) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">|&gt;</span> </span>
 <span id="cb8-8"></span>
-<span id="cb8-9">    <span class="co" style="color: #5E5E5E;"># Plot (styling code is omitted)</span></span>
-<span id="cb8-10">  <span class="fu" style="color: #4758AB;">join_features</span>(<span class="st" style="color: #20794D;">"NCAM1"</span>, <span class="at" style="color: #657422;">shape =</span> <span class="st" style="color: #20794D;">"wide"</span>) <span class="sc" style="color: #5E5E5E;">|&gt;</span> </span>
-<span id="cb8-11">  <span class="fu" style="color: #4758AB;">ggplot</span>(<span class="fu" style="color: #4758AB;">aes</span>( tissue_harmonised, NCAM1,<span class="at" style="color: #657422;">color =</span> file_id)) <span class="sc" style="color: #5E5E5E;">+</span></span>
-<span id="cb8-12">  <span class="fu" style="color: #4758AB;">geom_jitter</span>(<span class="at" style="color: #657422;">shape=</span><span class="st" style="color: #20794D;">"."</span>) </span></code></pre></div>
+<span id="cb8-9">    <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Plot (styling code is omitted)</span></span>
+<span id="cb8-10">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">join_features</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"NCAM1"</span>, <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">shape =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"wide"</span>) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">|&gt;</span> </span>
+<span id="cb8-11">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">ggplot</span>(<span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">aes</span>( tissue_harmonised, NCAM1,<span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">color =</span> file_id)) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span></span>
+<span id="cb8-12">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">geom_jitter</span>(<span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">shape=</span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"."</span>) </span></code></pre></div>
 </div>
 <p><img src="https://bioconductor.github.io/biocblog/posts/2023-02-23-CuratedAtlasQueryR/hlaplot2.png" class="img-fluid" alt="A jitter plot of HLA-A expression in CD14 monocytes from different tissues."></p>
 </section>
@@ -450,7 +711,7 @@ altExpNames(0):</code></pre>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="https://bioconductor.github.io/biocblog/posts/2023-01-22-OutreachyInternship/outreachy_homepage.png" class="img-fluid figure-img"></p>
-<p></p><figcaption class="figure-caption">Outreachy</figcaption><p></p>
+<figcaption class="figure-caption">Outreachy</figcaption>
 </figure>
 </div>
 <p>The application process is in three stages and an applicant chooses 1-2 projects they would like to apply to and makes contributions to them to be eligible for selection.</p>
@@ -465,14 +726,14 @@ altExpNames(0):</code></pre>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="https://bioconductor.github.io/biocblog/posts/2023-01-22-OutreachyInternship/seed_file_Felis_catus_9.0.png" class="img-fluid figure-img"></p>
-<p></p><figcaption class="figure-caption">example seed file for Felis_catus_9.0</figcaption><p></p>
+<figcaption class="figure-caption">example seed file for Felis_catus_9.0</figcaption>
 </figure>
 </div>
 <p>The <a href="https://github.com/Bioconductor/BSgenomeForge">BSgenomeForge project</a> aims to simplify the whole process, by allowing the user to use one function to create the package. It’s a solution that we hope is able to cut down the time one takes to forge a package, and make the process much less confusing and error-prone to less experienced users.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="https://bioconductor.github.io/biocblog/posts/2023-01-22-OutreachyInternship/forgeBSgenomeDataPkgFromNCBI.png" class="img-fluid figure-img"></p>
-<p></p><figcaption class="figure-caption">forgeBSgenomeDataPkgFromNCBI function</figcaption><p></p>
+<figcaption class="figure-caption">forgeBSgenomeDataPkgFromNCBI function</figcaption>
 </figure>
 </div>
 </section>
@@ -496,7 +757,7 @@ altExpNames(0):</code></pre>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="https://bioconductor.github.io/biocblog/posts/2023-01-22-OutreachyInternship/KIRABO HEADSHOT.jpeg" class="img-fluid figure-img"></p>
-<p></p><figcaption class="figure-caption">Kirabo Atuhurira</figcaption><p></p>
+<figcaption class="figure-caption">Kirabo Atuhurira</figcaption>
 </figure>
 </div>
 <p>Hi, my name is Atuhurira Kirabo Kakopo, and I’m from Kampala, Uganda. I am on the cusp of graduating with a bachelor’s degree in Software Engineering. Academically, I thrived in my data science and artificial intelligence classes, which was because I found these topics extra interesting. Because of this, R ended up as my programming language of choice, because it was used extensively in the aforementioned class projects.</p>
@@ -509,7 +770,7 @@ altExpNames(0):</code></pre>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="https://bioconductor.github.io/biocblog/posts/2023-01-22-OutreachyInternship/Beryl Kanali.jpg" class="img-fluid figure-img"></p>
-<p></p><figcaption class="figure-caption">Beryl Kanai</figcaption><p></p>
+<figcaption class="figure-caption">Beryl Kanai</figcaption>
 </figure>
 </div>
 <p>I am Beryl Kanali from Nairobi, Kenya. I graduated in 2021 with a bachelor’s degree in Mathematics and Computer Science which led me to choosing Data Science as a career of choice. I have always been interested in biology, life sciences and research in these areas and even thought of doing medicine at some point but I was more drawn to Mathematics and technology. After school I wanted to practice data science in areas related to biology, life sciences or pharmacy. Unfortunately, Data Science is not widely used in those areas in my country.</p>
@@ -536,7 +797,6 @@ altExpNames(0):</code></pre>
   <category>open science</category>
   <guid>https://bioconductor.github.io/biocblog/posts/2023-01-22-OutreachyInternship/index.html</guid>
   <pubDate>Sun, 22 Jan 2023 00:00:00 GMT</pubDate>
-  <media:content url="https://bioconductor.github.io/biocblog/posts/2023-01-22-OutreachyInternship/outreachy_homepage.png" medium="image" type="image/png" height="73" width="144"/>
 </item>
 <item>
   <title>Bioconductor Hacktoberfest 2022 review and looking ahead to 2023</title>
@@ -573,26 +833,26 @@ altExpNames(0):</code></pre>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="https://bioconductor.github.io/biocblog/posts/2023-01-20-hacktoberfest/biocproject_github.png" class="img-fluid figure-img"></p>
-<p></p><figcaption class="figure-caption">biocproject_github</figcaption><p></p>
+<figcaption class="figure-caption">biocproject_github</figcaption>
 </figure>
 </div>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="https://bioconductor.github.io/biocblog/posts/2023-01-20-hacktoberfest/biocproject_carpentries.png" class="img-fluid figure-img"></p>
-<p></p><figcaption class="figure-caption">biocproject_carpentries</figcaption><p></p>
+<figcaption class="figure-caption">biocproject_carpentries</figcaption>
 </figure>
 </div>
 <p>Community member, <a href="https://github.com/kozo2">Kozo Nishida</a> hosted a Meetup event on <a href="https://bioconductor.github.io/biocblog/">the Bioconductor community blog</a>.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="https://bioconductor.github.io/biocblog/posts/2023-01-20-hacktoberfest/biocblog_github.png" class="img-fluid figure-img"></p>
-<p></p><figcaption class="figure-caption">biocblog_github</figcaption><p></p>
+<figcaption class="figure-caption">biocblog_github</figcaption>
 </figure>
 </div>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="https://bioconductor.github.io/biocblog/posts/2023-01-20-hacktoberfest/biocblog_website.png" class="img-fluid figure-img"></p>
-<p></p><figcaption class="figure-caption">biocblog_website</figcaption><p></p>
+<figcaption class="figure-caption">biocblog_website</figcaption>
 </figure>
 </div>
 </section>
@@ -602,7 +862,7 @@ altExpNames(0):</code></pre>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="https://bioconductor.github.io/biocblog/posts/2023-01-20-hacktoberfest/biocproject_contribution.png" class="img-fluid figure-img"></p>
-<p></p><figcaption class="figure-caption">biocproject_contribution</figcaption><p></p>
+<figcaption class="figure-caption">biocproject_contribution</figcaption>
 </figure>
 </div>
 <p>A participant at the blog meetup, Jeremy Selva <a href="https://github.com/JauntyJJS"><span class="citation" data-cites="JauntyJJS">@JauntyJJS</span></a> from Singapore, created a great contribution for <a href="https://bioconductor.github.io/biocblog/">the biocblog</a>.</p>
@@ -613,7 +873,7 @@ altExpNames(0):</code></pre>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="https://bioconductor.github.io/biocblog/posts/2023-01-20-hacktoberfest/biocblog_contribution.png" class="img-fluid figure-img"></p>
-<p></p><figcaption class="figure-caption">biocproject_contribution</figcaption><p></p>
+<figcaption class="figure-caption">biocproject_contribution</figcaption>
 </figure>
 </div>
 <p>The contributions from the above participants were excellent and we would like to encourage more people to take part in 2023. In support of that, we will create greater awareness of Bioconductor’s plans to participate in Hacktoberfest, such as through this blog, advertise and take suggestions for Bioconductor projects earlier, such as in the new <code>#hacktoberfest</code> channel in <a href="https://slack.bioconductor.org/">Bioconductor Slack</a> and at the <a href="https://support.bioconductor.org/p/9147691/">BioC2023 conference August 2nd-4th</a>. We also learnt that in order to get people to contribute it really helps to have well-defined issues in the repositories, so we aim to do that for Hacktoberfest 2023.</p>
@@ -629,7 +889,6 @@ altExpNames(0):</code></pre>
   <category>events</category>
   <guid>https://bioconductor.github.io/biocblog/posts/2023-01-20-hacktoberfest/index.html</guid>
   <pubDate>Fri, 20 Jan 2023 00:00:00 GMT</pubDate>
-  <media:content url="https://bioconductor.github.io/biocblog/posts/2023-01-20-hacktoberfest/hacktoberfest_website.png" medium="image" type="image/png" height="106" width="144"/>
 </item>
 <item>
   <title>Recommended Awesome Lists for Bioconductor Community: Oct 2022 Edition</title>
@@ -653,12 +912,12 @@ altExpNames(0):</code></pre>
 <ul>
 <li><a href="https://github.com/seandavi/awesome-single-cell" class="uri">https://github.com/seandavi/awesome-single-cell</a></li>
 </ul>
-<div class="callout-tip callout callout-style-default callout-captioned">
+<div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
-<div class="callout-caption-container flex-fill">
+<div class="callout-title-container flex-fill">
 Bioconductor Packages
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
@@ -713,12 +972,12 @@ Bioconductor Packages
 <ul>
 <li><a href="https://github.com/anuragraj/awesome-proteomics" class="uri">https://github.com/anuragraj/awesome-proteomics</a></li>
 </ul>
-<div class="callout-tip callout callout-style-default callout-captioned">
+<div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
-<div class="callout-caption-container flex-fill">
+<div class="callout-title-container flex-fill">
 Bioconductor Packages
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
@@ -735,12 +994,12 @@ Bioconductor Packages
 <ul>
 <li><a href="https://github.com/lifs-tools/awesome-lipidomics" class="uri">https://github.com/lifs-tools/awesome-lipidomics</a></li>
 </ul>
-<div class="callout-tip callout callout-style-default callout-captioned">
+<div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
-<div class="callout-caption-container flex-fill">
+<div class="callout-title-container flex-fill">
 Bioconductor Packages
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
@@ -777,12 +1036,12 @@ Bioconductor Packages
 <li><p><a href="https://github.com/crazyhottommy/awesome_spatial_omics" class="uri">https://github.com/crazyhottommy/awesome_spatial_omics</a></p></li>
 <li><p><a href="https://github.com/drighelli/awesome-spatial-omics" class="uri">https://github.com/drighelli/awesome-spatial-omics</a></p></li>
 </ul>
-<div class="callout-tip callout callout-style-default callout-captioned">
+<div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
-<div class="callout-caption-container flex-fill">
+<div class="callout-title-container flex-fill">
 Bioconductor Packages
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
@@ -807,12 +1066,12 @@ Bioconductor Packages
 <ul>
 <li><a href="https://github.com/mikelove/awesome-multi-omics" class="uri">https://github.com/mikelove/awesome-multi-omics</a></li>
 </ul>
-<div class="callout-tip callout callout-style-default callout-captioned">
+<div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
-<div class="callout-caption-container flex-fill">
+<div class="callout-title-container flex-fill">
 Bioconductor Packages
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
@@ -871,12 +1130,12 @@ Bioconductor Packages
 <ul>
 <li><a href="https://github.com/hallvaaw/awesome-biological-image-analysis" class="uri">https://github.com/hallvaaw/awesome-biological-image-analysis</a></li>
 </ul>
-<div class="callout-tip callout callout-style-default callout-captioned">
+<div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-6-contents" aria-controls="callout-6" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
-<div class="callout-caption-container flex-fill">
+<div class="callout-title-container flex-fill">
 Bioconductor Packages
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
@@ -893,12 +1152,12 @@ Bioconductor Packages
 <ul>
 <li><a href="https://github.com/fepegar/awesome-medical-imaging" class="uri">https://github.com/fepegar/awesome-medical-imaging</a></li>
 </ul>
-<div class="callout-important callout callout-style-default callout-captioned">
+<div class="callout callout-style-default callout-important callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
-<div class="callout-caption-container flex-fill">
+<div class="callout-title-container flex-fill">
 No Bioconductor packages are found in this list
 </div>
 </div>
@@ -912,12 +1171,12 @@ No Bioconductor packages are found in this list
 <ul>
 <li><a href="https://github.com/cytodata/awesome-cytodata" class="uri">https://github.com/cytodata/awesome-cytodata</a></li>
 </ul>
-<div class="callout-tip callout callout-style-default callout-captioned">
+<div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-8-contents" aria-controls="callout-8" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
-<div class="callout-caption-container flex-fill">
+<div class="callout-title-container flex-fill">
 Bioconductor Packages
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
@@ -937,12 +1196,12 @@ Bioconductor Packages
 <li><p><a href="https://github.com/keller-mark/awesome-biological-visualizations" class="uri">https://github.com/keller-mark/awesome-biological-visualizations</a></p></li>
 <li><p><a href="http://genocat.tools/tools/3dviewer/" class="uri">http://genocat.tools/tools/3dviewer/</a></p></li>
 </ul>
-<div class="callout-tip callout callout-style-default callout-captioned">
+<div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-9-contents" aria-controls="callout-9" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
-<div class="callout-caption-container flex-fill">
+<div class="callout-title-container flex-fill">
 Bioconductor Packages
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
@@ -969,12 +1228,12 @@ Bioconductor Packages
 <ul>
 <li><a href="https://github.com/mcanouil/awesome-quarto" class="uri">https://github.com/mcanouil/awesome-quarto</a></li>
 </ul>
-<div class="callout-note callout callout-style-default callout-captioned">
+<div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
-<div class="callout-caption-container flex-fill">
+<div class="callout-title-container flex-fill">
 Note
 </div>
 </div>
@@ -1012,12 +1271,12 @@ Note
 <ul>
 <li><a href="https://gitea.com/gitea/awesome-gitea" class="uri">https://gitea.com/gitea/awesome-gitea</a></li>
 </ul>
-<div class="callout-note callout callout-style-default callout-captioned">
+<div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
-<div class="callout-caption-container flex-fill">
+<div class="callout-title-container flex-fill">
 Note
 </div>
 </div>
@@ -1045,12 +1304,12 @@ Note
 <ul>
 <li><a href="https://github.com/IndrajeetPatil/awesome-r-pkgtools" class="uri">https://github.com/IndrajeetPatil/awesome-r-pkgtools</a></li>
 </ul>
-<div class="callout-tip callout callout-style-default callout-captioned">
+<div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-12-contents" aria-controls="callout-12" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
-<div class="callout-caption-container flex-fill">
+<div class="callout-title-container flex-fill">
 Bioconductor Packages
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
@@ -1067,12 +1326,12 @@ Bioconductor Packages
 <ul>
 <li><a href="https://github.com/NLeSC/awesome-research-software-registries" class="uri">https://github.com/NLeSC/awesome-research-software-registries</a></li>
 </ul>
-<div class="callout-note callout callout-style-default callout-captioned">
+<div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
-<div class="callout-caption-container flex-fill">
+<div class="callout-title-container flex-fill">
 Note
 </div>
 </div>
@@ -1179,7 +1438,6 @@ Note
   <category>Open Science</category>
   <guid>https://bioconductor.github.io/biocblog/posts/2022-01-18-metaRbolomics-2021/index.html</guid>
   <pubDate>Tue, 18 Jan 2022 00:00:00 GMT</pubDate>
-  <media:content url="https://bioconductor.github.io/biocblog/posts/2022-01-18-metaRbolomics-2021/MLlambrich.jpg" medium="image" type="image/jpeg"/>
 </item>
 <item>
   <title>Celebrating 20 years of Bioconductor</title>
@@ -1196,7 +1454,7 @@ Note
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="https://bioconductor.github.io/biocblog/posts/2022-01-14-20years/bioconductor-website-2002.png" class="img-fluid figure-img"></p>
-<p></p><figcaption class="figure-caption">The Bioconductor website in 2002.</figcaption><p></p>
+<figcaption class="figure-caption">The Bioconductor website in 2002.</figcaption>
 </figure>
 </div>
 <p>OK, well, taking a brief look at the Wayback machine snapshot, let’s just take a second to acknowledge that at its inception (Bioconductor Release 1.0: May 2, 2002), the Bioconductor project included just 15 packages, broadly classified as:</p>
@@ -1220,7 +1478,7 @@ Note
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="https://bioconductor.github.io/biocblog/posts/2022-01-14-20years/bioconductor-website-2022.png" class="img-fluid figure-img"></p>
-<p></p><figcaption class="figure-caption">The Bioconductor website in 2022.</figcaption><p></p>
+<figcaption class="figure-caption">The Bioconductor website in 2022.</figcaption>
 </figure>
 </div>
 <p>That collection of core-maintained and community-contributed packages has grown so large that there is now an entire hierarchy of terms to categorise those packages, called <a href="https://www.bioconductor.org/packages/release/BiocViews.html">BiocViews</a>. Check them out!</p>
@@ -1229,7 +1487,7 @@ Note
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="https://bioconductor.github.io/biocblog/posts/2022-01-14-20years/cover.png" class="img-fluid figure-img"></p>
-<p></p><figcaption class="figure-caption">Slides of photos celebrating 20 years of Bioconductor (link above).</figcaption><p></p>
+<figcaption class="figure-caption">Slides of photos celebrating 20 years of Bioconductor (link above).</figcaption>
 </figure>
 </div>
 <section id="references" class="level1">
@@ -1245,7 +1503,6 @@ Note
   <category>events</category>
   <guid>https://bioconductor.github.io/biocblog/posts/2022-01-14-20years/index.html</guid>
   <pubDate>Fri, 14 Jan 2022 00:00:00 GMT</pubDate>
-  <media:content url="https://bioconductor.github.io/biocblog/posts/2022-01-14-20years/cover.png" medium="image" type="image/png" height="108" width="144"/>
 </item>
 <item>
   <title>BioC Asia 2021 は言語障壁の緩和に挑戦し、多様性を実現した</title>
@@ -1293,7 +1550,6 @@ Note
   <category>Diversity</category>
   <guid>https://bioconductor.github.io/biocblog/posts/2022-01-12-biocasia2021-ja/index.html</guid>
   <pubDate>Wed, 12 Jan 2022 00:00:00 GMT</pubDate>
-  <media:content url="https://bioconductor.github.io/biocblog/posts/2022-01-12-biocasia2021-ja/Zoom_caption.png" medium="image" type="image/png" height="108" width="144"/>
 </item>
 <item>
   <title>BioC Asia 2021 challenged to overcoming language barriers and respected diversity</title>
