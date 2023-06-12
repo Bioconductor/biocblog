@@ -11,6 +11,12 @@ categories: tech-notes
 
 ![Bioconductor on Linux ARM64](bioconductor_logo_cmyk.png)
 
+`ARM64`, also known as `aarch64`, architecture is used in almost all 
+mobile devices because of its lower electricity consumption 
+compared to `x86_64`. In the last few years it is also being 
+introduced more and more in server/cloud environments for the same
+reason.
+
 Since June 8th 2023 the Bioconductor project has added a Linux ARM64 builder to 
 the daily [builds](https://bioconductor.org/checkResults/3.18/bioc-LATEST/long-report.html)
 
