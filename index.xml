@@ -10,7 +10,54 @@
 <atom:link href="https://bioconductor.github.io/biocblog/index.xml" rel="self" type="application/rss+xml"/>
 <description>A blog for the Bioconductor community!</description>
 <generator>quarto-1.3.361</generator>
-<lastBuildDate>Fri, 09 Jun 2023 00:00:00 GMT</lastBuildDate>
+<lastBuildDate>Fri, 16 Jun 2023 00:00:00 GMT</lastBuildDate>
+<item>
+  <title>Bioconductor’s Participation in Galaxy Smorgasbord 2023: A Recap</title>
+  <dc:creator>Maria Doyle</dc:creator>
+  <dc:creator>Alex Mahmoud</dc:creator>
+  <link>https://bioconductor.github.io/biocblog/posts/2023-06-16-smorgasbord-recap/index.html</link>
+  <description><![CDATA[ 
+
+
+
+
+<p>We’re delighted to share that Bioconductor was part of the <a href="https://gallantries.github.io/video-library/events/smorgasbord3/">Galaxy Smörgåsbord</a> global online training for the first time this year. Over the week of May 22-26, we extended the power of R and Bioconductor to a wider, global audience.</p>
+<section id="tutorials-and-engagement" class="level2">
+<h2 class="anchored" data-anchor-id="tutorials-and-engagement">Tutorials and Engagement</h2>
+<p>Our contribution to the Smorgasbord event centered on a series of comprehensive Bioconductor tutorials available on <a href="https://gallantries.github.io/video-library/modules/bioconductor">this page</a>. This presented an excellent opportunity for learners to explore Bioconductor’s robust capabilities in bioinformatics and computational biology. The tutorials were facilitated through the Galaxy platform, with all necessary packages pre-installed for a smooth, hassle-free learning experience. In a collaborative spirit, instructors (acknowledged below) volunteered to answer learners’ questions on their respective tutorials through the Galaxy Training Network Slack during the training week. A total of 13 Bioconductor tutorials were offered, resulting in 62 registered users, 128 workshop launches, and 27 R histories submitted for Smorgasbord certificate.</p>
+</section>
+<section id="competition" class="level2">
+<h2 class="anchored" data-anchor-id="competition">Competition</h2>
+<p>To further encourage active participation, we ran a friendly competition. Participants who completed a Bioconductor tutorial and submitted an R history before June 4th were eligible to win a free virtual registration to the Bioconductor conference <a href="https://bioc2023.bioconductor.org/">BioC2023</a>. We congratulate the winner, Paul Yu, a Master’s student from De La Salle University, Manila, Philippines!</p>
+</section>
+<section id="our-new-infrastructure" class="level2">
+<h2 class="anchored" data-anchor-id="our-new-infrastructure">Our New Infrastructure</h2>
+<p>The Smörgåsbord event also marked the public launch of the new Bioconductor Workshop platform, a successor to the <a href="https://github.com/seandavi/Orchestra">Orchestra platform</a>. The new platform (<a href="https://workshop.bioconductor.org/">workshop.bioconductor.org</a>) is a Kubernetes deployment of a Galaxy fork, notably leveraging the Kubernetes Interactive Tools runner to launch Bioconductor RStudio-based containers, each representing a workshop. This stack is running on a cluster of Jetstream2 nodes, supported by NSF ACCESS allocation BIR190004. This platform will be employed for the annual Bioconductor conference <a href="https://bioc2023.bioconductor.org/">BioC2023</a>, and the <a href="https://www.iscb.org/ismbeccb2023">ISMB/ECCB 2023</a> conference.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://bioconductor.github.io/biocblog/posts/2023-06-16-smorgasbord-recap/bioconductor-galaxy.png" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">Bioconductor Galaxy Platform</figcaption>
+</figure>
+</div>
+</section>
+<section id="looking-ahead" class="level2">
+<h2 class="anchored" data-anchor-id="looking-ahead">Looking Ahead</h2>
+<p>By adopting Galaxy, Bioconductor hopes to broaden both the breadth of workshops available in the Galaxy Training Network, as well as the audience of Bioconductor workshops. A broader range of learning opportunities will empower scientists to excel in their research and tackle more complex questions with greater confidence and efficiency. We also hope to work with the usegalaxy.* administrators to make Bioconductor workshops available on all usegalaxy instances. We look forward to seeing more learners engage with Bioconductor tutorials, and we are excited about the potential for Bioconductor to contribute to more global learning initiatives like this.</p>
+</section>
+<section id="acknowledgements" class="level2">
+<h2 class="anchored" data-anchor-id="acknowledgements">Acknowledgements</h2>
+<p>A big thank you to all <a href="https://gallantries.github.io/video-library/modules/bioconductor">the Bioconductor Smörgåsbord instructors</a>, Laurent Gatto, Charlotte Soneson, Kevin Rue-Albrecht, Federico Marini, Stefano Mangiola, Aidan Lakshman, Chloe Mirzayi, Maddy Griswold, Megan Vandenberg, Stephanie Zimmerman, Matt Ritchie, Yunshun Chen, Dharmesh Bhuva, Mike Love, Alan Murphy, all the helpers, including our <a href="https://bioconductor.github.io/biocblog/posts/2023-02-24-carpentries-update/">Bioconductor Carpentries Instructors</a>, and the Smorgasbord organizers, Saskia Hiltemann and Helena Rasche.</p>
+
+
+</section>
+
+ ]]></description>
+  <category>events</category>
+  <category>education</category>
+  <guid>https://bioconductor.github.io/biocblog/posts/2023-06-16-smorgasbord-recap/index.html</guid>
+  <pubDate>Fri, 16 Jun 2023 00:00:00 GMT</pubDate>
+  <media:content url="https://bioconductor.github.io/biocblog/posts/2023-06-16-smorgasbord-recap/bioconductor-galaxy.png" medium="image" type="image/png" height="98" width="144"/>
+</item>
 <item>
   <title>Emulated build and test of Bioconductor packages for Linux ARM64</title>
   <dc:creator>Martin Grigorov</dc:creator>
