@@ -14,7 +14,7 @@ categories:
 image: "bioconductor-galaxy.png"
 ---
 
-We're delighted to share that Bioconductor was part of the [Galaxy Smorgasbord](https://gallantries.github.io/video-library/events/smorgasbord3/) global online training for the first time this year. Over the week of May 22-26, we extended the power of R and Bioconductor to a wider, global audience.
+We're delighted to share that Bioconductor was part of the [Galaxy Smörgåsbord](https://gallantries.github.io/video-library/events/smorgasbord3/) global online training for the first time this year. Over the week of May 22-26, we extended the power of R and Bioconductor to a wider, global audience.
 
 ## Tutorials and Engagement
 
