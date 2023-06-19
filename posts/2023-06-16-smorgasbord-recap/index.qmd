@@ -37,5 +37,5 @@ By adopting Galaxy, Bioconductor hopes to broaden both the breadth of workshops 
 
 ## Acknowledgements
 
-A big thank you to all [the Bioconductor Smorgasbord instructors](https://gallantries.github.io/video-library/modules/bioconductor), Laurent Gatto, Charlotte Soneson, Kevin Rue-Albrecht, Federico Marini, Stefano Mangiola, Aidan Lakshman, Chloe Mirzayi, Maddy Griswold, Megan Vandenberg, Stephanie Zimmerman, Matt Ritchie, Yunshun Chen, Dharmesh Bhuva, Mike Love, Alan Murphy, all the helpers, including our [Bioconductor Carpentries Instructors](https://bioconductor.github.io/biocblog/posts/2023-02-24-carpentries-update/), and the Smorgasbord organizers, Helena Rasche and Saskia Hiltemann.
+A big thank you to all [the Bioconductor Smörgåsbord instructors](https://gallantries.github.io/video-library/modules/bioconductor), Laurent Gatto, Charlotte Soneson, Kevin Rue-Albrecht, Federico Marini, Stefano Mangiola, Aidan Lakshman, Chloe Mirzayi, Maddy Griswold, Megan Vandenberg, Stephanie Zimmerman, Matt Ritchie, Yunshun Chen, Dharmesh Bhuva, Mike Love, Alan Murphy, all the helpers, including our [Bioconductor Carpentries Instructors](https://bioconductor.github.io/biocblog/posts/2023-02-24-carpentries-update/), and the Smorgasbord organizers, Saskia Hiltemann and Helena Rasche.
 
