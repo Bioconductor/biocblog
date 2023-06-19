@@ -26,7 +26,7 @@ To further encourage active participation, we ran a friendly competition. Partic
 
 ## Our New Infrastructure
 
-The Smorgasbord event also marked the public launch of the new Bioconductor Workshop platform, a successor to the [Orchestra platform](https://github.com/seandavi/Orchestra). The new platform ([workshop.bioconductor.org](https://workshop.bioconductor.org/)) is a Kubernetes deployment of a Galaxy fork, notably leveraging the Kubernetes Interactive Tools runner to launch Bioconductor RStudio-based containers, each representing a workshop. This stack is running on a cluster of Jetstream2 nodes, supported by NSF ACCESS allocation BIR190004. This platform will be employed for the annual Bioconductor conference [BioC2023](https://bioc2023.bioconductor.org/), and the [ISMB/ECCB 2023](https://www.iscb.org/ismbeccb2023) conference.
+The Smörgåsbord event also marked the public launch of the new Bioconductor Workshop platform, a successor to the [Orchestra platform](https://github.com/seandavi/Orchestra). The new platform ([workshop.bioconductor.org](https://workshop.bioconductor.org/)) is a Kubernetes deployment of a Galaxy fork, notably leveraging the Kubernetes Interactive Tools runner to launch Bioconductor RStudio-based containers, each representing a workshop. This stack is running on a cluster of Jetstream2 nodes, supported by NSF ACCESS allocation BIR190004. This platform will be employed for the annual Bioconductor conference [BioC2023](https://bioc2023.bioconductor.org/), and the [ISMB/ECCB 2023](https://www.iscb.org/ismbeccb2023) conference.
 
 ![Bioconductor Galaxy Platform](bioconductor-galaxy.png)
 
