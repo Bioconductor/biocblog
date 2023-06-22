@@ -1,0 +1,40 @@
+---
+title: "Reimagining Bioconductor.org: The Path to Our Website Redesign"
+description: |
+  Discover the journey of Bioconductor's website redesign project. Learn about the process, from initial planning to collaboration with NearForm as we shape the future of Bioconductor.org.
+author:
+  - name: Maria Doyle
+    url: https://github.com/mblue9
+date: 2023-06-22
+categories:
+  - Bioconductor
+image: "BC Website redesign - Project timeline.jpg"
+---
+
+We're thrilled to announce that Bioconductor is embarking on a significant redesign of its website, [bioconductor.org](https://bioconductor.org), and we want to give you a behind-the-scenes look at our journey so far. 
+
+## Fueling the Transformation with CZI Grant
+The project has been made possible through [a grant from the Chan Zuckerberg Initiative (CZI)](https://chanzuckerberg.com/eoss/proposals/bioconductor-high-quality-training-and-support-for-a-worldwide-community/), which was secured by the co-chair of the Bioconductor [Community Advisory Board (CAB)](http://bioconductor.org/about/community-advisory-board/), Aedin Culhane.
+
+## The Genesis of #biocwebsite Channel
+In April 2021, we initiated a dedicated [Bioconductor Slack](https://slack.bioconductor.org/) #biocwebsite channel to facilitate discussions and updates about the website redesign. It served as the genesis of what would become a comprehensive project.
+
+## Forming the Website Working Group
+In November 2022, after hiring the Bioconductor Community Manager, Maria Doyle, we solidified our commitment to this endeavor by forming a dedicated [Website Working Group](https://workinggroups.bioconductor.org/currently-active-working-groups-committees.html#website). This team of driven individuals took the reins and began the task of identifying the initial requirements, thereby defining the scope of the project.
+
+## Partnering with NearForm
+To bring our vision to life, we brought [NearForm](https://www.nearform.com/) on board, a company well-versed in creating exceptional digital experiences and [passionate about open source](https://www.nearform.com/about/). We're currently in the first phase of the project, see figure below, collaborating closely with NearForm on the essential task of design of the core pages.
+
+![Project timeline - Phase 1](BC Website redesign - Project timeline.jpg)
+
+## Launching the User Survey
+Understanding the needs of our diverse community is paramount to our redesign efforts. As such, we initiated a [user survey](https://t.maze.co/169169456) running from June 13th-23rd, to gain valuable insights into your experiences, preferences, and needs. The feedback we gather will inform the new design, helping us create a user-friendly and intuitive Bioconductor.org.
+
+## From User Insights to UX Testing
+Following the survey, we will carry out rigorous UX testing to ensure that our proposed design meets the varied needs of our community effectively. We anticipate showcasing our design and gathering final feedback during [BioC2023](https://bioc2023.bioconductor.org/), Bioconductor's annual conference.
+
+## Maintaining Community Engagement
+Keeping our community informed and involved is important to us. Hence, we'll continue to provide updates on our progress through the Bioconductor Slack #biocwebsite channel.
+
+## Looking Forward
+As we embark on this exciting journey, we look forward to your continued participation and support. Together, let's reimagine Bioconductor.org!

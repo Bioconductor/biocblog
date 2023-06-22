@@ -6,7 +6,7 @@ author:
   - name: J Wokaty
     url: https://github.com/jwokaty
 date: 2023-03-01
-categories: BioC
+categories: Bioconductor
 ---
 
 On March 8th, Bioconductor will rename the default branch on
