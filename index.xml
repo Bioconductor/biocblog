@@ -10,7 +10,64 @@
 <atom:link href="https://bioconductor.github.io/biocblog/index.xml" rel="self" type="application/rss+xml"/>
 <description>A blog for the Bioconductor community!</description>
 <generator>quarto-1.3.361</generator>
-<lastBuildDate>Fri, 16 Jun 2023 00:00:00 GMT</lastBuildDate>
+<lastBuildDate>Thu, 22 Jun 2023 00:00:00 GMT</lastBuildDate>
+<item>
+  <title>Reimagining Bioconductor.org: The Path to Our Website Redesign</title>
+  <dc:creator>Maria Doyle</dc:creator>
+  <link>https://bioconductor.github.io/biocblog/posts/2023-06-22-website-redesign/index.html</link>
+  <description><![CDATA[ 
+
+
+
+
+<p>We’re thrilled to announce that Bioconductor is embarking on a significant redesign of its website, <a href="https://bioconductor.org">bioconductor.org</a>, and we want to give you a behind-the-scenes look at our journey so far.</p>
+<section id="fueling-the-transformation-with-czi-grant" class="level2">
+<h2 class="anchored" data-anchor-id="fueling-the-transformation-with-czi-grant">Fueling the Transformation with CZI Grant</h2>
+<p>The project has been made possible through <a href="https://chanzuckerberg.com/eoss/proposals/bioconductor-high-quality-training-and-support-for-a-worldwide-community/">a grant from the Chan Zuckerberg Initiative (CZI)</a>, which was secured by the co-chair of the Bioconductor <a href="http://bioconductor.org/about/community-advisory-board/">Community Advisory Board (CAB)</a>, Aedin Culhane.</p>
+</section>
+<section id="the-genesis-of-biocwebsite-channel" class="level2">
+<h2 class="anchored" data-anchor-id="the-genesis-of-biocwebsite-channel">The Genesis of #biocwebsite Channel</h2>
+<p>In April 2021, we initiated a dedicated <a href="https://slack.bioconductor.org/">Bioconductor Slack</a> #biocwebsite channel to facilitate discussions and updates about the website redesign. It served as the genesis of what would become a comprehensive project.</p>
+</section>
+<section id="forming-the-website-working-group" class="level2">
+<h2 class="anchored" data-anchor-id="forming-the-website-working-group">Forming the Website Working Group</h2>
+<p>In November 2022, after hiring the Bioconductor Community Manager, Maria Doyle, we solidified our commitment to this endeavor by forming a dedicated <a href="https://workinggroups.bioconductor.org/currently-active-working-groups-committees.html#website">Website Working Group</a>. This team of driven individuals took the reins and began the task of identifying the initial requirements, thereby defining the scope of the project.</p>
+</section>
+<section id="partnering-with-nearform" class="level2">
+<h2 class="anchored" data-anchor-id="partnering-with-nearform">Partnering with NearForm</h2>
+<p>To bring our vision to life, we brought <a href="https://www.nearform.com/">NearForm</a> on board, a company well-versed in creating exceptional digital experiences and <a href="https://www.nearform.com/about/">passionate about open source</a>. We’re currently in the first phase of the project, see figure below, collaborating closely with NearForm on the essential task of design of the core pages.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://bioconductor.github.io/biocblog/posts/2023-06-22-website-redesign/BC Website redesign - Project timeline.jpg" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">Project timeline - Phase 1</figcaption>
+</figure>
+</div>
+</section>
+<section id="launching-the-user-survey" class="level2">
+<h2 class="anchored" data-anchor-id="launching-the-user-survey">Launching the User Survey</h2>
+<p>Understanding the needs of our diverse community is paramount to our redesign efforts. As such, we initiated a <a href="https://t.maze.co/169169456">user survey</a> running from June 13th-23rd, to gain valuable insights into your experiences, preferences, and needs. The feedback we gather will inform the new design, helping us create a user-friendly and intuitive Bioconductor.org.</p>
+</section>
+<section id="from-user-insights-to-ux-testing" class="level2">
+<h2 class="anchored" data-anchor-id="from-user-insights-to-ux-testing">From User Insights to UX Testing</h2>
+<p>Following the survey, we will carry out rigorous UX testing to ensure that our proposed design meets the varied needs of our community effectively. We anticipate showcasing our design and gathering final feedback during <a href="https://bioc2023.bioconductor.org/">BioC2023</a>, Bioconductor’s annual conference.</p>
+</section>
+<section id="maintaining-community-engagement" class="level2">
+<h2 class="anchored" data-anchor-id="maintaining-community-engagement">Maintaining Community Engagement</h2>
+<p>Keeping our community informed and involved is important to us. Hence, we’ll continue to provide updates on our progress through the Bioconductor Slack #biocwebsite channel.</p>
+</section>
+<section id="looking-forward" class="level2">
+<h2 class="anchored" data-anchor-id="looking-forward">Looking Forward</h2>
+<p>As we embark on this exciting journey, we look forward to your continued participation and support. Together, let’s reimagine Bioconductor.org!</p>
+
+
+</section>
+
+ ]]></description>
+  <category>Bioconductor</category>
+  <guid>https://bioconductor.github.io/biocblog/posts/2023-06-22-website-redesign/index.html</guid>
+  <pubDate>Thu, 22 Jun 2023 00:00:00 GMT</pubDate>
+  <media:content url="https://bioconductor.github.io/biocblog/posts/2023-06-22-website-redesign/BC Website redesign - Project timeline.jpg" medium="image" type="image/jpeg"/>
+</item>
 <item>
   <title>Bioconductor’s Participation in Galaxy Smorgasbord 2023: A Recap</title>
   <dc:creator>Maria Doyle</dc:creator>
@@ -197,7 +254,7 @@ git push upstream main:devel</code></pre>
 </section>
 
  ]]></description>
-  <category>BioC</category>
+  <category>Bioconductor</category>
   <guid>https://bioconductor.github.io/biocblog/posts/2023-03-01-transition-to-devel/index.html</guid>
   <pubDate>Wed, 01 Mar 2023 00:00:00 GMT</pubDate>
 </item>
