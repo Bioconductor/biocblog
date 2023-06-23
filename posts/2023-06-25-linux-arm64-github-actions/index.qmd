@@ -1,0 +1,46 @@
+---
+title: "Testing Packages on Linux ARM64 with GitHub Actions"
+description: |
+  How to use GitHub Actions to build and test Bioconductor packages on 
+  Linux ARM64 archictecture.
+author:
+  name: "Mike L. Smith"
+  url: https://github.com/grimbough
+categories: tech-notes
+---
+
+![Bioconductor on Linux ARM64](../2023-06-09-debug-linux-arm64-on-docker/bioconductor_logo_cmyk.png)
+
+The Bioconductor Build System now includes routine package testing on Linux ARM64, but
+relatively low frequency of testing means it can take a while to identify and fix
+a problem using the build system alone if one occurs with your package.  
+
+The previous blog post "[Emulated build and test of Bioconductor packages for Linux ARM64](https://bioconductor.github.io/biocblog/posts/2023-06-09-debug-linux-arm64-on-docker/)" described how one can use Docker and architecture emulation to build, test, and debug a
+Bioconductor package for running on Linux ARM64 architecture when you only have
+access to local x86 hardware.
+
+However such manual testing can be frustrating to run as a package developer, either
+because it's an extra task you have to run frequently, or because you only do it 
+occasionally and forget the steps involved.  Ideally such testing would happen
+automatically whenever you make changes to a package.  In this article we build on these previously presented ideas to describe one approach for testing package on Linux ARM64 using a continuous integration environment on GitHub Actions.
+
+# Workflow Strategy
+
+The first thing to remember when using architecture emulation is that everything works
+much slower than when running natively - typically by at least an order of magnitude.
+This influences some of the decisions made during this workflow regarding which containers
+to use and what we want to cache between workflow steps.  Some operations that would be 
+acceptable in a standard workflow become painfully slow under emulation, and we try reduce the number of slow steps.
+
+The first of these is to use a modified version of the
+[Bioconductor:devel](https://github.com/Bioconductor/bioconductor_docker/pkgs/container/bioconductor/102293490?tag=devel-amd64) 
+docker image which has TinyTex pre-installed.  This allows use to compile the 
+package manual pages and and PDF vignettes during testing.  Installing TinyTex
+and the required LaTeX packages takes approximately 10 minutes on our emulated
+system, so there is a real responsiveness benefit to using an image with it
+already installed.  The modified image can be found at [ghcr.io/grimbough/bioc-with-tinytex:devel-arm64](ghcr.io/grimbough/bioc-with-tinytex:devel-arm64)
+
+**Note: You could probably achieve the same result by running `R CMD check` with the arguments `--no-manual` and `--no-build-vignettes` however I would rather run the 
+complete testing process in case there is problematic code in either the manual page 
+examples or vignette.
+
