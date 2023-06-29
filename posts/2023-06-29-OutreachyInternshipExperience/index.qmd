@@ -1,0 +1,104 @@
+---
+title: "Our Journey as Outreachy Interns with Bioconductor"
+description: |
+  Bioconductor participated in the Outreachy Internship program for the May 2023 cohort. Join us as we share our enriching experience working on various projects at Bioconductor and delve into the world of open science.
+author:
+  - name: Sonali Kumari
+    url: https://github.com/sonali8434
+date: 2023-06-29
+categories:
+  - open science
+---
+
+## Bioconductor: Empowering Open Science
+
+During the application period for the May 2023 internship round,
+Bioconductor opened its doors to the Outreachy Internship program. In this blog
+post, we will provide an overview of our projects and share our experiences thus
+far, exploring the fascinating realm of Bioconductor.
+
+### The Sweave2Rmd Project: Modernizing Documentation
+
+One of the noteworthy projects undertaken at Bioconductor is the [sweave2rmd
+project](https://github.com/Bioconductor/sweave2rmd), which focuses on
+converting vignettes from Sweave to R Markdown. Traditionally, Bioconductor
+packages' documentation has been written using a combination of LaTeX and R
+code, resulting in PDF files. Our objective is to transform these files into R
+Markdown format and render them as HTML files.
+
+The shift towards Markdown and HTML files brings several advantages. HTML files
+are more accessible and easily shareable, as they can be viewed online or
+offline without the need for specialized applications. Moreover, they offer
+enhanced interactivity by enabling the inclusion of links within the document,
+facilitating seamless navigation in lengthy texts. Markdown and HTML files also
+ensure readability across various devices, eliminating the need for
+reformatting. Given that Bioconductor has a rich history spanning over two
+decades, the sweave2rmd project plays a crucial role in modernizing a
+significant number of "mature" (older) vignettes.
+
+In addition, R Markdown offers a simpler syntax compared to LaTeX, making it
+more user-friendly, particularly for beginners.
+
+- Sweave: Sweave allows the integration of R code within LaTeX documents,
+generating PDF files that incorporate narrative, analysis, graphics, code,
+and computational results.
+
+- R Markdown (Rmd): RMarkdown files, on the other hand, enable the combination of
+Markdown and R code. They provide a versatile platform for incorporating R
+code seamlessly into the document.
+
+## Our Journey Interning with Bioconductor
+
+Through the Outreachy program, we have been interning at Bioconductor for over a
+month now. This experience has been incredibly rewarding, as it has not only
+exposed us to the world of open science and open source but also taught us how
+to collaborate effectively in a remote work environment. Despite the initial
+challenge of familiarizing ourselves with various concepts within a limited
+timeframe, our journey has been made smoother than anticipated, thanks to our
+exceptional mentors, Jen Wokaty and Hervé Pagès.
+
+### Sonali's Experience: Making Strides with Sweave2Rmd
+
+![Sonali Kumari](Sonali Kumari.jpg)
+
+I'm Sonali Kumari, a B.Tech student specializing in Electronics and
+Communication Engineering with a passion for Artificial Intelligence. Currently
+pursuing my studies at IGDTUW in Delhi, I find immense joy in working with
+open-source organizations that offer unique opportunities for learning,
+collaboration, and remarkable achievements, even in remote settings. With a
+diverse range of interests spanning technology and open science, I strive to
+merge technical expertise with a strong inclination towards research.
+
+When I came across Bioconductor and learned about their work, I was immediately
+captivated. Among the various projects available, sweave2rmd stood out to me,
+aligning perfectly with my domain knowledge and interests. It was the project I
+wholeheartedly contributed to.
+
+My experience at Bioconductor has been nothing short of remarkable. In just over
+a month, I have witnessed significant improvements in my coding skills,
+communication abilities, and teamwork. Open source development requires
+continuous learning, and I have embraced this opportunity to expand my
+knowledge, including honing my Git skills, mastering R programming, and writing
+comprehensive documentation. Throughout this journey, my mentor Jennifer Wokaty
+has been an incredible source of support and guidance. Moreover, the
+Bioconductor team has been extremely helpful, providing valuable feedback and
+promptly addressing any challenges I have faced.
+
+Working on various Bioconductor packages has allowed me to explore and learn
+from the vibrant community. I now possess a deeper understanding of package
+development and documentation creation.
+
+I eagerly look forward to continuing my learning journey, making impactful
+contributions, and ensuring the success of the sweave2rmd project. If you're
+interested in reading more about my experience as an Outreachy intern with
+Bioconductor, I invite you to visit my [blog](https://dev.to/sonali8434).
+
+By participating in the Outreachy program at Bioconductor, we have immersed
+ourselves in the captivating world of open science and open source. Our
+projects, such as the sweave2rmd initiative, have not only enhanced our
+technical skills but also empowered us to contribute to the advancement of open
+science. We extend our heartfelt gratitude to Bioconductor, our mentors, and the
+entire community for this invaluable experience.
+
+Stay tuned for more updates and insights as we continue our journey with
+Bioconductor, shaping the future of open science together.
