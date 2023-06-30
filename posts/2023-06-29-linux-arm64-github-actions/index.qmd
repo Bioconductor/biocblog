@@ -6,7 +6,10 @@ description: |
 author:
   name: "Mike L. Smith"
   url: https://github.com/grimbough
-categories: tech-notes, GitHub Actions, ARM64
+categories:
+  - tech-notes
+  - GitHub Actions
+  - ARM64
 ---
 
 ![Bioconductor on Linux ARM64](../2023-06-09-debug-linux-arm64-on-docker/bioconductor_logo_cmyk.png)
