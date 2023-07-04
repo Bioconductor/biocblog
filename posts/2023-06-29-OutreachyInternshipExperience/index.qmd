@@ -17,36 +17,6 @@ Bioconductor opened its doors to the Outreachy Internship program. In this blog
 post, we will provide an overview of our projects and share our experiences thus
 far, exploring the fascinating realm of Bioconductor.
 
-### The Sweave2Rmd Project: Modernizing Documentation
-
-One of the noteworthy projects undertaken at Bioconductor is the [sweave2rmd
-project](https://github.com/Bioconductor/sweave2rmd), which focuses on
-converting vignettes from Sweave to R Markdown. Traditionally, Bioconductor
-packages' documentation has been written using a combination of LaTeX and R
-code, resulting in PDF files. Our objective is to transform these files into R
-Markdown format and render them as HTML files.
-
-The shift towards Markdown and HTML files brings several advantages. HTML files
-are more accessible and easily shareable, as they can be viewed online or
-offline without the need for specialized applications. Moreover, they offer
-enhanced interactivity by enabling the inclusion of links within the document,
-facilitating seamless navigation in lengthy texts. Markdown and HTML files also
-ensure readability across various devices, eliminating the need for
-reformatting. Given that Bioconductor has a rich history spanning over two
-decades, the sweave2rmd project plays a crucial role in modernizing a
-significant number of "mature" (older) vignettes.
-
-In addition, R Markdown offers a simpler syntax compared to LaTeX, making it
-more user-friendly, particularly for beginners.
-
-- Sweave: Sweave allows the integration of R code within LaTeX documents,
-generating PDF files that incorporate narrative, analysis, graphics, code,
-and computational results.
-
-- R Markdown (Rmd): RMarkdown files, on the other hand, enable the combination of
-Markdown and R code. They provide a versatile platform for incorporating R
-code seamlessly into the document.
-
 ## Our Journey Interning with Bioconductor
 
 Through the Outreachy program, we have been interning at Bioconductor for over a
@@ -55,7 +25,7 @@ exposed us to the world of open science and open source but also taught us how
 to collaborate effectively in a remote work environment. Despite the initial
 challenge of familiarizing ourselves with various concepts within a limited
 timeframe, our journey has been made smoother than anticipated, thanks to our
-exceptional mentors, Jen Wokaty and Hervé Pagès.
+exceptional mentors, Jen Wokaty, Tuomas Borman and Chloe Mirzayi.
 
 ### Sonali's Experience: Making Strides with Sweave2Rmd
 
@@ -69,36 +39,45 @@ collaboration, and remarkable achievements, even in remote settings. With a
 diverse range of interests spanning technology and open science, I strive to
 merge technical expertise with a strong inclination towards research.
 
-When I came across Bioconductor and learned about their work, I was immediately
-captivated. Among the various projects available, sweave2rmd stood out to me,
-aligning perfectly with my domain knowledge and interests. It was the project I
-wholeheartedly contributed to.
+During the May 2023 internship round, I had the privilege of participating in
+the Outreachy Internship program with Bioconductor. This experience has been
+incredibly rewarding, as it has not only exposed me to the world of open science
+and open source but also taught me how to collaborate effectively in a remote
+work environment. Despite the initial challenge of familiarizing myself with
+various concepts within a limited timeframe, my journey has been made smoother
+than anticipated, thanks to my exceptional mentor Jen Wokaty.
 
-My experience at Bioconductor has been nothing short of remarkable. In just over
-a month, I have witnessed significant improvements in my coding skills,
-communication abilities, and teamwork. Open source development requires
-continuous learning, and I have embraced this opportunity to expand my
-knowledge, including honing my Git skills, mastering R programming, and writing
-comprehensive documentation. Throughout this journey, my mentor Jennifer Wokaty
-has been an incredible source of support and guidance. Moreover, the
-Bioconductor team has been extremely helpful, providing valuable feedback and
-promptly addressing any challenges I have faced.
+In this blog post, I want to share my enriching experience and the remarkable
+work I have been doing as part of the sweave2rmd project at Bioconductor. The
+sweave2rmd project focuses on converting vignettes from Sweave to R Markdown
+format, which plays a crucial role in modernizing the documentation of
+Bioconductor packages. Traditionally, the documentation has been written using a
+combination of LaTeX and R code, resulting in PDF files. By transforming these
+files into R Markdown format and rendering them as HTML files, we make the
+documentation more accessible, shareable, and interactive.
 
-Working on various Bioconductor packages has allowed me to explore and learn
-from the vibrant community. I now possess a deeper understanding of package
-development and documentation creation.
+Throughout my internship, I have made significant contributions to the
+sweave2rmd project. Some of my accomplishments include:
 
-I eagerly look forward to continuing my learning journey, making impactful
-contributions, and ensuring the success of the sweave2rmd project. If you're
-interested in reading more about my experience as an Outreachy intern with
-Bioconductor, I invite you to visit my [blog](https://dev.to/sonali8434).
+- Converting numerous vignettes from Sweave to R Markdown format
+- Collaborating with maintainers to address issues and improve the conversion process
+- Taking the lead in maintaining the project board and tracking progress
+- Exploring automation processes to streamline the conversion workflow
+- Enhancing the project's documentation for better usability and clarity
 
-By participating in the Outreachy program at Bioconductor, we have immersed
-ourselves in the captivating world of open science and open source. Our
-projects, such as the sweave2rmd initiative, have not only enhanced our
-technical skills but also empowered us to contribute to the advancement of open
-science. We extend our heartfelt gratitude to Bioconductor, our mentors, and the
-entire community for this invaluable experience.
+These experiences have not only honed my technical skills but have also allowed
+me to gain a deeper understanding of package development and documentation
+creation within the vibrant Bioconductor community. I'm proud to have submitted
+a total of 12 pull requests (PRs), out of which 8 have been successfully merged
+into Bioconductor in just one month. I am thrilled to continue making a
+meaningful impact on the project.
 
-Stay tuned for more updates and insights as we continue our journey with
-Bioconductor, shaping the future of open science together.
+If you're interested in reading more about my experience as an Outreachy intern
+with Bioconductor and my journey with the sweave2rmd project, I invite you to
+visit my [blog](https://dev.to/sonali8434). I share insights, challenges, and
+lessons learned along the way.
+
+I would like to express my sincere gratitude to Bioconductor, my mentors, and
+the entire community for providing me with this invaluable opportunity.
+Together, we are shaping the future of open science and making a difference in
+the world of scientific documentation.
