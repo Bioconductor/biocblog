@@ -75,3 +75,66 @@ I would like to express my sincere gratitude to Bioconductor, my mentors, and
 the entire community for providing me with this invaluable opportunity.
 Together, we are shaping the future of open science and making a difference in
 the world of scientific documentation.
+
+### DaenaRys Experience Working on the Microbiome Project
+
+I am a final-year computer science student with a love for computers and technology. 
+My fascination with biotechnology led me to choose the  <a href="https://www.outreachy.org/outreachy-may-2023-internship-cohort/communities/bioconductor/#optimize-microbiome-data-science-framework">"Optimizing Microbiome Data Science Framework"</a>
+project under Bioconductor. 
+
+I chose this project because of my passion for biotechnology and my fascination 
+with the intricate interactions that occur within a microbiome. However, as 
+I delved deeper into the project, I realized that analyzing microbiome data can
+be quite challenging due to the vast amounts of complex data involved. 
+Therefore, I became determined to optimize the miaverse packages to make 
+microbiome data analysis more efficient and accurate.
+
+Working on the "Optimizing Microbiome Data Science Framework" project has been an 
+unforgettable experience for me. Throughout the project, I have had the pleasure 
+of working closely with my mentor, Tuomas Borman. Tuomas' expertise in the field
+has helped me understand the complexities involved in microbiome data analysis, 
+and he has provided valuable feedback on my work.
+
+The project itself has been challenging but rewarding, as it has allowed me to 
+develop important skills such as problem-solving, teamwork, and communication.
+Through the optimization process and documentation unification, I have learned 
+how to create user-friendly tools that can be used by a broad audience.
+
+I am proud of the work I have accomplished so far and grateful for the opportunity 
+to develop important skills during this internship with the aim of using technology 
+to facilitate biotech data processes and analysis.
+
+### Microbiome Project: Optimizing Microbiome Data Science Framework
+
+The miaverse  is a microbiome analytics framework that combines both tools
+and documentation. The idea is to provide not only tools but also tutorials 
+that help users with different skill levels to perform microbiome downstream
+analysis. The miaverse takes into account the latest development microbiome 
+field which is why it is constantly developed based on user feedback and 
+advantages of concerned field. The Microbiome project focuses on optimizing 
+unit tests in the miaverse packages, including mia, miaTime, miaViz, and 
+miaSim, which are essential tools for analyzing microbiome data. In addition 
+to optimization of unit tests and examples, current task include, improving 
+documentation in packages, creating an example microbiome data science 
+workflow from database to results, Optimization of certain methods and 
+Testing, issue reporting, bug fixing.
+
+These miaverse packages are quite interesting because each performs a given set 
+of functions on microbiome data which could  be transversal;
+
+<a href="https://github.com/microbiome/mia">mia</a> package provides functions 
+and workflows examples for analyses of microbiome data. Here we use the 
+TreeSummarizedExperiment  the main container for working with microbiome data. 
+
+<a href="https://github.com/microbiome/miaTime">miaTime</a> mostly associated
+with mia  can be used to analyse time series data for microbial communities. 
+It is also based on the TreeSummarizedExperiment data container.
+
+<a href="https://github.com/microbiome/miaViz">miaViz</a> is used for plotting 
+and visualization of microbiome data. The main container for interfacing is 
+the TreeSummarizedExperiment class.
+
+<a href="https://github.com/microbiome/miaSim">miaSim</a> is used to simulate 
+(longitudinal) data for the benchmarking and analysis of quantitative models 
+of microbial communities
+
