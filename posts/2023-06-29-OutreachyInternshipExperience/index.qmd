@@ -122,50 +122,23 @@ to facilitate biotech data processes and analysis.
 To find out more about my Outreachy experience and internship with Bioconductor, you can
 visit my blog at <a href="https://daenarys.dreamwidth.org">daenarys.dreamwidth.org</a> 
 
+
 ## Atrayee's Experience: Microbiome Study Curation
 
-Hello! I am Atrayee Samanta, an undergraduate student at IIEST Shibpur, India. I
-am currently pursuing a B. Tech in Computer Science and Technology. I love
-reading books, watercolour painting and music.
+Hello! I am Atrayee Samanta, an undergraduate student at IIEST Shibpur, India. I am currently pursuing a B. Tech in Computer Science and Technology. I love reading books, watercolour painting and music.
 
 ## How I came to know about Open Source and the Outreachy Internships
 
-When I was just starting out as a sophomore, while exploring about the many ways
-people can make a difference in computer science, I came across the many ways in
-which beginners could contribute to projects that made a difference, however
-small it was. I was fascinated by the world of open-source software and the way
-it operates. What drew me to this community was its collaborative nature. The
-idea that people from all over the world could come together to contribute their
-expertise and collectively create something truly remarkable was truly
-wonderful!
+When I was just starting out as a sophomore, while exploring about the many ways people can make a difference in computer science, I came across the many ways in which beginners could contribute to projects that made a difference, however small it was. I was fascinated by the world of open-source software and the way it operates. What drew me to this community was its collaborative nature. The idea that people from all over the world could come together to contribute their expertise and collectively create something truly remarkable was truly wonderful! 
 
-While surfing the web, I came across what seemed to me a brilliant opportunity
-to learn and contribute: the Outreachy internship. What drew me to it was the
-nature of the internship: we had to contribute to projects of our own choice for
-a month, and that meant that whether or not I got the internship, I would
-definitely get a chance to learn and interact with the open-source community!
-Once my initial application period was over, I took a few days to go over the
-many projects listed on the platform, for which we could choose to contribute.
+While surfing the web, I came across what seemed to me a brilliant opportunity to learn and contribute: the Outreachy internship. What drew me to it was the nature of the internship: we had to contribute to projects of our own choice for a month, and that meant that whether or not I got the internship, I would definitely get a chance to learn and interact with the open-source community! Once my initial application period was over, I took a few days to go over the many projects listed on the platform, for which we could choose to contribute.
 
 ### The Microbiome Study Curation Project at Bioconductor
 
-A lot of the projects were very appealing but what stood out to me was the
-‘Microbiome Study curation’ project; for me, it was quite different to the
-others and while it wasn’t extremely tedious, it was fascinating to learn about
-the project: I realized how I wasn’t even properly aware of how epidemiological
-studies and research on samples of varying sizes and nature are critical for
-medical research, how they play a crucial role in medical research by providing
-insights into the distribution, causes, and prevention of diseases within
-populations. These studies involve the collection, analysis, and interpretation
-of data from large populations over time, and can help to identify risk factors,
-patterns of disease occurrence, and potential interventions that can improve
+A lot of the projects were very appealing but what stood out to me was the ‘Microbiome Study curation’ project at [BugSigDb](bugsigdb.org) ; for me, it was quite different to the others and while it wasn’t extremely tedious, it was fascinating to learn about the project: I realized how I wasn’t even properly aware of how epidemiological studies and research on samples of varying sizes and nature are critical for medical research, how they play a crucial role in medical research by providing insights into the distribution, causes, and prevention of diseases within populations. These studies involve the collection, analysis, and interpretation of data from large populations over time, and can help to identify risk factors, patterns of disease occurrence, and potential interventions that can improve
 public health.
 
-The contribution period was one of the best experiences I have ever had as a
-student. I genuinely loved making contributions and learning. My mentors, Chloe
-and Fatima as well as the BugSigdb community- Professor Levi and others always
-helped me out whenever I got stuck on a problem or had an issue in understanding
-something.
+The [Outreachy contribution period](https://www.outreachy.org/docs/applicant/#make-contributions) was one of the best experiences I have ever had as a student. I genuinely loved making contributions and learning. My mentors, Chloe and Fatima as well as the BugSigdb community- Professor Levi and others always helped me out whenever I got stuck on a problem or had an issue in understanding something.
 
 ## About the Project
 
