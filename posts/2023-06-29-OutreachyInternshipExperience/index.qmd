@@ -80,16 +80,16 @@ the entire community for providing me with this invaluable opportunity.
 Together, we are shaping the future of open science and making a difference in
 the world of scientific documentation.
 
-### DaenaRys Experience Working on the Miaverse Project
+### DaenaRys Experience Working on the miaverse Project
 
 I am a final-year computer science student from Cameroon with a love for 
 computers and technology. My fascination with biotechnology led me to 
-choose the  Miaverse project under Bioconductor. 
+choose the  <a href="https://microbiome.github.io">miaverse</a> project under Bioconductor. 
 
 The miaverse  is a microbiome analytics framework that combines both tools
 and documentation. The idea is to provide not only tools but also tutorials 
 that help users with different skill levels to perform microbiome downstream
-analysis. The Microbiome project focuses on optimizing 
+analysis. The miaverse project focuses on optimizing 
 unit tests in the miaverse packages, including mia, miaTime, miaViz, and 
 miaSim, which are essential tools for analyzing microbiome data. In addition 
 to optimization of unit tests and examples, current task include, improving 
@@ -104,7 +104,7 @@ be quite challenging due to the vast amounts of complex data involved.
 Therefore, I became determined to optimize the miaverse packages to make 
 microbiome data analysis more efficient and accurate.
 
-Working on the Miaverse project has been an unforgettable experience for me. 
+Working on the miaverse project has been an unforgettable experience for me. 
 Throughout the project, I have had the pleasure of working closely with my mentor,
 Tuomas Borman. Tuomas' expertise in the field has helped me understand the 
 complexities involved in microbiome data analysis, and he has provided valuable 
@@ -119,24 +119,8 @@ I am proud of the work I have accomplished so far and grateful for the opportuni
 to develop important skills during this internship with the aim of using technology 
 to facilitate biotech data processes and analysis.
 
-The miaverse packages are quite interesting because each performs a given set 
-of functions on microbiome data which could  be transversal;
-
-<a href="https://github.com/microbiome/mia">mia</a> package provides functions 
-and workflows examples for analyses of microbiome data. Here we use the 
-TreeSummarizedExperiment  the main container for working with microbiome data. 
-
-<a href="https://github.com/microbiome/miaTime">miaTime</a> mostly associated
-with mia  can be used to analyse time series data for microbial communities. 
-It is also based on the TreeSummarizedExperiment data container.
-
-<a href="https://github.com/microbiome/miaViz">miaViz</a> is used for plotting 
-and visualization of microbiome data. The main container for interfacing is 
-the TreeSummarizedExperiment class.
-
-<a href="https://github.com/microbiome/miaSim">miaSim</a> is used to simulate 
-(longitudinal) data for the benchmarking and analysis of quantitative models 
-of microbial communities
+To find out more about my Outreachy experience and internship with Bioconductor, you can
+visit my blog at <a href="https://daenarys.dreamwidth.org">daenarys.dreamwidth.org</a> 
 
 ## Atrayee's Experience: Microbiome Study Curation
 
