@@ -125,6 +125,8 @@ visit my blog at <a href="https://daenarys.dreamwidth.org">daenarys.dreamwidth.o
 
 ## Atrayee's Experience: Microbiome Study Curation
 
+![Atrayee Samanta](Screenshot 2023-06-19 160243.png)
+
 Hello! I am Atrayee Samanta, an undergraduate student at IIEST Shibpur, India. I am currently pursuing a B. Tech in Computer Science and Technology. I love reading books, watercolour painting and music.
 
 ## How I came to know about Open Source and the Outreachy Internships
