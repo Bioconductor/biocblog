@@ -21,12 +21,12 @@ However, diving into it can be daunting for newcomers. Thankfully, initiatives
 exist to bridge the gap between aspiring contributors and open source
 communities.
 
-Outreachy is one such project providing internships to underrepresented
-individuals in the tech industry. We were fortunate to be selected as interns at
-Bioconductor through Outreachy, where we experienced the open source world of
-computational biology. Whether you're a biologist seeking information on our
-tools or an Outreachy applicant interested in Bioconductor, this blog post will
-provide valuable insights!
+Outreachy is one such project that partners with open source and open science
+communities to provide internships to underrepresented individuals in the tech
+industry. We were fortunate to be selected as interns at Bioconductor through
+Outreachy, where we experienced the open source world of computational biology.
+Whether you're a biologist seeking information on our tools or an Outreachy
+applicant interested in Bioconductor, this blog post will provide valuable insights!
 
 ## Outreachy
 
@@ -46,7 +46,7 @@ Bioconductor on our chosen projects.
 ## Bioconductor: Empowering Open Science
 
 Three interns and three Bioconductor community projects are participating in
-the May 2023 <a href="outreachy.org">Outreachy</a> internship round. In this blog
+the May 2023 [Outreachy](outreachy.org) internship round. In this blog
 post, we will provide an overview of our projects and share our experiences thus
 far, exploring the fascinating realm of Bioconductor.
 
@@ -75,7 +75,7 @@ finding joy in my work, and so much more. I am immensely grateful for the knowle
 and skills I have acquired under their guidance.
 
 In this blog post, I want to share my enriching experience and the remarkable
-work I have been doing as part of the <a href="https://github.com/Bioconductor/sweave2rmd">sweave2rmd</a>
+work I have been doing as part of the [Sweave2Rmd](https://github.com/Bioconductor/sweave2rmd)
 project at Bioconductor. The sweave2rmd project focuses on converting vignettes
 from Sweave to R Markdown format, which plays a crucial role in modernizing the
 documentation of Bioconductor packages. Traditionally, the documentation has
@@ -113,7 +113,7 @@ the world of scientific documentation.
 
 I am a final-year computer science student from Cameroon with a love for 
 computers and technology. My fascination with biotechnology led me to 
-choose the  <a href="https://microbiome.github.io">miaverse</a> project under Bioconductor. 
+choose the [miaverse](https://microbiome.github.io) project under Bioconductor. 
 
 The miaverse  is a microbiome analytics framework that combines both tools
 and documentation. The idea is to provide not only tools but also tutorials 
@@ -149,8 +149,7 @@ to develop important skills during this internship with the aim of using technol
 to facilitate biotech data processes and analysis.
 
 To find out more about my Outreachy experience and internship with Bioconductor, you can
-visit my blog at <a href="https://daenarys.dreamwidth.org">daenarys.dreamwidth.org</a> 
-
+visit my blog at [daenarys.dreamwidth.org](daenarys.dreamwidth.org)
 
 ## Atrayee's Experience: Microbiome Study Curation
 
@@ -223,7 +222,7 @@ my experiences and learnings.
 ## Upcoming Opportunities at Outreachy and Bioconductor!
 
 Applicants who are interested in this amazing Outreachy internship for the
-December 2023 cohort can [apply](https://www.outreachy.org/apply/) of the
+December 2023 cohort can [apply](https://www.outreachy.org/apply/) for the
 internship starting in early August. Interested mentors can also [sign up and
 submit](https://www.outreachy.org/communities/cfp/) their open source projects
 in early August.
@@ -231,5 +230,5 @@ in early August.
 At the upcoming Bioc2023 conference in August, we'll also have an [Outreachy
 Birds of a Feather](https://bioc2023.bioconductor.org/abstracts/paper94/) with
 Beryl Kanali and Kirabo Kakopo who were Outreachy interns in December 2022. The
-previous mentor and community co-ordinator, Jennifer Wokaty, will also cover how
-to submit a good open source project to Outreachy.
+Bioconductor community coordinator for Outreachy, Jennifer Wokaty, will also cover
+how to submit a good open source project to Outreachy.
