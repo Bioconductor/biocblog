@@ -6,6 +6,8 @@ description: |
 author:
   name: "Mike L. Smith"
   url: https://github.com/grimbough
+  affilition: European Molecular Biology Laboratory, Data Science Centre
+  orcid: 0000-0002-7800-3848
 date: 2023-07-14
 categories:
   - tech-notes
