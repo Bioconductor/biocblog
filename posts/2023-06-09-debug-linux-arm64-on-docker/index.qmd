@@ -6,7 +6,9 @@ author:
   - name: Martin Grigorov
     url: https://github.com/martin-g
 date: 2023-06-09
-categories: tech-notes
+categories: 
+  - tech-notes
+  - ARM64
 ---
 
 ![Bioconductor on Linux ARM64](bioconductor_logo_cmyk.png)

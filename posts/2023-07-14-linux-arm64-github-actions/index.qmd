@@ -2,10 +2,13 @@
 title: "Testing Packages on Linux ARM64 with GitHub Actions"
 description: |
   How to use GitHub Actions to systematically build and test a Bioconductor package on 
-  Linux ARM64 archictecture.
+  Linux ARM64 architecture.
 author:
   name: "Mike L. Smith"
   url: https://github.com/grimbough
+  affilition: European Molecular Biology Laboratory, Data Science Centre
+  orcid: 0000-0002-7800-3848
+date: 2023-07-14
 categories:
   - tech-notes
   - GitHub Actions
@@ -40,7 +43,7 @@ ARM64 using a continuous integration environment on GitHub Actions.
 
 An example workflow implementation can be found at
 [https://github.com/grimbough/bioc-testing-with-arm64/blob/main/.github/workflows/test-package-arm64.yml](https://github.com/grimbough/bioc-testing-with-arm64/blob/main/.github/workflows/test-package-arm64.yml).
-In the remainder of this post we'll discuss how some of the implementation
+In the remainder of this post we'll discuss some of the implementation
 choices made there and how they work.
 
 ## Choice of Docker container
@@ -75,7 +78,7 @@ that are needed for testing.  The [actions/cache](https://github.com/actions/cac
 job of this, however it will only create a cache after a successful job run.
 Given we're creating this workflow to test a potentially problematic package, it
 can be frustrating to repeatedly wait several hours for all the necessary
-packages to install, because you haven't managed to fixed the issue.
+packages to install, because you haven't managed to fix the issue.
 
 Given this, we can split our workflow into two jobs; the first installs the
 packages while the second runs the actual package tests.  With this structure a
@@ -87,7 +90,7 @@ explain what's happening.  Most of these steps are pretty standard for regular
 users of GitHub Actions.
 
 ```yaml   
-  install-depdendencies:
+  install-dependencies:
     name: Install package dependencies
     runs-on: ubuntu-22.04
     
@@ -99,23 +102,12 @@ users of GitHub Actions.
         uses: docker/setup-qemu-action@v2
         with:
           platforms: arm64
-          
-      - name: Login to GitHub Container Registry
-        uses: docker/login-action@v2
-        with:
-          registry: ghcr.io
-          username: ${{ github.actor }}
-          password: ${{ secrets.GITHUB_TOKEN }}
 ```
 
 First off we're checking out the git repository the workflow is found in.  That's
 probably just the package you're testing.  Then we're using the 
 [docker/setup-qemu-action](https://github.com/docker/setup-qemu-action) to
 install the QEMU emulator discussed in the [previous post](https://bioconductor.github.io/biocblog/posts/2023-06-09-debug-linux-arm64-on-docker/).  
-
-Next we login to the GitHub container registry in order to later pull the image
-were going to run the tests under.  For pulling container images you we can use the automatic [`GITHUB_TOKEN` secret](https://docs.github.com/en/actions/security-guides/automatic-token-authentication),
-so you don't need to configure anything here.
 
 Now we set up the library cache.  
 
@@ -199,7 +191,7 @@ will try to run the two jobs simultaneously, which clearly isn't appropriate.
   check-arm64:
     name: Test package on ARM64
     runs-on: ubuntu-22.04
-    needs:   install-depdendencies
+    needs:   install-dependencies
     steps:
 
       - name: checkout
@@ -254,16 +246,16 @@ are executed in the folder where the package directory can be found.
             
             ## build the package
             R CMD build --keep-empty-dirs --no-resave-data examplePKG
-            if [ $? -eq  1 ]; then; exit 1; fi
+            if [ $? -eq  1 ]; then exit 1; fi
             
             ## Check the package using the shortcut from the BBS
             R CMD check --install=check:examplePKG.install-out.txt --library="${R_LIBS_USER}" --no-vignettes --timings examplePKG*.tar.gz
-            if [ $? -eq  1 ]; then; exit 1; fi
+            if [ $? -eq  1 ]; then exit 1; fi
             
             ## build a package binary for Linux ARM64
             mkdir -p examplePKG.buildbin-libdir
             R CMD INSTALL --build --library=examplePKG.buildbin-libdir examplePKG*.tar.gz
-            if [ $? -eq  1 ]; then; exit 1; fi
+            if [ $? -eq  1 ]; then exit 1; fi
           shell: bash
 ```
 
@@ -284,7 +276,7 @@ exit if it indicates failure.
 
 Finally, although some of the test outputs will be printed to the workflow log, 
 we might want to make any output available to download and investigate further.
-To do with we can use the [`upload-artifact`](https://github.com/actions/upload-artifact) action.
+To do this we can use the [`upload-artifact`](https://github.com/actions/upload-artifact) action.
 
 ```yaml
       - uses: actions/upload-artifact@v3
@@ -306,14 +298,10 @@ Hopefully that is enough information to diagnose any issue.
 
 ## Conclusion
 
-The combination of GitHub Actions and QEMU provides an platform for testing
+The combination of GitHub Actions and QEMU provides a platform for testing
 packages across multiple CPU architectures more rapidly than the
 Bioconductor Build System.  Using them in a continuous integration environment
 allows one to detect and highlight unforeseen issues introduced by changes to a
 package or the wider R environment.  The same emulation techniques can then
 be employed on your local development environment to find a solution, before
 testing again in a your GitHub Workflow, and finally deploying to Bioconductor.
-
-
-
-
