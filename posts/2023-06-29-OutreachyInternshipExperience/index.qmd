@@ -149,7 +149,7 @@ to develop important skills during this internship with the aim of using technol
 to facilitate biotech data processes and analysis.
 
 To find out more about my Outreachy experience and internship with Bioconductor, you can
-visit my blog at [daenarys.dreamwidth.org](daenarys.dreamwidth.org)
+visit my blog at [https://daenarys.dreamwidth.org/](daenarys.dreamwidth.org)
 
 ## Atrayee's Experience: Microbiome Study Curation
 
