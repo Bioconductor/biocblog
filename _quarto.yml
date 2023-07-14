@@ -2,6 +2,7 @@ project:
   type: website
   resources:
     - "images/twitter-card.png"
+    - "CNAME"
 
 execute:
   freeze: true
