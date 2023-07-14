@@ -72,7 +72,7 @@
 <p>Working on the miaverse project has been an unforgettable experience for me. Throughout the project, I have had the pleasure of working closely with my mentor, Tuomas Borman. Tuomas’ expertise in the field has helped me understand the complexities involved in microbiome data analysis, and he has provided valuable feedback on my work.</p>
 <p>The project itself has been challenging but rewarding, as it has allowed me to develop important skills such as problem-solving, teamwork, and communication. Through the optimization process and documentation unification, I have learned how to create user-friendly tools that can be used by a broad audience.</p>
 <p>I am proud of the work I have accomplished so far and grateful for the opportunity to develop important skills during this internship with the aim of using technology to facilitate biotech data processes and analysis.</p>
-<p>To find out more about my Outreachy experience and internship with Bioconductor, you can visit my blog at <a href="daenarys.dreamwidth.org">daenarys.dreamwidth.org</a></p>
+<p>To find out more about my Outreachy experience and internship with Bioconductor, you can visit my blog at <a href="daenarys.dreamwidth.org">https://daenarys.dreamwidth.org/</a></p>
 </section>
 </section>
 <section id="atrayees-experience-microbiome-study-curation" class="level2">
@@ -2517,7 +2517,7 @@ font-style: inherit;"> warn</span></span></code></pre></div>
   <category>GitHub Actions</category>
   <category>ARM64</category>
   <guid>https://bioconductor.github.io/biocblog/posts/2023-06-29-linux-arm64-github-actions/index.html</guid>
-  <pubDate>Fri, 14 Jul 2023 07:33:14 GMT</pubDate>
+  <pubDate>Fri, 14 Jul 2023 10:49:29 GMT</pubDate>
 </item>
 </channel>
 </rss>
