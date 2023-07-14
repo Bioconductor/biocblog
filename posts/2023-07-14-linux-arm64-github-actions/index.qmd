@@ -6,6 +6,8 @@ description: |
 author:
   name: "Mike L. Smith"
   url: https://github.com/grimbough
+  affilition: European Molecular Biology Laboratory, Data Science Centre
+  orcid: 0000-0002-7800-3848
 date: 2023-07-14
 categories:
   - tech-notes
@@ -100,23 +102,12 @@ users of GitHub Actions.
         uses: docker/setup-qemu-action@v2
         with:
           platforms: arm64
-          
-      - name: Login to GitHub Container Registry
-        uses: docker/login-action@v2
-        with:
-          registry: ghcr.io
-          username: ${{ github.actor }}
-          password: ${{ secrets.GITHUB_TOKEN }}
 ```
 
 First off we're checking out the git repository the workflow is found in.  That's
 probably just the package you're testing.  Then we're using the 
 [docker/setup-qemu-action](https://github.com/docker/setup-qemu-action) to
 install the QEMU emulator discussed in the [previous post](https://bioconductor.github.io/biocblog/posts/2023-06-09-debug-linux-arm64-on-docker/).  
-
-Next we login to the GitHub container registry in order to later pull the image
-were going to run the tests under.  For pulling container images you we can use the automatic [`GITHUB_TOKEN` secret](https://docs.github.com/en/actions/security-guides/automatic-token-authentication),
-so you don't need to configure anything here.
 
 Now we set up the library cache.  
 
