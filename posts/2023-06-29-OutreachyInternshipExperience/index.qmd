@@ -109,7 +109,7 @@ the entire community for providing me with this invaluable opportunity.
 Together, we are shaping the future of open science and making a difference in
 the world of scientific documentation.
 
-### DaenaRys Experience Working on the miaverse Project
+### DaenaRys Experience: Working on the miaverse Project
 
 I am a final-year computer science student from Cameroon with a love for 
 computers and technology. My fascination with biotechnology led me to 
@@ -181,7 +181,7 @@ many projects listed on the platform, for which we could choose to contribute.
 ### The Microbiome Study Curation Project at Bioconductor
 
 A lot of the projects were very appealing but what stood out to me was the
-‘Microbiome Study curation’ project at [BugSigDb](https://bugsigdb.org/) ; for me, it was
+‘Microbiome Study curation’ project at [BugSigDb](https://bugsigdb.org/); for me, it was
 quite different to the others and while it wasn’t extremely tedious, it was
 fascinating to learn about the project: I realized how I wasn’t even properly
 aware of how epidemiological studies and research on samples of varying sizes
@@ -216,7 +216,7 @@ literature review and carrying out data analysis. The wonderful community at
 Bioconductor has only always helped me out and has provided me with a richer
 understanding of everything I've been doing! I'm really glad to be a part of
 this project. If you want to know more, I would love to introduce to you my
-[blog](https://atrayees0.wordpress.com/) , where I record my progress as well as
+[blog](https://atrayees0.wordpress.com/), where I record my progress as well as
 my experiences and learnings.
 
 ## Upcoming Opportunities at Outreachy and Bioconductor!
