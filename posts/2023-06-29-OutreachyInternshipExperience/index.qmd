@@ -52,7 +52,7 @@ far, exploring the fascinating realm of Bioconductor.
 
 ### Sonali's Experience: Making Strides with Sweave2Rmd
 
-![Sonali Kumari](Sonali Kumari.jpg)
+![Sonali Kumari](Sonali Kumari.jpg){height=300px}
 
 I'm Sonali Kumari, a B.Tech student specializing in Electronics and
 Communication Engineering with a passion for Artificial Intelligence. Currently
@@ -153,7 +153,7 @@ visit my blog at [https://daenarys.dreamwidth.org/](daenarys.dreamwidth.org)
 
 ## Atrayee's Experience: Microbiome Study Curation
 
-![Atrayee Samanta](Screenshot 2023-06-19 160243.png)
+![Atrayee Samanta](Screenshot 2023-06-19 160243.png){height=300px}
 
 Hello! I am Atrayee Samanta, an undergraduate student at IIEST Shibpur, India. I
 am currently pursuing a B. Tech in Computer Science and Technology. I love
