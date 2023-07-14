@@ -1,0 +1,319 @@
+---
+title: "Testing Packages on Linux ARM64 with GitHub Actions"
+description: |
+  How to use GitHub Actions to systematically build and test a Bioconductor package on 
+  Linux ARM64 archictecture.
+author:
+  name: "Mike L. Smith"
+  url: https://github.com/grimbough
+categories:
+  - tech-notes
+  - GitHub Actions
+  - ARM64
+---
+
+![Bioconductor on Linux ARM64](../2023-06-09-debug-linux-arm64-on-docker/bioconductor_logo_cmyk.png)
+
+# Introduction
+
+The Bioconductor Build System (BBS) now includes routine package testing on Linux
+ARM64, but the relatively low frequency of testing means this, if a problem
+occurs with your package, it can take a while to identify and fix the issue
+using the build system alone.
+
+The previous blog post "[Emulated build and test of Bioconductor packages for
+Linux
+ARM64](https://bioconductor.github.io/biocblog/posts/2023-06-09-debug-linux-arm64-on-docker/)"
+described how one can use Docker and architecture emulation to build, test, and
+debug a Bioconductor package for running on Linux ARM64 architecture when you
+only have access to local x86 hardware.
+
+However such manual testing can be frustrating to run as a package developer,
+either because it's an extra task you have to run frequently, or because you
+only do it occasionally and forget the steps involved.  Ideally such testing
+would happen automatically whenever you make changes to a package, but providing
+more rapid feedback than the BBS provides.  In this article we build on these
+previously presented ideas to describe one approach for testing package on Linux
+ARM64 using a continuous integration environment on GitHub Actions.
+
+# Workflow Implementation
+
+An example workflow implementation can be found at
+[https://github.com/grimbough/bioc-testing-with-arm64/blob/main/.github/workflows/test-package-arm64.yml](https://github.com/grimbough/bioc-testing-with-arm64/blob/main/.github/workflows/test-package-arm64.yml).
+In the remainder of this post we'll discuss how some of the implementation
+choices made there and how they work.
+
+## Choice of Docker container
+
+The first thing to remember when using architecture emulation is that everything
+works much slower than when running natively - typically by at least an order of
+magnitude. This influences some of the decisions made during this workflow
+regarding which containers to use and what we want to cache between workflow
+steps.  Some operations that might be acceptable in a standard workflow become
+painfully slow under emulation, and so we try reduce the number of slow steps.
+
+The first of these is to use a modified version of the
+[Bioconductor:devel](https://github.com/Bioconductor/bioconductor_docker/pkgs/container/bioconductor/102293490?tag=devel-amd64)
+docker image which has TinyTex pre-installed.  This allows us to compile the
+package manual pages and and PDF vignettes during testing.  Installing TinyTex
+and the required LaTeX packages takes approximately 10 minutes on our emulated
+system, so there is a noticeable time benefit to using an image with it
+already installed.  The modified image can be found at
+[ghcr.io/grimbough/bioc-with-tinytex:devel-arm64](https://ghcr.io/grimbough/bioc-with-tinytex:devel-arm64)
+
+*Note: You could probably achieve a similar result by using the standard
+Bioconductor container and running `R CMD check` with the arguments `--no-manual`
+and `--no-build-vignettes`, however I would rather run the complete testing
+process in case there is problematic code in either the manual page examples or
+vignette.*
+
+## Installing packages
+
+Installing packages that require compilation is also incredibly slow on our emulated
+system, so it's immediately desirable to cache the library of installed packages
+that are needed for testing.  The [actions/cache](https://github.com/actions/cache) GitHub action does a good
+job of this, however it will only create a cache after a successful job run.
+Given we're creating this workflow to test a potentially problematic package, it
+can be frustrating to repeatedly wait several hours for all the necessary
+packages to install, because you haven't managed to fixed the issue.
+
+Given this, we can split our workflow into two jobs; the first installs the
+packages while the second runs the actual package tests.  With this structure a
+failure in the second job doesn't prevent the cache mechanism from working and
+makes repeated runs much faster.
+
+Now lets take a look at the first few steps on our `install-dependencies` job and
+explain what's happening.  Most of these steps are pretty standard for regular
+users of GitHub Actions.
+
+```yaml   
+  install-depdendencies:
+    name: Install package dependencies
+    runs-on: ubuntu-22.04
+    
+    steps:
+      - name: checkout
+        uses: actions/checkout@v3
+        
+      - name: Set up QEMU
+        uses: docker/setup-qemu-action@v2
+        with:
+          platforms: arm64
+          
+      - name: Login to GitHub Container Registry
+        uses: docker/login-action@v2
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+```
+
+First off we're checking out the git repository the workflow is found in.  That's
+probably just the package you're testing.  Then we're using the 
+[docker/setup-qemu-action](https://github.com/docker/setup-qemu-action) to
+install the QEMU emulator discussed in the [previous post](https://bioconductor.github.io/biocblog/posts/2023-06-09-debug-linux-arm64-on-docker/).  
+
+Next we login to the GitHub container registry in order to later pull the image
+were going to run the tests under.  For pulling container images you we can use the automatic [`GITHUB_TOKEN` secret](https://docs.github.com/en/actions/security-guides/automatic-token-authentication),
+so you don't need to configure anything here.
+
+Now we set up the library cache.  
+
+```yaml        
+      - name: Make R library
+        run: mkdir -p ${RUNNER_TEMP}/R-lib
+
+      - name: Cache Dependencies
+        id: cache-deps
+        uses: actions/cache@v3
+        with:
+          path: ${{ runner.temp }}/R-lib
+          key: R_lib-ARM64-${{ hashFiles('**/DESCRIPTION') }}
+          restore-keys: |
+            R_lib-ARM64-${{ hashFiles('**/DESCRIPTION') }}
+            R_lib-ARM64-
+```
+
+Initially we create an empty directory on our runner. In this example this is in
+the runners temporary directory, but it could be anywhere. We'll later mount
+this location into our Docker container, and it will contain the installed
+package library.  We have to create it outside of the Docker container and mount
+it so that the caching mechanism will work.  If this location was created inside
+the Docker container, it would disappear when the container was destroyed, and
+we wouldn't be able to retain the contents.
+
+We then provide this location to the `actions/cache` action, and use a hash of
+the `DESCRIPTION` file to tag our cache.  Update the `DESCRIPTION` e.g. to add a
+new dependency or bump the version number and a new cache will be created. This
+isn't perfect, as it won't necessary capture updates to installed packages in
+the library, but it does a reasonable job with being too complex. 
+
+The final step of the job is to install the dependencies.
+
+```yaml 
+      - name: Run the build process with Docker
+        uses: addnab/docker-run-action@v3
+        with:
+          image: ghcr.io/grimbough/bioc-with-tinytex:devel-arm64
+          options: |
+            --platform linux/arm64
+            --volume ${{ runner.temp }}/R-lib:/R-lib
+            --volume ${{ github.workspace }}/../:/build
+            --env R_LIBS_USER=/R-lib
+          run: |
+            echo "options(Ncpus=2L, timeout = 300)" >> ~/.Rprofile
+            Rscript -e 'pkgs <- remotes::dev_package_deps("/build/examplePKG", dependencies = TRUE)' \
+                    -e 'BiocManager::install(pkgs$package, update = TRUE, ask = FALSE)'
+```
+
+We use the `addnab/docker-run-action` action to run this step inside a 
+docker container and provide the `image` argument with the TinyTex arm64 container
+discussed earlier.
+
+The `options` argument supplies arguments you would give Docker at the command
+line if you were running it locally.  Here we set the platform to `linux/arm64`
+to work with the QEMU emulation.  We mount two locations from our runner into to
+container: the location of the library we created earlier and the directory
+containing the package to be tests.  Inside the container these will be found at
+`/R-lib` and `/build` respectively.  We also set the `R_LIBS_USER` environment
+variable, so R will use the mounted library in preference to anywhere else.
+
+The `run` section is where we provide the command to be executed inside the
+container. First there's an optional step to set the number of CPUs R should use
+by default. Currently GitHub runners are dual core and there's a performance
+benefit to ensuring R uses both of these when installing multiple packages from
+source as we're doing here.  Then we use the `remotes` and `BiocManager` packages
+to list the package dependencies and install them.
+
+If this job executes successfully we should have a cached library containing
+all the packages required to test the package.
+
+## Running the package tests
+
+The second job in our workflow will carry out the package tests.  We can use
+the `needs:` argument to specify that this job requires the `install-dependencies`
+job to have completed successfully.  Without specifying this GitHub Actions
+will try to run the two jobs simultaneously, which clearly isn't appropriate.
+
+```yaml
+  check-arm64:
+    name: Test package on ARM64
+    runs-on: ubuntu-22.04
+    needs:   install-depdendencies
+    steps:
+
+      - name: checkout
+        uses: actions/checkout@v3
+
+      - name: Set up QEMU
+        uses: docker/setup-qemu-action@v2
+        with:
+          platforms: arm64
+
+      - name: Make R library
+        run: mkdir -p ${RUNNER_TEMP}/R-lib
+
+      - name: Cache Dependencies
+        id: cache-deps
+        uses: actions/cache@v3
+        with:
+          path: ${{ runner.temp }}/R-lib
+          key: R_lib-ARM64-${{ hashFiles('**/DESCRIPTION') }}
+          restore-keys: |
+            R_lib-ARM64-${{ hashFiles('**/DESCRIPTION') }}
+            R_lib-ARM64-
+```
+
+The first few steps are the same as before, checking out the package repository,
+installing QEMU, and then restoring the cached set of packages.
+
+Next we can again use the `addnab/docker-run-action` action to execute our
+tests inside a docker container.  We use the same container image and
+set of options as before to mount the package and library locations, as well 
+as supplying the `--workdir` argument to ensure the following commands
+are executed in the folder where the package directory can be found.
+
+```yaml
+      - name: Test Package
+        uses: addnab/docker-run-action@v3
+        with:
+          image: ghcr.io/grimbough/bioc-with-tinytex:devel-arm64
+          options: |
+            --platform linux/arm64
+            --volume ${{ runner.temp }}/R-lib:/R-lib
+            --volume ${{ github.workspace }}:/build
+            --env R_LIBS_USER=/R-lib
+            --workdir /build
+          run: |
+            ## Install and store the log like on the BioC Build System
+            R CMD INSTALL examplePKG &> examplePKG.install-out.txt
+            if [ $? -eq  1 ]; then
+              cat examplePKG.install-out.txt
+              exit 1;
+            fi
+            
+            ## build the package
+            R CMD build --keep-empty-dirs --no-resave-data examplePKG
+            if [ $? -eq  1 ]; then; exit 1; fi
+            
+            ## Check the package using the shortcut from the BBS
+            R CMD check --install=check:examplePKG.install-out.txt --library="${R_LIBS_USER}" --no-vignettes --timings examplePKG*.tar.gz
+            if [ $? -eq  1 ]; then; exit 1; fi
+            
+            ## build a package binary for Linux ARM64
+            mkdir -p examplePKG.buildbin-libdir
+            R CMD INSTALL --build --library=examplePKG.buildbin-libdir examplePKG*.tar.gz
+            if [ $? -eq  1 ]; then; exit 1; fi
+          shell: bash
+```
+
+We use the `run` option to provide steps similar to the Bioconductor Build System.
+There are four distinct stages to this process: install, build, check, and build binary.
+The arguments and setting used here are representative of the BBS, but one can
+change them if other testing mechanism are required. You could also 
+choose to split this into four separate job steps if you wanted more 
+fine grained control.
+
+One minor wrinkle when running this in a Docker container is that GitHub Actions
+will use the return code of the Docker process to determine whether the step
+has failed or not, rather than the processes run inside the container.  Thus it 
+will often give a green tick, even if something went wrong, and it
+is easy to miss an error if just glancing at the step summaries. To resolve this, 
+after each process in the container we test the return code produced by R and
+exit if it indicates failure.
+
+Finally, although some of the test outputs will be printed to the workflow log, 
+we might want to make any output available to download and investigate further.
+To do with we can use the [`upload-artifact`](https://github.com/actions/upload-artifact) action.
+
+```yaml
+      - uses: actions/upload-artifact@v3
+        if: always()
+        with:
+          name: my-artifact
+          path: |
+            ~/**/*.tar.gz
+            ~/**/*.install-out.txt
+            ~/**/*.Rcheck
+          if-no-files-found: warn
+```
+
+We use `if: always()` to ensure the upload happens even if a previous step 
+has failed; it's often more important to get the logs when there's a problem!
+Assuming every step executed this should upload both the source and binary
+tarballs, the installation log file, and the folder produced by `R CMD check`.
+Hopefully that is enough information to diagnose any issue.
+
+## Conclusion
+
+The combination of GitHub Actions and QEMU provides an platform for testing
+packages across multiple CPU architectures more rapidly than the
+Bioconductor Build System.  Using them in a continuous integration environment
+allows one to detect and highlight unforeseen issues introduced by changes to a
+package or the wider R environment.  The same emulation techniques can then
+be employed on your local development environment to find a solution, before
+testing again in a your GitHub Workflow, and finally deploying to Bioconductor.
+
+
+
+
