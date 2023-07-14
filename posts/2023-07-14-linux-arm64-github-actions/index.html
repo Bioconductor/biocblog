@@ -7,7 +7,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Mike L. Smith">
-<meta name="description" content="How to use GitHub Actions to systematically build and test a Bioconductor package on Linux ARM64 archictecture.">
+<meta name="dcterms.date" content="2023-07-14">
+<meta name="description" content="How to use GitHub Actions to systematically build and test a Bioconductor package on Linux ARM64 architecture.">
 
 <title>Bioconductor community blog - Testing Packages on Linux ARM64 with GitHub Actions</title>
 <style>
@@ -100,13 +101,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <link rel="stylesheet" href="../../styles.css">
 <meta property="og:title" content="Bioconductor community blog - Testing Packages on Linux ARM64 with GitHub Actions">
-<meta property="og:description" content="How to use GitHub Actions to systematically build and test a Bioconductor package on Linux ARM64 archictecture.">
-<meta property="og:image" content="https://bioconductor.github.io/biocblog/posts/2023-06-09-debug-linux-arm64-on-docker/bioconductor_logo_cmyk.png">
+<meta property="og:description" content="How to use GitHub Actions to systematically build and test a Bioconductor package on Linux ARM64 architecture.">
+<meta property="og:image" content="https://bioconductor.github.io/biocblog/posts/2023-07-14-linux-arm64-github-actions/data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo1N0NEMjA4MDI1MjA2ODExOTk0QzkzNTEzRjZEQTg1NyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozM0NDOEJGNEZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozM0NDOEJGM0ZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1IE1hY2ludG9zaCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkZDN0YxMTc0MDcyMDY4MTE5NUZFRDc5MUM2MUUwNEREIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjU3Q0QyMDgwMjUyMDY4MTE5OTRDOTM1MTNGNkRBODU3Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+84NovQAAAR1JREFUeNpiZEADy85ZJgCpeCB2QJM6AMQLo4yOL0AWZETSqACk1gOxAQN+cAGIA4EGPQBxmJA0nwdpjjQ8xqArmczw5tMHXAaALDgP1QMxAGqzAAPxQACqh4ER6uf5MBlkm0X4EGayMfMw/Pr7Bd2gRBZogMFBrv01hisv5jLsv9nLAPIOMnjy8RDDyYctyAbFM2EJbRQw+aAWw/LzVgx7b+cwCHKqMhjJFCBLOzAR6+lXX84xnHjYyqAo5IUizkRCwIENQQckGSDGY4TVgAPEaraQr2a4/24bSuoExcJCfAEJihXkWDj3ZAKy9EJGaEo8T0QSxkjSwORsCAuDQCD+QILmD1A9kECEZgxDaEZhICIzGcIyEyOl2RkgwAAhkmC+eAm0TAAAAABJRU5ErkJggg==">
 <meta property="og:site-name" content="Bioconductor community blog">
-<meta property="og:image:height" content="124">
-<meta property="og:image:width" content="430">
 <meta name="twitter:title" content="Bioconductor community blog - Testing Packages on Linux ARM64 with GitHub Actions">
-<meta name="twitter:description" content="How to use GitHub Actions to systematically build and test a Bioconductor package on Linux ARM64 archictecture.">
+<meta name="twitter:description" content="How to use GitHub Actions to systematically build and test a Bioconductor package on Linux ARM64 architecture.">
 <meta name="twitter:image" content="https://bioconductor.github.io/biocblog//images/twitter-card.png">
 <meta name="twitter:creator" content="@Bioconductor">
 <meta name="twitter:image-height" content="124">
@@ -178,7 +177,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <h1 class="title">Testing Packages on Linux ARM64 with GitHub Actions</h1>
                   <div>
         <div class="description">
-          <p>How to use GitHub Actions to systematically build and test a Bioconductor package on Linux ARM64 archictecture.</p>
+          <p>How to use GitHub Actions to systematically build and test a Bioconductor package on Linux ARM64 architecture.</p>
         </div>
       </div>
                           <div class="quarto-categories">
@@ -195,10 +194,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <div>
       <div class="quarto-title-meta-heading">Author</div>
       <div class="quarto-title-meta-contents">
-               <p><a href="https://github.com/grimbough">Mike L. Smith</a> </p>
+               <p><a href="https://github.com/grimbough">Mike L. Smith</a> <a href="https://orcid.org/0000-0002-7800-3848" class="quarto-title-author-orcid"> <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo1N0NEMjA4MDI1MjA2ODExOTk0QzkzNTEzRjZEQTg1NyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozM0NDOEJGNEZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozM0NDOEJGM0ZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1IE1hY2ludG9zaCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkZDN0YxMTc0MDcyMDY4MTE5NUZFRDc5MUM2MUUwNEREIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjU3Q0QyMDgwMjUyMDY4MTE5OTRDOTM1MTNGNkRBODU3Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+84NovQAAAR1JREFUeNpiZEADy85ZJgCpeCB2QJM6AMQLo4yOL0AWZETSqACk1gOxAQN+cAGIA4EGPQBxmJA0nwdpjjQ8xqArmczw5tMHXAaALDgP1QMxAGqzAAPxQACqh4ER6uf5MBlkm0X4EGayMfMw/Pr7Bd2gRBZogMFBrv01hisv5jLsv9nLAPIOMnjy8RDDyYctyAbFM2EJbRQw+aAWw/LzVgx7b+cwCHKqMhjJFCBLOzAR6+lXX84xnHjYyqAo5IUizkRCwIENQQckGSDGY4TVgAPEaraQr2a4/24bSuoExcJCfAEJihXkWDj3ZAKy9EJGaEo8T0QSxkjSwORsCAuDQCD+QILmD1A9kECEZgxDaEZhICIzGcIyEyOl2RkgwAAhkmC+eAm0TAAAAABJRU5ErkJggg=="></a></p>
             </div>
     </div>
       
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">July 14, 2023</p>
+      </div>
+    </div>
     
       
     </div>
@@ -228,7 +233,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="workflow-implementation" class="level1">
 <h1>Workflow Implementation</h1>
-<p>An example workflow implementation can be found at <a href="https://github.com/grimbough/bioc-testing-with-arm64/blob/main/.github/workflows/test-package-arm64.yml">https://github.com/grimbough/bioc-testing-with-arm64/blob/main/.github/workflows/test-package-arm64.yml</a>. In the remainder of this post we’ll discuss how some of the implementation choices made there and how they work.</p>
+<p>An example workflow implementation can be found at <a href="https://github.com/grimbough/bioc-testing-with-arm64/blob/main/.github/workflows/test-package-arm64.yml">https://github.com/grimbough/bioc-testing-with-arm64/blob/main/.github/workflows/test-package-arm64.yml</a>. In the remainder of this post we’ll discuss some of the implementation choices made there and how they work.</p>
 <section id="choice-of-docker-container" class="level2">
 <h2 class="anchored" data-anchor-id="choice-of-docker-container">Choice of Docker container</h2>
 <p>The first thing to remember when using architecture emulation is that everything works much slower than when running natively - typically by at least an order of magnitude. This influences some of the decisions made during this workflow regarding which containers to use and what we want to cache between workflow steps. Some operations that might be acceptable in a standard workflow become painfully slow under emulation, and so we try reduce the number of slow steps.</p>
@@ -237,10 +242,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="installing-packages" class="level2">
 <h2 class="anchored" data-anchor-id="installing-packages">Installing packages</h2>
-<p>Installing packages that require compilation is also incredibly slow on our emulated system, so it’s immediately desirable to cache the library of installed packages that are needed for testing. The <a href="https://github.com/actions/cache">actions/cache</a> GitHub action does a good job of this, however it will only create a cache after a successful job run. Given we’re creating this workflow to test a potentially problematic package, it can be frustrating to repeatedly wait several hours for all the necessary packages to install, because you haven’t managed to fixed the issue.</p>
+<p>Installing packages that require compilation is also incredibly slow on our emulated system, so it’s immediately desirable to cache the library of installed packages that are needed for testing. The <a href="https://github.com/actions/cache">actions/cache</a> GitHub action does a good job of this, however it will only create a cache after a successful job run. Given we’re creating this workflow to test a potentially problematic package, it can be frustrating to repeatedly wait several hours for all the necessary packages to install, because you haven’t managed to fix the issue.</p>
 <p>Given this, we can split our workflow into two jobs; the first installs the packages while the second runs the actual package tests. With this structure a failure in the second job doesn’t prevent the cache mechanism from working and makes repeated runs much faster.</p>
 <p>Now lets take a look at the first few steps on our <code>install-dependencies</code> job and explain what’s happening. Most of these steps are pretty standard for regular users of GitHub Actions.</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">install-depdendencies</span><span class="kw">:</span></span>
+<div class="sourceCode" id="cb1"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">install-dependencies</span><span class="kw">:</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">name</span><span class="kw">:</span><span class="at"> Install package dependencies</span></span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">runs-on</span><span class="kw">:</span><span class="at"> ubuntu-22.04</span></span>
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="at">    </span></span>
@@ -251,16 +256,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="kw">-</span><span class="at"> </span><span class="fu">name</span><span class="kw">:</span><span class="at"> Set up QEMU</span></span>
 <span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="at">        </span><span class="fu">uses</span><span class="kw">:</span><span class="at"> docker/setup-qemu-action@v2</span></span>
 <span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="at">        </span><span class="fu">with</span><span class="kw">:</span></span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="at">          </span><span class="fu">platforms</span><span class="kw">:</span><span class="at"> arm64</span></span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="at">          </span></span>
-<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="kw">-</span><span class="at"> </span><span class="fu">name</span><span class="kw">:</span><span class="at"> Login to GitHub Container Registry</span></span>
-<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a><span class="at">        </span><span class="fu">uses</span><span class="kw">:</span><span class="at"> docker/login-action@v2</span></span>
-<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a><span class="at">        </span><span class="fu">with</span><span class="kw">:</span></span>
-<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a><span class="at">          </span><span class="fu">registry</span><span class="kw">:</span><span class="at"> ghcr.io</span></span>
-<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a><span class="at">          </span><span class="fu">username</span><span class="kw">:</span><span class="at"> ${{ github.actor }}</span></span>
-<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a><span class="at">          </span><span class="fu">password</span><span class="kw">:</span><span class="at"> ${{ secrets.GITHUB_TOKEN }}</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="at">          </span><span class="fu">platforms</span><span class="kw">:</span><span class="at"> arm64</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>First off we’re checking out the git repository the workflow is found in. That’s probably just the package you’re testing. Then we’re using the <a href="https://github.com/docker/setup-qemu-action">docker/setup-qemu-action</a> to install the QEMU emulator discussed in the <a href="https://bioconductor.github.io/biocblog/posts/2023-06-09-debug-linux-arm64-on-docker/">previous post</a>.</p>
-<p>Next we login to the GitHub container registry in order to later pull the image were going to run the tests under. For pulling container images you we can use the automatic <a href="https://docs.github.com/en/actions/security-guides/automatic-token-authentication"><code>GITHUB_TOKEN</code> secret</a>, so you don’t need to configure anything here.</p>
 <p>Now we set up the library cache.</p>
 <div class="sourceCode" id="cb2"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="kw">-</span><span class="at"> </span><span class="fu">name</span><span class="kw">:</span><span class="at"> Make R library</span></span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="at">        </span><span class="fu">run</span><span class="kw">:</span><span class="at"> mkdir -p ${RUNNER_TEMP}/R-lib</span></span>
@@ -301,7 +298,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="sourceCode" id="cb4"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">check-arm64</span><span class="kw">:</span></span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">name</span><span class="kw">:</span><span class="at"> Test package on ARM64</span></span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">runs-on</span><span class="kw">:</span><span class="at"> ubuntu-22.04</span></span>
-<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">needs</span><span class="kw">:</span><span class="at">   install-depdendencies</span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">needs</span><span class="kw">:</span><span class="at">   install-dependencies</span></span>
 <span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">steps</span><span class="kw">:</span></span>
 <span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="kw">-</span><span class="at"> </span><span class="fu">name</span><span class="kw">:</span><span class="at"> checkout</span></span>
@@ -346,20 +343,20 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb5-18"><a href="#cb5-18" aria-hidden="true" tabindex="-1"></a>            </span>
 <span id="cb5-19"><a href="#cb5-19" aria-hidden="true" tabindex="-1"></a>            ## build the package</span>
 <span id="cb5-20"><a href="#cb5-20" aria-hidden="true" tabindex="-1"></a>            R CMD build --keep-empty-dirs --no-resave-data examplePKG</span>
-<span id="cb5-21"><a href="#cb5-21" aria-hidden="true" tabindex="-1"></a>            if [ $? -eq  1 ]; then; exit 1; fi</span>
+<span id="cb5-21"><a href="#cb5-21" aria-hidden="true" tabindex="-1"></a>            if [ $? -eq  1 ]; then exit 1; fi</span>
 <span id="cb5-22"><a href="#cb5-22" aria-hidden="true" tabindex="-1"></a>            </span>
 <span id="cb5-23"><a href="#cb5-23" aria-hidden="true" tabindex="-1"></a>            ## Check the package using the shortcut from the BBS</span>
 <span id="cb5-24"><a href="#cb5-24" aria-hidden="true" tabindex="-1"></a>            R CMD check --install=check:examplePKG.install-out.txt --library="${R_LIBS_USER}" --no-vignettes --timings examplePKG*.tar.gz</span>
-<span id="cb5-25"><a href="#cb5-25" aria-hidden="true" tabindex="-1"></a>            if [ $? -eq  1 ]; then; exit 1; fi</span>
+<span id="cb5-25"><a href="#cb5-25" aria-hidden="true" tabindex="-1"></a>            if [ $? -eq  1 ]; then exit 1; fi</span>
 <span id="cb5-26"><a href="#cb5-26" aria-hidden="true" tabindex="-1"></a>            </span>
 <span id="cb5-27"><a href="#cb5-27" aria-hidden="true" tabindex="-1"></a>            ## build a package binary for Linux ARM64</span>
 <span id="cb5-28"><a href="#cb5-28" aria-hidden="true" tabindex="-1"></a>            mkdir -p examplePKG.buildbin-libdir</span>
 <span id="cb5-29"><a href="#cb5-29" aria-hidden="true" tabindex="-1"></a>            R CMD INSTALL --build --library=examplePKG.buildbin-libdir examplePKG*.tar.gz</span>
-<span id="cb5-30"><a href="#cb5-30" aria-hidden="true" tabindex="-1"></a>            if [ $? -eq  1 ]; then; exit 1; fi</span>
+<span id="cb5-30"><a href="#cb5-30" aria-hidden="true" tabindex="-1"></a>            if [ $? -eq  1 ]; then exit 1; fi</span>
 <span id="cb5-31"><a href="#cb5-31" aria-hidden="true" tabindex="-1"></a><span class="at">          </span><span class="fu">shell</span><span class="kw">:</span><span class="at"> bash</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>We use the <code>run</code> option to provide steps similar to the Bioconductor Build System. There are four distinct stages to this process: install, build, check, and build binary. The arguments and setting used here are representative of the BBS, but one can change them if other testing mechanism are required. You could also choose to split this into four separate job steps if you wanted more fine grained control.</p>
 <p>One minor wrinkle when running this in a Docker container is that GitHub Actions will use the return code of the Docker process to determine whether the step has failed or not, rather than the processes run inside the container. Thus it will often give a green tick, even if something went wrong, and it is easy to miss an error if just glancing at the step summaries. To resolve this, after each process in the container we test the return code produced by R and exit if it indicates failure.</p>
-<p>Finally, although some of the test outputs will be printed to the workflow log, we might want to make any output available to download and investigate further. To do with we can use the <a href="https://github.com/actions/upload-artifact"><code>upload-artifact</code></a> action.</p>
+<p>Finally, although some of the test outputs will be printed to the workflow log, we might want to make any output available to download and investigate further. To do this we can use the <a href="https://github.com/actions/upload-artifact"><code>upload-artifact</code></a> action.</p>
 <div class="sourceCode" id="cb6"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="kw">-</span><span class="at"> </span><span class="fu">uses</span><span class="kw">:</span><span class="at"> actions/upload-artifact@v3</span></span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="at">        </span><span class="fu">if</span><span class="kw">:</span><span class="at"> always()</span></span>
 <span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="at">        </span><span class="fu">with</span><span class="kw">:</span></span>
@@ -373,7 +370,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="conclusion" class="level2">
 <h2 class="anchored" data-anchor-id="conclusion">Conclusion</h2>
-<p>The combination of GitHub Actions and QEMU provides an platform for testing packages across multiple CPU architectures more rapidly than the Bioconductor Build System. Using them in a continuous integration environment allows one to detect and highlight unforeseen issues introduced by changes to a package or the wider R environment. The same emulation techniques can then be employed on your local development environment to find a solution, before testing again in a your GitHub Workflow, and finally deploying to Bioconductor.</p>
+<p>The combination of GitHub Actions and QEMU provides a platform for testing packages across multiple CPU architectures more rapidly than the Bioconductor Build System. Using them in a continuous integration environment allows one to detect and highlight unforeseen issues introduced by changes to a package or the wider R environment. The same emulation techniques can then be employed on your local development environment to find a solution, before testing again in a your GitHub Workflow, and finally deploying to Bioconductor.</p>
 
 
 </section>

@@ -12,6 +12,655 @@
 <generator>quarto-1.3.433</generator>
 <lastBuildDate>Fri, 14 Jul 2023 00:00:00 GMT</lastBuildDate>
 <item>
+  <title>Testing Packages on Linux ARM64 with GitHub Actions</title>
+  <dc:creator>Mike L. Smith</dc:creator>
+  <link>https://bioconductor.github.io/biocblog/posts/2023-07-14-linux-arm64-github-actions/index.html</link>
+  <description><![CDATA[ 
+
+
+
+
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://bioconductor.github.io/biocblog/posts/2023-06-09-debug-linux-arm64-on-docker/bioconductor_logo_cmyk.png" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">Bioconductor on Linux ARM64</figcaption>
+</figure>
+</div>
+<section id="introduction" class="level1">
+<h1>Introduction</h1>
+<p>The Bioconductor Build System (BBS) now includes routine package testing on Linux ARM64, but the relatively low frequency of testing means this, if a problem occurs with your package, it can take a while to identify and fix the issue using the build system alone.</p>
+<p>The previous blog post “<a href="https://bioconductor.github.io/biocblog/posts/2023-06-09-debug-linux-arm64-on-docker/">Emulated build and test of Bioconductor packages for Linux ARM64</a>” described how one can use Docker and architecture emulation to build, test, and debug a Bioconductor package for running on Linux ARM64 architecture when you only have access to local x86 hardware.</p>
+<p>However such manual testing can be frustrating to run as a package developer, either because it’s an extra task you have to run frequently, or because you only do it occasionally and forget the steps involved. Ideally such testing would happen automatically whenever you make changes to a package, but providing more rapid feedback than the BBS provides. In this article we build on these previously presented ideas to describe one approach for testing package on Linux ARM64 using a continuous integration environment on GitHub Actions.</p>
+</section>
+<section id="workflow-implementation" class="level1">
+<h1>Workflow Implementation</h1>
+<p>An example workflow implementation can be found at <a href="https://github.com/grimbough/bioc-testing-with-arm64/blob/main/.github/workflows/test-package-arm64.yml">https://github.com/grimbough/bioc-testing-with-arm64/blob/main/.github/workflows/test-package-arm64.yml</a>. In the remainder of this post we’ll discuss some of the implementation choices made there and how they work.</p>
+<section id="choice-of-docker-container" class="level2">
+<h2 class="anchored" data-anchor-id="choice-of-docker-container">Choice of Docker container</h2>
+<p>The first thing to remember when using architecture emulation is that everything works much slower than when running natively - typically by at least an order of magnitude. This influences some of the decisions made during this workflow regarding which containers to use and what we want to cache between workflow steps. Some operations that might be acceptable in a standard workflow become painfully slow under emulation, and so we try reduce the number of slow steps.</p>
+<p>The first of these is to use a modified version of the <a href="https://github.com/Bioconductor/bioconductor_docker/pkgs/container/bioconductor/102293490?tag=devel-amd64">Bioconductor:devel</a> docker image which has TinyTex pre-installed. This allows us to compile the package manual pages and and PDF vignettes during testing. Installing TinyTex and the required LaTeX packages takes approximately 10 minutes on our emulated system, so there is a noticeable time benefit to using an image with it already installed. The modified image can be found at <a href="https://ghcr.io/grimbough/bioc-with-tinytex:devel-arm64">ghcr.io/grimbough/bioc-with-tinytex:devel-arm64</a></p>
+<p><em>Note: You could probably achieve a similar result by using the standard Bioconductor container and running <code>R CMD check</code> with the arguments <code>--no-manual</code> and <code>--no-build-vignettes</code>, however I would rather run the complete testing process in case there is problematic code in either the manual page examples or vignette.</em></p>
+</section>
+<section id="installing-packages" class="level2">
+<h2 class="anchored" data-anchor-id="installing-packages">Installing packages</h2>
+<p>Installing packages that require compilation is also incredibly slow on our emulated system, so it’s immediately desirable to cache the library of installed packages that are needed for testing. The <a href="https://github.com/actions/cache">actions/cache</a> GitHub action does a good job of this, however it will only create a cache after a successful job run. Given we’re creating this workflow to test a potentially problematic package, it can be frustrating to repeatedly wait several hours for all the necessary packages to install, because you haven’t managed to fix the issue.</p>
+<p>Given this, we can split our workflow into two jobs; the first installs the packages while the second runs the actual package tests. With this structure a failure in the second job doesn’t prevent the cache mechanism from working and makes repeated runs much faster.</p>
+<p>Now lets take a look at the first few steps on our <code>install-dependencies</code> job and explain what’s happening. Most of these steps are pretty standard for regular users of GitHub Actions.</p>
+<div class="sourceCode" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb1-1"><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">  </span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">install-dependencies</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">:</span></span>
+<span id="cb1-2"><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">    </span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">name</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">:</span><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;"> Install package dependencies</span></span>
+<span id="cb1-3"><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">    </span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">runs-on</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">:</span><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;"> ubuntu-22.04</span></span>
+<span id="cb1-4"><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">    </span></span>
+<span id="cb1-5"><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">    </span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">steps</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">:</span></span>
+<span id="cb1-6"><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">      </span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">-</span><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;"> </span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">name</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">:</span><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;"> checkout</span></span>
+<span id="cb1-7"><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">        </span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">uses</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">:</span><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;"> actions/checkout@v3</span></span>
+<span id="cb1-8"><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">        </span></span>
+<span id="cb1-9"><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">      </span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">-</span><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;"> </span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">name</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">:</span><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;"> Set up QEMU</span></span>
+<span id="cb1-10"><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">        </span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">uses</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">:</span><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;"> docker/setup-qemu-action@v2</span></span>
+<span id="cb1-11"><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">        </span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">with</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">:</span></span>
+<span id="cb1-12"><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">          </span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">platforms</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">:</span><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;"> arm64</span></span></code></pre></div>
+<p>First off we’re checking out the git repository the workflow is found in. That’s probably just the package you’re testing. Then we’re using the <a href="https://github.com/docker/setup-qemu-action">docker/setup-qemu-action</a> to install the QEMU emulator discussed in the <a href="https://bioconductor.github.io/biocblog/posts/2023-06-09-debug-linux-arm64-on-docker/">previous post</a>.</p>
+<p>Now we set up the library cache.</p>
+<div class="sourceCode" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb2-1"><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">      </span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">-</span><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;"> </span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">name</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">:</span><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;"> Make R library</span></span>
+<span id="cb2-2"><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">        </span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">run</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">:</span><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;"> mkdir -p ${RUNNER_TEMP}/R-lib</span></span>
+<span id="cb2-3"></span>
+<span id="cb2-4"><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">      </span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">-</span><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;"> </span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">name</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">:</span><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;"> Cache Dependencies</span></span>
+<span id="cb2-5"><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">        </span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">id</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">:</span><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;"> cache-deps</span></span>
+<span id="cb2-6"><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">        </span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">uses</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">:</span><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;"> actions/cache@v3</span></span>
+<span id="cb2-7"><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">        </span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">with</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">:</span></span>
+<span id="cb2-8"><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">          </span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">path</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">:</span><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;"> ${{ runner.temp }}/R-lib</span></span>
+<span id="cb2-9"><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">          </span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">key</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">:</span><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;"> R_lib-ARM64-${{ hashFiles('**/DESCRIPTION') }}</span></span>
+<span id="cb2-10"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">          restore-keys</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">: </span><span class="ch" style="color: #20794D;
+background-color: null;
+font-style: inherit;">|</span></span>
+<span id="cb2-11">            R_lib-ARM64-${{ hashFiles('**/DESCRIPTION') }}</span>
+<span id="cb2-12">            R_lib-ARM64-</span></code></pre></div>
+<p>Initially we create an empty directory on our runner. In this example this is in the runners temporary directory, but it could be anywhere. We’ll later mount this location into our Docker container, and it will contain the installed package library. We have to create it outside of the Docker container and mount it so that the caching mechanism will work. If this location was created inside the Docker container, it would disappear when the container was destroyed, and we wouldn’t be able to retain the contents.</p>
+<p>We then provide this location to the <code>actions/cache</code> action, and use a hash of the <code>DESCRIPTION</code> file to tag our cache. Update the <code>DESCRIPTION</code> e.g.&nbsp;to add a new dependency or bump the version number and a new cache will be created. This isn’t perfect, as it won’t necessary capture updates to installed packages in the library, but it does a reasonable job with being too complex.</p>
+<p>The final step of the job is to install the dependencies.</p>
+<div class="sourceCode" id="cb3" style="background: #f1f3f5;"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb3-1"><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">      </span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">-</span><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;"> </span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">name</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">:</span><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;"> Run the build process with Docker</span></span>
+<span id="cb3-2"><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">        </span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">uses</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">:</span><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;"> addnab/docker-run-action@v3</span></span>
+<span id="cb3-3"><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">        </span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">with</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">:</span></span>
+<span id="cb3-4"><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">          </span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">image</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">:</span><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;"> ghcr.io/grimbough/bioc-with-tinytex:devel-arm64</span></span>
+<span id="cb3-5"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">          options</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">: </span><span class="ch" style="color: #20794D;
+background-color: null;
+font-style: inherit;">|</span></span>
+<span id="cb3-6">            --platform linux/arm64</span>
+<span id="cb3-7">            --volume ${{ runner.temp }}/R-lib:/R-lib</span>
+<span id="cb3-8">            --volume ${{ github.workspace }}/../:/build</span>
+<span id="cb3-9">            --env R_LIBS_USER=/R-lib</span>
+<span id="cb3-10"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">          run</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">: </span><span class="ch" style="color: #20794D;
+background-color: null;
+font-style: inherit;">|</span></span>
+<span id="cb3-11">            echo "options(Ncpus=2L, timeout = 300)" &gt;&gt; ~/.Rprofile</span>
+<span id="cb3-12">            Rscript -e 'pkgs &lt;- remotes::dev_package_deps("/build/examplePKG", dependencies = TRUE)' \</span>
+<span id="cb3-13">                    -e 'BiocManager::install(pkgs$package, update = TRUE, ask = FALSE)'</span></code></pre></div>
+<p>We use the <code>addnab/docker-run-action</code> action to run this step inside a docker container and provide the <code>image</code> argument with the TinyTex arm64 container discussed earlier.</p>
+<p>The <code>options</code> argument supplies arguments you would give Docker at the command line if you were running it locally. Here we set the platform to <code>linux/arm64</code> to work with the QEMU emulation. We mount two locations from our runner into to container: the location of the library we created earlier and the directory containing the package to be tests. Inside the container these will be found at <code>/R-lib</code> and <code>/build</code> respectively. We also set the <code>R_LIBS_USER</code> environment variable, so R will use the mounted library in preference to anywhere else.</p>
+<p>The <code>run</code> section is where we provide the command to be executed inside the container. First there’s an optional step to set the number of CPUs R should use by default. Currently GitHub runners are dual core and there’s a performance benefit to ensuring R uses both of these when installing multiple packages from source as we’re doing here. Then we use the <code>remotes</code> and <code>BiocManager</code> packages to list the package dependencies and install them.</p>
+<p>If this job executes successfully we should have a cached library containing all the packages required to test the package.</p>
+</section>
+<section id="running-the-package-tests" class="level2">
+<h2 class="anchored" data-anchor-id="running-the-package-tests">Running the package tests</h2>
+<p>The second job in our workflow will carry out the package tests. We can use the <code>needs:</code> argument to specify that this job requires the <code>install-dependencies</code> job to have completed successfully. Without specifying this GitHub Actions will try to run the two jobs simultaneously, which clearly isn’t appropriate.</p>
+<div class="sourceCode" id="cb4" style="background: #f1f3f5;"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb4-1"><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">  </span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">check-arm64</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">:</span></span>
+<span id="cb4-2"><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">    </span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">name</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">:</span><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;"> Test package on ARM64</span></span>
+<span id="cb4-3"><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">    </span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">runs-on</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">:</span><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;"> ubuntu-22.04</span></span>
+<span id="cb4-4"><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">    </span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">needs</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">:</span><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">   install-dependencies</span></span>
+<span id="cb4-5"><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">    </span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">steps</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">:</span></span>
+<span id="cb4-6"></span>
+<span id="cb4-7"><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">      </span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">-</span><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;"> </span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">name</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">:</span><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;"> checkout</span></span>
+<span id="cb4-8"><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">        </span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">uses</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">:</span><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;"> actions/checkout@v3</span></span>
+<span id="cb4-9"></span>
+<span id="cb4-10"><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">      </span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">-</span><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;"> </span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">name</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">:</span><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;"> Set up QEMU</span></span>
+<span id="cb4-11"><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">        </span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">uses</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">:</span><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;"> docker/setup-qemu-action@v2</span></span>
+<span id="cb4-12"><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">        </span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">with</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">:</span></span>
+<span id="cb4-13"><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">          </span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">platforms</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">:</span><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;"> arm64</span></span>
+<span id="cb4-14"></span>
+<span id="cb4-15"><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">      </span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">-</span><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;"> </span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">name</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">:</span><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;"> Make R library</span></span>
+<span id="cb4-16"><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">        </span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">run</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">:</span><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;"> mkdir -p ${RUNNER_TEMP}/R-lib</span></span>
+<span id="cb4-17"></span>
+<span id="cb4-18"><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">      </span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">-</span><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;"> </span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">name</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">:</span><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;"> Cache Dependencies</span></span>
+<span id="cb4-19"><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">        </span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">id</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">:</span><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;"> cache-deps</span></span>
+<span id="cb4-20"><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">        </span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">uses</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">:</span><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;"> actions/cache@v3</span></span>
+<span id="cb4-21"><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">        </span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">with</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">:</span></span>
+<span id="cb4-22"><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">          </span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">path</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">:</span><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;"> ${{ runner.temp }}/R-lib</span></span>
+<span id="cb4-23"><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">          </span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">key</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">:</span><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;"> R_lib-ARM64-${{ hashFiles('**/DESCRIPTION') }}</span></span>
+<span id="cb4-24"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">          restore-keys</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">: </span><span class="ch" style="color: #20794D;
+background-color: null;
+font-style: inherit;">|</span></span>
+<span id="cb4-25">            R_lib-ARM64-${{ hashFiles('**/DESCRIPTION') }}</span>
+<span id="cb4-26">            R_lib-ARM64-</span></code></pre></div>
+<p>The first few steps are the same as before, checking out the package repository, installing QEMU, and then restoring the cached set of packages.</p>
+<p>Next we can again use the <code>addnab/docker-run-action</code> action to execute our tests inside a docker container. We use the same container image and set of options as before to mount the package and library locations, as well as supplying the <code>--workdir</code> argument to ensure the following commands are executed in the folder where the package directory can be found.</p>
+<div class="sourceCode" id="cb5" style="background: #f1f3f5;"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb5-1"><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">      </span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">-</span><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;"> </span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">name</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">:</span><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;"> Test Package</span></span>
+<span id="cb5-2"><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">        </span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">uses</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">:</span><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;"> addnab/docker-run-action@v3</span></span>
+<span id="cb5-3"><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">        </span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">with</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">:</span></span>
+<span id="cb5-4"><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">          </span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">image</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">:</span><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;"> ghcr.io/grimbough/bioc-with-tinytex:devel-arm64</span></span>
+<span id="cb5-5"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">          options</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">: </span><span class="ch" style="color: #20794D;
+background-color: null;
+font-style: inherit;">|</span></span>
+<span id="cb5-6">            --platform linux/arm64</span>
+<span id="cb5-7">            --volume ${{ runner.temp }}/R-lib:/R-lib</span>
+<span id="cb5-8">            --volume ${{ github.workspace }}:/build</span>
+<span id="cb5-9">            --env R_LIBS_USER=/R-lib</span>
+<span id="cb5-10">            --workdir /build</span>
+<span id="cb5-11"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">          run</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">: </span><span class="ch" style="color: #20794D;
+background-color: null;
+font-style: inherit;">|</span></span>
+<span id="cb5-12">            ## Install and store the log like on the BioC Build System</span>
+<span id="cb5-13">            R CMD INSTALL examplePKG &amp;&gt; examplePKG.install-out.txt</span>
+<span id="cb5-14">            if [ $? -eq  1 ]; then</span>
+<span id="cb5-15">              cat examplePKG.install-out.txt</span>
+<span id="cb5-16">              exit 1;</span>
+<span id="cb5-17">            fi</span>
+<span id="cb5-18">            </span>
+<span id="cb5-19">            ## build the package</span>
+<span id="cb5-20">            R CMD build --keep-empty-dirs --no-resave-data examplePKG</span>
+<span id="cb5-21">            if [ $? -eq  1 ]; then exit 1; fi</span>
+<span id="cb5-22">            </span>
+<span id="cb5-23">            ## Check the package using the shortcut from the BBS</span>
+<span id="cb5-24">            R CMD check --install=check:examplePKG.install-out.txt --library="${R_LIBS_USER}" --no-vignettes --timings examplePKG*.tar.gz</span>
+<span id="cb5-25">            if [ $? -eq  1 ]; then exit 1; fi</span>
+<span id="cb5-26">            </span>
+<span id="cb5-27">            ## build a package binary for Linux ARM64</span>
+<span id="cb5-28">            mkdir -p examplePKG.buildbin-libdir</span>
+<span id="cb5-29">            R CMD INSTALL --build --library=examplePKG.buildbin-libdir examplePKG*.tar.gz</span>
+<span id="cb5-30">            if [ $? -eq  1 ]; then exit 1; fi</span>
+<span id="cb5-31"><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">          </span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">shell</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">:</span><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;"> bash</span></span></code></pre></div>
+<p>We use the <code>run</code> option to provide steps similar to the Bioconductor Build System. There are four distinct stages to this process: install, build, check, and build binary. The arguments and setting used here are representative of the BBS, but one can change them if other testing mechanism are required. You could also choose to split this into four separate job steps if you wanted more fine grained control.</p>
+<p>One minor wrinkle when running this in a Docker container is that GitHub Actions will use the return code of the Docker process to determine whether the step has failed or not, rather than the processes run inside the container. Thus it will often give a green tick, even if something went wrong, and it is easy to miss an error if just glancing at the step summaries. To resolve this, after each process in the container we test the return code produced by R and exit if it indicates failure.</p>
+<p>Finally, although some of the test outputs will be printed to the workflow log, we might want to make any output available to download and investigate further. To do this we can use the <a href="https://github.com/actions/upload-artifact"><code>upload-artifact</code></a> action.</p>
+<div class="sourceCode" id="cb6" style="background: #f1f3f5;"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb6-1"><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">      </span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">-</span><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;"> </span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">uses</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">:</span><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;"> actions/upload-artifact@v3</span></span>
+<span id="cb6-2"><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">        </span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">if</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">:</span><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;"> always()</span></span>
+<span id="cb6-3"><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">        </span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">with</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">:</span></span>
+<span id="cb6-4"><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">          </span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">name</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">:</span><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;"> my-artifact</span></span>
+<span id="cb6-5"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">          path</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">: </span><span class="ch" style="color: #20794D;
+background-color: null;
+font-style: inherit;">|</span></span>
+<span id="cb6-6">            ~/**/*.tar.gz</span>
+<span id="cb6-7">            ~/**/*.install-out.txt</span>
+<span id="cb6-8">            ~/**/*.Rcheck</span>
+<span id="cb6-9"><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">          </span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">if-no-files-found</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">:</span><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;"> warn</span></span></code></pre></div>
+<p>We use <code>if: always()</code> to ensure the upload happens even if a previous step has failed; it’s often more important to get the logs when there’s a problem! Assuming every step executed this should upload both the source and binary tarballs, the installation log file, and the folder produced by <code>R CMD check</code>. Hopefully that is enough information to diagnose any issue.</p>
+</section>
+<section id="conclusion" class="level2">
+<h2 class="anchored" data-anchor-id="conclusion">Conclusion</h2>
+<p>The combination of GitHub Actions and QEMU provides a platform for testing packages across multiple CPU architectures more rapidly than the Bioconductor Build System. Using them in a continuous integration environment allows one to detect and highlight unforeseen issues introduced by changes to a package or the wider R environment. The same emulation techniques can then be employed on your local development environment to find a solution, before testing again in a your GitHub Workflow, and finally deploying to Bioconductor.</p>
+
+
+</section>
+</section>
+
+ ]]></description>
+  <category>tech-notes</category>
+  <category>GitHub Actions</category>
+  <category>ARM64</category>
+  <guid>https://bioconductor.github.io/biocblog/posts/2023-07-14-linux-arm64-github-actions/index.html</guid>
+  <pubDate>Fri, 14 Jul 2023 00:00:00 GMT</pubDate>
+</item>
+<item>
   <title>Our Journey as Outreachy Interns with Bioconductor</title>
   <dc:creator>Sonali Kumari</dc:creator>
   <dc:creator>Daena Rys</dc:creator>
@@ -292,6 +941,7 @@ root@b40c553def79:/# R CMD check xyz_VERSION.tar.gz</code></pre>
 
  ]]></description>
   <category>tech-notes</category>
+  <category>ARM64</category>
   <guid>https://bioconductor.github.io/biocblog/posts/2023-06-09-debug-linux-arm64-on-docker/index.html</guid>
   <pubDate>Fri, 09 Jun 2023 00:00:00 GMT</pubDate>
 </item>
@@ -1809,715 +2459,6 @@ Note
   <guid>https://bioconductor.github.io/biocblog/posts/2021-11-11-biocasia2021/index.html</guid>
   <pubDate>Thu, 09 Dec 2021 00:00:00 GMT</pubDate>
   <media:content url="https://bioconductor.github.io/biocblog/posts/2021-11-11-biocasia2021/Lori_Japanese_caption.png" medium="image" type="image/png" height="109" width="144"/>
-</item>
-<item>
-  <title>Testing Packages on Linux ARM64 with GitHub Actions</title>
-  <dc:creator>Mike L. Smith</dc:creator>
-  <link>https://bioconductor.github.io/biocblog/posts/2023-06-29-linux-arm64-github-actions/index.html</link>
-  <description><![CDATA[ 
-
-
-
-
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="https://bioconductor.github.io/biocblog/posts/2023-06-09-debug-linux-arm64-on-docker/bioconductor_logo_cmyk.png" class="img-fluid figure-img"></p>
-<figcaption class="figure-caption">Bioconductor on Linux ARM64</figcaption>
-</figure>
-</div>
-<section id="introduction" class="level1">
-<h1>Introduction</h1>
-<p>The Bioconductor Build System (BBS) now includes routine package testing on Linux ARM64, but the relatively low frequency of testing means this, if a problem occurs with your package, it can take a while to identify and fix the issue using the build system alone.</p>
-<p>The previous blog post “<a href="https://bioconductor.github.io/biocblog/posts/2023-06-09-debug-linux-arm64-on-docker/">Emulated build and test of Bioconductor packages for Linux ARM64</a>” described how one can use Docker and architecture emulation to build, test, and debug a Bioconductor package for running on Linux ARM64 architecture when you only have access to local x86 hardware.</p>
-<p>However such manual testing can be frustrating to run as a package developer, either because it’s an extra task you have to run frequently, or because you only do it occasionally and forget the steps involved. Ideally such testing would happen automatically whenever you make changes to a package, but providing more rapid feedback than the BBS provides. In this article we build on these previously presented ideas to describe one approach for testing package on Linux ARM64 using a continuous integration environment on GitHub Actions.</p>
-</section>
-<section id="workflow-implementation" class="level1">
-<h1>Workflow Implementation</h1>
-<p>An example workflow implementation can be found at <a href="https://github.com/grimbough/bioc-testing-with-arm64/blob/main/.github/workflows/test-package-arm64.yml">https://github.com/grimbough/bioc-testing-with-arm64/blob/main/.github/workflows/test-package-arm64.yml</a>. In the remainder of this post we’ll discuss how some of the implementation choices made there and how they work.</p>
-<section id="choice-of-docker-container" class="level2">
-<h2 class="anchored" data-anchor-id="choice-of-docker-container">Choice of Docker container</h2>
-<p>The first thing to remember when using architecture emulation is that everything works much slower than when running natively - typically by at least an order of magnitude. This influences some of the decisions made during this workflow regarding which containers to use and what we want to cache between workflow steps. Some operations that might be acceptable in a standard workflow become painfully slow under emulation, and so we try reduce the number of slow steps.</p>
-<p>The first of these is to use a modified version of the <a href="https://github.com/Bioconductor/bioconductor_docker/pkgs/container/bioconductor/102293490?tag=devel-amd64">Bioconductor:devel</a> docker image which has TinyTex pre-installed. This allows us to compile the package manual pages and and PDF vignettes during testing. Installing TinyTex and the required LaTeX packages takes approximately 10 minutes on our emulated system, so there is a noticeable time benefit to using an image with it already installed. The modified image can be found at <a href="https://ghcr.io/grimbough/bioc-with-tinytex:devel-arm64">ghcr.io/grimbough/bioc-with-tinytex:devel-arm64</a></p>
-<p><em>Note: You could probably achieve a similar result by using the standard Bioconductor container and running <code>R CMD check</code> with the arguments <code>--no-manual</code> and <code>--no-build-vignettes</code>, however I would rather run the complete testing process in case there is problematic code in either the manual page examples or vignette.</em></p>
-</section>
-<section id="installing-packages" class="level2">
-<h2 class="anchored" data-anchor-id="installing-packages">Installing packages</h2>
-<p>Installing packages that require compilation is also incredibly slow on our emulated system, so it’s immediately desirable to cache the library of installed packages that are needed for testing. The <a href="https://github.com/actions/cache">actions/cache</a> GitHub action does a good job of this, however it will only create a cache after a successful job run. Given we’re creating this workflow to test a potentially problematic package, it can be frustrating to repeatedly wait several hours for all the necessary packages to install, because you haven’t managed to fixed the issue.</p>
-<p>Given this, we can split our workflow into two jobs; the first installs the packages while the second runs the actual package tests. With this structure a failure in the second job doesn’t prevent the cache mechanism from working and makes repeated runs much faster.</p>
-<p>Now lets take a look at the first few steps on our <code>install-dependencies</code> job and explain what’s happening. Most of these steps are pretty standard for regular users of GitHub Actions.</p>
-<div class="sourceCode" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb1-1"><span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">  </span><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">install-depdendencies</span><span class="kw" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">:</span></span>
-<span id="cb1-2"><span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">    </span><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">name</span><span class="kw" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">:</span><span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;"> Install package dependencies</span></span>
-<span id="cb1-3"><span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">    </span><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">runs-on</span><span class="kw" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">:</span><span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;"> ubuntu-22.04</span></span>
-<span id="cb1-4"><span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">    </span></span>
-<span id="cb1-5"><span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">    </span><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">steps</span><span class="kw" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">:</span></span>
-<span id="cb1-6"><span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">      </span><span class="kw" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">-</span><span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;"> </span><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">name</span><span class="kw" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">:</span><span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;"> checkout</span></span>
-<span id="cb1-7"><span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">        </span><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">uses</span><span class="kw" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">:</span><span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;"> actions/checkout@v3</span></span>
-<span id="cb1-8"><span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">        </span></span>
-<span id="cb1-9"><span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">      </span><span class="kw" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">-</span><span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;"> </span><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">name</span><span class="kw" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">:</span><span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;"> Set up QEMU</span></span>
-<span id="cb1-10"><span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">        </span><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">uses</span><span class="kw" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">:</span><span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;"> docker/setup-qemu-action@v2</span></span>
-<span id="cb1-11"><span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">        </span><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">with</span><span class="kw" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">:</span></span>
-<span id="cb1-12"><span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">          </span><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">platforms</span><span class="kw" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">:</span><span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;"> arm64</span></span>
-<span id="cb1-13"><span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">          </span></span>
-<span id="cb1-14"><span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">      </span><span class="kw" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">-</span><span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;"> </span><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">name</span><span class="kw" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">:</span><span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;"> Login to GitHub Container Registry</span></span>
-<span id="cb1-15"><span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">        </span><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">uses</span><span class="kw" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">:</span><span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;"> docker/login-action@v2</span></span>
-<span id="cb1-16"><span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">        </span><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">with</span><span class="kw" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">:</span></span>
-<span id="cb1-17"><span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">          </span><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">registry</span><span class="kw" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">:</span><span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;"> ghcr.io</span></span>
-<span id="cb1-18"><span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">          </span><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">username</span><span class="kw" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">:</span><span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;"> ${{ github.actor }}</span></span>
-<span id="cb1-19"><span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">          </span><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">password</span><span class="kw" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">:</span><span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;"> ${{ secrets.GITHUB_TOKEN }}</span></span></code></pre></div>
-<p>First off we’re checking out the git repository the workflow is found in. That’s probably just the package you’re testing. Then we’re using the <a href="https://github.com/docker/setup-qemu-action">docker/setup-qemu-action</a> to install the QEMU emulator discussed in the <a href="https://bioconductor.github.io/biocblog/posts/2023-06-09-debug-linux-arm64-on-docker/">previous post</a>.</p>
-<p>Next we login to the GitHub container registry in order to later pull the image were going to run the tests under. For pulling container images you we can use the automatic <a href="https://docs.github.com/en/actions/security-guides/automatic-token-authentication"><code>GITHUB_TOKEN</code> secret</a>, so you don’t need to configure anything here.</p>
-<p>Now we set up the library cache.</p>
-<div class="sourceCode" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb2-1"><span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">      </span><span class="kw" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">-</span><span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;"> </span><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">name</span><span class="kw" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">:</span><span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;"> Make R library</span></span>
-<span id="cb2-2"><span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">        </span><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">run</span><span class="kw" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">:</span><span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;"> mkdir -p ${RUNNER_TEMP}/R-lib</span></span>
-<span id="cb2-3"></span>
-<span id="cb2-4"><span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">      </span><span class="kw" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">-</span><span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;"> </span><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">name</span><span class="kw" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">:</span><span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;"> Cache Dependencies</span></span>
-<span id="cb2-5"><span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">        </span><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">id</span><span class="kw" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">:</span><span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;"> cache-deps</span></span>
-<span id="cb2-6"><span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">        </span><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">uses</span><span class="kw" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">:</span><span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;"> actions/cache@v3</span></span>
-<span id="cb2-7"><span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">        </span><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">with</span><span class="kw" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">:</span></span>
-<span id="cb2-8"><span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">          </span><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">path</span><span class="kw" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">:</span><span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;"> ${{ runner.temp }}/R-lib</span></span>
-<span id="cb2-9"><span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">          </span><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">key</span><span class="kw" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">:</span><span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;"> R_lib-ARM64-${{ hashFiles('**/DESCRIPTION') }}</span></span>
-<span id="cb2-10"><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">          restore-keys</span><span class="kw" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">: </span><span class="ch" style="color: #20794D;
-background-color: null;
-font-style: inherit;">|</span></span>
-<span id="cb2-11">            R_lib-ARM64-${{ hashFiles('**/DESCRIPTION') }}</span>
-<span id="cb2-12">            R_lib-ARM64-</span></code></pre></div>
-<p>Initially we create an empty directory on our runner. In this example this is in the runners temporary directory, but it could be anywhere. We’ll later mount this location into our Docker container, and it will contain the installed package library. We have to create it outside of the Docker container and mount it so that the caching mechanism will work. If this location was created inside the Docker container, it would disappear when the container was destroyed, and we wouldn’t be able to retain the contents.</p>
-<p>We then provide this location to the <code>actions/cache</code> action, and use a hash of the <code>DESCRIPTION</code> file to tag our cache. Update the <code>DESCRIPTION</code> e.g.&nbsp;to add a new dependency or bump the version number and a new cache will be created. This isn’t perfect, as it won’t necessary capture updates to installed packages in the library, but it does a reasonable job with being too complex.</p>
-<p>The final step of the job is to install the dependencies.</p>
-<div class="sourceCode" id="cb3" style="background: #f1f3f5;"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb3-1"><span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">      </span><span class="kw" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">-</span><span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;"> </span><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">name</span><span class="kw" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">:</span><span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;"> Run the build process with Docker</span></span>
-<span id="cb3-2"><span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">        </span><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">uses</span><span class="kw" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">:</span><span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;"> addnab/docker-run-action@v3</span></span>
-<span id="cb3-3"><span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">        </span><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">with</span><span class="kw" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">:</span></span>
-<span id="cb3-4"><span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">          </span><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">image</span><span class="kw" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">:</span><span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;"> ghcr.io/grimbough/bioc-with-tinytex:devel-arm64</span></span>
-<span id="cb3-5"><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">          options</span><span class="kw" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">: </span><span class="ch" style="color: #20794D;
-background-color: null;
-font-style: inherit;">|</span></span>
-<span id="cb3-6">            --platform linux/arm64</span>
-<span id="cb3-7">            --volume ${{ runner.temp }}/R-lib:/R-lib</span>
-<span id="cb3-8">            --volume ${{ github.workspace }}/../:/build</span>
-<span id="cb3-9">            --env R_LIBS_USER=/R-lib</span>
-<span id="cb3-10"><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">          run</span><span class="kw" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">: </span><span class="ch" style="color: #20794D;
-background-color: null;
-font-style: inherit;">|</span></span>
-<span id="cb3-11">            echo "options(Ncpus=2L, timeout = 300)" &gt;&gt; ~/.Rprofile</span>
-<span id="cb3-12">            Rscript -e 'pkgs &lt;- remotes::dev_package_deps("/build/examplePKG", dependencies = TRUE)' \</span>
-<span id="cb3-13">                    -e 'BiocManager::install(pkgs$package, update = TRUE, ask = FALSE)'</span></code></pre></div>
-<p>We use the <code>addnab/docker-run-action</code> action to run this step inside a docker container and provide the <code>image</code> argument with the TinyTex arm64 container discussed earlier.</p>
-<p>The <code>options</code> argument supplies arguments you would give Docker at the command line if you were running it locally. Here we set the platform to <code>linux/arm64</code> to work with the QEMU emulation. We mount two locations from our runner into to container: the location of the library we created earlier and the directory containing the package to be tests. Inside the container these will be found at <code>/R-lib</code> and <code>/build</code> respectively. We also set the <code>R_LIBS_USER</code> environment variable, so R will use the mounted library in preference to anywhere else.</p>
-<p>The <code>run</code> section is where we provide the command to be executed inside the container. First there’s an optional step to set the number of CPUs R should use by default. Currently GitHub runners are dual core and there’s a performance benefit to ensuring R uses both of these when installing multiple packages from source as we’re doing here. Then we use the <code>remotes</code> and <code>BiocManager</code> packages to list the package dependencies and install them.</p>
-<p>If this job executes successfully we should have a cached library containing all the packages required to test the package.</p>
-</section>
-<section id="running-the-package-tests" class="level2">
-<h2 class="anchored" data-anchor-id="running-the-package-tests">Running the package tests</h2>
-<p>The second job in our workflow will carry out the package tests. We can use the <code>needs:</code> argument to specify that this job requires the <code>install-dependencies</code> job to have completed successfully. Without specifying this GitHub Actions will try to run the two jobs simultaneously, which clearly isn’t appropriate.</p>
-<div class="sourceCode" id="cb4" style="background: #f1f3f5;"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb4-1"><span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">  </span><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">check-arm64</span><span class="kw" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">:</span></span>
-<span id="cb4-2"><span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">    </span><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">name</span><span class="kw" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">:</span><span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;"> Test package on ARM64</span></span>
-<span id="cb4-3"><span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">    </span><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">runs-on</span><span class="kw" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">:</span><span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;"> ubuntu-22.04</span></span>
-<span id="cb4-4"><span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">    </span><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">needs</span><span class="kw" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">:</span><span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">   install-depdendencies</span></span>
-<span id="cb4-5"><span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">    </span><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">steps</span><span class="kw" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">:</span></span>
-<span id="cb4-6"></span>
-<span id="cb4-7"><span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">      </span><span class="kw" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">-</span><span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;"> </span><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">name</span><span class="kw" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">:</span><span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;"> checkout</span></span>
-<span id="cb4-8"><span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">        </span><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">uses</span><span class="kw" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">:</span><span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;"> actions/checkout@v3</span></span>
-<span id="cb4-9"></span>
-<span id="cb4-10"><span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">      </span><span class="kw" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">-</span><span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;"> </span><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">name</span><span class="kw" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">:</span><span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;"> Set up QEMU</span></span>
-<span id="cb4-11"><span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">        </span><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">uses</span><span class="kw" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">:</span><span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;"> docker/setup-qemu-action@v2</span></span>
-<span id="cb4-12"><span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">        </span><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">with</span><span class="kw" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">:</span></span>
-<span id="cb4-13"><span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">          </span><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">platforms</span><span class="kw" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">:</span><span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;"> arm64</span></span>
-<span id="cb4-14"></span>
-<span id="cb4-15"><span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">      </span><span class="kw" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">-</span><span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;"> </span><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">name</span><span class="kw" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">:</span><span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;"> Make R library</span></span>
-<span id="cb4-16"><span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">        </span><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">run</span><span class="kw" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">:</span><span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;"> mkdir -p ${RUNNER_TEMP}/R-lib</span></span>
-<span id="cb4-17"></span>
-<span id="cb4-18"><span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">      </span><span class="kw" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">-</span><span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;"> </span><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">name</span><span class="kw" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">:</span><span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;"> Cache Dependencies</span></span>
-<span id="cb4-19"><span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">        </span><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">id</span><span class="kw" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">:</span><span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;"> cache-deps</span></span>
-<span id="cb4-20"><span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">        </span><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">uses</span><span class="kw" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">:</span><span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;"> actions/cache@v3</span></span>
-<span id="cb4-21"><span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">        </span><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">with</span><span class="kw" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">:</span></span>
-<span id="cb4-22"><span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">          </span><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">path</span><span class="kw" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">:</span><span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;"> ${{ runner.temp }}/R-lib</span></span>
-<span id="cb4-23"><span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">          </span><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">key</span><span class="kw" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">:</span><span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;"> R_lib-ARM64-${{ hashFiles('**/DESCRIPTION') }}</span></span>
-<span id="cb4-24"><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">          restore-keys</span><span class="kw" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">: </span><span class="ch" style="color: #20794D;
-background-color: null;
-font-style: inherit;">|</span></span>
-<span id="cb4-25">            R_lib-ARM64-${{ hashFiles('**/DESCRIPTION') }}</span>
-<span id="cb4-26">            R_lib-ARM64-</span></code></pre></div>
-<p>The first few steps are the same as before, checking out the package repository, installing QEMU, and then restoring the cached set of packages.</p>
-<p>Next we can again use the <code>addnab/docker-run-action</code> action to execute our tests inside a docker container. We use the same container image and set of options as before to mount the package and library locations, as well as supplying the <code>--workdir</code> argument to ensure the following commands are executed in the folder where the package directory can be found.</p>
-<div class="sourceCode" id="cb5" style="background: #f1f3f5;"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb5-1"><span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">      </span><span class="kw" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">-</span><span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;"> </span><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">name</span><span class="kw" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">:</span><span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;"> Test Package</span></span>
-<span id="cb5-2"><span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">        </span><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">uses</span><span class="kw" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">:</span><span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;"> addnab/docker-run-action@v3</span></span>
-<span id="cb5-3"><span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">        </span><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">with</span><span class="kw" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">:</span></span>
-<span id="cb5-4"><span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">          </span><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">image</span><span class="kw" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">:</span><span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;"> ghcr.io/grimbough/bioc-with-tinytex:devel-arm64</span></span>
-<span id="cb5-5"><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">          options</span><span class="kw" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">: </span><span class="ch" style="color: #20794D;
-background-color: null;
-font-style: inherit;">|</span></span>
-<span id="cb5-6">            --platform linux/arm64</span>
-<span id="cb5-7">            --volume ${{ runner.temp }}/R-lib:/R-lib</span>
-<span id="cb5-8">            --volume ${{ github.workspace }}:/build</span>
-<span id="cb5-9">            --env R_LIBS_USER=/R-lib</span>
-<span id="cb5-10">            --workdir /build</span>
-<span id="cb5-11"><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">          run</span><span class="kw" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">: </span><span class="ch" style="color: #20794D;
-background-color: null;
-font-style: inherit;">|</span></span>
-<span id="cb5-12">            ## Install and store the log like on the BioC Build System</span>
-<span id="cb5-13">            R CMD INSTALL examplePKG &amp;&gt; examplePKG.install-out.txt</span>
-<span id="cb5-14">            if [ $? -eq  1 ]; then</span>
-<span id="cb5-15">              cat examplePKG.install-out.txt</span>
-<span id="cb5-16">              exit 1;</span>
-<span id="cb5-17">            fi</span>
-<span id="cb5-18">            </span>
-<span id="cb5-19">            ## build the package</span>
-<span id="cb5-20">            R CMD build --keep-empty-dirs --no-resave-data examplePKG</span>
-<span id="cb5-21">            if [ $? -eq  1 ]; then; exit 1; fi</span>
-<span id="cb5-22">            </span>
-<span id="cb5-23">            ## Check the package using the shortcut from the BBS</span>
-<span id="cb5-24">            R CMD check --install=check:examplePKG.install-out.txt --library="${R_LIBS_USER}" --no-vignettes --timings examplePKG*.tar.gz</span>
-<span id="cb5-25">            if [ $? -eq  1 ]; then; exit 1; fi</span>
-<span id="cb5-26">            </span>
-<span id="cb5-27">            ## build a package binary for Linux ARM64</span>
-<span id="cb5-28">            mkdir -p examplePKG.buildbin-libdir</span>
-<span id="cb5-29">            R CMD INSTALL --build --library=examplePKG.buildbin-libdir examplePKG*.tar.gz</span>
-<span id="cb5-30">            if [ $? -eq  1 ]; then; exit 1; fi</span>
-<span id="cb5-31"><span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">          </span><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">shell</span><span class="kw" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">:</span><span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;"> bash</span></span></code></pre></div>
-<p>We use the <code>run</code> option to provide steps similar to the Bioconductor Build System. There are four distinct stages to this process: install, build, check, and build binary. The arguments and setting used here are representative of the BBS, but one can change them if other testing mechanism are required. You could also choose to split this into four separate job steps if you wanted more fine grained control.</p>
-<p>One minor wrinkle when running this in a Docker container is that GitHub Actions will use the return code of the Docker process to determine whether the step has failed or not, rather than the processes run inside the container. Thus it will often give a green tick, even if something went wrong, and it is easy to miss an error if just glancing at the step summaries. To resolve this, after each process in the container we test the return code produced by R and exit if it indicates failure.</p>
-<p>Finally, although some of the test outputs will be printed to the workflow log, we might want to make any output available to download and investigate further. To do with we can use the <a href="https://github.com/actions/upload-artifact"><code>upload-artifact</code></a> action.</p>
-<div class="sourceCode" id="cb6" style="background: #f1f3f5;"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb6-1"><span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">      </span><span class="kw" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">-</span><span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;"> </span><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">uses</span><span class="kw" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">:</span><span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;"> actions/upload-artifact@v3</span></span>
-<span id="cb6-2"><span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">        </span><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">if</span><span class="kw" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">:</span><span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;"> always()</span></span>
-<span id="cb6-3"><span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">        </span><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">with</span><span class="kw" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">:</span></span>
-<span id="cb6-4"><span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">          </span><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">name</span><span class="kw" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">:</span><span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;"> my-artifact</span></span>
-<span id="cb6-5"><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">          path</span><span class="kw" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">: </span><span class="ch" style="color: #20794D;
-background-color: null;
-font-style: inherit;">|</span></span>
-<span id="cb6-6">            ~/**/*.tar.gz</span>
-<span id="cb6-7">            ~/**/*.install-out.txt</span>
-<span id="cb6-8">            ~/**/*.Rcheck</span>
-<span id="cb6-9"><span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">          </span><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">if-no-files-found</span><span class="kw" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">:</span><span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;"> warn</span></span></code></pre></div>
-<p>We use <code>if: always()</code> to ensure the upload happens even if a previous step has failed; it’s often more important to get the logs when there’s a problem! Assuming every step executed this should upload both the source and binary tarballs, the installation log file, and the folder produced by <code>R CMD check</code>. Hopefully that is enough information to diagnose any issue.</p>
-</section>
-<section id="conclusion" class="level2">
-<h2 class="anchored" data-anchor-id="conclusion">Conclusion</h2>
-<p>The combination of GitHub Actions and QEMU provides an platform for testing packages across multiple CPU architectures more rapidly than the Bioconductor Build System. Using them in a continuous integration environment allows one to detect and highlight unforeseen issues introduced by changes to a package or the wider R environment. The same emulation techniques can then be employed on your local development environment to find a solution, before testing again in a your GitHub Workflow, and finally deploying to Bioconductor.</p>
-
-
-</section>
-</section>
-
- ]]></description>
-  <category>tech-notes</category>
-  <category>GitHub Actions</category>
-  <category>ARM64</category>
-  <guid>https://bioconductor.github.io/biocblog/posts/2023-06-29-linux-arm64-github-actions/index.html</guid>
-  <pubDate>Fri, 14 Jul 2023 13:22:21 GMT</pubDate>
 </item>
 </channel>
 </rss>
