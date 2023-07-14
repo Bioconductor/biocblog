@@ -46,7 +46,7 @@ Bioconductor on our chosen projects.
 ## Bioconductor: Empowering Open Science
 
 Three interns and three Bioconductor community projects are participating in
-the May 2023 [Outreachy](outreachy.org) internship round. In this blog
+the May 2023 [Outreachy](https://www.outreachy.org/) internship round. In this blog
 post, we will provide an overview of our projects and share our experiences thus
 far, exploring the fascinating realm of Bioconductor.
 
@@ -149,7 +149,7 @@ to develop important skills during this internship with the aim of using technol
 to facilitate biotech data processes and analysis.
 
 To find out more about my Outreachy experience and internship with Bioconductor, you can
-visit my blog at [https://daenarys.dreamwidth.org/](daenarys.dreamwidth.org)
+visit my blog at [daenarys.dreamwidth.org](https://daenarys.dreamwidth.org/).
 
 ## Atrayee's Experience: Microbiome Study Curation
 
@@ -181,7 +181,7 @@ many projects listed on the platform, for which we could choose to contribute.
 ### The Microbiome Study Curation Project at Bioconductor
 
 A lot of the projects were very appealing but what stood out to me was the
-‘Microbiome Study curation’ project at [BugSigDb](bugsigdb.org) ; for me, it was
+‘Microbiome Study curation’ project at [BugSigDb](https://bugsigdb.org/) ; for me, it was
 quite different to the others and while it wasn’t extremely tedious, it was
 fascinating to learn about the project: I realized how I wasn’t even properly
 aware of how epidemiological studies and research on samples of varying sizes
@@ -228,7 +228,7 @@ submit](https://www.outreachy.org/communities/cfp/) their open source projects
 in early August.
 
 At the upcoming Bioc2023 conference in August, we'll also have an [Outreachy
-Birds of a Feather](https://bioc2023.bioconductor.org/abstracts/paper94/) with
+Birds of a Feather](https://bioc2023.bioconductor.org/abstracts/track12/) with
 Beryl Kanali and Kirabo Kakopo who were Outreachy interns in December 2022. The
 Bioconductor community coordinator for Outreachy, Jennifer Wokaty, will also cover
 how to submit a good open source project to Outreachy.
