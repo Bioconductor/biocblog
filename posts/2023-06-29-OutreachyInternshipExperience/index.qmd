@@ -151,7 +151,7 @@ to facilitate biotech data processes and analysis.
 To find out more about my Outreachy experience and internship with Bioconductor, you can
 visit my blog at [daenarys.dreamwidth.org](https://daenarys.dreamwidth.org/).
 
-## Atrayee's Experience: Microbiome Study Curation
+### Atrayee's Experience: Microbiome Study Curation
 
 ![Atrayee Samanta](Screenshot 2023-06-19 160243.png){height=300px}
 
@@ -159,7 +159,7 @@ Hello! I am Atrayee Samanta, an undergraduate student at IIEST Shibpur, India. I
 am currently pursuing a B. Tech in Computer Science and Technology. I love
 reading books, watercolour painting and music.
 
-## How I came to know about Open Source and the Outreachy Internships
+#### How I came to know about Open Source and the Outreachy Internships
 
 When I was just starting out as a sophomore, while exploring about the many ways
 people can make a difference in computer science, I came across the many ways in
@@ -178,7 +178,7 @@ definitely get a chance to learn and interact with the open-source community!
 Once my initial application period was over, I took a few days to go over the
 many projects listed on the platform, for which we could choose to contribute.
 
-### The Microbiome Study Curation Project at Bioconductor
+#### The Microbiome Study Curation Project at Bioconductor
 
 A lot of the projects were very appealing but what stood out to me was the
 ‘Microbiome Study curation’ project at [BugSigDb](https://bugsigdb.org/); for me, it was
@@ -199,7 +199,7 @@ contributions and learning. My mentors, Chloe and Fatima as well as the BugSigdb
 community- Professor Levi and others always helped me out whenever I got stuck
 on a problem or had an issue in understanding something.
 
-## About the Project
+#### About the Project
 
 The Microbiome Study curation project mainly deals with reviewing existing
 epidemiological studies on BugSigdb and curating new studies on BugSigdb.
