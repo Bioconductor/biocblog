@@ -32,7 +32,7 @@
 <p><a href="https://www.outreachy.org/">Outreachy</a> is a program offering a paid 12-week remote internship in open source and open science. It aims to empower individuals facing systemic bias and underrepresentation in tech. Outreachy interns collaborate with experienced mentors on projects spanning programming, user experience, documentation, design, data science, marketing, advocacy, and community events.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="https://bioconductor.github.io/biocblog/posts/2023-06-29-OutreachyInternshipExperience/outreachy_homepage.png" class="img-fluid figure-img"></p>
+<p><img src="https://bioconductor.github.io/biocblog/posts/2023-06-29-OutreachyInternshipExperience/outreachy_homepage.jpg" class="img-fluid figure-img"></p>
 <figcaption class="figure-caption">Outreachy</figcaption>
 </figure>
 </div>
@@ -2517,7 +2517,7 @@ font-style: inherit;"> warn</span></span></code></pre></div>
   <category>GitHub Actions</category>
   <category>ARM64</category>
   <guid>https://bioconductor.github.io/biocblog/posts/2023-06-29-linux-arm64-github-actions/index.html</guid>
-  <pubDate>Fri, 14 Jul 2023 07:16:28 GMT</pubDate>
+  <pubDate>Fri, 14 Jul 2023 07:33:14 GMT</pubDate>
 </item>
 </channel>
 </rss>
