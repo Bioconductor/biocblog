@@ -37,7 +37,7 @@ interns collaborate with experienced mentors on projects spanning programming,
 user experience, documentation, design, data science, marketing, advocacy, and
 community events.
 
-![Outreachy](outreachy_homepage.png)
+![Outreachy](outreachy_homepage.jpg)
 
 The application process involves three stages, where applicants contribute to
 1-2 projects of their choice. Through Outreachy, we were selected to work with
