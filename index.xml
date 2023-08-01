@@ -10,7 +10,72 @@
 <atom:link href="https://bioconductor.github.io/biocblog/index.xml" rel="self" type="application/rss+xml"/>
 <description>A blog for the Bioconductor community!</description>
 <generator>quarto-1.3.433</generator>
-<lastBuildDate>Fri, 14 Jul 2023 00:00:00 GMT</lastBuildDate>
+<lastBuildDate>Tue, 01 Aug 2023 00:00:00 GMT</lastBuildDate>
+<item>
+  <title>Taking Bioconductor.org to the Next Level: Community, Collaboration and Progress</title>
+  <dc:creator>Maria Doyle</dc:creator>
+  <link>https://bioconductor.github.io/biocblog/posts/2023-08-01-website-redesign-update/index.html</link>
+  <description><![CDATA[ 
+
+
+
+
+<p>It’s been an exhilarating few weeks since we kicked off our ambitious <a href="../../posts/2023-06-22-website-redesign/index.html">Bioconductor.org website redesign work</a> with NearForm (see figure below). We’re back to provide you with a comprehensive update, highlighting the key milestones we’ve achieved, the insights we’ve gathered, and the collaboration that’s brought us here.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://bioconductor.github.io/biocblog/posts/2023-08-01-website-redesign-update/BC Website redesign - Project timeline.jpg" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">Project timeline - Phase 1</figcaption>
+</figure>
+</div>
+<section id="user-survey-insights-for-the-future" class="level2">
+<h2 class="anchored" data-anchor-id="user-survey-insights-for-the-future">User Survey: Insights for the Future</h2>
+<p>After launching our user survey, we received a wealth of feedback from almost 600 community members, that has helped us identify the needs of our diverse community. The insights obtained were eye-opening and instrumental in shaping our redesign roadmap. We deeply appreciate your time and input.</p>
+</section>
+<section id="nearforms-ux-audit-uncovering-key-findings" class="level2">
+<h2 class="anchored" data-anchor-id="nearforms-ux-audit-uncovering-key-findings">NearForm’s UX Audit: Uncovering Key Findings</h2>
+<p>Concurrently, our partner, NearForm, conducted a detailed UX audit. The key findings from this audit provided invaluable guidance on how to enhance our user experience and design a website that is as intuitive and accessible as it is functional.</p>
+</section>
+<section id="bridging-the-gap-stakeholder-workshops" class="level2">
+<h2 class="anchored" data-anchor-id="bridging-the-gap-stakeholder-workshops">Bridging the Gap: Stakeholder Workshops</h2>
+<p>Harnessing the survey insights and the UX audit, we moved into a phase of active collaboration. Three intensive workshops were held in July with stakeholders from the Bioconductor Community Advisory Board (CAB), Technical Advisory Board (TAB), and the website working group. The passion and commitment shown by these groups during these discussions have brought a new level of dynamism to the project.</p>
+</section>
+<section id="crafting-the-design-nearforms-expert-touch" class="level2">
+<h2 class="anchored" data-anchor-id="crafting-the-design-nearforms-expert-touch">Crafting the Design: NearForm’s Expert Touch</h2>
+<p>Equipped with the knowledge from the survey, UX audit, and stakeholder workshops, an initial design was skillfully crafted by Nick Zafiropoulos from NearForm. The design effectively captured our vision for a refreshed and engaging Bioconductor.org.</p>
+</section>
+<section id="ux-testing-a-community-led-effort" class="level2">
+<h2 class="anchored" data-anchor-id="ux-testing-a-community-led-effort">UX Testing: A Community-led Effort</h2>
+<p>We invited volunteers - including those who participated in the survey and members of CAB, TAB, and the website working group - to perform User Experience (UX) testing on the new design. The feedback and suggestions we received from the 15 volunteers were incorporated to fine-tune the prototype further.</p>
+</section>
+<section id="design-prototype-sharing-with-cab-tab" class="level2">
+<h2 class="anchored" data-anchor-id="design-prototype-sharing-with-cab-tab">Design Prototype: Sharing with CAB &amp; TAB</h2>
+<p>Once the revisions were made, we shared the design prototype with CAB &amp; TAB. Their enthusiasm and constructive feedback affirmed that we were on the right track.</p>
+</section>
+<section id="from-design-to-reality-the-build-phase" class="level2">
+<h2 class="anchored" data-anchor-id="from-design-to-reality-the-build-phase">From Design to Reality: The Build Phase</h2>
+<p>With a refined design in hand, the build phase commenced, led by Steve Goode from NearForm. This process has been an exercise in precision, passion, and dedication to deliver a website that meets our community’s needs and expectations.</p>
+</section>
+<section id="daily-stand-ups-keeping-the-momentum" class="level2">
+<h2 class="anchored" data-anchor-id="daily-stand-ups-keeping-the-momentum">Daily Stand-ups: Keeping the Momentum</h2>
+<p>To ensure progress and resolve any issues promptly, the NearForm and Bioconductor teams have been having daily standups together. These meetings have proven vital in maintaining momentum and fostering a spirit of collaboration.</p>
+</section>
+<section id="bioc2023-a-sneak-peek-into-the-future" class="level2">
+<h2 class="anchored" data-anchor-id="bioc2023-a-sneak-peek-into-the-future">BioC2023: A Sneak Peek into the Future</h2>
+<p>We’re thrilled to announce that the new design of Bioconductor.org will be showcased at the BioC2023 conference this week. We eagerly anticipate your feedback and reactions, as they will further strengthen our commitment to delivering a revamped Bioconductor.org that truly serves our vibrant community.</p>
+</section>
+<section id="looking-forward" class="level2">
+<h2 class="anchored" data-anchor-id="looking-forward">Looking Forward</h2>
+<p>As we continue on this path of redesign and reimagination, your unwavering support and active participation remain our driving force. We eagerly anticipate the unveiling of the new Bioconductor.org, a project that epitomizes community involvement and collaboration. Stay tuned for more updates as we progress further in this transformative journey.</p>
+
+
+</section>
+
+ ]]></description>
+  <category>Bioconductor</category>
+  <guid>https://bioconductor.github.io/biocblog/posts/2023-08-01-website-redesign-update/index.html</guid>
+  <pubDate>Tue, 01 Aug 2023 00:00:00 GMT</pubDate>
+  <media:content url="https://bioconductor.github.io/biocblog/posts/2023-08-01-website-redesign-update/BC Website redesign - Project timeline.jpg" medium="image" type="image/jpeg"/>
+</item>
 <item>
   <title>Testing Packages on Linux ARM64 with GitHub Actions</title>
   <dc:creator>Mike L. Smith</dc:creator>
