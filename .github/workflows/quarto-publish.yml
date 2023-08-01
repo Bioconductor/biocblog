@@ -2,7 +2,7 @@ on:
   push:
     branches: 
       - main
-      - carpentries-update-feb2023 # allow while sharing preview
+      - website-update # allow while sharing preview
 
 name: Render and Publish
 
