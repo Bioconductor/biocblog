@@ -33,7 +33,7 @@ Equipped with the knowledge from the survey, UX audit, and stakeholder workshops
 
 ## UX Testing: A Community-led Effort
 
-We invited volunteers - including those who participated in the survey and members of CAB, TAB, and the website working group - to perform UX testing on the new design. The feedback and suggestions we received from the 18 were incorporated to fine-tune the prototype further.
+We invited volunteers - including those who participated in the survey and members of CAB, TAB, and the website working group - to perform UX testing on the new design. The feedback and suggestions we received from the 15 volunteers were incorporated to fine-tune the prototype further.
 
 ## Design Prototype: Sharing with CAB & TAB
 
