@@ -17,15 +17,15 @@ It's been an exhilarating few weeks since we kicked off our ambitious [Bioconduc
 
 ## User Survey: Insights for the Future
 
-After launching our user survey, we received a wealth of feedback that has helped us identify the needs of our diverse community. The insights obtained were eye-opening and instrumental in shaping our redesign roadmap. We deeply appreciate your time and input.
+After launching our user survey, we received a wealth of feedback from almost 600 community members, that has helped us identify the needs of our diverse community. The insights obtained were eye-opening and instrumental in shaping our redesign roadmap. We deeply appreciate your time and input.
 
 ## NearForm's UX Audit: Uncovering Key Findings
 
-Concurrently, our partner, NearForm, conducted a detailed UX audit. The key findings from this audit provided invaluable guidance on how to enhance our user experience and design a website that is as intuitive as it is functional.
+Concurrently, our partner, NearForm, conducted a detailed UX audit. The key findings from this audit provided invaluable guidance on how to enhance our user experience and design a website that is as intuitive and accessible as it is functional.
 
 ## Bridging the Gap: Stakeholder Workshops
 
-Harnessing the survey insights and the UX audit, we moved into a phase of active collaboration. Three intensive workshops were held with stakeholders from the Bioconductor Community Advisory Board (CAB), Technical Advisory Board (TAB), and the website working group. The passion and commitment shown by these groups during these discussions have brought a new level of dynamism to the project.
+Harnessing the survey insights and the UX audit, we moved into a phase of active collaboration. Three intensive workshops were held in July with stakeholders from the Bioconductor Community Advisory Board (CAB), Technical Advisory Board (TAB), and the website working group. The passion and commitment shown by these groups during these discussions have brought a new level of dynamism to the project.
 
 ## Crafting the Design: NearForm's Expert Touch
 
@@ -33,11 +33,11 @@ Equipped with the knowledge from the survey, UX audit, and stakeholder workshops
 
 ## UX Testing: A Community-led Effort
 
-We invited volunteers - including those who participated in the survey and members of CAB, TAB, and the website working group - to perform UX testing on the new design. The feedback and suggestions we received from the 15 volunteers were incorporated to fine-tune the prototype further.
+We invited volunteers - including those who participated in the survey and members of CAB, TAB, and the website working group - to perform User Experience (UX) testing on the new design. The feedback and suggestions we received from the 15 volunteers were incorporated to fine-tune the prototype further.
 
 ## Design Prototype: Sharing with CAB & TAB
 
-Once the revisions were made, we shared the design prototype with CAB & TAB. Their enthusiasm and constructive feedback have affirmed that we're on the right track.
+Once the revisions were made, we shared the design prototype with CAB & TAB. Their enthusiasm and constructive feedback affirmed that we were on the right track.
 
 ## From Design to Reality: The Build Phase
 
@@ -49,7 +49,7 @@ To ensure progress and resolve any issues promptly, the NearForm and Bioconducto
 
 ## BioC2023: A Sneak Peek into the Future
 
-We're thrilled to announce that the new design of Bioconductor.org will be showcased at the upcoming BioC2023 event this week. We eagerly anticipate your feedback and reactions, as they will further strengthen our commitment to delivering a revamped Bioconductor.org that truly serves our vibrant community.
+We're thrilled to announce that the new design of Bioconductor.org will be showcased at the BioC2023 conference this week. We eagerly anticipate your feedback and reactions, as they will further strengthen our commitment to delivering a revamped Bioconductor.org that truly serves our vibrant community.
 
 ## Looking Forward
 
