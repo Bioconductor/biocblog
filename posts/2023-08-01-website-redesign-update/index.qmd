@@ -11,7 +11,7 @@ categories:
 image: "BC Website redesign - Project timeline.jpg"
 ---
 
-It's been an exhilarating few weeks since we kicked off our ambitious Bioconductor.org website redesign work with NearForm (see figure below). We're back to provide you with a comprehensive update, highlighting the key milestones we've achieved, the insights we've gathered, and the collaboration that's brought us here.
+It's been an exhilarating few weeks since we kicked off our ambitious [Bioconductor.org website redesign work](../2023-06-22-website-redesign/index.qmd) with NearForm (see figure below). We're back to provide you with a comprehensive update, highlighting the key milestones we've achieved, the insights we've gathered, and the collaboration that's brought us here.
 
 ![Project timeline - Phase 1](BC Website redesign - Project timeline.jpg)
 
