@@ -1,0 +1,57 @@
+---
+title: "Taking Bioconductor.org to the Next Level: Community, Collaboration and Progress"
+description: |
+  Discover the recent advancements in the Bioconductor.org website redesign project, including the survey's user insights, UX audit, collaborative workshops, UX testing, and the build phase, all leading to an exciting sneak peek at BioC2023.
+author:
+  - name: Maria Doyle
+    url: https://github.com/mblue9
+date: 2023-08-01
+categories:
+  - Bioconductor
+image: "BC Website redesign - Project timeline.jpg"
+---
+
+It's been an exhilarating few weeks since we kicked off our ambitious [Bioconductor.org website redesign work](../2023-06-22-website-redesign/index.qmd) with NearForm (see figure below). We're back to provide you with a comprehensive update, highlighting the key milestones we've achieved, the insights we've gathered, and the collaboration that's brought us here.
+
+![Project timeline - Phase 1](BC Website redesign - Project timeline.jpg)
+
+## User Survey: Insights for the Future
+
+After launching our user survey, we received a wealth of feedback from almost 600 community members, that has helped us identify the needs of our diverse community. The insights obtained were eye-opening and instrumental in shaping our redesign roadmap. We deeply appreciate your time and input.
+
+## NearForm's UX Audit: Uncovering Key Findings
+
+Concurrently, our partner, NearForm, conducted a detailed UX audit. The key findings from this audit provided invaluable guidance on how to enhance our user experience and design a website that is as intuitive and accessible as it is functional.
+
+## Bridging the Gap: Stakeholder Workshops
+
+Harnessing the survey insights and the UX audit, we moved into a phase of active collaboration. Three intensive workshops were held in July with stakeholders from the Bioconductor Community Advisory Board (CAB), Technical Advisory Board (TAB), and the website working group. The passion and commitment shown by these groups during these discussions have brought a new level of dynamism to the project.
+
+## Crafting the Design: NearForm's Expert Touch
+
+Equipped with the knowledge from the survey, UX audit, and stakeholder workshops, an initial design was skillfully crafted by Nick Zafiropoulos from NearForm. The design effectively captured our vision for a refreshed and engaging Bioconductor.org.
+
+## UX Testing: A Community-led Effort
+
+We invited volunteers - including those who participated in the survey and members of CAB, TAB, and the website working group - to perform User Experience (UX) testing on the new design. The feedback and suggestions we received from the 15 volunteers were incorporated to fine-tune the prototype further.
+
+## Design Prototype: Sharing with CAB & TAB
+
+Once the revisions were made, we shared the design prototype with CAB & TAB. Their enthusiasm and constructive feedback affirmed that we were on the right track.
+
+## From Design to Reality: The Build Phase
+
+With a refined design in hand, the build phase commenced, led by Steve Goode from NearForm. This process has been an exercise in precision, passion, and dedication to deliver a website that meets our community's needs and expectations.
+
+## Daily Stand-ups: Keeping the Momentum
+
+To ensure progress and resolve any issues promptly, the NearForm and Bioconductor teams have been having daily standups together. These meetings have proven vital in maintaining momentum and fostering a spirit of collaboration.
+
+## BioC2023: A Sneak Peek into the Future
+
+We're thrilled to announce that the new design of Bioconductor.org will be showcased at the BioC2023 conference this week. We eagerly anticipate your feedback and reactions, as they will further strengthen our commitment to delivering a revamped Bioconductor.org that truly serves our vibrant community.
+
+## Looking Forward
+
+As we continue on this path of redesign and reimagination, your unwavering support and active participation remain our driving force. We eagerly anticipate the unveiling of the new Bioconductor.org, a project that epitomizes community involvement and collaboration. Stay tuned for more updates as we progress further in this transformative journey.
+
