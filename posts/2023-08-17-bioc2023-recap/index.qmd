@@ -1,0 +1,62 @@
+---
+title: "We had a blast at BioC2023! Here’s what happened."
+author:
+  - name: Anna Powell
+date: 2023-08-17
+categories:
+  - Bioconductor
+  - events
+image: "bioc2023-numbers.png"
+---
+
+![BioC2023 numbers](bioc2023-numbers.png)
+
+BioC2023 kicked off at the Dana-Farber Cancer Institute in Boston, USA. It was opened by [Vincent Carey](https://connects.catalyst.harvard.edu/Profiles/profile/1256034), Professor of Medicine at Harvard and co-founder of the Bioconductor project. The Annual North America Bioconductor conference gave members of the community an opportunity to highlight current developments with and beyond the Bioconductor community. With 600 participants, it was a scientifically stimulating meeting that offered a great opportunity for networking and collaboration. Over one hundred and fifty people attended the conference in person and more than four hundred people attended the conference virtually, which was an increase of over 150 on last year’s conference, BioC2022. All talks are available on the [Bioconductor YouTube](https://www.youtube.com/@bioconductor/videos) channel.
+
+This rich 3-day conference included talks from six esteemed keynote speakers. 
+
+- **JJ. Allaire**, Founder and CEO of Posit:
+    - Topic: "[Reproducible Manuscripts with Quarto](https://www.youtube.com/watch?v=0wB4K08ui4c)" (accompanied by a live demo)
+- **Heng Li**, Associate Professor from Dana-Farber Cancer Institute and Harvard Medical School:
+    - Topic: "[Genome assembly in the telomere-to-telomere era](https://www.youtube.com/watch?v=lVBPgNwI59M)"
+- **Beth Cimini**, Senior Group Leader at the Broad Institute of MIT and Harvard:
+    - Topic: "[Making the most of your microscopy with high-content analysis](https://youtu.be/KeJrBEAdm-8)"
+- **Jeffrey Moffitt**, Assistant Professor at Harvard Medical School and Boston’s Children’s Hospital:
+    - Topic: "[Imaging the Transcriptome: Creating tissue atlases with MERFISH](https://youtu.be/kp9kDwSHeWs)"
+- **Samantha Lent**, Senior Computational Biologist:
+    - Topic: "[Weighing the benefits and risks of making 'de-identifiable' genome data public](https://youtu.be/7fiTCkYLVxQ)"
+- **Nancy Zhang**, Professor of Statistics and Data Science at the University of Pennsylvania:
+    - Topic: "[Spatial transcriptomics data analysis: Cancer subclone detection and niche-differential expression analysis](https://www.youtube.com/watch?v=neN0W-ejhSw)". 
+
+Many emerging cutting-edge topics in computational biology and bioinformatics were discussed at BioC2023; including methods for analysis of spatial single cell, multi-modal data integration, microbiome resources, telomere to telomere (T2T) genome, long-read sequencing, splice variant calling and so much more!  Community contributors gave twelve short talks selected from submitted abstracts on a wide range of ‘omics topics, sixteen package demos took place along with six in-depth interactive workshops. The demos gave shorter thirty to forty-five package overviews whilst the workshops were more intense with them being ninety minutes each in duration.  All workshop and demo materials are shared on [the conference website](https://bioc2023.bioconductor.org/workshops/).
+
+Congratulations to the deserved 2023 Bioconductor awardees. [Professor Matt Richie](https://www.wehi.edu.au/researcher/matthew-ritchie/), [Professor Susan Holmes](https://profiles.stanford.edu/susan-holmes), [Constantin Ahlmann-Eltze](https://www.huber.embl.de/group/people/constantin-ahlmann-eltze.html) and [Simone Bell](https://www.huber.embl.de/group/people/simone-bell.html) were the [Bioconductor Community Award](https://www.bioconductor.org/about/awards/) winners, receiving awards for their outstanding contributions to Bioconductor. They were nominated by community members in the annual call for nominees and voted for by the Bioconductor Community Advisory Board and Technical Advisory Board.
+
+Best poster and presentation awards at BioC2023 were generously sponsored by [PeerJ](https://peerj.com/). Winners were selected based on which presentation and poster attendees said they liked most in the BioC2023 feedback survey. Such an award was given to Constantin Ahlmann-Eltze as his poster was deemed the best. His poster was on "[Regression on latent spaces for the analysis of multi-condition single-cell RNA-seq Data](https://f1000research.com/posters/12-1141)" Best Presentation was awarded to Jiefei Wang who gave an informative workshop presentation on "[High-Performance Computing in R for Genomic Research](https://www.youtube.com/watch?v=WpwH47x-f7I)".  These, together with 3 articles, 59 posters and 53 slides from Bioconductor North America conferences are available on the [F1000 Bioconductor Conference channel](https://f1000research.com/gateways/bioconductor/about-this-gateway#bioc).
+
+Supporting diversity and inclusion at our meetings is a core value of Bioconductor. The conference committee awarded 14 in-person and 50 virtual scholarships. These ensured that individuals who might not have been able to participate due to financial constraints had the opportunity to attend.  
+
+It's important for us to make Bioconductor resources open, transparent and accessible. Recordings of talks and workshop/demo materials are available on [Bioconductor YouTube](https://www.youtube.com/user/bioconductor) and the [BioC2023 conference website](https://bioc2023.bioconductor.org/workshops/) respectively.
+
+BioC2023 are extremely grateful to those that sponsored BioC2023. BioC2023’s platinum sponsor was Moderna, gold sponsors were Microsoft Genomics and Ozette, and silver sponsors were R Consortium, Novartis and Posit.  Their support along with BioC2023’s other sponsors was greatly appreciated by the Bioconductor community. 
+
+![BioC2023 sponsors](bioc2023-sponsors.png)
+
+## What did attendees like about BioC2023?
+
+“*Some of the keynotes were really eye-opening. It was a great opportunity to present some of my work and get feedback from the Bioc community, as well as connect with new people. And to be honest, I really thought the organisers did a fantastic job communicating with attendees & presenters.*”
+
+ “*I loved being able to attend virtually, many online conferences only have specific keynotes and/or no workshops available online. Being able to launch RStudio from Galaxy and use their markdowns was great.*” 
+ 
+“*I liked that the topics of the talks were very diverse. I also liked the package demonstrations and workshops, they were really useful.*”  
+
+“*I like that I was able to see everyone who I have interacted with in the past couple of years in person. I was able to talk to potential collaborators and do some networking. I am grateful to the organising committee. I liked the spatial transcriptomics track and the keynotes.*”  
+
+“*I thought it went really well, there was a good mixture of types of projects. The cloud platform was easy to use for workshops. The keynotes were interesting.*”  
+
+“*The overall format of the conference, including the keynotes, workshops, and package demo, was inspiring. The food options were amazing. The support for attendees regarding lodging, registration fee, and travel was beneficial.*”  
+
+## Conclusion
+Attending BioC2023 not only means being updated with the latest in computational biology and bioinformatics but also expanding your network with like-minded professionals and leading experts. Don’t miss out on the next Bioconductor conference! Stay tuned for updates on BioC2024 and be a part of this incredible community.
+ 
+
