@@ -1,0 +1,20 @@
+---
+title: "Bioconductor is leaving Twitter/X"
+description: "We're transitioning away from Twitter/X in favor of platforms more aligned with our Code of Conduct."
+author:
+  - name: Maria Doyle
+date: 2023-11-17
+categories:
+  - Bioconductor
+image: "bioc-moving.png"
+---
+
+Bioconductor is committed to nurturing an environment that reflects our values. To this end, we've decided to move our social media engagement away from Twitter/X. The platform's current direction no longer aligns with our [Code of Conduct](https://www.bioconductor.org/about/code-of-conduct/)'s key principle: *"Bioconductor is dedicated to providing a welcoming, supportive, collegial experience free of harassment, intimidation, and bullying"*.
+
+This decision echoes your sentiments from our recent community survey on Twitter/X. We received 142 responses and many of you expressed concerns about the increasing hate speech and harassment you’ve witnessed. Although the platform has been important in our outreach, it's clear that its direction is no longer compatible with the principles of Bioconductor. Henceforth, we're focusing our efforts on our accounts in platforms that better resonate with our ethos, such as [Mastodon](https://genomic.social/@bioconductor), [LinkedIn](https://www.linkedin.com/company/bioconductor/), [YouTube](https://www.youtube.com/user/bioconductor), [Slack](https://slack.bioconductor.org/), [our blog](https://blog.bioconductor.org/), [support site](https://support.bioconductor.org/) and [developer mailing list](https://stat.ethz.ch/mailman/listinfo/bioc-devel).
+
+We will stop using Twitter/X from **December 17th 2023**. Our account will remain inactive, serving as an archive rather than a conduit for communication. We encourage you to join us in these other spaces that support constructive and respectful dialogue. We will post more about how/where to follow us in the future.
+
+For questions or feedback, please contact us through the Bioconductor Slack #social-media channel or the Community Manager maria.doyle@ul.ie.
+
+*[The Bioconductor Social Media Working Group](https://workinggroups.bioconductor.org/currently-active-working-groups-committees.html#social-media)*
