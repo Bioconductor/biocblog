@@ -1,0 +1,30 @@
+---
+title: "ELIXIR All Hands Meeting 2023"
+description: "Bioconductor's participation in ELIXIR All Hands Meeting in Dublin, Ireland, June 2023."
+author:
+  - name: Anna Powell
+date: 2023-06-16
+categories:
+  - Bioconductor
+image: "elixir-allhands-attendees.jpg"
+---
+
+![ELIXIR All Hands Meeting 2023 attendees](elixir-allhands-attendees.jpg)
+
+Bioconductor participated in the [ninth ELIXIR All Hands international event](https://elixir-europe.org/events/elixir-all-hands-2023) which took place in the Dublin Convention centre from 5-8 June 2023. This was its first time ever being hosted in Ireland. 
+
+[ELIXIR](https://elixir-europe.org/) is an organisation that works to create EU infrastructure to make it easier for scientists to find, aggregate, analyse and store life-science data, This is achieved through open-source bioinformatics software which provides methods and tools to analyse life science data. One purpose of this event was to share the first results from a 40 million euro [Genomic Data Infrastructure project](https://gdi.onemilliongenomes.eu/). This project, which is coordinated by ELIXIR, is creating the infrastructure to allow secure access to Europe’s genome data with the goal of accelerating research of new treatments and therapies for disease, improving healthcare across Europe and beyond. 
+
+Bioconductor gave a workshop at this conference on the ‘Opportunities for Bioconductor and ELIXIR communities to co-develop training infrastructures’. This workshop was introduced by Bioconductor Community Manager, Dr. Maria Doyle, from the University of Limerick, Ireland. Following its introduction, Professor of Cancer Genomics, Aedin Culhane from University of Limerick gave an overview of Bioconductor’s work. Professor of Bioinformatics, Laurent Gatto, from UCLouvain, Belgium and Professor in Data Science, Leo Lahti, from the University of Turku, Finland followed Professor Culhane by speaking about Bioconductor’s training landscape. Dr. Doyle then gave a demo of Bioconductor’s Galaxy training infrastructure and also gave a talk on the future plans/ideas for Bioconductor/ELIXIR collaborations in training. 
+
+Professor Culhane who is director of the Limerick Digital Cancer Centre and sits on the leadership board of Bioconductor emphasized the benefits of connecting the global Bioconductor and ELIXIR bioinformatics communities. She said *“The Bioconductor and ELIXIR active communities are continuously working on improving and expanding functionally. By working together we can better develop, support and disseminate free open source software to the global bioinformatics community and thereby accelerate medical and biological research in treatments for patients with disease and cancer”*.
+
+Dr Doyle coordinates global education and training for Bioconductor and is also the ELIXIR-Ireland training coordinator, commented on the importance of the event for coordination of training resources *“It was important for Bioconductor to be present at such an event as it allows us to connect with a wide range of stakeholders, gain insights from diverse perspectives, and foster relationships that could lead to impactful collaborations. These interactions contribute to Bioconductor growth and help us to improve our training offerings, making them more comprehensive, user-friendly, and effective”*. 
+
+Ireland’s most cited scientist, Professor Desmond Higgins, Emeritus Professor of Bioinformatics from the University College Dublin was honoured as the keynote speaker at the ninth ELIXIR All Hands international event. Higgins is one of the most cited life scientists in the world for his work on the Clustal suite of bioinformatics software programmes. He spoke about the history of Clustal and the impact that this package has had on bioinformatics research in his keynote speech. *“It was a fantastic honour to be invited. I have worked on bioinformatics methods since the mid 1980s.  I have given talks in many countries over 40 years but this was one of the few opportunities have had to do this in Dublin, to an international audience.”* commented Professor Desmond Higgins.
+
+Dr Elaine Harrison, ELIXIR’s Communication Officer commented on the success of the event.*“The event was a huge success, we were blessed with Dublin sunshine and enjoyed the excellent services of the Convention Centre. With over 90 speakers we ran 25 parallel workshops, 9 mini symposia, 3 plenaries and 2 lunchtime poster sessions.”*
+
+The event began and ended with remarks from Dr. Niklas Blomberg, ELIXIR’s director. He highlighted ELIXIR’s achievements over the 10 years and shared information on their plans for their 2024-2028 scientific programme. Dr Blomberg commented on how experts came *“from all over Europe and guests from as far afield as Australia and Canada”* to attend this event. Three hundred and eighty two people attended the event and one hundred and fourteen people attended the conference remotely. It was brilliant that Bioconductor was involved in such a collaborative and exciting meeting.
+
+![Maria Doyle, Niklas Blomberg, Aedin Culhane](bioc-elixir.jpg){fig-align="left" height=500px}
