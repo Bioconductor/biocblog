@@ -1,7 +1,6 @@
 project:
   type: website
   resources:
-    - "images/twitter-card.png"
     - "CNAME"
 
 execute:
@@ -11,9 +10,6 @@ website:
   title: "Bioconductor community blog"
   site-url: https://bioconductor.github.io/biocblog/
   description: "A blog for the Bioconductor community!"
-  twitter-card:
-    creator: "@Bioconductor"
-    image: "/images/twitter-card.png"
   open-graph: true
   navbar:
     right:
@@ -21,15 +17,16 @@ website:
       - contributing.qmd
       - icon: github
         href: https://github.com/bioconductor/biocblog
-      - icon: twitter
-        href: https://twitter.com/bioconductor
+      - icon: mastodon
+        href: https://genomic.social/@bioconductor
+      - icon: linkedin
+        href: https://www.linkedin.com/company/bioconductor/
       - icon: youtube
         href: https://www.youtube.com/user/bioconductor
       - icon: slack
         href: https://slack.bioconductor.org/
       - icon: rss
         href: index.xml
-  
 format:
   html:
     theme: yeti

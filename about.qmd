@@ -4,9 +4,18 @@ image: cab.png
 about:
   template: jolla
   links:
-    - icon: twitter
-      text: Twitter
-      href: https://twitter.com/bioconductor
+    - icon: mastodon
+      text: Mastodon
+      href: https://genomic.social/@bioconductor
+    - icon: linkedin
+      text: LinkedIn
+      href: https://www.linkedin.com/company/bioconductor/
+    - icon: youtube
+      text: YouTube
+      href: https://www.youtube.com/user/bioconductor
+    - icon: slack
+      text: Slack
+      href: https://slack.bioconductor.org/
     - icon: github
       text: Github
       href: https://github.com/bioconductor/biocblog
