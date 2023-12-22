@@ -34,7 +34,7 @@ instructors <- tibble::tribble(
                            "Umar Ahmad",                                      "Bauchi State University",      "Gadau",  10.1661239,  11.8328495,
                         "Chia Sin Liew",                               "University of Nebraska-Lincoln",   "Nebraska", -99.9018131,  41.4925374,
                   "Charlotte Hutchings",                                      "University of Cambridge",  "Cambridge",   0.1312729,  52.1950788,
-                   "Mercilena Benjamin",                       "All India Institute of Medical Science",  "New Delhi",  77.2090212,  28.6139391,
+                   "Roberto Alvarez-Martinez",                       "Universidad Autonoma de Querétaro",  "Querétaro",  -100.3899,  20.5887932,
                            "David Shih",                                      "University of Hong Kong",  "Hong Kong", 114.1693611,  22.3193039,
   "Rodrigo Arcoverde Cerveira da Silva",                                        "Karolinska Institute",  "Stockholm",  18.0685808,  59.3293235,
              "Javier Carpinteyro Ponce",                                       "University of Maryland",   "Maryland", -76.6412712,  39.0457549,
@@ -52,7 +52,7 @@ instructors <- tibble::tribble(
 
 # how got the lon and lat coordinates above
 locations <- c("Ghent", "Heidelberg", "Oxford", "Zurich", "Turku", "New York", 
-"Gadau", "Nebraska", "Cambridge, UK", "New Delhi", "Hong Kong", "Stockholm", 
+"Gadau", "Nebraska", "Cambridge, UK", "Querétaro", "Hong Kong", "Stockholm", 
 "Maryland", "Heidelberg", "Melbourne", "Chinhoyi", "Harare", "Harare") %>%
     geocode()
 ```
@@ -72,6 +72,7 @@ The Year 1 applicants are onboarding now and are at different stages of the proc
 
 We are grateful to the [Chan Zuckerberg Initiative's EOSS program](https://chanzuckerberg.com/eoss/proposals/bioconductor-high-quality-training-and-support-for-a-worldwide-community/) for funding this initiative.
 
+Update May 2023: Due to changes in availability, Mercilena Benjamin has been replaced by Roberto Alvarez-Martinez. This change was made prior to Mercilena's commencement of the instructor training program.
 
 ```{r}
 #| eval: false
@@ -84,15 +85,22 @@ library(plotly)
 # Generate plot locally as html, to avoid needing to install multiple packages in biocblog site, then embed as iframe
 
 world <- map_data("world")
+world <- subset(world, region != "Antarctica")
 
 gg <- ggplot() +
   geom_polygon(data = world, aes(x = long, y = lat, group = group), fill = "grey") +
-  geom_jitter(data = instructors, aes(x = lon, y = lat, text = paste(Name, Affiliation, sep = "\n")), color = 'red') +
-  theme_void()
+  geom_jitter(data = instructors, aes(x = lon, y = lat, text = paste(Name, Affiliation, sep = "\n")), size = 2, color = 'red') +
+  theme_void() +
+  theme(axis.line = element_line(color = "white"),
+        plot.background = element_rect(fill = "white"))
 
+# Save the map as a PNG image for thumbnail
+ggsave("map.png", gg, width = 3, height = 2) 
+
+
+# Save interactive plot
 ggplotly(gg, tooltip = "text")
 
-# save interactive plot
 pgg <- ggplotly(gg, tooltip = "text")
 htmlwidgets::saveWidget(pgg, file = "map.html")
 ```
