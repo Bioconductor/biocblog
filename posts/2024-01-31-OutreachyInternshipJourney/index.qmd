@@ -1,5 +1,5 @@
 ---
-title: "Our Internship experience with Bioconductor"
+title: "Journey of Growth: Our Internship experience with Bioconductor"
 description: |
   Bioconductor participated in the Outreachy Internship program for the December 2023 cohort. Our interns share their experience working on their various projects and bioconductor in general.
 author:
@@ -26,6 +26,7 @@ Through Outreachy, we were able to work as interns at Bioconductor, where we are
 Outreachy is a paid remote internship program that aims to support underrepresented groups who face systemic bias or discrimination in the technology industry of their country. Outreachy interns work remotely with mentors from Free and Open Source Software (FOSS) communities on several projects including programming, user experience, documentation, illustration and graphical design, or data science. Read more about Outreachy [here](https://www.outreachy.org/docs/applicant/#what-is-outreachy).
 
 ## Outreachy application process
+
 The application process for Outreachy consists of three steps:
 
 #### 1.  	Initial application period:
@@ -89,6 +90,9 @@ The microbiome study curation project is a bioconductor project that uses BugSig
 The Microbiome Study Curation project entails curating new studies on bugsigDB, reviewing studies that have already been curated, and analyzing BugSigDB data using R. To learn more about the project and how to contribute to it, check out my blog post [here](https://kunmiwrites.wordpress.com/2024/01/22/bugsigdb-101-a-beginners-guide-to-exploring-microbial-signatures/).
 
 ### Esther's experience
+
+![Afuape Esther](Afuape_Esther.png){height=300px}
+
 Hello there! I’m Esther Afuape, a graduate of microbiology from University of Lagos, Nigeria. I love reading crime/mystery fiction, cooking, and spending time at the beach.
 
 I got to know about Outreachy through an acquaintance who was an intern in the program. I’m currently partaking in the December 2023 cohort and wrote about my experience during the contribution phase in my [blog](https://kunmiwrites.wordpress.com/2023/12/10/outreachy-week-1-introducing-me/). It’s been an awesome 8 whole weeks interning at Bioconductor! I wish I could slow down time because this means that the end of my internship is drawing closer. Before I applied for Outreachy and eventually came across Bioconductor on the Projects list, I was at a loss as to what to do with my microbiology degree in Nigeria, where a definitive niche for microbiologists is lacking.I had applied to the program with the hopes of doing a project in a different tech field. Coming across the microbiome curation project was so exciting as it was related to my microbiology background. I found the project fascinating and immediately joined the project’s community slack channel. What stood out for me was the support in the community. I found it easier to get a hang of things because there was always a mentor or other community members ready to help!
@@ -98,6 +102,9 @@ As an intern, I’ve worked on the project by carrying out reviews of curated st
 I’m so grateful for my mentor, Svetlana Perovic, for her invaluable guidance and support so far. Her mentorship has instilled in me the value of stepping out of my comfort zone. I’d also like to express my gratitude to other community members for always helping me out when I’m stuck, and the other mentors – Levi Waldron and Chloe Mirzayi, for entrusting me with this incredible opportunity. If you’d like to read more on my experience as a bioconductor intern, I invite you to visit my blog [here](https://kunmiwrites.wordpress.com/2023/12/10/outreachy-week-1-introducing-me/).
 
 ### Peace Sandy’s Experience
+
+![Peace Sandy](Peace_Sandy.png){height=300px}
+
 Hi! My name is Peace Sandy, and I'm from Nigeria. I hold a Bachelor's degree in Microbiology and am both a Software Developer and a Technical Writer. Research is my passion, and I'm very interested in Bioinformatics. My hobbies are reading, coding, and baking. 
 
 During the Outreachy contribution period, I specifically sought projects that aligned with my skill set. Finding the microbiome study curation project was thrilling, as it combined my research interests with microbiome studies.
@@ -111,6 +118,9 @@ So far, I've learned a tremendous amount, and my knowledge of microbiome studies
 If you’re interested in reading more about my experience as an Outreachy intern with Bioconductor and my journey with the microbiome study curation project, you can check out my [blog](https://peacesandy.hashnode.dev/).
 
 ### Chioma's Experience
+
+![Chioma Onyido](Chioma_Onyido.png){height=300px}
+
 Everyday of the past few months with Outreachy has been an opportunity to learn something new, I consider myself lucky to be part of the selected interns.
 
 Hello, I’m Chioma Onyido, I’ve a BSc. and MSc. in Biochemistry/ Molecular Biology from Covenant University, Nigeria.
