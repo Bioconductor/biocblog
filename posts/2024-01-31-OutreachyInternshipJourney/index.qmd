@@ -1,7 +1,7 @@
 ---
 title: "Journey of Growth: Our Internship experience with Bioconductor"
 description: |
-  Bioconductor participated in the Outreachy Internship program for the December 2023 cohort. Our interns share their experience working on their various projects and bioconductor in general.
+  Bioconductor participated in the Outreachy Internship program for the December 2023 cohort. Our interns share their experience working on their various projects and Bioconductor in general.
 author:
   - name: Chioma Onyido
     url: https://github.com/Omabekee
@@ -9,7 +9,7 @@ author:
     url: https://github.com/Folakunmi21
   - name: Peace Sandy
     url: https://github.com/Peacesandy  
-date: 2024-02-02
+date: 2024-01-31
 categories:
   - open science
 ---
@@ -20,7 +20,7 @@ Open source is more than just a buzzword, it plays a crucial role in the tech ec
 
 Outreachy offers internship opportunities in open source and open science, specifically for individuals underrepresented in the technological industry.
 
-Through Outreachy, we were able to work as interns at Bioconductor, where we are currently contributing to the Microbiome Study Curation project. Whether you’re a first time contributor, an outreachy applicant, or you are interested in contributing to the Bioconductor project, this blog post will provide detailed explanations and insights to guide you on how to make meaningful contributions.
+Through Outreachy, we were able to work as interns at Bioconductor, where we are currently contributing to the Microbiome Study Curation project. Whether you’re a first time contributor, an Outreachy applicant, or you are interested in contributing to the Bioconductor project, this blog post will provide detailed explanations and insights to guide you on how to make meaningful contributions.
 
 ## Outreachy
 Outreachy is a paid remote internship program that aims to support underrepresented groups who face systemic bias or discrimination in the technology industry of their country. Outreachy interns work remotely with mentors from Free and Open Source Software (FOSS) communities on several projects including programming, user experience, documentation, illustration and graphical design, or data science. Read more about Outreachy [here](https://www.outreachy.org/docs/applicant/#what-is-outreachy).
@@ -35,57 +35,14 @@ The application process for Outreachy consists of three steps:
 After making sure that you’re [eligible to apply](https://www.outreachy.org/apply/eligibility/) for Outreachy, applicants proceed to fill out the initial application form, which consists of some Yes/ No answers and about four essays in which you share your personal stories of being underrepresented. After Outreachy organizers review the initial applications and essays, accepted applicants are notified via email. Read more about the application period [here](https://www.outreachy.org/docs/applicant/#application-period).
 
 #### 2.  	Contribution period:
-The contribution period will open as soon as the initial application is accepted. ‘Open source contributors’ is the term used to describe those who regularly work on open source projects. When you contribute to an Outreachy project, you become an open source contributor. Follow the steps below to have a successful contribution phase:
-- Choose project (s): The first step here is to look through the [list of internship](https://www.outreachy.org/apply/project-selection/) projects and select one or two projects that pique your interest. In addition to project skills, one of the things to consider is to choose a community whose values align with yours.
-- Contact mentor: After you’ve managed to get a list of potential projects, you must get in touch with the project mentor for further information on how to start contributing. Read more about how to find a mentor on [Outreachy website](https://www.outreachy.org/docs/applicant/#find-mentor). 
-- Record contributions: Only applicants who contribute to a project, record their contributions, and submit a final application on the Outreachy website are considered for internship. Applicants are encouraged to start contributing as early as possible and remember that it is quality over quantity. Read more to see [how contributions are evaluated](https://www.outreachy.org/docs/applicant/#contribution-evaluation).
+The contribution period will open as soon as the initial application is accepted. ‘Open source contributors’ is the term used to describe those who regularly work on open source projects. When you contribute to an Outreachy project, you become an open source contributor. To have a successful contribution phase, the first step is to [choose one or two projects](https://www.outreachy.org/apply/project-selection/) that pique your interest. Secondly, you must [get in touch with the project mentor](https://www.outreachy.org/docs/applicant/#find-mentor) for further information on how to start contributing. Lastly, start contributing and record your contributions. Only applicants who contribute to a project, record their contributions, and submit a final application on the Outreachy website are considered for internship.
 
 #### 3.  	Intern selection period:
 After the final applications are evaluated, selected interns are announced shortly after. Applicants are advised to read the [internship guide](https://www.outreachy.org/docs/internship/) to learn more about time commitment and more details about what Outreachy expects from interns.
 
 ## Why join Outreachy?
 The core values of Outreachy include diversity, inclusivity, and providing a platform for underrepresented groups to grow and excel in the open source community. Participating in the Outreachy internship means more than just skill development, it means joining a movement that promotes diversity and inclusivity.
-The following are some features that make the program unique:
-
-#### 1. Remote internship:
-Outreachy provides an online collaborative environment for learning, and remote mentoring with experienced FOSS contributors.
-
-#### 2. Meaningful mentorships:
-Outreachy places a strong focus on mentorship. Being coached by an experienced mentor can have a profound impact on an intern, it can change your life. The guidance and support they offer open doors for significant growth and contributions.
-
-#### 3. Financial support:
-Outreachy interns are paid $7,000 to acknowledge and appreciate your commitment and contributions.
-
-#### 4. Diversity:
-Outreachy ensures that everyone has an equal opportunity to contribute and grow by fostering an inclusive workplace.
-
-#### 5. Positive impact:
-Beyond providing internships, Outreachy provides an opportunity to gain hands-on experience by contributing to real-world projects that have a positive impact. After their internship, most interns often secure jobs in places that make use of the skills they acquired. 
-
-## Bioconductor
-The Bioconductor project aims to develop and share open source software for precise and repeatable analysis of biological data. The Bioconductor community fosters an inclusive and collaborative community of developers and data scientists. 
-
-Bioconductor uses the R statistical programming language and is open source. The Bioconductor community values an open approach to science and promotes:
-
-1. Sharing of ideas, code, software, and expertise.
-
-2. Collaboration.
-
-3. Diversity and Inclusivity.
-
-4. A kind and welcoming environment.
-
-5. Community contributions.
-
-The success of the Bioconductor project has also grown a welcoming and inclusive community made up of a core team, package developers, and users of all backgrounds and experience levels. 
-
-Bioconductor release version is updated twice each year and is appropriate for most users. There is also a development version, to which new features and packages are added before incorporation into the release. 
-
-Bioconductor is an outstanding project and the brand goals are;
-1. To provide widespread access to a broad range of powerful statistical and graphical methods for the analysis of genomic data.
-2. To provide a common software platform that enables the rapid development and deployment of extensible, scalable, and interoperable software.
-3. To further scientific understanding by producing high-quality documentation and reproducible research.
-4. To train researchers on computational and statistical methods for the analysis of genomic data. 
+Some features that make the program unique include: remote mentoring with experienced FOSS contributors, meaningful mentorships, financial support, diversity and positive global impact. 
 
 ## Microbiome Study Curation
 The microbiome study curation project is a bioconductor project that uses BugSigDB, a database of manually curated microbial signatures obtained from the results of published microbiome differential abundance studies. Differential abundance studies are studies that compare the relative abundance of different microbial species in different samples in hosts of interest (Humans, animals, and environmental conditions). In humans, they help to understand how different geographical and environmental factors can lead to changes in the microbiome, thereby increasing the likelihood of developing conditions such as diabetes, obesity, cardiovascular and neurological diseases, allergies, and inflammatory bowel disease. This information helps to give insights into the role of specific microbes in different biological processes or diseases.
@@ -109,15 +66,15 @@ I’m so grateful for my mentor, Svetlana Perovic, for her invaluable guidance a
 
 Hi! My name is Peace Sandy, and I'm from Nigeria. I hold a Bachelor's degree in Microbiology and am both a Software Developer and a Technical Writer. Research is my passion, and I'm very interested in Bioinformatics. My hobbies are reading, coding, and baking. 
 
-During the Outreachy contribution period, I specifically sought projects that aligned with my skill set. Finding the microbiome study curation project was thrilling, as it combined my research interests with microbiome studies.
+During the Outreachy contribution period, I specifically sought projects that aligned with my skill set. Finding the Microbiome Study Curation project was thrilling, as it combined my research interests with microbiome studies.
 
-My long standing fascination with bioinformatics, microbiome studies, open science, and research made the microbiome study curation project highly appealing. Participating as an Outreachy intern in Bioconductor has been an incredibly educational and rewarding experience. I've had the privilege of learning from experienced mentors and open-source contributors. The Bioconductor community is extremely welcoming and collaborative. 
+My long standing fascination with Bioinformatics, microbiome studies, open science, and research made the Microbiome Study Curation project highly appealing. Participating as an Outreachy intern in Bioconductor has been an incredibly educational and rewarding experience. I've had the privilege of learning from experienced mentors and open-source contributors. The Bioconductor community is extremely welcoming and collaborative. 
 
 I am confident that the exposure and knowledge I am gaining from the Bioconductor community will significantly contribute to my career advancement. Having interned for over a month, the experience has been truly amazing. My mentor, Levi Waldron, has been incredibly supportive, patient, and welcoming, as have the other mentors, Chloe Mirzayi and Svetlana Perovic.
 
 So far, I've learned a tremendous amount, and my knowledge of microbiome studies, R programming, and research skills has significantly improved. I now have a better understanding of ontology terms.
 
-If you’re interested in reading more about my experience as an Outreachy intern with Bioconductor and my journey with the microbiome study curation project, you can check out my [blog](https://peacesandy.hashnode.dev/).
+If you’re interested in reading more about my experience as an Outreachy intern with Bioconductor and my journey with the Microbiome Study Curation project, you can check out my [blog](https://peacesandy.hashnode.dev/).
 
 ### Chioma's Experience
 
@@ -139,7 +96,7 @@ Supportive community: I chose Bioconductor because of how interactive and suppor
 
 It's the ‘BugSigDB vibe’ for me: One thing that intrigued me about the BugSigDB project is the fact that we share similar values- I love to help and see people win, and I saw a similar energy in the BugSigDB community. Even with the influx of comments, observations and/or questions from contributors during the Outreachy contribution phase, the BugSigDB community was active, and so were the mentors. The mentors were (still are) attentive, patient, thorough and present.
 
-Premium learning experience: In terms of my professional growth, BugSigDB has significantly contributed to this area by providing valuable courses for my continuous development. Thanks to the the BugSigdb community- Professor Levi, I was given access to a paid DataCamp classroom, where I’ve had the opportunity to enhance my skills and boost my confidence in R programming.
+Premium learning experience: In terms of my professional growth, BugSigDB has significantly contributed to this area by providing valuable courses for my continuous development. Thanks to the BugSigdb community- Professor Levi, I was given access to a paid DataCamp classroom, where I’ve had the opportunity to enhance my skills and boost my confidence in R programming.
 
 I am grateful to my mentor Chloe Mirzayi for her time and efforts in my growth and progress. I am also grateful to Svetlana Perovic for her guidance, and for being there to cross my T's and dot my I's whenever I reach out. I consider it a privilege and a blessing to be in the best community, contributing to such a big project.
 
