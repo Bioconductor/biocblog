@@ -27,7 +27,7 @@ Outreachy is a paid remote internship program that aims to support underrepresen
 
 ## Outreachy application process
 
-![Outreachy](Outreachy.png){height=300px}
+![Outreachy](outreachylogo.png){height=300px}
 
 The application process for Outreachy consists of three steps:
 
