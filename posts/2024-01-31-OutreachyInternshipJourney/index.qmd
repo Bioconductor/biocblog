@@ -50,7 +50,7 @@ The Microbiome Study Curation project entails curating new studies on bugsigDB, 
 
 ### Esther's experience
 
-![Afuape Esther](Afuape_Esther.png){height=300px}
+![Afuape Esther](Esther.png){height=300px}
 
 Hello there! I’m Esther Afuape, a graduate of microbiology from University of Lagos, Nigeria. I love reading crime/mystery fiction, cooking, and spending time at the beach.
 
@@ -62,7 +62,7 @@ I’m so grateful for my mentor, Svetlana Perovic, for her invaluable guidance a
 
 ### Peace Sandy’s Experience
 
-![Peace Sandy](Peace_Sandy.png){height=300px}
+![Peace Sandy](Peace.png){height=300px}
 
 Hi! My name is Peace Sandy, and I'm from Nigeria. I hold a Bachelor's degree in Microbiology and am both a Software Developer and a Technical Writer. Research is my passion, and I'm very interested in Bioinformatics. My hobbies are reading, coding, and baking. 
 
@@ -78,7 +78,7 @@ If you’re interested in reading more about my experience as an Outreachy inter
 
 ### Chioma's Experience
 
-![Chioma Onyido](Chioma_Onyido.png){height=300px}
+![Chioma Onyido](Chioma.png){height=300px}
 
 Everyday of the past few months with Outreachy has been an opportunity to learn something new, I consider myself lucky to be part of the selected interns.
 
