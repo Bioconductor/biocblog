@@ -27,7 +27,7 @@ Outreachy is a paid remote internship program that aims to support underrepresen
 
 ## Outreachy application process
 
-![Outreachy](outreachylogo.png){height=300px}
+![Outreachy](outreachylogo.png)
 
 The application process for Outreachy consists of three steps:
 
@@ -46,7 +46,7 @@ Some features that make the program unique include: remote mentoring with experi
 
 ## Microbiome Study Curation
 The Microbiome Study Curation project is a Bioconductor project that uses [BugSigDB](https://bugsigdb.org/Main_Page), a database of manually curated microbial signatures obtained from the results of published microbiome differential abundance studies. Differential abundance studies are studies that compare the relative abundance of different microbial species in different samples in hosts of interest (humans, animals, and environmental conditions). In humans, they help to understand how different geographical and environmental factors can lead to changes in the microbiome, thereby increasing the likelihood of developing conditions such as diabetes, obesity, cardiovascular and neurological diseases, allergies, and inflammatory bowel disease. This information helps to give insights into the role of specific microbes in different biological processes or diseases.
-The Microbiome Study Curation project entails curating new studies on bugsigDB, reviewing studies that have already been curated, and analyzing BugSigDB data using R. To learn more about the project and how to contribute to it, check [Esther's blog post](https://kunmiwrites.wordpress.com/2024/01/22/bugsigdb-101-a-beginners-guide-to-exploring-microbial-signatures/).
+The Microbiome Study Curation project entails curating new studies on BugSigDB, reviewing studies that have already been curated, and analyzing BugSigDB data using R. To learn more about the project and how to contribute to it, check [Esther's blog post](https://kunmiwrites.wordpress.com/2024/01/22/bugsigdb-101-a-beginners-guide-to-exploring-microbial-signatures/).
 
 ### Esther's experience
 
@@ -96,12 +96,12 @@ Supportive community: I chose Bioconductor because of how interactive and suppor
 
 It's the ‘BugSigDB vibe’ for me: One thing that intrigued me about the BugSigDB project is the fact that we share similar values- I love to help and see people win, and I saw a similar energy in the BugSigDB community. Even with the influx of comments, observations and/or questions from contributors during the Outreachy contribution phase, the BugSigDB community was active, and so were the mentors. The mentors were (still are) attentive, patient, thorough and present.
 
-Premium learning experience: In terms of my professional growth, BugSigDB has significantly contributed to this area by providing valuable courses for my continuous development. Thanks to the BugSigdb community- Professor Levi, I was given access to a paid DataCamp classroom, where I’ve had the opportunity to enhance my skills and boost my confidence in R programming.
+Premium learning experience: In terms of my professional growth, BugSigDB has significantly contributed to this area by providing valuable courses for my continuous development. Thanks to the BugSigDB community- Professor Levi, I was given access to a paid DataCamp classroom, where I’ve had the opportunity to enhance my skills and boost my confidence in R programming.
 
 I am grateful to my mentor Chloe Mirzayi for her time and efforts in my growth and progress. I am also grateful to Svetlana Perovic for her guidance, and for being there to cross my T's and dot my I's whenever I reach out. I consider it a privilege and a blessing to be in the best community, contributing to such a big project.
 
 ## Upcoming opportunities at Outreachy and Bioconductor
 One of the things that make open source beautiful is its collaborative nature, where different ideas come together to shape the future of technology.
 
-Bioconductor is participating in the Outreachy December 2023 to March 2024 and May 2024 to August 2024 internship rounds, mentors interested in offering guidance and knowledge can sign up and submit a project proposal for the [next outreachy cohort](https://www.outreachy.org/communities/cfp/bioconductor/). The deadline to submit projects is Feb. 23, 2024 4 pm UTC.
-Aspiring interns eager to partake in this rewarding experience can apply in May 2024 for the [next cohort](https://www.outreachy.org/apply/eligibility/).
+Bioconductor is participating in the Outreachy May 2024 to August 2024 internship round. Mentors interested in offering guidance and knowledge can sign up and submit a project proposal for the [next outreachy cohort](https://www.outreachy.org/communities/cfp/bioconductor/). The deadline to submit projects is Feb. 23, 2024 4 pm UTC.
+Aspiring interns eager to partake in this rewarding experience can apply in late August 2024 for the [December 2024 to March 2025 cohort](https://www.outreachy.org/apply/eligibility/).
