@@ -6,16 +6,131 @@
       version="2.0">
 <channel>
 <title>Bioconductor community blog</title>
-<link>https://bioconductor.github.io/biocblog/index.html</link>
+<link>https://bioconductor.github.io/biocblog/</link>
 <atom:link href="https://bioconductor.github.io/biocblog/index.xml" rel="self" type="application/rss+xml"/>
 <description>A blog for the Bioconductor community!</description>
-<generator>quarto-1.3.450</generator>
-<lastBuildDate>Fri, 17 Nov 2023 00:00:00 GMT</lastBuildDate>
+<generator>quarto-1.4.550</generator>
+<lastBuildDate>Wed, 31 Jan 2024 00:00:00 GMT</lastBuildDate>
+<item>
+  <title>Journey of Growth: Our Internship experience with Bioconductor</title>
+  <dc:creator>Chioma Onyido</dc:creator>
+  <dc:creator>Afuape Esther</dc:creator>
+  <dc:creator>Peace Sandy</dc:creator>
+  <link>https://bioconductor.github.io/biocblog/posts/2024-01-31-OutreachyInternshipJourney/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<section id="introduction" class="level2">
+<h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
+<p>Open source is more than just a buzzword, it plays a crucial role in the tech ecosystem, fostering growth, collaboration, effective communication, and innovation. Participating in open source projects provides real-world experience, allowing contributors to make impactful contributions, learn best practices, and receive valuable feedback.</p>
+<p>Outreachy offers internship opportunities in open source and open science, specifically for individuals underrepresented in the technological industry.</p>
+<p>Through Outreachy, we were able to work as interns at Bioconductor, where we are currently contributing to the Microbiome Study Curation project. Whether you’re a first time contributor, an Outreachy applicant, or you are interested in contributing to the Bioconductor project, this blog post will provide detailed explanations and insights to guide you on how to make meaningful contributions.</p>
+</section>
+<section id="outreachy" class="level2">
+<h2 class="anchored" data-anchor-id="outreachy">Outreachy</h2>
+<p>Outreachy is a paid remote internship program that aims to support underrepresented groups who face systemic bias or discrimination in the technology industry of their country. Outreachy interns work remotely with mentors from Free and Open Source Software (FOSS) communities on several projects including programming, user experience, documentation, illustration and graphical design, or data science. Read more about Outreachy <a href="https://www.outreachy.org/docs/applicant/#what-is-outreachy">here</a>.</p>
+</section>
+<section id="outreachy-application-process" class="level2">
+<h2 class="anchored" data-anchor-id="outreachy-application-process">Outreachy application process</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://bioconductor.github.io/biocblog/posts/2024-01-31-OutreachyInternshipJourney/outreachylogo.png" class="img-fluid figure-img"></p>
+<figcaption>Outreachy</figcaption>
+</figure>
+</div>
+<p>The application process for Outreachy consists of three steps:</p>
+<section id="initial-application-period" class="level4">
+<h4 class="anchored" data-anchor-id="initial-application-period">1. Initial application period:</h4>
+<p>After making sure that you’re <a href="https://www.outreachy.org/apply/eligibility/">eligible to apply</a> for Outreachy, applicants proceed to fill out the initial application form, which consists of some Yes/ No answers and about four essays in which you share your personal stories of being underrepresented. After Outreachy organizers review the initial applications and essays, accepted applicants are notified via email. Read more about the application period <a href="https://www.outreachy.org/docs/applicant/#application-period">here</a>.</p>
+</section>
+<section id="contribution-period" class="level4">
+<h4 class="anchored" data-anchor-id="contribution-period">2. Contribution period:</h4>
+<p>The contribution period will open as soon as the initial application is accepted. ‘Open source contributors’ is the term used to describe those who regularly work on open source projects. When you contribute to an Outreachy project, you become an open source contributor. To have a successful contribution phase, the first step is to <a href="https://www.outreachy.org/apply/project-selection/">choose one or two projects</a> that pique your interest. Secondly, you must <a href="https://www.outreachy.org/docs/applicant/#find-mentor">get in touch with the project mentor</a> for further information on how to start contributing. Lastly, start contributing and record your contributions. Only applicants who contribute to a project, record their contributions, and submit a final application on the Outreachy website are considered for internship.</p>
+</section>
+<section id="intern-selection-period" class="level4">
+<h4 class="anchored" data-anchor-id="intern-selection-period">3. Intern selection period:</h4>
+<p>After the final applications are evaluated, selected interns are announced shortly after. Applicants are advised to read the <a href="https://www.outreachy.org/docs/internship/">internship guide</a> to learn more about time commitment and more details about what Outreachy expects from interns.</p>
+</section>
+</section>
+<section id="why-join-outreachy" class="level2">
+<h2 class="anchored" data-anchor-id="why-join-outreachy">Why join Outreachy?</h2>
+<p>The core values of Outreachy include diversity, inclusivity, and providing a platform for underrepresented groups to grow and excel in the open source community. Participating in the Outreachy internship means more than just skill development, it means joining a movement that promotes diversity and inclusivity. Some features that make the program unique include: remote mentoring with experienced FOSS contributors, meaningful mentorships, financial support, diversity and positive global impact.</p>
+</section>
+<section id="microbiome-study-curation" class="level2">
+<h2 class="anchored" data-anchor-id="microbiome-study-curation">Microbiome Study Curation</h2>
+<p>The Microbiome Study Curation project is a Bioconductor project that uses <a href="https://bugsigdb.org/Main_Page">BugSigDB</a>, a database of manually curated microbial signatures obtained from the results of published microbiome differential abundance studies. Differential abundance studies are studies that compare the relative abundance of different microbial species in different samples in hosts of interest (humans, animals, and environmental conditions). In humans, they help to understand how different geographical and environmental factors can lead to changes in the microbiome, thereby increasing the likelihood of developing conditions such as diabetes, obesity, cardiovascular and neurological diseases, allergies, and inflammatory bowel disease. This information helps to give insights into the role of specific microbes in different biological processes or diseases. The Microbiome Study Curation project entails curating new studies on BugSigDB, reviewing studies that have already been curated, and analyzing BugSigDB data using R. To learn more about the project and how to contribute to it, check <a href="https://kunmiwrites.wordpress.com/2024/01/22/bugsigdb-101-a-beginners-guide-to-exploring-microbial-signatures/">Esther’s blog post</a>.</p>
+<section id="esthers-experience" class="level3">
+<h3 class="anchored" data-anchor-id="esthers-experience">Esther’s experience</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://bioconductor.github.io/biocblog/posts/2024-01-31-OutreachyInternshipJourney/Esther.png" height="300" class="figure-img"></p>
+<figcaption>Afuape Esther</figcaption>
+</figure>
+</div>
+<p>Hello there! I’m Esther Afuape, a graduate of microbiology from University of Lagos, Nigeria. I love reading crime/mystery fiction, cooking, and spending time at the beach.</p>
+<p>I got to know about Outreachy through an acquaintance who was an intern in the program. I’m currently partaking in the December 2023 cohort and wrote about my experience during the contribution phase in my <a href="https://kunmiwrites.wordpress.com/2023/12/10/outreachy-week-1-introducing-me/">blog</a>. It’s been an awesome 8 whole weeks interning at Bioconductor! I wish I could slow down time because this means that the end of my internship is drawing closer. Before I applied for Outreachy and eventually came across Bioconductor on the Projects list, I was at a loss as to what to do with my microbiology degree in Nigeria, where a definitive niche for microbiologists is lacking. I had applied to the program with the hopes of doing a project in a different tech field. Coming across the Microbiome Curation Project was so exciting as it was related to my microbiology background. I found the project fascinating and immediately joined the project’s community Slack channel. What stood out for me was the support in the community. I found it easier to get a hang of things because there was always a mentor or other community members ready to help!</p>
+<p>As an intern, I’ve worked on the project by carrying out reviews of curated studies. I’ve absolutely enjoyed doing this and I find it interesting to see how volatile the microbiome is and how subtle lifestyle choices can cause changes in it. My literature review skills have greatly improved and I have a better understanding of the scientific methods used in research. I also look forward to developing basic data analysis during the rest of my internship.</p>
+<p>I’m so grateful for my mentor, Svetlana Perovic, for her invaluable guidance and support so far. Her mentorship has instilled in me the value of stepping out of my comfort zone. I’d also like to express my gratitude to other community members for always helping me out when I’m stuck, and the other mentors – Levi Waldron and Chloe Mirzayi, for entrusting me with this incredible opportunity. If you’d like to read more on my experience as a Bioconductor intern, I invite you to visit my blog <a href="https://kunmiwrites.wordpress.com/2023/12/10/outreachy-week-1-introducing-me/">here</a>.</p>
+</section>
+<section id="peace-sandys-experience" class="level3">
+<h3 class="anchored" data-anchor-id="peace-sandys-experience">Peace Sandy’s Experience</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://bioconductor.github.io/biocblog/posts/2024-01-31-OutreachyInternshipJourney/Peace.png" height="300" class="figure-img"></p>
+<figcaption>Peace Sandy</figcaption>
+</figure>
+</div>
+<p>Hi! My name is Peace Sandy, and I’m from Nigeria. I hold a Bachelor’s degree in Microbiology and am both a Software Developer and a Technical Writer. Research is my passion, and I’m very interested in Bioinformatics. My hobbies are reading, coding, and baking.</p>
+<p>During the Outreachy contribution period, I specifically sought projects that aligned with my skill set. Finding the Microbiome Study Curation project was thrilling, as it combined my research interests with microbiome studies.</p>
+<p>My long standing fascination with Bioinformatics, microbiome studies, open science, and research made the Microbiome Study Curation project highly appealing. Participating as an Outreachy intern in Bioconductor has been an incredibly educational and rewarding experience. I’ve had the privilege of learning from experienced mentors and open-source contributors. The Bioconductor community is extremely welcoming and collaborative.</p>
+<p>I am confident that the exposure and knowledge I am gaining from the Bioconductor community will significantly contribute to my career advancement. Having interned for over a month, the experience has been truly amazing. My mentor, Levi Waldron, has been incredibly supportive, patient, and welcoming, as have the other mentors, Chloe Mirzayi and Svetlana Perovic.</p>
+<p>So far, I’ve learned a tremendous amount, and my knowledge of microbiome studies, R programming, and research skills has significantly improved. I now have a better understanding of ontology terms.</p>
+<p>If you’re interested in reading more about my experience as an Outreachy intern with Bioconductor and my journey with the Microbiome Study Curation project, you can check out my <a href="https://peacesandy.hashnode.dev/">blog</a>.</p>
+</section>
+<section id="chiomas-experience" class="level3">
+<h3 class="anchored" data-anchor-id="chiomas-experience">Chioma’s Experience</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://bioconductor.github.io/biocblog/posts/2024-01-31-OutreachyInternshipJourney/Chioma.png" height="300" class="figure-img"></p>
+<figcaption>Chioma Onyido</figcaption>
+</figure>
+</div>
+<p>Everyday of the past few months with Outreachy has been an opportunity to learn something new, I consider myself lucky to be part of the selected interns.</p>
+<p>Hello, I’m Chioma Onyido, I’ve a BSc. and MSc. in Biochemistry/ Molecular Biology from Covenant University, Nigeria.</p>
+<p>I had my first encounter with Bioinformatics in my undergraduate third year (2015) and have been interested in it since then. Driven by my love for data and combining the best of both worlds (biology and data science), in 2022, I took a bold step to transition. I started learning how to code, picking up Bioinformatics projects and practicing with them.</p>
+<section id="here-is-why-i-chose-bioconductor" class="level4">
+<h4 class="anchored" data-anchor-id="here-is-why-i-chose-bioconductor">Here is why I chose Bioconductor</h4>
+<p>I learned about Outreachy from a buddy during one of our chats, so I decided to look into it further while doing my research. After my initial application was approved, I knew that I was going to apply for a Bioinformatics/ biology-related project, because I am really curious and passionate about exploring and becoming a voice in this field. I initially began contributing to three projects on the Outreachy website during the contribution phase, but I decided to stick with the Bioconductor Microbiome Study Curation project for many reasons:</p>
+<p>Passion: “Microbiome knowledge” and “literature review” were listed as the required skills that resonated well with my professional strengths and passion.</p>
+<p>Supportive community: I chose Bioconductor because of how interactive and supportive the community is. Before applying for Outreachy, I did well to read blogs by alums on the best way to go about applying for the internship, looking out more specifically for the do’s and dont’s, and one consistent advice I saw was- “applying for more than 1 project increases one’s chances”. I tried to do this, but it didn’t take me too long to realize that I’d rather focus my energy and time on one thing, put my best into it and DO IT VERY WELL.</p>
+<p>It’s the ‘BugSigDB vibe’ for me: One thing that intrigued me about the BugSigDB project is the fact that we share similar values- I love to help and see people win, and I saw a similar energy in the BugSigDB community. Even with the influx of comments, observations and/or questions from contributors during the Outreachy contribution phase, the BugSigDB community was active, and so were the mentors. The mentors were (still are) attentive, patient, thorough and present.</p>
+<p>Premium learning experience: In terms of my professional growth, BugSigDB has significantly contributed to this area by providing valuable courses for my continuous development. Thanks to the BugSigDB community- Professor Levi, I was given access to a paid DataCamp classroom, where I’ve had the opportunity to enhance my skills and boost my confidence in R programming.</p>
+<p>I am grateful to my mentor Chloe Mirzayi for her time and efforts in my growth and progress. I am also grateful to Svetlana Perovic for her guidance, and for being there to cross my T’s and dot my I’s whenever I reach out. I consider it a privilege and a blessing to be in the best community, contributing to such a big project.</p>
+</section>
+</section>
+</section>
+<section id="upcoming-opportunities-at-outreachy-and-bioconductor" class="level2">
+<h2 class="anchored" data-anchor-id="upcoming-opportunities-at-outreachy-and-bioconductor">Upcoming opportunities at Outreachy and Bioconductor</h2>
+<p>One of the things that make open source beautiful is its collaborative nature, where different ideas come together to shape the future of technology.</p>
+<p>Bioconductor is participating in the Outreachy May 2024 to August 2024 internship round. Mentors interested in offering guidance and knowledge can sign up and submit a project proposal for the <a href="https://www.outreachy.org/communities/cfp/bioconductor/">next outreachy cohort</a>. The deadline to submit projects is Feb.&nbsp;23, 2024 4 pm UTC. Aspiring interns eager to partake in this rewarding experience can apply in late August 2024 for the <a href="https://www.outreachy.org/apply/eligibility/">December 2024 to March 2025 cohort</a>.</p>
+
+
+</section>
+
+ ]]></description>
+  <category>open science</category>
+  <guid>https://bioconductor.github.io/biocblog/posts/2024-01-31-OutreachyInternshipJourney/</guid>
+  <pubDate>Wed, 31 Jan 2024 00:00:00 GMT</pubDate>
+</item>
 <item>
   <title>Bioconductor is leaving Twitter/X</title>
   <dc:creator>Maria Doyle</dc:creator>
-  <link>https://bioconductor.github.io/biocblog/posts/2023-11-17-twitter-exit/index.html</link>
+  <link>https://bioconductor.github.io/biocblog/posts/2023-11-17-twitter-exit/</link>
   <description><![CDATA[ 
+
 
 
 
@@ -30,15 +145,16 @@
 
  ]]></description>
   <category>Bioconductor</category>
-  <guid>https://bioconductor.github.io/biocblog/posts/2023-11-17-twitter-exit/index.html</guid>
+  <guid>https://bioconductor.github.io/biocblog/posts/2023-11-17-twitter-exit/</guid>
   <pubDate>Fri, 17 Nov 2023 00:00:00 GMT</pubDate>
   <media:content url="https://bioconductor.github.io/biocblog/posts/2023-11-17-twitter-exit/bioc-moving.png" medium="image" type="image/png" height="121" width="144"/>
 </item>
 <item>
   <title>We had a blast at BioC2023! Here’s what happened.</title>
   <dc:creator>Anna Powell</dc:creator>
-  <link>https://bioconductor.github.io/biocblog/posts/2023-08-17-bioc2023-recap/index.html</link>
+  <link>https://bioconductor.github.io/biocblog/posts/2023-08-17-bioc2023-recap/</link>
   <description><![CDATA[ 
+
 
 
 
@@ -46,7 +162,7 @@
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="https://bioconductor.github.io/biocblog/posts/2023-08-17-bioc2023-recap/bioc2023-numbers.png" class="img-fluid figure-img"></p>
-<figcaption class="figure-caption">BioC2023 numbers</figcaption>
+<figcaption>BioC2023 numbers</figcaption>
 </figure>
 </div>
 <p>BioC2023 kicked off at the Dana-Farber Cancer Institute in Boston, USA. It was opened by <a href="https://connects.catalyst.harvard.edu/Profiles/profile/1256034">Vincent Carey</a>, Professor of Medicine at Harvard and co-founder of the Bioconductor project. The Annual North America Bioconductor conference gave members of the community an opportunity to highlight current developments with and beyond the Bioconductor community. With 600 participants, it was a scientifically stimulating meeting that offered a great opportunity for networking and collaboration. Over one hundred and fifty people attended the conference in person and more than four hundred people attended the conference virtually, which was an increase of over 150 on last year’s conference, BioC2022. All talks are available on the <a href="https://www.youtube.com/@bioconductor/videos">Bioconductor YouTube</a> channel.</p>
@@ -91,7 +207,7 @@
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="https://bioconductor.github.io/biocblog/posts/2023-08-17-bioc2023-recap/bioc2023-sponsors.png" class="img-fluid figure-img"></p>
-<figcaption class="figure-caption">BioC2023 sponsors</figcaption>
+<figcaption>BioC2023 sponsors</figcaption>
 </figure>
 </div>
 </section>
@@ -114,15 +230,16 @@
  ]]></description>
   <category>Bioconductor</category>
   <category>events</category>
-  <guid>https://bioconductor.github.io/biocblog/posts/2023-08-17-bioc2023-recap/index.html</guid>
+  <guid>https://bioconductor.github.io/biocblog/posts/2023-08-17-bioc2023-recap/</guid>
   <pubDate>Thu, 17 Aug 2023 00:00:00 GMT</pubDate>
   <media:content url="https://bioconductor.github.io/biocblog/posts/2023-08-17-bioc2023-recap/bioc2023-numbers.png" medium="image" type="image/png" height="80" width="144"/>
 </item>
 <item>
   <title>Taking Bioconductor.org to the Next Level: Community, Collaboration and Progress</title>
   <dc:creator>Maria Doyle</dc:creator>
-  <link>https://bioconductor.github.io/biocblog/posts/2023-08-01-website-redesign-update/index.html</link>
+  <link>https://bioconductor.github.io/biocblog/posts/2023-08-01-website-redesign-update/</link>
   <description><![CDATA[ 
+
 
 
 
@@ -131,7 +248,7 @@
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="https://bioconductor.github.io/biocblog/posts/2023-08-01-website-redesign-update/BC Website redesign - Project timeline.jpg" class="img-fluid figure-img"></p>
-<figcaption class="figure-caption">Project timeline - Phase 1</figcaption>
+<figcaption>Project timeline - Phase 1</figcaption>
 </figure>
 </div>
 <section id="user-survey-insights-for-the-future" class="level2">
@@ -179,7 +296,7 @@
 
  ]]></description>
   <category>Bioconductor</category>
-  <guid>https://bioconductor.github.io/biocblog/posts/2023-08-01-website-redesign-update/index.html</guid>
+  <guid>https://bioconductor.github.io/biocblog/posts/2023-08-01-website-redesign-update/</guid>
   <pubDate>Tue, 01 Aug 2023 00:00:00 GMT</pubDate>
   <media:content url="https://bioconductor.github.io/biocblog/posts/2023-08-01-website-redesign-update/BC Website redesign - Project timeline.jpg" medium="image" type="image/jpeg"/>
 </item>
@@ -188,8 +305,9 @@
   <dc:creator>Sonali Kumari</dc:creator>
   <dc:creator>Daena Rys</dc:creator>
   <dc:creator>Atrayee Samanta</dc:creator>
-  <link>https://bioconductor.github.io/biocblog/posts/2023-07-14-OutreachyInternshipExperience/index.html</link>
+  <link>https://bioconductor.github.io/biocblog/posts/2023-07-14-OutreachyInternshipExperience/</link>
   <description><![CDATA[ 
+
 
 
 
@@ -205,7 +323,7 @@
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="https://bioconductor.github.io/biocblog/posts/2023-07-14-OutreachyInternshipExperience/outreachy_homepage.jpg" class="img-fluid figure-img"></p>
-<figcaption class="figure-caption">Outreachy</figcaption>
+<figcaption>Outreachy</figcaption>
 </figure>
 </div>
 <p>The application process involves three stages, where applicants contribute to 1-2 projects of their choice. Through Outreachy, we were selected to work with Bioconductor on our chosen projects.</p>
@@ -218,7 +336,7 @@
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="https://bioconductor.github.io/biocblog/posts/2023-07-14-OutreachyInternshipExperience/Sonali Kumari.jpg" height="300" class="figure-img"></p>
-<figcaption class="figure-caption">Sonali Kumari</figcaption>
+<figcaption>Sonali Kumari</figcaption>
 </figure>
 </div>
 <p>I’m Sonali Kumari, a B.Tech student specializing in Electronics and Communication Engineering with a passion for Artificial Intelligence. Currently pursuing my studies at IGDTUW in Delhi, I find immense joy in working with open-source organizations that offer unique opportunities for learning, collaboration, and remarkable achievements, even in remote settings. With a diverse range of interests spanning technology and open science, I strive to merge technical expertise with a strong inclination towards research.</p>
@@ -251,7 +369,7 @@
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="https://bioconductor.github.io/biocblog/posts/2023-07-14-OutreachyInternshipExperience/Screenshot 2023-06-19 160243.png" height="300" class="figure-img"></p>
-<figcaption class="figure-caption">Atrayee Samanta</figcaption>
+<figcaption>Atrayee Samanta</figcaption>
 </figure>
 </div>
 <p>Hello! I am Atrayee Samanta, an undergraduate student at IIEST Shibpur, India. I am currently pursuing a B. Tech in Computer Science and Technology. I love reading books, watercolour painting and music.</p>
@@ -288,14 +406,15 @@
 
  ]]></description>
   <category>open science</category>
-  <guid>https://bioconductor.github.io/biocblog/posts/2023-07-14-OutreachyInternshipExperience/index.html</guid>
+  <guid>https://bioconductor.github.io/biocblog/posts/2023-07-14-OutreachyInternshipExperience/</guid>
   <pubDate>Fri, 14 Jul 2023 00:00:00 GMT</pubDate>
 </item>
 <item>
   <title>Testing Packages on Linux ARM64 with GitHub Actions</title>
   <dc:creator>Mike L. Smith</dc:creator>
-  <link>https://bioconductor.github.io/biocblog/posts/2023-07-14-linux-arm64-github-actions/index.html</link>
+  <link>https://bioconductor.github.io/biocblog/posts/2023-07-14-linux-arm64-github-actions/</link>
   <description><![CDATA[ 
+
 
 
 
@@ -303,7 +422,7 @@
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="https://bioconductor.github.io/biocblog/posts/2023-06-09-debug-linux-arm64-on-docker/bioconductor_logo_cmyk.png" class="img-fluid figure-img"></p>
-<figcaption class="figure-caption">Bioconductor on Linux ARM64</figcaption>
+<figcaption>Bioconductor on Linux ARM64</figcaption>
 </figure>
 </div>
 <section id="introduction" class="level1">
@@ -937,14 +1056,15 @@ font-style: inherit;"> warn</span></span></code></pre></div>
   <category>tech-notes</category>
   <category>GitHub Actions</category>
   <category>ARM64</category>
-  <guid>https://bioconductor.github.io/biocblog/posts/2023-07-14-linux-arm64-github-actions/index.html</guid>
+  <guid>https://bioconductor.github.io/biocblog/posts/2023-07-14-linux-arm64-github-actions/</guid>
   <pubDate>Fri, 14 Jul 2023 00:00:00 GMT</pubDate>
 </item>
 <item>
   <title>Reimagining Bioconductor.org: The Path to Our Website Redesign</title>
   <dc:creator>Maria Doyle</dc:creator>
-  <link>https://bioconductor.github.io/biocblog/posts/2023-06-22-website-redesign/index.html</link>
+  <link>https://bioconductor.github.io/biocblog/posts/2023-06-22-website-redesign/</link>
   <description><![CDATA[ 
+
 
 
 
@@ -968,7 +1088,7 @@ font-style: inherit;"> warn</span></span></code></pre></div>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="https://bioconductor.github.io/biocblog/posts/2023-06-22-website-redesign/BC Website redesign - Project timeline.jpg" class="img-fluid figure-img"></p>
-<figcaption class="figure-caption">Project timeline - Phase 1</figcaption>
+<figcaption>Project timeline - Phase 1</figcaption>
 </figure>
 </div>
 </section>
@@ -993,54 +1113,17 @@ font-style: inherit;"> warn</span></span></code></pre></div>
 
  ]]></description>
   <category>Bioconductor</category>
-  <guid>https://bioconductor.github.io/biocblog/posts/2023-06-22-website-redesign/index.html</guid>
+  <guid>https://bioconductor.github.io/biocblog/posts/2023-06-22-website-redesign/</guid>
   <pubDate>Thu, 22 Jun 2023 00:00:00 GMT</pubDate>
   <media:content url="https://bioconductor.github.io/biocblog/posts/2023-06-22-website-redesign/BC Website redesign - Project timeline.jpg" medium="image" type="image/jpeg"/>
-</item>
-<item>
-  <title>ELIXIR All Hands Meeting 2023</title>
-  <dc:creator>Anna Powell</dc:creator>
-  <link>https://bioconductor.github.io/biocblog/posts/2023-06-16-ELIXIR-allhands-meeting/index.html</link>
-  <description><![CDATA[ 
-
-
-
-
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="https://bioconductor.github.io/biocblog/posts/2023-06-16-ELIXIR-allhands-meeting/elixir-allhands-attendees.jpg" class="img-fluid figure-img"></p>
-<figcaption class="figure-caption">ELIXIR All Hands Meeting 2023 attendees</figcaption>
-</figure>
-</div>
-<p>Bioconductor participated in the <a href="https://elixir-europe.org/events/elixir-all-hands-2023">ninth ELIXIR All Hands international event</a> which took place in the Dublin Convention centre from 5-8 June 2023. This was its first time ever being hosted in Ireland.</p>
-<p><a href="https://elixir-europe.org/">ELIXIR</a> is an organisation that works to create EU infrastructure to make it easier for scientists to find, aggregate, analyse and store life-science data, This is achieved through open-source bioinformatics software which provides methods and tools to analyse life science data. One purpose of this event was to share the first results from a 40 million euro <a href="https://gdi.onemilliongenomes.eu/">Genomic Data Infrastructure project</a>. This project, which is coordinated by ELIXIR, is creating the infrastructure to allow secure access to Europe’s genome data with the goal of accelerating research of new treatments and therapies for disease, improving healthcare across Europe and beyond.</p>
-<p>Bioconductor gave a workshop at this conference on the ‘Opportunities for Bioconductor and ELIXIR communities to co-develop training infrastructures’. This workshop was introduced by Bioconductor Community Manager, Dr.&nbsp;Maria Doyle, from the University of Limerick, Ireland. Following its introduction, Professor of Cancer Genomics, Aedin Culhane from University of Limerick gave an overview of Bioconductor’s work. Professor of Bioinformatics, Laurent Gatto, from UCLouvain, Belgium and Professor in Data Science, Leo Lahti, from the University of Turku, Finland followed Professor Culhane by speaking about Bioconductor’s training landscape. Dr.&nbsp;Doyle then gave a demo of Bioconductor’s Galaxy training infrastructure and also gave a talk on the future plans/ideas for Bioconductor/ELIXIR collaborations in training.</p>
-<p>Professor Culhane who is director of the Limerick Digital Cancer Centre and sits on the leadership board of Bioconductor emphasized the benefits of connecting the global Bioconductor and ELIXIR bioinformatics communities. She said <em>“The Bioconductor and ELIXIR active communities are continuously working on improving and expanding functionally. By working together we can better develop, support and disseminate free open source software to the global bioinformatics community and thereby accelerate medical and biological research in treatments for patients with disease and cancer”</em>.</p>
-<p>Dr Doyle coordinates global education and training for Bioconductor and is also the ELIXIR-Ireland training coordinator, commented on the importance of the event for coordination of training resources <em>“It was important for Bioconductor to be present at such an event as it allows us to connect with a wide range of stakeholders, gain insights from diverse perspectives, and foster relationships that could lead to impactful collaborations. These interactions contribute to Bioconductor growth and help us to improve our training offerings, making them more comprehensive, user-friendly, and effective”</em>.</p>
-<p>Ireland’s most cited scientist, Professor Desmond Higgins, Emeritus Professor of Bioinformatics from the University College Dublin was honoured as the keynote speaker at the ninth ELIXIR All Hands international event. Higgins is one of the most cited life scientists in the world for his work on the Clustal suite of bioinformatics software programmes. He spoke about the history of Clustal and the impact that this package has had on bioinformatics research in his keynote speech. <em>“It was a fantastic honour to be invited. I have worked on bioinformatics methods since the mid 1980s. I have given talks in many countries over 40 years but this was one of the few opportunities have had to do this in Dublin, to an international audience.”</em> commented Professor Desmond Higgins.</p>
-<p>Dr Elaine Harrison, ELIXIR’s Communication Officer commented on the success of the event.<em>“The event was a huge success, we were blessed with Dublin sunshine and enjoyed the excellent services of the Convention Centre. With over 90 speakers we ran 25 parallel workshops, 9 mini symposia, 3 plenaries and 2 lunchtime poster sessions.”</em></p>
-<p>The event began and ended with remarks from Dr.&nbsp;Niklas Blomberg, ELIXIR’s director. He highlighted ELIXIR’s achievements over the 10 years and shared information on their plans for their 2024-2028 scientific programme. Dr Blomberg commented on how experts came <em>“from all over Europe and guests from as far afield as Australia and Canada”</em> to attend this event. Three hundred and eighty two people attended the event and one hundred and fourteen people attended the conference remotely. It was brilliant that Bioconductor was involved in such a collaborative and exciting meeting.</p>
-<div class="quarto-figure quarto-figure-left">
-<figure class="figure">
-<p><img src="https://bioconductor.github.io/biocblog/posts/2023-06-16-ELIXIR-allhands-meeting/bioc-elixir.jpg" height="500" class="figure-img"></p>
-<figcaption class="figure-caption">Maria Doyle, Niklas Blomberg, Aedin Culhane</figcaption>
-</figure>
-</div>
-
-
-
- ]]></description>
-  <category>Bioconductor</category>
-  <guid>https://bioconductor.github.io/biocblog/posts/2023-06-16-ELIXIR-allhands-meeting/index.html</guid>
-  <pubDate>Fri, 16 Jun 2023 00:00:00 GMT</pubDate>
-  <media:content url="https://bioconductor.github.io/biocblog/posts/2023-06-16-ELIXIR-allhands-meeting/elixir-allhands-attendees.jpg" medium="image" type="image/jpeg"/>
 </item>
 <item>
   <title>Bioconductor’s Participation in Galaxy Smorgasbord 2023: A Recap</title>
   <dc:creator>Maria Doyle</dc:creator>
   <dc:creator>Alex Mahmoud</dc:creator>
-  <link>https://bioconductor.github.io/biocblog/posts/2023-06-16-smorgasbord-recap/index.html</link>
+  <link>https://bioconductor.github.io/biocblog/posts/2023-06-16-smorgasbord-recap/</link>
   <description><![CDATA[ 
+
 
 
 
@@ -1060,7 +1143,7 @@ font-style: inherit;"> warn</span></span></code></pre></div>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="https://bioconductor.github.io/biocblog/posts/2023-06-16-smorgasbord-recap/bioconductor-galaxy.png" class="img-fluid figure-img"></p>
-<figcaption class="figure-caption">Bioconductor Galaxy Platform</figcaption>
+<figcaption>Bioconductor Galaxy Platform</figcaption>
 </figure>
 </div>
 </section>
@@ -1078,15 +1161,55 @@ font-style: inherit;"> warn</span></span></code></pre></div>
  ]]></description>
   <category>events</category>
   <category>education</category>
-  <guid>https://bioconductor.github.io/biocblog/posts/2023-06-16-smorgasbord-recap/index.html</guid>
+  <guid>https://bioconductor.github.io/biocblog/posts/2023-06-16-smorgasbord-recap/</guid>
   <pubDate>Fri, 16 Jun 2023 00:00:00 GMT</pubDate>
   <media:content url="https://bioconductor.github.io/biocblog/posts/2023-06-16-smorgasbord-recap/bioconductor-galaxy.png" medium="image" type="image/png" height="98" width="144"/>
 </item>
 <item>
+  <title>ELIXIR All Hands Meeting 2023</title>
+  <dc:creator>Anna Powell</dc:creator>
+  <link>https://bioconductor.github.io/biocblog/posts/2023-06-16-ELIXIR-allhands-meeting/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://bioconductor.github.io/biocblog/posts/2023-06-16-ELIXIR-allhands-meeting/elixir-allhands-attendees.jpg" class="img-fluid figure-img"></p>
+<figcaption>ELIXIR All Hands Meeting 2023 attendees</figcaption>
+</figure>
+</div>
+<p>Bioconductor participated in the <a href="https://elixir-europe.org/events/elixir-all-hands-2023">ninth ELIXIR All Hands international event</a> which took place in the Dublin Convention centre from 5-8 June 2023. This was its first time ever being hosted in Ireland.</p>
+<p><a href="https://elixir-europe.org/">ELIXIR</a> is an organisation that works to create EU infrastructure to make it easier for scientists to find, aggregate, analyse and store life-science data, This is achieved through open-source bioinformatics software which provides methods and tools to analyse life science data. One purpose of this event was to share the first results from a 40 million euro <a href="https://gdi.onemilliongenomes.eu/">Genomic Data Infrastructure project</a>. This project, which is coordinated by ELIXIR, is creating the infrastructure to allow secure access to Europe’s genome data with the goal of accelerating research of new treatments and therapies for disease, improving healthcare across Europe and beyond.</p>
+<p>Bioconductor gave a workshop at this conference on the ‘Opportunities for Bioconductor and ELIXIR communities to co-develop training infrastructures’. This workshop was introduced by Bioconductor Community Manager, Dr.&nbsp;Maria Doyle, from the University of Limerick, Ireland. Following its introduction, Professor of Cancer Genomics, Aedin Culhane from University of Limerick gave an overview of Bioconductor’s work. Professor of Bioinformatics, Laurent Gatto, from UCLouvain, Belgium and Professor in Data Science, Leo Lahti, from the University of Turku, Finland followed Professor Culhane by speaking about Bioconductor’s training landscape. Dr.&nbsp;Doyle then gave a demo of Bioconductor’s Galaxy training infrastructure and also gave a talk on the future plans/ideas for Bioconductor/ELIXIR collaborations in training.</p>
+<p>Professor Culhane who is director of the Limerick Digital Cancer Centre and sits on the leadership board of Bioconductor emphasized the benefits of connecting the global Bioconductor and ELIXIR bioinformatics communities. She said <em>“The Bioconductor and ELIXIR active communities are continuously working on improving and expanding functionally. By working together we can better develop, support and disseminate free open source software to the global bioinformatics community and thereby accelerate medical and biological research in treatments for patients with disease and cancer”</em>.</p>
+<p>Dr Doyle coordinates global education and training for Bioconductor and is also the ELIXIR-Ireland training coordinator, commented on the importance of the event for coordination of training resources <em>“It was important for Bioconductor to be present at such an event as it allows us to connect with a wide range of stakeholders, gain insights from diverse perspectives, and foster relationships that could lead to impactful collaborations. These interactions contribute to Bioconductor growth and help us to improve our training offerings, making them more comprehensive, user-friendly, and effective”</em>.</p>
+<p>Ireland’s most cited scientist, Professor Desmond Higgins, Emeritus Professor of Bioinformatics from the University College Dublin was honoured as the keynote speaker at the ninth ELIXIR All Hands international event. Higgins is one of the most cited life scientists in the world for his work on the Clustal suite of bioinformatics software programmes. He spoke about the history of Clustal and the impact that this package has had on bioinformatics research in his keynote speech. <em>“It was a fantastic honour to be invited. I have worked on bioinformatics methods since the mid 1980s. I have given talks in many countries over 40 years but this was one of the few opportunities have had to do this in Dublin, to an international audience.”</em> commented Professor Desmond Higgins.</p>
+<p>Dr Elaine Harrison, ELIXIR’s Communication Officer commented on the success of the event.<em>“The event was a huge success, we were blessed with Dublin sunshine and enjoyed the excellent services of the Convention Centre. With over 90 speakers we ran 25 parallel workshops, 9 mini symposia, 3 plenaries and 2 lunchtime poster sessions.”</em></p>
+<p>The event began and ended with remarks from Dr.&nbsp;Niklas Blomberg, ELIXIR’s director. He highlighted ELIXIR’s achievements over the 10 years and shared information on their plans for their 2024-2028 scientific programme. Dr Blomberg commented on how experts came <em>“from all over Europe and guests from as far afield as Australia and Canada”</em> to attend this event. Three hundred and eighty two people attended the event and one hundred and fourteen people attended the conference remotely. It was brilliant that Bioconductor was involved in such a collaborative and exciting meeting.</p>
+<div class="quarto-figure quarto-figure-left">
+<figure class="figure">
+<p><img src="https://bioconductor.github.io/biocblog/posts/2023-06-16-ELIXIR-allhands-meeting/bioc-elixir.jpg" class="quarto-figure quarto-figure-left figure-img" height="500"></p>
+<figcaption>Maria Doyle, Niklas Blomberg, Aedin Culhane</figcaption>
+</figure>
+</div>
+
+
+
+ ]]></description>
+  <category>Bioconductor</category>
+  <guid>https://bioconductor.github.io/biocblog/posts/2023-06-16-ELIXIR-allhands-meeting/</guid>
+  <pubDate>Fri, 16 Jun 2023 00:00:00 GMT</pubDate>
+  <media:content url="https://bioconductor.github.io/biocblog/posts/2023-06-16-ELIXIR-allhands-meeting/elixir-allhands-attendees.jpg" medium="image" type="image/jpeg"/>
+</item>
+<item>
   <title>Emulated build and test of Bioconductor packages for Linux ARM64</title>
   <dc:creator>Martin Grigorov</dc:creator>
-  <link>https://bioconductor.github.io/biocblog/posts/2023-06-09-debug-linux-arm64-on-docker/index.html</link>
+  <link>https://bioconductor.github.io/biocblog/posts/2023-06-09-debug-linux-arm64-on-docker/</link>
   <description><![CDATA[ 
+
 
 
 
@@ -1094,7 +1217,7 @@ font-style: inherit;"> warn</span></span></code></pre></div>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="https://bioconductor.github.io/biocblog/posts/2023-06-09-debug-linux-arm64-on-docker/bioconductor_logo_cmyk.png" class="img-fluid figure-img"></p>
-<figcaption class="figure-caption">Bioconductor on Linux ARM64</figcaption>
+<figcaption>Bioconductor on Linux ARM64</figcaption>
 </figure>
 </div>
 <p><code>ARM64</code>, also known as <code>aarch64</code>, architecture is used in almost all mobile devices because of its lower electricity consumption compared to <code>x86_64</code>. In the last few years it is also being introduced more and more in server/cloud environments for the same reason.</p>
@@ -1152,14 +1275,15 @@ root@b40c553def79:/# R CMD check xyz_VERSION.tar.gz</code></pre>
  ]]></description>
   <category>tech-notes</category>
   <category>ARM64</category>
-  <guid>https://bioconductor.github.io/biocblog/posts/2023-06-09-debug-linux-arm64-on-docker/index.html</guid>
+  <guid>https://bioconductor.github.io/biocblog/posts/2023-06-09-debug-linux-arm64-on-docker/</guid>
   <pubDate>Fri, 09 Jun 2023 00:00:00 GMT</pubDate>
 </item>
 <item>
   <title>Renaming the Default Branch to Devel</title>
   <dc:creator>J Wokaty</dc:creator>
-  <link>https://bioconductor.github.io/biocblog/posts/2023-03-01-transition-to-devel/index.html</link>
+  <link>https://bioconductor.github.io/biocblog/posts/2023-03-01-transition-to-devel/</link>
   <description><![CDATA[ 
+
 
 
 
@@ -1179,14 +1303,14 @@ root@b40c553def79:/# R CMD check xyz_VERSION.tar.gz</code></pre>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="https://bioconductor.github.io/biocblog/posts/2023-03-01-transition-to-devel/default_branch.png" class="img-fluid figure-img"></p>
-<figcaption class="figure-caption">Settings &gt; Branches at github.com</figcaption>
+<figcaption>Settings &gt; Branches at github.com</figcaption>
 </figure>
 </div>
 <p>Note: Renaming the branch will also change any pull requests attempting to merge into your current default branch.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="https://bioconductor.github.io/biocblog/posts/2023-03-01-transition-to-devel/rename_branch.png" class="img-fluid figure-img"></p>
-<figcaption class="figure-caption">Rename the default branch devel</figcaption>
+<figcaption>Rename the default branch devel</figcaption>
 </figure>
 </div>
 </section>
@@ -1223,14 +1347,15 @@ git push upstream main:devel</code></pre>
 
  ]]></description>
   <category>Bioconductor</category>
-  <guid>https://bioconductor.github.io/biocblog/posts/2023-03-01-transition-to-devel/index.html</guid>
+  <guid>https://bioconductor.github.io/biocblog/posts/2023-03-01-transition-to-devel/</guid>
   <pubDate>Wed, 01 Mar 2023 00:00:00 GMT</pubDate>
 </item>
 <item>
   <title>Bioconductor Carpentries instructors Year 1</title>
   <dc:creator>Maria Doyle</dc:creator>
-  <link>https://bioconductor.github.io/biocblog/posts/2023-02-24-carpentries-update/index.html</link>
+  <link>https://bioconductor.github.io/biocblog/posts/2023-02-24-carpentries-update/</link>
   <description><![CDATA[ 
+
 
 
 
@@ -1367,7 +1492,7 @@ git push upstream main:devel</code></pre>
 
  ]]></description>
   <category>education</category>
-  <guid>https://bioconductor.github.io/biocblog/posts/2023-02-24-carpentries-update/index.html</guid>
+  <guid>https://bioconductor.github.io/biocblog/posts/2023-02-24-carpentries-update/</guid>
   <pubDate>Fri, 24 Feb 2023 00:00:00 GMT</pubDate>
   <media:content url="https://bioconductor.github.io/biocblog/posts/2023-02-24-carpentries-update/map.png" medium="image" type="image/png" height="96" width="144"/>
 </item>
@@ -1375,8 +1500,9 @@ git push upstream main:devel</code></pre>
   <title>Introducing CuratedAtlasQueryR package</title>
   <dc:creator>Maria Doyle</dc:creator>
   <dc:creator>Stefano Mangiola</dc:creator>
-  <link>https://bioconductor.github.io/biocblog/posts/2023-02-23-CuratedAtlasQueryR/index.html</link>
+  <link>https://bioconductor.github.io/biocblog/posts/2023-02-23-CuratedAtlasQueryR/</link>
   <description><![CDATA[ 
+
 
 
 
@@ -1759,7 +1885,7 @@ font-style: inherit;">"."</span>) </span></code></pre></div>
 
  ]]></description>
   <category>Package</category>
-  <guid>https://bioconductor.github.io/biocblog/posts/2023-02-23-CuratedAtlasQueryR/index.html</guid>
+  <guid>https://bioconductor.github.io/biocblog/posts/2023-02-23-CuratedAtlasQueryR/</guid>
   <pubDate>Thu, 23 Feb 2023 00:00:00 GMT</pubDate>
   <media:content url="https://bioconductor.github.io/biocblog/posts/2023-02-23-CuratedAtlasQueryR/overview.png" medium="image" type="image/png" height="154" width="144"/>
 </item>
@@ -1767,8 +1893,9 @@ font-style: inherit;">"."</span>) </span></code></pre></div>
   <title>Our experience as Outreachy interns with Bioconductor</title>
   <dc:creator>Beryl Kanali</dc:creator>
   <dc:creator>Atuhurira Kirabo</dc:creator>
-  <link>https://bioconductor.github.io/biocblog/posts/2023-01-22-OutreachyInternship/index.html</link>
+  <link>https://bioconductor.github.io/biocblog/posts/2023-01-22-OutreachyInternship/</link>
   <description><![CDATA[ 
+
 
 
 
@@ -1784,7 +1911,7 @@ font-style: inherit;">"."</span>) </span></code></pre></div>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="https://bioconductor.github.io/biocblog/posts/2023-01-22-OutreachyInternship/outreachy_homepage.png" class="img-fluid figure-img"></p>
-<figcaption class="figure-caption">Outreachy</figcaption>
+<figcaption>Outreachy</figcaption>
 </figure>
 </div>
 <p>The application process is in three stages and an applicant chooses 1-2 projects they would like to apply to and makes contributions to them to be eligible for selection.</p>
@@ -1799,14 +1926,14 @@ font-style: inherit;">"."</span>) </span></code></pre></div>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="https://bioconductor.github.io/biocblog/posts/2023-01-22-OutreachyInternship/seed_file_Felis_catus_9.0.png" class="img-fluid figure-img"></p>
-<figcaption class="figure-caption">example seed file for Felis_catus_9.0</figcaption>
+<figcaption>example seed file for Felis_catus_9.0</figcaption>
 </figure>
 </div>
 <p>The <a href="https://github.com/Bioconductor/BSgenomeForge">BSgenomeForge project</a> aims to simplify the whole process, by allowing the user to use one function to create the package. It’s a solution that we hope is able to cut down the time one takes to forge a package, and make the process much less confusing and error-prone to less experienced users.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="https://bioconductor.github.io/biocblog/posts/2023-01-22-OutreachyInternship/forgeBSgenomeDataPkgFromNCBI.png" class="img-fluid figure-img"></p>
-<figcaption class="figure-caption">forgeBSgenomeDataPkgFromNCBI function</figcaption>
+<figcaption>forgeBSgenomeDataPkgFromNCBI function</figcaption>
 </figure>
 </div>
 </section>
@@ -1830,7 +1957,7 @@ font-style: inherit;">"."</span>) </span></code></pre></div>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="https://bioconductor.github.io/biocblog/posts/2023-01-22-OutreachyInternship/KIRABO HEADSHOT.jpeg" class="img-fluid figure-img"></p>
-<figcaption class="figure-caption">Kirabo Atuhurira</figcaption>
+<figcaption>Kirabo Atuhurira</figcaption>
 </figure>
 </div>
 <p>Hi, my name is Atuhurira Kirabo Kakopo, and I’m from Kampala, Uganda. I am on the cusp of graduating with a bachelor’s degree in Software Engineering. Academically, I thrived in my data science and artificial intelligence classes, which was because I found these topics extra interesting. Because of this, R ended up as my programming language of choice, because it was used extensively in the aforementioned class projects.</p>
@@ -1843,7 +1970,7 @@ font-style: inherit;">"."</span>) </span></code></pre></div>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="https://bioconductor.github.io/biocblog/posts/2023-01-22-OutreachyInternship/Beryl Kanali.jpg" class="img-fluid figure-img"></p>
-<figcaption class="figure-caption">Beryl Kanai</figcaption>
+<figcaption>Beryl Kanai</figcaption>
 </figure>
 </div>
 <p>I am Beryl Kanali from Nairobi, Kenya. I graduated in 2021 with a bachelor’s degree in Mathematics and Computer Science which led me to choosing Data Science as a career of choice. I have always been interested in biology, life sciences and research in these areas and even thought of doing medicine at some point but I was more drawn to Mathematics and technology. After school I wanted to practice data science in areas related to biology, life sciences or pharmacy. Unfortunately, Data Science is not widely used in those areas in my country.</p>
@@ -1868,7 +1995,7 @@ font-style: inherit;">"."</span>) </span></code></pre></div>
 
  ]]></description>
   <category>open science</category>
-  <guid>https://bioconductor.github.io/biocblog/posts/2023-01-22-OutreachyInternship/index.html</guid>
+  <guid>https://bioconductor.github.io/biocblog/posts/2023-01-22-OutreachyInternship/</guid>
   <pubDate>Sun, 22 Jan 2023 00:00:00 GMT</pubDate>
 </item>
 <item>
@@ -1876,8 +2003,9 @@ font-style: inherit;">"."</span>) </span></code></pre></div>
   <dc:creator>Maria Doyle</dc:creator>
   <dc:creator>Kozo Nishida</dc:creator>
   <dc:creator>Kevin Rue-Albrecht</dc:creator>
-  <link>https://bioconductor.github.io/biocblog/posts/2023-01-20-hacktoberfest/index.html</link>
+  <link>https://bioconductor.github.io/biocblog/posts/2023-01-20-hacktoberfest/</link>
   <description><![CDATA[ 
+
 
 
 
@@ -1906,26 +2034,26 @@ font-style: inherit;">"."</span>) </span></code></pre></div>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="https://bioconductor.github.io/biocblog/posts/2023-01-20-hacktoberfest/biocproject_github.png" class="img-fluid figure-img"></p>
-<figcaption class="figure-caption">biocproject_github</figcaption>
+<figcaption>biocproject_github</figcaption>
 </figure>
 </div>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="https://bioconductor.github.io/biocblog/posts/2023-01-20-hacktoberfest/biocproject_carpentries.png" class="img-fluid figure-img"></p>
-<figcaption class="figure-caption">biocproject_carpentries</figcaption>
+<figcaption>biocproject_carpentries</figcaption>
 </figure>
 </div>
 <p>Community member, <a href="https://github.com/kozo2">Kozo Nishida</a> hosted a Meetup event on <a href="https://bioconductor.github.io/biocblog/">the Bioconductor community blog</a>.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="https://bioconductor.github.io/biocblog/posts/2023-01-20-hacktoberfest/biocblog_github.png" class="img-fluid figure-img"></p>
-<figcaption class="figure-caption">biocblog_github</figcaption>
+<figcaption>biocblog_github</figcaption>
 </figure>
 </div>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="https://bioconductor.github.io/biocblog/posts/2023-01-20-hacktoberfest/biocblog_website.png" class="img-fluid figure-img"></p>
-<figcaption class="figure-caption">biocblog_website</figcaption>
+<figcaption>biocblog_website</figcaption>
 </figure>
 </div>
 </section>
@@ -1935,7 +2063,7 @@ font-style: inherit;">"."</span>) </span></code></pre></div>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="https://bioconductor.github.io/biocblog/posts/2023-01-20-hacktoberfest/biocproject_contribution.png" class="img-fluid figure-img"></p>
-<figcaption class="figure-caption">biocproject_contribution</figcaption>
+<figcaption>biocproject_contribution</figcaption>
 </figure>
 </div>
 <p>A participant at the blog meetup, Jeremy Selva <a href="https://github.com/JauntyJJS"><span class="citation" data-cites="JauntyJJS">@JauntyJJS</span></a> from Singapore, created a great contribution for <a href="https://bioconductor.github.io/biocblog/">the biocblog</a>.</p>
@@ -1946,7 +2074,7 @@ font-style: inherit;">"."</span>) </span></code></pre></div>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="https://bioconductor.github.io/biocblog/posts/2023-01-20-hacktoberfest/biocblog_contribution.png" class="img-fluid figure-img"></p>
-<figcaption class="figure-caption">biocproject_contribution</figcaption>
+<figcaption>biocproject_contribution</figcaption>
 </figure>
 </div>
 <p>The contributions from the above participants were excellent and we would like to encourage more people to take part in 2023. In support of that, we will create greater awareness of Bioconductor’s plans to participate in Hacktoberfest, such as through this blog, advertise and take suggestions for Bioconductor projects earlier, such as in the new <code>#hacktoberfest</code> channel in <a href="https://slack.bioconductor.org/">Bioconductor Slack</a> and at the <a href="https://support.bioconductor.org/p/9147691/">BioC2023 conference August 2nd-4th</a>. We also learnt that in order to get people to contribute it really helps to have well-defined issues in the repositories, so we aim to do that for Hacktoberfest 2023.</p>
@@ -1960,14 +2088,15 @@ font-style: inherit;">"."</span>) </span></code></pre></div>
 
  ]]></description>
   <category>events</category>
-  <guid>https://bioconductor.github.io/biocblog/posts/2023-01-20-hacktoberfest/index.html</guid>
+  <guid>https://bioconductor.github.io/biocblog/posts/2023-01-20-hacktoberfest/</guid>
   <pubDate>Fri, 20 Jan 2023 00:00:00 GMT</pubDate>
 </item>
 <item>
   <title>Recommended Awesome Lists for Bioconductor Community: Oct 2022 Edition</title>
   <dc:creator>Jeremy Selva</dc:creator>
-  <link>https://bioconductor.github.io/biocblog/posts/2022-10-22-awesome-lists/index.html</link>
+  <link>https://bioconductor.github.io/biocblog/posts/2022-10-22-awesome-lists/</link>
   <description><![CDATA[ 
+
 
 
 
@@ -2427,7 +2556,7 @@ Note
 
  ]]></description>
   <category>education</category>
-  <guid>https://bioconductor.github.io/biocblog/posts/2022-10-22-awesome-lists/index.html</guid>
+  <guid>https://bioconductor.github.io/biocblog/posts/2022-10-22-awesome-lists/</guid>
   <pubDate>Sat, 22 Oct 2022 00:00:00 GMT</pubDate>
   <media:content url="https://bioconductor.github.io/biocblog/posts/2022-10-22-awesome-lists/awesome.png" medium="image" type="image/png" height="72" width="144"/>
 </item>
@@ -2439,8 +2568,9 @@ Note
   <dc:creator>Jenny Drnevich</dc:creator>
   <dc:creator>Robert Castelo</dc:creator>
   <dc:creator>Susan Holmes</dc:creator>
-  <link>https://bioconductor.github.io/biocblog/posts/2022-07-12-carpentries-membership/index.html</link>
+  <link>https://bioconductor.github.io/biocblog/posts/2022-07-12-carpentries-membership/</link>
   <description><![CDATA[ 
+
 
 
 
@@ -2454,15 +2584,16 @@ Note
 
  ]]></description>
   <category>education</category>
-  <guid>https://bioconductor.github.io/biocblog/posts/2022-07-12-carpentries-membership/index.html</guid>
+  <guid>https://bioconductor.github.io/biocblog/posts/2022-07-12-carpentries-membership/</guid>
   <pubDate>Tue, 12 Jul 2022 00:00:00 GMT</pubDate>
 </item>
 <item>
   <title>Join the Bioconductor Community Advisory Board</title>
   <dc:creator>Kozo Nishida</dc:creator>
   <dc:creator>Matt Ritchie</dc:creator>
-  <link>https://bioconductor.github.io/biocblog/posts/2022-01-31-join-the-bioconductor-community-advisory-board/index.html</link>
+  <link>https://bioconductor.github.io/biocblog/posts/2022-01-31-join-the-bioconductor-community-advisory-board/</link>
   <description><![CDATA[ 
+
 
 
 
@@ -2480,15 +2611,16 @@ Note
  ]]></description>
   <category>BioC</category>
   <category>CAB</category>
-  <guid>https://bioconductor.github.io/biocblog/posts/2022-01-31-join-the-bioconductor-community-advisory-board/index.html</guid>
+  <guid>https://bioconductor.github.io/biocblog/posts/2022-01-31-join-the-bioconductor-community-advisory-board/</guid>
   <pubDate>Tue, 01 Feb 2022 00:00:00 GMT</pubDate>
   <media:content url="https://bioconductor.github.io/biocblog/posts/2022-01-31-join-the-bioconductor-community-advisory-board/MeetTheCabBioc2021.png" medium="image" type="image/png" height="83" width="144"/>
 </item>
 <item>
   <title>metaRbolomics hackathon to improve interoperability of metabolomics-related R packages</title>
   <dc:creator>Johannes Rainer</dc:creator>
-  <link>https://bioconductor.github.io/biocblog/posts/2022-01-18-metaRbolomics-2021/index.html</link>
+  <link>https://bioconductor.github.io/biocblog/posts/2022-01-18-metaRbolomics-2021/</link>
   <description><![CDATA[ 
+
 
 
 
@@ -2509,14 +2641,15 @@ Note
   <category>Mass Spectrometry</category>
   <category>Hackathon</category>
   <category>Open Science</category>
-  <guid>https://bioconductor.github.io/biocblog/posts/2022-01-18-metaRbolomics-2021/index.html</guid>
+  <guid>https://bioconductor.github.io/biocblog/posts/2022-01-18-metaRbolomics-2021/</guid>
   <pubDate>Tue, 18 Jan 2022 00:00:00 GMT</pubDate>
 </item>
 <item>
   <title>Celebrating 20 years of Bioconductor</title>
   <dc:creator>Kevin Rue-Albrecht</dc:creator>
-  <link>https://bioconductor.github.io/biocblog/posts/2022-01-14-20years/index.html</link>
+  <link>https://bioconductor.github.io/biocblog/posts/2022-01-14-20years/</link>
   <description><![CDATA[ 
+
 
 
 
@@ -2527,7 +2660,7 @@ Note
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="https://bioconductor.github.io/biocblog/posts/2022-01-14-20years/bioconductor-website-2002.png" class="img-fluid figure-img"></p>
-<figcaption class="figure-caption">The Bioconductor website in 2002.</figcaption>
+<figcaption>The Bioconductor website in 2002.</figcaption>
 </figure>
 </div>
 <p>OK, well, taking a brief look at the Wayback machine snapshot, let’s just take a second to acknowledge that at its inception (Bioconductor Release 1.0: May 2, 2002), the Bioconductor project included just 15 packages, broadly classified as:</p>
@@ -2551,7 +2684,7 @@ Note
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="https://bioconductor.github.io/biocblog/posts/2022-01-14-20years/bioconductor-website-2022.png" class="img-fluid figure-img"></p>
-<figcaption class="figure-caption">The Bioconductor website in 2022.</figcaption>
+<figcaption>The Bioconductor website in 2022.</figcaption>
 </figure>
 </div>
 <p>That collection of core-maintained and community-contributed packages has grown so large that there is now an entire hierarchy of terms to categorise those packages, called <a href="https://www.bioconductor.org/packages/release/BiocViews.html">BiocViews</a>. Check them out!</p>
@@ -2560,7 +2693,7 @@ Note
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="https://bioconductor.github.io/biocblog/posts/2022-01-14-20years/cover.png" class="img-fluid figure-img"></p>
-<figcaption class="figure-caption">Slides of photos celebrating 20 years of Bioconductor (link above).</figcaption>
+<figcaption>Slides of photos celebrating 20 years of Bioconductor (link above).</figcaption>
 </figure>
 </div>
 <section id="references" class="level1">
@@ -2574,55 +2707,8 @@ Note
 
  ]]></description>
   <category>events</category>
-  <guid>https://bioconductor.github.io/biocblog/posts/2022-01-14-20years/index.html</guid>
+  <guid>https://bioconductor.github.io/biocblog/posts/2022-01-14-20years/</guid>
   <pubDate>Fri, 14 Jan 2022 00:00:00 GMT</pubDate>
-</item>
-<item>
-  <title>BioC Asia 2021 は言語障壁の緩和に挑戦し、多様性を実現した</title>
-  <dc:creator>西田 孝三</dc:creator>
-  <link>https://bioconductor.github.io/biocblog/posts/2022-01-12-biocasia2021-ja/index.html</link>
-  <description><![CDATA[ 
-
-
-
-
-<p><a href="https://biocasia2021.bioconductor.org/organizers/">私達 BioC Asia 2021 運営委員会</a> は 2021 年 11 月 1 日から 4 日まで <a href="https://www.bioconductor.org/">Bioconductor</a> のアジア地域のカンファレンス <a href="https://biocasia2021.bioconductor.org/">BioC Asia 2021</a> を <a href="https://www.r-consortium.org/blog/2021/05/28/bioconductor-asia-membership-increasing-due-to-going-virtual">2020年と同様に</a> バーチャル開催しました。 この投稿では私達が BioC Asia 2021 で多様性の実現のために挑戦した言語障壁の克服の試みを紹介します。</p>
-<p>私達は下記の3つを用いて言語障壁の緩和を試みました。</p>
-<ol type="1">
-<li>Zoom の live transcription</li>
-<li>YouTube を用いた英語スピーチの日本語翻訳の字幕 (ただしライブ翻訳ではなく事前の人力での翻訳)</li>
-<li>複数の Zoom Meeting を用いた 3 言語のパラレルワークショップ (日本語、英語、Mandarin)</li>
-</ol>
-<section id="zoom-の-live-transcription" class="level2">
-<h2 class="anchored" data-anchor-id="zoom-の-live-transcription">Zoom の live transcription</h2>
-<p>Zoom には <a href="https://support.zoom.us/hc/en-us/articles/4409683389709-Enabling-or-disabling-closed-captioning-and-live-transcription-services">live transcription</a> と呼ばれるライブ文字起こし機能が備わっています。 私達は英語を用いた発表者にこの機能を適用し、英語の理解の障壁を下げることを試みました。</p>
-<p><img src="https://bioconductor.github.io/biocblog/posts/2022-01-12-biocasia2021-ja/Zoom_caption.png" class="img-fluid"></p>
-</section>
-<section id="youtube-を用いた英語スピーチの日本語翻訳の字幕" class="level2">
-<h2 class="anchored" data-anchor-id="youtube-を用いた英語スピーチの日本語翻訳の字幕">YouTube を用いた英語スピーチの日本語翻訳の字幕</h2>
-<p>2021 年 11 月 2 日 のキーノートスピーカー Lori Ann Shepherd の発表は、 英語スピーチの事前録画物に日本語翻訳字幕をつけた YouTube 動画を放送する形で行いました。</p>
-<p><img src="https://bioconductor.github.io/biocblog/posts/2022-01-12-biocasia2021-ja/Lori_Japanese_caption.png" class="img-fluid"></p>
-<p>この日本語翻訳字幕は https://www.youtube.com/watch?v=NMv27jgHRb4 を開き、下記画像のように YouTube で字幕設定を行っていただくことでご覧いただけます。</p>
-<p><img src="https://bioconductor.github.io/biocblog/posts/2022-01-12-biocasia2021-ja/YouTube_Japanese_caption.png" class="img-fluid"></p>
-</section>
-<section id="複数の-zoom-meeting-を用いた-3-言語のパラレルワークショップ-日本語英語mandarin" class="level2">
-<h2 class="anchored" data-anchor-id="複数の-zoom-meeting-を用いた-3-言語のパラレルワークショップ-日本語英語mandarin">複数の Zoom Meeting を用いた 3 言語のパラレルワークショップ (日本語、英語、Mandarin)</h2>
-<p>また <a href="https://www.r-consortium.org/blog/2021/05/28/bioconductor-asia-membership-increasing-due-to-going-virtual">2020年度から試みが始まった非英語言語でのパラレルワークショップの開催</a> をさらに推し進めました。 2020年度は英語とMandarinでワークショップが行われたのですが、 2021年度、私達はそれにさらに日本語を加えた 3 つの言語でのパラレルワークショップを開催しました。</p>
-<p><img src="https://bioconductor.github.io/biocblog/posts/2022-01-12-biocasia2021-ja/parallel_workshop.png" class="img-fluid"></p>
-</section>
-<section id="まとめ" class="level2">
-<h2 class="anchored" data-anchor-id="まとめ">まとめ</h2>
-<p>BioC Asia 2021 は BioC Asia 2020 の Mandarin 言語でのワークショップ開催から始まった多様性の実現をさらに推し進め、 「英語トークのライブ字幕の表示」「非ライブの非英語言語への翻訳字幕の表示」「より多様な言語でのワークショップ開催」 を新たに実現しました。 Bioconductor は多様性を尊重するコミュニティです。 このような多様性を実現する試みを歓迎します。</p>
-
-
-</section>
-
- ]]></description>
-  <category>Japanese</category>
-  <category>BioC</category>
-  <category>Diversity</category>
-  <guid>https://bioconductor.github.io/biocblog/posts/2022-01-12-biocasia2021-ja/index.html</guid>
-  <pubDate>Wed, 12 Jan 2022 00:00:00 GMT</pubDate>
 </item>
 </channel>
 </rss>

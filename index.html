@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.3.450">
+<meta name="generator" content="quarto-1.4.550">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -47,7 +47,13 @@ ul.task-list li input[type="checkbox"] {
   "collapse-after": 3,
   "panel-placement": "end",
   "type": "overlay",
-  "limit": 20,
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
   "language": {
     "search-no-results-text": "No results",
     "search-matching-documents-text": "matching documents",
@@ -56,6 +62,7 @@ ul.task-list li input[type="checkbox"] {
     "search-more-match-text": "more match in this document",
     "search-more-matches-text": "more matches in this document",
     "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
     "search-detached-cancel-button-title": "Cancel",
     "search-submit-button-title": "Submit",
     "search-label": "Search"
@@ -95,21 +102,45 @@ ul.task-list li input[type="checkbox"] {
   <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
 <link rel="stylesheet" href="styles.css">
-<link rel="alternate" type="application/rss+xml" title="Bioconductor community blog" href="index.xml"><meta property="og:title" content="Bioconductor community blog">
-<meta property="og:image" content="https://bioconductor.github.io/biocblog/posts/2023-11-17-twitter-exit/bioc-moving.png">
-<meta property="og:site-name" content="Bioconductor community blog">
-<meta property="og:image:height" content="788">
-<meta property="og:image:width" content="940">
+<link rel="alternate" type="application/rss+xml" title="Bioconductor community blog" href="index.xml" data-external="1"><meta property="og:title" content="Bioconductor community blog">
+<meta property="og:site_name" content="Bioconductor community blog">
 </head>
 
 <body class="nav-fixed">
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top">
-    <nav class="navbar navbar-expand-lg navbar-dark ">
+  <header id="quarto-header" class="headroom fixed-top quarto-banner">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
-      <div class="navbar-brand-container">
+      <div class="navbar-brand-container mx-auto">
     <a class="navbar-brand" href="./index.html">
     <span class="navbar-title">Bioconductor community blog</span>
     </a>
@@ -121,47 +152,47 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./about.html" rel="" target="">
- <span class="menu-text">About</span></a>
+    <a class="nav-link" href="./about.html"> 
+<span class="menu-text">About</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./contributing.html" rel="" target="">
- <span class="menu-text">Contributing</span></a>
+    <a class="nav-link" href="./contributing.html"> 
+<span class="menu-text">Contributing</span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="https://github.com/bioconductor/biocblog" rel="" target=""><i class="bi bi-github" role="img">
+    <a class="nav-link" href="https://github.com/bioconductor/biocblog"> <i class="bi bi-github" role="img">
 </i> 
- <span class="menu-text"></span></a>
+<span class="menu-text"></span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="https://genomic.social/@bioconductor" rel="" target=""><i class="bi bi-mastodon" role="img">
+    <a class="nav-link" href="https://genomic.social/@bioconductor"> <i class="bi bi-mastodon" role="img">
 </i> 
- <span class="menu-text"></span></a>
+<span class="menu-text"></span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="https://www.linkedin.com/company/bioconductor/" rel="" target=""><i class="bi bi-linkedin" role="img">
+    <a class="nav-link" href="https://www.linkedin.com/company/bioconductor/"> <i class="bi bi-linkedin" role="img">
 </i> 
- <span class="menu-text"></span></a>
+<span class="menu-text"></span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="https://www.youtube.com/user/bioconductor" rel="" target=""><i class="bi bi-youtube" role="img">
+    <a class="nav-link" href="https://www.youtube.com/user/bioconductor"> <i class="bi bi-youtube" role="img">
 </i> 
- <span class="menu-text"></span></a>
+<span class="menu-text"></span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="https://slack.bioconductor.org/" rel="" target=""><i class="bi bi-slack" role="img">
+    <a class="nav-link" href="https://slack.bioconductor.org/"> <i class="bi bi-slack" role="img">
 </i> 
- <span class="menu-text"></span></a>
+<span class="menu-text"></span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="./index.xml" rel="" target=""><i class="bi bi-rss" role="img">
+    <a class="nav-link" href="./index.xml"> <i class="bi bi-rss" role="img">
 </i> 
- <span class="menu-text"></span></a>
+<span class="menu-text"></span></a>
   </li>  
 </ul>
-            <div class="quarto-navbar-tools">
-</div>
           </div> <!-- /navcollapse -->
+          <div class="quarto-navbar-tools">
+</div>
       </div> <!-- /container-fluid -->
     </nav>
 </header>
@@ -174,7 +205,7 @@ ul.task-list li input[type="checkbox"] {
   </div>
     
   
-  <div class="quarto-title-meta">
+  <div class="quarto-title-meta column-page-left">
 
       
     
@@ -187,7 +218,7 @@ ul.task-list li input[type="checkbox"] {
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(21)</span></div><div class="category" data-category="ARM64">ARM64 <span class="quarto-category-count">(2)</span></div><div class="category" data-category="BioC">BioC <span class="quarto-category-count">(3)</span></div><div class="category" data-category="Bioconductor">Bioconductor <span class="quarto-category-count">(6)</span></div><div class="category" data-category="CAB">CAB <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Diversity">Diversity <span class="quarto-category-count">(2)</span></div><div class="category" data-category="GitHub Actions">GitHub Actions <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Hackathon">Hackathon <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Japanese">Japanese <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Mass Spectrometry">Mass Spectrometry <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Metabolomics">Metabolomics <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Open Science">Open Science <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Package">Package <span class="quarto-category-count">(1)</span></div><div class="category" data-category="education">education <span class="quarto-category-count">(4)</span></div><div class="category" data-category="events">events <span class="quarto-category-count">(4)</span></div><div class="category" data-category="open science">open science <span class="quarto-category-count">(2)</span></div><div class="category" data-category="tech-notes">tech-notes <span class="quarto-category-count">(2)</span></div></div></div>
+    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(22)</span></div><div class="category" data-category="ARM64">ARM64 <span class="quarto-category-count">(2)</span></div><div class="category" data-category="BioC">BioC <span class="quarto-category-count">(3)</span></div><div class="category" data-category="Bioconductor">Bioconductor <span class="quarto-category-count">(6)</span></div><div class="category" data-category="CAB">CAB <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Diversity">Diversity <span class="quarto-category-count">(2)</span></div><div class="category" data-category="GitHub Actions">GitHub Actions <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Hackathon">Hackathon <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Japanese">Japanese <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Mass Spectrometry">Mass Spectrometry <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Metabolomics">Metabolomics <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Open Science">Open Science <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Package">Package <span class="quarto-category-count">(1)</span></div><div class="category" data-category="education">education <span class="quarto-category-count">(4)</span></div><div class="category" data-category="events">events <span class="quarto-category-count">(4)</span></div><div class="category" data-category="open science">open science <span class="quarto-category-count">(3)</span></div><div class="category" data-category="tech-notes">tech-notes <span class="quarto-category-count">(2)</span></div></div></div>
 <!-- main -->
 <main class="content quarto-banner-title-block column-page-left" id="quarto-document-content">
 
@@ -198,34 +229,66 @@ ul.task-list li input[type="checkbox"] {
 
 
 
+
 <div class="quarto-listing quarto-listing-container-default" id="listing-listing">
 <div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="Bioconductor" data-listing-date-sort="1700179200000" data-listing-file-modified-sort="1703253893741" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2">
+<div class="quarto-post image-right" data-index="0" data-categories="open science" data-listing-date-sort="1706659200000" data-listing-file-modified-sort="1708525285578" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="10" data-listing-word-count-sort="1858">
 <div class="thumbnail">
-<p><a href="./posts/2023-11-17-twitter-exit/index.html"> <img src="./posts/2023-11-17-twitter-exit/bioc-moving.png" class="thumbnail-image"> </a></p>
+<p><a href="./posts/2024-01-31-OutreachyInternshipJourney/index.html" class="no-external"></a></p><a href="./posts/2024-01-31-OutreachyInternshipJourney/index.html" class="no-external">
+<p class="card-img-top"><img src="posts/2024-01-31-OutreachyInternshipJourney/outreachylogo.png"  class="thumbnail-image card-img"/></p>
+</a><p><a href="./posts/2024-01-31-OutreachyInternshipJourney/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./posts/2023-11-17-twitter-exit/index.html">
 <h3 class="no-anchor listing-title">
-Bioconductor is leaving Twitter/X
+<a href="./posts/2024-01-31-OutreachyInternshipJourney/index.html" class="no-external">Journey of Growth: Our Internship experience with Bioconductor</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./posts/2024-01-31-OutreachyInternshipJourney/index.html" class="no-external"></a>
+</div>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('open science'); return false;">
+open science
+</div>
+</div>
+<div class="listing-description">
+<a href="./posts/2024-01-31-OutreachyInternshipJourney/index.html" class="no-external">Bioconductor participated in the Outreachy Internship program for the December 2023 cohort. Our interns share their experience working on their various projects and Bioconductor in general. </a>
+</div>
+</div>
+<div class="metadata">
+<a href="./posts/2024-01-31-OutreachyInternshipJourney/index.html" class="no-external">
+<div class="listing-date">
+Jan 31, 2024
+</div>
+<div class="listing-author">
+Chioma Onyido, Afuape Esther, Peace Sandy
 </div>
 </a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="1" data-categories="Bioconductor" data-listing-date-sort="1700179200000" data-listing-file-modified-sort="1708525285578" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="211">
+<div class="thumbnail">
+<p><a href="./posts/2023-11-17-twitter-exit/index.html" class="no-external"></a></p><a href="./posts/2023-11-17-twitter-exit/index.html" class="no-external">
+<p><img src="./posts/2023-11-17-twitter-exit/bioc-moving.png" class="thumbnail-image"></p>
+</a><p><a href="./posts/2023-11-17-twitter-exit/index.html" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="./posts/2023-11-17-twitter-exit/index.html" class="no-external">Bioconductor is leaving Twitter/X</a>
+</h3>
+<div class="listing-subtitle">
+<a href="./posts/2023-11-17-twitter-exit/index.html" class="no-external"></a>
+</div>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('Bioconductor'); return false;">
 Bioconductor
 </div>
 </div>
-<a href="./posts/2023-11-17-twitter-exit/index.html">
 <div class="listing-description">
-<p>We’re transitioning away from Twitter/X in favor of platforms more aligned with our Code of Conduct.</p>
+<a href="./posts/2023-11-17-twitter-exit/index.html" class="no-external">We’re transitioning away from Twitter/X in favor of platforms more aligned with our Code of Conduct.</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./posts/2023-11-17-twitter-exit/index.html">
+<a href="./posts/2023-11-17-twitter-exit/index.html" class="no-external">
 <div class="listing-date">
 Nov 17, 2023
 </div>
@@ -235,19 +298,19 @@ Maria Doyle
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="1" data-categories="Bioconductor,events" data-listing-date-sort="1692230400000" data-listing-file-modified-sort="1703253893741" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5">
+<div class="quarto-post image-right" data-index="2" data-categories="Bioconductor,events" data-listing-date-sort="1692230400000" data-listing-file-modified-sort="1708525285574" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="933">
 <div class="thumbnail">
-<p><a href="./posts/2023-08-17-bioc2023-recap/index.html"> <img src="./posts/2023-08-17-bioc2023-recap/bioc2023-numbers.png" class="thumbnail-image"> </a></p>
+<p><a href="./posts/2023-08-17-bioc2023-recap/index.html" class="no-external"></a></p><a href="./posts/2023-08-17-bioc2023-recap/index.html" class="no-external">
+<p><img src="./posts/2023-08-17-bioc2023-recap/bioc2023-numbers.png" class="thumbnail-image"></p>
+</a><p><a href="./posts/2023-08-17-bioc2023-recap/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./posts/2023-08-17-bioc2023-recap/index.html">
 <h3 class="no-anchor listing-title">
-We had a blast at BioC2023! Here’s what happened.
+<a href="./posts/2023-08-17-bioc2023-recap/index.html" class="no-external">We had a blast at BioC2023! Here’s what happened.</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./posts/2023-08-17-bioc2023-recap/index.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('Bioconductor'); return false;">
 Bioconductor
@@ -256,14 +319,12 @@ Bioconductor
 events
 </div>
 </div>
-<a href="./posts/2023-08-17-bioc2023-recap/index.html">
 <div class="listing-description">
-BioC2023 kicked off at the Dana-Farber Cancer Institute in Boston, USA. It was opened by Vincent Carey, Professor of Medicine at Harvard and co-founder of the Bioconductor project. The Annual North America Bioconductor conference gave members of the community an opportunity…
+<a href="./posts/2023-08-17-bioc2023-recap/index.html" class="no-external">BioC2023 kicked off at the Dana-Farber Cancer Institute in Boston, USA. It was opened by Vincent Carey, Professor of Medicine at Harvard and co-founder of the Bioconductor…</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./posts/2023-08-17-bioc2023-recap/index.html">
+<a href="./posts/2023-08-17-bioc2023-recap/index.html" class="no-external">
 <div class="listing-date">
 Aug 17, 2023
 </div>
@@ -273,32 +334,30 @@ Anna Powell
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="2" data-categories="Bioconductor" data-listing-date-sort="1690848000000" data-listing-file-modified-sort="1703253893737" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3">
+<div class="quarto-post image-right" data-index="3" data-categories="Bioconductor" data-listing-date-sort="1690848000000" data-listing-file-modified-sort="1708525285574" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="519">
 <div class="thumbnail">
-<p><a href="./posts/2023-08-01-website-redesign-update/index.html"> <img src="./posts/2023-08-01-website-redesign-update/BC Website redesign - Project timeline.jpg" class="thumbnail-image"> </a></p>
+<p><a href="./posts/2023-08-01-website-redesign-update/index.html" class="no-external"></a></p><a href="./posts/2023-08-01-website-redesign-update/index.html" class="no-external">
+<p><img src="./posts/2023-08-01-website-redesign-update/BC Website redesign - Project timeline.jpg" class="thumbnail-image"></p>
+</a><p><a href="./posts/2023-08-01-website-redesign-update/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./posts/2023-08-01-website-redesign-update/index.html">
 <h3 class="no-anchor listing-title">
-Taking Bioconductor.org to the Next Level: Community, Collaboration and Progress
+<a href="./posts/2023-08-01-website-redesign-update/index.html" class="no-external">Taking Bioconductor.org to the Next Level: Community, Collaboration and Progress</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./posts/2023-08-01-website-redesign-update/index.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('Bioconductor'); return false;">
 Bioconductor
 </div>
 </div>
-<a href="./posts/2023-08-01-website-redesign-update/index.html">
 <div class="listing-description">
-<p>Discover the recent advancements in the Bioconductor.org website redesign project, including the survey’s user insights, UX audit, collaborative workshops, UX testing, and the build phase, all leading to an exciting sneak peek at BioC2023.</p>
+<a href="./posts/2023-08-01-website-redesign-update/index.html" class="no-external">Discover the recent advancements in the Bioconductor.org website redesign project, including the survey’s user insights, UX audit, collaborative workshops, UX testing, and the build phase, all leading to an exciting sneak peek at BioC2023. </a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./posts/2023-08-01-website-redesign-update/index.html">
+<a href="./posts/2023-08-01-website-redesign-update/index.html" class="no-external">
 <div class="listing-date">
 Aug 1, 2023
 </div>
@@ -308,32 +367,30 @@ Maria Doyle
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="3" data-categories="open science" data-listing-date-sort="1689292800000" data-listing-file-modified-sort="1703253893737" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="9">
+<div class="quarto-post image-right" data-index="4" data-categories="open science" data-listing-date-sort="1689292800000" data-listing-file-modified-sort="1708525285570" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="9" data-listing-word-count-sort="1656">
 <div class="thumbnail">
-<p><a href="./posts/2023-07-14-OutreachyInternshipExperience/index.html"> <p class="card-img-top"><img src="posts/2023-07-14-OutreachyInternshipExperience/outreachy_homepage.jpg"  class="thumbnail-image card-img"/></p> </a></p>
+<p><a href="./posts/2023-07-14-OutreachyInternshipExperience/index.html" class="no-external"></a></p><a href="./posts/2023-07-14-OutreachyInternshipExperience/index.html" class="no-external">
+<p class="card-img-top"><img src="posts/2023-07-14-OutreachyInternshipExperience/outreachy_homepage.jpg"  class="thumbnail-image card-img"/></p>
+</a><p><a href="./posts/2023-07-14-OutreachyInternshipExperience/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./posts/2023-07-14-OutreachyInternshipExperience/index.html">
 <h3 class="no-anchor listing-title">
-Our Journey as Outreachy Interns with Bioconductor
+<a href="./posts/2023-07-14-OutreachyInternshipExperience/index.html" class="no-external">Our Journey as Outreachy Interns with Bioconductor</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./posts/2023-07-14-OutreachyInternshipExperience/index.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('open science'); return false;">
 open science
 </div>
 </div>
-<a href="./posts/2023-07-14-OutreachyInternshipExperience/index.html">
 <div class="listing-description">
-<p>Bioconductor participated in the Outreachy Internship program for the May 2023 cohort. Join us as we share our enriching experience working on various projects at Bioconductor and delve into the world of open science.</p>
+<a href="./posts/2023-07-14-OutreachyInternshipExperience/index.html" class="no-external">Bioconductor participated in the Outreachy Internship program for the May 2023 cohort. Join us as we share our enriching experience working on various projects at Bioconductor and delve into the world of open science. </a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./posts/2023-07-14-OutreachyInternshipExperience/index.html">
+<a href="./posts/2023-07-14-OutreachyInternshipExperience/index.html" class="no-external">
 <div class="listing-date">
 Jul 14, 2023
 </div>
@@ -343,19 +400,19 @@ Sonali Kumari, Daena Rys, Atrayee Samanta
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="4" data-categories="tech-notes,GitHub Actions,ARM64" data-listing-date-sort="1689292800000" data-listing-file-modified-sort="1703253893737" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="13">
+<div class="quarto-post image-right" data-index="5" data-categories="tech-notes,GitHub Actions,ARM64" data-listing-date-sort="1689292800000" data-listing-file-modified-sort="1708525285570" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="13" data-listing-word-count-sort="2535">
 <div class="thumbnail">
-<p><a href="./posts/2023-07-14-linux-arm64-github-actions/index.html"> <p class="card-img-top"><img src="posts/2023-06-09-debug-linux-arm64-on-docker/bioconductor_logo_cmyk.png"  class="thumbnail-image card-img"/></p> </a></p>
+<p><a href="./posts/2023-07-14-linux-arm64-github-actions/index.html" class="no-external"></a></p><a href="./posts/2023-07-14-linux-arm64-github-actions/index.html" class="no-external">
+<p class="card-img-top"><img src="posts/2023-06-09-debug-linux-arm64-on-docker/bioconductor_logo_cmyk.png"  class="thumbnail-image card-img"/></p>
+</a><p><a href="./posts/2023-07-14-linux-arm64-github-actions/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./posts/2023-07-14-linux-arm64-github-actions/index.html">
 <h3 class="no-anchor listing-title">
-Testing Packages on Linux ARM64 with GitHub Actions
+<a href="./posts/2023-07-14-linux-arm64-github-actions/index.html" class="no-external">Testing Packages on Linux ARM64 with GitHub Actions</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./posts/2023-07-14-linux-arm64-github-actions/index.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('tech-notes'); return false;">
 tech-notes
@@ -367,14 +424,12 @@ GitHub Actions
 ARM64
 </div>
 </div>
-<a href="./posts/2023-07-14-linux-arm64-github-actions/index.html">
 <div class="listing-description">
-<p>How to use GitHub Actions to systematically build and test a Bioconductor package on Linux ARM64 architecture.</p>
+<a href="./posts/2023-07-14-linux-arm64-github-actions/index.html" class="no-external">How to use GitHub Actions to systematically build and test a Bioconductor package on Linux ARM64 architecture. </a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./posts/2023-07-14-linux-arm64-github-actions/index.html">
+<a href="./posts/2023-07-14-linux-arm64-github-actions/index.html" class="no-external">
 <div class="listing-date">
 Jul 14, 2023
 </div>
@@ -384,32 +439,30 @@ Mike L. Smith
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="5" data-categories="Bioconductor" data-listing-date-sort="1687392000000" data-listing-file-modified-sort="1703253893733" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2">
+<div class="quarto-post image-right" data-index="6" data-categories="Bioconductor" data-listing-date-sort="1687392000000" data-listing-file-modified-sort="1708525285566" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="355">
 <div class="thumbnail">
-<p><a href="./posts/2023-06-22-website-redesign/index.html"> <img src="./posts/2023-06-22-website-redesign/BC Website redesign - Project timeline.jpg" class="thumbnail-image"> </a></p>
+<p><a href="./posts/2023-06-22-website-redesign/index.html" class="no-external"></a></p><a href="./posts/2023-06-22-website-redesign/index.html" class="no-external">
+<p><img src="./posts/2023-06-22-website-redesign/BC Website redesign - Project timeline.jpg" class="thumbnail-image"></p>
+</a><p><a href="./posts/2023-06-22-website-redesign/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./posts/2023-06-22-website-redesign/index.html">
 <h3 class="no-anchor listing-title">
-Reimagining Bioconductor.org: The Path to Our Website Redesign
+<a href="./posts/2023-06-22-website-redesign/index.html" class="no-external">Reimagining Bioconductor.org: The Path to Our Website Redesign</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./posts/2023-06-22-website-redesign/index.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('Bioconductor'); return false;">
 Bioconductor
 </div>
 </div>
-<a href="./posts/2023-06-22-website-redesign/index.html">
 <div class="listing-description">
-<p>Discover the journey of Bioconductor’s website redesign project. Learn about the process, from initial planning to collaboration with NearForm as we shape the future of Bioconductor.org.</p>
+<a href="./posts/2023-06-22-website-redesign/index.html" class="no-external">Discover the journey of Bioconductor’s website redesign project. Learn about the process, from initial planning to collaboration with NearForm as we shape the future of Bioconductor.org. </a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./posts/2023-06-22-website-redesign/index.html">
+<a href="./posts/2023-06-22-website-redesign/index.html" class="no-external">
 <div class="listing-date">
 Jun 22, 2023
 </div>
@@ -419,54 +472,19 @@ Maria Doyle
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="6" data-categories="Bioconductor" data-listing-date-sort="1686873600000" data-listing-file-modified-sort="1703253893729" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4">
+<div class="quarto-post image-right" data-index="7" data-categories="events,education" data-listing-date-sort="1686873600000" data-listing-file-modified-sort="1708525285566" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="435">
 <div class="thumbnail">
-<p><a href="./posts/2023-06-16-ELIXIR-allhands-meeting/index.html"> <img src="./posts/2023-06-16-ELIXIR-allhands-meeting/elixir-allhands-attendees.jpg" class="thumbnail-image"> </a></p>
+<p><a href="./posts/2023-06-16-smorgasbord-recap/index.html" class="no-external"></a></p><a href="./posts/2023-06-16-smorgasbord-recap/index.html" class="no-external">
+<p><img src="./posts/2023-06-16-smorgasbord-recap/bioconductor-galaxy.png" class="thumbnail-image"></p>
+</a><p><a href="./posts/2023-06-16-smorgasbord-recap/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./posts/2023-06-16-ELIXIR-allhands-meeting/index.html">
 <h3 class="no-anchor listing-title">
-ELIXIR All Hands Meeting 2023
+<a href="./posts/2023-06-16-smorgasbord-recap/index.html" class="no-external">Bioconductor’s Participation in Galaxy Smorgasbord 2023: A Recap</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./posts/2023-06-16-smorgasbord-recap/index.html" class="no-external"></a>
 </div>
-</a>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('Bioconductor'); return false;">
-Bioconductor
-</div>
-</div>
-<a href="./posts/2023-06-16-ELIXIR-allhands-meeting/index.html">
-<div class="listing-description">
-<p>Bioconductor’s participation in ELIXIR All Hands Meeting in Dublin, Ireland, June 2023.</p>
-</div>
-</a>
-</div>
-<div class="metadata">
-<a href="./posts/2023-06-16-ELIXIR-allhands-meeting/index.html">
-<div class="listing-date">
-Jun 16, 2023
-</div>
-<div class="listing-author">
-Anna Powell
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="7" data-categories="events,education" data-listing-date-sort="1686873600000" data-listing-file-modified-sort="1703253893733" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3">
-<div class="thumbnail">
-<p><a href="./posts/2023-06-16-smorgasbord-recap/index.html"> <img src="./posts/2023-06-16-smorgasbord-recap/bioconductor-galaxy.png" class="thumbnail-image"> </a></p>
-</div>
-<div class="body">
-<a href="./posts/2023-06-16-smorgasbord-recap/index.html">
-<h3 class="no-anchor listing-title">
-Bioconductor’s Participation in Galaxy Smorgasbord 2023: A Recap
-</h3>
-<div class="listing-subtitle">
-
-</div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('events'); return false;">
 events
@@ -475,14 +493,12 @@ events
 education
 </div>
 </div>
-<a href="./posts/2023-06-16-smorgasbord-recap/index.html">
 <div class="listing-description">
-<p>Bioconductor made its first appearance at the Galaxy Smorgasbord this year. This post provides a summary of our successful participation.</p>
+<a href="./posts/2023-06-16-smorgasbord-recap/index.html" class="no-external">Bioconductor made its first appearance at the Galaxy Smorgasbord this year. This post provides a summary of our successful participation. </a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./posts/2023-06-16-smorgasbord-recap/index.html">
+<a href="./posts/2023-06-16-smorgasbord-recap/index.html" class="no-external">
 <div class="listing-date">
 Jun 16, 2023
 </div>
@@ -492,19 +508,52 @@ Maria Doyle, Alex Mahmoud
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="8" data-categories="tech-notes,ARM64" data-listing-date-sort="1686268800000" data-listing-file-modified-sort="1703253893713" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2">
+<div class="quarto-post image-right" data-index="8" data-categories="Bioconductor" data-listing-date-sort="1686873600000" data-listing-file-modified-sort="1708525285562" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="686">
 <div class="thumbnail">
-<p><a href="./posts/2023-06-09-debug-linux-arm64-on-docker/index.html"> <p class="card-img-top"><img src="posts/2023-06-09-debug-linux-arm64-on-docker/bioconductor_logo_cmyk.png"  class="thumbnail-image card-img"/></p> </a></p>
+<p><a href="./posts/2023-06-16-ELIXIR-allhands-meeting/index.html" class="no-external"></a></p><a href="./posts/2023-06-16-ELIXIR-allhands-meeting/index.html" class="no-external">
+<p><img src="./posts/2023-06-16-ELIXIR-allhands-meeting/elixir-allhands-attendees.jpg" class="thumbnail-image"></p>
+</a><p><a href="./posts/2023-06-16-ELIXIR-allhands-meeting/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./posts/2023-06-09-debug-linux-arm64-on-docker/index.html">
 <h3 class="no-anchor listing-title">
-Emulated build and test of Bioconductor packages for Linux ARM64
+<a href="./posts/2023-06-16-ELIXIR-allhands-meeting/index.html" class="no-external">ELIXIR All Hands Meeting 2023</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./posts/2023-06-16-ELIXIR-allhands-meeting/index.html" class="no-external"></a>
+</div>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('Bioconductor'); return false;">
+Bioconductor
+</div>
+</div>
+<div class="listing-description">
+<a href="./posts/2023-06-16-ELIXIR-allhands-meeting/index.html" class="no-external">Bioconductor’s participation in ELIXIR All Hands Meeting in Dublin, Ireland, June 2023.</a>
+</div>
+</div>
+<div class="metadata">
+<a href="./posts/2023-06-16-ELIXIR-allhands-meeting/index.html" class="no-external">
+<div class="listing-date">
+Jun 16, 2023
+</div>
+<div class="listing-author">
+Anna Powell
 </div>
 </a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="9" data-categories="tech-notes,ARM64" data-listing-date-sort="1686268800000" data-listing-file-modified-sort="1708525285546" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="398">
+<div class="thumbnail">
+<p><a href="./posts/2023-06-09-debug-linux-arm64-on-docker/index.html" class="no-external"></a></p><a href="./posts/2023-06-09-debug-linux-arm64-on-docker/index.html" class="no-external">
+<p class="card-img-top"><img src="posts/2023-06-09-debug-linux-arm64-on-docker/bioconductor_logo_cmyk.png"  class="thumbnail-image card-img"/></p>
+</a><p><a href="./posts/2023-06-09-debug-linux-arm64-on-docker/index.html" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="./posts/2023-06-09-debug-linux-arm64-on-docker/index.html" class="no-external">Emulated build and test of Bioconductor packages for Linux ARM64</a>
+</h3>
+<div class="listing-subtitle">
+<a href="./posts/2023-06-09-debug-linux-arm64-on-docker/index.html" class="no-external"></a>
+</div>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('tech-notes'); return false;">
 tech-notes
@@ -513,14 +562,12 @@ tech-notes
 ARM64
 </div>
 </div>
-<a href="./posts/2023-06-09-debug-linux-arm64-on-docker/index.html">
 <div class="listing-description">
-<p>Build and test for Linux ARM64 with Docker on x86_64 host</p>
+<a href="./posts/2023-06-09-debug-linux-arm64-on-docker/index.html" class="no-external">Build and test for Linux ARM64 with Docker on x86_64 host </a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./posts/2023-06-09-debug-linux-arm64-on-docker/index.html">
+<a href="./posts/2023-06-09-debug-linux-arm64-on-docker/index.html" class="no-external">
 <div class="listing-date">
 Jun 9, 2023
 </div>
@@ -530,32 +577,30 @@ Martin Grigorov
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="9" data-categories="Bioconductor" data-listing-date-sort="1677628800000" data-listing-file-modified-sort="1703253893713" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2">
+<div class="quarto-post image-right" data-index="10" data-categories="Bioconductor" data-listing-date-sort="1677628800000" data-listing-file-modified-sort="1708525285546" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="347">
 <div class="thumbnail">
-<p><a href="./posts/2023-03-01-transition-to-devel/index.html"> <p class="card-img-top"><img src="posts/2023-03-01-transition-to-devel/default_branch.png"  class="thumbnail-image card-img"/></p> </a></p>
+<p><a href="./posts/2023-03-01-transition-to-devel/index.html" class="no-external"></a></p><a href="./posts/2023-03-01-transition-to-devel/index.html" class="no-external">
+<p class="card-img-top"><img src="posts/2023-03-01-transition-to-devel/default_branch.png"  class="thumbnail-image card-img"/></p>
+</a><p><a href="./posts/2023-03-01-transition-to-devel/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./posts/2023-03-01-transition-to-devel/index.html">
 <h3 class="no-anchor listing-title">
-Renaming the Default Branch to Devel
+<a href="./posts/2023-03-01-transition-to-devel/index.html" class="no-external">Renaming the Default Branch to Devel</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./posts/2023-03-01-transition-to-devel/index.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('Bioconductor'); return false;">
 Bioconductor
 </div>
 </div>
-<a href="./posts/2023-03-01-transition-to-devel/index.html">
 <div class="listing-description">
-<p>During the 3.17 devel cycle, Bioconductor will rename the default branch devel.</p>
+<a href="./posts/2023-03-01-transition-to-devel/index.html" class="no-external">During the 3.17 devel cycle, Bioconductor will rename the default branch devel. </a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./posts/2023-03-01-transition-to-devel/index.html">
+<a href="./posts/2023-03-01-transition-to-devel/index.html" class="no-external">
 <div class="listing-date">
 Mar 1, 2023
 </div>
@@ -565,32 +610,30 @@ J Wokaty
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="10" data-categories="education" data-listing-date-sort="1677196800000" data-listing-file-modified-sort="1703253893681" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="9">
+<div class="quarto-post image-right" data-index="11" data-categories="education" data-listing-date-sort="1677196800000" data-listing-file-modified-sort="1708525285510" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="9" data-listing-word-count-sort="1724">
 <div class="thumbnail">
-<p><a href="./posts/2023-02-24-carpentries-update/index.html"> <img src="./posts/2023-02-24-carpentries-update/map.png" class="thumbnail-image"> </a></p>
+<p><a href="./posts/2023-02-24-carpentries-update/index.html" class="no-external"></a></p><a href="./posts/2023-02-24-carpentries-update/index.html" class="no-external">
+<p><img src="./posts/2023-02-24-carpentries-update/map.png" class="thumbnail-image"></p>
+</a><p><a href="./posts/2023-02-24-carpentries-update/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./posts/2023-02-24-carpentries-update/index.html">
 <h3 class="no-anchor listing-title">
-Bioconductor Carpentries instructors Year 1
+<a href="./posts/2023-02-24-carpentries-update/index.html" class="no-external">Bioconductor Carpentries instructors Year 1</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./posts/2023-02-24-carpentries-update/index.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('education'); return false;">
 education
 </div>
 </div>
-<a href="./posts/2023-02-24-carpentries-update/index.html">
 <div class="listing-description">
-<p>An update on the Bioconductor Carpentries global training program - applicants selected for Year 1</p>
+<a href="./posts/2023-02-24-carpentries-update/index.html" class="no-external">An update on the Bioconductor Carpentries global training program - applicants selected for Year 1 </a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./posts/2023-02-24-carpentries-update/index.html">
+<a href="./posts/2023-02-24-carpentries-update/index.html" class="no-external">
 <div class="listing-date">
 Feb 24, 2023
 </div>
@@ -600,32 +643,30 @@ Maria Doyle
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="11" data-categories="Package" data-listing-date-sort="1677110400000" data-listing-file-modified-sort="1703253893681" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5">
+<div class="quarto-post image-right" data-index="12" data-categories="Package" data-listing-date-sort="1677110400000" data-listing-file-modified-sort="1708525285510" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="895">
 <div class="thumbnail">
-<p><a href="./posts/2023-02-23-CuratedAtlasQueryR/index.html"> <img src="./posts/2023-02-23-CuratedAtlasQueryR/overview.png" class="thumbnail-image"> </a></p>
+<p><a href="./posts/2023-02-23-CuratedAtlasQueryR/index.html" class="no-external"></a></p><a href="./posts/2023-02-23-CuratedAtlasQueryR/index.html" class="no-external">
+<p><img src="./posts/2023-02-23-CuratedAtlasQueryR/overview.png" class="thumbnail-image"></p>
+</a><p><a href="./posts/2023-02-23-CuratedAtlasQueryR/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./posts/2023-02-23-CuratedAtlasQueryR/index.html">
 <h3 class="no-anchor listing-title">
-Introducing CuratedAtlasQueryR package
+<a href="./posts/2023-02-23-CuratedAtlasQueryR/index.html" class="no-external">Introducing CuratedAtlasQueryR package</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./posts/2023-02-23-CuratedAtlasQueryR/index.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('Package'); return false;">
 Package
 </div>
 </div>
-<a href="./posts/2023-02-23-CuratedAtlasQueryR/index.html">
 <div class="listing-description">
-<p>CuratedAtlasQueryR is a new package that enables easy programmatic exploration of CELLxGENE single-cell human cell atlas data.</p>
+<a href="./posts/2023-02-23-CuratedAtlasQueryR/index.html" class="no-external">CuratedAtlasQueryR is a new package that enables easy programmatic exploration of CELLxGENE single-cell human cell atlas data. </a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./posts/2023-02-23-CuratedAtlasQueryR/index.html">
+<a href="./posts/2023-02-23-CuratedAtlasQueryR/index.html" class="no-external">
 <div class="listing-date">
 Feb 23, 2023
 </div>
@@ -635,32 +676,30 @@ Maria Doyle, Stefano Mangiola
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="12" data-categories="open science" data-listing-date-sort="1674345600000" data-listing-file-modified-sort="1703253893677" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="9">
+<div class="quarto-post image-right" data-index="13" data-categories="open science" data-listing-date-sort="1674345600000" data-listing-file-modified-sort="1708525285506" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="9" data-listing-word-count-sort="1608">
 <div class="thumbnail">
-<p><a href="./posts/2023-01-22-OutreachyInternship/index.html"> <p class="card-img-top"><img src="posts/2023-01-22-OutreachyInternship/outreachy_homepage.png"  class="thumbnail-image card-img"/></p> </a></p>
+<p><a href="./posts/2023-01-22-OutreachyInternship/index.html" class="no-external"></a></p><a href="./posts/2023-01-22-OutreachyInternship/index.html" class="no-external">
+<p class="card-img-top"><img src="posts/2023-01-22-OutreachyInternship/outreachy_homepage.png"  class="thumbnail-image card-img"/></p>
+</a><p><a href="./posts/2023-01-22-OutreachyInternship/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./posts/2023-01-22-OutreachyInternship/index.html">
 <h3 class="no-anchor listing-title">
-Our experience as Outreachy interns with Bioconductor
+<a href="./posts/2023-01-22-OutreachyInternship/index.html" class="no-external">Our experience as Outreachy interns with Bioconductor</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./posts/2023-01-22-OutreachyInternship/index.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('open science'); return false;">
 open science
 </div>
 </div>
-<a href="./posts/2023-01-22-OutreachyInternship/index.html">
 <div class="listing-description">
-<p>Bioconductor participated in the Outreachy Internship program for the December 2022 cohort. Our interns share their experience working on their various projects and bioconductor in general.</p>
+<a href="./posts/2023-01-22-OutreachyInternship/index.html" class="no-external">Bioconductor participated in the Outreachy Internship program for the December 2022 cohort. Our interns share their experience working on their various projects and bioconductor in general. </a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./posts/2023-01-22-OutreachyInternship/index.html">
+<a href="./posts/2023-01-22-OutreachyInternship/index.html" class="no-external">
 <div class="listing-date">
 Jan 22, 2023
 </div>
@@ -670,32 +709,30 @@ Beryl Kanali, Atuhurira Kirabo
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="13" data-categories="events" data-listing-date-sort="1674172800000" data-listing-file-modified-sort="1703253893673" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2">
+<div class="quarto-post image-right" data-index="14" data-categories="events" data-listing-date-sort="1674172800000" data-listing-file-modified-sort="1708525285506" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="357">
 <div class="thumbnail">
-<p><a href="./posts/2023-01-20-hacktoberfest/index.html"> <p class="card-img-top"><img src="posts/2023-01-20-hacktoberfest/hacktoberfest_website.png"  class="thumbnail-image card-img"/></p> </a></p>
+<p><a href="./posts/2023-01-20-hacktoberfest/index.html" class="no-external"></a></p><a href="./posts/2023-01-20-hacktoberfest/index.html" class="no-external">
+<p class="card-img-top"><img src="posts/2023-01-20-hacktoberfest/hacktoberfest_website.png"  class="thumbnail-image card-img"/></p>
+</a><p><a href="./posts/2023-01-20-hacktoberfest/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./posts/2023-01-20-hacktoberfest/index.html">
 <h3 class="no-anchor listing-title">
-Bioconductor Hacktoberfest 2022 review and looking ahead to 2023
+<a href="./posts/2023-01-20-hacktoberfest/index.html" class="no-external">Bioconductor Hacktoberfest 2022 review and looking ahead to 2023</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./posts/2023-01-20-hacktoberfest/index.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('events'); return false;">
 events
 </div>
 </div>
-<a href="./posts/2023-01-20-hacktoberfest/index.html">
 <div class="listing-description">
-<p>Last October, Bioconductor joined Hacktoberfest and got great community contributions there. Here, we describe its success and notify the community we plan to participate in 2023.</p>
+<a href="./posts/2023-01-20-hacktoberfest/index.html" class="no-external">Last October, Bioconductor joined Hacktoberfest and got great community contributions there. Here, we describe its success and notify the community we plan to participate in 2023. </a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./posts/2023-01-20-hacktoberfest/index.html">
+<a href="./posts/2023-01-20-hacktoberfest/index.html" class="no-external">
 <div class="listing-date">
 Jan 20, 2023
 </div>
@@ -705,32 +742,30 @@ Maria Doyle, Kozo Nishida, Kevin Rue-Albrecht
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="14" data-categories="education" data-listing-date-sort="1666396800000" data-listing-file-modified-sort="1703253893669" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="7">
+<div class="quarto-post image-right" data-index="15" data-categories="education" data-listing-date-sort="1666396800000" data-listing-file-modified-sort="1708525285498" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="7" data-listing-word-count-sort="1279">
 <div class="thumbnail">
-<p><a href="./posts/2022-10-22-awesome-lists/index.html"> <img src="./posts/2022-10-22-awesome-lists/awesome.png" class="thumbnail-image"> </a></p>
+<p><a href="./posts/2022-10-22-awesome-lists/index.html" class="no-external"></a></p><a href="./posts/2022-10-22-awesome-lists/index.html" class="no-external">
+<p><img src="./posts/2022-10-22-awesome-lists/awesome.png" class="thumbnail-image"></p>
+</a><p><a href="./posts/2022-10-22-awesome-lists/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./posts/2022-10-22-awesome-lists/index.html">
 <h3 class="no-anchor listing-title">
-Recommended Awesome Lists for Bioconductor Community: Oct 2022 Edition
+<a href="./posts/2022-10-22-awesome-lists/index.html" class="no-external">Recommended Awesome Lists for Bioconductor Community: Oct 2022 Edition</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./posts/2022-10-22-awesome-lists/index.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('education'); return false;">
 education
 </div>
 </div>
-<a href="./posts/2022-10-22-awesome-lists/index.html">
 <div class="listing-description">
-<p>This blog post consolidates web links to different Awesome Lists that may be useful to those just starting up in bioinformatics and those experienced in the field.</p>
+<a href="./posts/2022-10-22-awesome-lists/index.html" class="no-external">This blog post consolidates web links to different Awesome Lists that may be useful to those just starting up in bioinformatics and those experienced in the field. </a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./posts/2022-10-22-awesome-lists/index.html">
+<a href="./posts/2022-10-22-awesome-lists/index.html" class="no-external">
 <div class="listing-date">
 Oct 22, 2022
 </div>
@@ -740,32 +775,30 @@ Jeremy Selva
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="15" data-categories="education" data-listing-date-sort="1657584000000" data-listing-file-modified-sort="1703253893669" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2">
+<div class="quarto-post image-right" data-index="16" data-categories="education" data-listing-date-sort="1657584000000" data-listing-file-modified-sort="1708525285498" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="292">
 <div class="thumbnail">
-<p><a href="./posts/2022-07-12-carpentries-membership/index.html"> <div class="listing-item-img-placeholder card-img-top" >&nbsp;</div> </a></p>
+<p><a href="./posts/2022-07-12-carpentries-membership/index.html" class="no-external"></a></p><a href="./posts/2022-07-12-carpentries-membership/index.html" class="no-external">
+<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+</a><p><a href="./posts/2022-07-12-carpentries-membership/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./posts/2022-07-12-carpentries-membership/index.html">
 <h3 class="no-anchor listing-title">
-Bioconductor becomes a Carpentries member organization
+<a href="./posts/2022-07-12-carpentries-membership/index.html" class="no-external">Bioconductor becomes a Carpentries member organization</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./posts/2022-07-12-carpentries-membership/index.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('education'); return false;">
 education
 </div>
 </div>
-<a href="./posts/2022-07-12-carpentries-membership/index.html">
 <div class="listing-description">
-<p>Starting from August 1, 2022, Bioconductor will be a member of The Carpentries. Among other things, the membership enables us to allow 15 individuals to follow the Carpentries’ Instructor Training program and become certified Carpentries Instructors.</p>
+<a href="./posts/2022-07-12-carpentries-membership/index.html" class="no-external">Starting from August 1, 2022, Bioconductor will be a member of The Carpentries. Among other things, the membership enables us to allow 15 individuals to follow the Carpentries’ Instructor Training program and become certified Carpentries Instructors. </a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./posts/2022-07-12-carpentries-membership/index.html">
+<a href="./posts/2022-07-12-carpentries-membership/index.html" class="no-external">
 <div class="listing-date">
 Jul 12, 2022
 </div>
@@ -775,19 +808,19 @@ Charlotte Soneson, Laurent Gatto, Toby Hodges, Jenny Drnevich, Robert Castelo, S
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="16" data-categories="BioC,CAB" data-listing-date-sort="1643673600000" data-listing-file-modified-sort="1703253893665" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
+<div class="quarto-post image-right" data-index="17" data-categories="BioC,CAB" data-listing-date-sort="1643673600000" data-listing-file-modified-sort="1708525285498" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="162">
 <div class="thumbnail">
-<p><a href="./posts/2022-01-31-join-the-bioconductor-community-advisory-board/index.html"> <img src="./posts/2022-01-31-join-the-bioconductor-community-advisory-board/MeetTheCabBioc2021.png" class="thumbnail-image"> </a></p>
+<p><a href="./posts/2022-01-31-join-the-bioconductor-community-advisory-board/index.html" class="no-external"></a></p><a href="./posts/2022-01-31-join-the-bioconductor-community-advisory-board/index.html" class="no-external">
+<p><img src="./posts/2022-01-31-join-the-bioconductor-community-advisory-board/MeetTheCabBioc2021.png" class="thumbnail-image"></p>
+</a><p><a href="./posts/2022-01-31-join-the-bioconductor-community-advisory-board/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./posts/2022-01-31-join-the-bioconductor-community-advisory-board/index.html">
 <h3 class="no-anchor listing-title">
-Join the Bioconductor Community Advisory Board
+<a href="./posts/2022-01-31-join-the-bioconductor-community-advisory-board/index.html" class="no-external">Join the Bioconductor Community Advisory Board</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./posts/2022-01-31-join-the-bioconductor-community-advisory-board/index.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('BioC'); return false;">
 BioC
@@ -796,14 +829,12 @@ BioC
 CAB
 </div>
 </div>
-<a href="./posts/2022-01-31-join-the-bioconductor-community-advisory-board/index.html">
 <div class="listing-description">
-<p>Each year the Bioconductor Community Advisory Board (CAB) puts out a public call for new board members. This post tells you more about what the CAB does and how you can apply to become a member.</p>
+<a href="./posts/2022-01-31-join-the-bioconductor-community-advisory-board/index.html" class="no-external">Each year the Bioconductor Community Advisory Board (CAB) puts out a public call for new board members. This post tells you more about what the CAB does and how you can apply to become a member. </a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./posts/2022-01-31-join-the-bioconductor-community-advisory-board/index.html">
+<a href="./posts/2022-01-31-join-the-bioconductor-community-advisory-board/index.html" class="no-external">
 <div class="listing-date">
 Feb 1, 2022
 </div>
@@ -813,19 +844,19 @@ Kozo Nishida, Matt Ritchie
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="17" data-categories="Metabolomics,Mass Spectrometry,Hackathon,Open Science" data-listing-date-sort="1642464000000" data-listing-file-modified-sort="1703253893665" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
+<div class="quarto-post image-right" data-index="18" data-categories="Metabolomics,Mass Spectrometry,Hackathon,Open Science" data-listing-date-sort="1642464000000" data-listing-file-modified-sort="1708525285494" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="182">
 <div class="thumbnail">
-<p><a href="./posts/2022-01-18-metaRbolomics-2021/index.html"> <p class="card-img-top"><img src="posts/2022-01-18-metaRbolomics-2021/MLlambrich.jpg"  class="thumbnail-image card-img"/></p> </a></p>
+<p><a href="./posts/2022-01-18-metaRbolomics-2021/index.html" class="no-external"></a></p><a href="./posts/2022-01-18-metaRbolomics-2021/index.html" class="no-external">
+<p class="card-img-top"><img src="posts/2022-01-18-metaRbolomics-2021/MLlambrich.jpg"  class="thumbnail-image card-img"/></p>
+</a><p><a href="./posts/2022-01-18-metaRbolomics-2021/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./posts/2022-01-18-metaRbolomics-2021/index.html">
 <h3 class="no-anchor listing-title">
-metaRbolomics hackathon to improve interoperability of metabolomics-related R packages
+<a href="./posts/2022-01-18-metaRbolomics-2021/index.html" class="no-external">metaRbolomics hackathon to improve interoperability of metabolomics-related R packages</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./posts/2022-01-18-metaRbolomics-2021/index.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('Metabolomics'); return false;">
 Metabolomics
@@ -840,14 +871,12 @@ Hackathon
 Open Science
 </div>
 </div>
-<a href="./posts/2022-01-18-metaRbolomics-2021/index.html">
 <div class="listing-description">
-<p>The 3rd metaRbolomics hackathon took place as a in-person workshop in Wittenberg (Germany) in November 2021. The aim was to improve interoperability of metabolomics/mass spectrometry-related R packages, combine development efforts and identify gaps and needs in current available functionality. It was a fun event with a lot of discussions and coding as well as socializing and networking.</p>
+<a href="./posts/2022-01-18-metaRbolomics-2021/index.html" class="no-external">The 3rd metaRbolomics hackathon took place as a in-person workshop in Wittenberg (Germany) in November 2021. The aim was to improve interoperability of metabolomics/mass spectrometry-related R packages, combine development efforts and identify gaps and needs in current available functionality. It was a fun event with a lot of discussions and coding as well as socializing and networking. </a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./posts/2022-01-18-metaRbolomics-2021/index.html">
+<a href="./posts/2022-01-18-metaRbolomics-2021/index.html" class="no-external">
 <div class="listing-date">
 Jan 18, 2022
 </div>
@@ -857,32 +886,30 @@ Johannes Rainer
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="18" data-categories="events" data-listing-date-sort="1642118400000" data-listing-file-modified-sort="1703253893665" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3">
+<div class="quarto-post image-right" data-index="19" data-categories="events" data-listing-date-sort="1642118400000" data-listing-file-modified-sort="1708525285494" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="514">
 <div class="thumbnail">
-<p><a href="./posts/2022-01-14-20years/index.html"> <p class="card-img-top"><img src="posts/2022-01-14-20years/cover.png"  class="thumbnail-image card-img"/></p> </a></p>
+<p><a href="./posts/2022-01-14-20years/index.html" class="no-external"></a></p><a href="./posts/2022-01-14-20years/index.html" class="no-external">
+<p class="card-img-top"><img src="posts/2022-01-14-20years/cover.png"  class="thumbnail-image card-img"/></p>
+</a><p><a href="./posts/2022-01-14-20years/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./posts/2022-01-14-20years/index.html">
 <h3 class="no-anchor listing-title">
-Celebrating 20 years of Bioconductor
+<a href="./posts/2022-01-14-20years/index.html" class="no-external">Celebrating 20 years of Bioconductor</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./posts/2022-01-14-20years/index.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('events'); return false;">
 events
 </div>
 </div>
-<a href="./posts/2022-01-14-20years/index.html">
 <div class="listing-description">
-<p>The Bioconductor project started in 2001 and, during the Bioconductor conference 2021, celebrated 20 years of collaborative work for the development of open source and open development software.”.</p>
+<a href="./posts/2022-01-14-20years/index.html" class="no-external">The Bioconductor project started in 2001 and, during the Bioconductor conference 2021, celebrated 20 years of collaborative work for the development of open source and open development software.”. </a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./posts/2022-01-14-20years/index.html">
+<a href="./posts/2022-01-14-20years/index.html" class="no-external">
 <div class="listing-date">
 Jan 14, 2022
 </div>
@@ -892,19 +919,19 @@ Kevin Rue-Albrecht
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="19" data-categories="Japanese,BioC,Diversity" data-listing-date-sort="1641945600000" data-listing-file-modified-sort="1703253893653" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
+<div class="quarto-post image-right" data-index="20" data-categories="Japanese,BioC,Diversity" data-listing-date-sort="1641945600000" data-listing-file-modified-sort="1708525285482" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="76">
 <div class="thumbnail">
-<p><a href="./posts/2022-01-12-biocasia2021-ja/index.html"> <p class="card-img-top"><img src="posts/2022-01-12-biocasia2021-ja/Zoom_caption.png"  class="thumbnail-image card-img"/></p> </a></p>
+<p><a href="./posts/2022-01-12-biocasia2021-ja/index.html" class="no-external"></a></p><a href="./posts/2022-01-12-biocasia2021-ja/index.html" class="no-external">
+<p class="card-img-top"><img src="posts/2022-01-12-biocasia2021-ja/Zoom_caption.png"  class="thumbnail-image card-img"/></p>
+</a><p><a href="./posts/2022-01-12-biocasia2021-ja/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./posts/2022-01-12-biocasia2021-ja/index.html">
 <h3 class="no-anchor listing-title">
-BioC Asia 2021 は言語障壁の緩和に挑戦し、多様性を実現した
+<a href="./posts/2022-01-12-biocasia2021-ja/index.html" class="no-external">BioC Asia 2021 は言語障壁の緩和に挑戦し、多様性を実現した</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./posts/2022-01-12-biocasia2021-ja/index.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('Japanese'); return false;">
 Japanese
@@ -916,14 +943,12 @@ BioC
 Diversity
 </div>
 </div>
-<a href="./posts/2022-01-12-biocasia2021-ja/index.html">
 <div class="listing-description">
-<p>BioC Asia 2021 の運営委員会は Zoom や YouTube を用いて「英語のリアルタイムキャプションの追加」 「英語キーノートスピーチの日本語翻訳キャプションの追加」「英語、日本語、中国語の3カ国語での並行ワークショップ」を行い、 カンファレンスの多言語対応を実現しました。</p>
+<a href="./posts/2022-01-12-biocasia2021-ja/index.html" class="no-external">BioC Asia 2021 の運営委員会は Zoom や YouTube を用いて「英語のリアルタイムキャプションの追加」 「英語キーノートスピーチの日本語翻訳キャプションの追加」「英語、日本語、中国語の3カ国語での並行ワークショップ」を行い、 カンファレンスの多言語対応を実現しました。 </a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./posts/2022-01-12-biocasia2021-ja/index.html">
+<a href="./posts/2022-01-12-biocasia2021-ja/index.html" class="no-external">
 <div class="listing-date">
 Jan 12, 2022
 </div>
@@ -933,19 +958,19 @@ Jan 12, 2022
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="20" data-categories="BioC,Diversity" data-listing-date-sort="1639008000000" data-listing-file-modified-sort="1703253893649" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2">
+<div class="quarto-post image-right" data-index="21" data-categories="BioC,Diversity" data-listing-date-sort="1639008000000" data-listing-file-modified-sort="1708525285478" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="247">
 <div class="thumbnail">
-<p><a href="./posts/2021-11-11-biocasia2021/index.html"> <img src="./posts/2021-11-11-biocasia2021/Lori_Japanese_caption.png" class="thumbnail-image"> </a></p>
+<p><a href="./posts/2021-11-11-biocasia2021/index.html" class="no-external"></a></p><a href="./posts/2021-11-11-biocasia2021/index.html" class="no-external">
+<p><img src="./posts/2021-11-11-biocasia2021/Lori_Japanese_caption.png" class="thumbnail-image"></p>
+</a><p><a href="./posts/2021-11-11-biocasia2021/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./posts/2021-11-11-biocasia2021/index.html">
 <h3 class="no-anchor listing-title">
-BioC Asia 2021 challenged to overcoming language barriers and respected diversity
+<a href="./posts/2021-11-11-biocasia2021/index.html" class="no-external">BioC Asia 2021 challenged to overcoming language barriers and respected diversity</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./posts/2021-11-11-biocasia2021/index.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('BioC'); return false;">
 BioC
@@ -954,14 +979,12 @@ BioC
 Diversity
 </div>
 </div>
-<a href="./posts/2021-11-11-biocasia2021/index.html">
 <div class="listing-description">
-<p>BioC Asia 2021 organizing committee used Zoom and YouTube to “add real-time English captions”, “add Japanese translation captions for English keynote”, and “run 3 parallel workshops: English, Japanese, and Mandarin”.</p>
+<a href="./posts/2021-11-11-biocasia2021/index.html" class="no-external">BioC Asia 2021 organizing committee used Zoom and YouTube to “add real-time English captions”, “add Japanese translation captions for English keynote”, and “run 3 parallel workshops: English, Japanese, and Mandarin”. </a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./posts/2021-11-11-biocasia2021/index.html">
+<a href="./posts/2021-11-11-biocasia2021/index.html" class="no-external">
 <div class="listing-date">
 Dec 9, 2021
 </div>
@@ -1055,10 +1078,9 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     // clear code selection
     e.clearSelection();
   });
-  function tippyHover(el, contentFn) {
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
     const config = {
       allowHTML: true,
-      content: contentFn,
       maxWidth: 500,
       delay: 100,
       arrow: false,
@@ -1068,8 +1090,17 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       interactive: true,
       interactiveBorder: 10,
       theme: 'quarto',
-      placement: 'bottom-start'
+      placement: 'bottom-start',
     };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
     window.tippy(el, config); 
   }
   const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
@@ -1082,6 +1113,125 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
       return note.innerHTML;
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
     });
   }
       let selectedAnnoteEl;
@@ -1125,6 +1275,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
             }
             div.style.top = top - 2 + "px";
             div.style.height = height + 4 + "px";
+            div.style.left = 0;
             let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
             if (gutterDiv === null) {
               gutterDiv = window.document.createElement("div");
@@ -1150,6 +1301,32 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
         });
         selectedAnnoteEl = undefined;
       };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
       // Attach click handler to the DT
       const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
       for (const annoteDlNode of annoteDls) {
@@ -1210,6 +1387,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
+
 
 
 
