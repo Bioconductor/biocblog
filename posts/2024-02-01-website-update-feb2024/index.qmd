@@ -1,0 +1,41 @@
+---
+title: "Launching the New Bioconductor.org"
+description: |
+  A look into the final updates, community-driven improvements, and what's next for our website.
+author:
+  - name: Maria Doyle
+    url: https://github.com/mblue9
+date: 2024-02-01
+categories:
+  - Bioconductor
+image: "bioc-new-website.png"
+---
+
+In January 2024, we proudly launched the redesigned [bioconductor.org](bioconductor.org), marking a significant milestone in enhancing user experience. This initiative reflects our commitment to creating a more navigable, accessible, and welcoming website for our global community.
+
+![New Bioconductor website](bioc-new-website.png)
+
+## Community Feedback Drives Improvement
+Our redesign was significantly guided by community input. Initially, we conducted a survey in June 2023 about the existing bioconductor.org website, receiving feedback from 558 respondents across 56 countries. Following this, we presented a preview of the new design at the BioC2023 and EuroBioC2023 conferences and through social media platforms and conducted another survey which collected 144 responses. The positive reception was clear, with 71% of respondents preferring the new design over the old, encouraging us to implement their constructive suggestions for further refinements.
+
+![Old and New design](old-vs-new.jpg)
+
+## Detailed Changes Based on Feedback
+Responding to your input, we implemented several key updates:
+
+- **Simplified Design**: Minimised clutter to streamline the site's look and feel, enhancing overall usability.
+- **Accessibility Improvements**: Adjustments were made to ensure the site is more accessible to individuals with disabilities, including better screen reader support and a layout accommodating color vision deficiencies.
+- **Content Reorganisation**: Conducted a cleanup of content and links, alongside some page reformatting, to improve the clarity and quality of information presented.
+- **Enhanced Navigation**: Introduced a 'Packages' tab, making it easier for users to find and access Bioconductor packages.
+
+![Accessibility improvements](accessibility-table.png)
+
+## Ongoing Development and Engagement
+The launch of our website marks the beginning of ongoing improvements. We aim to enhance the site’s search functionalities and accessibility, making it more user- and AI-friendly. Plans include developing a unified search system and employing advanced tools like Elasticsearch for innovative AI applications. We've applied for a CZI EOSS6 grant to support these efforts. We’re grateful for the insights and suggestions from various contributors, including Galaxy’s UX designer, Laila Los. We encourage further community feedback via the Bioconductor Slack #biocwebsite channel to guide our improvement journey.
+
+## Acknowledgements
+This achievement would not have been possible without [the generous support from the Chan Zuckerberg Initiative (CZI)](https://chanzuckerberg.com/eoss/proposals/bioconductor-high-quality-training-and-support-for-a-worldwide-community/), the creativity and expertise of [NearForm](https://www.nearform.com/), the dedicated [Bioconductor Website Working Group](https://workinggroups.bioconductor.org/currently-active-working-groups-committees.html#website), and the invaluable input from our community members. Your enthusiasm and constructive feedback have been a driving force behind this project's success.
+
+As we move forward, we remain committed to providing a user-friendly, accessible, and engaging website. The new bioconductor.org is a testament to our shared vision and dedication.
+
+We invite the community to explore the new features and continue contributing to the evolution of bioconductor.org.
