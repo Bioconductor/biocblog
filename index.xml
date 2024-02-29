@@ -14,17 +14,17 @@
 <item>
   <title>Launching the New Bioconductor.org</title>
   <dc:creator>Maria Doyle</dc:creator>
-  <link>https://bioconductor.github.io/biocblog/posts/2024-02-01-website-update-feb2024/</link>
+  <link>https://bioconductor.github.io/biocblog/posts/2024-02-01-website-update/</link>
   <description><![CDATA[ 
 
 
 
 
 
-<p>In January 2024, we proudly launched the redesigned <a href="bioconductor.org">bioconductor.org</a>, marking a significant milestone in enhancing user experience. This initiative reflects our commitment to creating a more navigable, accessible, and welcoming website for our global community.</p>
+<p>In January 2024, we proudly launched the redesigned <a href="https://bioconductor.org">bioconductor.org</a>, marking a significant milestone in enhancing user experience. This initiative reflects our commitment to creating a more navigable, accessible, and welcoming website for our global community.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="https://bioconductor.github.io/biocblog/posts/2024-02-01-website-update-feb2024/bioc-new-website.png" class="img-fluid figure-img"></p>
+<p><img src="https://bioconductor.github.io/biocblog/posts/2024-02-01-website-update/bioc-new-website.png" class="img-fluid figure-img"></p>
 <figcaption>New Bioconductor website</figcaption>
 </figure>
 </div>
@@ -33,7 +33,7 @@
 <p>Our redesign was significantly guided by community input. Initially, we conducted a survey in June 2023 about the existing bioconductor.org website, receiving feedback from 558 respondents across 56 countries. Following this, we presented a preview of the new design at the BioC2023 and EuroBioC2023 conferences and through social media platforms and conducted another survey which collected 144 responses. The positive reception was clear, with 71% of respondents preferring the new design over the old, encouraging us to implement their constructive suggestions for further refinements.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="https://bioconductor.github.io/biocblog/posts/2024-02-01-website-update-feb2024/old-vs-new.jpg" class="img-fluid figure-img"></p>
+<p><img src="https://bioconductor.github.io/biocblog/posts/2024-02-01-website-update/old-vs-new.jpg" class="img-fluid figure-img"></p>
 <figcaption>Old and New design</figcaption>
 </figure>
 </div>
@@ -49,14 +49,14 @@
 </ul>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="https://bioconductor.github.io/biocblog/posts/2024-02-01-website-update-feb2024/accessibility-table.png" class="img-fluid figure-img"></p>
+<p><img src="https://bioconductor.github.io/biocblog/posts/2024-02-01-website-update/accessibility-table.png" class="img-fluid figure-img"></p>
 <figcaption>Accessibility improvements</figcaption>
 </figure>
 </div>
 </section>
 <section id="ongoing-development-and-engagement" class="level2">
 <h2 class="anchored" data-anchor-id="ongoing-development-and-engagement">Ongoing Development and Engagement</h2>
-<p>The launch of our website marks the beginning of ongoing improvements. We aim to enhance the site’s search functionalities and accessibility, making it more user- and AI-friendly. Plans include developing a unified search system and employing advanced tools like Elasticsearch for innovative AI applications. We’ve applied for a CZI EOSS6 grant to support these efforts. We’re grateful for the insights and suggestions from various contributors, including Galaxy’s UX designer, Laila Los. We encourage further community feedback via the Bioconductor Slack #biocwebsite channel to guide our improvement journey.</p>
+<p>The launch of our website marks the beginning of ongoing improvements. We aim to enhance the site’s search functionalities and accessibility, making it more user- and AI-friendly. Plans include developing a unified search system and employing advanced tools like Elasticsearch for innovative AI applications. We’ve applied for a CZI EOSS6 grant to support these efforts. We’re grateful for the insights and suggestions from various contributors, including Galaxy’s UX designer, Laila Los. We encourage further community feedback via the <a href="https://slack.bioconductor.org">Bioconductor Slack</a> #biocwebsite channel to guide our improvement journey.</p>
 </section>
 <section id="acknowledgements" class="level2">
 <h2 class="anchored" data-anchor-id="acknowledgements">Acknowledgements</h2>
@@ -69,9 +69,9 @@
 
  ]]></description>
   <category>Bioconductor</category>
-  <guid>https://bioconductor.github.io/biocblog/posts/2024-02-01-website-update-feb2024/</guid>
+  <guid>https://bioconductor.github.io/biocblog/posts/2024-02-01-website-update/</guid>
   <pubDate>Thu, 01 Feb 2024 00:00:00 GMT</pubDate>
-  <media:content url="https://bioconductor.github.io/biocblog/posts/2024-02-01-website-update-feb2024/bioc-new-website.png" medium="image" type="image/png" height="124" width="144"/>
+  <media:content url="https://bioconductor.github.io/biocblog/posts/2024-02-01-website-update/bioc-new-website.png" medium="image" type="image/png" height="124" width="144"/>
 </item>
 <item>
   <title>Journey of Growth: Our Internship experience with Bioconductor</title>
