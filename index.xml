@@ -10,7 +10,69 @@
 <atom:link href="https://bioconductor.github.io/biocblog/index.xml" rel="self" type="application/rss+xml"/>
 <description>A blog for the Bioconductor community!</description>
 <generator>quarto-1.4.550</generator>
-<lastBuildDate>Wed, 31 Jan 2024 00:00:00 GMT</lastBuildDate>
+<lastBuildDate>Thu, 01 Feb 2024 00:00:00 GMT</lastBuildDate>
+<item>
+  <title>Launching the New Bioconductor.org</title>
+  <dc:creator>Maria Doyle</dc:creator>
+  <link>https://bioconductor.github.io/biocblog/posts/2024-02-01-website-update-feb2024/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<p>In January 2024, we proudly launched the redesigned <a href="bioconductor.org">bioconductor.org</a>, marking a significant milestone in enhancing user experience. This initiative reflects our commitment to creating a more navigable, accessible, and welcoming website for our global community.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://bioconductor.github.io/biocblog/posts/2024-02-01-website-update-feb2024/bioc-new-website.png" class="img-fluid figure-img"></p>
+<figcaption>New Bioconductor website</figcaption>
+</figure>
+</div>
+<section id="community-feedback-drives-improvement" class="level2">
+<h2 class="anchored" data-anchor-id="community-feedback-drives-improvement">Community Feedback Drives Improvement</h2>
+<p>Our redesign was significantly guided by community input. Initially, we conducted a survey in June 2023 about the existing bioconductor.org website, receiving feedback from 558 respondents across 56 countries. Following this, we presented a preview of the new design at the BioC2023 and EuroBioC2023 conferences and through social media platforms and conducted another survey which collected 144 responses. The positive reception was clear, with 71% of respondents preferring the new design over the old, encouraging us to implement their constructive suggestions for further refinements.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://bioconductor.github.io/biocblog/posts/2024-02-01-website-update-feb2024/old-vs-new.jpg" class="img-fluid figure-img"></p>
+<figcaption>Old and New design</figcaption>
+</figure>
+</div>
+</section>
+<section id="detailed-changes-based-on-feedback" class="level2">
+<h2 class="anchored" data-anchor-id="detailed-changes-based-on-feedback">Detailed Changes Based on Feedback</h2>
+<p>Responding to your input, we implemented several key updates:</p>
+<ul>
+<li><strong>Simplified Design</strong>: Minimised clutter to streamline the site’s look and feel, enhancing overall usability.</li>
+<li><strong>Accessibility Improvements</strong>: Adjustments were made to ensure the site is more accessible to individuals with disabilities, including better screen reader support and a layout accommodating color vision deficiencies.</li>
+<li><strong>Content Reorganisation</strong>: Conducted a cleanup of content and links, alongside some page reformatting, to improve the clarity and quality of information presented.</li>
+<li><strong>Enhanced Navigation</strong>: Introduced a ‘Packages’ tab, making it easier for users to find and access Bioconductor packages.</li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://bioconductor.github.io/biocblog/posts/2024-02-01-website-update-feb2024/accessibility-table.png" class="img-fluid figure-img"></p>
+<figcaption>Accessibility improvements</figcaption>
+</figure>
+</div>
+</section>
+<section id="ongoing-development-and-engagement" class="level2">
+<h2 class="anchored" data-anchor-id="ongoing-development-and-engagement">Ongoing Development and Engagement</h2>
+<p>The launch of our website marks the beginning of ongoing improvements. We aim to enhance the site’s search functionalities and accessibility, making it more user- and AI-friendly. Plans include developing a unified search system and employing advanced tools like Elasticsearch for innovative AI applications. We’ve applied for a CZI EOSS6 grant to support these efforts. We’re grateful for the insights and suggestions from various contributors, including Galaxy’s UX designer, Laila Los. We encourage further community feedback via the Bioconductor Slack #biocwebsite channel to guide our improvement journey.</p>
+</section>
+<section id="acknowledgements" class="level2">
+<h2 class="anchored" data-anchor-id="acknowledgements">Acknowledgements</h2>
+<p>This achievement would not have been possible without <a href="https://chanzuckerberg.com/eoss/proposals/bioconductor-high-quality-training-and-support-for-a-worldwide-community/">the generous support from the Chan Zuckerberg Initiative (CZI)</a>, the creativity and expertise of <a href="https://www.nearform.com/">NearForm</a>, the dedicated <a href="https://workinggroups.bioconductor.org/currently-active-working-groups-committees.html#website">Bioconductor Website Working Group</a>, and the invaluable input from our community members. Your enthusiasm and constructive feedback have been a driving force behind this project’s success.</p>
+<p>As we move forward, we remain committed to providing a user-friendly, accessible, and engaging website. The new bioconductor.org is a testament to our shared vision and dedication.</p>
+<p>We invite the community to explore the new features and continue contributing to the evolution of bioconductor.org.</p>
+
+
+</section>
+
+ ]]></description>
+  <category>Bioconductor</category>
+  <guid>https://bioconductor.github.io/biocblog/posts/2024-02-01-website-update-feb2024/</guid>
+  <pubDate>Thu, 01 Feb 2024 00:00:00 GMT</pubDate>
+  <media:content url="https://bioconductor.github.io/biocblog/posts/2024-02-01-website-update-feb2024/bioc-new-website.png" medium="image" type="image/png" height="124" width="144"/>
+</item>
 <item>
   <title>Journey of Growth: Our Internship experience with Bioconductor</title>
   <dc:creator>Chioma Onyido</dc:creator>
@@ -2643,72 +2705,6 @@ Note
   <category>Open Science</category>
   <guid>https://bioconductor.github.io/biocblog/posts/2022-01-18-metaRbolomics-2021/</guid>
   <pubDate>Tue, 18 Jan 2022 00:00:00 GMT</pubDate>
-</item>
-<item>
-  <title>Celebrating 20 years of Bioconductor</title>
-  <dc:creator>Kevin Rue-Albrecht</dc:creator>
-  <link>https://bioconductor.github.io/biocblog/posts/2022-01-14-20years/</link>
-  <description><![CDATA[ 
-
-
-
-
-
-<p>What a perspective! Twenty years of continuous contributions to fields ranging from biomedical data sciences to immunology, microbiology and most recently single-cell genomics.</p>
-<p>Writing this as an early career postdoctoral researcher who started using Bioconductor packages as a graduate student about 10 years ago (just about half the lifetime of the Bioconductor project at this point), I feel privileged to reflect on the most recent half of the Bioconductor project lifetime that I have had the chance to witness first-hand, both as a user and a contributor.</p>
-<p>I will skip over the first 10 years years, and redirect the nostalgic ones to the Wayback Machine snapshot of <a href="http://web.archive.org/web/20020327093500/https://bioconductor.org/">the Bioconductor website in March 2002</a> and the first published article describing the aims and methods of the project at its inception <a id="cite-Gentleman2004"></a>Gentleman et al.&nbsp;(2004)</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="https://bioconductor.github.io/biocblog/posts/2022-01-14-20years/bioconductor-website-2002.png" class="img-fluid figure-img"></p>
-<figcaption>The Bioconductor website in 2002.</figcaption>
-</figure>
-</div>
-<p>OK, well, taking a brief look at the Wayback machine snapshot, let’s just take a second to acknowledge that at its inception (Bioconductor Release 1.0: May 2, 2002), the Bioconductor project included just 15 packages, broadly classified as:</p>
-<ul>
-<li>annotation</li>
-<li>data management and organization</li>
-<li>differential expression</li>
-<li>analysis of microarray data</li>
-<li>visualisation and normalisation of microarray data</li>
-<li>storage and retrieval of large datasets</li>
-</ul>
-<p>To put that into perspective, the Bioconductor project is now (Bioconductor 3.14; October 27, 2021) strong of:</p>
-<ul>
-<li>2083 software packages</li>
-<li>408 experiment data packages</li>
-<li>904 annotation packages</li>
-<li>29 workflows</li>
-<li>8 books</li>
-</ul>
-<p>That is about 1 new package every other day for the past twenty years. Way to go!</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="https://bioconductor.github.io/biocblog/posts/2022-01-14-20years/bioconductor-website-2022.png" class="img-fluid figure-img"></p>
-<figcaption>The Bioconductor website in 2022.</figcaption>
-</figure>
-</div>
-<p>That collection of core-maintained and community-contributed packages has grown so large that there is now an entire hierarchy of terms to categorise those packages, called <a href="https://www.bioconductor.org/packages/release/BiocViews.html">BiocViews</a>. Check them out!</p>
-<p>But the Bioconductor project has grown to become so much more than a collection of software packages for bioinformatics. The success of the Bioconductor project has also grown a welcoming and inclusive community made of a <a href="https://www.bioconductor.org/about/core-team/">Core Team</a>, package developers, and users of all backgrounds and experience levels. I am reminded daily of this friendly, active, and stimulating environment through the <a href="https://bioc-community.herokuapp.com/">Slack workspace</a>, the <a href="https://support.bioconductor.org/">Support site</a>, and the <a href="https://www.youtube.com/user/bioconductor">YouTube channel</a>. On top of that, regular events that bring the community together are the highlight of my calendar: the annual BioC conference in North America, the regional meetings in Europe (<a href="http://eurobioc2019.bioconductor.org/">EuroBioC</a>), Asia (<a href="https://bioconductor.github.io/BiocAsia/">BioC Asia</a>), and summer schools (e.g., <a href="https://www.huber.embl.de/csama2019/">CSAMA</a>).</p>
-<p>And speaking of conference, let me close on the celebrations of the 20th anniversary of the Bioconductor project, as a <a href="https://kevinrue.github.io/Bioconductor20YearsSlides/">collection of photos contributed by community members</a> presented during the BioC 2021 conference <a href="https://youtu.be/LTT1i_ACpxc?t=1059">Meet the Community Advisory Board (CAB) session</a>. I’m sure this will bring up memories for some of the earliest contributors to the Bioconductor project, and I hope that it will show even the most recent users how open and welcoming the Bioconductor community is!</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="https://bioconductor.github.io/biocblog/posts/2022-01-14-20years/cover.png" class="img-fluid figure-img"></p>
-<figcaption>Slides of photos celebrating 20 years of Bioconductor (link above).</figcaption>
-</figure>
-</div>
-<section id="references" class="level1">
-<h1>References</h1>
-<p>
-<cite><a id="bib-Gentleman2004"></a>Gentleman, R. C. et al. (2004). “Bioconductor: open software development for computational biology and bioinformatics”. In: <em>Genome Biol</em> 5.10, p.&nbsp;R80. ISSN: 1474-760X (Electronic) 1474-7596 (Linking). DOI: <a href="https://doi.org/10.1186/gb-2004-5-10-r80">10.1186/gb-2004-5-10-r80</a>. URL: <a href="https://www.ncbi.nlm.nih.gov/pubmed/15461798">https://www.ncbi.nlm.nih.gov/pubmed/15461798</a>.</cite>
-</p>
-
-
-</section>
-
- ]]></description>
-  <category>events</category>
-  <guid>https://bioconductor.github.io/biocblog/posts/2022-01-14-20years/</guid>
-  <pubDate>Fri, 14 Jan 2022 00:00:00 GMT</pubDate>
 </item>
 </channel>
 </rss>
