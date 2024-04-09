@@ -11,7 +11,7 @@ categories:
 image: "bioc-new-website.png"
 ---
 
-In January 2024, we proudly launched the redesigned [bioconductor.org](https://bioconductor.org), marking a significant milestone in enhancing user experience. This initiative reflects our commitment to creating a more navigable, accessible, and welcoming website for our global community.
+In January 2024, we proudly launched the redesigned [bioconductor.org](https://bioconductor.org), marking a significant milestone in enhancing user experience. This initiative reflects our commitment to creating a more navigable, accessible, and welcoming website for our global community. For those interested in the evolution of our site and the steps leading up to this redesign, we invite you to revisit our [August 2023 blog update](../2023-08-01-website-redesign-update/index.qmd).
 
 ![New Bioconductor website](bioc-new-website.png)
 
