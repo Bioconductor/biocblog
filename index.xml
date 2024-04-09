@@ -9,7 +9,7 @@
 <link>https://bioconductor.github.io/biocblog/</link>
 <atom:link href="https://bioconductor.github.io/biocblog/index.xml" rel="self" type="application/rss+xml"/>
 <description>A blog for the Bioconductor community!</description>
-<generator>quarto-1.4.550</generator>
+<generator>quarto-1.4.553</generator>
 <lastBuildDate>Thu, 01 Feb 2024 00:00:00 GMT</lastBuildDate>
 <item>
   <title>Launching the New Bioconductor.org</title>
@@ -21,7 +21,7 @@
 
 
 
-<p>In January 2024, we proudly launched the redesigned <a href="https://bioconductor.org">bioconductor.org</a>, marking a significant milestone in enhancing user experience. This initiative reflects our commitment to creating a more navigable, accessible, and welcoming website for our global community.</p>
+<p>In January 2024, we proudly launched the redesigned <a href="https://bioconductor.org">bioconductor.org</a>, marking a significant milestone in enhancing user experience. This initiative reflects our commitment to creating a more navigable, accessible, and welcoming website for our global community. For those interested in the evolution of our site and the steps leading up to this redesign, we invite you to revisit our <a href="../../posts/2023-08-01-website-redesign-update/index.html">August 2023 blog update</a>.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="https://bioconductor.github.io/biocblog/posts/2024-02-01-website-update/bioc-new-website.png" class="img-fluid figure-img"></p>
@@ -361,115 +361,6 @@
   <guid>https://bioconductor.github.io/biocblog/posts/2023-08-01-website-redesign-update/</guid>
   <pubDate>Tue, 01 Aug 2023 00:00:00 GMT</pubDate>
   <media:content url="https://bioconductor.github.io/biocblog/posts/2023-08-01-website-redesign-update/BC Website redesign - Project timeline.jpg" medium="image" type="image/jpeg"/>
-</item>
-<item>
-  <title>Our Journey as Outreachy Interns with Bioconductor</title>
-  <dc:creator>Sonali Kumari</dc:creator>
-  <dc:creator>Daena Rys</dc:creator>
-  <dc:creator>Atrayee Samanta</dc:creator>
-  <link>https://bioconductor.github.io/biocblog/posts/2023-07-14-OutreachyInternshipExperience/</link>
-  <description><![CDATA[ 
-
-
-
-
-
-<section id="introduction" class="level2">
-<h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
-<p>The world of open source offers abundant opportunities for growth and impact. However, diving into it can be daunting for newcomers. Thankfully, initiatives exist to bridge the gap between aspiring contributors and open source communities.</p>
-<p>Outreachy is one such project that partners with open source and open science communities to provide internships to underrepresented individuals in the tech industry. We were fortunate to be selected as interns at Bioconductor through Outreachy, where we experienced the open source world of computational biology. Whether you’re a biologist seeking information on our tools or an Outreachy applicant interested in Bioconductor, this blog post will provide valuable insights!</p>
-</section>
-<section id="outreachy" class="level2">
-<h2 class="anchored" data-anchor-id="outreachy">Outreachy</h2>
-<p><a href="https://www.outreachy.org/">Outreachy</a> is a program offering a paid 12-week remote internship in open source and open science. It aims to empower individuals facing systemic bias and underrepresentation in tech. Outreachy interns collaborate with experienced mentors on projects spanning programming, user experience, documentation, design, data science, marketing, advocacy, and community events.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="https://bioconductor.github.io/biocblog/posts/2023-07-14-OutreachyInternshipExperience/outreachy_homepage.jpg" class="img-fluid figure-img"></p>
-<figcaption>Outreachy</figcaption>
-</figure>
-</div>
-<p>The application process involves three stages, where applicants contribute to 1-2 projects of their choice. Through Outreachy, we were selected to work with Bioconductor on our chosen projects.</p>
-</section>
-<section id="bioconductor-empowering-open-science" class="level2">
-<h2 class="anchored" data-anchor-id="bioconductor-empowering-open-science">Bioconductor: Empowering Open Science</h2>
-<p>Three interns and three Bioconductor community projects are participating in the May 2023 <a href="https://www.outreachy.org/">Outreachy</a> internship round. In this blog post, we will provide an overview of our projects and share our experiences thus far, exploring the fascinating realm of Bioconductor.</p>
-<section id="sonalis-experience-making-strides-with-sweave2rmd" class="level3">
-<h3 class="anchored" data-anchor-id="sonalis-experience-making-strides-with-sweave2rmd">Sonali’s Experience: Making Strides with Sweave2Rmd</h3>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="https://bioconductor.github.io/biocblog/posts/2023-07-14-OutreachyInternshipExperience/Sonali Kumari.jpg" height="300" class="figure-img"></p>
-<figcaption>Sonali Kumari</figcaption>
-</figure>
-</div>
-<p>I’m Sonali Kumari, a B.Tech student specializing in Electronics and Communication Engineering with a passion for Artificial Intelligence. Currently pursuing my studies at IGDTUW in Delhi, I find immense joy in working with open-source organizations that offer unique opportunities for learning, collaboration, and remarkable achievements, even in remote settings. With a diverse range of interests spanning technology and open science, I strive to merge technical expertise with a strong inclination towards research.</p>
-<p>During the May 2023 internship round, I had the privilege of participating in the Outreachy Internship program with Bioconductor. This experience has been incredibly rewarding, as it has not only exposed me to the world of open science and open source but has also taught me how to collaborate effectively in a remote work environment. Despite the initial challenge of familiarizing myself with various concepts within a limited timeframe, my journey has been smoother than anticipated. I want to express my heartfelt appreciation to my mentor, Jen Wokaty, who has been an exceptional guide, always steering me in the right direction whenever I faced challenges. Their mentorship has taught me invaluable lessons in problem-solving, finding joy in my work, and so much more. I am immensely grateful for the knowledge and skills I have acquired under their guidance.</p>
-<p>In this blog post, I want to share my enriching experience and the remarkable work I have been doing as part of the <a href="https://github.com/Bioconductor/sweave2rmd">Sweave2Rmd</a> project at Bioconductor. The sweave2rmd project focuses on converting vignettes from Sweave to R Markdown format, which plays a crucial role in modernizing the documentation of Bioconductor packages. Traditionally, the documentation has been written using a combination of LaTeX and R code, resulting in PDF files. By transforming these files into R Markdown format and rendering them as HTML files, we make the documentation more accessible, shareable, and interactive.</p>
-<p>Throughout my internship, I have made significant contributions to the sweave2rmd project. Some of my accomplishments include:</p>
-<ul>
-<li>Converting numerous vignettes from Sweave to R Markdown format</li>
-<li>Collaborating with maintainers to address issues and improve the conversion process</li>
-<li>Taking the lead in maintaining the project board and tracking progress</li>
-<li>Exploring automation processes to streamline the conversion workflow</li>
-<li>Enhancing the project’s documentation for better usability and clarity</li>
-</ul>
-<p>These experiences have not only honed my technical skills but have also allowed me to gain a deeper understanding of package development and documentation creation within the vibrant Bioconductor community. I’m proud to have submitted a total of 12 pull requests (PRs), out of which 8 have been successfully merged into Bioconductor in just one month. I am thrilled to continue making a meaningful impact on the project.</p>
-<p>If you’re interested in reading more about my experience as an Outreachy intern with Bioconductor and my journey with the sweave2rmd project, I invite you to visit my <a href="https://dev.to/sonali8434">blog</a>. I share insights, challenges, and lessons learned along the way.</p>
-<p>I would like to express my sincere gratitude to Bioconductor, my mentors, and the entire community for providing me with this invaluable opportunity. Together, we are shaping the future of open science and making a difference in the world of scientific documentation.</p>
-</section>
-<section id="daenarys-experience-working-on-the-miaverse-project" class="level3">
-<h3 class="anchored" data-anchor-id="daenarys-experience-working-on-the-miaverse-project">DaenaRys Experience: Working on the miaverse Project</h3>
-<p>I am a final-year computer science student from Cameroon with a love for computers and technology. My fascination with biotechnology led me to choose the <a href="https://microbiome.github.io">miaverse</a> project under Bioconductor.</p>
-<p>The miaverse is a microbiome analytics framework that combines both tools and documentation. The idea is to provide not only tools but also tutorials that help users with different skill levels to perform microbiome downstream analysis. The miaverse project focuses on optimizing unit tests in the miaverse packages, including mia, miaTime, miaViz, and miaSim, which are essential tools for analyzing microbiome data. In addition to optimization of unit tests and examples, current task include, improving documentation in packages, creating an example microbiome data science workflow from database to results, optimization of certain methods and testing, issue reporting, bug fixing.</p>
-<p>I chose this project because of my passion for biotechnology and my fascination with the intricate interactions that occur within a microbiome. However, as I delved deeper into the project, I realized that analyzing microbiome data can be quite challenging due to the vast amounts of complex data involved. Therefore, I became determined to optimize the miaverse packages to make microbiome data analysis more efficient and accurate.</p>
-<p>Working on the miaverse project has been an unforgettable experience for me. Throughout the project, I have had the pleasure of working closely with my mentor, Tuomas Borman. Tuomas’ expertise in the field has helped me understand the complexities involved in microbiome data analysis, and he has provided valuable feedback on my work.</p>
-<p>The project itself has been challenging but rewarding, as it has allowed me to develop important skills such as problem-solving, teamwork, and communication. Through the optimization process and documentation unification, I have learned how to create user-friendly tools that can be used by a broad audience.</p>
-<p>I am proud of the work I have accomplished so far and grateful for the opportunity to develop important skills during this internship with the aim of using technology to facilitate biotech data processes and analysis.</p>
-<p>To find out more about my Outreachy experience and internship with Bioconductor, you can visit my blog at <a href="https://daenarys.dreamwidth.org/">daenarys.dreamwidth.org</a>.</p>
-</section>
-<section id="atrayees-experience-microbiome-study-curation" class="level3">
-<h3 class="anchored" data-anchor-id="atrayees-experience-microbiome-study-curation">Atrayee’s Experience: Microbiome Study Curation</h3>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="https://bioconductor.github.io/biocblog/posts/2023-07-14-OutreachyInternshipExperience/Screenshot 2023-06-19 160243.png" height="300" class="figure-img"></p>
-<figcaption>Atrayee Samanta</figcaption>
-</figure>
-</div>
-<p>Hello! I am Atrayee Samanta, an undergraduate student at IIEST Shibpur, India. I am currently pursuing a B. Tech in Computer Science and Technology. I love reading books, watercolour painting and music.</p>
-<section id="how-i-came-to-know-about-open-source-and-the-outreachy-internships" class="level4">
-<h4 class="anchored" data-anchor-id="how-i-came-to-know-about-open-source-and-the-outreachy-internships">How I came to know about Open Source and the Outreachy Internships</h4>
-<p>When I was just starting out as a sophomore, while exploring about the many ways people can make a difference in computer science, I came across the many ways in which beginners could contribute to projects that made a difference, however small it was. I was fascinated by the world of open-source software and the way it operates. What drew me to this community was its collaborative nature. The idea that people from all over the world could come together to contribute their expertise and collectively create something truly remarkable was truly wonderful!</p>
-<p>While surfing the web, I came across what seemed to me a brilliant opportunity to learn and contribute: the Outreachy internship. What drew me to it was the nature of the internship: we had to contribute to projects of our own choice for a month, and that meant that whether or not I got the internship, I would definitely get a chance to learn and interact with the open-source community! Once my initial application period was over, I took a few days to go over the many projects listed on the platform, for which we could choose to contribute.</p>
-</section>
-<section id="the-microbiome-study-curation-project-at-bioconductor" class="level4">
-<h4 class="anchored" data-anchor-id="the-microbiome-study-curation-project-at-bioconductor">The Microbiome Study Curation Project at Bioconductor</h4>
-<p>A lot of the projects were very appealing but what stood out to me was the ‘Microbiome Study curation’ project at <a href="https://bugsigdb.org/">BugSigDb</a>; for me, it was quite different to the others and while it wasn’t extremely tedious, it was fascinating to learn about the project: I realized how I wasn’t even properly aware of how epidemiological studies and research on samples of varying sizes and nature are critical for medical research, how they play a crucial role in medical research by providing insights into the distribution, causes, and prevention of diseases within populations. These studies involve the collection, analysis, and interpretation of data from large populations over time, and can help to identify risk factors, patterns of disease occurrence, and potential interventions that can improve public health.</p>
-<p>The <a href="https://www.outreachy.org/docs/applicant/#make-contributions">Outreachy contribution period</a> was one of the best experiences I have ever had as a student. I genuinely loved making contributions and learning. My mentors, Chloe and Fatima as well as the BugSigdb community- Professor Levi and others always helped me out whenever I got stuck on a problem or had an issue in understanding something.</p>
-</section>
-<section id="about-the-project" class="level4">
-<h4 class="anchored" data-anchor-id="about-the-project">About the Project</h4>
-<p>The Microbiome Study curation project mainly deals with reviewing existing epidemiological studies on BugSigdb and curating new studies on BugSigdb.</p>
-<p>Throughout my internship, the contributions I have made include:</p>
-<ul>
-<li>Reviewing existing curations of epidemiological studies on Bugsigdb</li>
-<li>Finding and curating more epidemiological studies</li>
-<li>Learning about the data analysis process using R and implementing it</li>
-</ul>
-<p>It has been a great source of knowledge for me, and has broadened my views as well as technical skills for understanding scientific articles, conducting a literature review and carrying out data analysis. The wonderful community at Bioconductor has only always helped me out and has provided me with a richer understanding of everything I’ve been doing! I’m really glad to be a part of this project. If you want to know more, I would love to introduce to you my <a href="https://atrayees0.wordpress.com/">blog</a>, where I record my progress as well as my experiences and learnings.</p>
-</section>
-</section>
-</section>
-<section id="upcoming-opportunities-at-outreachy-and-bioconductor" class="level2">
-<h2 class="anchored" data-anchor-id="upcoming-opportunities-at-outreachy-and-bioconductor">Upcoming Opportunities at Outreachy and Bioconductor!</h2>
-<p>Applicants who are interested in this amazing Outreachy internship for the December 2023 cohort can <a href="https://www.outreachy.org/apply/">apply</a> for the internship starting in early August. Interested mentors can also <a href="https://www.outreachy.org/communities/cfp/">sign up and submit</a> their open source projects in early August.</p>
-<p>At the upcoming Bioc2023 conference in August, we’ll also have an <a href="https://bioc2023.bioconductor.org/abstracts/track12/">Outreachy Birds of a Feather</a> with Beryl Kanali and Kirabo Kakopo who were Outreachy interns in December 2022. The Bioconductor community coordinator for Outreachy, Jennifer Wokaty, will also cover how to submit a good open source project to Outreachy.</p>
-
-
-</section>
-
- ]]></description>
-  <category>open science</category>
-  <guid>https://bioconductor.github.io/biocblog/posts/2023-07-14-OutreachyInternshipExperience/</guid>
-  <pubDate>Fri, 14 Jul 2023 00:00:00 GMT</pubDate>
 </item>
 <item>
   <title>Testing Packages on Linux ARM64 with GitHub Actions</title>
@@ -1122,6 +1013,115 @@ font-style: inherit;"> warn</span></span></code></pre></div>
   <pubDate>Fri, 14 Jul 2023 00:00:00 GMT</pubDate>
 </item>
 <item>
+  <title>Our Journey as Outreachy Interns with Bioconductor</title>
+  <dc:creator>Sonali Kumari</dc:creator>
+  <dc:creator>Daena Rys</dc:creator>
+  <dc:creator>Atrayee Samanta</dc:creator>
+  <link>https://bioconductor.github.io/biocblog/posts/2023-07-14-OutreachyInternshipExperience/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<section id="introduction" class="level2">
+<h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
+<p>The world of open source offers abundant opportunities for growth and impact. However, diving into it can be daunting for newcomers. Thankfully, initiatives exist to bridge the gap between aspiring contributors and open source communities.</p>
+<p>Outreachy is one such project that partners with open source and open science communities to provide internships to underrepresented individuals in the tech industry. We were fortunate to be selected as interns at Bioconductor through Outreachy, where we experienced the open source world of computational biology. Whether you’re a biologist seeking information on our tools or an Outreachy applicant interested in Bioconductor, this blog post will provide valuable insights!</p>
+</section>
+<section id="outreachy" class="level2">
+<h2 class="anchored" data-anchor-id="outreachy">Outreachy</h2>
+<p><a href="https://www.outreachy.org/">Outreachy</a> is a program offering a paid 12-week remote internship in open source and open science. It aims to empower individuals facing systemic bias and underrepresentation in tech. Outreachy interns collaborate with experienced mentors on projects spanning programming, user experience, documentation, design, data science, marketing, advocacy, and community events.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://bioconductor.github.io/biocblog/posts/2023-07-14-OutreachyInternshipExperience/outreachy_homepage.jpg" class="img-fluid figure-img"></p>
+<figcaption>Outreachy</figcaption>
+</figure>
+</div>
+<p>The application process involves three stages, where applicants contribute to 1-2 projects of their choice. Through Outreachy, we were selected to work with Bioconductor on our chosen projects.</p>
+</section>
+<section id="bioconductor-empowering-open-science" class="level2">
+<h2 class="anchored" data-anchor-id="bioconductor-empowering-open-science">Bioconductor: Empowering Open Science</h2>
+<p>Three interns and three Bioconductor community projects are participating in the May 2023 <a href="https://www.outreachy.org/">Outreachy</a> internship round. In this blog post, we will provide an overview of our projects and share our experiences thus far, exploring the fascinating realm of Bioconductor.</p>
+<section id="sonalis-experience-making-strides-with-sweave2rmd" class="level3">
+<h3 class="anchored" data-anchor-id="sonalis-experience-making-strides-with-sweave2rmd">Sonali’s Experience: Making Strides with Sweave2Rmd</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://bioconductor.github.io/biocblog/posts/2023-07-14-OutreachyInternshipExperience/Sonali Kumari.jpg" height="300" class="figure-img"></p>
+<figcaption>Sonali Kumari</figcaption>
+</figure>
+</div>
+<p>I’m Sonali Kumari, a B.Tech student specializing in Electronics and Communication Engineering with a passion for Artificial Intelligence. Currently pursuing my studies at IGDTUW in Delhi, I find immense joy in working with open-source organizations that offer unique opportunities for learning, collaboration, and remarkable achievements, even in remote settings. With a diverse range of interests spanning technology and open science, I strive to merge technical expertise with a strong inclination towards research.</p>
+<p>During the May 2023 internship round, I had the privilege of participating in the Outreachy Internship program with Bioconductor. This experience has been incredibly rewarding, as it has not only exposed me to the world of open science and open source but has also taught me how to collaborate effectively in a remote work environment. Despite the initial challenge of familiarizing myself with various concepts within a limited timeframe, my journey has been smoother than anticipated. I want to express my heartfelt appreciation to my mentor, Jen Wokaty, who has been an exceptional guide, always steering me in the right direction whenever I faced challenges. Their mentorship has taught me invaluable lessons in problem-solving, finding joy in my work, and so much more. I am immensely grateful for the knowledge and skills I have acquired under their guidance.</p>
+<p>In this blog post, I want to share my enriching experience and the remarkable work I have been doing as part of the <a href="https://github.com/Bioconductor/sweave2rmd">Sweave2Rmd</a> project at Bioconductor. The sweave2rmd project focuses on converting vignettes from Sweave to R Markdown format, which plays a crucial role in modernizing the documentation of Bioconductor packages. Traditionally, the documentation has been written using a combination of LaTeX and R code, resulting in PDF files. By transforming these files into R Markdown format and rendering them as HTML files, we make the documentation more accessible, shareable, and interactive.</p>
+<p>Throughout my internship, I have made significant contributions to the sweave2rmd project. Some of my accomplishments include:</p>
+<ul>
+<li>Converting numerous vignettes from Sweave to R Markdown format</li>
+<li>Collaborating with maintainers to address issues and improve the conversion process</li>
+<li>Taking the lead in maintaining the project board and tracking progress</li>
+<li>Exploring automation processes to streamline the conversion workflow</li>
+<li>Enhancing the project’s documentation for better usability and clarity</li>
+</ul>
+<p>These experiences have not only honed my technical skills but have also allowed me to gain a deeper understanding of package development and documentation creation within the vibrant Bioconductor community. I’m proud to have submitted a total of 12 pull requests (PRs), out of which 8 have been successfully merged into Bioconductor in just one month. I am thrilled to continue making a meaningful impact on the project.</p>
+<p>If you’re interested in reading more about my experience as an Outreachy intern with Bioconductor and my journey with the sweave2rmd project, I invite you to visit my <a href="https://dev.to/sonali8434">blog</a>. I share insights, challenges, and lessons learned along the way.</p>
+<p>I would like to express my sincere gratitude to Bioconductor, my mentors, and the entire community for providing me with this invaluable opportunity. Together, we are shaping the future of open science and making a difference in the world of scientific documentation.</p>
+</section>
+<section id="daenarys-experience-working-on-the-miaverse-project" class="level3">
+<h3 class="anchored" data-anchor-id="daenarys-experience-working-on-the-miaverse-project">DaenaRys Experience: Working on the miaverse Project</h3>
+<p>I am a final-year computer science student from Cameroon with a love for computers and technology. My fascination with biotechnology led me to choose the <a href="https://microbiome.github.io">miaverse</a> project under Bioconductor.</p>
+<p>The miaverse is a microbiome analytics framework that combines both tools and documentation. The idea is to provide not only tools but also tutorials that help users with different skill levels to perform microbiome downstream analysis. The miaverse project focuses on optimizing unit tests in the miaverse packages, including mia, miaTime, miaViz, and miaSim, which are essential tools for analyzing microbiome data. In addition to optimization of unit tests and examples, current task include, improving documentation in packages, creating an example microbiome data science workflow from database to results, optimization of certain methods and testing, issue reporting, bug fixing.</p>
+<p>I chose this project because of my passion for biotechnology and my fascination with the intricate interactions that occur within a microbiome. However, as I delved deeper into the project, I realized that analyzing microbiome data can be quite challenging due to the vast amounts of complex data involved. Therefore, I became determined to optimize the miaverse packages to make microbiome data analysis more efficient and accurate.</p>
+<p>Working on the miaverse project has been an unforgettable experience for me. Throughout the project, I have had the pleasure of working closely with my mentor, Tuomas Borman. Tuomas’ expertise in the field has helped me understand the complexities involved in microbiome data analysis, and he has provided valuable feedback on my work.</p>
+<p>The project itself has been challenging but rewarding, as it has allowed me to develop important skills such as problem-solving, teamwork, and communication. Through the optimization process and documentation unification, I have learned how to create user-friendly tools that can be used by a broad audience.</p>
+<p>I am proud of the work I have accomplished so far and grateful for the opportunity to develop important skills during this internship with the aim of using technology to facilitate biotech data processes and analysis.</p>
+<p>To find out more about my Outreachy experience and internship with Bioconductor, you can visit my blog at <a href="https://daenarys.dreamwidth.org/">daenarys.dreamwidth.org</a>.</p>
+</section>
+<section id="atrayees-experience-microbiome-study-curation" class="level3">
+<h3 class="anchored" data-anchor-id="atrayees-experience-microbiome-study-curation">Atrayee’s Experience: Microbiome Study Curation</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://bioconductor.github.io/biocblog/posts/2023-07-14-OutreachyInternshipExperience/Screenshot 2023-06-19 160243.png" height="300" class="figure-img"></p>
+<figcaption>Atrayee Samanta</figcaption>
+</figure>
+</div>
+<p>Hello! I am Atrayee Samanta, an undergraduate student at IIEST Shibpur, India. I am currently pursuing a B. Tech in Computer Science and Technology. I love reading books, watercolour painting and music.</p>
+<section id="how-i-came-to-know-about-open-source-and-the-outreachy-internships" class="level4">
+<h4 class="anchored" data-anchor-id="how-i-came-to-know-about-open-source-and-the-outreachy-internships">How I came to know about Open Source and the Outreachy Internships</h4>
+<p>When I was just starting out as a sophomore, while exploring about the many ways people can make a difference in computer science, I came across the many ways in which beginners could contribute to projects that made a difference, however small it was. I was fascinated by the world of open-source software and the way it operates. What drew me to this community was its collaborative nature. The idea that people from all over the world could come together to contribute their expertise and collectively create something truly remarkable was truly wonderful!</p>
+<p>While surfing the web, I came across what seemed to me a brilliant opportunity to learn and contribute: the Outreachy internship. What drew me to it was the nature of the internship: we had to contribute to projects of our own choice for a month, and that meant that whether or not I got the internship, I would definitely get a chance to learn and interact with the open-source community! Once my initial application period was over, I took a few days to go over the many projects listed on the platform, for which we could choose to contribute.</p>
+</section>
+<section id="the-microbiome-study-curation-project-at-bioconductor" class="level4">
+<h4 class="anchored" data-anchor-id="the-microbiome-study-curation-project-at-bioconductor">The Microbiome Study Curation Project at Bioconductor</h4>
+<p>A lot of the projects were very appealing but what stood out to me was the ‘Microbiome Study curation’ project at <a href="https://bugsigdb.org/">BugSigDb</a>; for me, it was quite different to the others and while it wasn’t extremely tedious, it was fascinating to learn about the project: I realized how I wasn’t even properly aware of how epidemiological studies and research on samples of varying sizes and nature are critical for medical research, how they play a crucial role in medical research by providing insights into the distribution, causes, and prevention of diseases within populations. These studies involve the collection, analysis, and interpretation of data from large populations over time, and can help to identify risk factors, patterns of disease occurrence, and potential interventions that can improve public health.</p>
+<p>The <a href="https://www.outreachy.org/docs/applicant/#make-contributions">Outreachy contribution period</a> was one of the best experiences I have ever had as a student. I genuinely loved making contributions and learning. My mentors, Chloe and Fatima as well as the BugSigdb community- Professor Levi and others always helped me out whenever I got stuck on a problem or had an issue in understanding something.</p>
+</section>
+<section id="about-the-project" class="level4">
+<h4 class="anchored" data-anchor-id="about-the-project">About the Project</h4>
+<p>The Microbiome Study curation project mainly deals with reviewing existing epidemiological studies on BugSigdb and curating new studies on BugSigdb.</p>
+<p>Throughout my internship, the contributions I have made include:</p>
+<ul>
+<li>Reviewing existing curations of epidemiological studies on Bugsigdb</li>
+<li>Finding and curating more epidemiological studies</li>
+<li>Learning about the data analysis process using R and implementing it</li>
+</ul>
+<p>It has been a great source of knowledge for me, and has broadened my views as well as technical skills for understanding scientific articles, conducting a literature review and carrying out data analysis. The wonderful community at Bioconductor has only always helped me out and has provided me with a richer understanding of everything I’ve been doing! I’m really glad to be a part of this project. If you want to know more, I would love to introduce to you my <a href="https://atrayees0.wordpress.com/">blog</a>, where I record my progress as well as my experiences and learnings.</p>
+</section>
+</section>
+</section>
+<section id="upcoming-opportunities-at-outreachy-and-bioconductor" class="level2">
+<h2 class="anchored" data-anchor-id="upcoming-opportunities-at-outreachy-and-bioconductor">Upcoming Opportunities at Outreachy and Bioconductor!</h2>
+<p>Applicants who are interested in this amazing Outreachy internship for the December 2023 cohort can <a href="https://www.outreachy.org/apply/">apply</a> for the internship starting in early August. Interested mentors can also <a href="https://www.outreachy.org/communities/cfp/">sign up and submit</a> their open source projects in early August.</p>
+<p>At the upcoming Bioc2023 conference in August, we’ll also have an <a href="https://bioc2023.bioconductor.org/abstracts/track12/">Outreachy Birds of a Feather</a> with Beryl Kanali and Kirabo Kakopo who were Outreachy interns in December 2022. The Bioconductor community coordinator for Outreachy, Jennifer Wokaty, will also cover how to submit a good open source project to Outreachy.</p>
+
+
+</section>
+
+ ]]></description>
+  <category>open science</category>
+  <guid>https://bioconductor.github.io/biocblog/posts/2023-07-14-OutreachyInternshipExperience/</guid>
+  <pubDate>Fri, 14 Jul 2023 00:00:00 GMT</pubDate>
+</item>
+<item>
   <title>Reimagining Bioconductor.org: The Path to Our Website Redesign</title>
   <dc:creator>Maria Doyle</dc:creator>
   <link>https://bioconductor.github.io/biocblog/posts/2023-06-22-website-redesign/</link>
@@ -1180,6 +1180,45 @@ font-style: inherit;"> warn</span></span></code></pre></div>
   <media:content url="https://bioconductor.github.io/biocblog/posts/2023-06-22-website-redesign/BC Website redesign - Project timeline.jpg" medium="image" type="image/jpeg"/>
 </item>
 <item>
+  <title>ELIXIR All Hands Meeting 2023</title>
+  <dc:creator>Anna Powell</dc:creator>
+  <link>https://bioconductor.github.io/biocblog/posts/2023-06-16-ELIXIR-allhands-meeting/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://bioconductor.github.io/biocblog/posts/2023-06-16-ELIXIR-allhands-meeting/elixir-allhands-attendees.jpg" class="img-fluid figure-img"></p>
+<figcaption>ELIXIR All Hands Meeting 2023 attendees</figcaption>
+</figure>
+</div>
+<p>Bioconductor participated in the <a href="https://elixir-europe.org/events/elixir-all-hands-2023">ninth ELIXIR All Hands international event</a> which took place in the Dublin Convention centre from 5-8 June 2023. This was its first time ever being hosted in Ireland.</p>
+<p><a href="https://elixir-europe.org/">ELIXIR</a> is an organisation that works to create EU infrastructure to make it easier for scientists to find, aggregate, analyse and store life-science data, This is achieved through open-source bioinformatics software which provides methods and tools to analyse life science data. One purpose of this event was to share the first results from a 40 million euro <a href="https://gdi.onemilliongenomes.eu/">Genomic Data Infrastructure project</a>. This project, which is coordinated by ELIXIR, is creating the infrastructure to allow secure access to Europe’s genome data with the goal of accelerating research of new treatments and therapies for disease, improving healthcare across Europe and beyond.</p>
+<p>Bioconductor gave a workshop at this conference on the ‘Opportunities for Bioconductor and ELIXIR communities to co-develop training infrastructures’. This workshop was introduced by Bioconductor Community Manager, Dr.&nbsp;Maria Doyle, from the University of Limerick, Ireland. Following its introduction, Professor of Cancer Genomics, Aedin Culhane from University of Limerick gave an overview of Bioconductor’s work. Professor of Bioinformatics, Laurent Gatto, from UCLouvain, Belgium and Professor in Data Science, Leo Lahti, from the University of Turku, Finland followed Professor Culhane by speaking about Bioconductor’s training landscape. Dr.&nbsp;Doyle then gave a demo of Bioconductor’s Galaxy training infrastructure and also gave a talk on the future plans/ideas for Bioconductor/ELIXIR collaborations in training.</p>
+<p>Professor Culhane who is director of the Limerick Digital Cancer Centre and sits on the leadership board of Bioconductor emphasized the benefits of connecting the global Bioconductor and ELIXIR bioinformatics communities. She said <em>“The Bioconductor and ELIXIR active communities are continuously working on improving and expanding functionally. By working together we can better develop, support and disseminate free open source software to the global bioinformatics community and thereby accelerate medical and biological research in treatments for patients with disease and cancer”</em>.</p>
+<p>Dr Doyle coordinates global education and training for Bioconductor and is also the ELIXIR-Ireland training coordinator, commented on the importance of the event for coordination of training resources <em>“It was important for Bioconductor to be present at such an event as it allows us to connect with a wide range of stakeholders, gain insights from diverse perspectives, and foster relationships that could lead to impactful collaborations. These interactions contribute to Bioconductor growth and help us to improve our training offerings, making them more comprehensive, user-friendly, and effective”</em>.</p>
+<p>Ireland’s most cited scientist, Professor Desmond Higgins, Emeritus Professor of Bioinformatics from the University College Dublin was honoured as the keynote speaker at the ninth ELIXIR All Hands international event. Higgins is one of the most cited life scientists in the world for his work on the Clustal suite of bioinformatics software programmes. He spoke about the history of Clustal and the impact that this package has had on bioinformatics research in his keynote speech. <em>“It was a fantastic honour to be invited. I have worked on bioinformatics methods since the mid 1980s. I have given talks in many countries over 40 years but this was one of the few opportunities have had to do this in Dublin, to an international audience.”</em> commented Professor Desmond Higgins.</p>
+<p>Dr Elaine Harrison, ELIXIR’s Communication Officer commented on the success of the event.<em>“The event was a huge success, we were blessed with Dublin sunshine and enjoyed the excellent services of the Convention Centre. With over 90 speakers we ran 25 parallel workshops, 9 mini symposia, 3 plenaries and 2 lunchtime poster sessions.”</em></p>
+<p>The event began and ended with remarks from Dr.&nbsp;Niklas Blomberg, ELIXIR’s director. He highlighted ELIXIR’s achievements over the 10 years and shared information on their plans for their 2024-2028 scientific programme. Dr Blomberg commented on how experts came <em>“from all over Europe and guests from as far afield as Australia and Canada”</em> to attend this event. Three hundred and eighty two people attended the event and one hundred and fourteen people attended the conference remotely. It was brilliant that Bioconductor was involved in such a collaborative and exciting meeting.</p>
+<div class="quarto-figure quarto-figure-left">
+<figure class="figure">
+<p><img src="https://bioconductor.github.io/biocblog/posts/2023-06-16-ELIXIR-allhands-meeting/bioc-elixir.jpg" height="500" class="figure-img"></p>
+<figcaption>Maria Doyle, Niklas Blomberg, Aedin Culhane</figcaption>
+</figure>
+</div>
+
+
+
+ ]]></description>
+  <category>Bioconductor</category>
+  <guid>https://bioconductor.github.io/biocblog/posts/2023-06-16-ELIXIR-allhands-meeting/</guid>
+  <pubDate>Fri, 16 Jun 2023 00:00:00 GMT</pubDate>
+  <media:content url="https://bioconductor.github.io/biocblog/posts/2023-06-16-ELIXIR-allhands-meeting/elixir-allhands-attendees.jpg" medium="image" type="image/jpeg"/>
+</item>
+<item>
   <title>Bioconductor’s Participation in Galaxy Smorgasbord 2023: A Recap</title>
   <dc:creator>Maria Doyle</dc:creator>
   <dc:creator>Alex Mahmoud</dc:creator>
@@ -1226,45 +1265,6 @@ font-style: inherit;"> warn</span></span></code></pre></div>
   <guid>https://bioconductor.github.io/biocblog/posts/2023-06-16-smorgasbord-recap/</guid>
   <pubDate>Fri, 16 Jun 2023 00:00:00 GMT</pubDate>
   <media:content url="https://bioconductor.github.io/biocblog/posts/2023-06-16-smorgasbord-recap/bioconductor-galaxy.png" medium="image" type="image/png" height="98" width="144"/>
-</item>
-<item>
-  <title>ELIXIR All Hands Meeting 2023</title>
-  <dc:creator>Anna Powell</dc:creator>
-  <link>https://bioconductor.github.io/biocblog/posts/2023-06-16-ELIXIR-allhands-meeting/</link>
-  <description><![CDATA[ 
-
-
-
-
-
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="https://bioconductor.github.io/biocblog/posts/2023-06-16-ELIXIR-allhands-meeting/elixir-allhands-attendees.jpg" class="img-fluid figure-img"></p>
-<figcaption>ELIXIR All Hands Meeting 2023 attendees</figcaption>
-</figure>
-</div>
-<p>Bioconductor participated in the <a href="https://elixir-europe.org/events/elixir-all-hands-2023">ninth ELIXIR All Hands international event</a> which took place in the Dublin Convention centre from 5-8 June 2023. This was its first time ever being hosted in Ireland.</p>
-<p><a href="https://elixir-europe.org/">ELIXIR</a> is an organisation that works to create EU infrastructure to make it easier for scientists to find, aggregate, analyse and store life-science data, This is achieved through open-source bioinformatics software which provides methods and tools to analyse life science data. One purpose of this event was to share the first results from a 40 million euro <a href="https://gdi.onemilliongenomes.eu/">Genomic Data Infrastructure project</a>. This project, which is coordinated by ELIXIR, is creating the infrastructure to allow secure access to Europe’s genome data with the goal of accelerating research of new treatments and therapies for disease, improving healthcare across Europe and beyond.</p>
-<p>Bioconductor gave a workshop at this conference on the ‘Opportunities for Bioconductor and ELIXIR communities to co-develop training infrastructures’. This workshop was introduced by Bioconductor Community Manager, Dr.&nbsp;Maria Doyle, from the University of Limerick, Ireland. Following its introduction, Professor of Cancer Genomics, Aedin Culhane from University of Limerick gave an overview of Bioconductor’s work. Professor of Bioinformatics, Laurent Gatto, from UCLouvain, Belgium and Professor in Data Science, Leo Lahti, from the University of Turku, Finland followed Professor Culhane by speaking about Bioconductor’s training landscape. Dr.&nbsp;Doyle then gave a demo of Bioconductor’s Galaxy training infrastructure and also gave a talk on the future plans/ideas for Bioconductor/ELIXIR collaborations in training.</p>
-<p>Professor Culhane who is director of the Limerick Digital Cancer Centre and sits on the leadership board of Bioconductor emphasized the benefits of connecting the global Bioconductor and ELIXIR bioinformatics communities. She said <em>“The Bioconductor and ELIXIR active communities are continuously working on improving and expanding functionally. By working together we can better develop, support and disseminate free open source software to the global bioinformatics community and thereby accelerate medical and biological research in treatments for patients with disease and cancer”</em>.</p>
-<p>Dr Doyle coordinates global education and training for Bioconductor and is also the ELIXIR-Ireland training coordinator, commented on the importance of the event for coordination of training resources <em>“It was important for Bioconductor to be present at such an event as it allows us to connect with a wide range of stakeholders, gain insights from diverse perspectives, and foster relationships that could lead to impactful collaborations. These interactions contribute to Bioconductor growth and help us to improve our training offerings, making them more comprehensive, user-friendly, and effective”</em>.</p>
-<p>Ireland’s most cited scientist, Professor Desmond Higgins, Emeritus Professor of Bioinformatics from the University College Dublin was honoured as the keynote speaker at the ninth ELIXIR All Hands international event. Higgins is one of the most cited life scientists in the world for his work on the Clustal suite of bioinformatics software programmes. He spoke about the history of Clustal and the impact that this package has had on bioinformatics research in his keynote speech. <em>“It was a fantastic honour to be invited. I have worked on bioinformatics methods since the mid 1980s. I have given talks in many countries over 40 years but this was one of the few opportunities have had to do this in Dublin, to an international audience.”</em> commented Professor Desmond Higgins.</p>
-<p>Dr Elaine Harrison, ELIXIR’s Communication Officer commented on the success of the event.<em>“The event was a huge success, we were blessed with Dublin sunshine and enjoyed the excellent services of the Convention Centre. With over 90 speakers we ran 25 parallel workshops, 9 mini symposia, 3 plenaries and 2 lunchtime poster sessions.”</em></p>
-<p>The event began and ended with remarks from Dr.&nbsp;Niklas Blomberg, ELIXIR’s director. He highlighted ELIXIR’s achievements over the 10 years and shared information on their plans for their 2024-2028 scientific programme. Dr Blomberg commented on how experts came <em>“from all over Europe and guests from as far afield as Australia and Canada”</em> to attend this event. Three hundred and eighty two people attended the event and one hundred and fourteen people attended the conference remotely. It was brilliant that Bioconductor was involved in such a collaborative and exciting meeting.</p>
-<div class="quarto-figure quarto-figure-left">
-<figure class="figure">
-<p><img src="https://bioconductor.github.io/biocblog/posts/2023-06-16-ELIXIR-allhands-meeting/bioc-elixir.jpg" class="quarto-figure quarto-figure-left figure-img" height="500"></p>
-<figcaption>Maria Doyle, Niklas Blomberg, Aedin Culhane</figcaption>
-</figure>
-</div>
-
-
-
- ]]></description>
-  <category>Bioconductor</category>
-  <guid>https://bioconductor.github.io/biocblog/posts/2023-06-16-ELIXIR-allhands-meeting/</guid>
-  <pubDate>Fri, 16 Jun 2023 00:00:00 GMT</pubDate>
-  <media:content url="https://bioconductor.github.io/biocblog/posts/2023-06-16-ELIXIR-allhands-meeting/elixir-allhands-attendees.jpg" medium="image" type="image/jpeg"/>
 </item>
 <item>
   <title>Emulated build and test of Bioconductor packages for Linux ARM64</title>
