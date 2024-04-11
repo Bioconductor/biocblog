@@ -8,6 +8,7 @@ author:
 date: 2023-06-22
 categories:
   - Bioconductor
+  - Website Redesign
 image: "BC Website redesign - Project timeline.jpg"
 ---
 

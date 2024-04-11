@@ -8,6 +8,7 @@ author:
 date: 2024-02-01
 categories:
   - Bioconductor
+  - Website Redesign
 image: "bioc-new-website.png"
 ---
 
