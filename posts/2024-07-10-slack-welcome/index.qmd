@@ -32,13 +32,9 @@ Here's the updated welcome message:
 **Get Involved:**
 
 -   [**#introductions**](https://community-bioc.slack.com/archives/C36B0HK7W): Introduce yourself and meet the community.
-
 -   [**#developers-forum**](https://community-bioc.slack.com/archives/CLUJWDQF4): Connect with other developers to discuss topics of interest.
-
 -   [**#education-and-training**](https://community-bioc.slack.com/archives/CUKAPEE1Y): Engage with educators and explore training topics.
-
 -   [**#jobs**](https://community-bioc.slack.com/archives/CMC6T5KJ8): Discover or post opportunities relevant to the Bioconductor community.
-
 -   [**#events**](https://community-bioc.slack.com/archives/C073Y21R02W)**:** Share and find information about upcoming conferences, workshops, talks, and other events.
     Use this channel for advertising events and connecting with Bioconductor colleagues attending them.
 
