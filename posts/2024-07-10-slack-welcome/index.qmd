@@ -1,5 +1,5 @@
 ---
-title: "Updated welcome message for the Bioconductor community Slack workspace"
+title: "Updated welcome message for the Bioconductor Community Slack workspace"
 description: |
   Welcome to the Bioconductor Community Slack Workspace! 🎉
 author:
