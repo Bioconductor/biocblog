@@ -1,0 +1,71 @@
+---
+title: "Updated welcome message for the Bioconductor community Slack workspace"
+description: |
+  Welcome to the Bioconductor Community Slack Workspace! 🎉
+author:
+  - name: Maria Doyle
+    url: https://github.com/mblue9
+date: 2024-07-10
+categories:
+  - Bioconductor
+image: "slack-welcome.png"
+editor: 
+  markdown: 
+    wrap: sentence
+---
+
+![](slack-welcome.png){ width=50% fig-align="center"}
+
+Recently, we updated our welcome message in [Bioconductor Slack](https://slack.bioconductor.org) to help new members get oriented and involved more easily.
+Here's the updated welcome message:
+
+------------------------------------------------------------------------
+
+**Welcome to the Bioconductor Community Slack Workspace! 🎉**
+
+**Please start by reading our [Code of Conduct](https://bioconductor.org/about/code-of-conduct/).** It underscores the values all participants are encouraged to uphold, aiming to foster:
+
+-   Diversity and inclusivity
+-   Kindness and a welcoming environment
+-   Openness regarding software implementations
+
+**Get Involved:**
+
+-   [**#introductions**](https://community-bioc.slack.com/archives/C36B0HK7W): Introduce yourself and meet the community.
+
+-   [**#developers-forum**](https://community-bioc.slack.com/archives/CLUJWDQF4): Connect with other developers to discuss topics of interest.
+
+-   [**#education-and-training**](https://community-bioc.slack.com/archives/CUKAPEE1Y): Engage with educators and explore training topics.
+
+-   [**#jobs**](https://community-bioc.slack.com/archives/CMC6T5KJ8): Discover or post opportunities relevant to the Bioconductor community.
+
+-   [**#events**](https://community-bioc.slack.com/archives/C073Y21R02W)**:** Share and find information about upcoming conferences, workshops, talks, and other events.
+    Use this channel for advertising events and connecting with Bioconductor colleagues attending them.
+
+**Explore More Channels**: Check our [channel directory](https://bioconductor.github.io/BiocSlack/BiocSlack.html) for a full list of channels and their activities.
+Interested in starting a new channel?
+Visit [**#channel-requests**](https://community-bioc.slack.com/archives/C072RJ549JS) to propose your idea!
+
+**Special Note for Outreachy Applicants:**
+
+-   [**#outreachy**](https://community-bioc.slack.com/archives/C037LN1HQDB): If you are here as part of the [Outreachy](https://www.outreachy.org/) program, please join the [#outreachy](https://community-bioc.slack.com/archives/C037LN1HQDB) channel specifically set up for discussions related to Outreachy participants.
+
+**Need Help?**
+
+-   **Using Bioconductor Packages**: For questions about using Bioconductor packages, please visit our [support site](https://support.bioconductor.org/).
+    This resource is tailored for users needing assistance with using packages.
+
+-   **Developing Bioconductor Packages**: For questions related to developing or maintaining Bioconductor packages, the [bioc-devel mailing list](https://stat.ethz.ch/mailman/listinfo/bioc-devel) is your go-to resource for support from fellow developers.
+
+**Feedback Wanted**: We value your perspective!
+Feel free to send a direct message to me, [\@Maria Doyle](https://community-bioc.slack.com/team/U014DQGP3SP), your community manager.
+I\'m here to listen and help you navigate our community.
+
+**We\'re thrilled to have you here! Whether you\'re here to learn or share, we look forward to having you as part of our community.**
+
+------------------------------------------------------------------------
+
+This welcome message aims to make the start of new members in the Bioconductor Community Slack Workspace smooth and informative.
+If you have any questions, need further assistance, or have feedback, don't hesitate to reach out.
+
+Thank you for being part of our community!
