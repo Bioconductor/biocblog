@@ -10,7 +10,58 @@
 <atom:link href="https://bioconductor.github.io/biocblog/index.xml" rel="self" type="application/rss+xml"/>
 <description>A blog for the Bioconductor community!</description>
 <generator>quarto-1.5.54</generator>
-<lastBuildDate>Wed, 10 Jul 2024 00:00:00 GMT</lastBuildDate>
+<lastBuildDate>Fri, 12 Jul 2024 00:00:00 GMT</lastBuildDate>
+<item>
+  <title>Bioconductor projects funded by CZI EOSS Cycle 6</title>
+  <dc:creator>Maria Doyle</dc:creator>
+  <link>https://bioconductor.github.io/biocblog/posts/2024-07-12-czi-eoss6-grants/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<p>We are delighted to share the news that five Bioconductor projects were funded as part of the <a href="https://chanzuckerberg.com/eoss/proposals/?cycle=6">Chan Zuckerberg Initiative EOSS Funding Cycle 6</a>.</p>
+<section id="interactive-map-of-bioconductor-czi-eoss6-collaborators" class="level4">
+<h4 class="anchored" data-anchor-id="interactive-map-of-bioconductor-czi-eoss6-collaborators">Interactive Map of Bioconductor CZI EOSS6 Collaborators</h4>
+<iframe src="map.html" width="100%" height="500">
+</iframe>
+<ul>
+<li><p><strong>Delivering High-Quality Bioconductor Training for a Worldwide Community</strong><br>
+To expand the global Bioconductor-Carpentries training program, increase equity and accessibility using culturally sensitive AI translation, and build capacity for workshops in Africa.<br>
+<strong>Leads:</strong> Aedin Culhane (University of Limerick) and Maria Doyle (University of Limerick).<br>
+<strong>Collaborators:</strong> Laurent Gatto (Institut de Duve), Charlotte Soneson (Friedrich Miescher Institute for Biomedical Research), Kozo Nishida (Tokyo University of Agriculture and Technology), Trushar Shah (International Institute of Tropical Agriculture), Umar Ahmad (Bauchi State University), Zedias Chikwambi (African Institute of Biomedical Sciences and Technology).<br>
+<strong>Project links:</strong> <a href="https://workinggroups.bioconductor.org/currently-active-working-groups-committees.html#education">Bioconductor education group</a></p></li>
+<li><p><strong>Supporting and Sustaining Bioconductor Developers</strong><br>
+To champion Bioconductor developers through better community and technical infrastructure, accessibility of documentation, support for developer working groups, and cross-community collaborations.<br>
+<strong>Leads:</strong> Maria Doyle (University of Limerick) and Aedin Culhane (University of Limerick).<br>
+<strong>Collaborators:</strong> Lori Shepherd (Roswell Park Comprehensive Cancer Center), Vince Carey (Harvard Medical School), Robert Shear (Harvard Medical School), Sean Davis (University of Colorado Anschutz School of Medicine)</p></li>
+<li><p><strong>GPU-accelerated Computing in Bioconductor</strong><br>
+To support GPU-accelerated Bioconductor packages through continuous integration, user-friendly packaging of system-level dependencies, and foundational packages for Bioconductor GPU programming.<br>
+<strong>Leads:</strong> Levi Waldron (CUNY Graduate School of Public Health and Health Policy) and Davide Risso (University of Padua).<br>
+<strong>Collaborators:</strong> Gabriele Sales (University of Padua)</p></li>
+<li><p><strong>Ontological Resource Tagging and Discovery for Bioconductor</strong><br>
+To enhance discoverability and use of Bioconductor packages and data and teaching resources by tagging them with formal vocabulary and concept relations in ontologies like EDAM.<br>
+<strong>Lead:</strong> Vincent Carey (Harvard Medical School).<br>
+<strong>Collaborators:</strong> Claire Rioualen (Institut Français de Bioinformatique), Hervé Ménager (Institut Pasteur and Institut Français de Bioinformatique), Maria Doyle (University of Limerick), Lori Shepherd-Kern (Roswell Park Comprehensive Cancer Center), Hervé Pages (Fred Hutchinson Cancer Research Center).<br>
+<strong>Project links:</strong> <a href="https://workinggroups.bioconductor.org/currently-active-working-groups-committees.html#edam-collaboration">Bioconductor EDAM collaboration working group</a></p></li>
+<li><p><strong>Opening Omics Data Science to All with Tidyomics</strong><br>
+To administer and expand the scope of the Tidyomics Project, enabling computational biologists to employ a user-friendly grammar to manipulate rich biological datasets across omics and platforms. Note: This proposal was funded by Wellcome Trust as part of the co-funded EOSS Cycle 6.<br>
+<strong>Leads:</strong> Michael Love (University of North Carolina Chapel Hill) and Stefano Mangiola (University of Adelaide).<br>
+<strong>Collaborators:</strong> Dozens of collaborating developers listed on tidyomics GitHub.<br>
+<strong>Project links:</strong> <a href="https://github.com/tidyomics">https://github.com/tidyomics</a></p></li>
+</ul>
+<p>More details on the projects will be shared in future posts. Stay tuned!</p>
+
+
+</section>
+
+ ]]></description>
+  <category>Bioconductor</category>
+  <guid>https://bioconductor.github.io/biocblog/posts/2024-07-12-czi-eoss6-grants/</guid>
+  <pubDate>Fri, 12 Jul 2024 00:00:00 GMT</pubDate>
+  <media:content url="https://bioconductor.github.io/biocblog/posts/2024-07-12-czi-eoss6-grants/map.png" medium="image" type="image/png" height="103" width="144"/>
+</item>
 <item>
   <title>Updated welcome message for the Bioconductor Community Slack workspace</title>
   <dc:creator>Maria Doyle</dc:creator>
@@ -2776,34 +2827,6 @@ Note
   <category>education</category>
   <guid>https://bioconductor.github.io/biocblog/posts/2022-07-12-carpentries-membership/</guid>
   <pubDate>Tue, 12 Jul 2022 00:00:00 GMT</pubDate>
-</item>
-<item>
-  <title>Join the Bioconductor Community Advisory Board</title>
-  <dc:creator>Kozo Nishida</dc:creator>
-  <dc:creator>Matt Ritchie</dc:creator>
-  <link>https://bioconductor.github.io/biocblog/posts/2022-01-31-join-the-bioconductor-community-advisory-board/</link>
-  <description><![CDATA[ 
-
-
-
-
-
-<p>The Bioconductor <a href="https://bioconductor.org/about/community-advisory-board/">Community Advisory Board</a> (established in 2020) is seeking nominations from new members.</p>
-<p>The board’s goal is to coordinate training and outreach activities that serve the global Bioconductor community and to ensure that interactions between community members are productive and respectful at all times.</p>
-<p>We were asked what the CAB looks like at <a href="https://www.youtube.com/watch?v=LTT1i_ACpxc">last year’s BioC2021 “Meet the CAB” session</a>. <iframe src="https://www.youtube.com/embed/LTT1i_ACpxc" width="600" height="500" data-external="1"> </iframe> You can see the recording of this presentation on YouTube above.</p>
-<p>A transcript of Questions and Answers from this presentation is summarised on <a href="https://www.bioconductor.org/about/community-advisory-board/#:~:text=EMBL%2C%20Germany.%20website-,Q%26A,-The%20following%20Q">the CAB introduction page on bioconductor.org</a>.</p>
-<p>If you have further questions about how the CAB works, you can also ask them interactively in <a href="https://bioc-community.herokuapp.com/">our community Slack</a> (via the channel named <strong>community-advisory-board</strong>) or by emailing the current board (cab at bioconductor.org).</p>
-<p>Also see <a href="https://support.bioconductor.org/p/9141753/">this post on the Bioconductor Support Forum</a> from Lori Shepherd (CAB Secretary) for instructions on how to apply to become a CAB member. Applications for the current round close on 25th Feb 2022.</p>
-<p>We look forward to receiving your nomination!</p>
-
-
-
- ]]></description>
-  <category>BioC</category>
-  <category>CAB</category>
-  <guid>https://bioconductor.github.io/biocblog/posts/2022-01-31-join-the-bioconductor-community-advisory-board/</guid>
-  <pubDate>Tue, 01 Feb 2022 00:00:00 GMT</pubDate>
-  <media:content url="https://bioconductor.github.io/biocblog/posts/2022-01-31-join-the-bioconductor-community-advisory-board/MeetTheCabBioc2021.png" medium="image" type="image/png" height="83" width="144"/>
 </item>
 </channel>
 </rss>
