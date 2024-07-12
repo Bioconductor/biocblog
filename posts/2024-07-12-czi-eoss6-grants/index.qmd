@@ -1,0 +1,156 @@
+---
+title: "Bioconductor projects funded by CZI EOSS Cycle 6"
+description: |
+  Announcing the Bioconductor projects funded in the Chan Zuckerberg Initiative EOSS Cycle 6
+author:
+  - name: Maria Doyle
+    url: https://github.com/mblue9
+date: 2024-07-12
+categories:
+  - Bioconductor
+image: "map.png"
+execute:
+  echo: false
+  message: false
+  warning: false
+editor: 
+  markdown: 
+    wrap: sentence
+---
+
+```{r}
+library(dplyr)
+library(ggplot2)
+library(ggmap)
+library(plotly)
+library(jpeg)
+library(grid)
+library(base64enc)
+library(reticulate)
+
+# Need miniconda for reticulate & kaleido to create static plotly plot.
+# Set the path to existing Miniconda installation
+miniconda_path <- "~/miniconda3"
+
+# Use existing Miniconda installation
+reticulate::use_condaenv(condaenv = "base", conda = file.path(miniconda_path, "bin/conda"))
+
+# Install packages in the base environment of  existing Miniconda installation
+#reticulate::conda_install("base", "python-kaleido")
+#reticulate::conda_install("base", "plotly", channel = "plotly")
+
+projects <- tibble::tribble(
+  ~Name, ~Affiliation, ~Location, ~lon, ~lat,
+  "Aedin Culhane", "University of Limerick", "Limerick", -8.572, 52.673,
+  "Maria Doyle", "University of Limerick", "Limerick", -8.572, 52.673,
+  "Laurent Gatto", "Institut de Duve", "Brussels", 4.3499, 50.8467,
+  "Charlotte Soneson", "Friedrich Miescher Institute for Biomedical Research", "Basel", 7.5807, 47.5596,
+  "Kozo Nishida", "Tokyo University of Agriculture and Technology", "Tokyo", 139.7608, 35.6814,
+  "Trushar Shah", "International Institute of Tropical Agriculture", "Nairobi", 36.8219, -1.2921,
+  "Umar Ahmad", "Bauchi State University", "Gadau", 9.8409, 10.286,
+  "Zedias Chikwambi", "African Institute of Biomedical Sciences and Technology", "Harare", 31.0418, -17.8312,
+  "Lori Shepherd", "Roswell Park Comprehensive Cancer Center", "Buffalo", -78.8652, 42.9027,
+  "Vince Carey", "Harvard Medical School", "Boston", -71.1062, 42.3374,
+  "Robert Shear", "Harvard Medical School", "Boston", -71.1062, 42.3374,
+  "Sean Davis", "University of Colorado Anschutz School of Medicine", "Denver", -104.841, 39.742,
+  "Levi Waldron", "CUNY Graduate School of Public Health and Health Policy", "New York", -74.006, 40.7128,
+  "Davide Risso", "University of Padua", "Padua", 11.8768, 45.4064,
+  "Gabriele Sales", "University of Padua", "Padua", 11.8768, 45.4064,
+  "Claire Rioualen", "Institut Français de Bioinformatique", "Paris", 2.3522, 48.8566,
+  "Hervé Ménager", "Institut Pasteur", "Paris", 2.3522, 48.8566,
+  "Lori Shepherd-Kern", "Roswell Park Comprehensive Cancer Center", "Buffalo", -78.8652, 42.9027,
+  "Hervé Pages", "Fred Hutchinson Cancer Research Center", "Seattle", -122.3363, 47.6255,
+  "Michael Love", "University of North Carolina Chapel Hill", "Chapel Hill", -79.0469, 35.9049,
+  "Stefano Mangiola", "University of Adelaide", "Adelaide", 138.6007, -34.9285
+)
+
+
+# Generate the map using ggplot2
+world <- map_data("world")
+world <- subset(world, region != "Antarctica")
+
+gg <- ggplot() +
+  geom_polygon(data = world, aes(x = long, y = lat, group = group), fill = "grey") +
+  geom_jitter(data = projects, aes(x = lon, y = lat, text = paste(Name, Affiliation, sep = "\n")), size = 2, color = 'red') +
+  theme_void()
+
+# Convert ggplot to plotly
+p <- ggplotly(gg, tooltip = "text")
+
+# Add logos to plotly
+p <- p %>%
+  layout(
+    images = list(
+      list(
+        source = base64enc::dataURI(file = "czi-logo.jpg"),
+        xref = "paper", yref = "paper",
+        x = 0.01, y = 0.5,
+        sizex = 0.2, sizey = 0.2,
+        xanchor = "left", yanchor = "middle"
+      ),
+      list(
+        source = base64enc::dataURI(file = "bioconductor_logo.jpg"),
+        xref = "paper", yref = "paper",
+        x = 0.01, y = 0.25,
+        sizex = 0.2, sizey = 0.2,
+        xanchor = "left", yanchor = "middle"
+      )
+    ),
+    xaxis = list(
+      showline = FALSE,
+      zeroline = FALSE,
+      showticklabels = FALSE,
+      showgrid = FALSE
+    ),
+    yaxis = list(
+      showline = FALSE,
+      zeroline = FALSE,
+      showticklabels = FALSE,
+      showgrid = FALSE
+    ))
+
+
+# Save the map as an HTML file for embedding
+htmlwidgets::saveWidget(p, file = "map.html")
+
+# Save the map as a PNG image for thumbnail
+save_image(p, "map.png")
+```
+
+
+We are delighted to share the news that five Bioconductor projects were funded as part of the [Chan Zuckerberg Initiative EOSS Funding Cycle 6](https://chanzuckerberg.com/eoss/proposals/?cycle=6).
+
+#### Interactive Map of Bioconductor CZI EOSS6 Collaborators
+
+<iframe src="map.html" width="100%" height="500"></iframe>
+
+- **Delivering High-Quality Bioconductor Training for a Worldwide Community**  
+  To expand the global Bioconductor-Carpentries training program, increase equity and accessibility using culturally sensitive AI translation, and build capacity for workshops in Africa.  
+  **Leads:** Aedin Culhane (University of Limerick) and Maria Doyle (University of Limerick).  
+  **Collaborators:** Laurent Gatto (Institut de Duve), Charlotte Soneson (Friedrich Miescher Institute for Biomedical Research), Kozo Nishida (Tokyo University of Agriculture and Technology), Trushar Shah (International Institute of Tropical Agriculture), Umar Ahmad (Bauchi State University), Zedias Chikwambi (African Institute of Biomedical Sciences and Technology).  
+  **Project links:** [Bioconductor education group](https://workinggroups.bioconductor.org/currently-active-working-groups-committees.html#education)
+
+- **Supporting and Sustaining Bioconductor Developers**  
+  To champion Bioconductor developers through better community and technical infrastructure, accessibility of documentation, support for developer working groups, and cross-community collaborations.  
+  **Leads:** Maria Doyle (University of Limerick) and Aedin Culhane (University of Limerick).  
+  **Collaborators:** Lori Shepherd (Roswell Park Comprehensive Cancer Center), Vince Carey (Harvard Medical School), Robert Shear (Harvard Medical School), Sean Davis (University of Colorado Anschutz School of Medicine)
+
+- **GPU-accelerated Computing in Bioconductor**  
+  To support GPU-accelerated Bioconductor packages through continuous integration, user-friendly packaging of system-level dependencies, and foundational packages for Bioconductor GPU programming.  
+  **Leads:** Levi Waldron (CUNY Graduate School of Public Health and Health Policy) and Davide Risso (University of Padua).  
+  **Collaborators:** Gabriele Sales (University of Padua)
+
+- **Ontological Resource Tagging and Discovery for Bioconductor**  
+  To enhance discoverability and use of Bioconductor packages and data and teaching resources by tagging them with formal vocabulary and concept relations in ontologies like EDAM.  
+  **Lead:** Vincent Carey (Harvard Medical School).  
+  **Collaborators:** Claire Rioualen (Institut Français de Bioinformatique), Hervé Ménager (Institut Pasteur and Institut Français de Bioinformatique), Maria Doyle (University of Limerick), Lori Shepherd-Kern (Roswell Park Comprehensive Cancer Center), Hervé Pages (Fred Hutchinson Cancer Research Center).  
+  **Project links:** [Bioconductor EDAM collaboration working group](https://workinggroups.bioconductor.org/currently-active-working-groups-committees.html#edam-collaboration)
+
+- **Opening Omics Data Science to All with Tidyomics**  
+  To administer and expand the scope of the Tidyomics Project, enabling computational biologists to employ a user-friendly grammar to manipulate rich biological datasets across omics and platforms. Note: This proposal was funded by Wellcome Trust as part of the co-funded EOSS Cycle 6.  
+  **Leads:** Michael Love (University of North Carolina Chapel Hill) and Stefano Mangiola (University of Adelaide).  
+  **Collaborators:** Dozens of collaborating developers listed on tidyomics GitHub.  
+  **Project links:** [https://github.com/tidyomics](https://github.com/tidyomics)  
+
+
+More details on the projects will be shared in future posts. Stay tuned!
