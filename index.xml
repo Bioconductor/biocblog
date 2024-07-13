@@ -47,7 +47,7 @@ To enhance discoverability and use of Bioconductor packages and data and teachin
 <strong>Project links:</strong> <a href="https://workinggroups.bioconductor.org/currently-active-working-groups-committees.html#edam-collaboration">Bioconductor EDAM collaboration working group</a></p></li>
 <li><p><strong>Opening Omics Data Science to All with Tidyomics</strong><br>
 To administer and expand the scope of the Tidyomics Project, enabling computational biologists to employ a user-friendly grammar to manipulate rich biological datasets across omics and platforms. Note: This proposal was funded by Wellcome Trust as part of the co-funded EOSS Cycle 6.<br>
-<strong>Leads:</strong> Michael Love (University of North Carolina Chapel Hill) and Stefano Mangiola (University of Adelaide).<br>
+<strong>Leads:</strong> Michael Love (University of North Carolina Chapel Hill) and Stefano Mangiola (SAiGENCI, University of Adelaide).<br>
 <strong>Collaborators:</strong> Dozens of collaborating developers listed on tidyomics GitHub.<br>
 <strong>Project links:</strong> <a href="https://github.com/tidyomics">https://github.com/tidyomics</a></p></li>
 </ul>
