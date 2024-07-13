@@ -148,7 +148,7 @@ We are delighted to share the news that five Bioconductor projects were funded a
 
 - **Opening Omics Data Science to All with Tidyomics**  
   To administer and expand the scope of the Tidyomics Project, enabling computational biologists to employ a user-friendly grammar to manipulate rich biological datasets across omics and platforms. Note: This proposal was funded by Wellcome Trust as part of the co-funded EOSS Cycle 6.  
-  **Leads:** Michael Love (University of North Carolina Chapel Hill) and Stefano Mangiola (University of Adelaide).  
+  **Leads:** Michael Love (University of North Carolina Chapel Hill) and Stefano Mangiola (SAiGENCI, University of Adelaide).  
   **Collaborators:** Dozens of collaborating developers listed on tidyomics GitHub.  
   **Project links:** [https://github.com/tidyomics](https://github.com/tidyomics)  
 
