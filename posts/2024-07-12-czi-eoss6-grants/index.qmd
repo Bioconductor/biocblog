@@ -57,11 +57,11 @@ projects <- tibble::tribble(
   "Davide Risso", "University of Padua", "Padua", 11.8768, 45.4064,
   "Gabriele Sales", "University of Padua", "Padua", 11.8768, 45.4064,
   "Claire Rioualen", "Institut Français de Bioinformatique", "Paris", 2.3522, 48.8566,
-  "Hervé Ménager", "Institut Pasteur", "Paris", 2.3522, 48.8566,
+  "Hervé Ménager", "Institut Pasteur and Institut Français de Bioinformatique", "Paris", 2.3522, 48.8566,
   "Lori Shepherd-Kern", "Roswell Park Comprehensive Cancer Center", "Buffalo", -78.8652, 42.9027,
   "Hervé Pages", "Fred Hutchinson Cancer Research Center", "Seattle", -122.3363, 47.6255,
   "Michael Love", "University of North Carolina Chapel Hill", "Chapel Hill", -79.0469, 35.9049,
-  "Stefano Mangiola", "University of Adelaide", "Adelaide", 138.6007, -34.9285
+  "Stefano Mangiola", "SAiGENCI, University of Adelaide", "Adelaide", 138.6007, -34.9285
 )
 
 
