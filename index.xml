@@ -9,8 +9,50 @@
 <link>https://bioconductor.github.io/biocblog/</link>
 <atom:link href="https://bioconductor.github.io/biocblog/index.xml" rel="self" type="application/rss+xml"/>
 <description>A blog for the Bioconductor community!</description>
-<generator>quarto-1.5.54</generator>
-<lastBuildDate>Fri, 12 Jul 2024 00:00:00 GMT</lastBuildDate>
+<generator>quarto-1.5.55</generator>
+<lastBuildDate>Sat, 20 Jul 2024 00:00:00 GMT</lastBuildDate>
+<item>
+  <title>Invitation to participate in the new R-Ladies–Bioconductor collaboration!</title>
+  <dc:creator>Janani Ravi</dc:creator>
+  <link>https://bioconductor.github.io/biocblog/posts/2024-07-20-rladies-bioconductor-collaboration/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://bioconductor.github.io/biocblog/posts/2024-07-20-rladies-bioconductor-collaboration/rladies-bioc.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:50.0%"></p>
+</figure>
+</div>
+<p>We are excited to invite you to join a new collaboration between two global communities, each committed to building diverse developer communities around the world, R-Ladies and Bioconductor.</p>
+<p><a href="http://rladies.org">R-Ladies</a> is a worldwide organization whose mission is to promote gender diversity in the R community. Starting in 2012 in San Francisco, USA, R-Ladies now has expanded to more than 200 chapters spanning 60+ countries around the world. R-Ladies supports endeavors with other like minded communities such as <a href="https://latin-r.com/en/">LatinR</a>, <a href="https://rainbowr.netlify.app/">RainbowR</a>, <a href="https://mircommunity.com/">miR</a>, <a href="https://arabr.github.io">ArabR</a>, <a href="https://r4africa.org/">AfricaR</a>, and <a href="https://github.com/asiar-community">AsiaR</a>.</p>
+<p><a href="https://www.bioconductor.org/">Bioconductor</a> develops, supports, and disseminates free open-source software that facilitates rigorous and reproducible analysis of data from current and emerging biological assays. The organization is dedicated to building a diverse, collaborative, and welcoming community of developers and data scientists. To this end, they have periodically elected scientific, technical, and community advisory boards committed to the technical and community aspects of Bioconductor.</p>
+<p>We are excited to begin a new initiative that aims to connect R-Ladies members who are also Bioconductor users or developers. This effort is designed as a key step towards bringing together passionate individuals committed to expanding diversity in the computational biology and bioinformatics developer space.</p>
+<p>Here are a few concrete ways in which we want to get the ball rolling:</p>
+<ul>
+<li>Announce each others’ events on websites or social media</li>
+<li>Jointly host events</li>
+<li>Promote R-Ladies local watch parties of live-casted or pre-recorded events and professional networking events for Bioconductor conferences (BioC: BioC North America, BioCAsia, EuroBioC) Highlight Bioconductor speakers at R + computational biology R-Ladies events across chapters</li>
+</ul>
+<p><strong>Get Involved</strong></p>
+<p>Excited to join us in this partnership? Here’s how you can get started:</p>
+<ul>
+<li>Learn more about our joint efforts at the <a href="https://workinggroups.bioconductor.org/currently-active-working-groups-committees.html#r-ladies-and-bioc">Bioconductor Working Group page</a>.</li>
+<li>Join our #rladies channel in <a href="https://slack.bioconductor.org/">Bioconductor Slack</a> to stay updated and connect with the community.</li>
+</ul>
+<p>We're kicking off this journey with local networking in R-Ladies chapters worldwide (e.g., <a href="https://www.meetup.com/rladies-aurora/events/302185687/">Aurora, Colorado</a>) and an R-Ladies meetup in Michigan during BioC 2024, co-hosted with <a href="https://www.meetup.com/rladies-east-lansing/events/302185529/">R-Ladies East Lansing</a> (Michigan)!</p>
+<p>We’re looking forward to building something great together. Let us know what you think, share your ideas, or just say hi!</p>
+
+
+
+ ]]></description>
+  <category>Bioconductor</category>
+  <guid>https://bioconductor.github.io/biocblog/posts/2024-07-20-rladies-bioconductor-collaboration/</guid>
+  <pubDate>Sat, 20 Jul 2024 00:00:00 GMT</pubDate>
+  <media:content url="https://bioconductor.github.io/biocblog/posts/2024-07-20-rladies-bioconductor-collaboration/rladies-bioc.png" medium="image" type="image/png" height="94" width="144"/>
+</item>
 <item>
   <title>Bioconductor projects funded by CZI EOSS Cycle 6</title>
   <dc:creator>Maria Doyle</dc:creator>
@@ -2800,33 +2842,6 @@ Note
   <guid>https://bioconductor.github.io/biocblog/posts/2022-10-22-awesome-lists/</guid>
   <pubDate>Sat, 22 Oct 2022 00:00:00 GMT</pubDate>
   <media:content url="https://bioconductor.github.io/biocblog/posts/2022-10-22-awesome-lists/awesome.png" medium="image" type="image/png" height="72" width="144"/>
-</item>
-<item>
-  <title>Bioconductor becomes a Carpentries member organization</title>
-  <dc:creator>Charlotte Soneson</dc:creator>
-  <dc:creator>Laurent Gatto</dc:creator>
-  <dc:creator>Toby Hodges</dc:creator>
-  <dc:creator>Jenny Drnevich</dc:creator>
-  <dc:creator>Robert Castelo</dc:creator>
-  <dc:creator>Susan Holmes</dc:creator>
-  <link>https://bioconductor.github.io/biocblog/posts/2022-07-12-carpentries-membership/</link>
-  <description><![CDATA[ 
-
-
-
-
-
-<p>The <a href="https://bioconductor.org/help/education-training/">Bioconductor Teaching Committee</a> is happy to announce that starting from August 1, 2022 and <a href="https://chanzuckerberg.com/eoss/proposals/bioconductor-high-quality-training-and-support-for-a-worldwide-community/">supported by the Chan Zuckerberg Initiative</a>, Bioconductor will be a member of <a href="https://carpentries.org/">The Carpentries</a>, a global community of volunteers who develop and teach interactive, hands-on workshops on computing and data skills, addressing basic training needs that are unmet in most disciplines.</p>
-<p>Among other things, The Carpentries membership enables us to give 15 people from the Bioconductor community the opportunity to follow <a href="https://carpentries.org/become-instructor/">The Carpentries’ Instructor Training program</a> and become certified Carpentries Instructors. Certified Instructors can co-teach Carpentries workshops associated with Bioconductor events, and also have the opportunity to teach as part of a team at other institutions in The Carpentries network, meeting others with similar skills who enjoy sharing them. We would also encourage you to engage with the Bioconductor Teaching Committee and community in other ways, e.g.&nbsp;by participating in our monthly meetings and <a href="https://carpentries.org/blog/2021/07/incubator-lesson-spotlight-rna-seq-data-analysis/">contributing</a> to the Bioconductor-focused <a href="https://bioconductor.org/help/education-training/">training material</a> currently in development.</p>
-<p>The Carpentries Instructor Training is primarily focused on evidence-based teaching practices and does not include technical skills training. It is expected that trainees will have or will develop the technical skills necessary to guide learners through the entry level curricula for one or more Data Carpentry, Library Carpentry, or Software Carpentry workshops. Instructor Training is held remotely in either a 2-day, full day format or a 4-day, half-day format, and will be free-of-charge to selected Bioconductor community members.</p>
-<p>If you are interested in education and want to get involved in the Bioconductor teaching community as a certified Carpentries Instructor, please fill <a href="https://forms.gle/HvnhkZZkhEE54vqL9">this form</a> to express your interest. Suitable candidates will be selected on a rolling basis until all spots are filled and before January 2023. If you have questions, don’t hesitate to reach out to education@bioconductor.org.</p>
-
-
-
- ]]></description>
-  <category>education</category>
-  <guid>https://bioconductor.github.io/biocblog/posts/2022-07-12-carpentries-membership/</guid>
-  <pubDate>Tue, 12 Jul 2022 00:00:00 GMT</pubDate>
 </item>
 </channel>
 </rss>
