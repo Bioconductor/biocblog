@@ -1,0 +1,49 @@
+---
+title: "Invitation to participate in the new R-Ladies–Bioconductor collaboration!"
+description: |
+  Announcing a new collaboration between R-Ladies and Bioconductor
+author:
+  - name: Janani Ravi
+    url: https://github.com/jananiravi
+date: 2024-07-20
+categories:
+  - Bioconductor
+image: "rladies-bioc.png"
+editor: 
+  markdown: 
+    wrap: sentence
+---
+
+![](rladies-bioc.png){ width=50% fig-align="center"}
+
+We are excited to invite you to join a new collaboration between two global communities, each committed to building diverse developer communities around the world, R-Ladies and Bioconductor.
+
+[R-Ladies](http://rladies.org) is a worldwide organization whose mission is to promote gender diversity in the R community.
+Starting in 2012 in San Francisco, USA, R-Ladies now has expanded to more than 200 chapters spanning 60+ countries around the world.
+R-Ladies supports endeavors with other like minded communities such as [LatinR](https://latin-r.com/en/), [RainbowR](https://rainbowr.netlify.app/), [miR](https://mircommunity.com/), [ArabR](https://arabr.github.io), [AfricaR](https://r4africa.org/), and [AsiaR](https://github.com/asiar-community).
+
+[Bioconductor](https://www.bioconductor.org/) develops, supports, and disseminates free open-source software that facilitates rigorous and reproducible analysis of data from current and emerging biological assays.
+The organization is dedicated to building a diverse, collaborative, and welcoming community of developers and data scientists.
+To this end, they have periodically elected scientific, technical, and community advisory boards committed to the technical and community aspects of Bioconductor.
+
+We are excited to begin a new initiative that aims to connect R-Ladies members who are also Bioconductor users or developers.
+This effort is designed as a key step towards bringing together passionate individuals committed to expanding diversity in the computational biology and bioinformatics developer space.
+
+Here are a few concrete ways in which we want to get the ball rolling:
+
+-   Announce each others' events on websites or social media
+-   Jointly host events
+-   Promote R-Ladies local watch parties of live-casted or pre-recorded events and professional networking events for Bioconductor conferences (BioC: BioC North America, BioCAsia, EuroBioC) Highlight Bioconductor speakers at R + computational biology R-Ladies events across chapters
+
+**Get Involved**
+
+Excited to join us in this partnership?
+Here's how you can get started:
+
+-   Learn more about our joint efforts at the [Bioconductor Working Group page](https://workinggroups.bioconductor.org/currently-active-working-groups-committees.html#r-ladies-and-bioc).
+-   Join our #rladies channel in [Bioconductor Slack](https://slack.bioconductor.org/) to stay updated and connect with the community.
+
+We\'re kicking off this journey with local networking in R-Ladies chapters worldwide (e.g., [Aurora, Colorado](https://www.meetup.com/rladies-aurora/events/302185687/)) and an R-Ladies meetup in Michigan during BioC 2024, co-hosted with [R-Ladies East Lansing](https://www.meetup.com/rladies-east-lansing/events/302185529/) (Michigan)!
+
+We're looking forward to building something great together.
+Let us know what you think, share your ideas, or just say hi!
