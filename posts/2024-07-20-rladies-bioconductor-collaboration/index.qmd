@@ -19,8 +19,7 @@ editor:
 We are excited to invite you to join a new collaboration between two global communities, each committed to building diverse developer communities around the world, R-Ladies and Bioconductor.
 
 [R-Ladies](http://rladies.org) is a worldwide organization whose mission is to promote gender diversity in the R community.
-Starting in 2012 in San Francisco, USA, R-Ladies now has expanded to more than 200 chapters spanning 60+ countries around the world.
-R-Ladies supports endeavors with other like minded communities such as [LatinR](https://latin-r.com/en/), [RainbowR](https://rainbowr.netlify.app/), [miR](https://mircommunity.com/), [ArabR](https://arabr.github.io), [AfricaR](https://r4africa.org/), and [AsiaR](https://github.com/asiar-community).
+R-Ladies Global started in 2016 and has expanded to more than 200 chapters in 60+ countries worldwide.
 
 [Bioconductor](https://www.bioconductor.org/) develops, supports, and disseminates free open-source software that facilitates rigorous and reproducible analysis of data from current and emerging biological assays.
 The organization is dedicated to building a diverse, collaborative, and welcoming community of developers and data scientists.
@@ -37,7 +36,7 @@ Here are a few concrete ways in which we want to get the ball rolling:
 
 **Get Involved**
 
-Excited to join us in this partnership?
+Excited to join us in this initiative?
 Here's how you can get started:
 
 -   Learn more about our joint efforts at the [Bioconductor Working Group page](https://workinggroups.bioconductor.org/currently-active-working-groups-committees.html#r-ladies-and-bioc).
