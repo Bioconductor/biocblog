@@ -48,7 +48,7 @@ She answered questions about her packages on the Bioconductor support site, and 
 
 ::: {#fig-video}
 
-{{< video https://youtu.be/BXX-Q7HosnM?si=gF_3MakRwnA94gAB&t=2070 >}}
+{{< video https://www.youtube.com/embed/BXX-Q7HosnM?start=2070 >}}
 
 Bea presenting her short talk at the virtual BioC2021 conference
 
