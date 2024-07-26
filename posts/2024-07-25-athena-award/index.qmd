@@ -18,6 +18,8 @@ editor:
     wrap: sentence
 ---
 
+*Spanish and Catalan versions of this post can be found here [TODO: add link when available].*
+
 Beatriz Calvo-Serra (Barcelona, Feb. 2nd, 1996 - Jan. 10th, 2024) was a PhD student who was passionate about computational biology and an active and valued contributor to Bioconductor. We celebrate Bea’s achievements and are inspired by her determination, as she overcame many obstacles to pursue her passion for science. She lived and worked with the aid of a powered wheelchair due to a congenital myopathy caused by a rare recessive mutation in the Ryanodine Receptor 1 (RYR1) gene. Bea sadly passed away on January 10th, 2024. We mourn her loss to our community and offer our condolences to her family, friends, and colleagues. 
 
 Bea's journey was marked by significant achievements. Her potential for academic excellence was evident early in her education. In 2014, she graduated with honors from high school, and between 2014 and 2018, she pursued a degree in Human Biology at the [Pompeu Fabra University (UPF)](https://www.upf.edu) in Barcelona, Spain. This was a significant challenge for both her and the university, as she was the first student with more than 90% physical disability at the UPF campus of life sciences. However, Bea faced this challenge with enthusiasm and patience, working closely with the [UPF Inclusion office](https://www.upf.edu/web/upfinclusio) to make the campus accessible. Her efforts have left a lasting legacy, with adapted lecture rooms, computer rooms, toilets, and other facilities now benefiting future students.
@@ -28,7 +30,10 @@ Shortly after, in 2019-20, she joined the PhD Programme in Biomedicine at the De
 
 In the few years she worked towards her PhD, Bea was an active contributor to the Bioconductor project. She developed the software packages [atena](https://bioconductor.org/packages/atena) and [gDNAx](https://bioconductor.org/packages/gDNAx). Her kindness, strength, and endurance will always be remembered. She answered questions about her packages on the Bioconductor support site, and participated online in the 2021 and 2022 editions of the North American and European Bioconductor conferences, respectively.
 
-Bea helped us understand that members of our community may have logistical challenges with transportation and in-person attendance.  Virtual access enabled her to participate and present her work at EuroBioc 2022 in Heidelberg. We will ensure continued virtually access to our conferences as it makes participation and contribution to Bioconductor more inclusive.
+Below is the video of Bea presenting her short talk at the virtual BioC2021 conference.
+{{< video https://youtu.be/BXX-Q7HosnM?si=gF_3MakRwnA94gAB&t=2070  title='Bea presenting her short talk at the virtual BioC2021 conference' >}}
+
+Bea helped us understand that members of our community may have logistical challenges with transportation and in-person attendance. Virtual access enabled her to participate and present her work at the BioC2021 virtual conference, and at EuroBioC 2022 in Heidelberg. We will ensure continued virtual access to our conferences, where possible, as it makes participation and contribution to Bioconductor more inclusive.
 
 In recognition of her outstanding contributions and the inspiration she provides to the community, we are honored to create this award, the Athena Award, and posthumously award the inaugural Bioconductor Athena Award to Bea. This award celebrates her strength and resilience in overcoming challenges and her community spirit. Her kindness and generosity, her commitment to improving inclusion, especially for those with disabilities, and most of all, her passion to contribute to Bioconductor. Bea affirms core values of Bioconductor. 
 
@@ -43,7 +48,6 @@ The [Bioconductor community values](https://www.bioconductor.org/about/code-of-c
 Bea’s Bioconductor package [atena](https://bioconductor.org/packages/atena) was aptly named. We name this award in her honor. Athena was the Greek goddess of wisdom, known for her courage in the face of adversity. With intellect to navigate challenges and unyielding courage Athena is the symbol of empowerment and inspiration. The Bioconductor Athena Award will celebrate our community members, who overcome challenges to participate and contribute to Bioconductor.
 
 We are grateful to Robert Castelo, Bea’s PhD supervisor, and Bea’s family and friends. This posthumous award will be presented in person to her family at EuroBioc2024 in Oxford in September.
-
 
 ![Bea presenting a poster on her atena Bioconductor package at ECCB 2022 in Sitges, Spain.](BeaECCB2022.jpg){height=500px}
 
