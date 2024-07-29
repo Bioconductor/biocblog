@@ -1,0 +1,70 @@
+---
+title: "Beatriz Calvo-Serra: ganadora inaugural del Premio Bioconductor Athena"
+description: | 
+ Celebrando las contribuciones de Bea, su resiliencia y el premio inaugural Athena en su honor.
+author:
+  - name: Robert Castelo
+    url: https://github.com/rcastelo
+  - name: Maria Doyle
+    url: https://github.com/mblue9
+  - name: Aedin Culhane
+    url: https://github.com/aedin
+date: 2024-07-29
+image: "BeaECCB2022.jpg"
+editor: 
+  markdown: 
+    wrap: sentence
+lang: es
+---
+
+*Traducido al español por Robert Castelo.*
+
+Beatriz Calvo-Serra (Barcelona, 2 de febrero de 1996 - 10 de enero de 2024) era una estudiante predoctoral apasionada por la biología computacional, y una activa y preciada colaboradora de Bioconductor. Celebramos los logros de Bea y nos inspira su determinación, ya que superó muchos obstáculos para perseguir su pasión por la ciencia. Vivía y trabajaba con la ayuda de una silla de ruedas eléctrica debido a una miopatía congénita causada por una mutación recesiva rara en el gen receptor de rianodina 1 (RYR1). Tristemente, Bea falleció el 10 de enero de 2024. Lamentamos su pérdida para nuestra comunidad y ofrecemos nuestras condolencias a su familia, amigos y compañeros.
+
+La trayectoria de Bea estuvo marcada por importantes logros. Su potencial para la excelencia académica se hizo evidente desde el principio de su formación. En 2014 obtuvo el Premio Extraordinario de Bachillerato, y entre 2014 y 2018, cursó el grado de Biología Humana en la [Universidad Pompeu Fabra (UPF)](https://www.upf.edu/) en Barcelona. Este fue un reto importante tanto para ella como para la universidad, ya que fue la primera estudiante con más del 90% de discapacidad física en el campus de ciencias de la vida de la UPF. Sin embargo, Bea afrontó este reto con entusiasmo y paciencia, trabajando en estrecha colaboración con la [Oficina de Inclusión de la UPF](https://www.upf.edu/web/upfinclusio) para hacer accesible el campus. Sus esfuerzos han dejado un legado duradero, con aulas, salas de ordenadores, aseos y otras instalaciones adaptadas, que ahora benefician a futuros estudiantes.
+
+Durante el último año de sus estudios de grado, Bea descubrió su pasión por la bioinformática y la biología computacional. En el siguiente curso académico 2018-19, realizó el Máster en Análisis de Datos Ómicos en la [Universidad de Vic](https://www.uvic.cat).
+
+Poco después, en 2019-20, se incorporó al Programa de Doctorado en Biomedicina del Departamento de Medicina y Ciencias de la Vida (MELIS) de la UPF, trabajando en el grupo de genómica funcional bajo la supervisión de Robert Castelo. El departamento MELIS está ubicado en el [Parque de Investigación Biomédica de Barcelona (PRBB)](https://www.prbb.org), que acoge alrededor de 1.400 personas de siete instituciones públicas de investigación. Durante su doctorado, la amabilidad y generosidad de Bea para ayudar a los demás fueron evidentes. Fue un miembro activo del comité de diversidad e inclusión del PRBB, asesorando sobre cómo adaptar los espacios del edificio para personas con discapacidad física. 
+
+En los pocos años en que trabajó en su doctorado, Bea contribuyó activamente al proyecto Bioconductor, desarrollando los paquetes de software [atena](https://bioconductor.org/packages/atena) y [gDNAx](https://bioconductor.org/packages/gDNAx). Su amabilidad, fortaleza y resiliencia siempre serán recordadas. Respondió a preguntas sobre sus paquetes de software en la web de soporte de Bioconductor, y participó en línea en las ediciones de 2021 y 2022 de las conferencias norteamericana y europea de Bioconductor, respectivamente.
+
+Bea nos ayudó a comprender que puede haber miembros de nuestra comunidad con problemas logísticos con el transporte y la participación en persona. El acceso virtual le permitió participar y presentar su trabajo en la conferencia virtual BioC 2021 y en EuroBioC 2022 en Heidelberg. Tenemos la voluntad de garantizar de forma continua el acceso virtual a nuestras conferencias, siempre que sea posible, ya que hace que la participación y la contribución a Bioconductor sean más inclusivas.
+
+En reconocimiento a sus destacadas contribuciones y a la inspiración que su figura brinda a la comunidad, nos sentimos honrados de crear este premio, el Premio Bioconductor Athena, y otorgar inauguralmente a título póstumo el Premio Bioconductor Athena a Bea. Este premio celebra su fortaleza y resiliencia para superar retos y su espíritu colectivo. Su amabilidad y generosidad, su compromiso con la mejora de la inclusión, especialmente para las personas con discapacidad y, sobre todo, su pasión por contribuir a Bioconductor. La figura de Bea avala los valores fundamentales de Bioconductor.
+
+La [comunidad Bioconductor valora](https://www.bioconductor.org/about/code-of-conduct/) un enfoque abierto a la ciencia que promueve.
+
+- Ciencia abierta: compartir ideas, código, software y experiencia. 
+- Colaboración: fomentar el trabajo en equipo y la cooperación. 
+- Diversidad e inclusión: apoyar la participación de todos. 
+- Entorno acogedor: crear un entorno amable. 
+- Contribuciones a la comunidad: valorar las aportaciones de todos los miembros.
+
+El paquete de Bioconductor de Bea [atena](https://bioconductor.org/packages/atena) fue denominado acertadamente. Nombramos este premio en su honor. Atenea (Athena en inglés) era la diosa griega de la sabiduría, conocida por su coraje frente a la adversidad. Con intelecto para afrontar los desafíos y una valentía inquebrantable, Atenea es el símbolo del empoderamiento y la inspiración. El Premio Bioconductor Athena homenajeará a los miembros de nuestra comunidad que superan retos para participar y contribuir a Bioconductor.
+
+Damos las gracias a Robert Castelo, director de tesis de Bea, y a la familia y amigos de Bea. Este premio a título póstumo se entregará en persona a su familia en EuroBioC 2024 en Oxford en septiembre.
+
+::: {#fig-video}
+
+{{< video https://www.youtube.com/embed/BXX-Q7HosnM?start=2070 >}}
+
+Bea presentando su ponencia breve en la conferencia virtual BioC 2021.
+
+:::
+
+::: {#fig-eccb2022}
+
+![](BeaECCB2022.jpg){height="500px"}
+
+Bea presentando un póster sobre su paquete de Bioconductor atena en el ECCB 2022 en Sitges.
+
+:::
+
+::: {#fig-bioc2022}
+
+![](BeaEuroBioC2022.jpg){height="500px"}
+
+Bea dando una presentación virtual en EuroBioC 2022 en Heidelberg, Alemania.
+
+:::

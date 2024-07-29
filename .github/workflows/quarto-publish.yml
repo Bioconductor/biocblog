@@ -2,7 +2,7 @@ on:
   push:
     branches: 
       - main
-      - website-update # allow while sharing preview
+      - athena-award # allow while sharing preview
 
 name: Render and Publish
 
