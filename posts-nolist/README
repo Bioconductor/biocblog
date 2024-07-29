@@ -1,0 +1,1 @@
+Files in this folder ensure that a post with translated versions does not appear multiple times on the blog posts' listing home page. Currently, this applies to the Athena post, which has three versions: English, Spanish, and Catalan. We include only the English version in the listing, and it contains links to the other language versions.

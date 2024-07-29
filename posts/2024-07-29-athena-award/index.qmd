@@ -18,7 +18,7 @@ editor:
     wrap: sentence
 ---
 
-*Translated versions of this post are available in [Spanish](index-es.qmd) and [Catalan](index-ca.qmd).*
+*Translated versions of this post are available in [Spanish](/posts-nolist/2024-07-29-athena-award/index-es.qmd) and [Catalan](/posts-nolist/2024-07-29-athena-award/index-ca.qmd).*
 
 Beatriz Calvo-Serra (Barcelona, Feb. 2nd, 1996 - Jan. 10th, 2024) was a PhD student who was passionate about computational biology and an active and valued contributor to Bioconductor.
 We celebrate Bea  (pronounced beh-ah)'s achievements and are inspired by her determination, as she overcame many obstacles to pursue her passion for science.

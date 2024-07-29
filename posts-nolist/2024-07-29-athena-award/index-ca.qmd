@@ -56,7 +56,7 @@ Bea presentant la seva ponència breu a la conferència virtual BioC 2021.
 
 ::: {#fig-eccb2022}
 
-![](BeaECCB2022.jpg){height="500px"}
+![](/posts/2024-07-29-athena-award/BeaECCB2022.jpg){height="500px"}
 
 Bea presentant un pòster sobre el seu paquet de Bioconductor atena al ECCB 2022 a Sitges.
 
@@ -64,7 +64,7 @@ Bea presentant un pòster sobre el seu paquet de Bioconductor atena al ECCB 2022
 
 ::: {#fig-bioc2022}
 
-![](BeaEuroBioC2022.jpg){height="500px"}
+![](/posts/2024-07-29-athena-award/BeaEuroBioC2022.jpg){height="500px"}
 
 Bea donant una presentació virtual a l’EuroBioC 2022 a Heidelberg, Alemanya.
 
