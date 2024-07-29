@@ -1,7 +1,7 @@
 ---
 title: "Beatriz Calvo-Serra: guanyadora inaugural del Premi Bioconductor Athena"
 description: | 
- Celebrant les contribucions de Bea, la seva resiliència i el premi inaugural Athena en el seu honor.
+ Celebrant les contribucions de la Bea, la seva resiliència i el Premi Bioconductor Athena inaugural en el seu honor.
 author:
   - name: Robert Castelo
     url: https://github.com/rcastelo
