@@ -12,142 +12,6 @@
 <generator>quarto-1.5.55</generator>
 <lastBuildDate>Mon, 29 Jul 2024 00:00:00 GMT</lastBuildDate>
 <item>
-  <title>Beatriz Calvo-Serra: ganadora inaugural del Premio Bioconductor Athena</title>
-  <dc:creator>Robert Castelo</dc:creator>
-  <dc:creator>Maria Doyle</dc:creator>
-  <dc:creator>Aedin Culhane</dc:creator>
-  <link>https://bioconductor.github.io/biocblog/posts/2024-07-29-athena-award/index-es.html</link>
-  <description><![CDATA[ 
-
-
-
-
-
-<p><em>Traducido al español por Robert Castelo.</em></p>
-<p>Beatriz Calvo-Serra (Barcelona, 2 de febrero de 1996 - 10 de enero de 2024) era una estudiante predoctoral apasionada por la biología computacional, y una activa y preciada colaboradora de Bioconductor. Celebramos los logros de Bea y nos inspira su determinación, ya que superó muchos obstáculos para perseguir su pasión por la ciencia. Vivía y trabajaba con la ayuda de una silla de ruedas eléctrica debido a una miopatía congénita causada por una mutación recesiva rara en el gen receptor de rianodina 1 (RYR1). Tristemente, Bea falleció el 10 de enero de 2024. Lamentamos su pérdida para nuestra comunidad y ofrecemos nuestras condolencias a su familia, amigos y compañeros.</p>
-<p>La trayectoria de Bea estuvo marcada por importantes logros. Su potencial para la excelencia académica se hizo evidente desde el principio de su formación. En 2014 obtuvo el Premio Extraordinario de Bachillerato, y entre 2014 y 2018, cursó el grado de Biología Humana en la <a href="https://www.upf.edu/">Universidad Pompeu Fabra (UPF)</a> en Barcelona. Este fue un reto importante tanto para ella como para la universidad, ya que fue la primera estudiante con más del 90% de discapacidad física en el campus de ciencias de la vida de la UPF. Sin embargo, Bea afrontó este reto con entusiasmo y paciencia, trabajando en estrecha colaboración con la <a href="https://www.upf.edu/web/upfinclusio">Oficina de Inclusión de la UPF</a> para hacer accesible el campus. Sus esfuerzos han dejado un legado duradero, con aulas, salas de ordenadores, aseos y otras instalaciones adaptadas, que ahora benefician a futuros estudiantes.</p>
-<p>Durante el último año de sus estudios de grado, Bea descubrió su pasión por la bioinformática y la biología computacional. En el siguiente curso académico 2018-19, realizó el Máster en Análisis de Datos Ómicos en la <a href="https://www.uvic.cat">Universidad de Vic</a>.</p>
-<p>Poco después, en 2019-20, se incorporó al Programa de Doctorado en Biomedicina del Departamento de Medicina y Ciencias de la Vida (MELIS) de la UPF, trabajando en el grupo de genómica funcional bajo la supervisión de Robert Castelo. El departamento MELIS está ubicado en el <a href="https://www.prbb.org">Parque de Investigación Biomédica de Barcelona (PRBB)</a>, que acoge alrededor de 1.400 personas de siete instituciones públicas de investigación. Durante su doctorado, la amabilidad y generosidad de Bea para ayudar a los demás fueron evidentes. Fue un miembro activo del comité de diversidad e inclusión del PRBB, asesorando sobre cómo adaptar los espacios del edificio para personas con discapacidad física.</p>
-<p>En los pocos años en que trabajó en su doctorado, Bea contribuyó activamente al proyecto Bioconductor, desarrollando los paquetes de software <a href="https://bioconductor.org/packages/atena">atena</a> y <a href="https://bioconductor.org/packages/gDNAx">gDNAx</a>. Su amabilidad, fortaleza y resiliencia siempre serán recordadas. Respondió a preguntas sobre sus paquetes de software en la web de soporte de Bioconductor, y participó en línea en las ediciones de 2021 y 2022 de las conferencias norteamericana y europea de Bioconductor, respectivamente.</p>
-<p>Bea nos ayudó a comprender que puede haber miembros de nuestra comunidad con problemas logísticos con el transporte y la participación en persona. El acceso virtual le permitió participar y presentar su trabajo en la conferencia virtual BioC 2021 y en EuroBioC 2022 en Heidelberg. Tenemos la voluntad de garantizar de forma continua el acceso virtual a nuestras conferencias, siempre que sea posible, ya que hace que la participación y la contribución a Bioconductor sean más inclusivas.</p>
-<p>En reconocimiento a sus destacadas contribuciones y a la inspiración que su figura brinda a la comunidad, nos sentimos honrados de crear este premio, el Premio Bioconductor Athena, y otorgar inauguralmente a título póstumo el Premio Bioconductor Athena a Bea. Este premio celebra su fortaleza y resiliencia para superar retos y su espíritu colectivo. Su amabilidad y generosidad, su compromiso con la mejora de la inclusión, especialmente para las personas con discapacidad y, sobre todo, su pasión por contribuir a Bioconductor. La figura de Bea avala los valores fundamentales de Bioconductor.</p>
-<p>La <a href="https://www.bioconductor.org/about/code-of-conduct/">comunidad Bioconductor valora</a> un enfoque abierto a la ciencia que promueve.</p>
-<ul>
-<li>Ciencia abierta: compartir ideas, código, software y experiencia.</li>
-<li>Colaboración: fomentar el trabajo en equipo y la cooperación.</li>
-<li>Diversidad e inclusión: apoyar la participación de todos.</li>
-<li>Entorno acogedor: crear un entorno amable.</li>
-<li>Contribuciones a la comunidad: valorar las aportaciones de todos los miembros.</li>
-</ul>
-<p>El paquete de Bioconductor de Bea <a href="https://bioconductor.org/packages/atena">atena</a> fue denominado acertadamente. Nombramos este premio en su honor. Atenea (Athena en inglés) era la diosa griega de la sabiduría, conocida por su coraje frente a la adversidad. Con intelecto para afrontar los desafíos y una valentía inquebrantable, Atenea es el símbolo del empoderamiento y la inspiración. El Premio Bioconductor Athena homenajeará a los miembros de nuestra comunidad que superan retos para participar y contribuir a Bioconductor.</p>
-<p>Damos las gracias a Robert Castelo, director de tesis de Bea, y a la familia y amigos de Bea. Este premio a título póstumo se entregará en persona a su familia en EuroBioC 2024 en Oxford en septiembre.</p>
-<div id="fig-video" class="quarto-float quarto-figure quarto-figure-center anchored">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-video-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<div class="quarto-video ratio ratio-16x9"><iframe data-external="1" src="https://www.youtube.com/embed/BXX-Q7HosnM?start=2070" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-video-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figura&nbsp;1: Bea presentando su ponencia breve en la conferencia virtual BioC 2021.
-</figcaption>
-</figure>
-</div>
-<div id="fig-eccb2022" class="quarto-float quarto-figure quarto-figure-center anchored">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-eccb2022-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="https://bioconductor.github.io/biocblog/posts/2024-07-29-athena-award/BeaECCB2022.jpg" height="500" class="figure-img">
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-eccb2022-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figura&nbsp;2: Bea presentando un póster sobre su paquete de Bioconductor atena en el ECCB 2022 en Sitges.
-</figcaption>
-</figure>
-</div>
-<div id="fig-bioc2022" class="quarto-float quarto-figure quarto-figure-center anchored">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-bioc2022-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="https://bioconductor.github.io/biocblog/posts/2024-07-29-athena-award/BeaEuroBioC2022.jpg" height="500" class="figure-img">
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-bioc2022-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figura&nbsp;3: Bea dando una presentación virtual en EuroBioC 2022 en Heidelberg, Alemania.
-</figcaption>
-</figure>
-</div>
-
-
-
- ]]></description>
-  <guid>https://bioconductor.github.io/biocblog/posts/2024-07-29-athena-award/index-es.html</guid>
-  <pubDate>Mon, 29 Jul 2024 00:00:00 GMT</pubDate>
-  <media:content url="https://bioconductor.github.io/biocblog/posts/2024-07-29-athena-award/BeaECCB2022.jpg" medium="image" type="image/jpeg"/>
-</item>
-<item>
-  <title>Beatriz Calvo-Serra: guanyadora inaugural del Premi Bioconductor Athena</title>
-  <dc:creator>Robert Castelo</dc:creator>
-  <dc:creator>Maria Doyle</dc:creator>
-  <dc:creator>Aedin Culhane</dc:creator>
-  <link>https://bioconductor.github.io/biocblog/posts/2024-07-29-athena-award/index-ca.html</link>
-  <description><![CDATA[ 
-
-
-
-
-
-<p><em>Traduït al català per Robert Castelo.</em></p>
-<p>Beatriz Calvo-Serra (Barcelona, 2 de febrer de 1996 - 10 de gener de 2024) va ser una estudiant predoctoral apassionada per la biologia computacional, i una activa i preuada col·laboradora de Bioconductor. Celebrem els èxits de la Bea i ens inspira la seva determinació, ja que va superar molts obstacles per a perseguir la seva passió per la ciència. Vivia i treballava amb l’ajuda d’una cadira de rodes elèctrica degut a una miopatia congènita causada per una mutació recessiva rara en el gen receptor de rianodina 1 (RYR1). Tristement, Bea va traspassar el 10 de gener de 2024. Lamentem la seva pèrdua a la nostra comunitat i oferim el nostre condol a la seva família, amics i companys.</p>
-<p>La trajectòria de la Bea va estar marcada per importants èxits. El seu potencial per a l’excel·lència acadèmica es va fer evident des del principi de la seva formació. En 2014 va obtenir el Premi Extraordinari de Batxillerat, i entre 2014 i 2018, va cursar el grau de Biologia Humana a la <a href="https://www.upf.edu/">Universitat Pompeu Fabra (UPF)</a> a Barcelona. Aquest va ser un repte important tant per ella com per a la universitat, ja que va ser la primera estudiant amb més del 90% de discapacitat física al campus de ciències de la vida de la UPF. Tanmateix, la Bea va afrontar aquest repte amb entusiasme i paciència, treballant en estreta col·laboració amb <a href="https://www.upf.edu/web/upfinclusio">l’Oficina d’Inclusió de la UPF</a> per fer accessible el campus. Els seus esforços han deixat un llegat durador, amb aules, sales d’ordinadors, lavabos i d’altres instal·lacions adaptades, que ara beneficien a futurs estudiants.</p>
-<p>Durant el darrer any dels seus estudis de grau, la Bea va descobrir la seva passió per la bioinformàtica i la biologia computacional. En el següent curs acadèmic 2018-19, va cursar el Màster en Anàlisi de Dades Òmiques a la <a href="https://www.uvic.cat">Universitat de Vic</a>.</p>
-<p>Poc després, en 2019-20, es va incorporar al Programa de Doctorat en Biomedicina del Departament de Medicina y Ciències de la Vida (MELIS) de la UPF, treballant en el grup de genòmica funcional sota la supervisió d’en Robert Castelo. El departament MELIS està ubicat al <a href="https://www.prbb.org">Parc de Recerca Biomèdica de Barcelona (PRBB)</a>, que acull al voltant de 1.400 persones de set institucions públiques d’investigació. Durant el seu doctorat, l’amabilitat i generositat de la Bea per ajudar als altres van ser evidents. Va ser membre activa de la comissió de diversitat i inclusió del PRBB, assessorant sobre com adaptar els espais de l’edifici per a persones amb discapacitat física.</p>
-<p>En els pocs anys en que va treballar en el seu doctorat, la Bea va contribuir activament al projecte Bioconductor, desenvolupant els paquets de software <a href="https://bioconductor.org/packages/atena">atena</a> y <a href="https://bioconductor.org/packages/gDNAx">gDNAx</a>. La seva amabilitat, fortalesa i resiliència sempre seran recordades. Va respondre preguntes sobre els seus paquets de software a la web de suport de Bioconductor, i va participar en línia a las edicions de 2021 y 2022 de les conferèncias nordamericana i europea de Bioconductor, respectivament.</p>
-<p>La Bea ens va ajudar a entendre que pot haver membres de la nostra comunitat amb problemes logístics amb el transport i la participació en persona. L’accés virtual li va permetre participar i presentar el seu treball a la conferència virtual BioC 2021 i a l’EuroBioC 2022 a Heidelberg. Tenim la voluntat de garantitzar de forma contínua l’accés virtual a les nostres conferències, sempre que sigui possible, ja que fa que la participació i la contribució a Bioconductor siguin més inclusives.</p>
-<p>En reconeixement a les seves destacades contribucions i a la inspiració que la seva figura ofereix a la comunitat, ens sentim honrats de crear aquest premi, el Premi Bioconductor Athena, i atorgar inauguralment a títol pòstum el Premi Bioconductor Athena a la Bea. Aquest premi celebra la seva fortalesa i resiliència per a superar reptes i el seu esperit col·lectiu. La seva amabilitat i generositat, el seu compromís amb la millora de la inclusió, especialment per a les persones amb discapacitat i, sobretot, la seva passió per contribuir a Bioconductor. La figura de la Bea avala els valors fonamentals de Bioconductor.</p>
-<p>La <a href="https://www.bioconductor.org/about/code-of-conduct/">comunitat Bioconductor valora</a> un enfocament obert a la ciència que promou.</p>
-<ul>
-<li>Ciència oberta: compartir idees, codi, software i experiència.</li>
-<li>Col·laboració: fomentar el treball en equip i la cooperació.</li>
-<li>Diversitat i inclusió: donar suport a la participació de tothom.</li>
-<li>Entorn acollidor: crear un entorn amable.</li>
-<li>Contribucions a la comunitat: valorar les aportacions de tots els membres.</li>
-</ul>
-<p>El paquet de Bioconductor de la Bea <a href="https://bioconductor.org/packages/atena">atena</a> fou denominat encertadament. Anomenem aquest premi en honor seu. Atena (Athena en anglès) era la deessa grega de la saviesa, coneguda pel seu coratge en front de l’adversitat. Amb intel·lecte per afrontar els desafiaments i una valentia ferma, Atena és el símbol de l’empoderament i la inspiració. El Premi Bioconductor Athena homenatjarà als membres de la nostra comunitat que superin reptes per a participar i contribuir a Bioconductor.</p>
-<p>Donem les gràcies al Robert Castelo, director de tesi de la Bea, i a la família i amics de la Bea. Aquest premi a títol pòstum s’entregarà en persona a la seva família a l’EuroBioC 2024 a Oxford al setembre.</p>
-<div id="fig-video" class="quarto-float quarto-figure quarto-figure-center anchored">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-video-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<div class="quarto-video ratio ratio-16x9"><iframe data-external="1" src="https://www.youtube.com/embed/BXX-Q7HosnM?start=2070" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-video-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figura&nbsp;1: Bea presentant la seva ponència breu a la conferència virtual BioC 2021.
-</figcaption>
-</figure>
-</div>
-<div id="fig-eccb2022" class="quarto-float quarto-figure quarto-figure-center anchored">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-eccb2022-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="https://bioconductor.github.io/biocblog/posts/2024-07-29-athena-award/BeaECCB2022.jpg" height="500" class="figure-img">
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-eccb2022-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figura&nbsp;2: Bea presentant un pòster sobre el seu paquet de Bioconductor atena al ECCB 2022 a Sitges.
-</figcaption>
-</figure>
-</div>
-<div id="fig-bioc2022" class="quarto-float quarto-figure quarto-figure-center anchored">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-bioc2022-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="https://bioconductor.github.io/biocblog/posts/2024-07-29-athena-award/BeaEuroBioC2022.jpg" height="500" class="figure-img">
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-bioc2022-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figura&nbsp;3: Bea donant una presentació virtual a l’EuroBioC 2022 a Heidelberg, Alemanya.
-</figcaption>
-</figure>
-</div>
-
-
-
- ]]></description>
-  <guid>https://bioconductor.github.io/biocblog/posts/2024-07-29-athena-award/index-ca.html</guid>
-  <pubDate>Mon, 29 Jul 2024 00:00:00 GMT</pubDate>
-  <media:content url="https://bioconductor.github.io/biocblog/posts/2024-07-29-athena-award/BeaECCB2022.jpg" medium="image" type="image/jpeg"/>
-</item>
-<item>
   <title>Beatriz Calvo-Serra: inaugural Bioconductor Athena Award winner</title>
   <dc:creator>Robert Castelo</dc:creator>
   <dc:creator>Maria Doyle</dc:creator>
@@ -159,7 +23,7 @@ Figura&nbsp;3: Bea donant una presentació virtual a l’EuroBioC 2022 a Heidelb
 
 
 
-<p><em>Translated versions of this post are available in <a href="../../posts/2024-07-29-athena-award/index-es.html">Spanish</a> and <a href="../../posts/2024-07-29-athena-award/index-ca.html">Catalan</a>.</em></p>
+<p><em>Translated versions of this post are available in <a href="../../posts-nolist/2024-07-29-athena-award/index-es.html">Spanish</a> and <a href="../../posts-nolist/2024-07-29-athena-award/index-ca.html">Catalan</a>.</em></p>
 <p>Beatriz Calvo-Serra (Barcelona, Feb.&nbsp;2nd, 1996 - Jan.&nbsp;10th, 2024) was a PhD student who was passionate about computational biology and an active and valued contributor to Bioconductor. We celebrate Bea (pronounced beh-ah)’s achievements and are inspired by her determination, as she overcame many obstacles to pursue her passion for science. She lived and worked with the aid of a powered wheelchair due to a congenital myopathy caused by a rare recessive mutation in the Ryanodine Receptor 1 (RYR1) gene. Bea sadly passed away on January 10th, 2024. We mourn her loss to our community and offer our condolences to her family, friends, and colleagues.</p>
 <p>Bea’s journey was marked by significant achievements. Her potential for academic excellence was evident early in her education. In 2014, she graduated with honors from high school, and between 2014 and 2018, she pursued a degree in Human Biology at the <a href="https://www.upf.edu">Pompeu Fabra University (UPF)</a> in Barcelona, Spain. This was a significant challenge for both her and the university, as she was the first student with more than 90% physical disability at the UPF campus of life sciences. However, Bea faced this challenge with enthusiasm and patience, working closely with the <a href="https://www.upf.edu/web/upfinclusio">UPF Inclusion office</a> to make the campus accessible. Her efforts have left a lasting legacy, with adapted lecture rooms, computer rooms, toilets, and other facilities now benefiting future students.</p>
 <p>During the last year of her undergraduate degree, Bea discovered her passion for bioinformatics and computational biology. In the next academic year, 2018-19, she completed a Master’s Programme in Omics Data Analysis at <a href="https://www.uvic.cat">Vic University</a>.</p>
@@ -2047,6 +1911,508 @@ git push upstream main:devel</code></pre>
   <guid>https://bioconductor.github.io/biocblog/posts/2023-02-24-carpentries-update/</guid>
   <pubDate>Fri, 24 Feb 2023 00:00:00 GMT</pubDate>
   <media:content url="https://bioconductor.github.io/biocblog/posts/2023-02-24-carpentries-update/map.png" medium="image" type="image/png" height="96" width="144"/>
+</item>
+<item>
+  <title>Introducing CuratedAtlasQueryR package</title>
+  <dc:creator>Maria Doyle</dc:creator>
+  <dc:creator>Stefano Mangiola</dc:creator>
+  <link>https://bioconductor.github.io/biocblog/posts/2023-02-23-CuratedAtlasQueryR/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<p><em>This blog post was co-written by the Bioconductor Community Manager, Maria Doyle, and the lead developer of CuratedAtlasQueryR, Stefano Mangiola.</em></p>
+<p>We are excited to announce the launch of the <a href="https://stemangiola.github.io/CuratedAtlasQueryR/">CuratedAtlasQueryR</a> package! Millions of cells are now at your fingertips as the harmonized and reannotated CELLxGENE single-cell human atlas can be explored and retrieved in Bioconductor <a href="https://bioconductor.org/packages/SingleCellExperiment">SingleCellExperiment</a> data structure.</p>
+<p><img src="https://bioconductor.github.io/biocblog/posts/2023-02-23-CuratedAtlasQueryR/overview.png" class="img-fluid" alt="A diagram showing the tools underlying the CuratedAtlasQueryR package and the workflow."></p>
+<section id="why-this-package-was-created" class="level2">
+<h2 class="anchored" data-anchor-id="why-this-package-was-created">Why this package was created</h2>
+<p>The <a href="https://www.humancellatlas.org/">Human Cell Atlas</a> is a large-scale single-cell sequencing initiative that aims to map every cell type in the human body. It has the potential to revolutionise our understanding of human cellular biology and the immune system. Data harmonisation, curation and effective data query are essential to extract knowledge from these complex atlases. The <a href="https://cellxgene.cziscience.com/">CELLxGENE human cell atlas</a> provides an explorable and searchable human atlas. However, <a href="https://cellxgene.cziscience.com/">CELLxGENE</a> is not harmonised across datasets.</p>
+<p>To allow exploration and analyses across datasets, tissues and diseases through R, we have developed <a href="https://stemangiola.github.io/CuratedAtlasQueryR/">CuratedAtlasQueryR</a>, a cell-resolved query system that allows researchers to select cells based on their type, tissue of origin, and demographics. This package will be submitted to <a href="https://www.bioconductor.org/">Bioconductor</a>. We have also created a Python version of CuratedAtlasQueryR that will be launched soon.</p>
+</section>
+<section id="how-it-differs-from-existing-packages" class="level2">
+<h2 class="anchored" data-anchor-id="how-it-differs-from-existing-packages">How it differs from existing packages</h2>
+<p>We use the existing Bioconductor package, <a href="https://bioconductor.org/packages/cellxgenedp">cellxgenedp</a> as the download source for datasets included in <a href="https://cellxgene.cziscience.com/">CELLxGENE</a>.</p>
+<p>We then harmonised, curated and reannotated the data (immune cell labels).</p>
+<ul>
+<li>The column classes so they can be represented as a unique table.</li>
+<li>We subset the columns that were most common across the atlas (the complete columns for a specific dataset can be retrieved through the <a href="https://bioconductor.org/packages/cellxgenedp">cellxgenedp</a> package).</li>
+<li>We consolidated sample identifiers.</li>
+<li>We harmonised tissue labels.</li>
+<li>We harmonised cell-type labels under a common ontology.</li>
+<li>We provide a consensus-based immune cell label, and a confidence label. Consensus was established among the original annotation and three independent references (<a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE107011">Monaco</a>, <a href="https://rdrr.io/github/LTLA/celldex/man/BlueprintEncodeData.html">BLUEPRINT</a>, and <a href="https://azimuth.hubmapconsortium.org/references/human_pbmc/">Azimuth PBMC</a>).</li>
+</ul>
+<p>We introduced custom columns, not present in the original CELLxGENE metadata.</p>
+<ul>
+<li><code>tissue_harmonised</code>: a coarser tissue name for better filtering</li>
+<li><code>age_days</code>: the number of days corresponding to the age</li>
+<li><code>cell_type_harmonised</code>: the consensus call identity (for immune cells) using the original and three novel annotations using Seurat Azimuth and SingleR</li>
+<li><code>confidence_class</code>: an ordinal class of how confident <code>cell_type_harmonised</code> is. 1 is complete consensus, 2 is three out of four and so on.</li>
+<li><code>cell_annotation_azimuth_l2</code>: Azimuth cell annotation</li>
+<li><code>cell_annotation_blueprint_singler</code>: SingleR cell annotation using Blueprint reference</li>
+<li><code>cell_annotation_blueprint_monaco</code>: SingleR cell annotation using Monaco reference</li>
+<li><code>sample_id_db</code>: Sample subdivision for internal use</li>
+<li><code>file_id_db</code>: File subdivision for internal use</li>
+<li><code>.sample</code>: Sample ID</li>
+<li><code>.sample_name</code>: How samples were defined</li>
+</ul>
+<p>Differently from <a href="https://bioconductor.org/packages/cellxgenedp">cellxgenedp</a>, we can query specific cells across datasets based on annotation, the metadata exploration and data download is done on-disk without loading into memory.</p>
+<p>The harmonized and reannotated <a href="https://cellxgene.cziscience.com/">CELLxGENE</a> single cell human atlas can be explored and retrieved in Bioconductor <a href="https://bioconductor.org/packages/SingleCellExperiment">SingleCellExperiment</a> format.</p>
+<p>We use <a href="https://duckdb.org/">DuckDB</a> in the package due to it’s speed, and low disk imprint in handling large amounts of data.</p>
+</section>
+<section id="how-you-can-use-it" class="level2">
+<h2 class="anchored" data-anchor-id="how-you-can-use-it">How you can use it</h2>
+<p><strong>Step 1</strong>: Get started with <a href="https://github.com/stemangiola/CuratedAtlasQueryR">CuratedAtlasQueryR</a> by exploring the integrated metadata of 28 million cells (on-disk) using <a href="https://www.tidyverse.org/">tidyverse</a>. The atlas includes 344 studies across 40 tissues, providing raw abundances and counts-per-million. 📊</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">library</span>(CuratedAtlasQueryR)</span>
+<span id="cb1-2"></span>
+<span id="cb1-3">cache_dir <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">=</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"~/tmp"</span> <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># specify the cache directory if you don't want to use default</span></span>
+<span id="cb1-4"></span>
+<span id="cb1-5">metadata <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">get_metadata</span>(<span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">cache_directory =</span> cache_dir)</span>
+<span id="cb1-6"></span>
+<span id="cb1-7">metadata</span></code></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># Source:   table&lt;~/tmp/metadata.0.2.3.parquet&gt; [?? x 56]
+# Database: DuckDB 0.7.0 [root@Darwin 21.6.0:R 4.2.2/:memory:]
+   cell_ sample_ cell_…¹ cell_…² confi…³ cell_…⁴ cell_…⁵ cell_…⁶ sampl…⁷ _samp…⁸
+   &lt;chr&gt; &lt;chr&gt;   &lt;chr&gt;   &lt;chr&gt;     &lt;dbl&gt; &lt;chr&gt;   &lt;chr&gt;   &lt;chr&gt;   &lt;chr&gt;   &lt;chr&gt;  
+ 1 AAAC… 689e2f… basal … basal_…       1 &lt;NA&gt;    &lt;NA&gt;    &lt;NA&gt;    f297c7… D17PrP…
+ 2 AAAC… 689e2f… basal … basal_…       1 &lt;NA&gt;    &lt;NA&gt;    &lt;NA&gt;    f297c7… D17PrP…
+ 3 AAAC… 689e2f… lumina… lumina…       1 &lt;NA&gt;    &lt;NA&gt;    &lt;NA&gt;    930938… D17PrP…
+ 4 AAAC… 689e2f… lumina… lumina…       1 &lt;NA&gt;    &lt;NA&gt;    &lt;NA&gt;    930938… D17PrP…
+ 5 AAAC… 689e2f… basal … basal_…       1 &lt;NA&gt;    &lt;NA&gt;    &lt;NA&gt;    f297c7… D17PrP…
+ 6 AAAC… 689e2f… basal … basal_…       1 &lt;NA&gt;    &lt;NA&gt;    &lt;NA&gt;    f297c7… D17PrP…
+ 7 AAAC… 689e2f… basal … basal_…       1 &lt;NA&gt;    &lt;NA&gt;    &lt;NA&gt;    f297c7… D17PrP…
+ 8 AAAC… 689e2f… basal … basal_…       1 &lt;NA&gt;    &lt;NA&gt;    &lt;NA&gt;    f297c7… D17PrP…
+ 9 AAAC… 689e2f… lumina… lumina…       1 &lt;NA&gt;    &lt;NA&gt;    &lt;NA&gt;    930938… D17PrP…
+10 AAAC… 689e2f… basal … basal_…       1 &lt;NA&gt;    &lt;NA&gt;    &lt;NA&gt;    f297c7… D17PrP…
+# … with more rows, 46 more variables: assay &lt;chr&gt;,
+#   assay_ontology_term_id &lt;chr&gt;, file_id_db &lt;chr&gt;,
+#   cell_type_ontology_term_id &lt;chr&gt;, development_stage &lt;chr&gt;,
+#   development_stage_ontology_term_id &lt;chr&gt;, disease &lt;chr&gt;,
+#   disease_ontology_term_id &lt;chr&gt;, ethnicity &lt;chr&gt;,
+#   ethnicity_ontology_term_id &lt;chr&gt;, experiment___ &lt;chr&gt;, file_id &lt;chr&gt;,
+#   is_primary_data_x &lt;chr&gt;, organism &lt;chr&gt;, organism_ontology_term_id &lt;chr&gt;, …</code></pre>
+</div>
+</div>
+<p><strong>Step 2</strong>: Filter cells of interest using tidyverse, whether it’s a specific dataset or a cell type across tissues and diseases. <a href="https://github.com/stemangiola/CuratedAtlasQueryR">CuratedAtlasQueryR</a> makes it easy to find what you’re looking for! 🔍</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb3" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1">metadata <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">|&gt;</span></span>
+<span id="cb3-2">  dplyr<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">filter</span>(</span>
+<span id="cb3-3">      ethnicity <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">==</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"African"</span> <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">&amp;</span></span>
+<span id="cb3-4">      stringr<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">str_like</span>(assay, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"%10x%"</span>) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">&amp;</span></span>
+<span id="cb3-5">      tissue <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">==</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"lung parenchyma"</span> <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">&amp;</span></span>
+<span id="cb3-6">      stringr<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">str_like</span>(cell_type, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"%CD4%"</span>)</span>
+<span id="cb3-7">  ) </span></code></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># Source:   SQL [?? x 56]
+# Database: DuckDB 0.7.0 [root@Darwin 21.6.0:R 4.2.2/:memory:]
+   cell_ sample_ cell_…¹ cell_…² confi…³ cell_…⁴ cell_…⁵ cell_…⁶ sampl…⁷ _samp…⁸
+   &lt;chr&gt; &lt;chr&gt;   &lt;chr&gt;   &lt;chr&gt;     &lt;dbl&gt; &lt;chr&gt;   &lt;chr&gt;   &lt;chr&gt;   &lt;chr&gt;   &lt;chr&gt;  
+ 1 ACAG… dc583c… CD4-po… mait          5 mait    cd8 tem mait    b41104… VUHD92…
+ 2 GGGA… dc583c… CD4-po… treg          3 cd4 tcm cd4 t   t regu… b41104… VUHD92…
+ 3 TCTT… dc583c… CD4-po… cd4 th…       3 cd4 tcm cd4 t   th1/th… b41104… VUHD92…
+ 4 CCTT… dc583c… CD4-po… cd4 th…       3 cd4 tem cd8 tem th1/th… b41104… VUHD92…
+ 5 ATCT… dc583c… CD4-po… cd4 th…       3 cd4 tcm clp     th17    b41104… VUHD92…
+ 6 CATC… 39915d… CD4-po… immune…       5 cd8 tem cd8 tem mait    200214… VUHD69…
+ 7 AGTC… 39915d… CD4-po… immune…       1 cd4 tem cd4 tem mait    200214… VUHD69…
+ 8 CGCG… dc583c… CD4-po… immune…       5 cd4 tem clp     th1/th… b41104… VUHD92…
+ 9 TGGC… 39915d… CD4-po… immune…       5 cd8 tem cd8 tem effect… 200214… VUHD69…
+10 TTCC… dc583c… CD4-po… cd4 th…       3 cd4 tcm cd8 tem th1/th… b41104… VUHD92…
+# … with more rows, 46 more variables: assay &lt;chr&gt;,
+#   assay_ontology_term_id &lt;chr&gt;, file_id_db &lt;chr&gt;,
+#   cell_type_ontology_term_id &lt;chr&gt;, development_stage &lt;chr&gt;,
+#   development_stage_ontology_term_id &lt;chr&gt;, disease &lt;chr&gt;,
+#   disease_ontology_term_id &lt;chr&gt;, ethnicity &lt;chr&gt;,
+#   ethnicity_ontology_term_id &lt;chr&gt;, experiment___ &lt;chr&gt;, file_id &lt;chr&gt;,
+#   is_primary_data_x &lt;chr&gt;, organism &lt;chr&gt;, organism_ontology_term_id &lt;chr&gt;, …</code></pre>
+</div>
+</div>
+<p><strong>Step 3</strong>: Collect the <a href="https://bioconductor.org/packages/SingleCellExperiment">SingleCellExperiment</a> for the cells of interest. Our object uses <a href="https://en.wikipedia.org/wiki/Hierarchical_Data_Format">HDF5 format</a> to keep the R session light, making it easier to work with larger datasets. 💻</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb5" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1">metadata <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">|&gt;</span></span>
+<span id="cb5-2">  dplyr<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">filter</span>(</span>
+<span id="cb5-3">      ethnicity <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">==</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"African"</span> <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">&amp;</span></span>
+<span id="cb5-4">      stringr<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">str_like</span>(assay, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"%10x%"</span>) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">&amp;</span></span>
+<span id="cb5-5">      tissue <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">==</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"lung parenchyma"</span> <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">&amp;</span></span>
+<span id="cb5-6">      stringr<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">str_like</span>(cell_type, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"%CD4%"</span>)</span>
+<span id="cb5-7">  ) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">|&gt;</span></span>
+<span id="cb5-8">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">get_SingleCellExperiment</span>(<span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">cache_directory =</span> cache_dir)</span></code></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>class: SingleCellExperiment 
+dim: 36229 1571 
+metadata(0):
+assays(2): counts cpm
+rownames(36229): A1BG A1BG-AS1 ... ZZEF1 ZZZ3
+rowData names(0):
+colnames(1571): ACAGCCGGTCCGTTAA_F02526_1 GGGAATGAGCCCAGCT_F02526_1 ...
+  TACAACGTCAGCATTG_SC84_1 CATTCGCTCAATACCG_F02526_1
+colData names(56): sample_ cell_type ... updated_at_y original_cell_id
+reducedDimNames(0):
+mainExpName: NULL
+altExpNames(0):</code></pre>
+</div>
+</div>
+<p><strong>Step 4</strong>: With <a href="https://github.com/stemangiola/CuratedAtlasQueryR">CuratedAtlasQueryR</a> and <a href="https://stemangiola.github.io/tidySingleCellExperiment/articles/introduction.html">tidySingleCellExperiment</a>, checking the transcription abundance of your favourite gene and cell type across diseases, tissues and hundreds of datasets is just a few lines of code! 🎉</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb7" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">library</span>(tidySingleCellExperiment)</span>
+<span id="cb7-2"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">library</span>(ggplot2)</span>
+<span id="cb7-3"></span>
+<span id="cb7-4">metadata <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">|&gt;</span></span>
+<span id="cb7-5">  </span>
+<span id="cb7-6">  <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Filter and subset</span></span>
+<span id="cb7-7">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">filter</span>(cell_type_harmonised<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">==</span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"cd14 mono"</span>) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">|&gt;</span></span>
+<span id="cb7-8"></span>
+<span id="cb7-9">  <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Get counts per million for NCAM1 gene</span></span>
+<span id="cb7-10">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">get_SingleCellExperiment</span>(<span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">assays =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"cpm"</span>, <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">features =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"HLA-A"</span>, <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">cache_directory =</span> cache_dir) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">|&gt;</span> </span>
+<span id="cb7-11">  </span>
+<span id="cb7-12">  <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Plot (styling code is omitted)</span></span>
+<span id="cb7-13">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">join_features</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"HLA-A"</span>, <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">shape =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"wide"</span>) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">|&gt;</span> </span>
+<span id="cb7-14">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">ggplot</span>(<span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">aes</span>( disease, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">`</span><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">HLA.A</span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">`</span>,<span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">color =</span> file_id)) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span></span>
+<span id="cb7-15">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">geom_jitter</span>(<span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">shape=</span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"."</span>) </span></code></pre></div>
+</div>
+<p><img src="https://bioconductor.github.io/biocblog/posts/2023-02-23-CuratedAtlasQueryR/hlaplot1.png" class="img-fluid" alt="A jitter plot of HLA-A expression in CD14 monocytes from different diseases."></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb8" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1">metadata <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">|&gt;</span> </span>
+<span id="cb8-2">    </span>
+<span id="cb8-3">  <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Filter and subset</span></span>
+<span id="cb8-4">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">filter</span>(cell_type_harmonised<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">==</span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"nk"</span>) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">|&gt;</span> </span>
+<span id="cb8-5"></span>
+<span id="cb8-6">  <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Get counts per million for NCAM1 gene </span></span>
+<span id="cb8-7">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">get_SingleCellExperiment</span>(<span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">assays =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"cpm"</span>, <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">features =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"NCAM1"</span>, <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">cache_directory =</span> cache_dir) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">|&gt;</span> </span>
+<span id="cb8-8"></span>
+<span id="cb8-9">    <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Plot (styling code is omitted)</span></span>
+<span id="cb8-10">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">join_features</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"NCAM1"</span>, <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">shape =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"wide"</span>) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">|&gt;</span> </span>
+<span id="cb8-11">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">ggplot</span>(<span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">aes</span>( tissue_harmonised, NCAM1,<span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">color =</span> file_id)) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span></span>
+<span id="cb8-12">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">geom_jitter</span>(<span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">shape=</span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"."</span>) </span></code></pre></div>
+</div>
+<p><img src="https://bioconductor.github.io/biocblog/posts/2023-02-23-CuratedAtlasQueryR/hlaplot2.png" class="img-fluid" alt="A jitter plot of HLA-A expression in CD14 monocytes from different tissues."></p>
+</section>
+<section id="acknowledgements" class="level2">
+<h2 class="anchored" data-anchor-id="acknowledgements">Acknowledgements</h2>
+<p>Thanks and congratulations to <a href="https://github.com/multimeric">Michael Milton</a> <a href="https://twitter.com/multimeric"><span class="citation" data-cites="multimeric">@multimeric</span></a> (main developer), <a href="https://www.roswellpark.org/martin-morgan">Martin Morgan</a>, <a href="https://www.wehi.edu.au/people/tony-papenfuss">Tony Papenfuss</a>, <a href="https://vjcitn.github.io/">Vince Carey</a>, <a href="https://github.com/jIskCoder">Julie Iskander</a>, and <a href="https://github.com/stemangiola">Stefano Mangiola</a> <a href="https://twitter.com/steman_research"><span class="citation" data-cites="steman_research">@steman_research</span></a> (lead), <a href="https://www.bioconductor.org/">Bioconductor</a>, <a href="https://www.wehi.edu.au/">WEHI</a>.</p>
+<p>Thanks to funders CZI Silicon Valley Foundation (CZF2019-002443), NIH NHGRI (5U24HG004059-18), Victoria Cancer Agency (ECRF21036), NHMRC (1116955), The Lorenzo and Pamela Galli Medical Research Trust.</p>
+
+
+</section>
+
+ ]]></description>
+  <category>Package</category>
+  <guid>https://bioconductor.github.io/biocblog/posts/2023-02-23-CuratedAtlasQueryR/</guid>
+  <pubDate>Thu, 23 Feb 2023 00:00:00 GMT</pubDate>
+  <media:content url="https://bioconductor.github.io/biocblog/posts/2023-02-23-CuratedAtlasQueryR/overview.png" medium="image" type="image/png" height="154" width="144"/>
+</item>
+<item>
+  <title>Our experience as Outreachy interns with Bioconductor</title>
+  <dc:creator>Beryl Kanali</dc:creator>
+  <dc:creator>Atuhurira Kirabo</dc:creator>
+  <link>https://bioconductor.github.io/biocblog/posts/2023-01-22-OutreachyInternship/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<section id="introduction" class="level2">
+<h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
+<p>The world of open source is vast and full of opportunities to change both the world and oneself, but may appear daunting to someone naive and new to the field. Thankfully, countless initiatives exist to narrow the gap between disadvantaged individuals who wish to make their first contributions, and open source communities.</p>
+<p>Outreachy is one of these projects, and it aims to provide internships to people impacted by underrepresentation in the technical industry where they are living. Through Outreachy, we were able to work for 12 weeks as interns at Bioconductor, and kickstart our introduction to the open source world of computational biology. Perhaps you’re an experienced biologist who finds themselves using the tools we’re working on, and would like more information about them. Or maybe you’re eager to make your mark as an Outreachy applicant, interested in Bioconductor, and would like to know our experience. Whichever the reason, I hope this blog post is extra informative to whatever you’re looking for!</p>
+</section>
+<section id="outreachy" class="level2">
+<h2 class="anchored" data-anchor-id="outreachy">Outreachy</h2>
+<p><a href="https://www.outreachy.org/">Outreachy</a> is a program that offers a 12 week paid remote internship in open source and open science. Outreachy provides internships to people subject to systemic bias and underrepresented in tech. Outreachy interns work with experienced mentors from open source communities, and internship projects may include programming, user experience, documentation, graphical design, data science, marketing, user advocacy, or community event planning.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://bioconductor.github.io/biocblog/posts/2023-01-22-OutreachyInternship/outreachy_homepage.png" class="img-fluid figure-img"></p>
+<figcaption>Outreachy</figcaption>
+</figure>
+</div>
+<p>The application process is in three stages and an applicant chooses 1-2 projects they would like to apply to and makes contributions to them to be eligible for selection.</p>
+<p>Through Outreachy, we were selected to work with Bioconductor on the different projects we had applied to.</p>
+</section>
+<section id="bioconductor" class="level2">
+<h2 class="anchored" data-anchor-id="bioconductor">Bioconductor</h2>
+<p>Bioconductor had two projects in the application period for the December 2022 internship round. We will go through what our projects are about and our experiences so far.</p>
+<section id="bsgenomeforge-project" class="level3">
+<h3 class="anchored" data-anchor-id="bsgenomeforge-project">BSgenomeForge Project</h3>
+<p><a href="https://github.com/Bioconductor/BSgenome">BSgenome</a> is a Bioconductor package with many uses, among which one of them is forging BSgenome data packages. Forging is another word used to mean <em>creating</em> a package. BSgenome is a combination of BS, which is short for <a href="https://bioconductor.org/packages/release/bioc/html/Biostrings.html">Biostrings</a> a package used for manipulation of biological strings, and genome, which is the complete set of genetic material in an organism. BSgenome data packages have many applications in the real world, especially in light of the current COVID-19 pandemic. They can be used to find the COVID-19 genomic sequence and study it, and even be used by environmental scientists to look for COVID-19 in wastewater. There are several reasons the average Bioconductor user would forge a BSgenome data packages; in order to search for particular DNA patterns in a genome, maybe to compute GC content and other basic statistics or even to extract the DNA sequences for some regions of interest like genes or CDS and translate them into amino acid sequences. However, the current process of forging a BSgenome data package is quite long and confusing, with a few redundant processes like creating a seed file before calling the <code>forgeBSgenomeDataPkg</code> function on the seed file to create the package.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://bioconductor.github.io/biocblog/posts/2023-01-22-OutreachyInternship/seed_file_Felis_catus_9.0.png" class="img-fluid figure-img"></p>
+<figcaption>example seed file for Felis_catus_9.0</figcaption>
+</figure>
+</div>
+<p>The <a href="https://github.com/Bioconductor/BSgenomeForge">BSgenomeForge project</a> aims to simplify the whole process, by allowing the user to use one function to create the package. It’s a solution that we hope is able to cut down the time one takes to forge a package, and make the process much less confusing and error-prone to less experienced users.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://bioconductor.github.io/biocblog/posts/2023-01-22-OutreachyInternship/forgeBSgenomeDataPkgFromNCBI.png" class="img-fluid figure-img"></p>
+<figcaption>forgeBSgenomeDataPkgFromNCBI function</figcaption>
+</figure>
+</div>
+</section>
+<section id="sweave2rmd-project" class="level3">
+<h3 class="anchored" data-anchor-id="sweave2rmd-project">Sweave2Rmd Project</h3>
+<p>The <a href="https://github.com/Bioconductor/sweave2rmd">sweave2rmd project</a> is a project for converting vignettes from sweave to Rmarkdown. Most Bioconductor packages documentation have been written using a mixture of Latex and R code then rendered as PDF files. In this project, we are converting these files to R markdown then rendering the files as HTML files.</p>
+<p>Majority of the documentation availabe now is being writtten in markdown and rendered as HTML files. HTML files are easier to share, access and can be viewed online/offline without special applications. HTML files also offer more interactivity as compared to PDF files since you can include links to other parts of the document especially long documents. Markdown and HTML files are also easily readable across different devices and do not need to be reformatted for every device type. Since Bioconductor has also been around for over 20 years, most of the vignettes are old and need modernization. The sweave2rmd project will generally help bring a large number of “mature”(older) vignettes to the modern era.</p>
+<p>Rmarkdown also has simpler syntax as compared to Latex and beginners can find it easier to use.</p>
+<ul>
+<li><p>Sweave- Sweave enables the embedding of R code within LaTeX documents to generate a PDF file that includes narrative and analysis, graphics, code, and the results of computations.</p></li>
+<li><p>Sweave files effectively let you write a file using the TeX typesetting system while directly incorporating the results of your R code into your TeX file.</p></li>
+<li><p>Rmarkdown(Rmd)- The .rmd files - known as RMarkdown files - let you write Markdown files similarly incorporating your R code into the file.</p></li>
+</ul>
+</section>
+</section>
+<section id="our-experience-interning-with-bioconductor" class="level2">
+<h2 class="anchored" data-anchor-id="our-experience-interning-with-bioconductor">Our experience interning with Bioconductor</h2>
+<p>Through Outreachy, we have been interning at Bioconductor for over a month now. It has been a great experience, not only to the world of open science and open source, but also learning how to work collaboratively in a remote environment. Getting up to speed with many concepts in a short period of time was an uphill task, but thanks to our incredible mentors, Jen Wokaty and Hervé Pagès, the journey has been smoother than a pebble.</p>
+<section id="kirabos-experience-working-on-bsgenomeforge" class="level3">
+<h3 class="anchored" data-anchor-id="kirabos-experience-working-on-bsgenomeforge">Kirabo’s experience working on BSgenomeForge</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://bioconductor.github.io/biocblog/posts/2023-01-22-OutreachyInternship/KIRABO HEADSHOT.jpeg" class="img-fluid figure-img"></p>
+<figcaption>Kirabo Atuhurira</figcaption>
+</figure>
+</div>
+<p>Hi, my name is Atuhurira Kirabo Kakopo, and I’m from Kampala, Uganda. I am on the cusp of graduating with a bachelor’s degree in Software Engineering. Academically, I thrived in my data science and artificial intelligence classes, which was because I found these topics extra interesting. Because of this, R ended up as my programming language of choice, because it was used extensively in the aforementioned class projects.</p>
+<p>When I started out in the Outreachy contribution period, I filtered out which projects I wanted to apply to based on my skill level. I was glad to find that on top of requiring R programming skills, Bioconductor was a project that focused on computational biology, a field that I didn’t study but had an interest in. During the contribution round, I applied to the Refactor the BSgenomeForge tools project because I felt it had the skills required to make the best of this task.</p>
+<p>Working as an Outreachy intern in Bioconductor has been honestly the best introduction to the world of open source and real life programming for me. I have been lucky enough to learn from experienced open source contributors, and I am certain I can apply the skills I have gained in creating the BSgenomeForge package in almost any part of my career, from writing technical documentation to proper coding practice.</p>
+<p>Working on the <a href="https://github.com/Bioconductor/BSgenomeForge">BSgenomeForgeproject</a>, I feel like I have learnt a lot, not just about making packages, but how to structure my code, how to make it readable for other users, how to communicate with others, etc. Hervé certainly makes everything easier, by taking me through task workflows, and offering helpful pointers when I’m stuck. I’ve had a chance to get involved on an interesting, highly collaborative open source project, one that is used by so many people, and I have been given the opportunity to create something that makes their work just a bit easier. Everyday is an opportunity to learn something new, something I definitely do not take for granted. Overall, my experience has been a turning point. You can read more about it <a href="https://kakopo.wordpress.com/">here</a>, on my blog.</p>
+</section>
+<section id="beryls-experience-working-on-sweave2rmd" class="level3">
+<h3 class="anchored" data-anchor-id="beryls-experience-working-on-sweave2rmd">Beryl’s experience working on sweave2rmd</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://bioconductor.github.io/biocblog/posts/2023-01-22-OutreachyInternship/Beryl Kanali.jpg" class="img-fluid figure-img"></p>
+<figcaption>Beryl Kanai</figcaption>
+</figure>
+</div>
+<p>I am Beryl Kanali from Nairobi, Kenya. I graduated in 2021 with a bachelor’s degree in Mathematics and Computer Science which led me to choosing Data Science as a career of choice. I have always been interested in biology, life sciences and research in these areas and even thought of doing medicine at some point but I was more drawn to Mathematics and technology. After school I wanted to practice data science in areas related to biology, life sciences or pharmacy. Unfortunately, Data Science is not widely used in those areas in my country.</p>
+<p>When looking for a project to contribute to, I wanted something I am really interested in when it comes to domain knowledge and seeing what Bioconductor does, I was immediately impressed and sweave2rmd was the only project I contributed to.</p>
+<p>I believe the exposure and learning I am getting from Bioconductor will help advance my career in the right direction. Getting to work with people from different fields and learn how different aspects of technology can be applied in computational biology and bioinformatics helps improve my skills and understanding of the intersection between technology and other sciences.</p>
+<p>I have been interning for one and a half months now and it has been awesome so far. I have improved my coding skills, communication skills and team work. Open source requires a lot of learning and I have learnt a lot so far(Git skills, R programming and writing good documentation). My mentor Jennifer Wokaty has been very supportive and helpful. Apart from my mentor, the Bioconductor team has also been helpful in terms of providing feedback and answering questions whenever I am stuck.</p>
+<p>I have had the chance to learn and interact with several Bioconductor packages and learn a few things from them. I now have a better understanding of building packages and creating documentation.</p>
+<p>I look forward to continuing learning, contributing and helping make the sweave2rmd project a success. Here is the <a href="https://dev.to/berylkanali">link to my blog</a> where I have been writing about my experience as an outreachy intern with bioconductor.</p>
+</section>
+<section id="conclusion" class="level3">
+<h3 class="anchored" data-anchor-id="conclusion">Conclusion</h3>
+<p>Bioconductor is made up of &gt;2000 software packages, and fosters an equally diverse, welcoming community. It has been an awesome experience to interact with the community, contribute to the work being done within the project and learn a lot! We encourage any open source enthusiasts, or individuals with an interest in computational biology to contribute to the project, and welcome themselves to a whole new adventure!</p>
+<p>Here is some information for anyone interested in being part of <a href="https://www.outreachy.org/">Outreachy</a>.</p>
+<ul>
+<li><p>The next Outreachy cohort starts on May 29, 2023, and prospective interns encouraged to apply before February 6, 2023. Here is the link to <a href="https://www.outreachy.org/apply/">apply</a></p></li>
+<li><p>The application deadline for community members who are interested in submitting mentorship projects for the next cohort is February 24, 2023. Here is the link to <a href="https://www.outreachy.org/communities/cfp/">apply</a></p></li>
+</ul>
+
+
+</section>
+</section>
+
+ ]]></description>
+  <category>open science</category>
+  <guid>https://bioconductor.github.io/biocblog/posts/2023-01-22-OutreachyInternship/</guid>
+  <pubDate>Sun, 22 Jan 2023 00:00:00 GMT</pubDate>
 </item>
 </channel>
 </rss>
