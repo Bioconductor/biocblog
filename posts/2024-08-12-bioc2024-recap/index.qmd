@@ -7,7 +7,7 @@ author:
 date: 2024-08-12
 categories:
   - Bioconductor
-image: "group-photo.jpg"
+image: "images/group-photo.webp"
 format:
   html:
     toc: true
@@ -16,7 +16,7 @@ lightbox: true
 
 ::: {#gallery-intro .columns}
 ::: {.column width="100%"}
-![](images/group-photo.jpg){group="gallery-intro"}
+![](images/group-photo.webp){group="gallery-intro"}
 :::
 ::: {.column width="100%"}
 ![](images/bioc2024-numbers.png){group="gallery-intro"}
