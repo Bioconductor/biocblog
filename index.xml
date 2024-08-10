@@ -9,7 +9,7 @@
 <link>https://bioconductor.github.io/biocblog/</link>
 <atom:link href="https://bioconductor.github.io/biocblog/index.xml" rel="self" type="application/rss+xml"/>
 <description>A blog for the Bioconductor community!</description>
-<generator>quarto-1.5.55</generator>
+<generator>quarto-1.5.56</generator>
 <lastBuildDate>Mon, 29 Jul 2024 00:00:00 GMT</lastBuildDate>
 <item>
   <title>Beatriz Calvo-Serra: inaugural Bioconductor Athena Award winner</title>
@@ -74,7 +74,9 @@ Figure&nbsp;3: Bea giving a virtual presentation at EuroBioc 2022 in Heidelberg,
 
 
 
- ]]></description>
+<p>
+© 2024 Bioconductor. Content is published under <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons CC-BY-4.0 License</a> for the text and <a href="https://opensource.org/licenses/BSD-3-Clause">BSD 3-Clause License</a> for any code. | <a href="https://www.r-bloggers.com">R-Bloggers</a>
+</p> ]]></description>
   <category>Bioconductor</category>
   <guid>https://bioconductor.github.io/biocblog/posts/2024-07-29-athena-award/</guid>
   <pubDate>Mon, 29 Jul 2024 00:00:00 GMT</pubDate>
@@ -138,7 +140,9 @@ Figure&nbsp;3: Bea giving a virtual presentation at EuroBioc 2022 in Heidelberg,
 
 </section>
 
- ]]></description>
+<p>
+© 2024 Bioconductor. Content is published under <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons CC-BY-4.0 License</a> for the text and <a href="https://opensource.org/licenses/BSD-3-Clause">BSD 3-Clause License</a> for any code. | <a href="https://www.r-bloggers.com">R-Bloggers</a>
+</p> ]]></description>
   <category>Bioconductor</category>
   <guid>https://bioconductor.github.io/biocblog/posts/2024-07-24-czi-os-meeting-highlights/</guid>
   <pubDate>Wed, 24 Jul 2024 00:00:00 GMT</pubDate>
@@ -180,7 +184,9 @@ Figure&nbsp;3: Bea giving a virtual presentation at EuroBioc 2022 in Heidelberg,
 
 
 
- ]]></description>
+<p>
+© 2024 Bioconductor. Content is published under <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons CC-BY-4.0 License</a> for the text and <a href="https://opensource.org/licenses/BSD-3-Clause">BSD 3-Clause License</a> for any code. | <a href="https://www.r-bloggers.com">R-Bloggers</a>
+</p> ]]></description>
   <category>Bioconductor</category>
   <guid>https://bioconductor.github.io/biocblog/posts/2024-07-20-rladies-bioconductor-collaboration/</guid>
   <pubDate>Sat, 20 Jul 2024 00:00:00 GMT</pubDate>
@@ -231,7 +237,9 @@ To administer and expand the scope of the Tidyomics Project, enabling computatio
 
 </section>
 
- ]]></description>
+<p>
+© 2024 Bioconductor. Content is published under <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons CC-BY-4.0 License</a> for the text and <a href="https://opensource.org/licenses/BSD-3-Clause">BSD 3-Clause License</a> for any code. | <a href="https://www.r-bloggers.com">R-Bloggers</a>
+</p> ]]></description>
   <category>Bioconductor</category>
   <guid>https://bioconductor.github.io/biocblog/posts/2024-07-12-czi-eoss6-grants/</guid>
   <pubDate>Fri, 12 Jul 2024 00:00:00 GMT</pubDate>
@@ -287,7 +295,9 @@ To administer and expand the scope of the Tidyomics Project, enabling computatio
 
 
 
- ]]></description>
+<p>
+© 2024 Bioconductor. Content is published under <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons CC-BY-4.0 License</a> for the text and <a href="https://opensource.org/licenses/BSD-3-Clause">BSD 3-Clause License</a> for any code. | <a href="https://www.r-bloggers.com">R-Bloggers</a>
+</p> ]]></description>
   <category>Bioconductor</category>
   <guid>https://bioconductor.github.io/biocblog/posts/2024-07-10-slack-welcome/</guid>
   <pubDate>Wed, 10 Jul 2024 00:00:00 GMT</pubDate>
@@ -349,7 +359,9 @@ To administer and expand the scope of the Tidyomics Project, enabling computatio
 
 </section>
 
- ]]></description>
+<p>
+© 2024 Bioconductor. Content is published under <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons CC-BY-4.0 License</a> for the text and <a href="https://opensource.org/licenses/BSD-3-Clause">BSD 3-Clause License</a> for any code. | <a href="https://www.r-bloggers.com">R-Bloggers</a>
+</p> ]]></description>
   <category>Bioconductor</category>
   <category>Website Redesign</category>
   <guid>https://bioconductor.github.io/biocblog/posts/2024-02-01-website-update/</guid>
@@ -465,7 +477,9 @@ To administer and expand the scope of the Tidyomics Project, enabling computatio
 
 </section>
 
- ]]></description>
+<p>
+© 2024 Bioconductor. Content is published under <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons CC-BY-4.0 License</a> for the text and <a href="https://opensource.org/licenses/BSD-3-Clause">BSD 3-Clause License</a> for any code. | <a href="https://www.r-bloggers.com">R-Bloggers</a>
+</p> ]]></description>
   <category>open science</category>
   <guid>https://bioconductor.github.io/biocblog/posts/2024-01-31-OutreachyInternshipJourney/</guid>
   <pubDate>Wed, 31 Jan 2024 00:00:00 GMT</pubDate>
@@ -488,7 +502,9 @@ To administer and expand the scope of the Tidyomics Project, enabling computatio
 
 
 
- ]]></description>
+<p>
+© 2024 Bioconductor. Content is published under <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons CC-BY-4.0 License</a> for the text and <a href="https://opensource.org/licenses/BSD-3-Clause">BSD 3-Clause License</a> for any code. | <a href="https://www.r-bloggers.com">R-Bloggers</a>
+</p> ]]></description>
   <category>Bioconductor</category>
   <guid>https://bioconductor.github.io/biocblog/posts/2023-11-17-twitter-exit/</guid>
   <pubDate>Fri, 17 Nov 2023 00:00:00 GMT</pubDate>
@@ -572,7 +588,9 @@ To administer and expand the scope of the Tidyomics Project, enabling computatio
 
 </section>
 
- ]]></description>
+<p>
+© 2024 Bioconductor. Content is published under <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons CC-BY-4.0 License</a> for the text and <a href="https://opensource.org/licenses/BSD-3-Clause">BSD 3-Clause License</a> for any code. | <a href="https://www.r-bloggers.com">R-Bloggers</a>
+</p> ]]></description>
   <category>Bioconductor</category>
   <category>events</category>
   <guid>https://bioconductor.github.io/biocblog/posts/2023-08-17-bioc2023-recap/</guid>
@@ -639,7 +657,9 @@ To administer and expand the scope of the Tidyomics Project, enabling computatio
 
 </section>
 
- ]]></description>
+<p>
+© 2024 Bioconductor. Content is published under <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons CC-BY-4.0 License</a> for the text and <a href="https://opensource.org/licenses/BSD-3-Clause">BSD 3-Clause License</a> for any code. | <a href="https://www.r-bloggers.com">R-Bloggers</a>
+</p> ]]></description>
   <category>Bioconductor</category>
   <category>Website Redesign</category>
   <guid>https://bioconductor.github.io/biocblog/posts/2023-08-01-website-redesign-update/</guid>
@@ -1358,7 +1378,9 @@ font-style: inherit;"> warn</span></span></code></pre></div>
 </section>
 </section>
 
- ]]></description>
+<p>
+© 2024 Bioconductor. Content is published under <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons CC-BY-4.0 License</a> for the text and <a href="https://opensource.org/licenses/BSD-3-Clause">BSD 3-Clause License</a> for any code. | <a href="https://www.r-bloggers.com">R-Bloggers</a>
+</p> ]]></description>
   <category>tech-notes</category>
   <category>GitHub Actions</category>
   <category>ARM64</category>
@@ -1469,7 +1491,9 @@ font-style: inherit;"> warn</span></span></code></pre></div>
 
 </section>
 
- ]]></description>
+<p>
+© 2024 Bioconductor. Content is published under <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons CC-BY-4.0 License</a> for the text and <a href="https://opensource.org/licenses/BSD-3-Clause">BSD 3-Clause License</a> for any code. | <a href="https://www.r-bloggers.com">R-Bloggers</a>
+</p> ]]></description>
   <category>open science</category>
   <guid>https://bioconductor.github.io/biocblog/posts/2023-07-14-OutreachyInternshipExperience/</guid>
   <pubDate>Fri, 14 Jul 2023 00:00:00 GMT</pubDate>
@@ -1526,7 +1550,9 @@ font-style: inherit;"> warn</span></span></code></pre></div>
 
 </section>
 
- ]]></description>
+<p>
+© 2024 Bioconductor. Content is published under <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons CC-BY-4.0 License</a> for the text and <a href="https://opensource.org/licenses/BSD-3-Clause">BSD 3-Clause License</a> for any code. | <a href="https://www.r-bloggers.com">R-Bloggers</a>
+</p> ]]></description>
   <category>Bioconductor</category>
   <category>Website Redesign</category>
   <guid>https://bioconductor.github.io/biocblog/posts/2023-06-22-website-redesign/</guid>
@@ -1566,7 +1592,9 @@ font-style: inherit;"> warn</span></span></code></pre></div>
 
 
 
- ]]></description>
+<p>
+© 2024 Bioconductor. Content is published under <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons CC-BY-4.0 License</a> for the text and <a href="https://opensource.org/licenses/BSD-3-Clause">BSD 3-Clause License</a> for any code. | <a href="https://www.r-bloggers.com">R-Bloggers</a>
+</p> ]]></description>
   <category>Bioconductor</category>
   <guid>https://bioconductor.github.io/biocblog/posts/2023-06-16-ELIXIR-allhands-meeting/</guid>
   <pubDate>Fri, 16 Jun 2023 00:00:00 GMT</pubDate>
@@ -1613,7 +1641,9 @@ font-style: inherit;"> warn</span></span></code></pre></div>
 
 </section>
 
- ]]></description>
+<p>
+© 2024 Bioconductor. Content is published under <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons CC-BY-4.0 License</a> for the text and <a href="https://opensource.org/licenses/BSD-3-Clause">BSD 3-Clause License</a> for any code. | <a href="https://www.r-bloggers.com">R-Bloggers</a>
+</p> ]]></description>
   <category>events</category>
   <category>education</category>
   <guid>https://bioconductor.github.io/biocblog/posts/2023-06-16-smorgasbord-recap/</guid>
@@ -1688,7 +1718,9 @@ root@b40c553def79:/# R CMD check xyz_VERSION.tar.gz</code></pre>
 
 </section>
 
- ]]></description>
+<p>
+© 2024 Bioconductor. Content is published under <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons CC-BY-4.0 License</a> for the text and <a href="https://opensource.org/licenses/BSD-3-Clause">BSD 3-Clause License</a> for any code. | <a href="https://www.r-bloggers.com">R-Bloggers</a>
+</p> ]]></description>
   <category>tech-notes</category>
   <category>ARM64</category>
   <guid>https://bioconductor.github.io/biocblog/posts/2023-06-09-debug-linux-arm64-on-docker/</guid>
@@ -1761,7 +1793,9 @@ git push upstream main:devel</code></pre>
 </section>
 </section>
 
- ]]></description>
+<p>
+© 2024 Bioconductor. Content is published under <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons CC-BY-4.0 License</a> for the text and <a href="https://opensource.org/licenses/BSD-3-Clause">BSD 3-Clause License</a> for any code. | <a href="https://www.r-bloggers.com">R-Bloggers</a>
+</p> ]]></description>
   <category>Bioconductor</category>
   <guid>https://bioconductor.github.io/biocblog/posts/2023-03-01-transition-to-devel/</guid>
   <pubDate>Wed, 01 Mar 2023 00:00:00 GMT</pubDate>
@@ -1906,7 +1940,9 @@ git push upstream main:devel</code></pre>
 </section>
 </section>
 
- ]]></description>
+<p>
+© 2024 Bioconductor. Content is published under <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons CC-BY-4.0 License</a> for the text and <a href="https://opensource.org/licenses/BSD-3-Clause">BSD 3-Clause License</a> for any code. | <a href="https://www.r-bloggers.com">R-Bloggers</a>
+</p> ]]></description>
   <category>education</category>
   <guid>https://bioconductor.github.io/biocblog/posts/2023-02-24-carpentries-update/</guid>
   <pubDate>Fri, 24 Feb 2023 00:00:00 GMT</pubDate>
@@ -2299,7 +2335,9 @@ font-style: inherit;">"."</span>) </span></code></pre></div>
 
 </section>
 
- ]]></description>
+<p>
+© 2024 Bioconductor. Content is published under <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons CC-BY-4.0 License</a> for the text and <a href="https://opensource.org/licenses/BSD-3-Clause">BSD 3-Clause License</a> for any code. | <a href="https://www.r-bloggers.com">R-Bloggers</a>
+</p> ]]></description>
   <category>Package</category>
   <guid>https://bioconductor.github.io/biocblog/posts/2023-02-23-CuratedAtlasQueryR/</guid>
   <pubDate>Thu, 23 Feb 2023 00:00:00 GMT</pubDate>
@@ -2409,7 +2447,9 @@ font-style: inherit;">"."</span>) </span></code></pre></div>
 </section>
 </section>
 
- ]]></description>
+<p>
+© 2024 Bioconductor. Content is published under <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons CC-BY-4.0 License</a> for the text and <a href="https://opensource.org/licenses/BSD-3-Clause">BSD 3-Clause License</a> for any code. | <a href="https://www.r-bloggers.com">R-Bloggers</a>
+</p> ]]></description>
   <category>open science</category>
   <guid>https://bioconductor.github.io/biocblog/posts/2023-01-22-OutreachyInternship/</guid>
   <pubDate>Sun, 22 Jan 2023 00:00:00 GMT</pubDate>
