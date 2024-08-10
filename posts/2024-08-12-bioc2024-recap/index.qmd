@@ -33,18 +33,17 @@ Before the main conference kicked off, BioC2024 offered a 2-day Carpentries work
 
 ::: {#gallery-carp .columns}
 ::: {.column width="33%"}
-![](images/carpentries-jenny.jpg){group="gallery-carp" width="246" height="160" style="padding-right: 1px;" alt="Jenny Drnevich teaching at the Carpentries workshop"}
+![](images/carpentries-jenny.jpg){group="gallery-carp" style="padding-right: 1px;" alt="Jenny Drnevich teaching at the Carpentries workshop"}
 :::
 
 ::: {.column width="33%"}
-![](images/carpentries-tim.jpg){group="gallery-carp" width="246" height="160" style="padding-right: 1px;" alt="Tim Triche teaching at the Carpentries workshop"}
+![](images/carpentries-tim.jpg){group="gallery-carp" style="padding-right: 1px;" alt="Tim Triche teaching at the Carpentries workshop"}
 :::
 
 ::: {.column width="33%"}
-![](images/carpentries-charlotte.jpg){group="gallery-carp" width="246" height="160" alt="Charlotte Hutchings teaching at the Carpentries workshop"}
+![](images/carpentries-charlotte.jpg){group="gallery-carp" style="padding-right: 1px;" alt="Charlotte Hutchings teaching at the Carpentries workshop"}
 :::
 :::
-
 
 ::: {style="text-align: center;"}
 *Bioconductor Carpentries instructors: Jenny, Tim & Charlotte*
