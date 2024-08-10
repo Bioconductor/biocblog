@@ -1,0 +1,11 @@
+---
+title: "BioC2024 recap"
+lightbox: true
+---
+test
+
+
+![](wes-tim.jpg){group="my-gallery"}
+![](wes-erica.jpg){group="my-gallery"}
+![](wes-vince.jpg){group="my-gallery"}
+
