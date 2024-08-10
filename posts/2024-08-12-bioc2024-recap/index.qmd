@@ -25,7 +25,110 @@ lightbox: true
 
 BioC2024 brought the Bioconductor community together at the Van Andel Institute in Grand Rapids, Michigan, where we celebrated our shared work and explored the latest advancements in bioinformatics. Over 350 participants took part, with 116 attending in person and 240 joining virtually, allowing participants from regions as far away as Latin America, Africa, and Asia to be part of the event. This year’s conference also marked our first time in the Mid-West US, highlighting the expanding reach and diversity of our community.
 
-![](images/maps-attendees.png){alt="Map showing the geographic distribution of BioC2024 attendees"}
+
+```{r, echo=FALSE, warning=FALSE, message=FALSE, cache=TRUE}
+# Load necessary libraries
+library(ggplot2)
+library(dplyr)
+library(readr)
+library(sf)
+library(rnaturalearth)
+library(rnaturalearthdata)
+library(viridis)
+library(plotly)
+
+# Load the final attendees data for 2024
+data_2024 <- read_csv('Registrants Final-Location-fixed.csv')
+
+# Fix country names so they match the world map country names
+data_2024 <- data_2024 %>%
+  mutate(`Country/Region` = case_when(
+    `Country/Region` == "United States" ~ "United States of America",
+    `Country/Region` == "The Netherlands" ~ "Netherlands",
+    TRUE ~ `Country/Region`))
+
+# Harmonize and filter the data for in-person and virtual attendees
+in_person_counts <- data_2024 %>%
+  filter(!grepl("Virtual|virtual", `Ticket Type`)) %>%
+  group_by(`Country/Region`) %>%
+  summarise(Count_InPerson = n())
+
+virtual_counts <- data_2024 %>%
+  filter(grepl("Virtual|virtual", `Ticket Type`)) %>%
+  group_by(`Country/Region`) %>%
+  summarise(Count_Virtual = n())
+
+total_counts <- data_2024 %>%
+  group_by(`Country/Region`) %>%
+  summarise(Count_Total = n())
+
+# Merge with world map data
+world <- ne_countries(scale = "medium", returnclass = "sf")
+world <- world %>% filter(name != "Antarctica")
+world_in_person <- left_join(world, in_person_counts, by = c("name" = "Country/Region"))
+world_virtual <- left_join(world, virtual_counts, by = c("name" = "Country/Region"))
+world_total <- left_join(world, total_counts, by = c("name" = "Country/Region"))
+
+# Calculate the log-transformed data for visualization purposes
+world_in_person$log_Count_InPerson <- log1p(world_in_person$Count_InPerson)
+world_virtual$log_Count_Virtual <- log1p(world_virtual$Count_Virtual)
+world_total$log_Count_Total <- log1p(world_total$Count_Total)
+
+# Determine the maximum count across all categories and round it to the nearest 50
+max_count <- ceiling(max(total_counts$Count_Total, na.rm = TRUE) / 50) * 50
+
+# Define consistent breaks and labels based on the maximum count
+breaks <- c(0, log1p(5), log1p(10), log1p(50), log1p(100), log1p(max_count))
+labels <- expm1(breaks)
+
+# Create chloropleth map for In-Person Attendance with x-axis label
+p1 <- ggplot(data = world_in_person) +
+  geom_sf(aes(fill = log_Count_InPerson, text = paste(name, Count_InPerson)), color = "white") +
+  scale_fill_viridis(option = "magma", na.value = "grey", name = "Attendees", limits = c(0, log1p(max_count)), breaks = breaks, labels = round(labels), direction = -1) +
+  theme_void()
+
+# Create chloropleth map for Virtual Attendance with x-axis label
+p2 <- ggplot(data = world_virtual) +
+  geom_sf(aes(fill = log_Count_Virtual, text = paste(name, Count_Virtual)), color = "white") +
+  scale_fill_viridis(option = "magma", na.value = "grey", name = "Attendees", limits = c(0, log1p(max_count)), breaks = breaks, labels = round(labels), direction = -1) +
+  theme_void()
+
+# Create chloropleth map for Total Attendance with x-axis label
+p3 <- ggplot(data = world_total) +
+  geom_sf(aes(fill = log_Count_Total, text = paste(name, Count_Total)), color = "white") +
+  scale_fill_viridis(option = "magma", na.value = "grey", name = "Attendees", limits = c(0, log1p(max_count)), breaks = breaks, labels = round(labels), direction = -1) +
+  theme_void()
+
+# Convert to interactive plotly objects
+p1_interactive <- ggplotly(p1, tooltip = "text") %>% 
+  layout(xaxis = list(showline = FALSE, showticklabels = FALSE, zeroline = FALSE, title_standoff = 5))
+
+p2_interactive <- ggplotly(p2, tooltip = "text") %>% 
+  layout(xaxis = list(showline = FALSE, showticklabels = FALSE, zeroline = FALSE, title_standoff = 5))
+
+p3_interactive <- ggplotly(p3, tooltip = "text") %>% 
+  layout(xaxis = list(showline = FALSE, showticklabels = FALSE, zeroline = FALSE, title_standoff = 5))
+```
+
+```{r, echo=FALSE, warning=FALSE, message=FALSE, cache=TRUE}
+combined_maps <- subplot(
+  p1_interactive, p2_interactive, nrows = 1, shareX = FALSE, titleX = TRUE, titleY = FALSE) %>%
+  subplot(p3_interactive, nrows = 2, margin = 0.01) %>%
+  layout(
+    annotations = list(
+      list(x = 0.2, y = 0.9, text = paste("In-Person (", sum(in_person_counts$Count_InPerson, na.rm = TRUE), ")", sep = ""), xref = "paper", yref = "paper", xanchor = "center", yanchor = "bottom", showarrow = FALSE),
+      list(x = 0.8, y = 0.9, text = paste("Virtual (", sum(virtual_counts$Count_Virtual, na.rm = TRUE), ")", sep = ""), xref = "paper", yref = "paper", xanchor = "center", yanchor = "bottom", showarrow = FALSE),
+      list(x = 0.5, y = 0.42, text = paste("Total (", sum(total_counts$Count_Total, na.rm = TRUE), ")", sep = ""), xref = "paper", yref = "paper", xanchor = "center", yanchor = "bottom", showarrow = FALSE)
+    ),
+    showlegend = FALSE,
+    xaxis = list(showline = FALSE, showgrid = FALSE, zeroline = FALSE),
+    yaxis = list(showline = FALSE, showgrid = FALSE, zeroline = FALSE)
+  )
+
+# Display the plot
+combined_maps
+```
+
 
 ## Pre-Conference Activities
 
@@ -232,7 +335,7 @@ The materials from BioC2024’s workshops will also be available through the con
 **Slides**\
 Presenters are encouraged to share their presentations (slides, etc.) through the Zenodo Bioconductor community. This not only helps disseminate the knowledge further but also allows for the work to be cited and referenced by others in the field. See an example [here](https://zenodo.org/records/13236253).
 
-## What did attendees like?
+## One Attendee's Experience
 
 BioC2024 received positive feedback from attendees, many of whom appreciated the opportunity to deepen their connection to the Bioconductor community. One such reflection came from [Boyi Guo](https://www.linkedin.com/posts/bioconductor_bioc2024-activity-7217905914966667264-i79r), a Postdoctoral Fellow in Biostatistics at Johns Hopkins University and one of the conference presenters. During one of the evening social events, Boyi shared how attending BioC2024 transformed his understanding of the community. He later provided this testimonial:
 
