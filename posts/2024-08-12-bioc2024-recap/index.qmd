@@ -243,6 +243,7 @@ The feedback from virtual attendees highlighted appreciation for the infrastruct
 ## Community Recognition and Support
 
 **Bioconductor Awards 2024**\
+
 Recognizing community contributions is a key part of Bioconductor, and this year’s awards ceremony was a highlight of BioC2024. Four outstanding community members were honored with the Bioconductor Community Award: **Saskia Freytag, Lambda Moses, Jenny Drnevich, and Martin Morgan**. These individuals were nominated by their peers and selected by the Bioconductor Community Advisory Board and Technical Advisory Board for their exceptional contributions to the project.
 
 This year also marked the introduction of the Bioconductor Athena Award, which was posthumously awarded to **Beatriz Calvo-Serra**. This award recognizes outstanding contributions to the Bioconductor community and honors individuals who inspire through their work and legacy. Bea’s impact on the community was significant, and her story continues to inspire many. You can read more about Bea’s remarkable journey and the legacy she left behind in [this blog post](https://blog.bioconductor.org/posts/2024-07-29-athena-award/).
@@ -276,6 +277,7 @@ You can learn more about the Bioconductor awards and the stories behind the winn
 :::
 
 **Scholarships**\
+
 Inclusivity and diversity are at the heart of the Bioconductor community. To support this, the BioC2024 conference committee awarded scholarships to 8 in-person and 70 virtual attendees. These scholarships were designed to ensure that individuals who might otherwise face financial barriers could participate in the conference.
 
 Whether attending in person or virtually, scholarship recipients were able to engage fully with the conference, bringing a wide range of perspectives and experiences to the discussions.
@@ -294,14 +296,19 @@ This vibrant sticker was a symbol of the conference, reminding us of the connect
 BioC2024 wasn’t just about presentations and workshops—it was also a time to connect with others in the Bioconductor community. From planned events to impromptu meetups, these social opportunities were key to fostering collaboration and building lasting relationships. One attendee shared, *"The conference allowed me to network with individuals from all over the world. It also opened up my eyes towards Spatial Transcriptomics."* Another participant mentioned how *"Being able to share an Uber from the airport from communication on the Slack channel, the sense of community, and many cool talks"* enriched their experience."
 
 **Walking Tour and City Built Social**\
+
 The conference kicked off with a walking tour of Grand Rapids, led by local host and organizer Tim Triche. This tour offered a unique opportunity for attendees to explore the city and get to know each other in a relaxed setting. The evening continued with a casual gathering at City Built, where participants shared ideas over food and drinks, setting the tone for an open and friendly conference experience.
 
-**R-Ladies Meetup and Slack Conversations**\
+**R-Ladies Meetup**\
+
 Breakfasts and lunches at the conference venue provided more chances to connect. A special [R-Ladies meetup lunch](https://www.meetup.com/rladies-east-lansing/events/302185529) on the second day brought together women and allies in the R and Bioconductor communities to connect and discuss their work and experiences.
+
+**Slack Conversations**
 
 In addition to in-person interactions, the BioC2024 Slack channels were buzzing with conversations. Whether coordinating travel plans, sharing local tips, or just introducing themselves, attendees made good use of this digital space to connect and collaborate.
 
 **A Welcoming Atmosphere**\
+
 Throughout the conference, attendees consistently remarked on the friendly and welcoming atmosphere. These social events and informal meetups not only made it easy to meet new people and reconnect with old friends, but also laid the groundwork for future collaborations. We’re excited to see what comes from the connections made at BioC2024.
 
 ![](images/walking-tour.jpg){width="70%" fig-align="center"  alt="Participants on a walking tour of Grand Rapids during BioC2024"}
@@ -327,12 +334,15 @@ One of the standout moments of the conference was Wes Wilson’s lightning talk 
 ## Materials
 
 **Videos**\
+
 To ensure that the knowledge shared at BioC2024 reaches as many people as possible, recordings of talks, workshops, and demos will be made available on [Bioconductor YouTube](https://www.youtube.com/user/bioconductor) about one month after the conference. Look out for the BioC2024 playlist, where you can revisit your favorite sessions or catch up on what you missed.
 
 **Workshops**\
+
 The materials from BioC2024’s workshops will also be available through the conference website, and interactively through [workshop.bioconductor.org](https://workshop.bioconductor.org/) under the “Archived” section. This ensures that the hands-on learning from the conference can continue long after it’s over.
 
 **Slides**\
+
 Presenters are encouraged to share their presentations (slides, etc.) through the Zenodo Bioconductor community. This not only helps disseminate the knowledge further but also allows for the work to be cited and referenced by others in the field. See an example [here](https://zenodo.org/records/13236253).
 
 ## One Attendee's Experience
@@ -364,7 +374,8 @@ Stay tuned for updates and announcements by following Bioconductor's [LinkedIn](
 
 ## Acknowledgments
 
-**Sponsors**\
+**Sponsors**
+
 BioC2024 are extremely grateful to those that sponsored BioC2024. BioC2024’s gold sponsors were [Microsoft Genomics](%5Bhttps://www.microsoft.com/en-us/genomics/) and [Moderna](https://www.modernatx.com/), silver sponsors were [R Consortium](https://www.r-consortium.org/), [Novartis](https://www.novartis.com), [Denali Therapeutics](https://www.denalitherapeutics.com/), [Genentech](https://www.gene.com/), [Bristol Myers Squibb](https://www.bms.com/) and other sponsors were [Bluebird Bio](https://www.bluebirdbio.com/). Their support along with BioC2024’s other sponsors was greatly appreciated by the Bioconductor community.
 
 ![](images/sponsors.png){alt="Logos of sponsors for BioC2024"}
@@ -396,4 +407,5 @@ Wes Wilson, University of Pennsylvania\
 Courtney Zirkle, Events and Meeting Coordinator, Van Andel Institute
 
 **Social Media Support**\
+
 Amaka Joyce
