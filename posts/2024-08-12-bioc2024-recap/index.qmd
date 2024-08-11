@@ -112,8 +112,8 @@ p3_interactive <- ggplotly(p3, tooltip = "text") %>%
 
 ```{r, echo=FALSE, warning=FALSE, message=FALSE, cache=TRUE}
 combined_maps <- subplot(
-  p1_interactive, p2_interactive, nrows = 1, shareX = FALSE, titleX = TRUE, titleY = FALSE) %>%
-  subplot(p3_interactive, nrows = 2, margin = 0.01) %>%
+  p1_interactive, p2_interactive, nrows = 1, shareX = FALSE, titleX = TRUE, titleY = FALSE, margin = 0) %>%
+  subplot(p3_interactive, nrows = 2, margin = 0) %>%
   layout(
     annotations = list(
       list(x = 0.2, y = 0.9, text = paste("In-Person (", sum(in_person_counts$Count_InPerson, na.rm = TRUE), ")", sep = ""), xref = "paper", yref = "paper", xanchor = "center", yanchor = "bottom", showarrow = FALSE),
