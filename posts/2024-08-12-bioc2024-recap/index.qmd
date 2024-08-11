@@ -156,11 +156,11 @@ Participants appreciated the interactive and practical approach of the workshop.
 
 ## Program Overview
 
-The BioC2024 conference offered a rich and diverse program, featuring a range of presentations, workshops, and discussions that showcased the latest advancements in bioinformatics and computational biology. You can explore the full schedule [here](https://www.bioc2024.bioconductor.org/schedule). One attendee appreciated the balance, noting they liked the *"Relevant topics, fantastic app support, sufficient breaks for coffee/restrooms and quick chats, ability to convert between in-person and virtual."* Another participant highlighted the accessibility of the content, sharing *"I found this conference really accessible even though it was outside my area of expertise. It gave me a good idea of what tools exist, what tools don't exist, and what some of the underlying assumptions are."*
+The BioC2024 conference delivered a diverse program, with presentations, workshops, and discussions highlighting the latest advancements in bioinformatics and computational biology. Explore the full schedule [here](https://www.bioc2024.bioconductor.org/schedule). One attendee appreciated the balance, noting they liked the *"Relevant topics, fantastic app support, sufficient breaks for coffee/restrooms and quick chats, ability to convert between in-person and virtual."* Another participant highlighted the accessibility of the content, sharing *"I found this conference really accessible even though it was outside my area of expertise. It gave me a good idea of what tools exist, what tools don't exist, and what some of the underlying assumptions are."*
 
 **A View from the Technical Core**
 
-During his opening remarks, Vince Carey, lead of the Bioconductor project, shared a glimpse into the technical core of the project with this hand-drawn diagram. It illustrates the complex infrastructure and the interconnected tools and platforms that support the Bioconductor ecosystem.
+In his opening remarks, Vince Carey, lead of the Bioconductor project, provided a glimpse into the project’s technical core with a hand-drawn diagram. This illustration highlights the intricate infrastructure and the interconnected tools that support the Bioconductor ecosystem.
 
 ::: {style="text-align: center;"}
 ![](images/opening.jpg){width="70%" alt="Hand-drawn diagram showing the technical core infrastructure of Bioconductor"}
@@ -210,13 +210,13 @@ Ensuring a smooth and accessible experience for all attendees, both in-person an
 
 **RingCentral Platform**
 
-The BioC2024 conference utilized the [RingCentral](https://www.ringcentral.com/) platform to stream talks and sessions to virtual attendees. This setup allowed participants from around the globe to access the live content in real-time, regardless of their location. Recordings of each day's sessions were made available from 9 PM, giving attendees the flexibility to catch up on any talks they missed. These recordings will remain accessible for a month after the conference, after which they will be added to the Bioconductor YouTube channel for long-term access. However, we also received some feedback about minor issues with the platform. A few attendees noted that the video resolution could be improved, with occasional blurriness affecting the clarity of slides and content. We’re taking this feedback on board as we plan for future events, ensuring we continue to enhance the virtual experience for all participants.
+BioC2024 leveraged the [RingCentral](https://www.ringcentral.com/) platform to stream talks and sessions to virtual attendees, enabling global participation in real-time, regardless of location. Recordings of each day's sessions were made available from 9 PM, giving attendees the flexibility to catch up on any talks they missed. These recordings will remain accessible for a month after the conference, after which they will be added to the Bioconductor YouTube channel for long-term access. However, we also received some feedback about minor issues with the platform. A few attendees noted that the video resolution could be improved, with occasional blurriness affecting the clarity of slides and content. We’re taking this feedback on board as we plan for future events, ensuring we continue to enhance the virtual experience for all participants.
 
 **Workshop Infrastructure**
 
 One of the key components of BioC2024 was the hands-on workshops. To ensure these sessions ran smoothly, we leveraged the Bioconductor Galaxy cloud platform, skillfully set up by Alex Mahmoud from the Bioconductor Core Team. This platform allowed participants to interactively run workshops from anywhere, making it easier for both in-person and virtual attendees to follow along.
 
-Alex also created a quick [2-minute video tutorial](https://video.recordonce.com/share/aGLVhlIjQhl) on how to use the platform, making sure everyone could jump in without a hitch. If you missed the live workshops, don’t worry—they’ll be available under the "Archived" section at workshop.bioconductor.org, alongside workshops from previous BioC, EuroBioC, and BioC Asia events.
+Alex also prepared a concise [2-minute video tutorial](https://video.recordonce.com/share/aGLVhlIjQhl), ensuring a smooth start for participants. If you missed the live workshops, don’t worry—they’ll be available under the "Archived" section at workshop.bioconductor.org, alongside workshops from previous BioC, EuroBioC, and BioC Asia events.
 
 ![](images/workshops.png){width="70%" fig-align="center" alt="Graphical representation of the number of workshops at BioC2024"}
 
@@ -318,7 +318,7 @@ Throughout the conference, attendees consistently remarked on the friendly and w
 
 **Memorable Moments**
 
-One of the standout moments of the conference was Wes Wilson’s lightning talk titled *"Like & Subscribe: what streaming bioinformatics taught me about academia,"* delivered just before lunch on the final day. Wes had everyone laughing with his humorous take on the parallels between bioinformatics and the world of streaming. It was a perfect way to energize attendees before the final stretch of the event.
+One of the standout moments of the conference was Wes Wilson’s lightning talk titled *"Like & Subscribe: what streaming bioinformatics taught me about academia,"* delivered just before lunch on the final day. Wes had everyone laughing with their humorous take on the parallels between bioinformatics and the world of streaming. It was a perfect way to energize attendees before the final stretch of the event.
 
 ::: {style="width: 70%; margin: 0 auto;"}
 ![](images/wes-vince.jpg){width="100%" group="gallery-wes" alt="Wes Wilson delivering a talk with satirical slide featuring Vince Carey"}
@@ -350,7 +350,7 @@ Presenters are encouraged to share their presentations (slides, etc.) through th
 
 ## Attendee Experience
 
-BioC2024 received positive feedback from attendees, many of whom appreciated the opportunity to deepen their connection to the Bioconductor community. One such reflection came from [Boyi Guo](https://www.linkedin.com/posts/bioconductor_bioc2024-activity-7217905914966667264-i79r), a Postdoctoral Fellow in Biostatistics at Johns Hopkins University and one of the conference presenters. During one of the evening social events, Boyi shared how attending BioC2024 transformed his understanding of the community. He later provided this testimonial:
+Attendees of BioC2024 shared positive feedback, with many expressing their appreciation for the opportunity to deepen their connection to the Bioconductor community. One such reflection came from [Boyi Guo](https://www.linkedin.com/posts/bioconductor_bioc2024-activity-7217905914966667264-i79r), a Postdoctoral Fellow in Biostatistics at Johns Hopkins University and one of the conference presenters. During one of the evening social events, Boyi shared how attending BioC2024 transformed his understanding of the community. He later provided this testimonial:
 
 *"After years of being both a user and developer of Bioconductor, I finally attended my first BioC conference this past summer—and it was an incredible experience! Despite being a newcomer to the BioC conference, BioC2024 felt like a true homecoming.*
 
@@ -389,26 +389,26 @@ BioC2024 are extremely grateful to those that sponsored BioC2024. BioC2024’s g
 
 **Organizing Committee**
 
-Chair: Erica Feick, Dana-Farber Cancer Institute\
-Local Host and Organizer: Tim Triche, Van Andel Institute
+Chair: Erica Feick, Dana-Farber Cancer Institute, USA\
+Local Host and Organizer: Tim Triche, Van Andel Institute, USA\
 
 Mahmoud Ahmed, The Institute of Cancer Research, UK\
-Krithika Bhuvanesh, Georgetown University\
-Vincent Carey, Brigham and Women’s Hospital, Harvard Medical School\
-Marc Carlson, Seattle Children's Hospital\
+Krithika Bhuvanesh, Georgetown University, USA\
+Vincent Carey, Brigham and Women’s Hospital, Harvard Medical School, USA\
+Marc Carlson, Seattle Children's Hospital, USA\
 Maria Doyle, University of Limerick, Ireland\
-Mikhail Dozmorov, Virginia Commonwealth University\
-Jenny Drnevich, University of Illinois at Urbana-Champaign\
-Lauren Harmon, Van Andel Institute\
-Michael Love, University of North Carolina\
-Alexandru Mahmoud, Harvard Medical School\
-Matthew McCall, University of Rochester Medical Center\
-Lori (Shepherd) Kern, Roswell Park Comprehensive Cancer Center\
+Mikhail Dozmorov, Virginia Commonwealth University, USA\
+Jenny Drnevich, University of Illinois at Urbana-Champaign, USA\
+Lauren Harmon, Van Andel Institute, USA\
+Michael Love, University of North Carolina, USA\
+Alexandru Mahmoud, Harvard Medical School, USA\
+Matthew McCall, University of Rochester Medical Center, USA\
+Lori (Shepherd) Kern, Roswell Park Comprehensive Cancer Center, USA\
 Charlotte Soneson, Friedrich Miescher Institute for Biomedical Research, Switzerland\
-Levi Waldron, CUNY Graduate School of Public Health and Health Policy\
-Wes Wilson, University of Pennsylvania\
-Courtney Zirkle, Events and Meeting Coordinator, Van Andel Institute
+Levi Waldron, CUNY Graduate School of Public Health and Health Policy, USA\
+Wes Wilson, University of Pennsylvania, USA\
+Courtney Zirkle, Events and Meeting Coordinator, Van Andel Institute, USA
 
 **Social Media Support**\
 
-Amaka Joyce
+Amaka Joyce, Nigeria
