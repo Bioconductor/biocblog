@@ -23,7 +23,7 @@ lightbox: true
 :::
 :::
 
-BioC2024 brought the Bioconductor community together at the Van Andel Institute in Grand Rapids, Michigan, where we celebrated our shared work and explored the latest advancements in bioinformatics. Over 350 participants took part, with 116 attending in person and 240 joining virtually, allowing participants from regions as far away as Latin America, Africa, and Asia to be part of the event. This year’s conference also marked our first time in the Mid-West US, highlighting the expanding reach and diversity of our community.
+BioC2024 brought the [Bioconductor](https://bioconductor.org/) community together at the [Van Andel Institute](https://www.vai.org/) in Grand Rapids, Michigan, where we celebrated our shared work and explored the latest advancements in bioinformatics. Over 350 participants took part, with 116 attending in person and 240 joining virtually, allowing participants from regions as far away as Latin America, Africa, and Asia to be part of the event. This year’s conference also marked our first time in the Mid-West US, highlighting the expanding reach and diversity of our community.
 
 
 ```{r, echo=FALSE, warning=FALSE, message=FALSE, cache=TRUE}
@@ -172,7 +172,7 @@ During his opening remarks, Vince Carey, lead of the Bioconductor project, share
 
 **Keynotes**
 
-Our keynote speakers provided deep insights into their respective fields, setting the tone for an intellectually stimulating event:
+Our [keynote speakers](https://www.bioc2024.bioconductor.org/) provided deep insights into their respective fields, setting the tone for an intellectually stimulating event:
 
 -   Sündüz Keleş from the University of Wisconsin-Madison presented *"Challenges and Opportunities in the Statistical Analysis of Single Cell High Throughput Chromatin Conformation Capture Data."* She explored the complexities of single-cell chromatin conformation analysis, prompting thoughtful discussions on data interpretation and its challenges.
 
@@ -202,7 +202,7 @@ There were two Birds of a Feather (BoF) sessions that focused on collaborative t
 
 **Meet the Core Team, TAB and CAB**
 
-There was also a session to introduce the Bioconductor core team and boards to the community, where they gave an overview of who they are, what they do, and shared the annual call for new members to join the [TAB](https://bioconductor.org/about/technical-advisory-board/) and [CAB](https://bioconductor.org/about/community-advisory-board/) and participate in Bioconductor decision-making. See details on the call [here](https://www.linkedin.com/posts/bioconductor_bioconductor-rstats-bioinformatics-activity-7221903619854381058-dFP6).
+There was also a session to introduce the Bioconductor [Core Team](https://www.bioconductor.org/about/core-team/) and boards, [TAB](https://bioconductor.org/about/technical-advisory-board/) and [CAB](https://bioconductor.org/about/community-advisory-board/), to the community. They gave an overview of who they are, what they do, and shared the annual call for new members to join the boards and participate in Bioconductor decision-making. See details on the call [here](https://www.linkedin.com/posts/bioconductor_bioconductor-rstats-bioinformatics-activity-7221903619854381058-dFP6).
 
 ## Conference Infrastructure and Tools
 
@@ -218,7 +218,7 @@ One of the key components of BioC2024 was the hands-on workshops. To ensure thes
 
 Alex also created a quick [2-minute video tutorial](https://video.recordonce.com/share/aGLVhlIjQhl) on how to use the platform, making sure everyone could jump in without a hitch. If you missed the live workshops, don’t worry—they’ll be available under the "Archived" section at workshop.bioconductor.org, alongside workshops from previous BioC, EuroBioC, and BioC Asia events.
 
-![](images/workshops.png){width="70%" alt="Graphical representation of the number of workshops at BioC2024"}
+![](images/workshops.png){width="70%" fig-align="center" alt="Graphical representation of the number of workshops at BioC2024"}
 
 ::: {style="text-align: center;"}
 *Workshops by the numbers*
@@ -229,9 +229,10 @@ Alex also created a quick [2-minute video tutorial](https://video.recordonce.com
 To enhance communication and connection among attendees, we introduced a dedicated BioC2024 Slack workspace. This platform became a hub for real-time interaction, with channels tailored to different aspects of the conference, such as:
 
 #general: Conference-wide announcements and discussions.  
-#travel-buddies: Coordination of travel plans, like sharing rides from the airport. 
-#local-tips: Recommendations for places to eat, visit, or explore in Grand Rapids. 
-#introductions: A space for attendees to introduce themselves and get to know each other. #help-desk: For any questions or assistance needed during the conference. 
+#travel-buddies: Coordination of travel plans, like sharing rides from the airport.  
+#local-tips: Recommendations for places to eat, visit, or explore in Grand Rapids.  
+#introductions: A space for attendees to introduce themselves and get to know each other.  
+#help-desk: For any questions or assistance needed during the conference.  
 #feedback: To gather suggestions and impressions in real-time.
 
 The Slack space was well-received, with 798 messages exchanged, showing how much attendees valued this mode of communication.
@@ -248,7 +249,7 @@ Recognizing community contributions is a key part of Bioconductor, and this year
 
 This year also marked the introduction of the Bioconductor Athena Award, which was posthumously awarded to **Beatriz Calvo-Serra**. This award recognizes outstanding contributions to the Bioconductor community and honors individuals who inspire through their work and legacy. Bea’s impact on the community was significant, and her story continues to inspire many. You can read more about Bea’s remarkable journey and the legacy she left behind in [this blog post](https://blog.bioconductor.org/posts/2024-07-29-athena-award/).
 
-You can learn more about the Bioconductor awards and the stories behind the winners on the [Bioconductor website awards page](https://bioconductor.org/about/awards/). Below, you’ll find a gallery of the award certificates.
+You can learn more about the Bioconductor awards and the stories behind the winners on the [Bioconductor website awards page](https://bioconductor.org/about/awards/). Below, you’ll find a clickable gallery of the award certificates.
 
 ::: {#awards-gallery .columns}
 ::: {.column width="18.5%"}
@@ -288,6 +289,8 @@ Whether attending in person or virtually, scholarship recipients were able to en
 
 **Sticker contest winner**\
 Every year, the Bioconductor community looks forward to the official conference sticker, and BioC2024 was no exception. This year’s sticker, designed by Farhan Ameen from the University of Sydney, Australia, was a crowd favorite. Farhan’s design creatively incorporated elements of the Grand Rapids city logo, including the blue of the Grand River, the iconic red of La Grande Vitesse sculpture, and the bright yellow of the Michigan sun.
+
+Learn more about Farhan and his winning design in our [LinkedIn announcement](https://www.linkedin.com/posts/bioconductor_bioc2024-openscience-bioinformatics-activity-7188487422286999552-6iAS).
 
 This vibrant sticker was a symbol of the conference, reminding us of the connections we built and the knowledge we shared.
 
@@ -382,7 +385,7 @@ BioC2024 are extremely grateful to those that sponsored BioC2024. BioC2024’s g
 
 **Hosts**
 
-Van Andel Institute
+[Van Andel Institute](https://www.vai.org/)
 
 **Organizing Committee**
 
