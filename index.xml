@@ -144,6 +144,7 @@ Figure&nbsp;3: Bea giving a virtual presentation at EuroBioc 2022 in Heidelberg,
 © 2024 Bioconductor. Content is published under <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons CC-BY-4.0 License</a> for the text and <a href="https://opensource.org/licenses/BSD-3-Clause">BSD 3-Clause License</a> for any code. | <a href="https://www.r-bloggers.com">R-Bloggers</a>
 </p> ]]></description>
   <category>Bioconductor</category>
+  <category>CZI</category>
   <guid>https://bioconductor.github.io/biocblog/posts/2024-07-24-czi-os-meeting-highlights/</guid>
   <pubDate>Wed, 24 Jul 2024 00:00:00 GMT</pubDate>
   <media:content url="https://bioconductor.github.io/biocblog/posts/2024-07-24-czi-os-meeting-highlights/czi-group-photo.jpg" medium="image" type="image/jpeg"/>
@@ -241,6 +242,7 @@ To administer and expand the scope of the Tidyomics Project, enabling computatio
 © 2024 Bioconductor. Content is published under <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons CC-BY-4.0 License</a> for the text and <a href="https://opensource.org/licenses/BSD-3-Clause">BSD 3-Clause License</a> for any code. | <a href="https://www.r-bloggers.com">R-Bloggers</a>
 </p> ]]></description>
   <category>Bioconductor</category>
+  <category>CZI</category>
   <guid>https://bioconductor.github.io/biocblog/posts/2024-07-12-czi-eoss6-grants/</guid>
   <pubDate>Fri, 12 Jul 2024 00:00:00 GMT</pubDate>
   <media:content url="https://bioconductor.github.io/biocblog/posts/2024-07-12-czi-eoss6-grants/map.png" medium="image" type="image/png" height="103" width="144"/>
@@ -1944,6 +1946,7 @@ git push upstream main:devel</code></pre>
 © 2024 Bioconductor. Content is published under <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons CC-BY-4.0 License</a> for the text and <a href="https://opensource.org/licenses/BSD-3-Clause">BSD 3-Clause License</a> for any code. | <a href="https://www.r-bloggers.com">R-Bloggers</a>
 </p> ]]></description>
   <category>education</category>
+  <category>Carpentries</category>
   <guid>https://bioconductor.github.io/biocblog/posts/2023-02-24-carpentries-update/</guid>
   <pubDate>Fri, 24 Feb 2023 00:00:00 GMT</pubDate>
   <media:content url="https://bioconductor.github.io/biocblog/posts/2023-02-24-carpentries-update/map.png" medium="image" type="image/png" height="96" width="144"/>
