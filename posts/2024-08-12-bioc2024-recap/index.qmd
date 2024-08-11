@@ -130,7 +130,7 @@ combined_maps
 ```
 
 
-## Pre-Conference Activities
+## Pre-Conference
 
 Before the main conference kicked off, BioC2024 offered a 2-day Carpentries workshop on RNA-seq, attended by 14 participants. The workshop was led by Jenny Drnevich, along with Tim Triche and Charlotte Hutchings, who are both instructors from our [Bioconductor Carpentries](https://blog.bioconductor.org/#category=Carpentries) training program. This hands-on workshop provided in-depth training in RNA-seq data analysis, equipping attendees with valuable skills. The workshop laid a strong foundation for those who continued into the main conference, helping to prepare them for the in-depth discussions and learning that followed.
 
@@ -154,7 +154,7 @@ Participants appreciated the interactive and practical approach of the workshop.
 *Bioconductor Carpentries instructors: Jenny, Tim & Charlotte*
 :::
 
-## Conference Program
+## Program Overview
 
 The BioC2024 conference offered a rich and diverse program, featuring a range of presentations, workshops, and discussions that showcased the latest advancements in bioinformatics and computational biology. You can explore the full schedule [here](https://www.bioc2024.bioconductor.org/schedule). One attendee appreciated the balance, noting they liked the *"Relevant topics, fantastic app support, sufficient breaks for coffee/restrooms and quick chats, ability to convert between in-person and virtual."* Another participant highlighted the accessibility of the content, sharing *"I found this conference really accessible even though it was outside my area of expertise. It gave me a good idea of what tools exist, what tools don't exist, and what some of the underlying assumptions are."*
 
@@ -204,7 +204,7 @@ There were two Birds of a Feather (BoF) sessions that focused on collaborative t
 
 There was also a session to introduce the Bioconductor [Core Team](https://www.bioconductor.org/about/core-team/) and boards, [TAB](https://bioconductor.org/about/technical-advisory-board/) and [CAB](https://bioconductor.org/about/community-advisory-board/), to the community. They gave an overview of who they are, what they do, and shared the annual call for new members to join the boards and participate in Bioconductor decision-making. See details on the call [here](https://www.linkedin.com/posts/bioconductor_bioconductor-rstats-bioinformatics-activity-7221903619854381058-dFP6).
 
-## Conference Infrastructure and Tools
+## Infrastructure & Tools
 
 Ensuring a smooth and accessible experience for all attendees, both in-person and virtual, was a top priority for BioC2024. Here’s how we made that happen:
 
@@ -241,7 +241,7 @@ For long-term communication and to share information or ask questions about the 
 
 The feedback from virtual attendees highlighted appreciation for the infrastructure. As one participant shared, *"This was also the best virtual conference experience I have had. I found the platform easy to use, enjoyed being able to use Galaxy to see some of the code myself, and I really liked the setup."* Another attendee appreciated the inclusivity of the virtual setup, stating, *"Despite the distance and time difference, I was still able to be a part of the conference. I learned a little more about the Bioconductor community also."*
 
-## Community Recognition and Support
+## Community Recognition
 
 **Bioconductor Awards 2024**\
 
@@ -294,7 +294,7 @@ Learn more about Farhan and his winning design in our [LinkedIn announcement](ht
 
 This vibrant sticker was a symbol of the conference, reminding us of the connections we built and the knowledge we shared.
 
-## Social Events and Networking
+## Social & Networking
 
 BioC2024 wasn’t just about presentations and workshops—it was also a time to connect with others in the Bioconductor community. From planned events to impromptu meetups, these social opportunities were key to fostering collaboration and building lasting relationships. One attendee shared, *"The conference allowed me to network with individuals from all over the world. It also opened up my eyes towards Spatial Transcriptomics."* Another participant mentioned how *"Being able to share an Uber from the airport from communication on the Slack channel, the sense of community, and many cool talks"* enriched their experience."
 
@@ -334,7 +334,7 @@ One of the standout moments of the conference was Wes Wilson’s lightning talk 
 :::
 :::
 
-## Materials
+## Conference Materials
 
 **Videos**\
 
@@ -348,7 +348,7 @@ The materials from BioC2024’s workshops will also be available through the con
 
 Presenters are encouraged to share their presentations (slides, etc.) through the Zenodo Bioconductor community. This not only helps disseminate the knowledge further but also allows for the work to be cited and referenced by others in the field. See an example [here](https://zenodo.org/records/13236253).
 
-## One Attendee's Experience
+## Attendee Experience
 
 BioC2024 received positive feedback from attendees, many of whom appreciated the opportunity to deepen their connection to the Bioconductor community. One such reflection came from [Boyi Guo](https://www.linkedin.com/posts/bioconductor_bioc2024-activity-7217905914966667264-i79r), a Postdoctoral Fellow in Biostatistics at Johns Hopkins University and one of the conference presenters. During one of the evening social events, Boyi shared how attending BioC2024 transformed his understanding of the community. He later provided this testimonial:
 
@@ -362,7 +362,7 @@ BioC2024 received positive feedback from attendees, many of whom appreciated the
 
 *BioC wasn’t just another conference; it felt like a celebration of a thriving community that truly inspires and empowers you."*
 
-## Upcoming Bioconductor conferences
+## Upcoming Conferences
 
 If you missed BioC2024, there are plenty of other opportunities to connect with the Bioconductor community at our upcoming conferences. As one attendee summed up, *"Thanks! It was excellent to draw closer to the community building tools I use to teach and do research."* Another expressed their appreciation by saying, *"Thank you very much for the organizers, platforms, and speakers of this super nice and inspiring conference."*
 
