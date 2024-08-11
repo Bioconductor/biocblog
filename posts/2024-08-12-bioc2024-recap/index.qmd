@@ -132,7 +132,7 @@ combined_maps
 
 ## Pre-Conference Activities
 
-Before the main conference kicked off, BioC2024 offered a 2-day Carpentries workshop on RNA-seq, attended by 14 participants. The workshop was led by Jenny Drnevich, along with Tim Triche and Charlotte Hutchings, who are both instructors from our Bioconductor Carpentries training program. This hands-on workshop provided in-depth training in RNA-seq data analysis, equipping attendees with valuable skills. The workshop laid a strong foundation for those who continued into the main conference, helping to prepare them for the in-depth discussions and learning that followed.
+Before the main conference kicked off, BioC2024 offered a 2-day Carpentries workshop on RNA-seq, attended by 14 participants. The workshop was led by Jenny Drnevich, along with Tim Triche and Charlotte Hutchings, who are both instructors from our [Bioconductor Carpentries](https://blog.bioconductor.org/#category=Carpentries) training program. This hands-on workshop provided in-depth training in RNA-seq data analysis, equipping attendees with valuable skills. The workshop laid a strong foundation for those who continued into the main conference, helping to prepare them for the in-depth discussions and learning that followed.
 
 Participants appreciated the interactive and practical approach of the workshop. As one participant noted, *"I liked that it was casual! And I liked the discussion that allowed for the thought behind the process."* Another highlighted the workshop’s structure, sharing, *"I enjoyed how first the manual method was shown, then the all in one function that performed the same analysis. The interactive tools that were shared were also very cool."*
 
