@@ -8,6 +8,7 @@ author:
 date: 2024-07-12
 categories:
   - Bioconductor
+  - CZI
 image: "map.png"
 execute:
   echo: false
