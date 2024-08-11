@@ -9,6 +9,7 @@ date: 2024-07-12
 categories:
   - Bioconductor
   - CZI
+  - Carpentries
 image: "map.png"
 execute:
   echo: false
