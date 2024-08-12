@@ -9,6 +9,7 @@ author:
     url: https://github.com/kakopo
 date: 2023-01-22
 categories:
+  - Outreachy
   - open science
 ---
 

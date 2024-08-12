@@ -11,6 +11,7 @@ author:
     url: https://github.com/atrayees
 date: 2023-07-14
 categories:
+  - Outreachy
   - open science
 ---
 
