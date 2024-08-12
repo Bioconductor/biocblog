@@ -181,9 +181,11 @@ geocoded_success <- sessions_data_geocoded %>%
 
 # Use str_wrap to add line breaks in hover text
 geocoded_success <- geocoded_success %>%
-  mutate(hover_text = paste0("Name: ", `Speaker names`, "<br>",
-                            "Affiliation: ", str_wrap(`Affiliation of presenter`, width = 50), "<br>",
-                            "Talk Title: ", str_wrap(`Proposal title`, width = 50)))
+  mutate(hover_text = paste0(
+    "<b>Name:</b> ", `Speaker names`, "<br>",
+    "<b>Affiliation:</b><br> ", str_wrap(`Affiliation of presenter`, width = 50), "<br>",
+    "<b>Talk Title:</b><br> ", str_wrap(`Proposal title`, width = 50)
+  ))
 
 # Load world map data excluding Antarctica
 world_map <- map_data("world") %>%
@@ -203,7 +205,16 @@ p <- ggplot() +
 
 # Convert the ggplot to an interactive plotly object
 p_interactive <- ggplotly(p, tooltip = "text") %>%
-  style(hoverlabel = list(align = "left"))
+  style(
+    hoverlabel = list(
+      align = "left",
+      font = list(size = 10),  
+      bgcolor = "rgba(255, 255, 255, 0.8)",  
+      bordercolor = "black",  
+      borderpad = 5  
+    )
+
+  )
 
 # Display the interactive plot
 p_interactive
