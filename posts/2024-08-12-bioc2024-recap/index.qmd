@@ -1,0 +1,476 @@
+---
+title: "BioC2024 conference recap"
+description: "Highlights from the 2024 Bioconductor North American Conference in Grand Rapids."
+author:
+  - name: Maria Doyle
+    url: https://github.com/mblue9
+date: 2024-08-12
+categories:
+  - Bioconductor
+image: "images/group-photo.webp"
+format:
+  html:
+    toc: true
+lightbox: true
+---
+
+::: {#gallery-intro .columns}
+::: {.column width="100%"}
+![](images/group-photo.webp){group="gallery-intro" alt="Group photo of Bioconductor attendees at BioC2024"}
+:::
+::: {.column width="100%"}
+![](images/bioc2024-numbers.png){group="gallery-intro" alt="Infographic summarizing BioC2024 conference statistics"}
+:::
+:::
+
+BioC2024 brought the [Bioconductor](https://bioconductor.org/) community together at the [Van Andel Institute](https://www.vai.org/) in Grand Rapids, Michigan, where we celebrated our shared work and explored the latest advancements in bioinformatics. Over 350 participants took part, with 116 attending in person and 240 joining virtually, allowing participants from regions as far away as Latin America, Africa, and Asia to be part of the event. This year’s conference also marked our first time in the Mid-West US, highlighting the expanding reach and diversity of our community.
+
+
+```{r, echo=FALSE, warning=FALSE, message=FALSE, cache=TRUE}
+# Load necessary libraries
+library(ggplot2)
+library(dplyr)
+library(readr)
+library(sf)
+library(rnaturalearth)
+library(rnaturalearthdata)
+library(viridis)
+library(plotly)
+
+# Load the final attendees data for 2024
+data_2024 <- read_csv('gitexclude/Registrants Final-Location-fixed.csv')
+
+# Fix country names so they match the world map country names
+data_2024 <- data_2024 %>%
+  mutate(`Country/Region` = case_when(
+    `Country/Region` == "United States" ~ "United States of America",
+    `Country/Region` == "The Netherlands" ~ "Netherlands",
+    TRUE ~ `Country/Region`))
+
+# Harmonize and filter the data for in-person and virtual attendees
+in_person_counts <- data_2024 %>%
+  filter(!grepl("Virtual|virtual", `Ticket Type`)) %>%
+  group_by(`Country/Region`) %>%
+  summarise(Count_InPerson = n())
+
+virtual_counts <- data_2024 %>%
+  filter(grepl("Virtual|virtual", `Ticket Type`)) %>%
+  group_by(`Country/Region`) %>%
+  summarise(Count_Virtual = n())
+
+total_counts <- data_2024 %>%
+  group_by(`Country/Region`) %>%
+  summarise(Count_Total = n())
+
+# Merge with world map data
+world <- ne_countries(scale = "medium", returnclass = "sf")
+world <- world %>% filter(name != "Antarctica")
+world_in_person <- left_join(world, in_person_counts, by = c("name" = "Country/Region"))
+world_virtual <- left_join(world, virtual_counts, by = c("name" = "Country/Region"))
+world_total <- left_join(world, total_counts, by = c("name" = "Country/Region"))
+
+# Calculate the log-transformed data for visualization purposes
+world_in_person$log_Count_InPerson <- log1p(world_in_person$Count_InPerson)
+world_virtual$log_Count_Virtual <- log1p(world_virtual$Count_Virtual)
+world_total$log_Count_Total <- log1p(world_total$Count_Total)
+
+# Determine the maximum count across all categories and round it to the nearest 50
+max_count <- ceiling(max(total_counts$Count_Total, na.rm = TRUE) / 50) * 50
+
+# Define consistent breaks and labels based on the maximum count
+breaks <- c(0, log1p(5), log1p(10), log1p(50), log1p(100), log1p(max_count))
+labels <- expm1(breaks)
+
+# Create chloropleth map for In-Person Attendance with x-axis label
+p1 <- ggplot(data = world_in_person) +
+  geom_sf(aes(fill = log_Count_InPerson, text = paste(name, Count_InPerson)), color = "white") +
+  scale_fill_viridis(option = "magma", na.value = "grey", name = "Attendees", limits = c(0, log1p(max_count)), breaks = breaks, labels = round(labels), direction = -1) +
+  theme_void()
+
+# Create chloropleth map for Virtual Attendance with x-axis label
+p2 <- ggplot(data = world_virtual) +
+  geom_sf(aes(fill = log_Count_Virtual, text = paste(name, Count_Virtual)), color = "white") +
+  scale_fill_viridis(option = "magma", na.value = "grey", name = "Attendees", limits = c(0, log1p(max_count)), breaks = breaks, labels = round(labels), direction = -1) +
+  theme_void()
+
+# Create chloropleth map for Total Attendance with x-axis label
+p3 <- ggplot(data = world_total) +
+  geom_sf(aes(fill = log_Count_Total, text = paste(name, Count_Total)), color = "white") +
+  scale_fill_viridis(option = "magma", na.value = "grey", name = "Attendees", limits = c(0, log1p(max_count)), breaks = breaks, labels = round(labels), direction = -1) +
+  theme_void()
+
+# Convert to interactive plotly objects
+p1_interactive <- ggplotly(p1, tooltip = "text") %>% 
+  layout(xaxis = list(showline = FALSE, showticklabels = FALSE, zeroline = FALSE, title_standoff = 5))
+
+p2_interactive <- ggplotly(p2, tooltip = "text") %>% 
+  layout(xaxis = list(showline = FALSE, showticklabels = FALSE, zeroline = FALSE, title_standoff = 5))
+
+p3_interactive <- ggplotly(p3, tooltip = "text") %>% 
+  layout(xaxis = list(showline = FALSE, showticklabels = FALSE, zeroline = FALSE, title_standoff = 5))
+```
+
+```{r, echo=FALSE, warning=FALSE, message=FALSE, cache=TRUE}
+combined_maps <- subplot(
+  p1_interactive, p2_interactive, nrows = 1, shareX = FALSE, titleX = TRUE, titleY = FALSE, margin = 0) %>%
+  subplot(p3_interactive, nrows = 2, margin = 0) %>%
+  layout(
+    annotations = list(
+      list(x = 0.2, y = 0.9, text = paste("In-Person (", sum(in_person_counts$Count_InPerson, na.rm = TRUE), ")", sep = ""), xref = "paper", yref = "paper", xanchor = "center", yanchor = "bottom", showarrow = FALSE),
+      list(x = 0.8, y = 0.9, text = paste("Virtual (", sum(virtual_counts$Count_Virtual, na.rm = TRUE), ")", sep = ""), xref = "paper", yref = "paper", xanchor = "center", yanchor = "bottom", showarrow = FALSE),
+      list(x = 0.5, y = 0.42, text = paste("Total (", sum(total_counts$Count_Total, na.rm = TRUE), ")", sep = ""), xref = "paper", yref = "paper", xanchor = "center", yanchor = "bottom", showarrow = FALSE)
+    ),
+    showlegend = FALSE,
+    xaxis = list(showline = FALSE, showgrid = FALSE, zeroline = FALSE),
+    yaxis = list(showline = FALSE, showgrid = FALSE, zeroline = FALSE)
+  )
+
+# Display the plot
+combined_maps
+```
+
+
+## Pre-Conference
+
+Before the main conference kicked off, BioC2024 offered a 2-day Carpentries workshop on RNA-seq, attended by 14 participants. The workshop was led by Jenny Drnevich, along with Tim Triche and Charlotte Hutchings, who are both instructors from our [Bioconductor Carpentries](https://blog.bioconductor.org/#category=Carpentries) training program. This hands-on workshop provided in-depth training in RNA-seq data analysis, equipping attendees with valuable skills. The workshop laid a strong foundation for those who continued into the main conference, helping to prepare them for the in-depth discussions and learning that followed.
+
+Participants appreciated the interactive and practical approach of the workshop. As one participant noted, *"I liked that it was casual! And I liked the discussion that allowed for the thought behind the process."* Another highlighted the workshop’s structure, sharing, *"I enjoyed how first the manual method was shown, then the all in one function that performed the same analysis. The interactive tools that were shared were also very cool."*
+
+::: {#gallery-carp .columns}
+::: {.column width="33%"}
+![](images/carpentries-jenny.jpg){group="gallery-carp" style="padding-right: 1px;" alt="Jenny Drnevich teaching at the Carpentries workshop"}
+:::
+
+::: {.column width="33%"}
+![](images/carpentries-tim.jpg){group="gallery-carp" style="padding-right: 1px;" alt="Tim Triche teaching at the Carpentries workshop"}
+:::
+
+::: {.column width="33%"}
+![](images/carpentries-charlotte.jpg){group="gallery-carp" style="padding-right: 1px;" alt="Charlotte Hutchings teaching at the Carpentries workshop"}
+:::
+:::
+
+::: {style="text-align: center;"}
+*Bioconductor Carpentries instructors: Jenny, Tim & Charlotte*
+:::
+
+## Program Overview
+
+The BioC2024 conference delivered a diverse program, with presentations, workshops, and discussions highlighting the latest advancements in bioinformatics and computational biology. Explore the full schedule [here](https://www.bioc2024.bioconductor.org/schedule). One attendee appreciated the balance, noting they liked the *"Relevant topics, fantastic app support, sufficient breaks for coffee/restrooms and quick chats, ability to convert between in-person and virtual."* Another participant highlighted the accessibility of the content, sharing *"I found this conference really accessible even though it was outside my area of expertise. It gave me a good idea of what tools exist, what tools don't exist, and what some of the underlying assumptions are."*
+
+Here's a map showing where our speakers are from, adding to the attendee map above to illustrate the global reach of our Bioconductor community. Hover over the points to see details about each speaker, including their name, affiliation, and talk title.
+
+```{r, echo=FALSE, warning=FALSE, message=FALSE, cache=TRUE}
+# Load necessary libraries
+library(ggmap)
+library(stringr)
+
+# Read the CSV file
+file_path <- "gitexclude/2024_sessions.csv" 
+
+sessions_data <- read_csv(file_path) %>%
+  filter(`Proposal state` == "confirmed")
+
+# Geocode the Presenter affiliation column
+sessions_data_geocoded <- sessions_data %>%
+  mutate(location = geocode(`Affiliation for geocode`, output = "latlon", source = "google"))
+
+# Filter for rows where geocoding was successful
+geocoded_success <- sessions_data_geocoded %>%
+  filter(!is.na(location$lat) & !is.na(location$lon))
+
+# Use str_wrap to add line breaks in hover text
+geocoded_success <- geocoded_success %>%
+  mutate(hover_text = paste0(
+    "<b>Name:</b> ", `Speaker names`, "<br>",
+    "<b>Affiliation:</b><br> ", str_wrap(`Affiliation of presenter`, width = 50), "<br>",
+    "<b>Talk Title:</b><br> ", str_wrap(`Proposal title`, width = 50)
+  ))
+
+# Load world map data excluding Antarctica
+world_map <- map_data("world") %>%
+  filter(region != "Antarctica")
+
+# Create a base ggplot with the world map
+p <- ggplot() +
+  geom_polygon(data = world_map, aes(x = long, y = lat, group = group),
+               color = "gray85", fill = "gray80") +
+  geom_jitter(data = geocoded_success, aes(x = location$lon, y = location$lat,
+                                          text = hover_text),
+             color = "red", alpha = 0.7, size = 2) +
+  theme_minimal() +
+  theme(axis.title = element_blank(),
+        axis.text = element_blank(),
+        axis.ticks = element_blank())
+
+# Convert the ggplot to an interactive plotly object
+p_interactive <- ggplotly(p, tooltip = "text") %>%
+  style(
+    hoverlabel = list(
+      align = "left",
+      font = list(size = 10),  
+      bgcolor = "rgba(255, 255, 255, 0.8)",  
+      bordercolor = "black",  
+      borderpad = 5  
+    )
+
+  )
+
+# Display the interactive plot
+p_interactive
+```
+
+**A View from the Technical Core**
+
+In his opening remarks, Vince Carey, lead of the Bioconductor project, provided a glimpse into the project’s technical core with a hand-drawn diagram. This illustration highlights the intricate infrastructure and the interconnected tools that support the Bioconductor ecosystem.
+
+::: {style="text-align: center;"}
+![](images/opening.jpg){width="70%" alt="Hand-drawn diagram showing the technical core infrastructure of Bioconductor"}
+
+<p style="text-align: center;">
+*Technical Core Overview*
+</p>
+:::
+
+**Keynotes**
+
+Our [keynote speakers](https://www.bioc2024.bioconductor.org/) provided deep insights into their respective fields, setting the tone for an intellectually stimulating event:
+
+-   Sündüz Keleş from the University of Wisconsin-Madison presented *"Challenges and Opportunities in the Statistical Analysis of Single Cell High Throughput Chromatin Conformation Capture Data."* She explored the complexities of single-cell chromatin conformation analysis, prompting thoughtful discussions on data interpretation and its challenges.
+
+-   Joshua Welch from the University of Michigan introduced his work on *"Bayesian Inference of RNA Velocity from Single-Cell Multi-Omic Data,"* offering new perspectives on single-cell multi-omic data that sparked fresh insights into the dynamics of RNA velocity.
+
+-   Stephen Piccolo from Brigham Young University discussed *"Using Artificial Intelligence to Support Dataset Finding, Image Accessibility, and Bioinformatics Education,"* highlighting how AI is transforming dataset discovery and bioinformatics education, bridging the gap between cutting-edge technology and broader accessibility.
+
+-   Sandra Safo from the University of Minnesota presented *"Supervised Multiview Learning: The Case for One-Size-Fits-All and Bespoke Machine Learning Methods,"* discussing the balance between standardized methods and bespoke approaches in multiview learning, and highlighting the adaptability required in today’s research.
+
+-   Luca Pinello from Massachusetts General Hospital and Harvard Medical School delivered a keynote titled *"Computational Approaches in Functional Genomics: Understanding Gene Regulation and Development."* He provided a detailed examination of computational approaches in functional genomics, offering new insights into gene regulation and development.
+
+**Workshops**
+
+The first day had 4 long (90 minute) hands-on workshops, 2 aimed at Bioconductor users and 2 at developers. The user-focused workshops took participants through advanced topics such as applying tidy principles to chromatin composition and exploratory spatial data analysis from single molecules to multiple samples. The developer-focused workshops focused on an Introduction to package development and Interoperability between R and Python.
+
+**Package demos**
+
+The conference also featured a series of package demos (short workshops of 45 mins), where attendees were introduced to tools for analyzing spatial omics data, exploring public gene expression datasets, and identifying tandem duplication events from short reads, among others. These demos provided practical insights into the latest software developments in the field.
+
+**Short Talks**
+
+In addition, the conference hosted numerous short talks that covered a wide array of themes, including spatial transcriptomics, single-cell data analysis, differential expression strategies, and multi-omic analysis methods. The talks highlighted cutting-edge research and innovative approaches to data analysis.
+
+**Birds of a Feather sessions**
+
+There were two Birds of a Feather (BoF) sessions that focused on collaborative topics like updates from the [Cloud Methods working group](https://workinggroups.bioconductor.org/currently-active-working-groups-committees.html#cloud-methods) and live-fire reproducible research, fostering open discussions and idea sharing among participants.
+
+**Meet the Core Team, TAB and CAB**
+
+There was also a session to introduce the Bioconductor [Core Team](https://www.bioconductor.org/about/core-team/) and boards, [TAB](https://bioconductor.org/about/technical-advisory-board/) and [CAB](https://bioconductor.org/about/community-advisory-board/), to the community. They gave an overview of who they are, what they do, and shared the annual call for new members to join the boards and participate in Bioconductor decision-making. See details on the call [here](https://www.linkedin.com/posts/bioconductor_bioconductor-rstats-bioinformatics-activity-7221903619854381058-dFP6).
+
+## Infrastructure & Tools
+
+Ensuring a smooth and accessible experience for all attendees, both in-person and virtual, was a top priority for BioC2024. Here’s how we made that happen:
+
+**RingCentral Platform**
+
+BioC2024 leveraged the [RingCentral](https://www.ringcentral.com/) platform to stream talks and sessions to virtual attendees, enabling global participation in real-time, regardless of location. Recordings of each day's sessions were made available from 9 PM, giving attendees the flexibility to catch up on any talks they missed. These recordings will remain accessible for a month after the conference, after which they will be added to the Bioconductor YouTube channel for long-term access. However, we also received some feedback about minor issues with the platform. A few attendees noted that the video resolution could be improved, with occasional blurriness affecting the clarity of slides and content. We’re taking this feedback on board as we plan for future events, ensuring we continue to enhance the virtual experience for all participants.
+
+**Workshop Infrastructure**
+
+One of the key components of BioC2024 was the hands-on workshops. To ensure these sessions ran smoothly, we leveraged the Bioconductor Galaxy cloud platform, skillfully set up by Alex Mahmoud from the Bioconductor Core Team. This platform allowed participants to interactively run workshops from anywhere, making it easier for both in-person and virtual attendees to follow along.
+
+Alex also prepared a concise [2-minute video tutorial](https://video.recordonce.com/share/aGLVhlIjQhl), ensuring a smooth start for participants. If you missed the live workshops, don’t worry—they’ll be available under the "Archived" section at workshop.bioconductor.org, alongside workshops from previous BioC, EuroBioC, and BioC Asia events.
+
+![](images/workshops.png){width="70%" fig-align="center" alt="Graphical representation of the number of workshops at BioC2024"}
+
+::: {style="text-align: center;"}
+*Workshops by the numbers*
+:::
+
+**BioC2024 Slack**
+
+To enhance communication and connection among attendees, we introduced a dedicated BioC2024 Slack workspace. This platform became a hub for real-time interaction, with channels tailored to different aspects of the conference, such as:
+
+#general: Conference-wide announcements and discussions.  
+#travel-buddies: Coordination of travel plans, like sharing rides from the airport.  
+#local-tips: Recommendations for places to eat, visit, or explore in Grand Rapids.  
+#introductions: A space for attendees to introduce themselves and get to know each other.  
+#help-desk: For any questions or assistance needed during the conference.  
+#feedback: To gather suggestions and impressions in real-time.
+
+The Slack space was well-received, with 798 messages exchanged, showing how much attendees valued this mode of communication.
+
+For long-term communication and to share information or ask questions about the Bioconductor North American conference throughout the year, join the dedicated #bioc-conference-everyone channel in the permanent [Bioconductor Slack](https://slack.bioconductor.org) workspace.
+
+The feedback from virtual attendees highlighted appreciation for the infrastructure. As one participant shared, *"This was also the best virtual conference experience I have had. I found the platform easy to use, enjoyed being able to use Galaxy to see some of the code myself, and I really liked the setup."* Another attendee appreciated the inclusivity of the virtual setup, stating, *"Despite the distance and time difference, I was still able to be a part of the conference. I learned a little more about the Bioconductor community also."*
+
+## Community Recognition
+
+**Bioconductor Awards 2024**\
+
+Recognizing community contributions is a key part of Bioconductor, and this year’s awards ceremony was a highlight of BioC2024. Four outstanding community members were honored with the Bioconductor Community Award: **Saskia Freytag, Lambda Moses, Jenny Drnevich, and Martin Morgan**. These individuals were nominated by their peers and selected by the Bioconductor Community Advisory Board and Technical Advisory Board for their exceptional contributions to the project.
+
+This year also marked the introduction of the Bioconductor Athena Award, which was posthumously awarded to **Beatriz Calvo-Serra**. This award recognizes outstanding contributions to the Bioconductor community and honors individuals who inspire through their work and legacy. Bea’s impact on the community was significant, and her story continues to inspire many. You can read more about Bea’s remarkable journey and the legacy she left behind in [this blog post](https://blog.bioconductor.org/posts/2024-07-29-athena-award/).
+
+You can learn more about the Bioconductor awards and the stories behind the winners on the [Bioconductor website awards page](https://bioconductor.org/about/awards/). Below, you’ll find a clickable gallery of the award certificates.
+
+::: {#awards-gallery .columns}
+::: {.column width="18.5%"}
+![](images/awards-Freytag.png){group="awards-gallery" style="border: 1px solid #ccc; padding: 5px;" alt="Award certificate for Saskia Freytag"}
+:::
+
+::: {.column width="18.5%"}
+![](images/awards-Moses.png){group="awards-gallery" style="border: 1px solid #ccc; padding: 5px;" alt="Award certificate for Lambda Moses"}
+:::
+
+::: {.column width="18.5%"}
+![](images/awards-Drnevich.png){group="awards-gallery" style="border: 1px solid #ccc; padding: 5px;" alt="Award certificate for Jenny Drnevich"}
+:::
+
+::: {.column width="18.5%"}
+![](images/awards-Morgan.png){group="awards-gallery" style="border: 1px solid #ccc; padding: 5px;" alt="Award certificate for Martin Morgan"}
+:::
+
+::: {.column width="18.5%"}
+![](images/awards-Calvo-Serra.png){group="awards-gallery" style="border: 1px solid #ccc; padding: 5px;" alt="Award certificate for Beatriz Calvo-Serra"}
+:::
+:::
+
+::: {style="text-align: center;"}
+*Certificates for the 2024 Bioconductor Award Winners*
+:::
+
+**Scholarships**\
+
+Inclusivity and diversity are at the heart of the Bioconductor community. To support this, the BioC2024 conference committee awarded scholarships to 8 in-person and 70 virtual attendees. These scholarships were designed to ensure that individuals who might otherwise face financial barriers could participate in the conference.
+
+Whether attending in person or virtually, scholarship recipients were able to engage fully with the conference, bringing a wide range of perspectives and experiences to the discussions.
+
+::: {style="float: right; margin-left: 15px;"}
+<img src="images/sticker.png" alt="BioC2024 Sticker" width="200"/>
+:::
+
+**Sticker contest winner**\
+Every year, the Bioconductor community looks forward to the official conference sticker, and BioC2024 was no exception. This year’s sticker, designed by Farhan Ameen from the University of Sydney, Australia, was a crowd favorite. Farhan’s design creatively incorporated elements of the Grand Rapids city logo, including the blue of the Grand River, the iconic red of La Grande Vitesse sculpture, and the bright yellow of the Michigan sun.
+
+Learn more about Farhan and his winning design in our [LinkedIn announcement](https://www.linkedin.com/posts/bioconductor_bioc2024-openscience-bioinformatics-activity-7188487422286999552-6iAS).
+
+This vibrant sticker was a symbol of the conference, reminding us of the connections we built and the knowledge we shared.
+
+## Social & Networking
+
+BioC2024 wasn’t just about presentations and workshops—it was also a time to connect with others in the Bioconductor community. From planned events to impromptu meetups, these social opportunities were key to fostering collaboration and building lasting relationships. One attendee shared, *"The conference allowed me to network with individuals from all over the world. It also opened up my eyes towards Spatial Transcriptomics."* Another participant mentioned how *"Being able to share an Uber from the airport from communication on the Slack channel, the sense of community, and many cool talks"* enriched their experience."
+
+**Walking Tour and City Built Social**\
+
+The conference kicked off with a walking tour of Grand Rapids, led by local host and organizer Tim Triche. This tour offered a unique opportunity for attendees to explore the city and get to know each other in a relaxed setting. The evening continued with a casual gathering at City Built, where participants shared ideas over food and drinks, setting the tone for an open and friendly conference experience.
+
+**R-Ladies Meetup**\
+
+Breakfasts and lunches at the conference venue provided more chances to connect. A special [R-Ladies meetup lunch](https://www.meetup.com/rladies-east-lansing/events/302185529) on the second day brought together women and allies in the R and Bioconductor communities to connect and discuss their work and experiences.
+
+**Slack Conversations**
+
+In addition to in-person interactions, the BioC2024 Slack channels were buzzing with conversations. Whether coordinating travel plans, sharing local tips, or just introducing themselves, attendees made good use of this digital space to connect and collaborate.
+
+**A Welcoming Atmosphere**\
+
+Throughout the conference, attendees consistently remarked on the friendly and welcoming atmosphere. These social events and informal meetups not only made it easy to meet new people and reconnect with old friends, but also laid the groundwork for future collaborations. We’re excited to see what comes from the connections made at BioC2024.
+
+![](images/walking-tour.jpg){width="70%" fig-align="center"  alt="Participants on a walking tour of Grand Rapids during BioC2024"}
+
+**Memorable Moments**
+
+One of the standout moments of the conference was Wes Wilson’s lightning talk titled *"Like & Subscribe: what streaming bioinformatics taught me about academia,"* delivered just before lunch on the final day. Wes had everyone laughing with their humorous take on the parallels between bioinformatics and the world of streaming. It was a perfect way to energize attendees before the final stretch of the event.
+
+::: {style="width: 70%; margin: 0 auto;"}
+![](images/wes-vince.jpg){width="100%" group="gallery-wes" alt="Wes Wilson delivering a talk with satirical slide featuring Vince Carey"}
+
+::: {#gallery-wes .columns}
+::: {.column width="50%"}
+![](images/wes-tim.jpg){group="gallery-wes" alt="Wes Wilson delivering a talk with satirical slide featuring Tim Triche"}
+:::
+
+::: {.column width="50%"}
+![](images/wes-erica.jpg){group="gallery-wes" alt="Wes Wilson delivering a talk with satirical slide featuring Erica Feick"}
+:::
+:::
+:::
+
+## Conference Materials
+
+**Videos**\
+
+To ensure that the knowledge shared at BioC2024 reaches as many people as possible, recordings of talks, workshops, and demos will be made available on [Bioconductor YouTube](https://www.youtube.com/user/bioconductor) about one month after the conference. Look out for the BioC2024 playlist, where you can revisit your favorite sessions or catch up on what you missed.
+
+**Workshops**\
+
+The materials from BioC2024’s workshops will also be available through the conference website, and interactively through [workshop.bioconductor.org](https://workshop.bioconductor.org/) under the “Archived” section. This ensures that the hands-on learning from the conference can continue long after it’s over.
+
+**Slides**\
+
+Presenters are encouraged to share their presentations (slides, etc.) through the Zenodo Bioconductor community. This not only helps disseminate the knowledge further but also allows for the work to be cited and referenced by others in the field. See an example [here](https://zenodo.org/records/13236253).
+
+## Attendee Experience
+
+Attendees of BioC2024 shared positive feedback, with many expressing their appreciation for the opportunity to deepen their connection to the Bioconductor community. One such reflection came from [Boyi Guo](https://www.linkedin.com/posts/bioconductor_bioc2024-activity-7217905914966667264-i79r), a Postdoctoral Fellow in Biostatistics at Johns Hopkins University and one of the conference presenters. During one of the evening social events, Boyi shared how attending BioC2024 transformed his understanding of the community. He later provided this testimonial:
+
+*"After years of being both a user and developer of Bioconductor, I finally attended my first BioC conference this past summer—and it was an incredible experience! Despite being a newcomer to the BioC conference, BioC2024 felt like a true homecoming.*
+
+*There was something really special about the conference—it was inclusive and lively. You could really feel the energy in the thoughtful and friendly scientific discussions, the meaningful conversations during breaks, and the laughter at the social events.*
+
+*What excited me most was finally meeting the people behind the familiar names on mailing lists and GitHub—the ones who had answered my questions, reviewed my packages, and built the tools that are essential to my work. Before attending, 'community' was just a word to me. But seeing how friendly and welcoming everyone was, and witnessing the recognition by the community of its members during the awards ceremony, really showed me what makes this community special.*
+
+*I’m really grateful to be part of a community with such a rich history. It’s all about simple but powerful goals—like working together to create and share innovative software, making it easier for people to get into interdisciplinary research, and ensuring research results can be reproduced anywhere.*
+
+*BioC wasn’t just another conference; it felt like a celebration of a thriving community that truly inspires and empowers you."*
+
+## Upcoming Conferences
+
+If you missed BioC2024, there are plenty of other opportunities to connect with the Bioconductor community at our upcoming conferences. As one attendee summed up, *"Thanks! It was excellent to draw closer to the community building tools I use to teach and do research."* Another expressed their appreciation by saying, *"Thank you very much for the organizers, platforms, and speakers of this super nice and inspiring conference."*
+
+Stay tuned for updates and announcements by following Bioconductor's [LinkedIn](https://www.linkedin.com/company/bioconductor), [Mastodon](https://genomic.social/@bioconductor) accounts. For ongoing discussions and information about future Bioconductor conferences, join the permanent Bioconductor Slack workspace at [slack.bioconductor.org](https://slack.bioconductor.org/).
+
+-   **EuroBioC 2024**\
+    September 4-6 in Oxford, UK. Website: <https://eurobioc2024.bioconductor.org/>\
+-   **BioC Asia 2024**\
+    November 7-8 in Sydney, Australia. Website: <https://biocasia2024.bioconductor.org/>\
+-   **BioC North America 2025**\
+    June 23-26 in New York, USA. Stay tuned for more details!
+
+## Acknowledgments
+
+**Sponsors**
+
+BioC2024 are extremely grateful to those that sponsored BioC2024. BioC2024’s gold sponsors were [Microsoft Genomics](%5Bhttps://www.microsoft.com/en-us/genomics/) and [Moderna](https://www.modernatx.com/), silver sponsors were [R Consortium](https://www.r-consortium.org/), [Novartis](https://www.novartis.com), [Denali Therapeutics](https://www.denalitherapeutics.com/), [Genentech](https://www.gene.com/), [Bristol Myers Squibb](https://www.bms.com/) and other sponsors were [Bluebird Bio](https://www.bluebirdbio.com/). Their support along with BioC2024’s other sponsors was greatly appreciated by the Bioconductor community.
+
+![](images/sponsors.png){alt="Logos of sponsors for BioC2024"}
+
+**Hosts**
+
+[Van Andel Institute](https://www.vai.org/)
+
+**Organizing Committee**
+
+Chair: Erica Feick, Dana-Farber Cancer Institute, USA\
+Local Host and Organizer: Tim Triche, Van Andel Institute, USA\
+
+Mahmoud Ahmed, The Institute of Cancer Research, UK\
+Krithika Bhuvanesh, Georgetown University, USA\
+Vincent Carey, Brigham and Women’s Hospital, Harvard Medical School, USA\
+Marc Carlson, Seattle Children's Hospital, USA\
+Maria Doyle, University of Limerick, Ireland\
+Mikhail Dozmorov, Virginia Commonwealth University, USA\
+Jenny Drnevich, University of Illinois at Urbana-Champaign, USA\
+Lauren Harmon, Van Andel Institute, USA\
+Michael Love, University of North Carolina, USA\
+Alexandru Mahmoud, Harvard Medical School, USA\
+Matthew McCall, University of Rochester Medical Center, USA\
+Lori (Shepherd) Kern, Roswell Park Comprehensive Cancer Center, USA\
+Charlotte Soneson, Friedrich Miescher Institute for Biomedical Research, Switzerland\
+Levi Waldron, CUNY Graduate School of Public Health and Health Policy, USA\
+Wes Wilson, University of Pennsylvania, USA\
+Courtney Zirkle, Events and Meeting Coordinator, Van Andel Institute, USA\
+
+**Social Media Support**\
+
+Amaka Joyce, Nigeria
