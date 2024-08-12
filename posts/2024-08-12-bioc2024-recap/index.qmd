@@ -38,7 +38,7 @@ library(viridis)
 library(plotly)
 
 # Load the final attendees data for 2024
-data_2024 <- read_csv('Registrants Final-Location-fixed.csv')
+data_2024 <- read_csv('gitexclude/Registrants Final-Location-fixed.csv')
 
 # Fix country names so they match the world map country names
 data_2024 <- data_2024 %>%
@@ -157,6 +157,57 @@ Participants appreciated the interactive and practical approach of the workshop.
 ## Program Overview
 
 The BioC2024 conference delivered a diverse program, with presentations, workshops, and discussions highlighting the latest advancements in bioinformatics and computational biology. Explore the full schedule [here](https://www.bioc2024.bioconductor.org/schedule). One attendee appreciated the balance, noting they liked the *"Relevant topics, fantastic app support, sufficient breaks for coffee/restrooms and quick chats, ability to convert between in-person and virtual."* Another participant highlighted the accessibility of the content, sharing *"I found this conference really accessible even though it was outside my area of expertise. It gave me a good idea of what tools exist, what tools don't exist, and what some of the underlying assumptions are."*
+
+Here's a map showing where our speakers are from, adding to the attendee map above to illustrate the global reach of our Bioconductor community. Hover over the points to see details about each speaker, including their name, affiliation, and talk title.
+
+```{r, echo=FALSE, warning=FALSE, message=FALSE, cache=TRUE}
+# Load necessary libraries
+library(ggmap)
+library(stringr)
+
+# Read the CSV file
+file_path <- "gitexclude/2024_sessions.csv" 
+
+sessions_data <- read_csv(file_path) %>%
+  filter(`Proposal state` == "confirmed")
+
+# Geocode the Presenter affiliation column
+sessions_data_geocoded <- sessions_data %>%
+  mutate(location = geocode(`Affiliation for geocode`, output = "latlon", source = "google"))
+
+# Filter for rows where geocoding was successful
+geocoded_success <- sessions_data_geocoded %>%
+  filter(!is.na(location$lat) & !is.na(location$lon))
+
+# Use str_wrap to add line breaks in hover text
+geocoded_success <- geocoded_success %>%
+  mutate(hover_text = paste0("Name: ", `Speaker names`, "<br>",
+                            "Affiliation: ", str_wrap(`Affiliation of presenter`, width = 50), "<br>",
+                            "Talk Title: ", str_wrap(`Proposal title`, width = 50)))
+
+# Load world map data excluding Antarctica
+world_map <- map_data("world") %>%
+  filter(region != "Antarctica")
+
+# Create a base ggplot with the world map
+p <- ggplot() +
+  geom_polygon(data = world_map, aes(x = long, y = lat, group = group),
+               color = "gray85", fill = "gray80") +
+  geom_jitter(data = geocoded_success, aes(x = location$lon, y = location$lat,
+                                          text = hover_text),
+             color = "red", alpha = 0.7, size = 2) +
+  theme_minimal() +
+  theme(axis.title = element_blank(),
+        axis.text = element_blank(),
+        axis.ticks = element_blank())
+
+# Convert the ggplot to an interactive plotly object
+p_interactive <- ggplotly(p, tooltip = "text") %>%
+  style(hoverlabel = list(align = "left"))
+
+# Display the interactive plot
+p_interactive
+```
 
 **A View from the Technical Core**
 
@@ -407,7 +458,7 @@ Lori (Shepherd) Kern, Roswell Park Comprehensive Cancer Center, USA\
 Charlotte Soneson, Friedrich Miescher Institute for Biomedical Research, Switzerland\
 Levi Waldron, CUNY Graduate School of Public Health and Health Policy, USA\
 Wes Wilson, University of Pennsylvania, USA\
-Courtney Zirkle, Events and Meeting Coordinator, Van Andel Institute, USA
+Courtney Zirkle, Events and Meeting Coordinator, Van Andel Institute, USA\
 
 **Social Media Support**\
 
