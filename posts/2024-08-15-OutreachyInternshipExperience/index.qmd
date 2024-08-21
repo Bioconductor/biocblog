@@ -1,0 +1,77 @@
+---
+title: "Outreachy May 2024"
+description: |
+  Bioconductor participated in the Outreachy Internship program for the May 2024 cohort. In this post, our intern shares her journey, detailing her experience working on the Microbiome Study Curation project and Bioconductor in general.
+author:
+  - name: Scholastica Urua
+    url: https://github.com/Scholarpat
+date: 2024-08-15
+categories:
+  - Outreachy
+  - open science
+image: "scholastica.png"
+format:
+  html:
+    css: styles.css
+---
+
+## Introduction
+
+Open source is more than just a way to share code; it’s a philosophy that promotes collaboration, transparency, and widespread access to knowledge. It allows people from diverse backgrounds and skill levels to contribute to projects that can have a global impact. For someone like me, coming from a pharmacy background with a passion for data analysis, open source provided an incredible opportunity to bridge my interests and contribute to something meaningful. My name is Scholastica Urua, and I had the privilege of being an Outreachy intern with Bioconductor, an open source software project with a crucial role in the bioinformatics community by offering resources that empower researchers to explore complex biological data. Together with the Bioconductor community, I contributed to the Microbiome Study Curation project.
+
+![*Scholastica Urua. Credit: Ubong Udoakaebe*](scholastica.png){height=300px}
+
+## Outreachy
+[Outreachy](https://www.outreachy.org/) is a program that provides paid, remote internship opportunities to marginalized groups in tech, including women, LGBTQ+ individuals, and people from underrepresented communities. It welcomes applicants with a wide range of experience levels, from beginners to those with more advanced skills. The goal is to make open source contributions accessible to everyone, regardless of their background. Outreachy is more than just an internship; it’s a stepping stone for those who may not have had access to such opportunities otherwise.
+
+![*Outreachy website: https://www.outreachy.org/*](outreachyimage.png)
+
+The application process for Outreachy follows three steps:
+
+1. **Initial Application:** Applicants fill out an initial application form to demonstrate their eligibility.
+2. **Contribution Phase:** After the initial screening, selected candidates enter a contribution phase where they pick 1 or more projects they are interested in and contribute to them. This phase allows applicants to demonstrate their skills and interest in the project.
+3. **Final Application:** Based on the contributions made, applicants submit a final application, after which mentors select the interns.
+
+The entire application process is transparent and supportive, with mentors providing guidance throughout the contribution phase.
+
+## My Experience
+
+### Discovering Open Source during Outreachy internship:
+
+I first learned about Outreachy while searching for tech jobs and internships on Twitter (now X). What piqued my interest was the inclusive and diverse community. There were no barriers to applying for the internship; in fact, it was particularly tailored to provide opportunities to people subject to systemic bias and underrepresented in the technical industry. In my country, Nigeria, women are marginalized in the tech industry, so the inclusivity of the Outreachy community was a significant draw for me.
+
+Another aspect that interested me was the opportunity to work on open source and open science projects, gain valuable mentorship, and be part of a supportive community. Before this, my knowledge of open source was very limited. It was exciting to discover that I could contribute to open source projects that benefit others. I wrote more about My Journey with Outreachy and the Bioconductor Community in this [blog post](https://scholasticaurua.wordpress.com/2024/05/28/my-journey-with-outreachy-and-the-bioconductor-community/).
+
+### Contributing to the Microbiome Study Curation project:
+
+The heart of my Outreachy journey was my experience working on the Microbiome Study Curation project. Stepping into the world of open science and open source was both exciting and challenging. The Microbiome Study Curation project is a Bioconductor initiative that uses [BugSigDB](https://bugsigdb.org/), a comprehensive database of published microbial signatures, to curate differential abundance of bacteria. The project aims to accelerate microbiome research by providing a comprehensive database of microbial signatures from published studies, along with relevant information on study design, geography, health outcomes, host body site, and experimental methods.
+
+When I was selecting a project for my Outreachy internship, I was drawn to the Bioconductor project. As someone with a background in pharmacy and a growing interest in data analysis, the opportunity to work on microbiome study curation felt like the perfect intersection of my interests. The project not only aligned with my academic background but also allowed me to contribute to a field that has significant implications for global health.
+
+As an intern, I worked on:
+
+-   reviewing existing curations,
+-   fixing curation issues when possible,
+-   curating published microbiome research not previously curated in BugSigDB,
+-   selecting published microbiome research not previously curated in BugSigDB with a special focus on African studies, and
+-   analyzing BugSigDB data from microbiome studies involving African participants. I am especially excited about this work, since I submitted it for presentation at the [African Microbiome Day conference](https://h3africa.org/index.php/african-microbiome-day-30/). 
+
+### Working with the BugSigDB Community:
+
+One of the most rewarding aspects of my internship was the sense of community within BugSigDB and the larger Bioconductor ecosystem. I am especially grateful to my mentor, [Svetlana Ugarcina Perovic](https://twitter.com/svetlana_up), who was (and still is) incredibly supportive. She consistently reviewed my work, providing guidance and feedback that helped me navigate the challenges of data curation. Also, Svetlana put all her mentoring efforts in encouraging me to build my professional network wisely to develop personally and professionally. I am also privileged to have received support from other members of the community, including Chloe Mirzayi, Levi Waldron, and former interns Chioma Onyido, Peace Sandy, and Esther Afuape. The collaborative spirit was inspiring, and it made me appreciate the value of teamwork in open source projects. I felt like I was part of something bigger, contributing to a resource that could help advance scientific research.
+
+Working with this community has also improved me professionally. I had access to helpful bioinformatics learning resources and microbiome science events that enhanced my skills and knowledge. For example, Levi Waldron provided me with access to a paid DataCamp classroom, which has significantly expanded my understanding of data analysis and bioinformatics. This experience has been invaluable in shaping my professional development.
+
+### Future Plans:
+
+As my internship draws to a close, I am excited about the future. I plan to continue my journey in data analysis and bioinformatics, with a particular interest in projects that intersect with healthcare. I am also committed to continuing my contributions to the Bioconductor project, as I believe in the importance of open source collaboration in advancing scientific research. Additionally, I am actively seeking opportunities in these fields and am open to roles where I can leverage my skills and experience to make a meaningful impact. My goal is to contribute to projects that have a tangible effect on health and well-being.
+
+## Upcoming Opportunities
+
+For those inspired by my journey, there are exciting opportunities on the horizon. Outreachy is continuously looking for new interns for their upcoming cohorts, providing a platform for anyone interested in open source contributions. Outreachy is currently accepting applications for the December 2024 cohort and aspiring interns are encouraged to apply [here](https://www.outreachy.org/apply/).
+
+Bioconductor is also seeking mentors and projects for the December 2024 Outreachy cohort. If you are part of the Bioconductor community and want to support the next generation of open source contributors, consider becoming a mentor or submitting a project. Svetlana Ugarcina Perovic’s BioC2024 [conference presentation](https://youtu.be/aeRaYSt3aM0?si=JabzxY2316Io7t3N) offers more insights into Bioconductor’s involvement with Outreachy and can be a great resource if you are interested in learning more.
+
+If you would like to read more about my journey and other experiences, feel free to visit my personal [blog](https://scholasticaurua.wordpress.com/).
+
+Thank you for taking the time to read about my experience. I hope it inspires others to explore and take the opportunities that open source, Bioconductor, and Outreachy have to offer!
