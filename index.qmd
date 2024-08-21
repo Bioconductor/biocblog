@@ -1,0 +1,13 @@
+---
+title: "Bioconductor community blog"
+listing:
+  contents: posts
+  sort: "date desc"
+  type: default
+  categories: true
+  feed: true
+  sort-ui: false
+  filter-ui: false
+page-layout: full
+title-block-banner: true
+---
