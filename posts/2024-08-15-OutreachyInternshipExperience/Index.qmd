@@ -35,7 +35,7 @@ The entire application process is transparent and supportive, with mentors provi
 
 ## My Experience
 
-### Discovering Open-Source during Outreachy internship:
+### Discovering Open Source during Outreachy internship:
 
 I first learned about Outreachy while searching for tech jobs and internships on Twitter (now X). What piqued my interest was the inclusive and diverse community. There were no barriers to applying for the internship; in fact, it was particularly tailored to provide opportunities to people subject to systemic bias and underrepresented in the technical industry. In my country, Nigeria, women are marginalized in the tech industry, so the inclusivity of the Outreachy community was a significant draw for me.
 
