@@ -9,6 +9,7 @@ date: 2024-08-15
 categories:
   - Outreachy
   - open science
+image: "scholastica.png"
 format:
   html:
     css: styles.css
