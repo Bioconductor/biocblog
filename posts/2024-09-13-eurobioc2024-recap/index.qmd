@@ -25,6 +25,9 @@ lightbox: true
 
 EuroBioC2024 brought the [Bioconductor](https://bioconductor.org/) community together at the historic [University of Oxford](https://www.ox.ac.uk/) in the UK. With 110 attendees, the conference offered a valuable opportunity to share knowledge and explore the latest developments in bioinformatics. This year's event was particularly notable as our first conference in Oxford, underscoring the growing reach of our community across Europe.
 
+
+TODO: Insert interactive map of countries showing the number of attendees.
+
 ```{r, echo=FALSE, warning=FALSE, message=FALSE, cache=TRUE}
 # Load necessary libraries
 library(ggplot2)
@@ -99,7 +102,7 @@ In the days before the main event, EuroBioC2024 hosted two Carpentries workshops
 
 ::: {#gallery-carp .columns}
 ::: {.column width="33%"}
-![](images/carpentries-oliver.jpg){group="gallery-carp" style="padding-right: 1px;" alt="Oliver Crook teaching at the Carpentries workshop"}
+![](images/carpentries-oliver.jpg){group="gallery-carp" style="padding-right: 1px;" alt="Oliver teaching at the Carpentries workshop"}
 :::
 
 ::: {.column width="33%"}
@@ -187,15 +190,15 @@ p_interactive
 
 **Keynotes**
 
-The [keynote sessions]((https://eurobioc2024.bioconductor.org/) at EuroBioC2024 offered attendees valuable insights into current research and the future of bioinformatics, serving as key highlights throughout the conference:
+The [keynote sessions](https://eurobioc2024.bioconductor.org) at EuroBioC2024 offered attendees valuable insights into current research and the future of bioinformatics, serving as key highlights throughout the conference:
 
--   Altuna Akalin, Group Leader, Berlin Institute for Medical Systems Biology, Max Delbrück Center for Molecular Medicine presented *"How AI will reshape life sciences research: Examples from the front lines"* 
+-   Altuna Akalin, Group Leader at the Berlin Institute for Medical Systems Biology, Max Delbrück Center for Molecular Medicine presented *"How AI will reshape life sciences research: Examples from the front lines"* 
 
--   Laura Symul, Junior professor, Stanford (USA) / UCLouvain (Belgium) presented *"	Multi-omics integration reveals host-microbiota interactions in the vaginal ecosystem."*
+-   Laura Symul, Junior Professor at Stanford (USA) / UCLouvain (Belgium) presented *"	Multi-omics integration reveals host-microbiota interactions in the vaginal ecosystem."*
 
--   Florian Markowetz, Professor, the University of Cambridge presented *"All models are wrong and yours are useless"*.
+-   Florian Markowetz, Professor at the University of Cambridge presented *"All models are wrong and yours are useless"*.
 
--   Agne Antanaviciute, Junior Group Leader from the University of Oxford, presented *"In situ insights into intestinal interactions"*.
+-   Agne Antanaviciute, Junior Group Leader at the University of Oxford, presented *"In situ insights into intestinal interactions"*.
 
 -   Virginie Uhlmann, Director of BioVisionCenter, presented *"Towards FAIR and scalable bioimage analysis workflows using OME-Zarr"*.
 
