@@ -16,7 +16,7 @@ lightbox: true
 
 ::: {#gallery-intro .columns}
 ::: {.column width="100%"}
-![](images/group-photo.webp){group="gallery-intro" alt="Group photo of Bioconductor attendees at EuroBioC2024"}
+![](images/group-photo.webp){group="gallery-intro" alt="Group photo of attendees at EuroBioC2024"}
 :::
 ::: {.column width="100%"}
 ![](images/eurobioc2024-numbers.png){group="gallery-intro" alt="Infographic summarizing EuroBioC2024 conference statistics"}
@@ -97,25 +97,33 @@ p_interactive <- ggplotly(p, tooltip = "text") %>%
 
 ## Pre-Conference
 
-In the days before the main event, EuroBioC2024 hosted two Carpentries workshops focused on Introduction to R and RNA-seq. These sessions, attended by [TODO] participants, offered practical training and helped prepare attendees for the discussions that followed during the conference. The [Introduction to genomic data analysis with R and Bioconductor workshop](https://bioconductor.github.io/2024-09-02-BiocIntro-EuroBioc/) was taught by Oliver Crook, Marcel Ramos, and Laurent Gatto. The [Analysis and Interpretation of Bulk RNA-Seq Data using Bioconductor](https://bioconductor.github.io/2024-09-02-RNASeq-EuroBioc/). Oliver, Fabrico and Robert are instructors trained through our [Bioconductor Carpentries](https://blog.bioconductor.org/#category=Carpentries) training program. This hands-on workshop provided in-depth training in RNA-seq data analysis, equipping attendees with valuable skills. The workshop laid a strong foundation for those who continued into the main conference, helping to prepare them for the in-depth discussions and learning that followed.
+In the days before the main event, EuroBioC2024 hosted two Carpentries workshops focused on Introduction to R and RNA-seq. These sessions, attended by [TODO] participants, offered practical training and helped prepare attendees for the discussions that followed during the conference. The [Introduction to genomic data analysis with R and Bioconductor workshop](https://bioconductor.github.io/2024-09-02-BiocIntro-EuroBioc/) was taught by Oliver Crook, Marcel Ramos, and Laurent Gatto. The [Analysis and Interpretation of Bulk RNA-Seq Data using Bioconductor](https://bioconductor.github.io/2024-09-02-RNASeq-EuroBioc/). Oliver, Fabricio, Robert, and Marcel are instructors trained through our [Bioconductor Carpentries](https://blog.bioconductor.org/#category=Carpentries) training program, while Laurent is co-chair of the [Bioconductor Education and Training group](https://www.bioconductor.org/help/education-training/). These hands-on workshops provided in-depth training in R, Bioconductor, and RNA-seq data analysis, equipping attendees with valuable skills. The workshops laid a strong foundation for those who continued into the main conference, helping to prepare them for the in-depth discussions and learning that followed.
 
 
 ::: {#gallery-carp .columns}
-::: {.column width="33%"}
-![](images/carpentries-oliver.jpg){group="gallery-carp" style="padding-right: 1px;" alt="Oliver teaching at the Carpentries workshop"}
+::: {.column width="20%"}
+![](images/carpentries-oliver.jpg){group="gallery-carp" style="padding-right: 1px;" alt="Oliver teaching at the Introduction to R and Bioconductor workshop"}
 :::
 
-::: {.column width="33%"}
-![](images/carpentries-fabricio.jpg){group="gallery-carp" style="padding-right: 1px;" alt="Fabricio teaching at the Carpentries workshop"}
+::: {.column width="20%"}
+![](images/carpentries-marcel.jpg){group="gallery-carp" style="padding-right: 1px;" alt="Marcel teaching at the Introduction to R and Bioconductor workshop"}
 :::
 
-::: {.column width="33%"}
-![](images/carpentries-robert.jpg){group="gallery-carp" style="padding-right: 1px;" alt="Robert teaching at the Carpentries workshop"}
+::: {.column width="20%"}
+![](images/carpentries-laurent.jpg){group="gallery-carp" style="padding-right: 1px;" alt="Laurent teaching at the Introduction to R and Bioconductor workshop"}
+:::
+
+::: {.column width="20%"}
+![](images/carpentries-fabricio.jpg){group="gallery-carp" style="padding-right: 1px;" alt="Fabricio teaching at the RNA-Seq workshop"}
+:::
+
+::: {.column width="20%"}
+![](images/carpentries-robert.jpg){group="gallery-carp" style="padding-right: 1px;" alt="Robert teaching at the RNA-Seq workshop"}
 :::
 :::
 
 ::: {style="text-align: center;"}
-*Bioconductor Carpentries instructors*
+*EuroBioC2024 Bioconductor Carpentries instructors*
 :::
 
 ## Program Overview
@@ -136,7 +144,7 @@ sessions_data <- read_csv(file_path)
 
 # Geocode the Presenter affiliation column
 sessions_data_geocoded <- sessions_data %>%
-  mutate(location = geocode(affiliation, output = "latlon", source = "google"))
+  mutate(location = geocode(affiliation_for_geocode, output = "latlon", source = "google"))
 
 # Filter for rows where geocoding was successful
 geocoded_success <- sessions_data_geocoded %>%
@@ -212,7 +220,7 @@ The conference also showcased a diverse array of short talks, where researchers 
 
 **Birds of a Feather sessions**
 
-There were x Birds of a Feather (BoF) sessions that focused on collaborative topics like [TODO], fostering open discussions and idea sharing among participants.
+There were [TODO] x Birds of a Feather (BoF) sessions that focused on collaborative topics like [TODO], fostering open discussions and idea sharing among participants.
 
 
 
@@ -227,27 +235,27 @@ An important part of EuroBioC2024 was the package demos. Presenters had the opti
 
 Building on the success of the BioC2024 Slack, we launched a dedicated EuroBioC2024 Slack workspace. This digital space quickly became a central hub for real-time discussions, with channels covering aspects of the conference, such as:
 
-#general: Conference-wide announcements and discussions.  
-#travel-buddies: Coordination of travel plans, like sharing rides from the airport.  
-#local-tips: Recommendations for places to eat, visit, or explore in Grand Rapids.  
-#introductions: A space for attendees to introduce themselves and get to know each other.  
-#help-desk: For any questions or assistance needed during the conference.  
-#feedback: To gather suggestions and impressions in real-time.
+- #general: Conference-wide announcements and discussions.  
+- #travel-buddies: Coordination of travel plans, like sharing rides from the airport.  
+- #local-tips: Recommendations for places to eat, visit, or explore in Oxford.  
+- #introductions: A space for attendees to introduce themselves and get to know each other.  
+- #help-desk: For any questions or assistance needed during the conference.  
+- #feedback: To gather suggestions and impressions in real-time.
 
-The Slack space was well-received, with x messages exchanged, showing how much attendees valued this mode of communication.
+The Slack space was well-received, with [TODO] x messages exchanged, showing how much attendees valued this mode of communication.
 
-For long-term communication and to share information or ask questions about the Bioconductor European conference throughout the year, join the dedicated #eurobioc-conference-everyone channel in the permanent [Bioconductor Slack](https://slack.bioconductor.org) workspace.
+For long-term communication and to share information or ask questions about the Bioconductor European conference throughout the year, join the dedicated **#eurobioc-conference-everyone** channel in the permanent [Bioconductor Slack](https://slack.bioconductor.org) workspace.
 
 
 ## Community Recognition
 
 **Athena Award**\
 
-At EuroBioC2024, we took the opportunity to present the Bioconductor Athena Award in person to Bea’s mother, who lives in Spain. This award honors Bea’s significant contributions to the Bioconductor community and her enduring legacy. While the main awards ceremony, including the recognition of other community members, took place at BioC2024 in Grand Rapids, you can learn more about all the award winners by visiting the [Bioconductor awards page](https://bioconductor.org/about/awards) or reading the [BioC2024 blog post](https://blog.bioconductor.org/posts/2024-08-12-bioc2024-recap/).
-
-![](images/awards-Calvo-Serra.png){style="border: 1px solid #ccc; padding: 5px;" alt="Award certificate for Beatriz Calvo-Serra"}
+At EuroBioC2024, we took the opportunity to present the Bioconductor Athena Award in person to Bea’s mother, who lives in Spain. This award honors Bea’s significant contributions to the Bioconductor community and her enduring legacy. While the main awards ceremony, including the recognition of other community members, took place at BioC2024 in Grand Rapids in July, you can learn more about all the award winners by visiting the [Bioconductor awards page](https://bioconductor.org/about/awards) or reading the [BioC2024 blog post](https://blog.bioconductor.org/posts/2024-08-12-bioc2024-recap/).
 
 ::: {style="text-align: center;"}
+![](images/awards-Calvo-Serra.png){width="50%" style="border: 1px solid #ccc; padding: 5px;" alt="Award certificate for Beatriz Calvo-Serra"}
+
 *Certificate for the 2024 Bioconductor Athena Award*
 :::
 
@@ -315,8 +323,8 @@ Stay tuned for updates and announcements by following Bioconductor's [LinkedIn](
 
 -   **BioC Asia 2024**\
     November 7-8 in Sydney, Australia. Website: <https://biocasia2024.bioconductor.org/>\
--   **BioC North America 2025**\
-    June 23-26 in New York, USA. Stay tuned for more details!
+-   **GBCC 2025**\
+    June 23-26 in New York, USA. Stay tuned for more details! [TODO link to announcement]
 
 ## Acknowledgments
 
@@ -332,26 +340,27 @@ EuroBioC2024 are extremely grateful to those that sponsored EuroBioC2024. EuroBi
 
 **Organizing Committee**
 
-Local Hosts and Organizers: 
-Oliver Crook, University of Oxford, UK\
-Kevin Rue-Albrecht, University of Oxford, UK\
+*Local Hosts and Organizers:*\
 
-TODO: Add affiliations
+- Oliver Crook, University of Oxford, UK\ 
+- Kevin Rue-Albrecht, University of Oxford, UK\  
 
-Charlotte Soneson, Friedrich Miescher Institute for Biomedical Research, Switzerland\
-Dario Righelli\
-Davide Risso\
-E. Ravza Gur\
-Helena L. Crowell\
-James Dalgleish\
-Johannes Rainer\
-Laurent Gatto\
-Lena Morrill Gavarro\
-Leo Lahti\
-Lieven Clement\
-Maria Doyle, University of Limerick, Ireland\
-Michael Stadler\
-Robert Castelo\
-Robert Ivanek\
-Simone Bell\
-Wolfgang Huber	
+*Others:*\
+
+- Charlotte Soneson, Friedrich Miescher Institute for Biomedical Research, Switzerland\
+- Dario Righelli, University of Naples "Federico II", Italy\
+- Davide Risso, University of Padua, Italy\
+- E. Ravza Gur, University of Oxford, UK\
+- Helena L. Crowell, Centro Nacional de Análisis Genómico, Spain\
+- James Dalgleish, University of Oxford, UK\
+- Johannes Rainer, Eurac Research, Italy\
+- Laurent Gatto, Université catholique de Louvain, Belgium\
+- Lena Morrill Gavarro, University of Oxford, UK\
+- Leo Lahti, University of Turku, Finland\
+- Lieven Clement, Ghent University, Belgium\
+- Maria Doyle, University of Limerick, Ireland\
+- Michael Stadler, Friedrich Miescher Institute for Biomedical Research, Switzerland\
+- Robert Castelo, Universitat Pompeu Fabra, Spain\
+- Robert Ivanek, University of Basel, Switzerland\
+- Simone Bell, EMBL, Germany\
+- Wolfgang Huber, EMBL, Germany\
