@@ -26,22 +26,7 @@ lightbox: true
 EuroBioC2024 brought the [Bioconductor](https://bioconductor.org/) community together at the historic [University of Oxford](https://www.ox.ac.uk/) in the UK. With 110 attendees, the conference offered a valuable opportunity to share knowledge and explore the latest developments in bioinformatics. This year's event was particularly notable as our first conference in Oxford, underscoring the growing reach of our community across Europe.
 
 
-TODO: Insert interactive map of countries showing the number of attendees.
-
 ```{r, echo=FALSE, warning=FALSE, message=FALSE, cache=TRUE}
-# Load necessary libraries
-library(ggplot2)
-library(dplyr)
-library(readr)
-library(sf)
-library(rnaturalearth)
-library(rnaturalearthdata)
-library(viridis)
-library(plotly)
-```
-
-
-```{r, eval=FALSE, echo=FALSE, warning=FALSE, message=FALSE, cache=TRUE}
 # Load necessary libraries
 library(ggplot2)
 library(dplyr)
@@ -53,45 +38,54 @@ library(viridis)
 library(plotly)
 
 # Load the final attendees data for 2024
-data_2024 <- read_csv('gitexclude/Registrants Final-Location-fixed.csv')
+data_2024 <- read_csv('gitexclude/eurobioc2024-countries.csv')
 
 # Fix country names so they match the world map country names
 data_2024 <- data_2024 %>%
-  mutate(`Country/Region` = case_when(
-    `Country/Region` == "United States" ~ "United States of America",
-    `Country/Region` == "The Netherlands" ~ "Netherlands",
-    TRUE ~ `Country/Region`))
+  mutate(Country = case_when(
+    Country == "USA" ~ "United States of America",
+    Country == "UK" ~ "United Kingdom",
+    TRUE ~ Country))
 
 # Harmonize and filter the data for in-person and virtual attendees
 
-total_counts <- data_2024 %>%
-  group_by(`Country/Region`) %>%
-  summarise(Count_Total = n())
+counts <- data_2024 %>%
+  group_by(Country) %>%
+  summarise(Count = n())
 
 # Merge with world map data
 world <- ne_countries(scale = "medium", returnclass = "sf")
 world <- world %>% filter(name != "Antarctica")
-world_total <- left_join(world, total_counts, by = c("name" = "Country/Region"))
+world <- left_join(world, counts, by = c("name" = "Country"))
 
 # Calculate the log-transformed data for visualization purposes
-world_total$log_Count_Total <- log1p(world_total$Count_Total)
+world$log_Count <- log1p(world$Count)
 
 # Determine the maximum count across all categories and round it to the nearest 50
-max_count <- ceiling(max(total_counts$Count_Total, na.rm = TRUE) / 50) * 50
+max_count <- ceiling(max(counts$Count, na.rm = TRUE) / 50) * 50
 
 # Define consistent breaks and labels based on the maximum count
 breaks <- c(0, log1p(5), log1p(10), log1p(50), log1p(100), log1p(max_count))
 labels <- expm1(breaks)
 
-# Create chloropleth map for Total Attendance with x-axis label
-p <- ggplot(data = world_total) +
-  geom_sf(aes(fill = log_Count_Total, text = paste(name, Count_Total)), color = "white") +
+# Create chloropleth map for Attendance with x-axis label
+
+# Calculate the total number of attendees
+total_attendees <- sum(counts$Count, na.rm = TRUE)
+
+# Create the map and add the total attendees annotation above the map
+p <- ggplot(data = world) +
+  geom_sf(aes(fill = log_Count, text = paste(name, Count)), color = "white") +
   scale_fill_viridis(option = "magma", na.value = "grey", name = "Attendees", limits = c(0, log1p(max_count)), breaks = breaks, labels = round(labels), direction = -1) +
-  theme_void()
+  coord_sf(xlim = c(-180, 180), ylim = c(-60, 90), expand = FALSE) +  # Adjust x and y limits to minimize white space
+  theme_void() +
+  theme(axis.line.y = element_blank()) +  # Remove the y-axis line
+  annotate("text", x = 0, y = 93, label = paste("Total (", total_attendees, ")", sep = ""), size = 4, color = "black", hjust = 0.5)  # Add the total attendees text above the map
 
 # Convert to interactive plotly objects
-p_interactive <- ggplotly(p, tooltip = "text") %>% 
+ggplotly(p, tooltip = "text") %>% 
   layout(xaxis = list(showline = FALSE, showticklabels = FALSE, zeroline = FALSE, title_standoff = 5))
+
 ```
 
 
@@ -130,7 +124,7 @@ In the days before the main event, EuroBioC2024 hosted two Carpentries workshops
 
 The EuroBioC2024 conference delivered a diverse program, with presentations, workshops, and discussions highlighting the latest advancements in bioinformatics and computational biology. Explore the full schedule [here](https://eurobioc2024.bioconductor.org/schedule). 
 
-Here's a map showing where our speakers are from, adding to the attendee map above to illustrate the global reach of our Bioconductor community. Hover over the points to see details about each speaker, including their name, affiliation, and talk title.
+Here's a map showing where our presenters are from, adding to the attendee map above to illustrate the global reach of our Bioconductor community. Hover over the points to see details about each presenter, including their name, affiliation, and talk title.
 
 ```{r, echo=FALSE, warning=FALSE, message=FALSE, cache=TRUE}
 # Load necessary libraries
