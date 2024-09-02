@@ -45,8 +45,20 @@ GBCC 2025 will provide a platform to discuss reproducibility and open science, e
 
 ## Join Us in Shaping the Future
 
-GBCC 2025 is currently planned as a one-time event that presents a valuable opportunity to explore future collaborations between the Galaxy and Bioconductor communities. The insights and connections made at GBCC 2025 could have a lasting impact on the broader scientific community, setting new standards for collaborative research in bioinformatics.
+GBCC 2025 is currently planned as a one-time event that, offering a unique opportunity to explore future collaborations between the Galaxy and Bioconductor communities. The insights and connections made at GBCC 2025 could have a lasting impact on the broader scientific community, setting new standards for collaborative research in bioinformatics.
 
-We invite you to be part of this event and contribute to the future of bioinformatics and genomics.
+**Logo Design Contest**  
+To celebrate this collaboration, we are launching a logo design contest for GBCC 2025! The winning design will become the official conference logo, featured on all conference materials, including stickers and t-shirts. More details on how to participate will be shared soon.
 
-**Stay Tuned**: Registration details and further information will be announced in the coming months. Mark your calendars for June 23-26, 2025, and we look forward to seeing you at Cold Spring Harbor Laboratory!
+**Join the Conversation**  
+Follow and use the hashtag **#GBCC2025** on social media to stay updated on all the latest news, discussions, and announcements related to the Galaxy and Bioconductor Community Conference. To receive alerts, follow us on social media:
+
+- LinkedIn ([Bioconductor](https://www.linkedin.com/company/bioconductor/), [Galaxy](https://www.linkedin.com/company/galaxyproject/))
+- Mastodon ([Bioconductor](https://genomic.social/@bioconductor), [Galaxy](https://mstdn.science/@galaxyproject))
+- BlueSky ([Galaxy](https://bsky.app/profile/galaxyproject.bsky.social))
+
+**Sponsorship Opportunities**  
+If you are interested in sponsoring this unique collaborative event, email Jenn Vessio (jvessio1 [at] jhu.edu) and Maria Doyle (maria.doyle [at] ul.ie). 
+
+**Stay Tuned**  
+Registration details and further information will be announced in the coming months. Mark your calendars for June 23-26, 2025, and we look forward to seeing you at Cold Spring Harbor Laboratory!
