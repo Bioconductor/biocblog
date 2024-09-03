@@ -53,7 +53,7 @@ To celebrate this collaboration, we are launching a logo design contest for GBCC
 **Join the Conversation**  
 Follow and use the hashtag **#GBCC2025** on social media to stay updated on all the latest news, discussions, and announcements related to the Galaxy and Bioconductor Community Conference. To receive alerts, follow us on social media:
 
-- LinkedIn ([Bioconductor](https://www.linkedin.com/company/bioconductor/), [Galaxy](https://www.linkedin.com/company/galaxyproject/))
+- LinkedIn ([Bioconductor](https://www.linkedin.com/company/bioconductor/), [Galaxy](https://www.linkedin.com/company/galaxy-project/))
 - Mastodon ([Bioconductor](https://genomic.social/@bioconductor), [Galaxy](https://mstdn.science/@galaxyproject))
 - BlueSky ([Galaxy](https://bsky.app/profile/galaxyproject.bsky.social))
 
