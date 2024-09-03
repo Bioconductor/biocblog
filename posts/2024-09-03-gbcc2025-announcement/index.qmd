@@ -1,6 +1,6 @@
 ---
-title: "Announcing the First Galaxy and Bioconductor Community Conference (GBCC 2025): Genomics Data Science and Beyond"
-description: "Join us at CSHL, New York, June 23-26"
+title: "Announcing the First Galaxy and Bioconductor Community Conference (GBCC 2025)"
+description: "Join us at CSHL, New York, June 23-26!"
 author:
   - name: Maria Doyle (Bioconductor)
     url: https://github.com/mblue9
