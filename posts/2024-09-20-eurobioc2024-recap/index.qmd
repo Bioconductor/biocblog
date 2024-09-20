@@ -1,0 +1,446 @@
+---
+title: "EuroBioC2024 conference recap"
+description: "Highlights from the 2024 Bioconductor European Conference in Oxford."
+author:
+  - name: Maria Doyle
+    url: https://github.com/mblue9
+date: 2024-09-20
+categories:
+  - Bioconductor
+image: "images/group-photo.webp"
+format:
+  html:
+    toc: true
+lightbox: true
+---
+
+::: {#gallery-intro .columns}
+::: {.column width="100%"}
+![](images/group-photo.webp){group="gallery-intro" alt="Group photo of attendees at EuroBioC2024"}
+:::
+::: {.column width="100%"}
+![](images/eurobioc2024-numbers.png){group="gallery-intro" alt="Infographic summarizing EuroBioC2024 conference statistics"}
+:::
+:::
+
+EuroBioC2024 brought the [Bioconductor](https://bioconductor.org/) community together at the historic [University of Oxford](https://www.ox.ac.uk/) in the UK. With over 100 attendees, the conference showcased cutting-edge developments in bioinformatics, while fostering collaboration and knowledge sharing in a vibrant community. This year's event was particularly notable as our first in Oxford, further extending Bioconductor community's reach across Europe. Explore the number of attendees per country in the interactive map below.
+
+
+```{r, echo=FALSE, warning=FALSE, message=FALSE, cache=TRUE}
+# Load necessary libraries
+library(ggplot2)
+library(dplyr)
+library(readr)
+library(sf)
+library(rnaturalearth)
+library(rnaturalearthdata)
+library(viridis)
+library(plotly)
+
+# Load the final attendees data for 2024
+data_2024 <- read_csv('gitexclude/eurobioc2024-countries.csv')
+
+# Fix country names so they match the world map country names
+data_2024 <- data_2024 %>%
+  mutate(Country = case_when(
+    Country == "USA" ~ "United States of America",
+    Country == "UK" ~ "United Kingdom",
+    TRUE ~ Country))
+
+# Harmonize and filter the data for in-person and virtual attendees
+
+counts <- data_2024 %>%
+  group_by(Country) %>%
+  summarise(Count = n())
+
+# Merge with world map data
+world <- ne_countries(scale = "medium", returnclass = "sf")
+world <- world %>% filter(name != "Antarctica")
+world <- left_join(world, counts, by = c("name" = "Country"))
+
+# Calculate the log-transformed data for visualization purposes
+world$log_Count <- log1p(world$Count)
+
+# Determine the maximum count across all categories and round it to the nearest 50
+max_count <- ceiling(max(counts$Count, na.rm = TRUE) / 50) * 50
+
+# Define consistent breaks and labels based on the maximum count
+breaks <- c(0, log1p(5), log1p(10), log1p(50), log1p(100), log1p(max_count))
+labels <- expm1(breaks)
+
+# Create chloropleth map for Attendance with x-axis label
+
+# Calculate the total number of attendees
+total_attendees <- sum(counts$Count, na.rm = TRUE)
+
+# Create the map and add the total attendees annotation above the map
+p <- ggplot(data = world) +
+  geom_sf(aes(fill = log_Count, text = paste(name, Count)), color = "white") +
+  scale_fill_viridis(option = "magma", na.value = "grey", name = "Attendees", limits = c(0, log1p(max_count)), breaks = breaks, labels = round(labels), direction = -1) +
+  coord_sf(xlim = c(-180, 180), ylim = c(-60, 90), expand = FALSE) +  # Adjust x and y limits to minimize white space
+  theme_void() +
+  theme(axis.line.y = element_blank())
+
+# Convert to interactive plotly objects
+ggplotly(p, tooltip = "text") %>% 
+  layout(xaxis = list(showline = FALSE, showticklabels = FALSE, zeroline = FALSE, title_standoff = 5))
+
+```
+
+
+## Pre-Conference
+
+In the days before the main event, EuroBioC2024 hosted two Carpentries workshops focused on Introduction to R and RNA-seq. These sessions, attended by 20 participants, offered practical training and helped prepare attendees for the discussions that followed during the conference. The [Introduction to genomic data analysis with R and Bioconductor workshop](https://bioconductor.github.io/2024-09-02-BiocIntro-EuroBioc/) was taught by Oliver Crook and Marcel Ramos. The [Analysis and Interpretation of Bulk RNA-Seq Data using Bioconductor](https://bioconductor.github.io/2024-09-02-RNASeq-EuroBioc/) was taught by Fabricio Almeida-Silva and Robert Ivanek. All four instructors — Oliver, Fabricio, Robert and Marcel - were trained through our [Bioconductor Carpentries](https://blog.bioconductor.org/#category=Carpentries) training program. 
+
+Participants found these hands-on workshops highly valuable. One attendee appreciated the clear explanations, noting they were *"helpful in building my understanding of RNA-seq analysis."* The practical aspect of the workshops was also highlighted, with a participant stating, *"Coding alongside the course, being able to fix problems as they came up, was incredibly helpful."* Another attendee emphasized the instructors' approach, saying, *"The structure of the course, the pace, and the instructors' enthusiasm made the learning experience exceptional."*
+
+The supportive learning environment stood out to many. As one participant shared, *"Engaging teachers, available to help, and very useful to have the online resources if needed."* The opportunity to ask questions freely was also valued: *"Opportunity to ask questions all the time, friendly instructors!"*
+
+These testimonials reflect how the workshops provided in-depth training in R, Bioconductor, and RNA-seq data analysis while fostering an engaging and supportive atmosphere. The pre-conference workshops benefited local participants and provided Bioconductor community members an opportunity to share their expertise. With the groundwork laid, the main conference kicked off, offering a rich and varied program to attendees from across Europe and beyond.
+
+::: {#gallery-carp .columns}
+
+::: {.column width="25%"}
+![](images/carpentries-marcel.jpg){group="gallery-carp" style="padding-right: 1px;" alt="Marcel teaching at the Introduction to R and Bioconductor workshop"}
+:::
+
+::: {.column width="25%"}
+![](images/carpentries-oliver.jpg){group="gallery-carp" style="padding-right: 1px;" alt="Oliver teaching at the Introduction to R and Bioconductor workshop"}
+:::
+
+::: {.column width="25%"}
+![](images/carpentries-fabricio.jpg){group="gallery-carp" style="padding-right: 1px;" alt="Fabricio teaching at the RNA-Seq workshop"}
+:::
+
+::: {.column width="25%"}
+![](images/carpentries-robert.jpg){group="gallery-carp" style="padding-right: 1px;" alt="Robert teaching at the RNA-Seq workshop"}
+:::
+:::
+
+::: {style="text-align: center;"}
+*EuroBioC2024 Bioconductor Carpentries instructors*
+:::
+
+## Program Overview
+
+The EuroBioC2024 conference delivered a diverse program, with presentations, workshops, and discussions highlighting the latest advancements in bioinformatics and computational biology. The variety in presentations was a standout feature, with one attendee noting,  *"Huge diversity in topics covered. There was something for all computational biologists regardless of research field."* The conference program catered to a broad audience, ensuring there was something for everyone. Explore the full schedule [here](https://eurobioc2024.bioconductor.org/schedule). 
+
+Attendees also had the opportunity to apply for 5-minute flash talks, giving them a platform to quickly present their research to the wider community, fostering engagement and new collaborations.
+
+Additionally, a special demo session by our sponsor, 10x Genomics, was held over lunch. This demo provided an engaging showcase of cutting-edge technology in genomics, such as their Xenium single cell spatial imaging platform, allowing attendees to learn about the latest innovations.
+
+Below is an interactive map showing where our presenters are from. Hover over the points to see details about each presenter, including their name, affiliation, and talk title.
+
+```{r, echo=FALSE, warning=FALSE, message=FALSE, cache=TRUE}
+# Load necessary libraries
+library(ggmap)
+library(stringr)
+
+# Read the CSV file
+file_path <- "gitexclude/eurobioc2024_presenters_exp.csv" 
+
+sessions_data <- read_csv(file_path)
+
+# Geocode the Presenter affiliation column
+sessions_data_geocoded <- sessions_data %>%
+  mutate(location = geocode(affiliation_for_geocode, output = "latlon", source = "google"))
+
+# Filter for rows where geocoding was successful
+geocoded_success <- sessions_data_geocoded %>%
+  filter(!is.na(location$lat) & !is.na(location$lon))
+
+# Encode as UTF to avoid issues with umlauts etc
+geocoded_success <- geocoded_success %>%
+  mutate(affiliation = iconv(affiliation, from = "latin1", to = "UTF-8"))
+
+# Use str_wrap to add line breaks in hover text
+geocoded_success <- geocoded_success %>%
+  mutate(hover_text = paste0(
+    "<b>Name:</b> ", presenter, "<br>",
+    "<b>Affiliation:</b><br> ", str_wrap(affiliation, width = 50), "<br>",
+    "<b>Type:</b> " , Decision, "<br>",
+    "<b>Title:</b><br> ", str_wrap(title, width = 50)
+  ))
+
+# Load world map data excluding Antarctica
+world_map <- map_data("world") %>%
+  filter(region != "Antarctica")
+
+# Create a base ggplot with the world map
+p <- ggplot() +
+  geom_polygon(data = world_map, aes(x = long, y = lat, group = group),
+               color = "gray85", fill = "gray80") +
+  geom_jitter(data = geocoded_success, aes(x = location$lon, y = location$lat,
+                                          text = hover_text),
+             color = "red", alpha = 0.7, size = 2) +
+  theme_minimal() +
+  theme(axis.title = element_blank(),
+        axis.text = element_blank(),
+        axis.ticks = element_blank())
+
+# Convert the ggplot to an interactive plotly object
+p_interactive <- ggplotly(p, tooltip = "text") %>%
+  style(
+    hoverlabel = list(
+      align = "left",
+      font = list(size = 10),  
+      bgcolor = "rgba(255, 255, 255, 0.8)",  
+      bordercolor = "black",  
+      borderpad = 5  
+    )
+
+  )
+
+# Display the interactive plot
+p_interactive
+```
+
+**Keynotes**
+
+The [keynote sessions](https://eurobioc2024.bioconductor.org) at EuroBioC2024 offered attendees valuable insights into current research and the future of bioinformatics, serving as key highlights throughout the conference:
+
+-   Altuna Akalin, Group Leader at the Berlin Institute for Medical Systems Biology, Max Delbrück Center for Molecular Medicine presented *"How AI will reshape life sciences research: Examples from the front lines"* 
+
+-   Laura Symul, Junior Professor at Stanford (USA) / UCLouvain (Belgium) presented *"Multi-omics integration reveals host-microbiota interactions in the vaginal ecosystem."*
+
+-   Florian Markowetz, Professor at the University of Cambridge presented *"All models are wrong and yours are useless"*.
+
+-   Agne Antanaviciute, Junior Group Leader at the University of Oxford, presented *"In situ insights into intestinal interactions"*.
+
+-   Virginie Uhlmann, Director of BioVisionCenter, presented *"Towards FAIR and scalable bioimage analysis workflows using OME-Zarr"*.
+
+**Package demos**
+
+Attendees were also treated to a series of 45-minute package demos, where they got hands-on experience with the latest tools and software innovations in bioinformatics. Topics included pathway-centric analyses of omics data with GSVA, spatial transcriptomics workflows with Bioconductor packages like SpaceTrooper and VisiumIO, and microbiome analysis with miaverse. These demos provided practical insights into integrating and visualizing biological networks, performing compositional analyses, and expanding reproducibility workflows in data analysis.
+
+**Short Talks**
+
+The conference also showcased a diverse array of short talks, where researchers presented on various themes. Topics included benchmarking single-cell RNA-seq workflows across R and Python, proteomics data analysis, trajectory-based differential expression analyses, and leveraging computational tools like conformal inference for cell type prediction and spatial multi-sample comparisons. These talks highlighted cutting-edge methods for analyzing and visualizing large-scale omics data, reinforcing the breadth and depth of bioinformatics research today.
+
+**Birds of a Feather sessions**
+
+There were two Birds of a Feather (BoF) sessions that focused on collaborative topics. One explored the future plans of the Bioconductor Training Committee, while the other discussed the use of Zarr, a format for the storage of chunked, compressed N-dimensional arrays, in R/Bioconductor. Both sessions encouraged open discussions and idea sharing, fostering collaboration among participants.
+
+**Poster session**
+
+The poster session featured a wide range of innovative research, from analyzing tumour microenvironments and identifying key master regulators in cancer, to developing tools for integrating multi-omics data and enhancing workflows in proteomics and metabolomics. One attendee appreciated the format, stating, *"Poster pitches were great—it allowed me to get a quick overview of all posters and decide which ones to visit."* Attendees explored topics like single-cell proteomics, lipidomics, transposable elements, and machine learning models, further emphasizing the diversity and innovation present in the bioinformatics community. 
+
+![](images/poster-session.jpg){fig-align="center" alt="Poster session at EuroBioC2024"}
+
+## Infrastructure & Tools
+
+
+**Workshop Infrastructure**
+
+An important part of EuroBioC2024 was the package demos. Presenters had the option to let participants follow along by running the code on the Bioconductor Galaxy cloud platform, set up by Alex Mahmoud from the Bioconductor Core Team.
+
+**EuroBioC2024 Slack**
+
+Building on the success of the BioC2024 Slack, we launched a dedicated EuroBioC2024 Slack workspace. This digital space quickly became a central hub for real-time discussions, with channels covering aspects of the conference, such as:
+
+- #general: Conference-wide announcements and discussions.  
+- #travel-buddies: Coordination of travel plans, like sharing rides from the airport.  
+- #local-tips: Recommendations for places to eat, visit, or explore in Oxford.  
+- #introductions: A space for attendees to introduce themselves and get to know each other.  
+- #help-desk: For any questions or assistance needed during the conference.  
+- #feedback: To gather suggestions and impressions in real-time.
+
+For long-term communication and to share information or ask questions about the Bioconductor European conference throughout the year, join the dedicated **#eurobioc-conference-everyone** channel in the permanent [Bioconductor Slack](https://slack.bioconductor.org) workspace.
+
+
+## Community Recognition
+
+**Athena Award**\
+
+The annual Bioconductor awards ceremony typically takes place during the North American conference, and this year it was held at BioC2024 in Grand Rapids in July. The awards recognize community members who have made outstanding contributions to Bioconductor. You can learn more about all the award winners by visiting the [Bioconductor awards page](https://bioconductor.org/about/awards) or reading the [BioC2024 blog post](https://blog.bioconductor.org/posts/2024-08-12-bioc2024-recap/).
+
+At EuroBioC2024, we had the special opportunity to present the Bioconductor Athena Award in person to Beatriz Calvo-Serra (Bea)'s mother and brother, who live in Europe. The Athena Award, introduced in 2024, reflects the Bioconductor community’s commitment to recognizing individuals who have made lasting contributions while overcoming challenges. Bea’s contributions have left a lasting impact on the community, and this award honors her achievements and enduring legacy.
+
+::: {style="margin: 0 auto;"}
+![](images/athena-presentation1.jpg){width="100%" group="gallery-athena" alt="Robert Castelo, Bea's PhD supervisor, speaking at the Athena award presentation at EuroBioC2024"}
+:::
+
+::: {#gallery-athena .columns}
+::: {.column width="33%"}
+![](images/athena-presentation2.jpg){group="gallery-athena" alt="Aedin Culhane, Bioconductor Community Advisory Board (CAB) member, presenting Bea's brother and mother with Bea's Athena award at EuroBioC2024, an award originally proposed by Aedin to the CAB."}
+:::
+
+::: {.column width="33%"}
+![](images/athena-presentation3.jpg){group="gallery-athena" alt="Aedin Culhane, Bea's brother, Bea's mother and Robert Castelo, at the Athena award presentation at EuroBioC2024"}
+:::
+
+::: {.column width="33%"}
+![](images/athena-presentation4.jpg){group="gallery-athena" alt="Bea's brother Victor saying a few words about his sister at the Athena award presentation at EuroBioC2024"}
+:::
+:::
+
+::: {style="text-align: center;"}
+![](images/awards-Calvo-Serra.png){width="50%" style="border: 1px solid #ccc; padding: 5px;" alt="Award certificate for Beatriz Calvo-Serra"}
+
+*Certificate for the 2024 Bioconductor Athena Award*
+:::
+
+
+**Scholarships**\
+
+The Bioconductor community values inclusivity and diversity. In line with this commitment, the EuroBioC2024 committee awarded scholarships to 25 in-person attendees, helping those who might face financial barriers to join and participate in the conference.
+
+::: {style="float: right; margin-left: 15px;"}
+<img src="images/sticker.png" alt="EuroBioC2024 Sticker" width="200"/>
+:::
+
+**Sticker contest winner**\
+The EuroBioC2024 sticker was eagerly anticipated by the community, and this year’s design did not disappoint. This year’s sticker, designed by Thomas Klammsteiner from the University of Innsbruck, Austria, beautifully blends iconic Oxford imagery with elements of genomic science, making it a memorable keepsake from the event.
+
+Learn more about Thomas and his winning design in our [LinkedIn announcement](https://www.linkedin.com/posts/bioconductor_eurobioc2024-openscience-bioinformatics-activity-7163867659518877696-k1t_).
+
+
+## Social & Networking
+
+EuroBioC2024 included opportunities to interact with the Bioconductor community. Both organised events and informal gatherings helped participants connect and establish meaningful relationships. One participant shared, *"Friendly participants and organisers, good science, great length of 2.5 days with a relaxed final day and time at the end for networking."*
+
+
+**Conference Dinner**\
+
+Held at St Anne's College, the conference dinner was another chance to foster new collaborations and deepen connections within the community.
+
+![](images/conference-dinner.jpg){fig-align="center"  alt="Participants at the conference dinner during EuroBioC2024"}
+
+**Walking Tour**\
+
+The conference social activities included a walking tour of Oxford, led by local host and organizer Oliver Crook. This tour offered a unique opportunity for attendees to explore the city and get to know each other in a relaxed setting.
+
+![](images/walking-tour.jpg){fig-align="center"  alt="Participants on a walking tour of Oxford during EuroBioC2024"}
+
+The word cloud below reflects what participants enjoyed most about EuroBioC2024, based on the post-conference survey responses. Words like “great,” “friendly,” and “science” stand out, highlighting the positive atmosphere, quality of presentations, and strong sense of community.
+
+```{r wordcloud, echo=FALSE, warning=FALSE, message=FALSE, cache=TRUE}
+# Load necessary libraries
+library(dplyr)
+library(readr)
+library(tm)
+library(wordcloud)
+library(RColorBrewer)
+
+# Read the CSV file (replace with your actual file path)
+feedback_data <- read_csv("~/Documents/Bioconductor/Conferences/EuroBioC2024/EuroBioC2024 - Post-conference survey.csv")
+
+# Assuming your feedback column is named "Feedback" (replace with actual column name)
+feedback_column <- feedback_data$`What did you like about EuroBioC2024?`
+
+# Create a text corpus
+feedback_corpus <- Corpus(VectorSource(feedback_column))
+
+# Convert text to lower case
+feedback_corpus <- tm_map(feedback_corpus, content_transformer(tolower))
+
+# Remove punctuation, numbers, and common stopwords
+feedback_corpus <- tm_map(feedback_corpus, removePunctuation)
+feedback_corpus <- tm_map(feedback_corpus, removeNumbers)
+feedback_corpus <- tm_map(feedback_corpus, removeWords, stopwords("en"))
+
+# Define a custom stopwords list of uninformative words
+custom_stopwords <- c(
+  "also", "always", "catch", "course", "every", "gave", "helped", "maintain", 
+  "outside", "presented", "short", "two", "working", "day", "days", "end", 
+  "final", "length", "next", "nice", "young", "show", "city", "something", 
+  "like", "really", "able", "allowing", "allows", "booking", "together", 
+  "quick", "registration", "visit", "year", "get", "person", "decide", 
+  "offered", "sessions", "giving", "others", "meet", "breaks", "around", 
+  "walking", "eveything", "environment", 
+  "format", "members", "new", "spirit", "regardless", "hours", 
+  "next", "final", "length", "everyone", "time", "allowed", "pitch", "focus", 
+  "talk", "venue", "huge", "mix", "college", "convenient", "exchange", 
+  "overview", "variable", "please", "tasty", "covered", "inclusion", 
+  "easy", "kept", "highly", "good", "sizenumber", "offer", "emphasis", "liked", 
+  "appreciated", "work"
+)
+
+# Remove the custom stopwords
+feedback_corpus <- tm_map(feedback_corpus, removeWords, custom_stopwords)
+
+# Convert the corpus to a term-document matrix
+tdm <- TermDocumentMatrix(feedback_corpus)
+m <- as.matrix(tdm)
+
+# Calculate word frequencies
+word_freqs <- sort(rowSums(m), decreasing = TRUE)
+
+# Create a data frame with words and their frequencies
+word_freq_df <- data.frame(word = names(word_freqs), freq = word_freqs)
+
+# Generate the word cloud
+set.seed(1234)  # Set seed for reproducibility
+wordcloud(words = word_freq_df$word, freq = word_freq_df$freq, min.freq = 0,
+          max.words = 200, random.order = FALSE, rot.per = 0.35,
+          colors = brewer.pal(8, "Dark2"))
+```
+
+## Conference Materials
+
+**Videos**\
+
+To make the knowledge shared at EuroBioC2024 widely accessible, recordings of talks, workshops, and demos will be available on [Bioconductor YouTube](https://www.youtube.com/user/bioconductor) after the event. Be sure to check out the EuroBioC2024 playlist to revisit key sessions or catch up on anything you missed.
+
+**Workshops**\
+
+Workshop materials from EuroBioC2024 package demos will be accessible via the conference website and interactively through [workshop.bioconductor.org](workshop.bioconductor.org) in the 'Archived' section, allowing the hands-on learning to continue well after the event.
+
+**Slides**\
+
+Presenters are invited to share their slides and materials through the Zenodo Bioconductor community. This helps extend the reach of their work and enables others in the field to cite and reference their contributions. See an example [here](https://zenodo.org/records/13236253).
+
+
+## Upcoming Conferences
+
+If you missed EuroBioC2024, there are still plenty of ways to connect with the Bioconductor community. You can join us at one of our upcoming conferences:
+
+-   **BioC Asia 2024**\
+    November 7-8 in Sydney, Australia. Website: <https://biocasia2024.bioconductor.org/>\
+-   **GBCC 2025**\
+    June 23-26 in New York, USA. A joint conference with the Galaxy community. See announcement on [LinkedIn](https://www.linkedin.com/posts/bioconductor_gbcc2025-bioconductor-galaxy-activity-7236739126190829569-QdEH).
+-   **EuroBioC 2025**\
+    September 17-19 in Barcelona, Spain. See announcement on [LinkedIn](https://www.linkedin.com/posts/bioconductor_eurobioc2024-eurobioc2025-activity-7237888796564885505-hUW6).
+    
+We look forward to seeing you at these events! Your participation helps strengthen the Bioconductor community and advance the field of bioinformatics. 
+
+You can also participate in the Bioconductor Slack workspace at [slack.bioconductor.org](https://slack.bioconductor.org/), or follow us on [LinkedIn](https://www.linkedin.com/company/bioconductor) and [Mastodon](https://genomic.social/@bioconductor) to stay up to date with the latest developments in bioinformatics.
+
+## Acknowledgments
+
+**Sponsors**
+
+EuroBioC2024 are extremely grateful to those who sponsored EuroBioC2024. EuroBioC2024’s platinum sponsors were [10x Genomics](https://www.10xgenomics.com/) and [GSK](https://www.gsk.com/), gold sponsor was [BigOmics](https://bigomics.ch/), patronage sponsor was [ELIXIR](https://elixir-europe.org/) and other sponsor was [R Consortium](https://www.r-consortium.org/). Their support was greatly appreciated by the Bioconductor community.
+
+![](images/sponsors.png){alt="Logos of sponsors for EuroBioC2024"}
+
+**Hosts**
+
+[University of Oxford](https://www.ox.ac.uk/)
+
+**Organizing Committee**
+
+*Local Hosts and Organizers:*\
+
+- Oliver Crook, University of Oxford, UK\ 
+- Kevin Rue-Albrecht, University of Oxford, UK\  
+
+*Others:*\
+
+- Charlotte Soneson, Friedrich Miescher Institute for Biomedical Research, Switzerland\
+- Dario Righelli, University of Naples "Federico II", Italy\
+- Davide Risso, University of Padua, Italy\
+- E. Ravza Gur, University of Oxford, UK\
+- Helena L. Crowell, Centro Nacional de Análisis Genómico, Spain\
+- James Dalgleish, University of Oxford, UK\
+- Johannes Rainer, Eurac Research, Italy\
+- Laurent Gatto, Université catholique de Louvain, Belgium\
+- Lena Morrill Gavarro, University of Oxford, UK\
+- Leo Lahti, University of Turku, Finland\
+- Lieven Clement, Ghent University, Belgium\
+- Maria Doyle, University of Limerick, Ireland\
+- Michael Stadler, Friedrich Miescher Institute for Biomedical Research, Switzerland\
+- Robert Castelo, Universitat Pompeu Fabra, Spain\
+- Robert Ivanek, University of Basel, Switzerland\
+- Simone Bell, EMBL, Germany\
+- Wolfgang Huber, EMBL, Germany\
