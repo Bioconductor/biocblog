@@ -55,7 +55,7 @@ Follow and use the hashtag **#GBCC2025** on social media to stay updated on all 
 
 - LinkedIn ([Bioconductor](https://www.linkedin.com/company/bioconductor/), [Galaxy](https://www.linkedin.com/company/galaxy-project/))
 - Mastodon ([Bioconductor](https://genomic.social/@bioconductor), [Galaxy](https://mstdn.science/@galaxyproject))
-- BlueSky ([Galaxy](https://bsky.app/profile/galaxyproject.bsky.social))
+- BlueSky ([Bioconductor](https://bsky.app/profile/bioconductor.bsky.social), [Galaxy](https://bsky.app/profile/galaxyproject.bsky.social))
 
 **Sponsorship Opportunities**  
 If you are interested in sponsoring this unique collaborative event, email Jenn Vessio (jvessio1 [at] jhu.edu) and Maria Doyle (maria.doyle [at] ul.ie). 
