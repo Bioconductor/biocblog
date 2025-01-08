@@ -4,7 +4,7 @@ description: "R/Bioconductor developers participating in the 1st scverse Spatial
 author:
   - name: Artür Manukyan
     url: https://github.com/artur-man
-date: 2025-01-06
+date: 2025-01-08
 categories:
   - Bioconductor
 image: "1731708109822.png"
