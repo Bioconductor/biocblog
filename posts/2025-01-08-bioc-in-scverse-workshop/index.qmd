@@ -1,0 +1,76 @@
+---
+title: "2024 SpatialData Workshop"
+description: "R/Bioconductor developers participating in the 1st scverse SpatialData Workshop"
+author:
+  - name: Artür Manukyan
+    url: https://github.com/artur-man
+date: 2025-01-08
+categories:
+  - Bioconductor
+image: "1731708109822.png"
+format:
+  html:
+    toc: true
+lightbox: true
+---
+
+The first SpatialData hackathon and workshop was organized by the [scverse](https://scverse.org/) community on 12-14 November 2024 in Basel, Switzerland. 20 attendees had gathered to work on improving online materials, tutorials, and scalability of existing spatial omics and scverse frameworks where interoperability across software platforms were prioritized.
+
+![](1731708109822.png){width="80%" fig-align="center" group="gallery-intro" alt="SpatialData Workshop attendees"}
+
+## Interoperability for Spatial Omics
+
+One of the key objectives of the workshop was to gather communities from R and Python, to harmonize spatial data formats towards R/Python interoperability and cross-framework integration. 
+
+A group of R/Bioconductor developers led by Helena L. Crowell have teamed up to devise R bindings for the [SpatialData](https://spatialdata.scverse.org/en/stable/) framework which will enable users to operate SpatialData objects across R and Python environments simultaneously.
+
+::::: {#gallery-carp .columns}
+::: {.column width="50%"}
+![](1731708107583.png){group="gallery-intro" alt="R Interoperability Team"}
+:::
+
+::: {.column width="50%"}
+![](PXL_20241112_084126060.MP.png){alt="R Interoperability Slide"}
+:::
+*R Interoperability Team (clockwise): Artür Manukyan, Dario Righelli, Vincent Carey, Kevin Yamauchi, Louise Deconinck, Estella Yixing Dong, Helena L. Crowell*
+:::::
+
+The event brought together scientists with expertise in **(i)** R and Bioconductor frameworks for spatial omics, **(ii)** R/Python interoperability for single cell frameworks ([`anndataR`](https://github.com/scverse/anndataR)) and **(iii)** [Zarr](https://zarr.readthedocs.io/en/stable/getting_started.html) for the storage of chunked, compressed, N-dimensional arrays ([`Rarr`](https://bioconductor.org/packages/release/bioc/html/Rarr.html), [`pizzarr`](https://github.com/keller-mark/pizzarr)).
+
+Further discussions were made on joint scverse/Bioconductor projects and how to fully utilize R-native frameworks for out of memory data management through file formats such as .zarr (via  [`DelayedArray`](https://bioconductor.org/packages/release/bioc/html/DelayedArray.html)) and .parquet (via [`arrow`](https://arrow.apache.org/docs/r/index.html)) to scale up spatial omics analysis for the Bioconductor community.
+
+## Summary of Hackathon
+
+The Hackathon event in Basel focused on four tracks which leveraged multiple programming languages, including Python, R, and JavaScript: 
+
+1. **R interoperability**: Enhancing the integration and compatibility of R and Python with the SpatialData Python framework by using the language-agnostic SpatialData Zarr file format.
+
+2. **Visualization interoperability**: Improving the seamless integration of visualization tools across different systems and programming languages via a tool-agnostic view configuration.
+
+3. **Scalability and benchmarking**: Identifying, benchmarking, and addressing computational bottlenecks within the SpatialData framework.
+
+4. **Ergonomics and user-friendliness**: Enhancing the usability and accessibility of the SpatialData framework for both first-time users and third-party developers.
+
+You can find more information on outcomes of each of these tracks in the [BioHackArxiv](https://osf.io/preprints/biohackrxiv/8ck3e) preprint. 
+
+For track 1 specifically, R/Bioconductor packages [`SpatialData`](https://github.com/HelenaLC/SpatialData) (representation), [`SpatialData.plot`](https://github.com/HelenaLC/SpatialData.plot) (visualization), [`SpatialData.data`](https://github.com/HelenaLC/SpatialData.data) (datasets) are under development, and a [`BiocBook`](https://www.bioconductor.org/packages/release/bioc/html/BiocBook.html) consolidation vignettes and scientific workflows is in planning. 
+
+## SpatialData Framework
+
+SpatialData is a data framework that comprises a FAIR storage format and a collection of libraries originally written in python for performant access, alignment, and processing of spatial omics datasets. SpatialData is currently maintained by the [scverse](https://scverse.org/) consortium.
+
+**Website**: [https://spatialdata.scverse.org/](https://spatialdata.scverse.org/)
+
+**SpatialData core team**: Luca Marconato, Giovanni Palla, Kevin Yamauchi, Wouter-Michiel Vierdag, Tim Treis, Isaac Virshup, Josh Moore. 
+
+![](spatialdata.png){width="80%" fig-align="center" alt="spatialdata framework"}
+
+## scverse
+
+scverse is a consortium of foundational tools (mostly in Python) for omics data in life sciences. It has been founded to ensure the long-term maintenance of some known core tools such as anndata, scanpy, squidpy and spatialdata.
+
+**Website**: [https://scverse.org/](https://scverse.org/)
+
+## Join Us!
+
+Join the `#spatialdata-devel` channel in [Bioconductor Slack](https://slack.bioconductor.org/) to take part in discussions, future work, and hackathons.
