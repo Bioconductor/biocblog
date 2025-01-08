@@ -70,3 +70,7 @@ SpatialData is a data framework that comprises a FAIR storage format and a colle
 scverse is a consortium of foundational tools (mostly in Python) for omics data in life sciences. It has been founded to ensure the long-term maintenance of some known core tools such as anndata, scanpy, squidpy and spatialdata.
 
 **Website**: [https://scverse.org/](https://scverse.org/)
+
+## Join Us!
+
+Join the `#spatialdata-devel` channel in [Bioconductor Slack](https://slack.bioconductor.org/) to take part in discussions, future work, and hackathons.
