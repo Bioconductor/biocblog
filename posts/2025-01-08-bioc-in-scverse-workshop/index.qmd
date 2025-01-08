@@ -22,7 +22,7 @@ The first SpatialData hackathon and workshop was organized by the [scverse](http
 
 One of the key objectives of the workshop was to gather communities from R and Python, to harmonize spatial data formats towards R/Python interoperability and cross-framework integration. 
 
-A group of R/Bioconductor developers lead by Helena L. Crowell have teamed up to devise R bindings for the [SpatialData](https://spatialdata.scverse.org/en/stable/) framework which will enable users to operate SpatialData objects across R and Python environments simultaneously.
+A group of R/Bioconductor developers led by Helena L. Crowell have teamed up to devise R bindings for the [SpatialData](https://spatialdata.scverse.org/en/stable/) framework which will enable users to operate SpatialData objects across R and Python environments simultaneously.
 
 ::::: {#gallery-carp .columns}
 ::: {.column width="50%"}
@@ -30,7 +30,7 @@ A group of R/Bioconductor developers lead by Helena L. Crowell have teamed up to
 :::
 
 ::: {.column width="50%"}
-![](PXL_20241112_084126060.MP.jpg){alt="R Interoperability Slide"}
+![](PXL_20241112_084126060.MP.png){alt="R Interoperability Slide"}
 :::
 *R Interoperability Team (clockwise): Artür Manukyan, Dario Righelli, Vincent Carey, Kevin Yamauchi, Louise Deconinck, Estella Yixing Dong, Helena L. Crowell*
 :::::
