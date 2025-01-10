@@ -8,7 +8,7 @@ execute:
 
 website:
   title: "Bioconductor community blog"
-  site-url: https://bioconductor.github.io/biocblog/
+  site-url: https://blog.bioconductor.org/
   description: "A blog for the Bioconductor community!"
   open-graph: true
   navbar:
