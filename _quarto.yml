@@ -27,7 +27,8 @@ website:
         href: https://slack.bioconductor.org/
       - icon: rss
         href: index.xml
-  body-footer: "_footer.html"
+  body-footer: |
+    <p>© 2025 Bioconductor. Content is published under <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons CC-BY-4.0 License</a> for the text and <a href="https://opensource.org/licenses/BSD-3-Clause">BSD 3-Clause License</a> for any code. | <a href="https://www.r-bloggers.com">R-Bloggers</a></p>
 format:
   html:
     theme: yeti
