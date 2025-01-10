@@ -75,7 +75,7 @@ ul.task-list li input[type="checkbox"] {
 <link rel="stylesheet" href="../../styles.css">
 <meta property="og:title" content="Emulated build and test of Bioconductor packages for Linux ARM64 – Bioconductor community blog">
 <meta property="og:description" content="Build and test for Linux ARM64 with Docker on x86_64 host">
-<meta property="og:image" content="https://bioconductor.github.io/biocblog/posts/2023-06-09-debug-linux-arm64-on-docker/bioconductor_logo_cmyk.png">
+<meta property="og:image" content="https://blog.bioconductor.org/posts/2023-06-09-debug-linux-arm64-on-docker/bioconductor_logo_cmyk.png">
 <meta property="og:site_name" content="Bioconductor community blog">
 <meta property="og:image:height" content="124">
 <meta property="og:image:width" content="430">
@@ -341,7 +341,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
     var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
     var mailtoRegex = new RegExp(/^mailto:/);
-      var filterRegex = new RegExp("https:\/\/bioconductor\.github\.io\/biocblog\/");
+      var filterRegex = new RegExp("https:\/\/blog\.bioconductor\.org\/");
     var isInternal = (href) => {
         return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
     }

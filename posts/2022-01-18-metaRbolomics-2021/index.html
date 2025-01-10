@@ -75,7 +75,7 @@ ul.task-list li input[type="checkbox"] {
 <link rel="stylesheet" href="../../styles.css">
 <meta property="og:title" content="metaRbolomics hackathon to improve interoperability of metabolomics-related R packages – Bioconductor community blog">
 <meta property="og:description" content="The 3rd metaRbolomics hackathon took place as a in-person workshop in Wittenberg (Germany) in November 2021. The aim was to improve interoperability of metabolomics/mass spectrometry-related R packages, combine development efforts and identify gaps and needs in current available functionality. It was a fun event with a lot of discussions and coding as well as socializing and networking.">
-<meta property="og:image" content="https://bioconductor.github.io/biocblog/posts/2022-01-18-metaRbolomics-2021/MLlambrich.jpg">
+<meta property="og:image" content="https://blog.bioconductor.org/posts/2022-01-18-metaRbolomics-2021/MLlambrich.jpg">
 <meta property="og:site_name" content="Bioconductor community blog">
 </head>
 
@@ -301,7 +301,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
     var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
     var mailtoRegex = new RegExp(/^mailto:/);
-      var filterRegex = new RegExp("https:\/\/bioconductor\.github\.io\/biocblog\/");
+      var filterRegex = new RegExp("https:\/\/blog\.bioconductor\.org\/");
     var isInternal = (href) => {
         return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
     }

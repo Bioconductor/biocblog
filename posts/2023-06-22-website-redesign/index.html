@@ -75,7 +75,7 @@ ul.task-list li input[type="checkbox"] {
 <link rel="stylesheet" href="../../styles.css">
 <meta property="og:title" content="Reimagining Bioconductor.org: The Path to Our Website Redesign – Bioconductor community blog">
 <meta property="og:description" content="Discover the journey of Bioconductor’s website redesign project. Learn about the process, from initial planning to collaboration with NearForm as we shape the future of Bioconductor.org.">
-<meta property="og:image" content="https://bioconductor.github.io/biocblog/posts/2023-06-22-website-redesign/BC Website redesign - Project timeline.jpg">
+<meta property="og:image" content="https://blog.bioconductor.org/posts/2023-06-22-website-redesign/BC Website redesign - Project timeline.jpg">
 <meta property="og:site_name" content="Bioconductor community blog">
 </head>
 
@@ -323,7 +323,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
     var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
     var mailtoRegex = new RegExp(/^mailto:/);
-      var filterRegex = new RegExp("https:\/\/bioconductor\.github\.io\/biocblog\/");
+      var filterRegex = new RegExp("https:\/\/blog\.bioconductor\.org\/");
     var isInternal = (href) => {
         return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
     }
