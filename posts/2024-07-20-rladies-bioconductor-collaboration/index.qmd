@@ -5,7 +5,7 @@ description: |
 author:
   - name: Janani Ravi
     url: https://github.com/jananiravi
-date: 2025-01-19
+date: 2024-07-20 | Updated: 2025-02-06
 categories:
   - Bioconductor
   - RLadies
@@ -51,5 +51,5 @@ Here's how you can get started:
 
 We recently kicked off this journey with local networking in R-Ladies chapters worldwide (e.g., [Aurora, Colorado](https://www.meetup.com/rladies-aurora/events/302185687/)) and an R-Ladies meetup in Michigan during BioC 2024, co-hosted with [R-Ladies East Lansing](https://www.meetup.com/rladies-east-lansing/events/302185529/) (Michigan)!
 
-We\'re looking forward to building something great together.
+We're looking forward to building something great together.
 Let us know what you think, share your ideas, or just say hi!
