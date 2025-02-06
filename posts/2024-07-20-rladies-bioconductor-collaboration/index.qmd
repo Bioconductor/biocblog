@@ -25,7 +25,7 @@ R-Ladies chapters work alongside other like-minded communities at local, regiona
 
 [Bioconductor](https://www.bioconductor.org/) develops, supports, and disseminates free open-source software that facilitates rigorous and reproducible analysis of data from current and emerging biological assays.
 The organization is dedicated to building a diverse, collaborative, and welcoming community of developers and data scientists.
-To this end, they have periodically elected [scientific](https://bioconductor.org/about/scientific-advisory-board/), [technical](https://bioconductor.org/about/technical-advisory-board/), and [community](https://bioconductor.org/about/community-advisory-board/) advisory boards committed to the technical and community aspects of Bioconductor.
+To this end, they have periodically elected [technical](https://bioconductor.org/about/technical-advisory-board/) and [community](https://bioconductor.org/about/community-advisory-board/) advisory boards from Bioconductor community members/volunteers committed to the technical and community aspects of Bioconductor. Additionally, the [Scientific Advisory Board](https://bioconductor.org/about/scientific-advisory-board/) members are invited and provide external guidance and oversight of the scientific direction of the Bioconductor project.
 
 We are excited to begin a new initiative that aims to connect R-Ladies members who are also Bioconductor users or developers.
 This effort is designed as a key step towards bringing together passionate individuals committed to expanding diversity in the computational biology and bioinformatics developer space.
