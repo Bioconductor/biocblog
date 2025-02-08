@@ -5,7 +5,7 @@ description: |
 author:
   - name: Janani Ravi
     url: https://github.com/jananiravi
-date: 2024-07-20 | Updated: 2025-02-06
+date: 2024-07-20
 categories:
   - Bioconductor
   - RLadies
@@ -14,6 +14,8 @@ editor:
   markdown: 
     wrap: sentence
 ---
+
+*Edited in February 2025. [Cross post in R-Ladies website.](https://rladies.org/blog/2025-02-08-rladies-bioconductor-collab/)*
 
 ![](rladies-bioc.png){ width=50% fig-align="center"}
 
