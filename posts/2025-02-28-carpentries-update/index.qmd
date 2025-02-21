@@ -23,7 +23,7 @@ As we wrap up our two years of instructor training through the CZI EOSS4 grant, 
 
 - **Workshops held worldwide**, including North Africa, Brazil, India, and Europe.
 - **Instructor-led sessions** at major Bioconductor conferences: BioC2023, EuroBioC2023, BioCAsia2023, BioC2024, and EuroBioC2024.
-- **First Bioconductor Carpentry workshop in Africa**, led by the Tunis R User Group. This event was a major step in strengthening the R and Bioconductor community in Tunisia.
+- **First Bioconductor Carpentry workshop in Africa**, led by the Tunis R User Group. This event was an important step in strengthening the R and Bioconductor community in Tunisia.
 - **Upcoming courses** in Kenya (March 2025), Brazil (March 2025), USA (August 2025), further expanding our regional footprint.
 - **Growing engagement** with researchers and educators in underrepresented regions, helping to bridge gaps in access to bioinformatics training.
 
@@ -58,12 +58,12 @@ instructors <- instructors |>
 instructors_geocoded <- instructors |> 
   geocode(Location, method = 'osm', lat = lat, long = lon)
 
-# Combine geocoded data and set status as factor
-all <- instructors_geocoded |> 
-  mutate(Status = factor(status, levels = c(
-    "Certified - CZI Year 1", 
-    "Certified - CZI Year 2")
-  ))
+# Combine geocoded data and set Year as factor
+all <- instructors_geocoded %>%
+  mutate(year = factor(case_when(
+    status == "Certified - CZI Year 1" ~ "Year 1",
+    status == "Certified - CZI Year 2" ~ "Year 2"
+  )))
 ```
 
 ```{r}
@@ -87,29 +87,29 @@ gg <- ggplot() +
       x = lon,
       y = lat,
       text = paste(name, institution, sep = "\n"),
-      colour = Status,
-      fill = Status,
-      shape = Status,
-      size = Status
+      colour = year,
+      fill = year,
+      shape = year,
+      size = year
     ),
     width = 0.5,
     height = 0.5
   ) +
   scale_colour_manual(values = c(
-    "Certified - CZI Year 1" = "#009E73",
-    "Certified - CZI Year 2" = "#CC79A7"
+    "Year 1" = "#009E73",
+    "Year 2" = "#CC79A7"
   )) +
   scale_fill_manual(values = c(
-    "Certified - CZI Year 1" = "#009E73",
-    "Certified - CZI Year 2" = "#CC79A7"
+    "Year 1" = "#009E73",
+    "Year 2" = "#CC79A7"
   )) +
   scale_shape_manual(values = c(
-    "Certified - CZI Year 1" = 22,
-    "Certified - CZI Year 2" = 24
+    "Year 1" = 22,
+    "Year 2" = 24
   )) +
   scale_size_manual(values = c(
-    "Certified - CZI Year 1" = 2,
-    "Certified - CZI Year 2" = 2
+    "Year 1" = 2,
+    "Year 2" = 2
   )) +
   coord_fixed(
     ratio = 1.3,
@@ -168,7 +168,7 @@ interactive_map %>% save_image("map.png")
 ```{r}
 # Table of instructors
 table_data <- all |>   
-  select(name, institution, city, country, region, status)
+  select(name, institution, city, country, region, year)
 
 # Create the table
 reactable(
@@ -192,7 +192,7 @@ reactable(
     city = colDef(name = "City"),
     country = colDef(name = "Country"),
     region = colDef(name = "Region"),
-    status = colDef(name = "Status")
+    year = colDef(name = "Year")
   ), 
   defaultSorted = "name",
   defaultPageSize = 100,
