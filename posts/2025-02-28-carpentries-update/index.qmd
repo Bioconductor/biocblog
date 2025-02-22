@@ -209,7 +209,7 @@ We’re excited to:
 
 Interested in joining our growing community of Carpentries instructors? Learn how to get involved through our [Bioconductor Carpentry webpage](https://training.bioconductor.org/carpentry/index.html). 
 
-- Browse upcoming and past workshops: [See schedule]. (https://training.bioconductor.org/carpentry/workshops.html)
+- Browse upcoming and past workshops: [See schedule.](https://training.bioconductor.org/carpentry/workshops.html)
 - Meet our certified instructors: [View list.](https://training.bioconductor.org/carpentry/instructors.html)
 - Join our Training Community: [Learn more.](https://training.bioconductor.org/)
 
@@ -257,5 +257,6 @@ reactable(
   )
 )
 ```
+
 
 We are grateful to the [Chan Zuckerberg Initiative’s EOSS program](https://chanzuckerberg.com/eoss/proposals/bioconductor-high-quality-training-and-support-for-a-worldwide-community/) for their support. Their funding has been instrumental in making this program a success.
