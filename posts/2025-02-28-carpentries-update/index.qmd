@@ -253,7 +253,7 @@ reactable(
   style = list(
     border = "1px solid #ccc",
     stripedColor = "#f0f0f0",
-    fontSize = "0.875rem"
+    fontSize = "0.6rem"
   )
 )
 ```
