@@ -24,6 +24,9 @@ jobs:
           use-public-rspm: true
       - name: Install R dependencies
         run: Rscript -e 'install.packages(c("jsonlite", "htmltools", "rmarkdown", "RefManageR", "dplyr"))'
+        
+      - name: Install Font Awesome extension
+        run: quarto install extension quarto-ext/fontawesome --no-prompt
 
       - name: Publish to GitHub Pages (and render)
         uses: quarto-dev/quarto-actions/publish@v2
