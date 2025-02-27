@@ -1,0 +1,73 @@
+---
+title: "Open Science Mentoring: My Journey with Outreachy Mentees"
+description: ""
+author:
+  - name: Svetlana Ugarcina Perovic
+    url: https://github.com/SvetlanaUP
+date: 2025-02-26
+categories:
+  - Outreachy
+  - open science
+image: "Svetlanas_mentees_and_their_projects.png"
+format:
+  html:
+    toc: true
+lightbox: true
+---
+
+Bioconductor has been participating in the Outreachy Internship program since 2022. In this post, I, Svetlana Ugarcina Perovic, a senior researcher in microbiome science, share my journey of Outreachy mentoring, detailing my experience with the Microbiome Study Curation project and open science projects.
+
+The recent [Outreachy coffee chat](https://www.youtube.com/watch?v=PiOm6nqzTVQ) made me think about my mentoring journey and all the bright minds I've had the privilege to work with and learn from. What started in 2020 as a simple involvement in open science initiatives ([Microbiome Digest](https://microbiomedigest.com/) and the [National Summer Undergraduate Research Project](https://nsurp.org/)) has blossomed into something far more meaningful than I could have imagined.
+
+**How to become a (good) mentor?** Despite spending years in academia, through a PhD and multiple postdoc positions, there was never a class or workshop called "How to Be a Good Mentor." Like many scientists, I learned the art of mentoring through experience–watching my own mentors closely, noting what worked and what didn't as I moved through five different labs across various countries. Some approaches inspired me, others showed me exactly what not to do. It's a bit surprising when you think about it–in Life Sciences, we're trained meticulously in experimental techniques and data analysis, but this crucial skill of guiding and supporting others? That's something we're largely expected to figure out on our own.
+
+**My path to mentoring with [Outreachy](https://www.outreachy.org/)** began thanks to my wonderful colleagues at the [Microbiome Virtual International Forum](https://www.microbiome-vif.org/en-US), [Levi Waldron](https://waldronlab.io/) and [Chloe Mirzayi](https://cunyisph.org/team/chloe-mirzayi/). They introduced me to this incredible open science community called [Bioconductor](https://www.bioconductor.org/) and a project called [BugSigDB](https://bugsigdb.org/Main_Page). At its heart, BugSigDB is like a Wikipedia for microbiome science. We're building a free, searchable database that maps out which microbes (the tiny organisms living in and on humans and other hosts) are linked to different health conditions. Scientists worldwide can contribute their findings (significant differential abundance results), making it easier to spot patterns–like which bacteria might be important in diseases or health. It is a community library where researchers share and standardize their discoveries about the microbiome, making this **knowledge accessible to everyone**. Whether you're studying gut health or skin conditions, you can find and add information through BugSigDB platform. The best part? It's truly global, with contributors from different parts of the world, all working together to better understand our microbiome companions.
+
+::: {style="text-align: center;"}
+![](BugSigDB_team_meeting.png){width="70%" alt="BugSigDB team meeting"}
+
+<p style="text-align: center;">
+*BugSigDB team meeting*
+</p>
+:::
+
+Twice a year, we welcome Outreachy applicants and select interns for paid 3-month internships. As an Outreachy mentor, nothing has been more gratifying than watching our community growth. Since 2022, our project has attracted more than hundred applicants each round, representing ten different countries across Africa, Asia, and South America, and we've welcomed nine interns ([read their blog posts here](https://blog.bioconductor.org/#category=Outreachy)). Each contributor enriches our community with their distinct perspectives and enthusiasm. It's always thrilling to see familiar faces return for another round of applications.
+
+But let me be honest–mentoring isn't all sunshine and rainbows. The biggest challenge I've faced is **navigating different communication styles and learning paces**. I've learned that regular check-ins are crucial, not just for tracking progress but for building trust and understanding. Often, in my mentoring experience, the best solutions come from pairing contributors together–and watching them support and learn from each other brings me immense joy.
+
+::: {style="text-align: center;"}
+![](Svetlanas_mentees_and_their_projects.png){width="80%" alt="Svetlana’s_mentees_and_their_projects"}
+
+<p style="text-align: center;">
+*Svetlana’s mentees and their projects*
+</p>
+:::
+
+Recently, I was deeply moved when one of my mentees, [Scholastica Urua](https://www.linkedin.com/in/scholastica-urua-898659235/), presented her research on African microbiome data at the [MVIF conference](https://www.youtube.com/watch?v=tGwTAxmvEYc&list=PLLOHGJKpTq6pG03Az_I80ZUReMYVmwqB9&index=6). Scholastica’s talk exemplified the kind of collaborative science we aspire to–carefully documenting microbiome studies from regions that have historically been underrepresented in microbiome science databases. The community recognized Scholastica’s excellent work with the best microtalk award, but what truly mattered was how her contribution helped make our database more globally representative. Scholastica together with BugSigDB community demonstrated through their work that **when we open doors to diverse perspectives in science, everyone benefits**.
+
+Every day as an Outreachy mentor brings new challenges and victories. When I see our contributors challenging ideas thoughtfully, providing constructive feedback, and supporting each other, I know we're doing something right. But perhaps the most fulfilling aspect is watching my mentees grow into mentors themselves. Or into moderators of the conference session: 
+
+::: {style="text-align: center;"}
+![](x_post_screenshot.png){width="70%" alt="A proud-mentor moment when Victoria Poromon masterfully ran the Q&A at MVIF 34"}
+<p style="text-align: center;">
+*A proud-mentor moment when [Victoria Poromon](https://www.linkedin.com/in/victoria-poromon-1a37491bb/) masterfully ran the Q&A at MVIF 34*
+</p>
+:::
+
+To anyone considering mentoring in open science: yes, it requires time, patience, and dedication. But the rewards–the connections you make, the growth you witness, and the knowledge you gain–make it all worthwhile. After all, isn't that what science is about? **Learning together, growing together, and making the world a little bit better through shared knowledge and understanding.**
+
+So here's to all the mentees who've taught me as much as I've taught them, to the global community that makes this possible, and to the future of open science. The journey continues, and I couldn't be more excited about what lies ahead.
+
+## Join Our Outreachy Community
+
+As we reflect on the success of our current mentorship program, we're excited to announce that Bioconductor will be participating in the next Outreachy internship round – from June to August 2025. Anyone within our community can propose an open source project to mentor an Outreachy intern. The **deadline to submit a project is March 7, 2025 at 4 pm UTC** at [Outreachy]( https://www.outreachy.org/communities/cfp/bioconductor/).
+
+If you're interested in getting involved:
+
+-   Join our #outreachy channel on [Bioconductor Slack](https://slack.bioconductor.org/) to connect with current and past participants;
+
+-   Follow us on social media for regular updates: [Mastodon](https://genomic.social/@bioconductor), [LinkedIn](https://www.linkedin.com/company/bioconductor) and [Bluesky](https://bsky.app/profile/bioconductor.bsky.social);
+
+-   Contact me directly on [LinkedIn](https://www.linkedin.com/in/svetlana-ugarcina-perovic) with any questions or to express interest.
+
+Whether you're looking to expand your skills as a mentee or share your expertise as a mentor, Outreachy offers a structured pathway to meaningful contribution in our community. We look forward to welcoming new voices and perspectives in our continued commitment to diversity and inclusion in bioinformatics.
