@@ -8,7 +8,7 @@ date: 2025-02-26
 categories:
   - Outreachy
   - open science
-image: "BugSigDB_team_meeting.png"
+image: "Svetlanas_mentees_and_their_projects.png"
 format:
   html:
     toc: true
@@ -68,6 +68,6 @@ If you're interested in getting involved:
 
 -   Follow us on social media for regular updates: [Mastodon](https://genomic.social/@bioconductor), [LinkedIn](https://www.linkedin.com/company/bioconductor) and [Bluesky](https://bsky.app/profile/bioconductor.bsky.social);
 
--   Contact me directly on [LinkedIn](www.linkedin.com/in/svetlana-ugarcina-perovic) with any questions or to express interest.
+-   Contact me directly on [LinkedIn](https://www.linkedin.com/in/svetlana-ugarcina-perovic) with any questions or to express interest.
 
 Whether you're looking to expand your skills as a mentee or share your expertise as a mentor, Outreachy offers a structured pathway to meaningful contribution in our community. We look forward to welcoming new voices and perspectives in our continued commitment to diversity and inclusion in bioinformatics.
