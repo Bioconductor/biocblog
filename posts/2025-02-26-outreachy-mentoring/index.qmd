@@ -1,6 +1,6 @@
 ---
 title: "Open Science Mentoring: My Journey with Outreachy Mentees"
-description: Bioconductor has been participating in the Outreachy Internship program since 2022. In this post, I share my journey of mentoring, detailing my experience with the Microbiome Study Curation project and open science projects.
+description: ""
 author:
   - name: Svetlana Ugarcina Perovic
     url: https://github.com/SvetlanaUP
@@ -31,12 +31,12 @@ The recent [Outreachy coffee chat](https://www.youtube.com/watch?v=PiOm6nqzTVQ) 
 </p>
 :::
 
-Twice a year, we welcome Outreachy applicants and select interns for paid 3-month internships. As an Outreachy mentor, nothing has been more gratifying than watching our community growth. Since 2022, our project has attracted more than hundred applicants each round, representing ten different countries across Africa, Asia, and South America, and we've welcomed nine interns ([read their blog posts](https://blog.bioconductor.org/#category=Outreachy)). Each contributor enriches our community with their distinct perspectives and enthusiasm. It's always thrilling to see familiar faces return for another round of applications.
+Twice a year, we welcome Outreachy applicants and select interns for paid 3-month internships. As an Outreachy mentor, nothing has been more gratifying than watching our community growth. Since 2022, our project has attracted more than hundred applicants each round, representing ten different countries across Africa, Asia, and South America, and we've welcomed nine interns ([read their blog posts here](https://blog.bioconductor.org/#category=Outreachy)). Each contributor enriches our community with their distinct perspectives and enthusiasm. It's always thrilling to see familiar faces return for another round of applications.
 
 But let me be honest–mentoring isn't all sunshine and rainbows. The biggest challenge I've faced is **navigating different communication styles and learning paces**. I've learned that regular check-ins are crucial, not just for tracking progress but for building trust and understanding. Often, in my mentoring experience, the best solutions come from pairing contributors together–and watching them support and learn from each other brings me immense joy.
 
 ::: {style="text-align: center;"}
-![](Svetlana’s_mentees_and_their_projects.png){width="80%" alt="Svetlana’s_mentees_and_their_projects"}
+![](Svetlanas_mentees_and_their_projects.png){width="80%" alt="Svetlana’s_mentees_and_their_projects"}
 
 <p style="text-align: center;">
 *Svetlana’s mentees and their projects*
