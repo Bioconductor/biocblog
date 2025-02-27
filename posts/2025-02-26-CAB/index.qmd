@@ -7,6 +7,7 @@ author:
 date: 2025-02-26
 categories:
   - Bioconductor
+  - CAB
 image: "biocasia_2024.jpg"
 format:
   html:
@@ -18,7 +19,7 @@ lightbox: true
 Hi everyone!
 
 I’m Stevie Pederson (they/them) & I’ve recently joined Janani Ravi (she/her) as co-chair of the Bioconductor [Community Advisory Board](https://bioconductor.org/about/community-advisory-board/) (CAB), and thought I’d take a moment to introduce myself and the CAB. 
-We also figured that many members of the Bioconductor community may not know we even exist, or what we get up to.
+We also figured that many members of the Bioconductor community may not know that we exist, or what we get up to.
 
 ## Who Even Am I?
 
@@ -36,7 +37,7 @@ Since then I’ve been lucky enough to develop or contribute to a handful of add
 It’s always exciting when I see a bug report appear on github and figure out that someone else is finding my packages useful too.
 
 In my day-to-day research, I'm now working as part of a team on a large cohort study, wrangling (bulk) transcriptomics along with multiple additional 'omics layers (DNA, DNAme, Proteomics, Metabolomics, Lipidomics etc), in an ambitious collaboration between clinicians, Aboriginal Australians, public health experts and a team of bioinformaticians.
-We're hoping to make some real gains in personalised medicine for the Australian Aboriginal community, who've experienced a much lower standard of medical care along with reduced access to care, and have paid a significant price with their health.
+We're hoping to make some real gains in personalised medicine for the South Australian Aboriginal community, who've experienced a much lower standard of medical care along with reduced access to care, and have paid a significant price with their health.
 The different 'omics layers are gradually taking shape so we're feeling very hopeful about what we'll be able to accomplish.
 
 ## The Community Advisory Board
