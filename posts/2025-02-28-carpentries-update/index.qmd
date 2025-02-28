@@ -17,17 +17,25 @@ execute:
 
 ## Two Years of Bioconductor Carpentry Training
 
-As we complete two years of Instructor training, we reflect on our journey since becoming a member of [The Carpentries](https://carpentries.org/) in August 2022 ([announcement](https://blog.bioconductor.org/posts/2022-07-12-carpentries-membership/)). Our goal was to train 30 Instructors globally -  15 in year 1 and 15 in year 2. We began onboarding the first cohort in January 2023 ([year 1 update](https://blog.bioconductor.org/posts/2023-02-24-carpentries-update/)), and our final Instructor from the second cohort was certified in January 2025. Since launching, 33 trainees have participated, with  **31 successfully completing** their training. Our Instructors are leading workshops, expanding Bioconductor’s reach, and strengthening the global bioinformatics community. Interested in joining our training community? Find out how in the [Get Involved section](#get-involved).
+As we complete two years of Instructor training, we reflect on our journey since becoming a member of [The Carpentries](https://carpentries.org/) in August 2022 ([announcement](https://blog.bioconductor.org/posts/2022-07-12-carpentries-membership/)). Our goal was to train 30 Instructors globally -  15 in year 1 and 15 in year 2. We began onboarding the first cohort in January 2023 ([year 1 update](https://blog.bioconductor.org/posts/2023-02-24-carpentries-update/)), and our final Instructor from the second cohort was certified in January 2025. 
+
+Since launching, 33 trainees have participated, with  **31 successfully completing** their training - exceeding our original goal. This 94% completion rate is well above the typical rate. To earn [Carpentries Certification](https://carpentries.org/instructor-training/), trainees completed: an Instructor Training event (2 full days or 4 half days), a welcome session, a teaching demonstration, and a Get Involved task. 
+
+Our certified Instructors include 7 from Lower-Middle Income countries and 3 from Upper-Middle Income countries, further strengthening our global impact. They are now leading workshops, expanding Bioconductor’s reach, and contributing to the global bioinformatics community. 
+
+Interested in joining our training community? Find out how in the [Get Involved section](#get-involved).
 
 ## Global Impact and Achievements
 
 - **Workshops held worldwide**, including North Africa, Brazil, India, and Europe.
+- **Training materials** developed for [four Bioconductor Carpentry modules](https://training.bioconductor.org/#modules) have been widely adopted, contributing to the delivery of 28 [pre-conference and independent workshops](https://training.bioconductor.org/carpentry/workshops.html) with strong participant engagement.
 - **Instructor-led sessions** at major Bioconductor conferences: [BioC2024](https://blog.bioconductor.org/posts/2024-08-12-bioc2024-recap/#pre-conference), [EuroBioC2024](https://blog.bioconductor.org/posts/2024-09-20-eurobioc2024-recap/#pre-conference), [BioC2023](https://bioc2023.bioconductor.org/), [EuroBioC2023](https://eurobioc2023.bioconductor.org/) and [BioCAsia2023](https://biocasia2023.bioconductor.org/).
 - **First Bioconductor Carpentry workshop in Africa**, led by the Tunis R User Group. [This event](https://www.linkedin.com/feed/update/urn:li:activity:7259123374927278080/) was an important step in strengthening the R and Bioconductor community in Tunisia.
 - **Upcoming workshops** in [Nairobi, Kenya (March 2025)](https://training.bioconductor.org/workshops/2025-03-Nairobi/index.html), [Belo Horizonte, Brazil (March 2025)](https://iza-mcac.github.io/2025-04-21-biocrnaseq-cfbioinfo/), at the Joint Statistical Meetings, Tennessee, USA (August 2025) and [EuroBioC2025, Barcelona, (September 2025)](https://eurobioc2025.bioconductor.org/), further expanding our global footprint.
 - **Increased engagement** with researchers and educators in underrepresented regions, helping to bridge bioinformatics training gaps.
 
-See where our certified Instructors are making an impact! Explore the interactive map below to view the global distribution of those trained through this two-year program.
+See where our certified Instructors are making an impact! Explore the interactive map below to view the global distribution of those trained through this two-year program. 
+
 
 ```{r}
 # Load necessary libraries
@@ -165,7 +173,9 @@ interactive_map %>% save_image("map.png")
 
 ## Instructor Highlights
 
-Our Instructors are making a tangible impact:
+Many of these certified Instructors have already begun sharing their expertise. So far, thirteen have led [workshops using Bioconductor Carpentry material](https://training.bioconductor.org/carpentry/workshops.html), with four leading multiple sessions. An additional five Instructors have workshops planned for 2025, and we are looking forward to seeing even more apply their training in the future.
+
+Here are some highlights of Instructors making a tangible impact:
 
 - **Ziru Chen** became the first Instructor in mainland China to be Carpentries-certified, giving her teaching demo in Mandarin, a milestone in supporting Mandarin-speaking learners.
 - **Rodrigo Arcoverde Cerveira da Silva** led a workshop in Brazil, bringing bioinformatics training to researchers at the Evandro Chagas Institute in the Amazon region.
@@ -199,20 +209,22 @@ The impact of our training is reflected in participant feedback:
 
 ## Looking Ahead
 
-We’re excited to:
+Looking ahead, we plan to:
 
 - Expand training opportunities, particularly in underrepresented regions.
 - Strengthen mentorship and support for new instructors.
 - Continue enhancing lesson materials and community engagement.
-- Build stronger collaborations with local bioinformatics groups to increase accessibility.
+- Build stronger collaborations with local bioinformatics groups to improve accessibility.
+
+We look forward to growing Bioconductor’s training efforts and welcoming even more instructors and participants into our global community.
 
 ## Get Involved!
 
-Interested in joining our growing community of Carpentries Instructors? Learn how to get involved through our [Bioconductor Carpentry webpage](https://training.bioconductor.org/carpentry/index.html). 
+Interested in joining our growing training community? Explore our [Training site](https://training.bioconductor.org/) to learn more about our training initiatives. 
 
 - Browse upcoming and past workshops: [See schedule.](https://training.bioconductor.org/carpentry/workshops.html)
 - Meet our certified Instructors: [View list.](https://training.bioconductor.org/carpentry/instructors.html)
-- Join our Training Community: [Learn more.](https://training.bioconductor.org/)
+- Find out more about Bioconductor Carpentry and instructor certification: [Details here.](https://training.bioconductor.org/carpentry/index.html)
 
 ## Acknowledgements
 
