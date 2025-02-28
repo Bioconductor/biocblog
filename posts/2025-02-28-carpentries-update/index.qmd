@@ -1,0 +1,263 @@
+---
+title: "Bioconductor Carpentry: Celebrating Two Years of Global Training"
+description: |
+author:
+  - name: Maria Doyle
+    url: https://github.com/mblue9
+date: 2025-02-28
+categories: 
+  - education
+  - Carpentries
+image: "map.png"
+execute:
+  message: false
+  warning: false
+  echo: false
+---
+
+## Two Years of Bioconductor Carpentry Training
+
+As we complete two years of Instructor training, we reflect on our journey since becoming a member of [The Carpentries](https://carpentries.org/) in August 2022 ([announcement](https://blog.bioconductor.org/posts/2022-07-12-carpentries-membership/)). Our goal was to train 30 Instructors globally -  15 in year 1 and 15 in year 2. We began onboarding the first cohort in January 2023 ([year 1 update](https://blog.bioconductor.org/posts/2023-02-24-carpentries-update/)), and our final Instructor from the second cohort was certified in January 2025. Since launching, 33 trainees have participated, with  **31 successfully completing** their training. Our Instructors are leading workshops, expanding Bioconductor’s reach, and strengthening the global bioinformatics community. Interested in joining our training community? Find out how in the [Get Involved section](#get-involved).
+
+## Global Impact and Achievements
+
+- **Workshops held worldwide**, including North Africa, Brazil, India, and Europe.
+- **Instructor-led sessions** at major Bioconductor conferences: [BioC2024](https://blog.bioconductor.org/posts/2024-08-12-bioc2024-recap/#pre-conference), [EuroBioC2024](https://blog.bioconductor.org/posts/2024-09-20-eurobioc2024-recap/#pre-conference), [BioC2023](https://bioc2023.bioconductor.org/), [EuroBioC2023](https://eurobioc2023.bioconductor.org/) and [BioCAsia2023](https://biocasia2023.bioconductor.org/).
+- **First Bioconductor Carpentry workshop in Africa**, led by the Tunis R User Group. [This event](https://www.linkedin.com/feed/update/urn:li:activity:7259123374927278080/) was an important step in strengthening the R and Bioconductor community in Tunisia.
+- **Upcoming workshops** in [Nairobi, Kenya (March 2025)](https://training.bioconductor.org/workshops/2025-03-Nairobi/index.html), [Belo Horizonte, Brazil (March 2025)](https://iza-mcac.github.io/2025-04-21-biocrnaseq-cfbioinfo/), at the Joint Statistical Meetings, Tennessee, USA (August 2025) and [EuroBioC2025, Barcelona, (September 2025)](https://eurobioc2025.bioconductor.org/), further expanding our global footprint.
+- **Increased engagement** with researchers and educators in underrepresented regions, helping to bridge bioinformatics training gaps.
+
+See where our certified Instructors are making an impact! Explore the interactive map below to view the global distribution of those trained through this two-year program.
+
+```{r}
+# Load necessary libraries
+library(readr)
+library(dplyr)
+library(tidyr)
+library(reactable)
+library(tidygeocoder)
+library(ggplot2)
+library(maps)
+library(plotly)
+library(countrycode)
+```
+
+```{r}
+# Import data from the CSV file and format
+instructors <- read_delim("carpentries_instructors_eoss4.csv", delim = ",", trim_ws = TRUE, na = c("", "NA", "N/A"))
+
+# Add 'Location' by combining city and country for geocoding
+instructors <- instructors |> 
+  mutate(Location = paste(city, country, sep = ", "))
+
+# Use countrycode to map countries to World Bank regions
+instructors <- instructors |> 
+  mutate(region = countrycode(country, origin = "country.name", destination = "region"))
+
+# Get coordinates for mapping using OpenStreetMap via tidygeocoder
+instructors_geocoded <- instructors |> 
+  geocode(Location, method = 'osm', lat = lat, long = lon)
+
+# Combine geocoded data and set Year as factor
+all <- instructors_geocoded %>%
+  mutate(year = factor(case_when(
+    status == "Certified - CZI Year 1" ~ "Year 1",
+    status == "Certified - CZI Year 2" ~ "Year 2"
+  )))
+```
+
+```{r}
+# Map of instructors
+lon_limits <- c(-180, 180)
+lat_limits <- c(-60, 90)
+
+world_map <- map_data("world") %>%
+  filter(region != "Antarctica")
+
+gg <- ggplot() +
+  geom_polygon(
+    data = world_map,
+    aes(x = long, y = lat, group = group),
+    fill = "grey85",
+    color = "white"
+  ) +
+  geom_jitter(
+    data = all,
+    aes(
+      x = lon,
+      y = lat,
+      text = paste(name, institution, sep = "\n"),
+      colour = year,
+      fill = year,
+      shape = year,
+      size = year
+    ),
+    width = 0.5,
+    height = 0.5
+  ) +
+  scale_colour_manual(values = c(
+    "Year 1" = "#009E73",
+    "Year 2" = "#CC79A7"
+  )) +
+  scale_fill_manual(values = c(
+    "Year 1" = "#009E73",
+    "Year 2" = "#CC79A7"
+  )) +
+  scale_shape_manual(values = c(
+    "Year 1" = 22,
+    "Year 2" = 24
+  )) +
+  scale_size_manual(values = c(
+    "Year 1" = 2,
+    "Year 2" = 2
+  )) +
+  coord_fixed(
+    ratio = 1.3,
+    xlim = lon_limits,
+    ylim = lat_limits,
+    expand = FALSE
+  ) +
+  theme_void() +
+  theme(
+    panel.background = element_rect(fill = "white", color = NA),
+    legend.position = "bottom",
+    legend.title = element_blank(),
+    legend.text = element_text(size = 8),
+    legend.key.size = unit(0.5, "lines"),
+    legend.margin = margin(t = 0, b = 0, unit = 'pt')
+  )
+
+# Convert to interactive plotly plot
+interactive_map <- ggplotly(gg, tooltip = "text") %>%
+  layout(
+    margin = list(l = 20, r = 20, t = 20, b = 50),
+    hoverlabel = list(align = "left"),
+    legend = list(
+      orientation = "h",       
+      x = 0.5,
+      xanchor = "center",
+      y = -0.1                
+    ),
+    xaxis = list(
+      showline = FALSE,
+      showticklabels = FALSE,
+      zeroline = FALSE
+    ),
+    yaxis = list(
+      showline = FALSE,
+      showticklabels = FALSE,
+      zeroline = FALSE
+    )
+  ) %>%
+  config(
+    responsive = TRUE,
+    displaylogo = FALSE
+  )
+
+# Save the interactive plot as an HTML file
+htmlwidgets::saveWidget(interactive_map, file = "map.html")
+
+# Save the interactive plot as a PNG image using orca
+interactive_map %>% save_image("map.png")
+```
+
+<iframe src="map.html" width="100%" height="500"></iframe>
+
+## Instructor Highlights
+
+Our Instructors are making a tangible impact:
+
+- **Ziru Chen** became the first Instructor in mainland China to be Carpentries-certified, giving her teaching demo in Mandarin, a milestone in supporting Mandarin-speaking learners.
+- **Rodrigo Arcoverde Cerveira da Silva** led a workshop in Brazil, bringing bioinformatics training to researchers at the Evandro Chagas Institute in the Amazon region.
+- **Leo Lahti** incorporated Bioconductor Carpentry sessions into microbiome courses in India, Norway, and Finland, expanding Bioconductor education in microbial research.
+- **Chia Sin Liew** integrated Bioconductor Carpentry modules, particularly the RNA-Seq lessons, into university courses at the University of Nebraska-Lincoln to enrich teaching and foster more effective student learning experiences.
+
+## What Instructors Say
+
+> *"Swapping the chilly embrace of Swedish winter for the familiar heat of my hometown in the Brazilian Amazon was a long warm hug. Teaching my first workshop here was incredibly rewarding."* – Rodrigo Arcoverde Cerveira da Silva
+
+>*"Teaching in India, Oulu, and Norway helped us integrate Bioconductor Carpentry into microbiome courses. We are now planning to expand these efforts in more regions."* – Leo Lahti
+
+## Expanding the Impact
+
+While this program directly funded the certification of 31 Instructors, it also had a wider impact, inspiring others in the Bioconductor community to pursue Carpentries Instructor Certification and contribute to global bioinformatics training.
+
+Jenny Drnevich, for example, taught alongside our program’s Instructors at BioC2023 and BioC2024. Inspired by the experience, she completed her own Carpentries Instructor Certification during this time. Reflecting on her journey, she shared:
+
+> "Before the BioC2023 conference in Boston, I helped teach the inaugural 'RNA-Seq analysis with Bioconductor' workshop, a 2-day Carpentries-style lesson I helped develop with others on the Training Committee. It was so wonderful to teach it in person, and we had several good discussions that are difficult to have during remote teaching. We got some excellent feedback about the lesson, what worked and what needed to be improved. Because of this experience, I finally got motivated to get my Carpentries Instructor Certification, which I finished in Jan 2024. The certification and the improvements to the lesson really increased the quality of the workshop I co-taught again before the BioC2024 conference in Grand Rapids. I look forward to helping to teach our workshops in the future for the Bioconductor Community!"
+
+Jenny’s story reflects how Bioconductor’s Carpentry training program has inspired and strengthened a wider teaching network, beyond the funded group.
+
+## Participant Feedback
+
+The impact of our training is reflected in participant feedback:
+
+-   *"Coding alongside the course, being able to fix problems as they came up, was incredibly helpful."*
+-   *"The structure of the course, the pace, and the instructors’ enthusiasm made the learning experience exceptional."*
+-   *"Engaging teachers, available to help, and very useful to have the online resources if needed."*
+-   *"I liked the discussion that allowed for the thought behind the process."*
+
+## Looking Ahead
+
+We’re excited to:
+
+- Expand training opportunities, particularly in underrepresented regions.
+- Strengthen mentorship and support for new instructors.
+- Continue enhancing lesson materials and community engagement.
+- Build stronger collaborations with local bioinformatics groups to increase accessibility.
+
+## Get Involved!
+
+Interested in joining our growing community of Carpentries Instructors? Learn how to get involved through our [Bioconductor Carpentry webpage](https://training.bioconductor.org/carpentry/index.html). 
+
+- Browse upcoming and past workshops: [See schedule.](https://training.bioconductor.org/carpentry/workshops.html)
+- Meet our certified Instructors: [View list.](https://training.bioconductor.org/carpentry/instructors.html)
+- Join our Training Community: [Learn more.](https://training.bioconductor.org/)
+
+## Acknowledgements
+
+We thank everyone who participated in this program and earned certification. The certified Instructors are listed in the table below.
+
+```{r}
+# Table of instructors
+table_data <- all |>   
+  select(name, institution, city, country, region, year)
+
+# Create the table
+reactable(
+  table_data,
+  filterable = TRUE,
+  searchable = TRUE,
+  compact = TRUE,
+  columns = list(
+    name = colDef(
+      name = "Name",
+      cell = function(value, index) {
+        url <- all$www[index]
+        if (!is.na(url) && url != "") {
+          htmltools::tags$a(href = url, target = "_blank", as.character(value))
+        } else {
+          as.character(value)
+        }
+      }
+    ),
+    institution = colDef(name = "Institution"),
+    city = colDef(name = "City"),
+    country = colDef(name = "Country"),
+    region = colDef(name = "Region"),
+    year = colDef(name = "Year")
+  ), 
+  defaultSorted = "name",
+  defaultPageSize = 100,
+  striped = TRUE,
+  bordered = TRUE,
+  style = list(
+    border = "1px solid #ccc",
+    stripedColor = "#f0f0f0",
+    fontSize = "0.6rem"
+  )
+)
+```
+
+
+We are grateful to the [Chan Zuckerberg Initiative’s EOSS program](https://chanzuckerberg.com/eoss/proposals/bioconductor-high-quality-training-and-support-for-a-worldwide-community/) for their support. Their funding has been instrumental in making this program a success.

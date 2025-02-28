@@ -2,8 +2,7 @@ on:
   push:
     branches: 
       - main
-      - bioc2024-recap # allow while sharing preview
-      - gbcc2025-announcement # allow while sharing preview
+      - carpentries-eoss4-summary # allow while sharing preview
 
 name: Render and Publish
 
@@ -25,6 +24,9 @@ jobs:
           use-public-rspm: true
       - name: Install R dependencies
         run: Rscript -e 'install.packages(c("jsonlite", "htmltools", "rmarkdown", "RefManageR", "dplyr"))'
+        
+      - name: Install Font Awesome extension
+        run: quarto install extension quarto-ext/fontawesome --no-prompt
 
       - name: Publish to GitHub Pages (and render)
         uses: quarto-dev/quarto-actions/publish@v2
