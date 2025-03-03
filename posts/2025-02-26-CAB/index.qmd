@@ -4,7 +4,7 @@ description: "An introduction to the new Co-Chair"
 author:
   - name: Stevie Pederson
     url: https://github.com/smped
-date: 2025-02-26
+date: 2025-03-05
 categories:
   - Bioconductor
   - CAB
@@ -36,7 +36,7 @@ There were no other Bioconductor developers in Adelaide at the time, so submitti
 Since then I’ve been lucky enough to develop or contribute to a handful of additional packages, many of which I still use in my day-to-day research.
 It’s always exciting when I see a bug report appear on github and figure out that someone else is finding my packages useful too.
 
-In my day-to-day research, I'm now working as part of a team on a large cohort study, wrangling (bulk) transcriptomics along with multiple additional 'omics layers (DNA, DNAme, Proteomics, Metabolomics, Lipidomics etc), in an ambitious collaboration between clinicians, Aboriginal Australians, public health experts and a team of bioinformaticians.
+In my current research, I'm now working as part of a team on a large cohort study, wrangling (bulk) transcriptomics along with multiple additional 'omics layers (DNA, DNAme, Proteomics, Metabolomics, Lipidomics etc), in an ambitious collaboration between clinicians, Aboriginal Australians, public health experts and a team of bioinformaticians.
 We're hoping to make some real gains in personalised medicine for the South Australian Aboriginal community, who've experienced a much lower standard of medical care along with reduced access to care, and have paid a significant price with their health.
 The different 'omics layers are gradually taking shape so we're feeling very hopeful about what we'll be able to accomplish.
 
