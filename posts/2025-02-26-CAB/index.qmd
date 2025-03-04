@@ -8,7 +8,7 @@ date: 2025-03-05
 categories:
   - Bioconductor
   - CAB
-image: "biocasia_2024.jpg"
+image: "CAB-map-2025.png"
 format:
   html:
     toc: true
@@ -40,14 +40,20 @@ In my current research, I'm now working as part of a team on a large cohort stud
 We're hoping to make some real gains in personalised medicine for the South Australian Aboriginal community, who've experienced a much lower standard of medical care along with reduced access to care, and have paid a significant price with their health.
 The different 'omics layers are gradually taking shape so we're feeling very hopeful about what we'll be able to accomplish.
 
+*See my BioC2023 presentation on the extraChIPs package [here](https://youtu.be/6aRtBTd4NyQ?feature=shared)*.
+
 ## The Community Advisory Board
+
+![The CAB in 2025](CAB-map-2025.png)
 
 I first joined the CAB about 18 months ago after being involved with organising the BiocAsia conference on and off since 2016.
 For me, joining the CAB was an opportunity to get more deeply involved with supporting other members of the Bioconductor community, and in particular, how we can improve our connection with both users and developers across the Asia Pacific region. 
-We’ve since set up an official BiocAsia working group to organise the conference and to try find our way given the many challenges and barriers within the region. 
+We’ve since set up an official [BiocAsia working group](https://workinggroups.bioconductor.org/currently-active-working-groups-committees.html#biocasia) to organise the conference and to try find our way given the many challenges and barriers within the region. 
 New members are always welcome too!
 
 ![Some of the in-person attendees at BiocAsia 2024, Sydney, Australia](biocasia_2024.jpg)
+
+![Davide Risso delivering one of the keynote addresses at BiocAsia 2024](risso.jpg)
 
 The CAB itself has members spread across Asia, Oceania, Europe, Africa and America giving us truly global representation, where each member can bring their own unique perspectives relevant to their region, along with those of the diverse communities they’re involved with, both professionally and personally. 
 
@@ -63,9 +69,4 @@ We’d love to hear from you.
 
 If you think you might even like to join the CAB and get involved yourself, members serve 3-year terms, with an annual call for new members around August. 
 We gladly welcome individuals who are passionate about Bioconductor and who are eager to contribute to its mission of fostering a diverse, collaborative, and welcoming community of developers and data scientists. 
-For more information about the CAB and how to get involved, please have a look at our CAB page.
-
-![Davide Risso delivering one of the keynote addresses at BiocAsia 2024](risso.jpg)
-
-*See Stevie’s BioC2023 presentation on the extraChIPs package [here](https://youtu.be/6aRtBTd4NyQ?feature=shared)*
-
+For more information about the CAB and how to get involved, please have a look at our [CAB page](https://bioconductor.org/about/community-advisory-board/).
