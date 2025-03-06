@@ -15,6 +15,7 @@ execute:
   echo: false
 ---
 
+*Edited in March 2025 to include a link to the [Year 2 summary blog post](../2025-02-28-carpentries-update).*
 
 ```{r}
 #| message: false
