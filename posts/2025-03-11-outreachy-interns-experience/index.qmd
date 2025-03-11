@@ -87,7 +87,7 @@ When I first learned about Outreachy, one key detail stood out, I did not need t
 
 Outreachy offered me something I did not even realize I needed, a reset. It was an opportunity to start fresh in an environment where I could be an unpolished version of myself, without having to prove what I already knew. I did apply three times before finally getting selected and although the wait and rejections were tough, each attempt made me more patient, reflective, and better at communicating my thoughts. Looking back, I realize that the process was preparing me for what was to come.
 
-#### **Joining the Bioconductor (BugSigDB) Project**
+#### Joining the Bioconductor (BugSigDB) Project
 
 When I came across the **Bioconductor’s Microbiome Study Curation ([BugSigDB](https://bugsigdb.org/))** project, I was drawn to it not just because it was bio-related, which is something I was already familiar with (well, this was one of the reasons, say 45%), but also because I thought it would introduce me further to the world of human microbiome research, data curation, and exploratory data analysis in a way I had never experienced before and I was right.
 
@@ -95,7 +95,7 @@ Before joining BugSigDB, I had a little idea of how scattered microbiome finding
 
 Now as a contributor, I have become part of something huge and impactful, a collaborative effort to organize microbiome signatures from published studies. I am immensely proud of myself and grateful for this opportunity and the support of my mentors, **Chloe Mirzayi**, **Svetlana Ugarcina Perovic**, **Levi Waldron** and **Chioma Onyido**, my co-intern **Kate Rasheed** and the entire Bioconductor community for every feedback, insight, and support that has turned every challenge into an opportunity for growth and learning.
 
-#### **My Achievements**
+#### **My Achievements
 
 To date, I have contributed to over [100 issues](https://github.com/waldronlab/BugSigDBcuration/issues?q=is%3Aissue%20assignee%3AAleruDivine%20) and [study curations](https://bugsigdb.org/Special:Contributions/Aleru_Divine) so far, helping ensure the quality and reliability of the database. This experience has sharpened my attention to detail and made me more aware of how small contributions can have a significant impact.
 
@@ -158,4 +158,5 @@ Additionally, I worked on a side project comparing Paul Jensen’s findings on t
 
 If you are inspired to be a part of the BugSigDB project, reach out or connect with the Bioconductor community via [Slack](https://community-bioc.slack.com/archives/C04RATV9VCY/p1697144958544289) and if you are interested in beginning your own open source journey, Outreachy provides ongoing internship opportunities. Applications for the December 2025 to March 2026 cohort will open in August 2025.
 
-Interested applicants can apply via this link: [Apply to Outreachy](https://www.outreachy.org/apply/).
+Interested applicants can apply via this link: [Apply to Outreachy](https://www.outreachy.org/apply/). 
+
