@@ -33,7 +33,7 @@ Outreachy interns work on diverse projects, including programming, design, and d
 
 ## The BugSigDB Project
 
-BugSigDB is a comprehensive community-editable database designed to help make sense of the enormous amounts of data related to the human microbiome. As researchers continue to uncover the complex relationships between microbiota and human health, BugSigDB stores these microbial signatures associated with various health conditions. The microbial signatures are essentially patterns in the composition of the microbiome that are linked to specific diseases or health outcomes.
+[BugSigDB](https://bugsigdb.org/) is a comprehensive community-editable database designed to help make sense of the enormous amounts of data related to the human microbiome. As researchers continue to uncover the complex relationships between microbiota and human health, BugSigDB stores these microbial signatures associated with various health conditions. The microbial signatures are essentially patterns in the composition of the microbiome that are linked to specific diseases or health outcomes.
 
 Designed to make microbiome research more efficient and accessible, here are some of the key features of BugSigDB:
 
@@ -42,7 +42,7 @@ Designed to make microbiome research more efficient and accessible, here are som
 -   Enrichment analysis tools: Either through [bulk exports](https://bugsigdb.org/Help:Export), [GMT files](https://github.com/waldronlab/BugSigDBExports), or the [bugsigdbr](https://bioconductor.org/packages/release/bioc/html/bugsigdbr.html) R package, you can dig deeper into the data to discover patterns.
 -   Community collaboration: Anyone can request an account to contribute, explore, ask questions, or report issues on the [ ](https://www.dropbox.com/?q=%23bugsigdb)[#bugsigdb channel](https://community-bioc.slack.com/archives/C04RATV9VCY/p1697144958544289) of the **community-bioc** Slack team.
 
-This simplicity and versatility makes BugSigDB an essential tool in microbiome research. For more details, the article BugSigDB captures patterns of differential abundance across a broad range of host-associated microbial signatures (Geistlinger et al., Nat Biotechnol., 2024.) offers an in-depth look at the project.
+This simplicity and versatility makes BugSigDB an essential tool in microbiome research. For more details, the [article](https://www.nature.com/articles/s41587-023-01872-y) BugSigDB captures patterns of differential abundance across a broad range of host-associated microbial signatures (Geistlinger et al., Nat Biotechnol., 2024.) offers an in-depth look at the project.
 
 ## Our Journeys
 
@@ -88,15 +88,19 @@ Outreachy and Bioconductor have shown me that growth begins in small steps, and 
 
 ### Kate Rasheed’s Experience
 
-::: {style="text-align: center;"}
+:::: {style="text-align: center;"}
 ![](KateRasheed.png){width="300"}
 
+<div>
+
 <p style="text-align: center;">
+
+</div>
 
 *Kate Rasheed*
 
 </p>
-:::
+::::
 
 Hello everyone! I am Kate Rasheed, an Outreachy intern working on the Microbiome Study Curation Project (BugSigDB).
 
