@@ -49,7 +49,7 @@ This simplicity and versatility makes BugSigDB an essential tool in microbiome r
 ### Divine’s Experience
 
 ::: {style="text-align: center;"}
-![](Divine%20Aleru.png){height="300px"}
+![](DivineAleru.png){width="300"}
 
 <p style="text-align: center;">
 
@@ -89,7 +89,7 @@ Outreachy and Bioconductor have shown me that growth begins in small steps, and 
 ### Kate Rasheed’s Experience
 
 ::: {style="text-align: center;"}
-![](Kate%20Rasheed.png){height="300px"}
+![](KateRasheed.png){width="300"}
 
 <p style="text-align: center;">
 
@@ -117,7 +117,7 @@ Additionally, I worked on a side project comparing Paul Jensen’s findings on t
 According to Jensen’s preprint, 'More than 90% of all bacteriology articles study fewer than 1% of species, creating a long tail of understudied microbes.' This project aimed to determine whether BugSigDB exhibits a similar bias toward certain species. This comparison revealed that *Escherichia coli* (the most studied species from Paul Jensen’s findings) was seen as the third most recorded species in BugSigDB.
 
 ::: {style="text-align: center;"}
-![](Top%2050%20Species%20in%20BugSigDB.png){height="300px"}
+![](Top_50_Species_in_BugSigDB.png){width="300"}
 
 <p style="text-align: center;">
 
