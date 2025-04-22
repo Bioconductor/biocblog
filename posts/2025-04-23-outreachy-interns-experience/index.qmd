@@ -1,13 +1,13 @@
 ---
 title: "Outreachy December 2024 Interns with Bioconductor"
 description: |
-  Bioconductor participated in the Outreachy Internship program for the December 2024 cohort. Our interns share their experience working on their various projects and Bioconductor in general.
+  Bioconductor participated in the Outreachy Internship program for the December 2024 to March 2025 cohort. Our interns share their experience working on their various projects and Bioconductor in general.
 author:
   - name: Kate Rasheed
     url: https://github.com/KateRasheed
   - name: Divine Aleru 
     url: https://github.com/AleruDivine
-date: 2025-03-11
+date: 2025-04-23
 categories:
   - Outreachy
   - open science
@@ -19,7 +19,7 @@ lightbox: true
 
 ## Introduction
 
-Open source provides an accessible platform for individuals to develop and refine their skills while collaborating on real-world projects. For tech enthusiasts with little to no experience, contributing to open-source projects is a great way to gain hands-on experience, learn from experts, and become part of a global community. One program that actively supports newcomers in open source is Outreachy,
+Open source provides an accessible platform for individuals to develop and refine their skills while collaborating on real-world projects. For tech enthusiasts with little to no experience, contributing to open-source projects is a great way to gain hands-on experience, learn from experts, and become part of a global community. One program that actively supports newcomers in open source is [Outreachy](https://www.outreachy.org).
 
 Outreachy is a paid, remote internship program designed to support individuals who have faced bias or discrimination in any form. Its goal is to create an inclusive environment where everyone is welcome to contribute, develop their skills, and make a meaningful impact on the communities they work with.
 
@@ -42,7 +42,7 @@ Designed to make microbiome research more efficient and accessible, here are som
 -   Enrichment analysis tools: Either through [bulk exports](https://bugsigdb.org/Help:Export), [GMT files](https://github.com/waldronlab/BugSigDBExports), or the [bugsigdbr](https://bioconductor.org/packages/release/bioc/html/bugsigdbr.html) R package, you can dig deeper into the data to discover patterns.
 -   Community collaboration: Anyone can request an account to contribute, explore, ask questions, or report issues on the [ ](https://www.dropbox.com/?q=%23bugsigdb)[#bugsigdb channel](https://community-bioc.slack.com/archives/C04RATV9VCY/p1697144958544289) of the **community-bioc** Slack team.
 
-This simplicity and versatility makes BugSigDB an essential tool in microbiome research. For more details, the [article](https://www.nature.com/articles/s41587-023-01872-y) BugSigDB captures patterns of differential abundance across a broad range of host-associated microbial signatures (Geistlinger et al., Nat Biotechnol., 2024.) offers an in-depth look at the project.
+This simplicity and versatility makes BugSigDB an essential tool in microbiome research. For more details, the [article](https://www.nature.com/articles/s41587-023-01872-y) *BugSigDB captures patterns of differential abundance across a broad range of host-associated microbial signatures* (Geistlinger et al., Nat Biotechnol., 2024.) offers an in-depth look at the project.
 
 ## Our Journeys
 
@@ -88,19 +88,16 @@ Outreachy and Bioconductor have shown me that growth begins in small steps, and 
 
 ### Kate Rasheed’s Experience
 
-:::: {style="text-align: center;"}
+::: {style="text-align: center;"}
 ![](KateRasheed.png){width="300"}
 
-<div>
 
 <p style="text-align: center;">
-
-</div>
 
 *Kate Rasheed*
 
 </p>
-::::
+:::
 
 Hello everyone! I am Kate Rasheed, an Outreachy intern working on the Microbiome Study Curation Project (BugSigDB).
 
