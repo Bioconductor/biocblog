@@ -11,6 +11,7 @@ date: 2025-04-23
 categories:
   - Outreachy
   - open science
+image: "featured-image.png"
 format:
   html:
     toc: true
