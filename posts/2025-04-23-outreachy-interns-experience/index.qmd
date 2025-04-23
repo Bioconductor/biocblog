@@ -1,0 +1,149 @@
+---
+title: "Outreachy December 2024 Interns with Bioconductor"
+description: |
+  Bioconductor participated in the Outreachy Internship program for the December 2024 to March 2025 cohort. Our interns share their experience working on their various projects and Bioconductor in general.
+author:
+  - name: Kate Rasheed
+    url: https://github.com/KateRasheed
+  - name: Divine Aleru 
+    url: https://github.com/AleruDivine
+date: 2025-04-23
+categories:
+  - Outreachy
+  - open science
+format:
+  html:
+    toc: true
+lightbox: true
+---
+
+## Introduction
+
+Open source provides an accessible platform for individuals to develop and refine their skills while collaborating on real-world projects. For tech enthusiasts with little to no experience, contributing to open-source projects is a great way to gain hands-on experience, learn from experts, and become part of a global community. One program that actively supports newcomers in open source is [Outreachy](https://www.outreachy.org).
+
+Outreachy is a paid, remote internship program designed to support individuals who have faced bias or discrimination in any form. Its goal is to create an inclusive environment where everyone is welcome to contribute, develop their skills, and make a meaningful impact on the communities they work with.
+
+Outreachy interns work on diverse projects, including programming, design, and documentation, while receiving a \$7,000 USD stipend and valuable mentorship. Many interns continue contributing to their chosen open-source communities long after the program ends. Microbiome Study Curation (BugSigDB project) is one of the diverse projects enlisted in Outreachy.
+
+### Steps to Becoming an Outreachy Intern:
+
+1.  Initial Application: Submit a well-written essay when the next round of internships is announced.
+2.  Contribution Stage: Applicants who pass the initial application stage must select one or two projects they can meaningfully contribute to during this phase.
+3.  Internship Stage: Congratulations! Interns who excel during the contribution phase and are selected by mentors move on to this stage—a world of hands-on learning and experience.
+
+## The BugSigDB Project
+
+[BugSigDB](https://bugsigdb.org/) is a comprehensive community-editable database designed to help make sense of the enormous amounts of data related to the human microbiome. As researchers continue to uncover the complex relationships between microbiota and human health, BugSigDB stores these microbial signatures associated with various health conditions. The microbial signatures are essentially patterns in the composition of the microbiome that are linked to specific diseases or health outcomes.
+
+Designed to make microbiome research more efficient and accessible, here are some of the key features of BugSigDB:
+
+-   Standardized study information: Key details from published microbiome studies are organized using ontologies and the NCBI taxonomy, so it is easier to compare results across different studies.
+-   Searchability: You can quickly find microbial signatures linked to conditions, host species, or body sites.
+-   Enrichment analysis tools: Either through [bulk exports](https://bugsigdb.org/Help:Export), [GMT files](https://github.com/waldronlab/BugSigDBExports), or the [bugsigdbr](https://bioconductor.org/packages/release/bioc/html/bugsigdbr.html) R package, you can dig deeper into the data to discover patterns.
+-   Community collaboration: Anyone can request an account to contribute, explore, ask questions, or report issues on the [ ](https://www.dropbox.com/?q=%23bugsigdb)[#bugsigdb channel](https://community-bioc.slack.com/archives/C04RATV9VCY/p1697144958544289) of the **community-bioc** Slack team.
+
+This simplicity and versatility makes BugSigDB an essential tool in microbiome research. For more details, the [article](https://www.nature.com/articles/s41587-023-01872-y) *BugSigDB captures patterns of differential abundance across a broad range of host-associated microbial signatures* (Geistlinger et al., Nat Biotechnol., 2024.) offers an in-depth look at the project.
+
+## Our Journeys
+
+### Divine’s Experience
+
+::: {style="text-align: center;"}
+![](DivineAleru.png){width="300"}
+
+<p style="text-align: center;">
+
+*Divine Aleru*
+
+</p>
+:::
+
+Hello Hello! My name is Divine Aleru. I am a Biochemist, a writer, and an aspiring researcher. Being selected as one of the Outreachy interns was truly a dream come true. You may wonder why, well, this is because I applied three times to the Bioconductor project before finally getting selected.
+
+When I first learned about Outreachy, one key detail stood out, I did not need to be super qualified to apply. It meant I could apply without feeling the weight of expectations or the fear of not measuring up. The idea that I could be considered based on my potential rather than what I knew gave me the courage to take that first step.
+
+Outreachy offered me something I did not even realize I needed, a reset. It was an opportunity to start fresh in an environment where I could be an unpolished version of myself, without having to prove what I already knew. I did apply three times before finally getting selected and although the wait and rejections were tough, each attempt made me more patient, reflective, and better at communicating my thoughts. Looking back, I realize that the process was preparing me for what was to come.
+
+#### Joining the Bioconductor (BugSigDB) Project
+
+When I came across the **Bioconductor’s Microbiome Study Curation ([BugSigDB](https://bugsigdb.org/))** project, I was drawn to it not just because it was bio-related, which is something I was already familiar with (well, this was one of the reasons, say 45%), but also because I thought it would introduce me further to the world of human microbiome research, data curation, and exploratory data analysis in a way I had never experienced before and I was right.
+
+Before joining BugSigDB, I had a little idea of how scattered microbiome findings were across scientific literature and how hard it was to compare results between studies because there were tons of results. This project helps break down these barriers and makes it easier for researchers to see and compare patterns across different health outcomes.
+
+Now as a contributor, I have become part of something huge and impactful, a collaborative effort to organize microbiome signatures from published studies. I am immensely proud of myself and grateful for this opportunity and the support of my mentors, Chloe Mirzayi, Svetlana Ugarcina Perovic, Levi Waldron and Chioma Onyido, my co-intern, Kate Rasheed and the entire Bioconductor community for every feedback, insight, and support that has turned every challenge into an opportunity for growth and learning.
+
+#### My Achievements
+
+To date, I have contributed to over [100 issues](https://github.com/waldronlab/BugSigDBcuration/issues?q=is%3Aissue%20assignee%3AAleruDivine%20) and [study curations](https://bugsigdb.org/Special:Contributions/Aleru_Divine) so far, helping ensure the quality and reliability of the database. This experience has sharpened my attention to detail and made me more aware of how small contributions can have a significant impact.
+
+One thing that I am proud of is expanding data for underrepresented conditions. Towards the end of my internship, I focused on identifying studies related to glucose metabolism-associated microbiome signatures and curating them into the database. This work makes BugSigDB more comprehensive and also helps amplify knowledge in areas that are less explored.
+
+Before Outreachy, I had little experience with R programming. Through my internship, I have learned how to use R, from updating functions to fixing errors in analyses. This experience has been pushing me to expand my technical skills and I am gaining confidence in working with data every day. Currently, I am working on an analysis of the studies I recently added related to glucose metabolism-associated microbiome, something I never imagined I would be able to do just a few months ago. You can read more about my Outreachy experience in my [blog](https://divinealeru.substack.com/).
+
+#### Where I’m Going?
+
+As I look ahead, I am committed to deepening my R programming skills and broadening my understanding of data science. I plan to continue contributing to BugSigDB while pursuing extra learning in statistics and getting ready to start graduate school this Fall. What started as an internship has become a stepping stone toward a future where I can combine my interest in microbiome research and data science with Biochemistry.
+
+Outreachy and Bioconductor have shown me that growth begins in small steps, and that sometimes the best journeys are the ones that take a little longer to begin.
+
+### Kate Rasheed’s Experience
+
+::: {style="text-align: center;"}
+![](KateRasheed.png){width="300"}
+
+
+<p style="text-align: center;">
+
+*Kate Rasheed*
+
+</p>
+:::
+
+Hello everyone! I am Kate Rasheed, an Outreachy intern working on the Microbiome Study Curation Project (BugSigDB).
+
+My journey into BugSigDB reflects the actions of my role model who “went, knowing not where he went”. During the contribution stage, I came across the Microbiome Study Project and I knew instantly that this is where I wanted to be. Despite having no background in Microbiology, Biochemistry, or the Sciences, I knew I could fit in.
+
+At first, I faced struggles and knowledge gaps, which turned me into a relentless question-asker. Whether during office hours or on Slack, I constantly sought answers because I didn’t know—but I truly wanted to learn. See more details [here](https://katerasheed1.wordpress.com/2024/12/18/struggles-stretchers-and-yardsticks-for-growth/).
+
+I am immensely grateful for the support of my mentors, Svetlana Ugarcina Perovic, Chloe Mirzayi, Peace Sandy, and Esther Afuape, as well as my fellow contributors and aspirants, Aleru Divine (co-intern), Adeshile Oluwatosin, Mildred Anashie, Yoko Corzon, and many others, whose peer reviews have helped shape my curations.
+
+#### So far
+
+I am amazed at all I have achieved in the past three months—technically, mentally, and career-wise. This internship has been a period of immense growth. One of the most amusing and fulfilling aspects was publishing seven blog posts—you can check them out [here](https://katerasheed1.wordpress.com/).
+
+During the contribution and internship period, I have worked on over 100 [issues](https://github.com/waldronlab/BugSigDBcuration/issues?q=is%3Aissue%20assignee%3AKateRasheed%20) and [study curations](https://bugsigdb.org/Special:Contributions/KateRasheed). Through curating and reviewing published microbiome articles, I have developed a deep appreciation for the importance of healthy living and the role of bacteria in and around us. I particularly contributed to curating a selection of whole genome metagenomic studies on Parkinson's disease.
+
+Additionally, I worked on a side project comparing Paul Jensen’s findings on the “[Most Studied Species](https://www.biorxiv.org/content/10.1101/2025.01.04.631297v1)” and BugSigDB’s most recorded species.
+
+According to Jensen’s preprint, 'More than 90% of all bacteriology articles study fewer than 1% of species, creating a long tail of understudied microbes.' This project aimed to determine whether BugSigDB exhibits a similar bias toward certain species. This comparison revealed that *Escherichia coli* (the most studied species from Paul Jensen’s findings) was seen as the third most recorded species in BugSigDB.
+
+::: {style="text-align: center;"}
+![](Top_50_Species_in_BugSigDB.png){width="300"}
+
+<p style="text-align: center;">
+
+*Top 50 Species curated in BugSigDB*
+
+</p>
+:::
+
+#### My mantra during this Outreachy internship:
+
+-   Ask questions, don’t assume (adapted from BugSigDB community)
+-   Be kind (adapted from my mentor, Svetlana)
+-   Be clear and concise while communicating (adapted from my mentor, Svetlana)
+-   Be flexible and open-minded (adapted from my mentor, Chloe)
+
+## Upcoming Opportunities
+
+For beginners looking to get involved, open source is an invaluable resource. It allows you to sharpen your technical skills, work on real-world projects, engage with a global community, and explore GitHub repositories to enhance learning and expertise.
+
+Below is a list of notable open-source programs, sourced from [GeeksforGeeks](https://www.geeksforgeeks.org/best-open-source-programs-for-students-to-participate/):
+
+-   DigitalOcean Hacktoberfest
+-   Google Summer of Code (GSoC)
+-   MLH Fellowship
+-   Google Season of Docs (GSoD)
+-   Outreachy: Interested applicants can apply via this link: [Apply to Outreachy](https://www.outreachy.org/apply/).
+
+If you are inspired to be a part of the BugSigDB project, reach out or connect with the Bioconductor community via [Slack](https://community-bioc.slack.com/archives/C04RATV9VCY/p1697144958544289) and if you are interested in beginning your own open source journey, Outreachy provides ongoing internship opportunities. Applications for the December 2025 to March 2026 cohort will open in August 2025.
