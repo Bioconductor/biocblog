@@ -1,0 +1,42 @@
+---
+title: "Ask and you shall receive"
+description: |
+  Discussion of evolving complexity and value of the Bioconductor ecosystem. 
+author:
+  - name: Vince Carey
+    url: https://vjcitn.github.io/
+date: 2025-05-04
+creative_commons: CC BY
+categories:
+  - education
+image: "crazy.jpg"
+---
+title: "ask2025"
+author: "Vince Carey"
+---
+
+# In the beginning 
+
+... there was a 9-track tape shipped from
+Bell Labs.  S would be installed for "unix".  Extensions
+could be programmed in Fortran.  S REPORT presaged
+Sweave and knitr: troff, eqn, pic could be
+interlarded with S computations.  I have lost the associated
+technical report and the "Extending the S system" book.
+
+# Fast forward:
+
+![Bioconductor in 2024](crazy.jpg)
+
+The lemniscates are used with "refresh" circular arrows to indicate that the associated resources can be modified at any time, while
+Bioconductor's release is "stable" for six months.
+
+One could very reasonably ask for a more systematic map of resources and processes,
+and such should be attempted.
+
+My purpose here is to set the stage for a series of posts
+examining some relatively new but underappreciated
+aspects of the project, including
+
+- approaching GPU computing for genomics with Bioconductor
+- values derived from excursions in Web Assembly
