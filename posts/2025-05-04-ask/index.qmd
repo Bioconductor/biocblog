@@ -39,4 +39,10 @@ examining some relatively new but underappreciated
 aspects of the project, including
 
 - approaching GPU computing for genomics with Bioconductor
-- values derived from excursions in Web Assembly
+- subcommunity dynamics: scverse, spatialdata, Bioconductor ... how to relate?
+    - python interop
+    - OME-Zarr
+- values derived from excursions involving WebAssembly
+- "vendoring" sources of important libraries
+- curating genomic annotation
+- large arrays: sparsity and indexing
