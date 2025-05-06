@@ -5,7 +5,7 @@ description: |
 author:
   - name: Vince Carey
     url: https://vjcitn.github.io/
-date: 2025-05-04
+date: 2025-05-06
 creative_commons: CC BY
 categories:
   - education
@@ -38,6 +38,7 @@ My purpose here is to set the stage for a series of posts
 examining some relatively new but underappreciated
 aspects of the project, including
 
+- biocViews, EDAM, and the description of Bioconductor resources
 - approaching GPU computing for genomics with Bioconductor
 - subcommunity dynamics: scverse, spatialdata, Bioconductor ... how to relate?
     - python interop
