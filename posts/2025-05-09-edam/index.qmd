@@ -1,0 +1,100 @@
+---
+title: "Tagging packages with EDAM"
+description: |
+  Adopting formal ontology for labeling Bioconductor software and data
+author:
+  - name: Vince Carey
+    url: https://vjcitn.github.io/
+date: 2025-05-06
+creative_commons: CC BY
+categories:
+  - education
+bibliography: "ctv.bib"
+---
+
+```{r bib, include=FALSE}
+options(htmltools.dir.version = FALSE)
+library(RefManageR)
+library(bibtex)
+bib <- ReadBib("ctv.bib")
+BibOptions(
+  longnamesfirst = FALSE,
+  check.entries = FALSE,
+  bib.style = "authoryear",
+  cite.style = "authoryear",
+  max.names = 1,
+  style = "html",
+  hyperlink = "to.bib",
+  dashed = TRUE)
+library(ctv)
+av = available.views(repos="https://cran.rstudio.com/")
+mvs = round(mean(sapply(av, function(x)nrow(x$packagelist))),1)
+set.seed(213)
+```
+
+
+# "Task views", starting with CRAN
+
+[CRAN task views](https://cran.r-project.org/web/views) are a bonanza for practicing
+data scientists.  Introduced in 2005, "[t]hey provide guidance about which CRAN packages 
+are relevant for tasks related to a certain topic, and can also facilitate automatic 
+installation of all corresponding packages (`r Citet(bib, "ctvarx")`).
+
+### Exploring CRAN task views
+
+But what is a "task view", and how can a task view do so much?  The current content
+stack for CRAN task views lives in a [GitHub organization](https://github.com/cran-task-views).
+The [ctv package](https://github.com/cran-task-views/ctv/) interrogates the
+view collection so that we can compute 
+  
+- the number of views 
+on `r Sys.Date()` to be `r length(av)`,
+- a random
+sample of view names (`r paste(sample(names(av), 5), collapse=", ")`),
+and 
+- the average number of packages per view (`r mvs`).
+
+### Subviews
+
+
+Each view is curated by a team and a narrative web page is compiled to
+HTML.  We use [rvest](https://rvest.tidyverse.org/) to identify subtopics
+of the Omics view: 
+```{r lkrv,message=FALSE}
+library(rvest)
+read_html("https://cran.r-project.org/web/views/Omics.html") |> 
+  html_elements("h3") |> html_text()
+```
+This approach can be used to learn the subtopics of any task view.
+
+### Upshots
+
+CRAN task views provide a vocabulary for organizing software packages
+for data science, narrations of tasks addressed by various
+packages, mechanisms for tagging packages for discovery through
+view search, and protocols for adding new views and for adding
+new packages to existing views.  See 
+`r Citet(bib, "ctvarx")` for full details.
+
+Of note: while CRAN hosts over 22,000 software packages, 
+the number of packages assigned to some view at this time
+is 4908. 
+
+# biocViews: a graph is all you get
+
+The [biocViews](https://bioconductor.org/packages/biocViews)
+has a badge indicating that it has been in Bioconductor for 19
+years.  Briefly, the intent was to emulate CRAN task views,
+with a vocabulary and curation of packages
+using topics relevant to genomic
+data science.
+
+![Figure 1.  A "dot" layout of 20 nodes from the biocViewsVocab graph.](bcv20.png)
+ 
+
+# References
+
+```{r, results='asis', echo=FALSE}
+PrintBibliography(bib)
+```
+
