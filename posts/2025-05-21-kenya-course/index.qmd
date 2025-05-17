@@ -1,0 +1,188 @@
+---
+title: "Bioconductor in Africa: Highlights from Our First Course in Nairobi"
+author: "Maria Doyle"
+date: 2025-05-21
+categories: [training, community, events, CZI]
+image: group-photo.jpeg
+format:
+  html:
+    toc: true
+    toc-depth: 2
+execute:
+  echo: false
+  message: false
+  warning: false
+lightbox: true
+---
+
+```{r}
+# Load required packages
+library(ggplot2)
+library(readr)
+library(dplyr)
+library(forcats)
+library(patchwork)
+
+# Read and clean data
+feedback <- read_csv("gitexclude/Bioconductor_Kenya_course_feedback.csv") |>
+  mutate(across(everything(), ~ trimws(as.character(.)))) |>
+
+  # Group R skill level
+  mutate(`R level grouped` = case_when(
+    grepl("never interacted", `How did you rate your R level before the workshop?`, ignore.case = TRUE) ~ "Beginner",
+    TRUE ~ `How did you rate your R level before the workshop?`
+  )) |>
+
+  # Ensure improvement scale is full (1–5)
+  mutate(`Improvement factor` = factor(
+    `How much did the workshop improve your R knowledge?`,
+    levels = c("1", "2", "3", "4", "5")
+  )) |>
+
+  # Ensure full course rating levels are preserved
+  mutate(`Overall rating factor` = factor(
+    `Please tell us your overall rating for the entire course`,
+    levels = c("Excellent", "Very good", "Good", "Satisfactory", "Poor")
+  ))
+
+# Plot 1: R skill level before workshop
+p1 <- ggplot(feedback, aes(x = fct_infreq(`R level grouped`))) +
+  geom_bar(fill = "#0072B2") +
+  labs(title = "R Skill Level Before Workshop", x = "Skill Level", y = "Count") +
+  theme_minimal()
+
+# Plot 2: Improvement in R knowledge (1–5)
+p2 <- ggplot(feedback, aes(x = `Improvement factor`)) +
+  geom_bar(fill = "#009E73") +
+  scale_x_discrete(drop = FALSE) +
+  labs(title = "Improvement in R Knowledge", x = "Rating (1 = No improvement, 5 = Significant)", y = "Count") +
+  theme_minimal()
+
+# Plot 3: Overall course rating
+p3 <- ggplot(feedback, aes(x = `Overall rating factor`)) +
+  geom_bar(fill = "#D55E00") +
+  scale_x_discrete(drop = FALSE) +
+  labs(title = "Overall Course Rating", x = "Rating", y = "Count") +
+  theme_minimal()
+
+# Combine and save
+combined_plot <- (p1 | p2) / p3
+ggsave("feedback-summary.png", combined_plot, width = 10, height = 8, dpi = 300)
+```
+
+In March 2025, Bioconductor marked an exciting milestone—our first in-person course on the African continent. Hosted by the International Institute of Tropical Agriculture (IITA) in Nairobi, this five-day workshop brought together 32 researchers for hands-on training in genomic data analysis using R and Bioconductor.
+
+With contributions from local and international instructors, the course highlighted the power of open-source tools to bridge global research gaps and foster community-led training initiatives.
+
+## What We Taught
+
+The course covered:
+
+- **Introduction to R and Bioconductor** (March 24–25): Data handling, visualisation, and reproducible workflows for genomic data.
+- **RNA-seq analysis** (March 26–27): From raw data to differential expression analysis using real datasets.
+- **Bring Your Own Data Day** (March 28): Participants applied their new skills to their own research questions with guidance from instructors.
+
+## Learning & Community
+
+Sessions were delivered by a diverse team, including:
+
+- Laurent Gatto (UC Louvain, Belgium)
+- Michael Landi (IITA, Kenya)
+- Fabricio Almeida-Silva (VIB, Belgium)
+- Laurah Ondari (IITA, Kenya)
+- Zedias Chikwambi (AiBST, Zimbabwe)
+
+The course was deeply interactive, with hands-on coding exercises, breakout support, and flexible pacing. A highlight was the learner-centred revision group, which began with five learners and grew to ten by week’s end, leading us to hire a second room mid-course.
+
+Outside the classroom, participants enjoyed a lab tour of the ILRI campus, as well as informal networking during coffee breaks and a BBQ on the final evening.
+
+::: {#gallery-instructors .columns}
+::: {.column width="20%"}
+![](laurent.jpeg){group="gallery-instructors" style="padding-right: 1px;" alt="Laurent Gatto teaching"}
+:::
+
+::: {.column width="20%"}
+![](michael.jpeg){group="gallery-instructors" style="padding-right: 1px;" alt="Michael Landi teaching"}
+:::
+::: {.column width="20%"}
+![](laurah.jpeg){group="gallery-instructors" style="padding-right: 1px;" alt="Laurah Ondari teaching"}
+:::
+
+::: {.column width="20%"}
+![](fabricio.jpeg){group="gallery-instructors" style="padding-right: 1px;" alt="Fabricio Almeida-Silva teaching"}
+:::
+
+::: {.column width="20%"}
+![](zedias.jpeg){group="gallery-instructors" style="padding-right: 1px;" alt="Zedias Chikwambi teaching"}
+:::
+:::
+
+![Participants at the Bioconductor Nairobi course](group-photo.jpeg)
+
+## Participant Voices
+
+**Impact snapshot**:  
+- 100% would recommend the course  
+- 90% rated it “Excellent”  
+- Most participants significantly improved their R skills  
+- 25 expressed interest in contributing to future Bioconductor Africa activities
+
+![Participant feedback summary](feedback-summary.png)
+
+Of the 32 participants, 29 completed the feedback survey — and 100% said they would recommend the course. Most rated it Excellent and reported a significant improvement in their R skills, especially among beginners. Participants praised the interactive teaching, patient instructors, and the split-track format, which allowed learners to progress at their own pace. Several suggested extending the course to two weeks and including accommodation support to enhance learning and peer interaction. Here’s what a few had to say:
+
+> “I loved how helpful and knowledgeable the instructors were. They did a great job in giving me insight into the meanings and purpose of the codes. I also appreciated the fact that the biological and statistical significance behind differential expression was explained. Overall, this course greatly enhanced my knowledge of differential expression analysis and R programming.”
+
+> “The hands-on experience with real datasets and comprehensive coverage of various Bioconductor packages relevant for data analysis. The instructors were highly knowledgeable, explaining complex topics in a clear and engaging way. I really appreciated the interactiveness of all the sessions and exercises that reinforced key concepts in bioinformatics and data analysis. Overall the materials were well organised and structured, making it easy to revisit and apply what I learned."
+
+> “The learner-centred approach was really helpful. I was particularly happy with the special room/clinic sessions that greatly guided me from a level of no experience with R to where I am now; I can gladly manipulate some functions in R and I am most grateful.”
+
+There was strong interest in future topics such as:
+
+- Microbiome and metagenomics
+- Genomic variation analysis, including SNPs and CNVs
+- Linux and R integration
+- Single-cell omics and machine learning
+- Graph theory and chemoinformatics
+
+Importantly, 25 participants expressed interest in contributing to the Bioconductor Africa community through teaching, webinars, or organising events—highlighting the workshop’s role in building local capacity and leadership.
+
+## Social Media Highlights
+
+Participants also shared their excitement online:
+
+![Social media posts during and after the workshop](social-media.jpg)
+
+## Lessons Learned
+
+A key insight from this workshop was the value of a flexible, split-track design. As the course progressed, it became clear that some participants—especially those newer to R—benefited from revisiting earlier material at a slower pace.
+
+To support this, we introduced a revision track during Days 3–5, focused on reinforcing the Introduction to R and Bioconductor lessons. Learners could move between the tracks based on their comfort level. This approach allowed novice users to build confidence without feeling left behind, while more experienced learners continued with RNA-seq material and prepared their own data for the final “Bring Your Own Data” day.
+
+The feedback was overwhelmingly positive. The revision group began with five participants and grew to ten by the end of the week. Although we hadn’t initially planned for this format, we hired a second room mid-course to support it—something we’ll plan for from the outset in future courses like this.
+
+## Collaborators & Acknowledgements
+
+This course was co-organised by **Maria Doyle** (University of Limerick, Lead Organiser) and **Trushar Shah** (IITA, Local Host), with support from **Aedín Culhane** (University of Limerick), **Charlotte Soneson** (Friedrich Miescher Institute for Biomedical Research), **Laurent Gatto** (Institut de Duve), **Umar Ahmad** (Bauchi State University), and **Zedias Chikwambi** (African Institute of Biomedical Sciences and Technology), who contributed through regular planning meetings.
+
+The workshop was supported by a grant from the Chan Zuckerberg Initiative EOSS Cycle 6, one of five Bioconductor projects funded in this round to support training, developer infrastructure, and community engagement. [Read about the projects funded](https://blog.bioconductor.org/posts/2024-07-12-czi-eoss6-grants/). Maria Doyle’s travel was supported by Erasmus+ funding via UL Global.
+
+## What’s Next?
+
+Planning is already underway for a West Africa workshop. One East Africa participant was so inspired by the experience that they’re now working to host the next event at their home institute. We’ll be applying the lessons learned in Nairobi from the start—like budgeting for a second room to support the split-track structure. 
+
+We’re also looking to collaborate with Bioconductor instructors and contributors on upcoming topics of interest—such as microbiome analysis, single-cell omics, and Linux integration—whether through future workshops, webinars, or community-led sessions. If you're interested, feel free to get in touch: maria.doyle [at] ul [dot] ie.
+
+## Get Involved
+
+Interested in helping grow Bioconductor’s training network in Africa? Reach out or explore our open training resources:
+
+- [📘 Course materials](https://github.com/lgatto/202503-Bioconductor-Kenya) — includes links to the lessons, data, and original course info page 
+- [🌍 About Bioconductor training](https://training.bioconductor.org/)
+
+Want to stay in the loop? [Join the Bioconductor Africa mailing list](https://training.bioconductor.org/workshops/2025-03-Nairobi/index.html#%F0%9F%8C%8D-join-the-bioconductor-africa-community) or follow us on social media to hear about future opportunities.
+
+Stay connected:  
+- [LinkedIn](https://www.linkedin.com/company/bioconductor/)  
+- [Mastodon](https://genomic.social/@bioconductor)  
+- [Bluesky](https://bsky.app/profile/bioconductor.bsky.social)
