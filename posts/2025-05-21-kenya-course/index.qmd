@@ -66,8 +66,31 @@ p3 <- ggplot(feedback, aes(x = `Overall rating factor`)) +
   theme_minimal()
 
 # Combine and save
-combined_plot <- (p1 | p2) / p3
+combined_plot <- p3 / (p1 | p2)
 ggsave("feedback-summary.png", combined_plot, width = 10, height = 8, dpi = 300)
+
+
+# Using numbers from below but not plot as not much difference between beginners and intermediates
+
+# Create new column for numeric improvement
+# feedback$`Improvement numeric` <- as.numeric(feedback$`Improvement factor`)
+
+# Summarise by skill group
+# library(ggpubr)  
+
+# improvement_summary <- feedback |>
+#   group_by(`R level grouped`) |>
+#   summarise(mean_improvement = mean(`Improvement numeric`, na.rm = TRUE))
+
+# # Plot
+# ggplot(improvement_summary, aes(x = `R level grouped`, y = mean_improvement, fill = `R level grouped`)) +
+#   geom_col(show.legend = FALSE) +
+#   labs(
+#     title = "Average R Skill Improvement by Starting Level",
+#     x = "Initial Skill Level",
+#     y = "Average Improvement Rating (1 = None, 5 = Significant)"
+#   ) +
+#   theme_minimal()
 ```
 
 In March 2025, Bioconductor marked an exciting milestone—our first in-person course on the African continent. Hosted by the International Institute of Tropical Agriculture (IITA) in Nairobi, this five-day workshop brought together 32 researchers for hands-on training in genomic data analysis using R and Bioconductor.
@@ -117,18 +140,23 @@ Outside the classroom, participants enjoyed a lab tour of the ILRI campus, as we
 ::: {.column width="20%"}
 ![](zedias.jpeg){group="gallery-instructors" style="padding-right: 1px;" alt="Zedias Chikwambi teaching"}
 :::
+
+<div class="figure-caption" style="text-align: left; font-size: 90%;">
+  From left to right: Laurent Gatto, Michael Landi, Laurah Ondari, Fabricio Almeida-Silva, and Zedias Chikwambi, teaching at the Nairobi course
+</div>
+
 :::
 
-*From left to right: Laurent Gatto, Michael Landi, Laurah Ondari, Fabricio Almeida-Silva, and Zedias Chikwambi, teaching at the Nairobi course.*
 
-![Participants at the Bioconductor Nairobi course](group-photo.jpeg)
+![Participants at the Bioconductor Nairobi course](group-photo.jpeg){alt="Participants at the Bioconductor Nairobi course"}
 
 ## Participant Voices
 
 **Impact snapshot**:  
 - 100% would recommend the course  
-- 97% rated it “Excellent” or "Very good"
-- Most participants significantly improved their R skills  
+- 97% rated it “Excellent” or "Very good"  
+- All participants reported an improvement in their R skills, with most rating it as significant (5 out of 5)  
+- Beginners and intermediates alike benefited, with average improvement scores of 4.4 and 4.8 respectively (on a 5-point scale)  
 - 25 expressed interest in contributing to future Bioconductor Africa activities
 
 ![Participant feedback summary](feedback-summary.png)
