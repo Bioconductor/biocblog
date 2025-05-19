@@ -42,7 +42,7 @@ feedback <- read_csv("gitexclude/Bioconductor_Kenya_course_feedback.csv") |>
   # Ensure full course rating levels are preserved
   mutate(`Overall rating factor` = factor(
     `Please tell us your overall rating for the entire course`,
-    levels = c("Excellent", "Very good", "Good", "Satisfactory", "Poor")
+    levels = rev(c("Excellent", "Very good", "Good", "Satisfactory", "Poor"))
   ))
 
 # Plot 1: R skill level before workshop
@@ -86,13 +86,13 @@ The course covered:
 
 Sessions were delivered by a diverse team, including:
 
-- Laurent Gatto (UC Louvain, Belgium)
+- Laurent Gatto (UCLouvain, Belgium)
 - Michael Landi (IITA, Kenya)
 - Fabricio Almeida-Silva (VIB, Belgium)
 - Laurah Ondari (IITA, Kenya)
 - Zedias Chikwambi (AiBST, Zimbabwe)
 
-We received 145 applications for 32 places, underscoring strong regional demand for this type of training. Participants came from over a dozen institutions, primarily across East Africa, including Egerton University, ILRI, KALRO, ICIPE, University of Nairobi, and University of Ghana. Most were MSc or PhD students, alongside postdocs, lecturers, and research scientists from institutes working in genomics, infectious disease, and agriculture—all contributing to a broader One Health context.
+We received 145 applications for 32 places, underscoring strong regional demand for this type of training. Participants came from over a dozen institutions, primarily across East Africa, including Egerton University, ILRI, KALRO, ICIPE, University of Nairobi, and University of Ghana. Most were MSc or PhD students, alongside postdocs, lecturers, and research scientists from institutes working in genomics, infectious disease, and agriculture—highlighting the cross-disciplinary nature of bioinformatics training and its relevance to [One Health](https://www.who.int/health-topics/one-health) efforts across human, animal, and environmental health.
 
 The course was deeply interactive, with hands-on coding exercises, breakout support, and flexible pacing. A highlight was the learner-centred revision group, which started small but quickly grew in demand—prompting us to hire a second room mid-course!
 
@@ -119,13 +119,15 @@ Outside the classroom, participants enjoyed a lab tour of the ILRI campus, as we
 :::
 :::
 
+*From left to right: Laurent Gatto, Michael Landi, Laurah Ondari, Fabricio Almeida-Silva, and Zedias Chikwambi, teaching at the Nairobi course.*
+
 ![Participants at the Bioconductor Nairobi course](group-photo.jpeg)
 
 ## Participant Voices
 
 **Impact snapshot**:  
 - 100% would recommend the course  
-- 90% rated it “Excellent”  
+- 97% rated it “Excellent” or "Very good"
 - Most participants significantly improved their R skills  
 - 25 expressed interest in contributing to future Bioconductor Africa activities
 
@@ -165,15 +167,15 @@ The feedback was overwhelmingly positive. The revision group began with five par
 
 ## Collaborators & Acknowledgements
 
-This course was co-organised by **Maria Doyle** (University of Limerick, Lead Organiser) and **Trushar Shah** (IITA, Local Host), with support from **Aedín Culhane** (University of Limerick), **Charlotte Soneson** (Friedrich Miescher Institute for Biomedical Research), **Laurent Gatto** (Institut de Duve), **Umar Ahmad** (Bauchi State University), and **Zedias Chikwambi** (African Institute of Biomedical Sciences and Technology), who contributed through regular planning meetings.
+This course was co-organised by **Maria Doyle** (University of Limerick, Lead Organiser) and **Trushar Shah** (IITA, Local Host), with support from **Aedín Culhane** (University of Limerick), **Charlotte Soneson** (Friedrich Miescher Institute for Biomedical Research), **Laurent Gatto** (Institut de Duve, UCLouvain), **Umar Ahmad** (Bauchi State University), and **Zedias Chikwambi** (African Institute of Biomedical Sciences and Technology), who contributed through regular planning meetings.
 
 The workshop was supported by a grant from the Chan Zuckerberg Initiative EOSS Cycle 6, one of five Bioconductor projects funded in this round to support training, developer infrastructure, and community engagement. [Read about the projects funded](https://blog.bioconductor.org/posts/2024-07-12-czi-eoss6-grants/). Maria’s travel was supported by Erasmus+ funding via UL Global.
 
 ## What’s Next?
 
-Planning is already underway for a West Africa workshop. One East Africa participant was so inspired by the experience that they’re now working to host the next event at their home institute. We’ll be applying the lessons learned in Nairobi from the start—like budgeting for a second room to support the split-track structure. 
+Planning is already underway for a West Africa workshop. One East Africa participant was so inspired by the experience that they’re now working to host the next event at their home institute in West Africa. We’ll be applying the lessons learned in Nairobi from the start—like budgeting for a second room to support the split-track structure. 
 
-We’re also looking to collaborate with Bioconductor instructors and contributors on upcoming topics of interest—such as microbiome analysis, single-cell omics, and Linux integration—whether through future workshops, webinars, or community-led sessions. If you're interested, feel free to get in touch: maria.doyle [at] ul [dot] ie.
+We’re also exploring potential collaborations with the[African Bioinformatics Institute (ABI)](https://bioinformaticsinstitute.africa), a new pan-African initiative launched in 2024 and funded by Wellcome and the Chan Zuckerberg Initiative to strengthen genomics and bioinformatics research across the continent. In parallel, we’re keen to connect with Bioconductor instructors and contributors on upcoming topics of interest—such as microbiome analysis, single-cell omics, and Linux integration—through future workshops, webinars, or community-led sessions. If you're interested, feel free to get in touch: maria.doyle [at] ul [dot] ie.
 
 ## Get Involved
 
