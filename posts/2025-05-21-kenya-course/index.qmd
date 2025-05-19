@@ -203,7 +203,7 @@ The workshop was supported by a grant from the Chan Zuckerberg Initiative EOSS C
 
 Planning is already underway for a West Africa workshop. One East Africa participant was so inspired by the experience that they’re now working to host the next event at their home institute in West Africa. We’ll be applying the lessons learned in Nairobi from the start—like budgeting for a second room to support the split-track structure. 
 
-We’re also exploring potential collaborations with the[African Bioinformatics Institute (ABI)](https://bioinformaticsinstitute.africa), a new pan-African initiative launched in 2024 and funded by Wellcome and the Chan Zuckerberg Initiative to strengthen genomics and bioinformatics research across the continent. In parallel, we’re keen to connect with Bioconductor instructors and contributors on upcoming topics of interest—such as microbiome analysis, single-cell omics, and Linux integration—through future workshops, webinars, or community-led sessions. If you're interested, feel free to get in touch: maria.doyle [at] ul [dot] ie.
+We’re also exploring potential collaborations with the [African Bioinformatics Institute (ABI)](https://bioinformaticsinstitute.africa), a new pan-African initiative launched in 2024 and funded by Wellcome and the Chan Zuckerberg Initiative to strengthen genomics and bioinformatics research across the continent. In parallel, we’re keen to connect with Bioconductor instructors and contributors on upcoming topics of interest—such as microbiome analysis, single-cell omics, and Linux integration—through future workshops, webinars, or community-led sessions. If you're interested, feel free to get in touch: maria.doyle [at] ul [dot] ie.
 
 ## Get Involved
 
