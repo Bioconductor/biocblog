@@ -79,7 +79,7 @@ With contributions from local and international instructors, the course highligh
 The course covered:
 
 - **Introduction to R and Bioconductor** (March 24–25): Data handling, visualisation, and reproducible workflows for genomic data.
-- **RNA-seq analysis** (March 26–27): From raw data to differential expression analysis using real datasets.
+- **RNA-seq analysis** (March 26–27): Differential expression analysis using real datasets.
 - **Bring Your Own Data Day** (March 28): Participants applied their new skills to their own research questions with guidance from instructors.
 
 ## Learning & Community
@@ -92,9 +92,11 @@ Sessions were delivered by a diverse team, including:
 - Laurah Ondari (IITA, Kenya)
 - Zedias Chikwambi (AiBST, Zimbabwe)
 
-The course was deeply interactive, with hands-on coding exercises, breakout support, and flexible pacing. A highlight was the learner-centred revision group, which began with five learners and grew to ten by week’s end, leading us to hire a second room mid-course.
+We received 145 applications for 32 places, underscoring strong regional demand for this type of training. Participants came from over a dozen institutions, primarily across East Africa, including Egerton University, ILRI, KALRO, ICIPE, University of Nairobi, and University of Ghana. Most were MSc or PhD students, alongside postdocs, lecturers, and research scientists from institutes working in genomics, infectious disease, and agriculture—all contributing to a broader One Health context.
 
-Outside the classroom, participants enjoyed a lab tour of the ILRI campus, as well as informal networking during coffee breaks and a BBQ on the final evening.
+The course was deeply interactive, with hands-on coding exercises, breakout support, and flexible pacing. A highlight was the learner-centred revision group, which started small but quickly grew in demand—prompting us to hire a second room mid-course!
+
+Outside the classroom, participants enjoyed a lab tour of the ILRI campus, as well as informal networking during lunch, coffee breaks, and a BBQ on the final evening.
 
 ::: {#gallery-instructors .columns}
 ::: {.column width="20%"}
@@ -159,13 +161,13 @@ A key insight from this workshop was the value of a flexible, split-track design
 
 To support this, we introduced a revision track during Days 3–5, focused on reinforcing the Introduction to R and Bioconductor lessons. Learners could move between the tracks based on their comfort level. This approach allowed novice users to build confidence without feeling left behind, while more experienced learners continued with RNA-seq material and prepared their own data for the final “Bring Your Own Data” day.
 
-The feedback was overwhelmingly positive. The revision group began with five participants and grew to ten by the end of the week. Although we hadn’t initially planned for this format, we hired a second room mid-course to support it—something we’ll plan for from the outset in future courses like this.
+The feedback was overwhelmingly positive. The revision group began with five participants and grew to ten by the end of the week. Although we hadn’t initially planned for this format, we secured a second room to support it—something we’ll now plan for from the outset.
 
 ## Collaborators & Acknowledgements
 
 This course was co-organised by **Maria Doyle** (University of Limerick, Lead Organiser) and **Trushar Shah** (IITA, Local Host), with support from **Aedín Culhane** (University of Limerick), **Charlotte Soneson** (Friedrich Miescher Institute for Biomedical Research), **Laurent Gatto** (Institut de Duve), **Umar Ahmad** (Bauchi State University), and **Zedias Chikwambi** (African Institute of Biomedical Sciences and Technology), who contributed through regular planning meetings.
 
-The workshop was supported by a grant from the Chan Zuckerberg Initiative EOSS Cycle 6, one of five Bioconductor projects funded in this round to support training, developer infrastructure, and community engagement. [Read about the projects funded](https://blog.bioconductor.org/posts/2024-07-12-czi-eoss6-grants/). Maria Doyle’s travel was supported by Erasmus+ funding via UL Global.
+The workshop was supported by a grant from the Chan Zuckerberg Initiative EOSS Cycle 6, one of five Bioconductor projects funded in this round to support training, developer infrastructure, and community engagement. [Read about the projects funded](https://blog.bioconductor.org/posts/2024-07-12-czi-eoss6-grants/). Maria’s travel was supported by Erasmus+ funding via UL Global.
 
 ## What’s Next?
 
@@ -182,7 +184,8 @@ Interested in helping grow Bioconductor’s training network in Africa? Reach ou
 
 Want to stay in the loop? [Join the Bioconductor Africa mailing list](https://training.bioconductor.org/workshops/2025-03-Nairobi/index.html#%F0%9F%8C%8D-join-the-bioconductor-africa-community) or follow us on social media to hear about future opportunities.
 
-Stay connected:  
+Stay connected: 
+
 - [LinkedIn](https://www.linkedin.com/company/bioconductor/)  
 - [Mastodon](https://genomic.social/@bioconductor)  
 - [Bluesky](https://bsky.app/profile/bioconductor.bsky.social)
