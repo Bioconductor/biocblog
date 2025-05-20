@@ -183,7 +183,7 @@ Importantly, 25 participants expressed interest in contributing to the Bioconduc
 
 Participants also shared their excitement online:
 
-![Social media posts during and after the workshop](social-media.jpg)
+![Social media posts during and after the workshop (shared with permission)](social-media.jpg)
 
 ## Lessons Learned
 
@@ -195,7 +195,7 @@ The feedback was overwhelmingly positive. The revision group began with five par
 
 ## Collaborators & Acknowledgements
 
-This course was co-organised by **Maria Doyle** (University of Limerick, Lead Organiser) and **Trushar Shah** (IITA, Local Host), with support from **Aedín Culhane** (University of Limerick), **Charlotte Soneson** (Friedrich Miescher Institute for Biomedical Research), **Laurent Gatto** (Institut de Duve, UCLouvain), **Umar Ahmad** (Bauchi State University), and **Zedias Chikwambi** (African Institute of Biomedical Sciences and Technology), who contributed through regular planning meetings.
+This course was co-organised by **Maria Doyle** (University of Limerick, Lead Organiser) and **Trushar Shah** (IITA, Local Host), with support from **Aedín Culhane** (University of Limerick), **Charlotte Soneson** (Friedrich Miescher Institute for Biomedical Research), **Laurent Gatto** (Institut de Duve, UCLouvain), **Umar Ahmad** (Bauchi State University / Africa CDC), and **Zedias Chikwambi** (African Institute of Biomedical Sciences and Technology), who contributed through regular planning meetings.
 
 The workshop was supported by a grant from the Chan Zuckerberg Initiative EOSS Cycle 6, one of five Bioconductor projects funded in this round to support training, developer infrastructure, and community engagement. [Read about the projects funded](https://blog.bioconductor.org/posts/2024-07-12-czi-eoss6-grants/). Maria’s travel was supported by Erasmus+ funding via UL Global.
 
