@@ -1,5 +1,5 @@
 ---
-title: "Bioconductor in Africa: Highlights from Our First Course in Nairobi"
+title: "Bioconductor in Africa: Highlights from Our First In-Person Course"
 author: "Maria Doyle"
 date: 2025-05-21
 categories: [training, community, events, CZI]
