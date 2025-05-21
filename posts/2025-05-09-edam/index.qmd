@@ -193,8 +193,43 @@ biocViews term "SingleCell" can be mapped to topic, operation, data concepts in 
 The biocViews term seems intended to address single cell sequencing, and perhaps it
 should be replaced by EDAM topic 4028.  It is not clear that an adjudication and
 replacement process of this sort could scale over the whole biocViews vocabulary,
-but some direct or very near hits are observed, and may be useful to move the project
-forward.
+but some direct or very near matches are observed.
+
+## Using large language model methods to tag package content
+
+Thanks to code and data made available by Anh Nguyen Vu of Sage Bionetworks, the
+[biocEDAM R package](https://vjcitn.github.io/biocEDAM) (under development) can
+use gpt-4o to produce EDAM term assignments for Bioconductor packages.  The current
+process has two steps.  The function `vig2data` processes HTML or PDF vignettes,
+and uses the [`extract_data`](https://ellmer.tidyverse.org/news/index.html#ellmer-010) 
+feature of `ellmer::chat_openai` to produce a fixed-length summary.  This
+summary is then analyzed against schemas for the four main concepts of EDAM: topic,
+format, operation, data, using specific prompting for extraction of relevant concepts
+"as specifically as possible".
+
+Figure 5 provides the output of this approach for the [development vignette](https://www.bioconductor.org/packages/release/bioc/vignettes/MSnbase/inst/doc/v05-MSnbase-development.html) of the MSnbase package,
+which describes data types for analyzing mass spectrometry data.
+
+![Figure 5.  EDAM terms for the MSnbase package, based on gpt-4o analysis of a vignette for the package 
+that describes how data classes of the package are structured.](edamizeMSnbase.png)
+
+# Summary
+
+This project began with the notion that an _ad hoc_ enumeration of concepts used to
+tag Bioconductor packages (biocViews) could be "replaced" with a more systematic ontology (EDAM).
+It turns out that biocViews has purposes beyond package "tagging" for discovery support, and
+modifications to the vocabulary have ramifications in other domains of the Bioconductor
+software ecosystem.  It is also clear that EDAM "lacks" concepts that are used in biocViews,
+and will need to be updated.  This is a formal process requiring review and consensus among
+EDAM maintainers.  See this [pull request](https://github.com/edamontology/edamontology/pull/916)
+for an example arising from this project.
+
+Ultimately we believe that tooling related to that provided in the biocEDAM package
+will help propose term assignments for Bioconductor packages (and other artifacts
+useful in genomic data science) that developers and content creators can 
+adopt as they see fit.  This will lead to gains in resource discoverability and
+will provide values for organizing ecosystems and workflow collections like
+Bioconductor and bio.tools.
 
 # References
 
