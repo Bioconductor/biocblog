@@ -1,0 +1,779 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.7.31">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Maria Doyle">
+<meta name="dcterms.date" content="2025-05-21">
+
+<title>Bioconductor in Africa: Highlights from Our First Course in Nairobi – Bioconductor community blog</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-e1a5c8363afafaef2c763b6775fbf3ca.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-8fe0731ae49629033691d27458801ab1.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/quarto-contrib/fontawesome6-1.2.0/all.min.css" rel="stylesheet">
+<link href="../../site_libs/quarto-contrib/fontawesome6-1.2.0/latex-fontsize.css" rel="stylesheet">
+<script src="../../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="../../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="../../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<script defer="" data-domain="bioconductor.github.io/biocblog" src="https://plausible.io/js/script.js"></script>
+
+
+<link rel="stylesheet" href="../../styles.css">
+<meta property="og:title" content="Bioconductor in Africa: Highlights from Our First Course in Nairobi – Bioconductor community blog">
+<meta property="og:description" content="A blog for the Bioconductor community!">
+<meta property="og:image" content="https://blog.bioconductor.org/posts/2025-05-21-kenya-course/group-photo.jpeg">
+<meta property="og:site_name" content="Bioconductor community blog">
+</head>
+
+<body class="nav-fixed quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top quarto-banner">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">Bioconductor community blog</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../about.html"> 
+<span class="menu-text">About</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../contributing.html"> 
+<span class="menu-text">Contributing</span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/bioconductor/biocblog"> <i class="bi bi-github" role="img">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://www.linkedin.com/company/bioconductor/"> <i class="bi bi-linkedin" role="img">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="https://bsky.app/profile/bioconductor.bsky.social"> 
+<span class="menu-text"><i class="fa-brands fa-bluesky" aria-label="bluesky"></i></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://genomic.social/@bioconductor"> <i class="bi bi-mastodon" role="img">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://www.youtube.com/user/bioconductor"> <i class="bi bi-youtube" role="img">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://slack.bioconductor.org/"> <i class="bi bi-slack" role="img">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="../../index.xml"> <i class="bi bi-rss" role="img">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<header id="title-block-header" class="quarto-title-block default page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      <h1 class="title">Bioconductor in Africa: Highlights from Our First Course in Nairobi</h1>
+                                <div class="quarto-categories">
+                <div class="quarto-category">training</div>
+                <div class="quarto-category">community</div>
+                <div class="quarto-category">events</div>
+                <div class="quarto-category">CZI</div>
+              </div>
+                  </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta">
+
+      <div>
+      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-contents">
+               <p>Maria Doyle </p>
+            </div>
+    </div>
+      
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">May 21, 2025</p>
+      </div>
+    </div>
+    
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul class="collapse">
+  <li><a href="#what-we-taught" id="toc-what-we-taught" class="nav-link active" data-scroll-target="#what-we-taught">What We Taught</a></li>
+  <li><a href="#learning-community" id="toc-learning-community" class="nav-link" data-scroll-target="#learning-community">Learning &amp; Community</a></li>
+  <li><a href="#participant-voices" id="toc-participant-voices" class="nav-link" data-scroll-target="#participant-voices">Participant Voices</a></li>
+  <li><a href="#social-media-highlights" id="toc-social-media-highlights" class="nav-link" data-scroll-target="#social-media-highlights">Social Media Highlights</a></li>
+  <li><a href="#lessons-learned" id="toc-lessons-learned" class="nav-link" data-scroll-target="#lessons-learned">Lessons Learned</a></li>
+  <li><a href="#collaborators-acknowledgements" id="toc-collaborators-acknowledgements" class="nav-link" data-scroll-target="#collaborators-acknowledgements">Collaborators &amp; Acknowledgements</a></li>
+  <li><a href="#whats-next" id="toc-whats-next" class="nav-link" data-scroll-target="#whats-next">What’s Next?</a></li>
+  <li><a href="#get-involved" id="toc-get-involved" class="nav-link" data-scroll-target="#get-involved">Get Involved</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content quarto-banner-title-block" id="quarto-document-content">
+
+
+
+
+
+<p>In March 2025, Bioconductor marked an exciting milestone—our first in-person course on the African continent. Hosted by the International Institute of Tropical Agriculture (IITA) in Nairobi, this five-day workshop brought together 32 researchers for hands-on training in genomic data analysis using R and Bioconductor.</p>
+<p>With contributions from local and international instructors, the course highlighted the power of open-source tools to bridge global research gaps and foster community-led training initiatives.</p>
+<section id="what-we-taught" class="level2">
+<h2 class="anchored" data-anchor-id="what-we-taught">What We Taught</h2>
+<p>The course covered:</p>
+<ul>
+<li><strong>Introduction to R and Bioconductor</strong> (March 24–25): Data handling, visualisation, and reproducible workflows for genomic data.</li>
+<li><strong>RNA-seq analysis</strong> (March 26–27): Differential expression analysis using real datasets.</li>
+<li><strong>Bring Your Own Data Day</strong> (March 28): Participants applied their new skills to their own research questions with guidance from instructors.</li>
+</ul>
+</section>
+<section id="learning-community" class="level2">
+<h2 class="anchored" data-anchor-id="learning-community">Learning &amp; Community</h2>
+<p>Sessions were delivered by a diverse team, including:</p>
+<ul>
+<li>Laurent Gatto (UCLouvain, Belgium)</li>
+<li>Michael Landi (IITA, Kenya)</li>
+<li>Fabricio Almeida-Silva (VIB, Belgium)</li>
+<li>Laurah Ondari (IITA, Kenya)</li>
+<li>Zedias Chikwambi (AiBST, Zimbabwe)</li>
+</ul>
+<p>We received 145 applications for 32 places, underscoring strong regional demand for this type of training. Participants came from over a dozen institutions, primarily across East Africa, including Egerton University, ILRI, KALRO, ICIPE, University of Nairobi, and University of Ghana. Most were MSc or PhD students, alongside postdocs, lecturers, and research scientists from institutes working in genomics, infectious disease, and agriculture—highlighting the cross-disciplinary nature of bioinformatics training and its relevance to <a href="https://www.who.int/health-topics/one-health">One Health</a> efforts across human, animal, and environmental health.</p>
+<p>The course was deeply interactive, with hands-on coding exercises, breakout support, and flexible pacing. A highlight was the learner-centred revision group, which started small but quickly grew in demand—prompting us to hire a second room mid-course!</p>
+<p>Outside the classroom, participants enjoyed a lab tour of the ILRI campus, as well as informal networking during lunch, coffee breaks, and a BBQ on the final evening.</p>
+<div id="gallery-instructors" class="columns">
+<div class="column" style="width:20%;">
+<p><a href="laurent.jpeg" class="lightbox" data-gallery="gallery-instructors"><img src="laurent.jpeg" class="img-fluid" style="padding-right: 1px;" alt="Laurent Gatto teaching"></a></p>
+</div><div class="column" style="width:20%;">
+<p><a href="michael.jpeg" class="lightbox" data-gallery="gallery-instructors"><img src="michael.jpeg" class="img-fluid" style="padding-right: 1px;" alt="Michael Landi teaching"></a></p>
+</div><div class="column" style="width:20%;">
+<p><a href="laurah.jpeg" class="lightbox" data-gallery="gallery-instructors"><img src="laurah.jpeg" class="img-fluid" style="padding-right: 1px;" alt="Laurah Ondari teaching"></a></p>
+</div><div class="column" style="width:20%;">
+<p><a href="fabricio.jpeg" class="lightbox" data-gallery="gallery-instructors"><img src="fabricio.jpeg" class="img-fluid" style="padding-right: 1px;" alt="Fabricio Almeida-Silva teaching"></a></p>
+</div><div class="column" style="width:20%;">
+<p><a href="zedias.jpeg" class="lightbox" data-gallery="gallery-instructors"><img src="zedias.jpeg" class="img-fluid" style="padding-right: 1px;" alt="Zedias Chikwambi teaching"></a></p>
+</div><div class="figure-caption" style="text-align: left; font-size: 90%;">
+<p>From left to right: Laurent Gatto, Michael Landi, Laurah Ondari, Fabricio Almeida-Silva, and Zedias Chikwambi, teaching at the Nairobi course</p>
+</div>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="group-photo.jpeg" class="lightbox" data-gallery="quarto-lightbox-gallery-6" title="Participants at the Bioconductor Nairobi course"><img src="group-photo.jpeg" class="img-fluid figure-img" alt="Participants at the Bioconductor Nairobi course"></a></p>
+<figcaption>Participants at the Bioconductor Nairobi course</figcaption>
+</figure>
+</div>
+</section>
+<section id="participant-voices" class="level2">
+<h2 class="anchored" data-anchor-id="participant-voices">Participant Voices</h2>
+<p><strong>Impact snapshot</strong>:<br>
+- 100% would recommend the course<br>
+- 97% rated it “Excellent” or “Very good”<br>
+- All participants reported an improvement in their R skills, with most rating it as significant (5 out of 5)<br>
+- Beginners and intermediates alike benefited, with average improvement scores of 4.4 and 4.8 respectively (on a 5-point scale)<br>
+- 25 expressed interest in contributing to future Bioconductor Africa activities</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="feedback-summary.png" class="lightbox" data-gallery="quarto-lightbox-gallery-7" title="Participant feedback summary"><img src="feedback-summary.png" class="img-fluid figure-img" alt="Participant feedback summary"></a></p>
+<figcaption>Participant feedback summary</figcaption>
+</figure>
+</div>
+<p>Of the 32 participants, 29 completed the feedback survey — and 100% said they would recommend the course. Most rated it Excellent and reported a significant improvement in their R skills, especially among beginners. Participants praised the interactive teaching, patient instructors, and the split-track format, which allowed learners to progress at their own pace. Several suggested extending the course to two weeks and including accommodation support to enhance learning and peer interaction. Here’s what a few had to say:</p>
+<blockquote class="blockquote">
+<p>“I loved how helpful and knowledgeable the instructors were. They did a great job in giving me insight into the meanings and purpose of the codes. I also appreciated the fact that the biological and statistical significance behind differential expression was explained. Overall, this course greatly enhanced my knowledge of differential expression analysis and R programming.”</p>
+</blockquote>
+<blockquote class="blockquote">
+<p>“The hands-on experience with real datasets and comprehensive coverage of various Bioconductor packages relevant for data analysis. The instructors were highly knowledgeable, explaining complex topics in a clear and engaging way. I really appreciated the interactiveness of all the sessions and exercises that reinforced key concepts in bioinformatics and data analysis. Overall the materials were well organised and structured, making it easy to revisit and apply what I learned.”</p>
+</blockquote>
+<blockquote class="blockquote">
+<p>“The learner-centred approach was really helpful. I was particularly happy with the special room/clinic sessions that greatly guided me from a level of no experience with R to where I am now; I can gladly manipulate some functions in R and I am most grateful.”</p>
+</blockquote>
+<p>There was strong interest in future topics such as:</p>
+<ul>
+<li>Microbiome and metagenomics</li>
+<li>Genomic variation analysis, including SNPs and CNVs</li>
+<li>Linux and R integration</li>
+<li>Single-cell omics and machine learning</li>
+<li>Graph theory and chemoinformatics</li>
+</ul>
+<p>Importantly, 25 participants expressed interest in contributing to the Bioconductor Africa community through teaching, webinars, or organising events—highlighting the workshop’s role in building local capacity and leadership.</p>
+</section>
+<section id="social-media-highlights" class="level2">
+<h2 class="anchored" data-anchor-id="social-media-highlights">Social Media Highlights</h2>
+<p>Participants also shared their excitement online:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="social-media.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-8" title="Social media posts during and after the workshop (shared with permission)"><img src="social-media.jpg" class="img-fluid figure-img" alt="Social media posts during and after the workshop (shared with permission)"></a></p>
+<figcaption>Social media posts during and after the workshop (shared with permission)</figcaption>
+</figure>
+</div>
+</section>
+<section id="lessons-learned" class="level2">
+<h2 class="anchored" data-anchor-id="lessons-learned">Lessons Learned</h2>
+<p>A key insight from this workshop was the value of a flexible, split-track design. As the course progressed, it became clear that some participants—especially those newer to R—benefited from revisiting earlier material at a slower pace.</p>
+<p>To support this, we introduced a revision track during Days 3–5, focused on reinforcing the Introduction to R and Bioconductor lessons. Learners could move between the tracks based on their comfort level. This approach allowed novice users to build confidence without feeling left behind, while more experienced learners continued with RNA-seq material and prepared their own data for the final “Bring Your Own Data” day.</p>
+<p>The feedback was overwhelmingly positive. The revision group began with five participants and grew to ten by the end of the week. Although we hadn’t initially planned for this format, we secured a second room to support it—something we’ll now plan for from the outset.</p>
+</section>
+<section id="collaborators-acknowledgements" class="level2">
+<h2 class="anchored" data-anchor-id="collaborators-acknowledgements">Collaborators &amp; Acknowledgements</h2>
+<p>This course was co-organised by <strong>Maria Doyle</strong> (University of Limerick, Lead Organiser) and <strong>Trushar Shah</strong> (IITA, Local Host), with support from <strong>Aedín Culhane</strong> (University of Limerick), <strong>Charlotte Soneson</strong> (Friedrich Miescher Institute for Biomedical Research), <strong>Laurent Gatto</strong> (Institut de Duve, UCLouvain), <strong>Umar Ahmad</strong> (Bauchi State University / Africa CDC), and <strong>Zedias Chikwambi</strong> (African Institute of Biomedical Sciences and Technology), who contributed through regular planning meetings.</p>
+<p>The workshop was supported by a grant from the Chan Zuckerberg Initiative EOSS Cycle 6, one of five Bioconductor projects funded in this round to support training, developer infrastructure, and community engagement. <a href="https://blog.bioconductor.org/posts/2024-07-12-czi-eoss6-grants/">Read about the projects funded</a>. Maria’s travel was supported by Erasmus+ funding via UL Global.</p>
+</section>
+<section id="whats-next" class="level2">
+<h2 class="anchored" data-anchor-id="whats-next">What’s Next?</h2>
+<p>Planning is already underway for a West Africa workshop. One East Africa participant was so inspired by the experience that they’re now working to host the next event at their home institute in West Africa. We’ll be applying the lessons learned in Nairobi from the start—like budgeting for a second room to support the split-track structure.</p>
+<p>We’re also exploring potential collaborations with the <a href="https://bioinformaticsinstitute.africa">African Bioinformatics Institute (ABI)</a>, a new pan-African initiative launched in 2024 and funded by Wellcome and the Chan Zuckerberg Initiative to strengthen genomics and bioinformatics research across the continent. In parallel, we’re keen to connect with Bioconductor instructors and contributors on upcoming topics of interest—such as microbiome analysis, single-cell omics, and Linux integration—through future workshops, webinars, or community-led sessions. If you’re interested, feel free to get in touch: maria.doyle [at] ul [dot] ie.</p>
+</section>
+<section id="get-involved" class="level2">
+<h2 class="anchored" data-anchor-id="get-involved">Get Involved</h2>
+<p>Interested in helping grow Bioconductor’s training network in Africa? Reach out or explore our open training resources:</p>
+<ul>
+<li><a href="https://github.com/lgatto/202503-Bioconductor-Kenya">📘 Course materials</a> — includes links to the lessons, data, and original course info page</li>
+<li><a href="https://training.bioconductor.org/">🌍 About Bioconductor training</a></li>
+</ul>
+<p>Want to stay in the loop? <a href="https://training.bioconductor.org/workshops/2025-03-Nairobi/index.html#%F0%9F%8C%8D-join-the-bioconductor-africa-community">Join the Bioconductor Africa mailing list</a> or follow us on social media to hear about future opportunities.</p>
+<p>Stay connected:</p>
+<ul>
+<li><a href="https://www.linkedin.com/company/bioconductor/">LinkedIn</a><br>
+</li>
+<li><a href="https://genomic.social/@bioconductor">Mastodon</a><br>
+</li>
+<li><a href="https://bsky.app/profile/bioconductor.bsky.social">Bluesky</a></li>
+</ul>
+
+
+</section>
+
+<p>
+© 2025 Bioconductor. Content is published under <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons CC-BY-4.0 License</a> for the text and <a href="https://opensource.org/licenses/BSD-3-Clause">BSD 3-Clause License</a> for any code. | <a href="https://www.r-bloggers.com">R-Bloggers</a>
+</p></main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+        const codeEl = trigger.previousElementSibling.cloneNode(true);
+        for (const childEl of codeEl.children) {
+          if (isCodeAnnotation(childEl)) {
+            childEl.remove();
+          }
+        }
+        return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/blog\.bioconductor\.org\/");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","descPosition":"bottom","loop":false,"openEffect":"zoom","selector":".lightbox"});
+(function() {
+  let previousOnload = window.onload;
+  window.onload = () => {
+    if (previousOnload) {
+      previousOnload();
+    }
+    lightboxQuarto.on('slide_before_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      const href = trigger.getAttribute('href');
+      if (href !== null) {
+        const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+        if (imgEl !== null) {
+          const srcAttr = imgEl.getAttribute("src");
+          if (srcAttr && srcAttr.startsWith("data:")) {
+            slideConfig.href = srcAttr;
+          }
+        }
+      } 
+    });
+  
+    lightboxQuarto.on('slide_after_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(slideNode);
+      }
+    });
+  
+  };
+  
+})();
+          </script>
+
+
+
+
+</body></html>
