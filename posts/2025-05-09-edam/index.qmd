@@ -197,7 +197,7 @@ but some direct or very near matches are observed.
 
 ## Using large language model methods to tag package content
 
-Thanks to code and data made available by Anh Nguyen Vu of Sage Bionetworks, the
+Thanks to code and data made available by Anh Nguyet Vu of Sage Bionetworks, the
 [biocEDAM R package](https://vjcitn.github.io/biocEDAM) (under development) can
 use gpt-4o to produce EDAM term assignments for Bioconductor packages.  The current
 process has two steps.  The function `vig2data` processes HTML or PDF vignettes,
