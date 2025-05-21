@@ -10,9 +10,7 @@ creative_commons: CC BY
 categories:
   - education
 image: "crazy.jpg"
----
-title: "ask2025"
-author: "Vince Carey"
+bibliography: ask.bib
 ---
 
 # In the beginning ...
@@ -20,16 +18,28 @@ author: "Vince Carey"
 ... there was a 9-track tape shipped from
 Bell Labs.  [S](https://en.wikipedia.org/wiki/S_(programming_language))
 would be installed for "unix".  Extensions
-could be programmed in Fortran.  S REPORT presaged
+could be programmed in Fortran.  I started using this around 1985.
+
+S REPORT presaged
 Sweave and knitr: [troff](https://en.wikipedia.org/wiki/Troff), [eqn](https://en.wikipedia.org/wiki/Eqn_(software)), [pic](https://en.wikipedia.org/wiki/PIC_(markup_language)) could be
-interlarded with S computations.  I have lost the associated
-technical report and the 
-Wadsworth & Brooks/Cole volume
-[Extending the S System](https://www.google.com/search?tbm=bks&q=isbn:0534050166).
+interlarded with S computations.  
+
+Here's a taste of inputs and outputs for S REPORT.  In the left hand panel of Figure 1, .PP starts a paragraph,
+.EQ and .EN offset an equation markup, and backslash-left-bracket is used
+to start a block of S code that will be executed when the report
+is compiled.  A right-bracket closes the code block.
+This markup generates the second paragraph in the right hand panel.
+
+![Figure 1.  Left panel: troff, eqn, and S code for processing by S REPORT.  Right panel: output including a table for which code is not shown.  From @becker1984s](combo.png)
 
 # Fast forward:
 
-![Figure 1. Author's agitated overview of Bioconductor in early 2024.  The motivation
+In May 2002, Bioconductor 1.0 was released with 15 packages, developed for
+version 1.5 of R.  By April of 2025 the collection has grown to
+over 2300 software packages, developed for version 4.5 of R.
+To give a sense of the components and processes in play, I made a sketch:
+
+![Figure 2. Author's agitated overview of Bioconductor in early 2024.  The motivation
 was, in part, an encounter with the notion that LaTeX might
 be replaced by Typst.](crazy.jpg)
 
@@ -39,7 +49,7 @@ Bioconductor's release is nominally "stable" for six months.
 
 # In sum
 
-Figure 1 depicts many aspects of Bioconductor that are
+Figure 2 depicts many aspects of Bioconductor that are
 invisible to users *as they do their work*.  "Ask and you shall receive"
 is not an overt commitment of Bioconductor's core.  I found it
 interesting to reflect on the ways in which new capabilities
@@ -68,6 +78,7 @@ aspects of the project, including
 
 - biocViews, EDAM, and the description of Bioconductor resources
 - approaching GPU computing for genomics with Bioconductor
+- containers and binaries to speed environment creation
 - subcommunity dynamics: scverse, spatialdata, Bioconductor ... how to relate?
     - python interop
     - OME-Zarr
@@ -75,3 +86,5 @@ aspects of the project, including
 - "vendoring" sources of important libraries
 - curating genomic annotation
 - large arrays: sparsity and indexing
+
+# Reference
