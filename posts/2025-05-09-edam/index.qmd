@@ -36,6 +36,19 @@ mvs = round(mean(sapply(av, function(x)nrow(x$packagelist))),1)
 set.seed(213)
 ```
 
+# Introduction
+
+EDAM stands for "Embrace Data and Methods". The [EDAM ontology](https://edamontology.org) is used
+to provide conceptual organization of resources
+in major initiatives like [ELIXIR bio.tools](https://bio.tools/) and [Galaxy](https://f1000research.com/posters/6-1032).  
+
+Bioconductor's methods and
+data are tagged using an ad hoc terminologic hierarchy called [biocViews](https://www.bioconductor.org/packages/release/bioc/html/biocViews.html).
+
+In 2023 a proposal to enhance discoverability of Bioconductor resources through
+collaboration with EDAM's ontology developers
+was funded through the Chan-Zuckerberg Initiatve Essential Open Source Software
+program.  This blog post gives an update on the project.
 
 # "Task views", starting with CRAN
 
@@ -151,12 +164,37 @@ CRAN task views, was never achieved.
 
 # EDAM: Formal ontology for bioinformatics
 
+## Views of the EDAM conceptual hierarchy
+
 From [edamontology.org](https://edamontology.org):
 
 > EDAM is a comprehensive ontology of well-established, familiar concepts that 
 are prevalent within scientific data analysis and data management (both within 
 and beyond life sciences and imaging). EDAM includes topics, operations, 
 types of data and data identifiers, and data formats.
+
+A taste of the conceptual network is given in Figure 3.  Visit [the data node](https://edamontology.github.io/edam-browser/#data_0006) to explore data types enumerated in the system.
+
+![Figure 3.  A snapshot of an expansion of the interactive network viewer for EDAM.](edamslice.png)
+
+## Comparing biocViews and EDAM
+
+It is natural to expect that natural language processing tools would
+help identify correspondences between the biocViews vocabulary and EDAM.
+We used the text2term system `r Citet(bib, "gon2024")` to help identify
+potential matches of terms using lexical and semantic analysis.
+Figure 4 gives a slice of the outcome of this approach.  The top 3 scoring
+terms in EDAM are provided for each term in biocViews.
+
+![Figure 4.  Application of text2term to biocViews for scoring matches to the EDAM ontology.](sheetBiocVIews2EDAM.png)
+
+The interpretation of this analysis is ongoing.  Figure 4 shows, for example, that the
+biocViews term "SingleCell" can be mapped to topic, operation, data concepts in EDAM.
+The biocViews term seems intended to address single cell sequencing, and perhaps it
+should be replaced by EDAM topic 4028.  It is not clear that an adjudication and
+replacement process of this sort could scale over the whole biocViews vocabulary,
+but some direct or very near hits are observed, and may be useful to move the project
+forward.
 
 # References
 
