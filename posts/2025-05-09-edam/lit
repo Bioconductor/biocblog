@@ -1,3 +1,0 @@
-library(rvest)
-x = read_html("https://cran.r-project.org/web/views/Omics.html")
-x |> html_elements("h3") |> html_text()
