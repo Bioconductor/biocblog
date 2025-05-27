@@ -8,6 +8,7 @@ author:
 date: 2025-05-26
 creative_commons: CC BY
 categories:
+  - bioconductor-evolution
   - education
 image: "crazy.jpg"
 bibliography: ask.bib
