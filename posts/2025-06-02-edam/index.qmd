@@ -9,6 +9,7 @@ author:
 date: 2025-06-02
 creative_commons: CC BY
 categories:
+  - bioconductor-evolution
   - ontology
   - biocViews
   - EDAM
