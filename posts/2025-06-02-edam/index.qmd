@@ -49,10 +49,10 @@ in major initiatives like [ELIXIR bio.tools](https://bio.tools/) and [Galaxy](ht
 Bioconductor's methods and
 data are tagged using an ad hoc terminologic hierarchy called [biocViews](https://www.bioconductor.org/packages/release/bioc/html/biocViews.html).
 
-In 2023 a proposal to enhance discoverability of Bioconductor resources through
+In 2024, a proposal to enhance discoverability of Bioconductor resources through
 collaboration with EDAM's ontology developers
-was funded through the Chan-Zuckerberg Initiative Essential Open Source Software
-program.  This blog post gives an update on the project.
+was funded through the [Chan-Zuckerberg Initiative Essential Open Source Software
+program](/posts/2024-07-12-czi-eoss6-grants/). This blog post gives an update on the project.
 
 # "Task views", starting with CRAN
 
