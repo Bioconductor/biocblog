@@ -217,6 +217,20 @@ which describes data types for analyzing mass spectrometry data.
 ![Figure 5.  EDAM terms for the MSnbase package, based on gpt-4o analysis of a vignette for the package 
 that describes how data classes of the package are structured.](edamizeMSnbase.png)
 
+::: {#tip-biocedam .callout-tip} 
+
+# Try biocEDAM on Your Package
+
+We invite Bioconductor developers and contributors to explore the [biocEDAM R package](https://vjcitn.github.io/biocEDAM) to test EDAM term assignments on their own packages.  
+
+- Does the suggested EDAM tagging reflect your package’s functionality?
+- Are there important concepts missing from EDAM?
+- Would you suggest refinements to the prompts or mappings?
+
+Your feedback will help improve the tool and guide future ontology development. Please share your thoughts via [GitHub issues](https://github.com/vjcitn/biocEDAM/issues) or join the ongoing [EDAM-Bioconductor working group](https://workinggroups.bioconductor.org/currently-active-working-groups-committees.html#edam-collaboration).
+
+:::
+
 # Summary
 
 This project began with the notion that an _ad hoc_ enumeration of concepts used to
@@ -234,6 +248,8 @@ useful in genomic data science) that developers and content creators can
 adopt as they see fit.  This will lead to gains in resource discoverability and
 will provide values for organizing ecosystems and workflow collections like
 Bioconductor and bio.tools.
+
+We welcome feedback and contributions — especially from those working on package metadata. If you’d like to try the the biocEDAM tooling, see @tip-biocedam above. 
 
 # Acknowledgments
 
