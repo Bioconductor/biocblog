@@ -8,7 +8,7 @@ categories:
 image: "zulip-org-logo.svg"
 ---
 
-We’re excited to share that Bioconductor is moving from Slack to **Zulip** for our community chat. This transition will take place on **Monday 2 June 2025**.
+We’re moving Bioconductor’s community chat from Slack to **Zulip** on **Monday 2 June 2025**. This change helps ensure long-term access to discussions and supports our open-source values.
 
 ---
 
