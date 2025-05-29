@@ -8,25 +8,34 @@ categories:
 image: "zulip-org-logo.svg"
 ---
 
-We’re moving Bioconductor’s community chat from Slack to **Zulip** on **Monday 2 June 2025**. This change helps ensure long-term access to discussions and supports our open-source values.
+Bioconductor’s community chat is moving from Slack to **Zulip** on **Monday 2 June 2025**. The transition ensures long-term access to discussions and better reflects our open-source values.
 
 ---
 
 ## Why We're Moving to Zulip
 
-Our Slack Pro subscription ends on Sunday 1 June. Moving to Slack’s free tier would mean losing access to messages older than 90 days — including valuable discussions, decisions, and shared knowledge. To preserve our history and stay aligned with our open-source values, we’ve decided to move to [Zulip](https://zulip.com/).
+Our Slack Pro subscription ends on Sunday 1 June. Switching to the free tier would mean losing older messages — including valuable conversations, decisions, and shared knowledge. To preserve this history and stay true to our open principles, we’re migrating to [Zulip](https://zulip.com/).
 
-Zulip is already used by many open-source and academic communities. It offers a more structured and searchable communication experience, which we believe will benefit our growing and distributed community.
+Zulip is already trusted by many open-source and academic communities. Its structured, topic-based approach makes it easier to follow and return to discussions — a good match for Bioconductor’s distributed, collaborative nature.
 
-Thanks to Zulip’s [open-source sponsorship programme](https://zulip.com/for/open-source/), Bioconductor receives access to the Standard plan at no cost — helping us sustain high-quality communication without compromising on openness or accessibility.
+Thanks to Zulip’s [open-source sponsorship programme](https://zulip.com/for/open-source/), Bioconductor receives access to the Standard plan at no cost, enabling high-quality, sustainable communication.
+
+::: {.callout-note}
+To help preserve Bioconductor’s history, messages from public Slack channels will be migrated to Zulip.
+
+We’re also exploring ways to improve long-term access to community discussions — such as public-read Zulip channels or archiving — in line with open-source norms. Any future changes will be clearly communicated and shaped by community input.
+
+Questions? Contact *maria.doyle [at] ul [dot] ie*.
+:::
 
 ---
 
-## What Makes Zulip a Good Fit
-- **Structured Conversations**: Zulip uses topics within channels, making it easier to follow and revisit discussions.
-- **Full Message History**: No 90-day limit — all messages remain accessible.
-- **Open Source**: Zulip aligns with Bioconductor’s mission and principles.
-- **Markdown and LaTeX Support**: Ideal for technical and academic communication.
+## Why Zulip is a Good Fit
+
+- **Structured conversations**: Topics within channels keep threads focused and easy to revisit.  
+- **Full history**: No 90-day limit — all messages remain accessible.  
+- **Open source**: Zulip aligns with Bioconductor’s mission and values.  
+- **Markdown and LaTeX**: Ideal for technical and academic exchanges.
 
 ![Screenshot of Bioconductor’s Zulip space in testing. Channels are shown on the left, with topic-based threads in the `#general` channel.](bioconductor-zulip-screenshot.png){width=70%}
 
@@ -34,31 +43,32 @@ Thanks to Zulip’s [open-source sponsorship programme](https://zulip.com/for/op
 
 ## How to Get Started
 
-1. **Final Slack Export**: We’ll export our public Slack data on **Friday 30 May** to ensure nothing is lost.
+1. **Final Slack export**: We’ll export public Slack data on **Friday 30 May**.  
 2. **Join Zulip**:
-   - If you had an email registered on Bioconductor Slack, you’ll receive an invite to join.
-   - You don’t need to create an account — just click “Forgot your password?” to set it and log in.
-3. **New to Bioconductor Chat?** You’ll be able to join directly via [https://community-bioc.zulipchat.com](https://community-bioc.zulipchat.com) once the site goes live on **Monday 2 June**.
-4. **Prefer using an app?** Zulip is available for [desktop and mobile](https://zulip.com/apps/) (iOS, Android, Windows, macOS, Linux).
+   - If you used your email on Bioconductor Slack, you’ll receive an invite.
+   - No need to create a new account — click “Forgot your password?” to set it.
+3. **New to Bioconductor Chat?** Join us from **Monday 2 June** at [https://community-bioc.zulipchat.com](https://community-bioc.zulipchat.com).  
+4. **Prefer using an app?** Zulip is available for [desktop and mobile](https://zulip.com/apps/) on all major platforms.
 
 ---
 
 ## Tips for Using Zulip
 
-- **Start a New Topic** for each new subject — this keeps conversations tidy and easy to navigate. See: [Introduction to topics](https://zulip.com/help/introduction-to-topics)
-- **Edit and Move Messages** as needed — admins can help organise threads if anything goes off-topic.
+- **Start a new topic** for each subject — it keeps conversations clear.  
+  → [Intro to topics](https://zulip.com/help/introduction-to-topics)
+- **Admins can help** move or rename threads to keep things tidy.
 - **Use Markdown and LaTeX** for formatting and equations.
 
-> 💡 **Tip**: Using both Slack and Zulip? Try [Rambox](https://rambox.app/) to manage them side-by-side.
+💡 **Tip**: Using both Slack and Zulip? [Rambox](https://rambox.app/) helps manage them side-by-side.
 
-For more tips, see Zulip’s guide: [Getting started with Zulip](https://zulip.com/help/getting-started-with-zulip).
+More tips: [Getting started with Zulip](https://zulip.com/help/getting-started-with-zulip)
 
 ---
 
 ## What’s Next
 
-- Bioconductor Slack retires on **1 June**: After this date, Slack will move to the free tier. A read-only archive may remain accessible temporarily.
-- Bioconductor Zulip launches on **2 June**: You can join any time, but we encourage early access to stay connected.
-- Questions or feedback? Post in the `#general` channel on Bioconductor Zulip or reach out to Bioconductor Community Manager at *maria.doyle [at] ul [dot] ie*.
+- **Slack retires on 1 June**: It will revert to the free tier. A read-only archive may remain accessible for a limited time.  
+- **Zulip launches on 2 June**: You can join anytime — but we recommend getting set up early to stay in the loop.  
+- **Need help or have feedback?** Post in `#general` on Zulip or email *maria.doyle [at] ul [dot] ie*.
 
-We hope you’ll enjoy the new platform — it’s built for open communities like ours.
+We hope you’ll find Zulip a welcoming space — built for open communities like ours.
