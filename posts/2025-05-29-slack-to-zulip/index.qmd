@@ -18,6 +18,8 @@ Our Slack Pro subscription ends on Sunday 1 June. Moving to Slack’s free tier 
 
 Zulip is already used by many open-source and academic communities. It offers a more structured and searchable communication experience, which we believe will benefit our growing and distributed community.
 
+Thanks to Zulip’s [open-source sponsorship programme](https://zulip.com/for/open-source/), Bioconductor receives access to the Standard plan at no cost — helping us sustain high-quality communication without compromising on openness or accessibility.
+
 ---
 
 ## What Makes Zulip a Good Fit
