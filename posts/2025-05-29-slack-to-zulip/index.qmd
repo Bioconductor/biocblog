@@ -23,13 +23,12 @@ Thanks to Zulip’s [open-source sponsorship programme](https://zulip.com/for/op
 ---
 
 ## What Makes Zulip a Good Fit
-
-- **Structured Conversations**: Zulip uses topics within streams, making it easier to follow and revisit discussions.
+- **Structured Conversations**: Zulip uses topics within channels, making it easier to follow and revisit discussions.
 - **Full Message History**: No 90-day limit — all messages remain accessible.
 - **Open Source**: Zulip aligns with Bioconductor’s mission and principles.
 - **Markdown and LaTeX Support**: Ideal for technical and academic communication.
 
-![Screenshot of Bioconductor’s Zulip space in testing. Streams are shown on the left, with topic-based threads in the `#general` channel.](bioconductor-zulip-screenshot.png){width=70%}
+![Screenshot of Bioconductor’s Zulip space in testing. Channels are shown on the left, with topic-based threads in the `#general` channel.](bioconductor-zulip-screenshot.png){width=70%}
 
 ---
 
@@ -60,6 +59,6 @@ For more tips, see Zulip’s guide: [Getting started with Zulip](https://zulip.c
 
 - Bioconductor Slack retires on **1 June**: After this date, Slack will move to the free tier. A read-only archive may remain accessible temporarily.
 - Bioconductor Zulip launches on **2 June**: You can join any time, but we encourage early access to stay connected.
-- Questions or feedback? Post in the `#general` stream on Bioconductor Zulip or reach out to Bioconductor Community Manager at *maria.doyle [at] ul [dot] ie*.
+- Questions or feedback? Post in the `#general` channel on Bioconductor Zulip or reach out to Bioconductor Community Manager at *maria.doyle [at] ul [dot] ie*.
 
 We hope you’ll enjoy the new platform — it’s built for open communities like ours.
