@@ -2,7 +2,7 @@ on:
   push:
     branches: 
       - main
-      - kenya-workshop # allow while sharing preview
+      - zulip # allow while sharing preview
 
 name: Render and Publish
 
