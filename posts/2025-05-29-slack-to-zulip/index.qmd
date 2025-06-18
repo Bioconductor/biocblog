@@ -47,7 +47,7 @@ Questions? Contact *maria.doyle [at] ul [dot] ie*.
 2. **Join Zulip**:
    - If you used your email on Bioconductor Slack, you’ll receive an invite.
    - No need to create a new account — click “Forgot your password?” to set it.
-3. **New to Bioconductor Chat?** Join us from **Monday 2 June** at [https://community-bioc.zulipchat.com](https://community-bioc.zulipchat.com).  
+3. **New to Bioconductor Chat?** Join us from **Monday 2 June** at [https://chat.bioconductor.org](https://chat.bioconductor.org).  
 4. **Prefer using an app?** Zulip is available for [desktop and mobile](https://zulip.com/apps/) on all major platforms.
 
 ---
@@ -59,9 +59,7 @@ Questions? Contact *maria.doyle [at] ul [dot] ie*.
 - **Admins can help** move or rename threads to keep things tidy.
 - **Use Markdown and LaTeX** for formatting and equations.
 
-💡 **Tip**: Using both Slack and Zulip? [Rambox](https://rambox.app/) helps manage them side-by-side.
-
-More tips: [Getting started with Zulip](https://zulip.com/help/getting-started-with-zulip)
+💡 Want more tips? Explore our community-sourced [Zulip Tips & Tricks for Bioconductor](https://docs.google.com/document/d/1BY_eWPRE4jvUcw1Uzem_obn6ryN7tmApWfEU0lxP63o/edit?usp=sharing) guide.
 
 ---
 
@@ -72,3 +70,5 @@ More tips: [Getting started with Zulip](https://zulip.com/help/getting-started-w
 - **Need help or have feedback?** Post in `#general` on Zulip or email *maria.doyle [at] ul [dot] ie*.
 
 We hope you’ll find Zulip a welcoming space — built for open communities like ours.
+
+*Edited in June 2025: Added link to community-sourced Tips doc and updated link to Bioconductor Zulip.*
