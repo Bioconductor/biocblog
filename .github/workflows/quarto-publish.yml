@@ -2,7 +2,7 @@ on:
   push:
     branches: 
       - main
-      - zulip # allow while sharing preview
+      - physalia # allow while sharing preview
 
 name: Render and Publish
 
