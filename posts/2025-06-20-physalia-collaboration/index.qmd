@@ -3,7 +3,7 @@ title: "Bioconductor Training partners with Physalia Courses"
 description: "A new collaboration to expand access to bioinformatics training through co-branded courses, instructor support, and inclusive access."
 author: "Maria Doyle, Charlotte Soneson, and Laurent Gatto"
 date: 2025-06-20
-categories: [training, collaborations]
+categories: [education, collaborations]
 image: bioc-physalia.jpg
 ---
 
@@ -13,7 +13,7 @@ We’re pleased to announce a new collaboration between the [Bioconductor Traini
 
 This partnership builds on shared goals around education, community engagement, and inclusivity. It was shaped through early discussions within the Bioconductor community, including contributions from Fabricio Almeida-Silva, a Bioconductor community member who has taught several Physalia courses. We’re also grateful to Carlo Pecoraro, Director of Physalia Courses, who welcomed the idea of a partnership and helped bring it to fruition.
 
-You can explore upcoming Bioconductor–Physalia courses on our [collaboration page](https://training.bioconductor.org/collaborations/physalia) [*TODO: Link will go live once pages are merged; preview available [here](https://mblue9.github.io/bioconductor-training/collaborations/physalia/index.html)*]
+You can explore Bioconductor–Physalia courses on our [collaboration page](https://training.bioconductor.org/collaborations/physalia).
 
 ## What This Collaboration Looks Like
 
@@ -30,10 +30,10 @@ Physalia will manage course logistics and administration, and will also sponsor 
 Physalia will share course participation and outcome data with the Training Committee to help assess the reach and effectiveness of our joint efforts.
 
 **Expanding Access**  
-To support inclusivity, Physalia will offer two free seats per Bioconductor course to participants from low- or middle-income countries. These seats will be allocated by the Bioconductor Training Committee. Researchers based in eligible countries are warmly encouraged to [apply here](https://forms.gle/3XEJJaKizJvuX9tu6) for a free place. This is a great opportunity to gain hands-on training and connect with the broader bioinformatics community.
+To support inclusivity, Physalia will offer two free seats per eligible Bioconductor course to participants from low- or middle-income countries. These seats will be allocated by the Bioconductor Training Committee. Researchers based in eligible countries are warmly encouraged to [apply here](https://forms.gle/3XEJJaKizJvuX9tu6) for a free place. This is a great opportunity to gain hands-on training and connect with the broader bioinformatics community.
 
 ## Looking Ahead
 
 The collaboration with Physalia has officially begun, marked by their sponsorship of the [EuroBioC2025 conference](https://eurobioc2025.bioconductor.org/). This partnership will run for one year, with the option to renew. We’re looking forward to seeing how it helps us reach more learners, support more researchers, and strengthen the global bioinformatics community.
 
-Stay tuned for course announcements and opportunities to get involved!
+We’ll be sharing more course announcements soon and we hope you’ll join us in spreading the word or getting involved.
