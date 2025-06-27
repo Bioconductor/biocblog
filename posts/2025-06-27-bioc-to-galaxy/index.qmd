@@ -57,9 +57,9 @@ It's not just about ease, it becomes about **equity**, tools like GSVA (Gene Set
 
 While there are various ways to wrap and integrate tools into Galaxy depending on their recipe type (see below for a clickable gallery of an extensive view of the types of tool making):
 
-:::::::::::::::: {#slides-gallery .columns}
+:::::::::::::::: {#awards-gallery .columns}
 ::: {.column width="18.5%"}
-![](bioc-galaxy-4.png){group="slides-gallery" style="border: 1px solid #ccc; padding: 5px;" alt="Slide deck 1"}
+![](bioc-galaxy-4.png){group="slides-gallery" style="border: 1px solid #ccc; padding: 5px;" alt="Slides"}
 :::
 
 ::: {.column width="18.5%"}
