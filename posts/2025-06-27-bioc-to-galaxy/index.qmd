@@ -29,7 +29,7 @@ In case you missed the live session, don't worry-- you can access the full set o
 
 ![](bioc-galaxy-image3.jpeg){fig-alt="Github linked here" fig-align="center" width="100%"}
 
-## What is and why choose Galaxy?
+## Choosing Galaxy
 
 [Galaxy](https://usegalaxy.org/) is an open source, web-based platform with a graphical user interface (GUI) designed to make complex scientific computational analysis more accessible, reproducible, and transparent.
 
@@ -39,7 +39,7 @@ This becomes particularly valuable for users who lack computing access and/or ex
 
 ![](bioc-galaxy-image2.jpeg){fig-alt="Galaxy Home Page" fig-align="center" width="100%"}
 
-## Why use Bioconductor tools in Galaxy?
+## Using Bioconductor tools in Galaxy
 
 While the conference highlighted the exciting potential of bridging together two of the most powerful open-source platforms in bioinformatics, there are other compelling reasons why this integration goes beyond a technical collaboration.
 
@@ -53,11 +53,11 @@ Bioconductor is a powerful ecosystem of R-based tools that allow for a wide rang
 
 3)  [**Benefiting Galaxy and Bioconductor**]{.underline} by enabling Galaxy's core values (i.e., accessibility, reproducibility, & transparency) to reach the analysis complexity of Bioconductor
 
-It's not just about ease, it becomes about **equity**, tools like GSVA (Gene Set Variation Analysis), which is essential for functional genomics, should not be limited to researchers with coding skills or powerful computer clusters.
+It's not just about ease, it becomes about **equity**, tools like Gene Set Variation Analysis (GSVA), which is essential for functional genomics, should not be limited to researchers with coding skills or powerful computer clusters.
 
-## Wrapping GSVA in Galaxy as an example
+## Wrapping and Integrating Tools into Galaxy
 
-While there are various ways to wrap and integrate tools into Galaxy depending on their recipe type (see below for a clickable gallery of an extensive view of the types of tool making):
+There are several ways to wrap and integrate tools into Galaxy, depending on the tool’s language, dependencies, and how you want users to interact with it. Wrapping a tool means to make it available through Galaxy's GUI for users to run your specific tool without touching the command line. Depending on their *recipe*, see below for a clickable gallery of a portion of the slideshow showcasing the different methods of tool wrapping:
 
 :::::::::::::::: {#awards-gallery .columns}
 ::: {.column width="18.5%"}
@@ -117,9 +117,14 @@ While there are various ways to wrap and integrate tools into Galaxy depending o
 *Slide Deck of all the methods to wrap and integrate Bioconductor tools into Galaxy*
 :::
 
+Wrapping and integrating tools into Galaxy can follow multiple paths, from manual configuration to automated wrapper tools.
+
+## Wrapping GSVA in Galaxy as an example
+
+[GSVA](https://www.bioconductor.org/packages/release/bioc/html/GSVA.html#:~:text=Gene%20Set%20Variation%20Analysis%20(GSVA,of%20a%20expression%20data%20set.) is a *a non-parametric, unsupervised method for estimating variation of gene set enrichment through the samples of a expression data set*. 
+
 Adding info about GSVA
 
 GSVA tool as an example, explain it, showing it wrapped put a line of code in to explain it
-
 
 -R2-G2 (a way to wrap the tools) put a line of code in to explain it
