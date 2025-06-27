@@ -1,6 +1,6 @@
 ---
 title: "Adding Bioconductor Tools in Galaxy"
-description: ""
+description: "This is a follow on for the conference, link to training materials from GBCC (see slide)"
 authors:
   - name: Maria Doyle
     url: https://github.com/mblue9
@@ -17,9 +17,28 @@ image: bioc-galaxy-image.jpeg
 
 ![](bioc-galaxy-image.jpeg){fig-alt="Bioconductor and Galaxy logos" fig-align="center" width="60%"} 
 
-This is a follow on for the conference, link to training materials from GBCC (see slide)
+## Introduction
+
+This blog post is a follow-up to the 2025 Galaxy Bioconductor Community Conference, which was the first joint meeting of the two popular and leading open-source platforms
+
+[Galaxy](https://usegalaxy.org/) is an open source, GUI, web-based platform designed to make computational tasks for life science researchers accessible, reproducible, and transparent.
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 Bullet points of what we will cover:
+
+-This is a follow on for the conference, link to training materials from GBCC (see slide)
 
 -What is Galaxy and its importance (imagine to tell newbies about Galaxy), even using power to run these analyses is useful for folks without much access to computers
 
