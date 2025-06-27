@@ -59,7 +59,7 @@ While there are various ways to wrap and integrate tools into Galaxy depending o
 
 Adding info about GSVA
 
--GSVA tool as an example, explain it, showing it wrapped put a line of code in to explain it
+GSVA tool as an example, explain it, showing it wrapped put a line of code in to explain it
 
 (consider showing a deck of slides like in the kenya example)
 
