@@ -57,6 +57,8 @@ It's not just about ease, it becomes about **equity**, tools like GSVA (Gene Set
 
 While there are various ways to wrap and integrate tools into Galaxy depending on their recipe type (see below for an extensive
 
+Adding info about GSVA
+
 -GSVA tool as an example, explain it, showing it wrapped put a line of code in to explain it
 
 (consider showing a deck of slides like in the kenya example)
