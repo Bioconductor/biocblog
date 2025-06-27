@@ -13,6 +13,7 @@ authors:
 date: 2025-06-27
 categories: [education, collaborations, galaxy]
 image: bioc-galaxy-image.jpeg
+toc: true
 lightbox: true
 ---
 
@@ -120,6 +121,5 @@ Adding info about GSVA
 
 GSVA tool as an example, explain it, showing it wrapped put a line of code in to explain it
 
-(consider showing a deck of slides like in the kenya example)
 
 -R2-G2 (a way to wrap the tools) put a line of code in to explain it
