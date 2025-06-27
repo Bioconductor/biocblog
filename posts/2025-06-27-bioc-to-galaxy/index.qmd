@@ -121,9 +121,9 @@ Wrapping and integrating tools into Galaxy can follow multiple paths, from manua
 
 ## Wrapping GSVA in Galaxy as an example
 
-[GSVA](https://www.bioconductor.org/packages/release/bioc/html/GSVA.html#:~:text=Gene%20Set%20Variation%20Analysis%20(GSVA,of%20a%20expression%20data%20set.) is a *a non-parametric, unsupervised method for estimating variation of gene set enrichment through the samples of a expression data set*. 
+[GSVA](https://www.bioconductor.org/packages/release/bioc/html/GSVA.html), a common Bioconductor tool used in functional genomics to assess gene sets rather than individual genes, is defined as *non-parametric, unsupervised method for estimating variation of gene set enrichment through the samples of a expression data set*. 
 
-Adding info about GSVA
+In effort to make advanced pathway enrichment analysis accessible to a broader audience without reliance on code or complex dependencies, we will demonstrate wrapping GSVA using X
 
 GSVA tool as an example, explain it, showing it wrapped put a line of code in to explain it
 
