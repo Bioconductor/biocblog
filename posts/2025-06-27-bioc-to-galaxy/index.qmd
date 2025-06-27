@@ -55,67 +55,65 @@ It's not just about ease, it becomes about **equity**, tools like GSVA (Gene Set
 
 ## Wrapping GSVA in Galaxy as an example
 
-While there are various ways to wrap and integrate tools into Galaxy depending on their recipe type (see below for an extensive view of the types of tool making):
+While there are various ways to wrap and integrate tools into Galaxy depending on their recipe type (see below for a clickable gallery of an extensive view of the types of tool making):
 
-::::::: {#gallery-carp .columns}
-::: {.column width="33%"}
-![](bioc-galaxy-4.png){group="gallery-carp" style="padding-right: 1px;" alt="Slideshow"}
+:::::::::::::::: {#slides-gallery .columns}
+::: {.column width="18.5%"}
+![](bioc-galaxy-4.png){group="slides-gallery" style="border: 1px solid #ccc; padding: 5px;" alt="Slide deck 1"}
 :::
 
-::: {.column width="33%"}
-![](bioc-galaxy-5.png){group="gallery-carp" style="padding-right: 1px;" alt="Slideshow"}
+::: {.column width="18.5%"}
+![](bioc-galaxy-5.png){group="slides-gallery" style="border: 1px solid #ccc; padding: 5px;" alt="Slide deck 2"}
 :::
 
-::: {.column width="33%"}
-![](bioc-galaxy-6.png){group="gallery-carp" style="padding-right: 1px;" alt="Slideshow"}
+::: {.column width="18.5%"}
+![](bioc-galaxy-6.png){group="slides-gallery" style="border: 1px solid #ccc; padding: 5px;" alt="Slide deck 3"}
 :::
 
-::: {.column width="33%"}
-![](bioc-galaxy-7.png){group="gallery-carp" style="padding-right: 1px;" alt="Slideshow"} 
+::: {.column width="18.5%"}
+![](bioc-galaxy-7.png){group="slides-gallery" style="border: 1px solid #ccc; padding: 5px;" alt="Slide deck 4"}
 :::
 
-::: {.column width="33%"}
-![](bioc-galaxy-8.png){group="gallery-carp" style="padding-right: 1px;" alt="Slideshow"} 
+::: {.column width="18.5%"}
+![](bioc-galaxy-8.png){group="slides-gallery" style="border: 1px solid #ccc; padding: 5px;" alt="Slide deck 5"}
 :::
 
-::: {.column width="33%"}
-![](bioc-galaxy-9.png){group="gallery-carp" style="padding-right: 1px;" alt="Slideshow"}
+::: {.column width="18.5%"}
+![](bioc-galaxy-9.png){group="slides-gallery" style="border: 1px solid #ccc; padding: 5px;" alt="Slide deck 6"}
 :::
 
-::: {.column width="33%"}
-![](bioc-galaxy-10.png){group="gallery-carp" style="padding-right: 1px;" alt="Slideshow"}
+::: {.column width="18.5%"}
+![](bioc-galaxy-10.png){group="slides-gallery" style="border: 1px solid #ccc; padding: 5px;" alt="Slide deck 7"}
 :::
 
-::: {.column width="33%"}
-![](bioc-galaxy-11.png){group="gallery-carp" style="padding-right: 1px;" alt="Slideshow"}
+::: {.column width="18.5%"}
+![](bioc-galaxy-11.png){group="slides-gallery" style="border: 1px solid #ccc; padding: 5px;" alt="Slide deck 8"}
 :::
 
-::: {.column width="33%"}
-![](bioc-galaxy-12.png){group="gallery-carp" style="padding-right: 1px;" alt="Slideshow"} 
+::: {.column width="18.5%"}
+![](bioc-galaxy-12.png){group="slides-gallery" style="border: 1px solid #ccc; padding: 5px;" alt="Slide deck 9"}
 :::
 
-::: {.column width="33%"}
-![](bioc-galaxy-13.png){group="gallery-carp" style="padding-right: 1px;" alt="Slideshow"} 
+::: {.column width="18.5%"}
+![](bioc-galaxy-13.png){group="slides-gallery" style="border: 1px solid #ccc; padding: 5px;" alt="Slide deck 10"}
 :::
 
-::: {.column width="33%"}
-![](bioc-galaxy-14.png){group="gallery-carp" style="padding-right: 1px;" alt="Slideshow"}
+::: {.column width="18.5%"}
+![](bioc-galaxy-14.png){group="slides-gallery" style="border: 1px solid #ccc; padding: 5px;" alt="Slide deck 11"}
 :::
 
-::: {.column width="33%"}
-![](bioc-galaxy-15.png){group="gallery-carp" style="padding-right: 1px;" alt="Slideshow"}
+::: {.column width="18.5%"}
+![](bioc-galaxy-15.png){group="slides-gallery" style="border: 1px solid #ccc; padding: 5px;" alt="Slide deck 12"}
 :::
 
-::: {.column width="33%"}
-![](bioc-galaxy-16.png){group="gallery-carp" style="padding-right: 1px;" alt="Slideshow"}
+::: {.column width="18.5%"}
+![](bioc-galaxy-16.png){group="slides-gallery" style="border: 1px solid #ccc; padding: 5px;" alt="Slide deck 13"}
 :::
-:::::::
+::::::::::::::::
 
 ::: {style="text-align: center;"}
-*Session Slide Deck showing the various tools to use to wrap and integrate your tools*
+*Slide Deck of all the methods to wrap and integrate Bioconductor tools into Galaxy*
 :::
-
-::::::
 
 Adding info about GSVA
 
