@@ -55,7 +55,67 @@ It's not just about ease, it becomes about **equity**, tools like GSVA (Gene Set
 
 ## Wrapping GSVA in Galaxy as an example
 
-While there are various ways to wrap and integrate tools into Galaxy depending on their recipe type (see below for an extensive
+While there are various ways to wrap and integrate tools into Galaxy depending on their recipe type (see below for an extensive view of the types of tool making):
+
+::::::: {#gallery-carp .columns}
+::: {.column width="33%"}
+![](bioc-galaxy-4.png){group="gallery-carp" style="padding-right: 1px;" alt="Slideshow"}
+:::
+
+::: {.column width="33%"}
+![](bioc-galaxy-5.png){group="gallery-carp" style="padding-right: 1px;" alt="Slideshow"}
+:::
+
+::: {.column width="33%"}
+![](bioc-galaxy-6.png){group="gallery-carp" style="padding-right: 1px;" alt="Slideshow"}
+:::
+
+::: {.column width="33%"}
+![](bioc-galaxy-7.png){group="gallery-carp" style="padding-right: 1px;" alt="Slideshow"} 
+:::
+
+::: {.column width="33%"}
+![](bioc-galaxy-8.png){group="gallery-carp" style="padding-right: 1px;" alt="Slideshow"} 
+:::
+
+::: {.column width="33%"}
+![](bioc-galaxy-9.png){group="gallery-carp" style="padding-right: 1px;" alt="Slideshow"}
+:::
+
+::: {.column width="33%"}
+![](bioc-galaxy-10.png){group="gallery-carp" style="padding-right: 1px;" alt="Slideshow"}
+:::
+
+::: {.column width="33%"}
+![](bioc-galaxy-11.png){group="gallery-carp" style="padding-right: 1px;" alt="Slideshow"}
+:::
+
+::: {.column width="33%"}
+![](bioc-galaxy-12.png){group="gallery-carp" style="padding-right: 1px;" alt="Slideshow"} 
+:::
+
+::: {.column width="33%"}
+![](bioc-galaxy-13.png){group="gallery-carp" style="padding-right: 1px;" alt="Slideshow"} 
+:::
+
+::: {.column width="33%"}
+![](bioc-galaxy-14.png){group="gallery-carp" style="padding-right: 1px;" alt="Slideshow"}
+:::
+
+::: {.column width="33%"}
+![](bioc-galaxy-15.png){group="gallery-carp" style="padding-right: 1px;" alt="Slideshow"}
+:::
+
+::: {.column width="33%"}
+![](bioc-galaxy-16.png){group="gallery-carp" style="padding-right: 1px;" alt="Slideshow"}
+:::
+:::::::
+
+::: {style="text-align: center;"}
+*Session Slide Deck showing the various tools to use to wrap and integrate your tools*
+:::
+
+::::::
 
 Adding info about GSVA
 
