@@ -23,7 +23,7 @@ Bullet points of what we will cover:
 
 -What is Galaxy and its importance (imagine to tell newbies about Galaxy), even using power to run these analyses is useful for folks without much access to computers
 
--link to their Git and screenshot images
+-Link to their Git and screenshot images
 
 -importance of using Bioconductor tools in Galaxy, to have more accessibilty for more complex analyses, recgonize/visibilty/usage of the tools for developers
 
