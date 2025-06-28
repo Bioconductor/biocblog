@@ -23,7 +23,7 @@ lightbox: true
 
 This blog post is a follow-up to the [2025 Galaxy Bioconductor Community Conference](https://gbcc2025.bioconductor.org/about/overview/), held this year at Cold Spring Harbor Laboratory in New York. For the first time, this joint meeting brought together two of the most popular and leading open-source platforms in bioinformatics, Galaxy and Bioconductor, to highlight their powerful synergy and collaborative potential
 
-In this post, we spotlight one of the most exciting sessions from the event: **"Streamlining Bioinformatics: Adding Bioconductor Tools in Galaxy"**, presented by Fabio Cumbo, Jayadev Joshi, Bryan Raubenolt, and Daniel Blankenberg. The session explored how developers can integrate Bioconductor tools into Galaxy by wrapping them within the web-based platform to expand accessibility and usability for researchers.
+In this post, we spotlight one of the most exciting sessions from the event: **"Streamlining Bioinformatics: Adding Bioconductor Tools in Galaxy"**, presented by [Fabio Cumbo](https://github.com/cumbof), [Jayadev Joshi](https://github.com/jaidevjoshi83), [Bryan Raubenolt](https://github.com/thepineapplepirate), and [Daniel Blankenberg](https://github.com/blankenberg). The session explored how developers can integrate Bioconductor tools into Galaxy by wrapping them within the web-based platform to expand accessibility and usability for researchers.
 
 In case you missed the live session, don't worry-- you can access the full set of training materials, including slides and examples on their [GitHub repository](https://github.com/cumbof/gbcc25_training_session).
 
