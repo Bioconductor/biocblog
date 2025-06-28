@@ -119,7 +119,16 @@ There are several ways to wrap and integrate tools into Galaxy, depending on the
 
 Wrapping and integrating tools into Galaxy can follow multiple paths, from manual configuration to automated wrapper tools.
 
-## Wrapping GSVA in Galaxy as an example
+## Hands-on Example
+
+The presenters walked us through a foundational "Hello World" example to demonstrate how tool wrapping works in Galaxy. The simple exercise showed
+
+
+By running the tool through the Galaxy interface, users could input a message and receive a printed output—an approachable way to understand how Galaxy handles tools under the hood. 
+
+Go ahead and try it out yourself!
+
+## Wrapping GSVA in Galaxy as an example (Coming Soon)
 
 [GSVA](https://www.bioconductor.org/packages/release/bioc/html/GSVA.html), a common Bioconductor tool used in functional genomics to assess gene sets rather than individual genes, is defined as *non-parametric, unsupervised method for estimating variation of gene set enrichment through the samples of a expression data set*. 
 
@@ -128,3 +137,18 @@ In effort to make advanced pathway enrichment analysis accessible to a broader a
 GSVA tool as an example, explain it, showing it wrapped put a line of code in to explain it
 
 -R2-G2 (a way to wrap the tools) put a line of code in to explain it
+
+## Part of CoFest 2025
+
+Developing this blog post, the wrapping of tools, executing "Hello World" wrapping, and GSVA wrapping were all part of [CoFest 2025](https://gbcc2025.bioconductor.org/cofest/overview/). 
+
+CoFest, was a dynamic and hands-on event that was held after the GBCC on June 27-28, 2025. **CoFest is more than just a hackathon**, it was a welcoming, community-driven collaboration and contribution in an attempt to fulfill the mission of GBCC and intermix Galaxy and Bioconductor.
+
+At CoFest, teams focused on various software development projects like workflow integration, parameter handling, app development, interface design, and more. You can explore this year's CoFest projects on this [slide deck](https://docs.google.com/presentation/d/1zSIr1Z1eUzsCf0q5lah0mHziACqMLhb2F0HFkT0xoXs/edit?slide=id.g36b0fb0613a_2_6#slide=id.g36b0fb0613a_2_6)!
+
+Our project was just one of the many other collaborations featured this year. Together, Maria, Gretta, Charlotte, and Marcel all worked together to figure out how to wrap Bioconductor tools into Galaxy.
+
+(input image of team)
+
+## Our Next Steps 
+
