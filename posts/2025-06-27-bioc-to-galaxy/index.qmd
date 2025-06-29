@@ -51,7 +51,7 @@ Bioconductor is a powerful ecosystem of R-based tools that allow for a wide rang
 
 2)  [**Benefiting developers**]{.underline} with increased visibility, recognition, and usage for developers as they expand the reach of their work
 
-3)  [**Benefiting Galaxy and Bioconductor**]{.underline} by enabling Galaxy's core values (i.e., accessibility, reproducibility, & transparency) to reach the analysis complexity of Bioconductor
+3)  [**Benefiting Galaxy and Bioconductor**]{.underline} by integrating Galaxy’s accessible, reproducible workflows with Bioconductor’s analytical power.
 
 It's not just about ease, it becomes about **equity**, tools like Gene Set Variation Analysis (GSVA), which is essential for functional genomics, should not be limited to researchers with coding skills or powerful computer clusters.
 
