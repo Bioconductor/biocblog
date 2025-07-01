@@ -2,7 +2,7 @@ on:
   push:
     branches: 
       - main
-      - physalia # allow while sharing preview
+      - bioc-to-galaxy # allow while sharing preview
 
 name: Render and Publish
 
