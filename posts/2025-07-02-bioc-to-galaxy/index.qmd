@@ -135,7 +135,7 @@ The presenters also shared a basic "Hello World" tool to demonstrate how Galaxy 
 
 With expert input from GSVA developer Robert Castelo, we’re currently working on wrapping the Bioconductor package [GSVA (Gene Set Variation Analysis)](https://www.bioconductor.org/packages/release/bioc/html/GSVA.html) in Galaxy. Widely used for functional enrichment analysis, GSVA will serve as a concrete example of how to bring Bioconductor methods into Galaxy.
 
-We’ve opened a [draft pull request for the GSVA wrapper](https://github.com/rcastelo/GSVA/pull/247) to share our early work and invite feedback. Testing and refinement are ongoing—stay tuned for a follow-up blog post!
+We’ve opened a [draft pull request for the GSVA wrapper](https://github.com/rcastelo/GSVA/pull/247) to share our early work and invite feedback. Testing and refinement are ongoing, we’ll share what we learn in an upcoming follow-up post.
 
 ## Part of CoFest 2025
 
@@ -154,8 +154,10 @@ Our group—Maria, Gretta, Charlotte, and Marcel—worked in person at CoFest, s
 
 ## What’s next? 
 
-We’ll be publishing a follow-up post with a worked example of GSVA in Galaxy.
+- **Guide for Bioconductor developers** - We’re creating a worked example wrapping GSVA in Galaxy, exploring different approaches (including Gemini CLI). Once we’ve refined the process, we’ll share a step-by-step guide, tips, and lessons learned. Follow the [draft pull request](https://github.com/rcastelo/GSVA/pull/247) to stay in the loop.
 
-Also during CoFest, [Gareth Price](https://github.com/GarethPrice-Aus) from Galaxy Australia proposed a simple but powerful addition: including a maintainer field in the Galaxy tool XML to link wrapped tools back to their Bioconductor maintainers ([see GitHub issue](https://github.com/galaxyproject/galaxy/issues/20583)). This could help surface hidden usage, support recognition, and potentially feed into metrics for grant reporting or community impact.
+- **Shiny apps in Galaxy** - Marcel Ramos is experimenting with embedding [BiocHubsShiny within Galaxy](https://github.com/bioconductor/BiocHubsShiny/tree/galaxy_wrapper) and building more Bioconductor-friendly wrapper templates. If you’ve explored similar ideas, get in touch.
 
-If you're curious about this work or thinking of wrapping your own tool, pop into the #galaxy channel on [chat.bioconductor.org](https://chat.bioconductor.org). We’re still figuring things out ourselves and would love to share ideas, help troubleshoot, and learn together.
+- **Linking usage to Bioconductor maintainers** - During CoFest, [Gareth Price](https://github.com/GarethPrice-Aus) from Galaxy Australia proposed adding a *maintainer* field to Galaxy tool XML ([see GitHub issue](https://github.com/galaxyproject/galaxy/issues/20583)). This could help surface usage that isn’t visible through download stats, support community recognition, and feed into reporting for grants or tenure.
+
+If you're curious about any of this work or thinking of wrapping your own tool, pop into the #galaxy channel on [chat.bioconductor.org](https://chat.bioconductor.org). We’re still figuring things out ourselves, and would love to share ideas, troubleshoot together, and learn along the way.
