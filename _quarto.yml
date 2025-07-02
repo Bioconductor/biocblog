@@ -35,6 +35,4 @@ format:
   html:
     theme: yeti
     css: styles.css
-    include-in-header:
-      text: |
-        <script defer data-domain="bioconductor.github.io/biocblog" src="https://plausible.io/js/script.js"></script>
+      
