@@ -1,0 +1,163 @@
+---
+title: "Bringing Bioconductor to Galaxy: A CoFest Collaboration"
+description: "Written during CoFest at GBCC2025, this post shares training materials, introduces Galaxy tool wrapping, and previews what’s next for integrating Bioconductor tools in Galaxy."
+authors:
+  - name: Gretta Yagudayeva
+    url: https://github.com/gyagu98
+  - name: Maria Doyle
+    url: https://github.com/mblue9
+  - name: Charlotte Soneson
+    url: https://github.com/csoneson
+  - name: Marcel Ramos Pérez
+    url: https://github.com/LiNk-NY
+  - name: Robert Castelo
+    url: https://github.com/rcastelo
+date: 2025-07-03
+categories: [education, collaborations, galaxy]
+image: bioc-galaxy-image.jpeg
+toc: true
+lightbox: true
+---
+
+![](bioc-galaxy-image.jpeg){fig-alt="Bioconductor and Galaxy logos" fig-align="center" width="60%"}
+
+## Introduction
+
+This blog post was written during CoFest (CollaborationFest) that took place after the [2025 Galaxy Bioconductor Community Conference](https://gbcc2025.bioconductor.org/about/overview/), held this year at Cold Spring Harbor Laboratory in New York. For the first time, this joint meeting brought together two of the most widely used open-source platforms in bioinformatics, Galaxy and Bioconductor, to explore how their strengths can complement each other and expand access to bioinformatics tools.
+
+In this post, we spotlight one of the most exciting sessions from the event: **"Streamlining Bioinformatics: Adding Bioconductor Tools in Galaxy"**, presented by [Fabio Cumbo](https://github.com/cumbof), [Jayadev Joshi](https://github.com/jaidevjoshi83), [Bryan Raubenolt](https://github.com/thepineapplepirate), and [Daniel Blankenberg](https://github.com/blankenberg). The session explored how developers can integrate Bioconductor tools into Galaxy by wrapping them within the web-based platform to expand accessibility and usability for researchers.
+
+If you missed it, you can access the full set of training materials, including slides and example files, on their [GitHub repository](https://github.com/cumbof/gbcc25_training_session).
+
+![](bioc-galaxy-image3.jpeg){fig-alt="Github linked here" fig-align="center" width="100%"}
+
+::: {style="text-align: center;"}
+*"Streamlining Bioinformatics: Adding Bioconductor Tools in Galaxy" GitHub repo.*
+:::
+
+## Why Galaxy?
+
+![](bioc-galaxy-image2.jpeg){fig-alt="Galaxy Home Page" fig-align="center" width="100%"}
+
+::: {style="text-align: center;"}
+*Galaxy Home Page.*
+:::
+
+[Galaxy](https://usegalaxy.org/) is an open source, web-based platform that makes complex analyses more accessible, no coding or specialised infrastructure required. Like Bioconductor, it prioritises reproducibility and transparency, but delivers these through a user-friendly, point-and-click interface.
+
+This is especially powerful for researchers without programming experience or access to high-performance computing. A great example comes from this [GBCC2025 presentation](https://zenodo.org/records/15776929) by Carolina Santana from UEFS in Brazil, where students analysed environmental microbiomes while working with limited infrastructure, often sharing a single laptop. Tools like Galaxy help level the playing field.
+
+Now imagine what’s possible when Bioconductor tools, some of the most robust analytical methods in genomics, can be run in Galaxy.
+
+## Why bring Bioconductor tools into Galaxy?
+
+Bioconductor is a powerful ecosystem of R-based packages covering everything from differential expression and pathway analysis to spatial and single-cell methods. But for many researchers, these tools remain out of reach, either due to limited R experience, missing dependencies, or lack of compute resources.
+
+That’s where Galaxy comes in.
+
+### What’s in it for developers?
+
+Wrapping your Bioconductor tool for Galaxy can:
+
+- **Expand access** – Make your method usable by researchers without coding experience, and by educators and students in teaching settings.
+
+- **Increase visibility** – Gain exposure and potential citations as part of workflows and training materials beyond the R/Bioconductor sphere.
+
+- **Surface hidden impact** – A tool installed once on a Galaxy server may be used by hundreds. Emerging efforts to link usage metrics with Bioconductor maintainers could make this more visible in future.
+
+It may require modest effort, but the potential impact is significant.
+
+## Wrapping and Integrating Tools into Galaxy
+
+Wrapping a tool means making it available through Galaxy’s graphical interface so users can run it without touching the command line. There are multiple ways to do this depending on how the tool is built. Below is a gallery from the GBCC2025 training session showing the key components of a Galaxy tool wrapper:
+
+:::::::::::::::: {#awards-gallery .columns}
+::: {.column width="18.5%"}
+![](bioc-galaxy-4.png){group="slides-gallery" style="border: 1px solid #ccc; padding: 5px;" alt="Overview of Galaxy XML tool structure, including sections for inputs, outputs, dependencies, and test data."}
+:::
+
+::: {.column width="18.5%"}
+![](bioc-galaxy-5.png){group="slides-gallery" style="border: 1px solid #ccc; padding: 5px;" alt="Version control conventions for tool wrappers — tracking Bioconductor and Galaxy tool versions."}
+:::
+
+::: {.column width="18.5%"}
+![](bioc-galaxy-6.png){group="slides-gallery" style="border: 1px solid #ccc; padding: 5px;" alt="Specifying software dependencies using Bioconda to ensure reproducible tool environments."}
+:::
+
+::: {.column width="18.5%"}
+![](bioc-galaxy-7.png){group="slides-gallery" style="border: 1px solid #ccc; padding: 5px;" alt="Defining command-line prompts to run the tool logic, with parameters passed directly from the Galaxy interface."}
+:::
+
+::: {.column width="18.5%"}
+![](bioc-galaxy-8.png){group="slides-gallery" style="border: 1px solid #ccc; padding: 5px;" alt="Advanced command configuration using conditional logic and GPU settings."}
+:::
+
+::: {.column width="18.5%"}
+![](bioc-galaxy-9.png){group="slides-gallery" style="border: 1px solid #ccc; padding: 5px;" alt="Declaring input parameters including dataset and user-defined variables."}
+:::
+
+::: {.column width="18.5%"}
+![](bioc-galaxy-10.png){group="slides-gallery" style="border: 1px solid #ccc; padding: 5px;" alt="Grouping input parameters by section and defining allowed values."}
+:::
+
+::: {.column width="18.5%"}
+![](bioc-galaxy-11.png){group="slides-gallery" style="border: 1px solid #ccc; padding: 5px;" alt="Defining output files and formats for result datasets."}
+:::
+
+::: {.column width="18.5%"}
+![](bioc-galaxy-12.png){group="slides-gallery" style="border: 1px solid #ccc; padding: 5px;" alt="Tool testing: providing test input/output files to validate reproducibility."}
+:::
+
+::: {.column width="18.5%"}
+![](bioc-galaxy-13.png){group="slides-gallery" style="border: 1px solid #ccc; padding: 5px;" alt="Adding citations to acknowledge upstream software and tools used."}
+:::
+
+::: {.column width="18.5%"}
+![](bioc-galaxy-14.png){group="slides-gallery" style="border: 1px solid #ccc; padding: 5px;" alt="Running Planemo lint on a Galaxy tool"}
+:::
+
+::: {.column width="18.5%"}
+![](bioc-galaxy-15.png){group="slides-gallery" style="border: 1px solid #ccc; padding: 5px;" alt="Running Planemo test on a Galaxy tool"}
+:::
+
+::: {.column width="18.5%"}
+![](bioc-galaxy-16.png){group="slides-gallery" style="border: 1px solid #ccc; padding: 5px;" alt="Manually adding tools to Galaxy via tool_conf.xml"}
+:::
+::::::::::::::::
+
+::: {style="text-align: center;"}
+*Slides from the GBCC2025 training session showing the basics of a Galaxy wrapper.*
+:::
+
+The presenters also shared a basic "Hello World" tool to demonstrate how Galaxy runs tools behind the scenes. This hands-on demo gave participants a practical foundation, and you can try it too using the [training slide deck](https://github.com/cumbof/gbcc25_training_session/blob/main/Deck.pptx).
+
+## Bioconductor package example (GSVA) in Galaxy - coming soon
+
+With expert input from GSVA developer Robert Castelo, we’re currently working on wrapping the Bioconductor package [GSVA (Gene Set Variation Analysis)](https://www.bioconductor.org/packages/release/bioc/html/GSVA.html) in Galaxy. Widely used for functional enrichment analysis, GSVA will serve as a concrete example of how to bring Bioconductor methods into Galaxy.
+
+We’ve opened a [draft pull request for the GSVA wrapper](https://github.com/rcastelo/GSVA/pull/247) to share our early work and invite feedback. Testing and refinement are ongoing, we’ll share what we learn in an upcoming follow-up post.
+
+## Part of CoFest 2025
+
+This work was part of [CoFest 2025](https://gbcc2025.bioconductor.org/cofest/overview/), a hands-on collaboration event held after GBCC on June 27–28. **CoFest was more than a hackathon**—it was a friendly and productive space for Galaxy and Bioconductor developers to connect and build things together.
+
+At CoFest, teams focused on various software development projects like workflow integration, parameter handling, app development, interface design, and more. You can explore this year's CoFest projects in the community [slide deck](https://docs.google.com/presentation/d/1zSIr1Z1eUzsCf0q5lah0mHziACqMLhb2F0HFkT0xoXs/edit?slide=id.g36b0fb0613a_2_6#slide=id.g36b0fb0613a_2_6)!
+
+Our group—Maria, Gretta, Charlotte, and Marcel—worked in person at CoFest, supported remotely by Robert Castelo, who initiated the idea for this blog post and provided expert input on the GSVA wrapper. It was Gretta’s first time contributing to CoFest, and she jumped right in, bringing clear, thoughtful edits and valuable input. We also began experimenting with using LLMs to draft wrappers, an idea sparked by conversations with [Brad Langhorst](https://github.com/bwlang) and [Dannon Baker](https://github.com/dannon). The initial GSVA wrapper was created with Gemini and will be refined in the coming weeks.
+
+![](cofest.jpeg){fig-alt="CoFest 2025 team at work" fig-align="center" width="100%"}  
+
+::: {style="text-align: center;"}
+*CoFest 2025 Day 2 wrap-up.*
+:::
+
+
+## What’s next? 
+
+- **Guide for Bioconductor developers** - We’re creating a worked example wrapping GSVA in Galaxy, exploring different approaches (including Gemini CLI). Once we’ve refined the process, we’ll share a step-by-step guide, tips, and lessons learned. Follow the [draft pull request](https://github.com/rcastelo/GSVA/pull/247) to stay in the loop.
+
+- **Shiny apps in Galaxy** - Marcel Ramos is experimenting with embedding [BiocHubsShiny within Galaxy](https://github.com/bioconductor/BiocHubsShiny/tree/galaxy_wrapper) and building more Bioconductor-friendly wrapper templates. If you’ve explored similar ideas, get in touch.
+
+- **Linking usage to Bioconductor maintainers** - During CoFest, [Gareth Price](https://github.com/GarethPrice-Aus) from Galaxy Australia proposed adding a *maintainer* field to Galaxy tool XML ([see GitHub issue](https://github.com/galaxyproject/galaxy/issues/20583)). This could help surface usage that isn’t visible through download stats, support community recognition, and feed into reporting for grants or tenure.
+
+If you're curious about any of this work or thinking of wrapping your own tool, pop into the #galaxy channel on [chat.bioconductor.org](https://chat.bioconductor.org). We’re still figuring things out ourselves, and would love to share ideas, troubleshoot together, and learn along the way.
