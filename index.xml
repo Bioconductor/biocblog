@@ -10,7 +10,18 @@
 <atom:link href="https://blog.bioconductor.org/index.xml" rel="self" type="application/rss+xml"/>
 <description>A blog for the Bioconductor community!</description>
 <generator>quarto-1.7.32</generator>
-<lastBuildDate>Fri, 20 Jun 2025 00:00:00 GMT</lastBuildDate>
+<lastBuildDate>Thu, 03 Jul 2025 00:00:00 GMT</lastBuildDate>
+<item>
+  <title>Bringing Bioconductor to Galaxy: A CoFest Collaboration</title>
+  <link>https://blog.bioconductor.org/posts/2025-07-03-bioc-to-galaxy/</link>
+  <description><![CDATA[ Written during CoFest at GBCC2025, this post shares training materials, introduces Galaxy tool wrapping, and previews what’s next for integrating Bioconductor tools in Galaxy. ]]></description>
+  <category>education</category>
+  <category>collaborations</category>
+  <category>galaxy</category>
+  <guid>https://blog.bioconductor.org/posts/2025-07-03-bioc-to-galaxy/</guid>
+  <pubDate>Thu, 03 Jul 2025 00:00:00 GMT</pubDate>
+  <media:content url="https://blog.bioconductor.org/posts/2025-07-03-bioc-to-galaxy/bioc-galaxy-image.jpeg" medium="image" type="image/jpeg"/>
+</item>
 <item>
   <title>Bioconductor Training partners with Physalia Courses</title>
   <dc:creator>Maria Doyle, Charlotte Soneson, and Laurent Gatto</dc:creator>
@@ -219,18 +230,6 @@
   <guid>https://blog.bioconductor.org/posts/2024-02-01-website-update/</guid>
   <pubDate>Thu, 01 Feb 2024 00:00:00 GMT</pubDate>
   <media:content url="https://blog.bioconductor.org/posts/2024-02-01-website-update/bioc-new-website.png" medium="image" type="image/png" height="124" width="144"/>
-</item>
-<item>
-  <title>Journey of Growth: Our Internship experience with Bioconductor</title>
-  <dc:creator>Chioma Onyido</dc:creator>
-  <dc:creator>Afuape Esther</dc:creator>
-  <dc:creator>Peace Sandy</dc:creator>
-  <link>https://blog.bioconductor.org/posts/2024-01-31-OutreachyInternshipJourney/</link>
-  <description><![CDATA[ Bioconductor participated in the Outreachy Internship program for the December 2023 cohort. Our interns share their experience working on their various projects and Bioconductor in general. ]]></description>
-  <category>Outreachy</category>
-  <category>open science</category>
-  <guid>https://blog.bioconductor.org/posts/2024-01-31-OutreachyInternshipJourney/</guid>
-  <pubDate>Wed, 31 Jan 2024 00:00:00 GMT</pubDate>
 </item>
 </channel>
 </rss>
