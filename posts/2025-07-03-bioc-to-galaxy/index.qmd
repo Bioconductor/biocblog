@@ -12,7 +12,7 @@ authors:
     url: https://github.com/LiNk-NY
   - name: Robert Castelo
     url: https://github.com/rcastelo
-date: 2025-07-02
+date: 2025-07-03
 categories: [education, collaborations, galaxy]
 image: bioc-galaxy-image.jpeg
 toc: true
