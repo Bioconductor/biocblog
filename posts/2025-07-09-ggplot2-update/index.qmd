@@ -215,4 +215,4 @@ Not a developer? Reporting even small glitches after updating ggplot2 can still 
 
 Fixes may take time to propagate, especially with so many interdependent packages, and most Bioconductor maintainers contributing alongside full academic workloads. But progress is steady, and made easier when people flag issues early.
 
-Big changes like this aren’t always smooth, but open communication goes a long way. Whether you're maintaining a package, reporting a bug, or just keeping an eye out, it all helps. Thanks for reading, and for helping keep things running.
+Big changes like this aren’t always smooth, but open communication goes a long way. Whether you're maintaining a package, reporting a bug, or just keeping an eye out, it all helps. Thanks for reading, and for being part of this collaborative process.
