@@ -1,7 +1,7 @@
 ---
-title: "Bioconductor and ggplot2 4.0.0: What to Expect"
+title: "Bioconductor and ggplot2 4.0.0: What’s Changing and How to Prepare"
 description: "Preparing for the upcoming update - key changes, potential breakages, and what developers and users can do"
-author: "Maria Doyle (Bioconductor Community Manager), with input from the Bioconductor and ggplot2 developer communities"
+author: "Maria Doyle (Bioconductor Community Manager), with contributions from the Bioconductor and ggplot2 developer communities"
 date: 2025-07-09
 categories: tech-notes
 format:
@@ -20,9 +20,9 @@ A major update to `ggplot2` (version 4.0.0) is expected around **mid-to-late Jul
 
 - `ggplot2` 4.0.0 is a major internal update switching to S7 classes
 - Some Bioconductor packages may break, especially those customising `ggplot` themes/geoms
-- This update only affects plotting - core statistical functionality isn't impacted
-- Hold off updating `ggplot2` if you rely on these packages
-- Developers: test using `pak::pak("tidyverse/ggplot2")`
+- Only affects plotting - statistical or modelling functions remain unchanged
+- If you're a user, hold off updating ggplot2 until your packages are confirmed to work
+- If you're a developer, test now using `pak::pak("tidyverse/ggplot2")` to prepare before release
 - Questions or issues? Join us on [Zulip](https://chat.bioconductor.org/)
 
 
@@ -75,6 +75,8 @@ These are specific breakages already reported on the `ggplot2` GitHub:
 - **Custom + methods**: Packages defining custom + operators (e.g. `+.gg`) may need to revise their implementation, especially with mixed S3/S7 class use. See [#6504](https://github.com/tidyverse/ggplot2/issues/6504).
 - **Invalid element properties**: With S7 class adoption, element constructors like `element_text()` now enforce stricter type checks (e.g. no TRUE for family, no decimal colours). Fix the incorrect properties in your package. See [#6507](https://github.com/tidyverse/ggplot2/issues/6507).
 - **S3 method consistency**: Generics like `ggplot_build()` and `ggplot_add()` now include `...` Your methods must include it too, even if unused, to avoid warnings. See [#6515](https://github.com/tidyverse/ggplot2/issues/6515).
+
+These are evolving, if something looks broken, it’s worth checking the [ggplot2 issues page](https://github.com/tidyverse/ggplot2/issues) for updates before opening a new one.
 
 The Bioconductor core team has also been running automated tests on a subset of packages to help spot issues early. Due to resource constraints, this currently covers only a portion of the ecosystem, so it’s still important for developers to test their own packages.
 
@@ -130,9 +132,7 @@ Packages listed under `Depends` or `Imports` are more likely to use `ggplot2` in
 
 Developers of these packages have already been notified through the Bioconductor Zulip, the bioc-devel mailing list, and direct outreach on GitHub. Teun van den Brand from the `ggplot2` team has been contacting affected maintainers, and several packages have already been patched or are in progress.
 
-### What We've Learned from the Community
-
-### Practical Tips from Package Maintainers
+### Lessons from the Community: Practical Tips
 
 Many developers have already been testing their packages and sharing their findings in the [Bioconductor Zulip](https://chat.bioconductor.org). These discussions have surfaced some practical tips and patterns to watch for, useful whether you're maintaining a package or trying to understand why something might have broken:
 
@@ -170,7 +170,7 @@ You don’t need to act now if everything is working, but it’s worth being cau
 
 ### How to Check If You’re Affected
 
-If you're curious or need to be sure:
+The development version of ggplot2 (4.0.0) is already available for testing using {pak}. The CRAN release is expected mid-to-late July. If you’re not sure whether to update once it’s out, here’s how you can test your current setup ahead of time.
 
 - Create a temporary or isolated R project (e.g. using `{renv}` or RStudio Project)
 - Install the development version of `ggplot2`:
@@ -194,6 +194,7 @@ To manage versions and avoid surprises:
 
 - Use `{renv}` to snapshot your current setup:
   ```r
+  # Create a reproducible project setup
   renv::init()
   renv::snapshot()
   ```
