@@ -2,7 +2,7 @@ on:
   push:
     branches: 
       - main
-      - bioc-to-galaxy # allow while sharing preview
+      - ggplot2-update # allow while sharing preview
 
 name: Render and Publish
 
