@@ -164,9 +164,10 @@ Breakages can happen if you:
 
 **To avoid disruptions**:
 
-- **Hold off updating `ggplot2` until you’ve confirmed it works with your code and the packages you use.**
+- **Hold off updating `ggplot2` until you’ve tested that it works with your code and the packages you use.**
+- **You can already test with the development version, see below.**
 
-You don’t need to act now if everything is working, but it’s worth being cautious around updates until fixes are in place.
+If your code is working as expected, you don’t need to act immediately. But testing ahead of the CRAN release can give you confidence that everything will continue working once `ggplot2` 4.0.0 is out.
 
 ### How to Check If You’re Affected
 
