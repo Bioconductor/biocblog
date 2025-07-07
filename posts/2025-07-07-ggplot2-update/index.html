@@ -1,0 +1,1139 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.7.32">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Maria Doyle (Bioconductor Community Manager), with contributions from the Bioconductor and ggplot2 developer communities">
+<meta name="dcterms.date" content="2025-07-07">
+<meta name="description" content="Preparing for the upcoming update - key changes, potential breakages, and what developers and users can do">
+
+<title>Bioconductor and ggplot2 4.0.0: What’s Changing and How to Prepare – Bioconductor community blog</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-37eea08aefeeee20ff55810ff984fec1.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-e8e7f22aa491a340a4a2b467ac92f79a.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<script src="../../site_libs/core-js-2.5.3/shim.min.js"></script>
+<script src="../../site_libs/react-18.2.0/react.min.js"></script>
+<script src="../../site_libs/react-18.2.0/react-dom.min.js"></script>
+<script src="../../site_libs/reactwidget-2.0.0/react-tools.js"></script>
+<link href="../../site_libs/htmltools-fill-0.5.8.1/fill.css" rel="stylesheet">
+<script src="../../site_libs/htmlwidgets-1.6.4/htmlwidgets.js"></script>
+<link href="../../site_libs/reactable-0.4.4/reactable.css" rel="stylesheet">
+<script src="../../site_libs/reactable-binding-0.4.4/reactable.js"></script>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.css" rel="stylesheet">
+
+
+<link rel="stylesheet" href="../../styles.css">
+<meta property="og:title" content="Bioconductor and ggplot2 4.0.0: What’s Changing and How to Prepare – Bioconductor community blog">
+<meta property="og:description" content="Preparing for the upcoming update - key changes, potential breakages, and what developers and users can do">
+<meta property="og:image" content="https://blog.bioconductor.org/posts/2025-07-07-ggplot2-update/bioc-ggpot2-r_logos.png">
+<meta property="og:site_name" content="Bioconductor community blog">
+<meta property="og:image:height" content="900">
+<meta property="og:image:width" content="1600">
+</head>
+
+<body class="nav-fixed quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top quarto-banner">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">Bioconductor community blog</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../about.html"> 
+<span class="menu-text">About</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../contributing.html"> 
+<span class="menu-text">Contributing</span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/bioconductor/biocblog"> <i class="bi bi-github" role="img">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://www.linkedin.com/company/bioconductor/"> <i class="bi bi-linkedin" role="img">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://bsky.app/profile/bioconductor.bsky.social"> <i class="bi bi-bluesky" role="img">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://genomic.social/@bioconductor"> <i class="bi bi-mastodon" role="img">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://www.youtube.com/user/bioconductor"> <i class="bi bi-youtube" role="img">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://chat.bioconductor.org/"> <i class="bi bi-chat-dots" role="img">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="../../index.xml"> <i class="bi bi-rss" role="img">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<header id="title-block-header" class="quarto-title-block default page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      <div class="quarto-title-block"><div><h1 class="title">Bioconductor and ggplot2 4.0.0: What’s Changing and How to Prepare</h1><button type="button" class="btn code-tools-button dropdown-toggle" id="quarto-code-tools-menu" data-bs-toggle="dropdown" aria-expanded="false"><i class="bi"></i> Code</button><ul class="dropdown-menu dropdown-menu-end" aria-labelelledby="quarto-code-tools-menu"><li><a id="quarto-show-all-code" class="dropdown-item" href="javascript:void(0)" role="button">Show All Code</a></li><li><a id="quarto-hide-all-code" class="dropdown-item" href="javascript:void(0)" role="button">Hide All Code</a></li><li><hr class="dropdown-divider"></li><li><a id="quarto-view-source" class="dropdown-item" href="javascript:void(0)" role="button">View Source</a></li></ul></div></div>
+                  <div>
+        <div class="description">
+          Preparing for the upcoming update - key changes, potential breakages, and what developers and users can do
+        </div>
+      </div>
+                          <div class="quarto-categories">
+                <div class="quarto-category">tech-notes</div>
+              </div>
+                  </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta">
+
+      <div>
+      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-contents">
+               <p>Maria Doyle (Bioconductor Community Manager), with contributions from the Bioconductor and ggplot2 developer communities </p>
+            </div>
+    </div>
+      
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">July 7, 2025</p>
+      </div>
+    </div>
+    
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul class="collapse">
+  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction">Introduction</a>
+  <ul class="collapse">
+  <li><a href="#tldr" id="toc-tldr" class="nav-link" data-scroll-target="#tldr">TL;DR</a></li>
+  <li><a href="#whats-changing" id="toc-whats-changing" class="nav-link" data-scroll-target="#whats-changing">What’s Changing?</a></li>
+  <li><a href="#why-s7" id="toc-why-s7" class="nav-link" data-scroll-target="#why-s7">Why S7?</a></li>
+  <li><a href="#for-developers" id="toc-for-developers" class="nav-link" data-scroll-target="#for-developers">For Developers</a></li>
+  <li><a href="#for-users" id="toc-for-users" class="nav-link" data-scroll-target="#for-users">For Users</a></li>
+  <li><a href="#final-notes" id="toc-final-notes" class="nav-link" data-scroll-target="#final-notes">Final Notes</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content quarto-banner-title-block" id="quarto-document-content">
+
+
+
+
+
+<section id="introduction" class="level1">
+<h1>Introduction</h1>
+<p>A major update to <code>ggplot2</code> (version 4.0.0) is expected around <strong>mid-to-late July 2025</strong>. It brings a significant internal change, replacing most of the S3 backend with the newer S7 object system. While this improves long-term maintainability and extensibility, it may break Bioconductor packages that depend on <code>ggplot2</code>, especially those that customise how plots are built or styled. Packages that use <code>ggplot2</code> for typical plotting tasks, such as creating plots with <code>ggplot()</code> and <code>geom_*()</code>, are unlikely to be affected.</p>
+<section id="tldr" class="level2">
+<h2 class="anchored" data-anchor-id="tldr">TL;DR</h2>
+<ul>
+<li><code>ggplot2</code> 4.0.0 is a major internal update switching to S7 classes</li>
+<li>Some Bioconductor packages may break, especially those customising <code>ggplot</code> themes/geoms</li>
+<li>Only affects plotting - statistical or modelling functions remain unchanged</li>
+<li>If you’re a user, hold off updating ggplot2 until your packages are confirmed to work</li>
+<li>If you’re a developer, test now using <code>pak::pak("tidyverse/ggplot2")</code> to prepare before release</li>
+<li>Questions or issues? Join us on <a href="https://chat.bioconductor.org/">Zulip</a></li>
+</ul>
+</section>
+<section id="whats-changing" class="level2">
+<h2 class="anchored" data-anchor-id="whats-changing">What’s Changing?</h2>
+<p>The 4.0.0 release of <code>ggplot2</code> introduces a major internal refactor: S3 classes are being migrated to the new S7 system. While most users won’t notice the difference, some packages rely on how <code>ggplot2</code> is built internally, for example, by modifying its themes, geoms, or using helper functions. These packages (e.g.&nbsp;<code>ComplexUpset</code>, <code>ggtree</code>, <code>plotly</code>) may break if that internal structure changes.</p>
+<p>Some issues may be minor, like test failures, while others may cause runtime errors. Either way, this is a good time to review your usage.</p>
+</section>
+<section id="why-s7" class="level2">
+<h2 class="anchored" data-anchor-id="why-s7">Why S7?</h2>
+<p>S7 is a new object-oriented system in R that makes packages more robust, predictable, and easier to extend. It gives developers better tools for managing complex code, but switching to it can affect packages that rely on how things used to work under the old system (S3).</p>
+<p>It offers:</p>
+<ul>
+<li>Formal class and method definitions<br>
+</li>
+<li>Limited multiple dispatch<br>
+</li>
+<li>Cleaner support for interoperability<br>
+</li>
+<li>Greater consistency across packages</li>
+</ul>
+<p>S7 is being developed by the R Consortium’s OOP Working Group, with contributors from R Core, Bioconductor, Posit, and others.</p>
+<p>Learn more about S7 in the <a href="https://www.tidyverse.org/blog/2024/11/s7-0-2-0/">tidyverse blog</a> and on the [R Consortium site]((https://rconsortium.github.io/S7/index.html).</p>
+</section>
+<section id="for-developers" class="level2">
+<h2 class="anchored" data-anchor-id="for-developers">For Developers</h2>
+<section id="what-developers-should-do-now" class="level3">
+<h3 class="anchored" data-anchor-id="what-developers-should-do-now">What Developers Should Do Now</h3>
+<p>You can test your package against the development version of <code>ggplot2</code> using:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># install.packages("pak")</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>pak<span class="sc">::</span><span class="fu">pak</span>(<span class="st">"tidyverse/ggplot2"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>We recommend testing in a clean or isolated environment (e.g.&nbsp;<code>{renv}</code>, <code>{callr}</code>) to avoid unexpected interactions.</p>
+<p>If you find issues:</p>
+<ul>
+<li>Report a bug: <a href="https://github.com/tidyverse/ggplot2/issues">github.com/tidyverse/ggplot2/issues</a><br>
+</li>
+<li>Tag <a href="https://github.com/teunbrand"><span class="citation" data-cites="teunbrand">@teunbrand</span> on GitHub</a> if you’d like input from the <code>ggplot2</code> team</li>
+<li>Discuss with the Bioconductor community: Post in <a href="https://chat.bioconductor.org/">Bioconductor Zulip</a> or email the <code>bioc-devel@r-project.org</code> mailing list</li>
+</ul>
+</section>
+<section id="common-issues-already-reported" class="level3">
+<h3 class="anchored" data-anchor-id="common-issues-already-reported">Common Issues Already Reported</h3>
+<p>These are specific breakages already reported on the <code>ggplot2</code> GitHub:</p>
+<ul>
+<li><strong>Class checks</strong>: Tests relying on exact class structures like <code>class(p)</code> or <code>expect_type(p, "list")</code> may now fail. Instead, use <code>expect_true(is_ggplot(p))</code> or <code>expect_s3_class(p, "ggplot")</code> for compatibility. See <a href="https://github.com/tidyverse/ggplot2/issues/6498">#6498</a>.</li>
+<li><strong>Label handling</strong>: Labels are now stricter and constructed later in the build step. Use <code>get_labs()</code> in tests, and avoid unnamed or duplicate arguments in <code>labs()</code>. See <a href="https://github.com/tidyverse/ggplot2/issues/6505">#6505</a>.</li>
+<li><strong>Custom + methods</strong>: Packages defining custom + operators (e.g.&nbsp;<code>+.gg</code>) may need to revise their implementation, especially with mixed S3/S7 class use. See <a href="https://github.com/tidyverse/ggplot2/issues/6504">#6504</a>.</li>
+<li><strong>Invalid element properties</strong>: With S7 class adoption, element constructors like <code>element_text()</code> now enforce stricter type checks (e.g.&nbsp;no TRUE for family, no decimal colours). Fix the incorrect properties in your package. See <a href="https://github.com/tidyverse/ggplot2/issues/6507">#6507</a>.</li>
+<li><strong>S3 method consistency</strong>: Generics like <code>ggplot_build()</code> and <code>ggplot_add()</code> now include <code>...</code> Your methods must include it too, even if unused, to avoid warnings. See <a href="https://github.com/tidyverse/ggplot2/issues/6515">#6515</a>.</li>
+</ul>
+<p>These are evolving, if something looks broken, it’s worth checking the <a href="https://github.com/tidyverse/ggplot2/issues">ggplot2 issues page</a> for updates before opening a new one.</p>
+<p>The Bioconductor core team has also been running automated tests on a subset of packages to help spot issues early. Due to resource constraints, this currently covers only a portion of the ecosystem, so it’s still important for developers to test their own packages.</p>
+</section>
+<section id="how-bioconductor-packages-may-be-affected" class="level3">
+<h3 class="anchored" data-anchor-id="how-bioconductor-packages-may-be-affected">How Bioconductor Packages May Be Affected</h3>
+<p>We’ve compiled a list of packages in Bioconductor 3.21 that declare <code>ggplot2</code> in <code>Depends</code>, <code>Imports</code>, or <code>Suggests</code>:</p>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(BiocManager)</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(reactable)</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>repos <span class="ot">&lt;-</span> <span class="fu">repositories</span>(<span class="at">version =</span> <span class="st">"3.21"</span>)</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>bioc_repos <span class="ot">&lt;-</span> repos[<span class="fu">grepl</span>(<span class="st">"BioC"</span>, <span class="fu">names</span>(repos))]</span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>db <span class="ot">&lt;-</span> <span class="fu">available.packages</span>(<span class="fu">contrib.url</span>(bioc_repos))</span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>pkg_df <span class="ot">&lt;-</span> <span class="fu">as_tibble</span>(db) <span class="sc">%&gt;%</span></span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(</span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>    <span class="at">ggplot2_usage =</span> <span class="fu">case_when</span>(</span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>      <span class="fu">grepl</span>(<span class="st">"ggplot2"</span>, Depends) <span class="sc">~</span> <span class="st">"Depends"</span>,</span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>      <span class="fu">grepl</span>(<span class="st">"ggplot2"</span>, Imports) <span class="sc">~</span> <span class="st">"Imports"</span>,</span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>      <span class="fu">grepl</span>(<span class="st">"ggplot2"</span>, Suggests) <span class="sc">~</span> <span class="st">"Suggests"</span>,</span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>      <span class="cn">TRUE</span> <span class="sc">~</span> <span class="cn">NA_character_</span></span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">%&gt;%</span></span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(<span class="sc">!</span><span class="fu">is.na</span>(ggplot2_usage)) <span class="sc">%&gt;%</span></span>
+<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(Package, ggplot2_usage) <span class="sc">%&gt;%</span></span>
+<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a>  <span class="fu">arrange</span>(Package)</span>
+<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a><span class="fu">reactable</span>(</span>
+<span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a>  pkg_df,</span>
+<span id="cb2-24"><a href="#cb2-24" aria-hidden="true" tabindex="-1"></a>  <span class="at">searchable =</span> <span class="cn">TRUE</span>,</span>
+<span id="cb2-25"><a href="#cb2-25" aria-hidden="true" tabindex="-1"></a>  <span class="at">filterable =</span> <span class="cn">TRUE</span>,</span>
+<span id="cb2-26"><a href="#cb2-26" aria-hidden="true" tabindex="-1"></a>  <span class="at">columns =</span> <span class="fu">list</span>(</span>
+<span id="cb2-27"><a href="#cb2-27" aria-hidden="true" tabindex="-1"></a>    <span class="at">Package =</span> <span class="fu">colDef</span>(<span class="at">name =</span> <span class="st">"Package"</span>),</span>
+<span id="cb2-28"><a href="#cb2-28" aria-hidden="true" tabindex="-1"></a>    <span class="at">ggplot2_usage =</span> <span class="fu">colDef</span>(<span class="at">name =</span> <span class="st">"ggplot2 Usage"</span>)</span>
+<span id="cb2-29"><a href="#cb2-29" aria-hidden="true" tabindex="-1"></a>  ),</span>
+<span id="cb2-30"><a href="#cb2-30" aria-hidden="true" tabindex="-1"></a>  <span class="at">defaultSorted =</span> <span class="st">"Package"</span>,</span>
+<span id="cb2-31"><a href="#cb2-31" aria-hidden="true" tabindex="-1"></a>  <span class="at">striped =</span> <span class="cn">TRUE</span>,</span>
+<span id="cb2-32"><a href="#cb2-32" aria-hidden="true" tabindex="-1"></a>  <span class="at">bordered =</span> <span class="cn">TRUE</span>,</span>
+<span id="cb2-33"><a href="#cb2-33" aria-hidden="true" tabindex="-1"></a>  <span class="at">highlight =</span> <span class="cn">TRUE</span>,</span>
+<span id="cb2-34"><a href="#cb2-34" aria-hidden="true" tabindex="-1"></a>  <span class="at">defaultPageSize =</span> <span class="dv">10</span>,</span>
+<span id="cb2-35"><a href="#cb2-35" aria-hidden="true" tabindex="-1"></a>  <span class="at">showPageSizeOptions =</span> <span class="cn">TRUE</span>,</span>
+<span id="cb2-36"><a href="#cb2-36" aria-hidden="true" tabindex="-1"></a>  <span class="at">compact =</span> <span class="cn">TRUE</span></span>
+<span id="cb2-37"><a href="#cb2-37" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output-display">
+<div class="reactable html-widget html-fill-item" id="htmlwidget-5ea7c6cf8cb20dfd3bc0" style="width:auto;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-5ea7c6cf8cb20dfd3bc0">{"x":{"tag":{"name":"Reactable","attribs":{"data":{"Package":["ACE","ADAMgui","ADAPT","ALDEx2","AMARETTO","APAlyzer","APL","ASICS","ASSIGN","ASURAT","ATACseqTFEA","AlphaBeta","AlphaMissenseR","AlpsNMR","AnVILBilling","Anaquin","AneuFinder","BANDITS","BASiCS","BOBaFIT","BPRMeth","BUSpaRse","BaalChIP","Banksy","BatchQC","BatchSVG","BayesSpace","BindingSiteFinder","BioCor","BioGA","BioNAR","BioNERO","BioQC","BioTIP","BiocHail","BloodCancerMultiOmics2017","BloodGen3Module","BreastSubtypeR","BubbleTree","BulkSignalR","CAFE","CAGEr","CARDspa","CATALYST","CBNplot","CCPlotR","CDI","CEMiTool","CHETAH","CIMICE","CLLmethylation","CNEr","CNVPanelizer","CNVrd2","COCOA","COMPASS","CONFESS","CONSTANd","COTAN","CPSM","CRISPRball","CSSQ","CTDquerier","CTexploreR","CaDrA","CaMutQC","CatsCradle","CeTF","CellBarcode","CellBench","CellMixS","CellNOptR","CellTrails","CelliD","Cepo","ChAMP","ChIPQC","ChIPexoQual","ChIPpeakAnno","ChIPseeker","ChemmineR","ChromSCape","CircSeqAlignTk","CiteFuse","ClassifyR","CleanUpRNAseq","CluMSID","ClustAll","ClustIRR","ClusterFoldSimilarity","ClusterSignificance","CoGAPS","CoSIA","Cogito","ComPrAn","CrispRVariants","CuratedAtlasQueryR","CytoGLMM","CytoMDS","CytoPipeline","CytoPipelineGUI","DAMEfinder","DAPAR","DEGreport","DELocal","DEP","DESeq2","DESpace","DEqMS","DEsubs","DOSE","DRIMSeq","DaMiRseq","Damsel","DeMixT","DeconRNASeq","DeconvoBuddies","DeepTarget","DegNorm","DepInfeR","DepecheR","DiffBind","DifferentialRegulation","Dino","DiscoRhythm","Doscheda","Dune","DuoClustering2018","EGSEA","ELMER","ELViS","EMDomics","ERSSA","EWCE","EasyCellType","EnMCB","EnhancedVolcano","EnrichDO","EpiCompare","EpiMix","EpiTxDb","EpipwR","ExpHunterSuite","ExploreModelMatrix","FLAMES","FRASER","FindIT2","FlowSOM","FuseSOM","G4SNVHunter","GARS","GBScleanR","GDCRNATools","GEM","GENESIS","GEOexplorer","GNET2","GOTHiC","GOexpress","GPA","GRENITS","GRaNIE","GRmetrics","GSCA","GSEAmining","GSVA","GSgalgoR","GUIDEseq","GWENA","GeDi","GenVisR","GeneTonic","GenomicDataCommons","GenomicDistributions","GenomicInteractions","GenomicOZone","GenomicPlot","GenomicSuperSignature","GeoMxWorkflows","GeomxTools","GladiaTOX","GloScope","GrafGen","Guitar","HCATonsilData","HDCytoData","HGC","HIBAG","HIPPO","HMP16SData","HMP2Data","HPAanalyze","HPiP","HiCBricks","HiCDOC","HiCcompare","HiContacts","HiLDA","HicAggR","HuBMAPR","HybridExpress","IHW","IHWpaper","ILoReg","IMAS","INTACT","IONiseR","ISAnalytics","IVAS","IgGeneUsage","InPAS","InTAD","InterCellar","IsoBayes","IsoformSwitchAnalyzeR","KnowSeq","LACE","LRcell","LedPred","LegATo","Lheuristic","LimROTS","LinTInd","LinkHD","Linnorm","LymphoSeq","M3C","MACSQuantifyR","MAPFX","MAST","MBECS","MBQN","MCbiclust","MEAL","MGnifyR","MICSQTL","MIRA","MIRit","MLSeq","MMDiff2","MMUPHin","MOFA2","MOMA","MOSClip","MOSim","MPAC","MSA2dist","MSnID","MSnbase","MSstats","MSstatsLOBD","MSstatsLiP","MSstatsPTM","MSstatsQC","MSstatsShiny","MSstatsTMT","MWASTools","Maaslin2","MatrixQCvis","Melissa","MerfishData","MesKit","MetCirc","MetMashR","MetNet","MetaCyto","MetaNeighbor","MetaPhOR","MetaScope","MetaboDynamics","MethReg","MethylAid","MethylMix","MicrobiomeBenchmarkData","MicrobiomeProfiler","MicrobiotaProcess","MineICA","MoleculeExperiment","Moonlight2R","MotifPeeker","MouseFM","MsQuality","MultiBaC","MultiDataSet","MultiRNAflow","MutationalPatterns","NBAMSeq","NPARC","NanoMethViz","NanoStringNCTools","NanoTube","Nebulosa","NestLink","NewWave","NoRCE","NormalyzerDE","OGRE","OMICsPCA","OPWeight","ORFik","OSCA.advanced","OUTRIDER","OVESEG","Omixer","OmnipathR","OncoSimulR","Organism.dplyr","PAST","PCAtools","PDATK","PICB","PIUMA","PLSDAbatch","POMA","POWSC","PPInfer","PRONE","PathoStat","PeacoQC","Pedixplorer","PepsNMR","PharmacoGx","PhenStat","PhosR","PhyloProfile","Pigengene","Pirat","PoDCall","Polytect","Prostar","ProteinGymR","ProteoDisco","ProteoMM","PureCN","QFeatures","QSutils","R3CPET","RAIDS","RAREsim","RCAS","RCM","RCSL","RESOLVE","RFLOMICS","RITAN","RIVER","RNAAgeCalc","RNAdecay","RNAmodR","RNAsense","RTCGA","RTNsurvival","RUCova","Rbec","Rcollectl","ReactomeGSA","ReactomePA","ReducedExperiment","RegEnrich","RegionalST","ReportingTools","Rfastp","RforProteomics","RgnTX","RiboCrypt","RiboDiPA","RiboProfiling","RnBeads","RnaSeqSampleSize","Rnits","Rqc","Rtpca","SARC","SC3","SCnorm","SEraster","SEtools","SGCP","SIMAT","SMITE","SNPhood","SOMNiBUS","SPIAT","SPLINTER","SPONGE","SPOTlight","STATegRa","SUITOR","SVP","SWATH2stats","Sconify","ScreenR","SeqSQC","SigFuge","SimBu","Single.mTEC.Transcriptomes","SingleCellAlleleExperiment","SingleCellMultiModal","SingleMoleculeFootprinting","SingleR","SingscoreAMLMutations","SomaticCancerAlterations","SomaticSignatures","SpaNorm","SpaceMarkers","Spaniel","SparseSignatures","SpatialCPie","SpatialOmicsOverlay","SpliceWiz","SplicingFactory","SplineDV","SpotClean","SpotSweeper","Statial","StructuralVariantAnnotation","SubCellBarCode","SubcellularSpatialData","SurfR","TADCompare","TAPseq","TBSignatureProfiler","TCGAbiolinks","TCseq","TEKRABber","TENET","TFEA.ChIP","TFutils","TOAST","TOP","TPP","TPP2D","TREG","TSAR","TSCAN","TVTB","TabulaMurisSenisData","TargetDecoy","TimerQuant","TissueEnrich","ToxicoGx","TrIdent","TrajectoryGeometry","TreeAndLeaf","TreeSummarizedExperiment","TumourMethData","UCell","UMI4Cats","Ularcirc","VDJdive","VarCon","VariantAnnotation","VennDetail","ViSEAGO","Voyager","VplotR","XAItest","XINA","Xeva","YAPSA","abseqR","affycoretools","aggregateBioVar","airpart","alevinQC","amplican","animalcules","annotatr","artMS","atSNP","autonomics","awst","bacon","bambu","bandle","barbieQ","barcodetrackR","basecallQC","beadarray","beer","benchdamic","benchmarkfdrData2019","betaHMM","bettr","bioassayR","biobroom","biotmle","borealis","branchpointer","breakpointR","broadSeq","bugphyzz","cTRAP","cageminer","cardelino","ceRNAnetsim","celaref","celda","cellity","cellmigRation","censcyt","cfDNAPro","cfdnakit","chevreulPlot","chevreulShiny","chromVAR","cicero","circRNAprofiler","clevRvis","cliProfiler","clustSIGNAL","clustifyr","coRdon","cogena","cogeqc","comapr","combi","compSPOT","compcodeR","concordexR","condiments","consICA","consensusOV","consensusSeekeR","corral","coseq","cosmosR","countsimQC","cpvSNP","crumblr","crupR","ctsGE","cummeRbund","curatedAdipoChIP","curatedAdipoRNA","curatedBreastData","curatedPCaData","cyanoFilter","cytofQC","cytomapper","dStruct","dada2","dar","dce","ddPCRclust","dearseq","debrowser","decompTumor2Sig","decontX","decontam","deconvR","decoupleR","deltaCaptureC","deltaGseg","demuxmix","densvis","depmap","derfinder","derfinderPlot","destiny","diffUTR","diffuStats","dinoR","distinct","dittoSeq","dmrseq","doubletrouble","drawProteins","dreamlet","drugTargetInteractions","easier","edge","enrichViewNet","enrichplot","epialleleR","epidecodeR","epigraHMM","epimutacions","epiregulon.extra","epistasisGA","erccdashboard","erma","esATAC","escape","escheR","esetVis","evaluomeR","ewceData","extraChIPs","fCCAC","factR","fedup","fenr","fgsea","flowAI","flowCHIC","flowGate","flowGraph","flowSpecs","flowTime","flowWorkspace","fluentGenomics","fobitools","furrowSeg","gCrisprTools","gINTomics","gatom","gcatest","gemini","gemma.R","geneplast","genomation","geyser","gg4way","ggbio","ggcyto","ggkegg","ggmanh","ggmsa","ggsc","ggseqalign","ggspavis","ggtree","ggtreeDendro","ggtreeExtra","ggtreeSpace","glmGamPoi","glmSparseNet","goSorensen","granulator","graper","h5vc","hdxmsqc","hermes","hiAnnotator","hicVennDiagram","hipathia","hoodscanR","hypeR","iBMQ","iCNV","iCOBRA","iPath","iSEE","iSEEfier","iSEEhex","iSEEpathways","iSEEtree","iSEEu","icetea","ideal","idpr","idr2d","imageTCGA","imcRtools","immApex","immunogenViewer","immunotation","infercnv","interactiveDisplay","isobar","isomiRs","ivygapSE","jazzPanda","katdetectr","kissDE","knowYourCG","lefser","levi","lfa","limpca","lipidr","lisaClust","lute","mCSEA","maEndToEnd","maaslin3","magrene","marr","maser","mastR","mbQTL","mdp","memes","messina","metabinR","metabomxtr","metagene2","metapone","methimpute","methodical","methrix","methylCC","methylGSA","methylInheritance","methylclock","methylumi","mfa","miQC","miaSim","miaViz","microSTASIS","microbiome","microbiomeDASim","midasHLA","miloR","mina","mirIntegrator","mirTarRnaSeq","missRows","mist","mistyR","mitch","mitoClone2","mitology","mixOmics","mnem","mobileRNA","monaLisa","monocle","mosdef","motifStack","motifTestR","msPurity","msgbsR","mspms","muSpaData","multiWGCNA","multicrispr","multistateQTL","muscat","musicatk","ncRNAtools","nearBynding","netSmooth","nethet","netprioR","netresponse","ngsReports","nipalsMCIA","nnSVG","nucleR","nullranges","octad","omada","omicRexposome","omicsViewer","oncomix","openPrimeR","oppti","orthogene","orthos","orthosData","pRoloc","pRolocGUI","padma","pairedGSEA","pandaR","pathMED","pathlinkR","pcaExplorer","pcaMethods","peakPantheR","pepStat","periodicDNA","pgxRpi","phantasus","phenoTest","phenomis","phenopath","philr","phyloseq","pipeComp","planet","plotGrouper","plotgardener","plyranges","pmp","poem","pogos","ppcseq","pqsfinder","proActiv","profileplyr","progeny","projectR","protGear","psichomics","ptairMS","qPLEXanalyzer","qckitfastq","qcmetrics","qmtools","qsvaR","quantiseqr","quantro","qvalue","rCGH","rTRM","ramr","rawDiag","rcellminer","receptLoss","reconsi","recount","recountmethylation","recoup","regionReport","regioneReloaded","retrofit","rexposome","rgoslin","rhdf5","ribor","ribosomeProfilingQC","rifi","rifiComparative","rnaseqGene","roastgsa","ropls","rprimer","rrvgo","sRACIPE","sSNAPPY","sampleClassifier","sarks","satuRn","scAnnotatR","scBFA","scBubbletree","scClassify","scDD","scDDboost","scDataviz","scDblFinder","scDesign3","scDiagnostics","scDotPlot","scFeatureFilter","scGPS","scHOT","scHiCcompare","scMET","scMitoMut","scMultiSim","scPCA","scPipe","scQTLtools","scRNAseqApp","scRepertoire","scTGIF","scTensor","scTreeViz","scanMiR","scanMiRApp","scater","scatterHatch","sccomp","schex","scider","scifer","scmap","scmeth","scone","scp","scruff","scry","scviR","seahtrue","selectKSigs","seqArchR","seqArchRplus","seqCAT","seqcombo","seqsetvis","sesame","shinyDSP","shinyepico","sights","signatureSearch","signeR","signifinder","simPIC","simpleSeg","simplifyEnrichment","sincell","singleCellTK","singscore","sitePath","sketchR","slalom","smartid","smoppix","snifter","soGGi","sosta","spaSim","spacexr","sparrow","spatialDE","spatialFDA","spatialHeatmap","spatialLIBD","spatialSimGP","spatzie","speckle","spicyR","spicyWorkflow","spiky","spillR","splatter","splots","spqn","squallms","ssPATHS","ssviz","stJoincount","standR","strandCheckR","struct","structToolbox","subSeq","supersigs","surfaltr","svaNUMT","svaRetro","swfdr","switchde","synapsis","synaptome.db","synergyfinder","synlet","syntenet","systemPipeR","systemPipeShiny","systemPipeTools","tLOH","tRNA","tRNAscanImport","tadar","tanggle","tidyCoverage","tidyFlowCore","tidySingleCellExperiment","tidySpatialExperiment","tidySummarizedExperiment","tidybulk","tidyomics","tidytof","timeOmics","tissueTreg","tomoda","tomoseqr","topconfects","topdownr","tradeSeq","transcriptR","transcriptogramer","transite","transmogR","treeclimbR","treeio","treekoR","tricycle","tuberculosis","twoddpcr","uSORT","universalmotif","variancePartition","velociraptor","vidger","visiumStitched","vissE","vmrseq","vsn","wavClusteR","weitrix","wiggleplotr","wpm","xCell2","xenLite","zFPKM","zenith","zinbwave","zitools"],"ggplot2_usage":["Imports","Imports","Imports","Suggests","Imports","Imports","Imports","Imports","Imports","Suggests","Imports","Imports","Imports","Imports","Imports","Depends","Depends","Imports","Imports","Imports","Imports","Imports","Imports","Suggests","Imports","Imports","Imports","Imports","Suggests","Imports","Imports","Imports","Suggests","Suggests","Suggests","Imports","Imports","Imports","Imports","Imports","Imports","Imports","Imports","Imports","Imports","Imports","Imports","Imports","Depends","Imports","Suggests","Imports","Imports","Depends","Imports","Suggests","Imports","Suggests","Imports","Imports","Imports","Imports","Imports","Imports","Imports","Imports","Imports","Imports","Imports","Suggests","Imports","Depends","Imports","Imports","Imports","Imports","Depends","Imports","Imports","Imports","Imports","Imports","Imports","Imports","Imports","Imports","Imports","Imports","Imports","Imports","Suggests","Imports","Imports","Imports","Imports","Depends","Suggests","Imports","Imports","Imports","Imports","Imports","Suggests","Imports","Imports","Imports","Imports","Imports","Depends","Imports","Imports","Imports","Depends","Imports","Imports","Depends","Imports","Imports","Imports","Suggests","Imports","Imports","Imports","Suggests","Imports","Imports","Imports","Imports","Imports","Imports","Imports","Imports","Imports","Imports","Imports","Imports","Depends","Imports","Imports","Imports","Suggests","Imports","Imports","Imports","Imports","Imports","Imports","Imports","Imports","Imports","Depends","Imports","Imports","Imports","Suggests","Imports","Imports","Imports","Imports","Imports","Depends","Imports","Imports","Depends","Imports","Suggests","Suggests","Imports","Imports","Imports","Imports","Imports","Suggests","Imports","Imports","Depends","Imports","Imports","Imports","Imports","Imports","Imports","Imports","Depends","Suggests","Suggests","Imports","Suggests","Imports","Suggests","Suggests","Imports","Imports","Imports","Imports","Imports","Imports","Depends","Imports","Suggests","Imports","Suggests","Imports","Imports","Depends","Imports","Imports","Imports","Depends","Suggests","Imports","Imports","Imports","Imports","Depends","Imports","Imports","Imports","Imports","Imports","Imports","Suggests","Depends","Depends","Imports","Imports","Imports","Imports","Imports","Imports","Imports","Imports","Imports","Imports","Suggests","Imports","Imports","Imports","Depends","Imports","Imports","Imports","Imports","Imports","Imports","Imports","Suggests","Imports","Imports","Imports","Imports","Imports","Imports","Imports","Imports","Imports","Imports","Imports","Imports","Imports","Suggests","Imports","Imports","Imports","Imports","Imports","Imports","Imports","Imports","Imports","Imports","Imports","Imports","Suggests","Imports","Imports","Depends","Imports","Imports","Imports","Imports","Imports","Imports","Imports","Imports","Imports","Suggests","Suggests","Depends","Depends","Depends","Depends","Suggests","Suggests","Imports","Imports","Imports","Imports","Suggests","Imports","Depends","Imports","Suggests","Imports","Suggests","Imports","Suggests","Imports","Depends","Imports","Suggests","Depends","Imports","Imports","Imports","Depends","Imports","Imports","Imports","Imports","Imports","Imports","Imports","Imports","Imports","Imports","Imports","Imports","Imports","Imports","Imports","Suggests","Imports","Imports","Suggests","Suggests","Imports","Imports","Suggests","Imports","Imports","Imports","Imports","Depends","Imports","Imports","Imports","Imports","Imports","Imports","Imports","Imports","Imports","Imports","Imports","Imports","Imports","Imports","Imports","Imports","Imports","Imports","Suggests","Imports","Imports","Imports","Imports","Depends","Depends","Depends","Depends","Imports","Imports","Imports","Imports","Imports","Suggests","Imports","Imports","Imports","Imports","Imports","Imports","Imports","Imports","Imports","Imports","Imports","Imports","Imports","Imports","Imports","Imports","Imports","Imports","Suggests","Suggests","Suggests","Imports","Suggests","Imports","Suggests","Imports","Imports","Imports","Imports","Imports","Imports","Imports","Imports","Suggests","Suggests","Imports","Imports","Imports","Suggests","Imports","Suggests","Imports","Imports","Suggests","Imports","Imports","Imports","Suggests","Imports","Suggests","Suggests","Imports","Imports","Imports","Imports","Suggests","Imports","Imports","Imports","Suggests","Imports","Imports","Depends","Imports","Imports","Imports","Suggests","Suggests","Suggests","Suggests","Imports","Imports","Imports","Imports","Suggests","Imports","Imports","Imports","Depends","Imports","Imports","Imports","Depends","Imports","Imports","Suggests","Imports","Imports","Imports","Imports","Imports","Imports","Imports","Imports","Suggests","Depends","Suggests","Imports","Imports","Imports","Imports","Imports","Suggests","Imports","Suggests","Imports","Imports","Suggests","Suggests","Imports","Imports","Imports","Imports","Imports","Suggests","Imports","Imports","Imports","Imports","Imports","Imports","Imports","Suggests","Suggests","Imports","Imports","Imports","Imports","Imports","Imports","Imports","Imports","Imports","Suggests","Imports","Imports","Depends","Imports","Imports","Imports","Imports","Imports","Suggests","Suggests","Imports","Suggests","Suggests","Imports","Imports","Suggests","Imports","Imports","Depends","Imports","Imports","Depends","Suggests","Suggests","Depends","Suggests","Imports","Imports","Imports","Imports","Imports","Imports","Imports","Imports","Imports","Imports","Depends","Imports","Imports","Suggests","Suggests","Imports","Depends","Imports","Suggests","Suggests","Suggests","Imports","Imports","Imports","Suggests","Imports","Imports","Depends","Imports","Imports","Imports","Depends","Suggests","Imports","Suggests","Suggests","Imports","Suggests","Imports","Imports","Imports","Imports","Imports","Depends","Imports","Imports","Imports","Depends","Suggests","Imports","Suggests","Depends","Imports","Imports","Imports","Imports","Imports","Imports","Imports","Imports","Imports","Imports","Suggests","Imports","Suggests","Imports","Suggests","Imports","Imports","Imports","Suggests","Imports","Suggests","Suggests","Imports","Imports","Depends","Depends","Depends","Depends","Depends","Imports","Imports","Imports","Depends","Imports","Imports","Imports","Imports","Suggests","Imports","Suggests","Imports","Imports","Depends","Imports","Imports","Imports","Imports","Imports","Imports","Imports","Depends","Imports","Imports","Imports","Imports","Imports","Imports","Imports","Imports","Imports","Imports","Imports","Imports","Imports","Imports","Imports","Suggests","Imports","Imports","Imports","Imports","Imports","Imports","Imports","Suggests","Imports","Imports","Imports","Imports","Imports","Suggests","Imports","Imports","Imports","Imports","Imports","Depends","Imports","Suggests","Imports","Depends","Imports","Imports","Imports","Imports","Imports","Suggests","Imports","Imports","Depends","Depends","Depends","Imports","Suggests","Imports","Imports","Imports","Depends","Imports","Imports","Suggests","Depends","Imports","Depends","Imports","Suggests","Imports","Imports","Imports","Depends","Depends","Suggests","Imports","Imports","Imports","Imports","Depends","Imports","Imports","Imports","Depends","Imports","Imports","Depends","Imports","Imports","Imports","Suggests","Imports","Imports","Imports","Imports","Imports","Imports","Imports","Suggests","Imports","Imports","Imports","Depends","Imports","Suggests","Imports","Imports","Depends","Depends","Imports","Imports","Imports","Imports","Imports","Imports","Imports","Suggests","Imports","Imports","Suggests","Imports","Imports","Imports","Imports","Imports","Suggests","Imports","Imports","Imports","Imports","Imports","Depends","Imports","Imports","Imports","Imports","Imports","Suggests","Imports","Suggests","Suggests","Imports","Suggests","Imports","Imports","Suggests","Imports","Imports","Imports","Imports","Imports","Imports","Imports","Imports","Imports","Suggests","Imports","Imports","Imports","Imports","Imports","Imports","Suggests","Suggests","Imports","Imports","Imports","Imports","Suggests","Suggests","Depends","Suggests","Imports","Suggests","Imports","Suggests","Suggests","Imports","Imports","Imports","Imports","Depends","Imports","Imports","Imports","Imports","Imports","Depends","Imports","Suggests","Imports","Imports","Imports","Imports","Imports","Imports","Depends","Imports","Suggests","Imports","Imports","Imports","Imports","Imports","Imports","Imports","Imports","Imports","Imports","Suggests","Imports","Imports","Imports","Depends","Imports","Imports","Imports","Imports","Imports","Depends","Imports","Imports","Depends","Imports","Imports","Imports","Suggests","Suggests","Imports","Imports","Suggests","Suggests","Imports","Suggests","Imports","Imports","Imports","Imports","Depends","Imports","Imports","Imports","Imports","Imports","Imports","Imports","Suggests","Suggests","Suggests","Imports","Imports","Imports","Imports","Imports","Imports","Imports","Imports","Suggests","Imports","Imports","Imports","Imports","Imports","Imports","Imports","Imports","Imports","Suggests","Imports","Imports","Imports","Suggests","Imports","Imports","Suggests","Suggests","Depends","Imports","Suggests","Depends","Imports","Imports","Depends","Suggests","Imports","Imports","Suggests","Imports","Suggests","Suggests","Suggests","Imports","Suggests","Suggests","Imports","Imports","Imports","Imports","Imports","Imports","Imports","Imports","Suggests","Depends","Depends","Imports","Imports","Imports","Imports","Imports","Suggests","Suggests","Imports","Imports","Suggests","Imports","Imports","Imports","Imports","Imports","Imports","Imports","Imports","Imports","Imports","Suggests","Imports","Imports","Suggests","Imports","Suggests","Imports","Depends","Suggests","Imports","Suggests","Imports","Imports","Imports","Imports","Imports","Imports","Imports","Suggests","Imports","Imports","Imports","Suggests","Imports"]},"columns":[{"id":"Package","name":"Package","type":"character"},{"id":"ggplot2_usage","name":"ggplot2 Usage","type":"character"}],"filterable":true,"searchable":true,"defaultSorted":[{"id":"Package","desc":false}],"defaultPageSize":10,"showPageSizeOptions":true,"highlight":true,"bordered":true,"striped":true,"compact":true,"dataKey":"b2f56ef1b9549cd7a695861f6d8f46bb"},"children":[]},"class":"reactR_markup"},"evals":[],"jsHooks":[]}</script>
+</div>
+</div>
+<p><strong>Note:</strong> Not all of these packages will be equally affected. In fact, many Bioconductor packages use <code>ggplot2</code> in straightforward ways (e.g.&nbsp;to create standard plots using <code>ggplot()</code> and <code>geom_*()</code>), which are unlikely to break. The packages most at risk are those that define custom geoms, themes, or modify internal <code>ggplot2</code> behaviour.</p>
+<p>A total of 985 packages in Bioconductor 3.21 declare <code>ggplot2</code> as a dependency: 91 in <code>Depends</code>, 722 in <code>Imports</code>, and 172 in <code>Suggests</code>.</p>
+<p>Packages listed under <code>Depends</code> or <code>Imports</code> are more likely to use <code>ggplot2</code> in their main functionality, so users and developers may see breakages. Those listed under <code>Suggests</code> typically only use <code>ggplot2</code> in optional examples or vignettes, and may not be affected unless those features are run.</p>
+<p>Developers of these packages have already been notified through the Bioconductor Zulip, the bioc-devel mailing list, and direct outreach on GitHub. Teun van den Brand from the <code>ggplot2</code> team has been contacting affected maintainers, and several packages have already been patched or are in progress.</p>
+</section>
+<section id="lessons-from-the-community-practical-tips" class="level3">
+<h3 class="anchored" data-anchor-id="lessons-from-the-community-practical-tips">Lessons from the Community: Practical Tips</h3>
+<p>Many developers have already been testing their packages and sharing their findings in the <a href="https://chat.bioconductor.org">Bioconductor Zulip</a>. These discussions have surfaced some practical tips and patterns to watch for, useful whether you’re maintaining a package or trying to understand why something might have broken:</p>
+<ul>
+<li><strong>Tests relying on internal structure may fail.</strong> Avoid checks like <code>class(p)</code> or <code>expect_type(p, "list")</code>. Use <code>expect_s3_class()</code> or helper functions like <code>is_ggplot()</code> instead.</li>
+<li><strong>Theme customisation is safer with best practices.</strong> Build from a base theme using <code>%+replace%</code>, and avoid storing theme objects in compiled code.</li>
+<li><strong>Related packages matter.</strong> Updating packages like <code>patchwork</code> or <code>plotly</code> may help if your code uses them alongside <code>ggplot2</code>.</li>
+<li><strong>Make your package easy to find and fix.</strong> Ensure your <code>DESCRIPTION</code> includes <code>URL</code> and <code>BugReports</code> fields so others can locate your repo or report issues.</li>
+</ul>
+<p>You can follow the discussion in the <a href="https://chat.bioconductor.org/">Bioconductor Zulip</a> topic: <em>Notifying Bioc maintainers (ggplot2 S7 reverse deps)</em>.</p>
+</section>
+</section>
+<section id="for-users" class="level2">
+<h2 class="anchored" data-anchor-id="for-users">For Users</h2>
+<section id="why-this-might-break-your-code" class="level3">
+<h3 class="anchored" data-anchor-id="why-this-might-break-your-code">Why This Might Break Your Code</h3>
+<p><a href="https://bioconductor.org/about/release-announcements/">Bioconductor has two scheduled releases</a> a year, and those versions are mostly fixed once released. But CRAN packages like <code>ggplot2</code> update more frequently, and those updates can occasionally break Bioconductor packages, especially if you install the new version before Bioconductor packages have had a chance to adapt. In some cases, developers can patch their packages within the current Bioconductor release. But not always, it depends on the issue and whether the maintainer has time and capacity to update quickly.</p>
+<p>This <code>ggplot2</code> update doesn’t mean your whole installation will break. In most cases, only some plotting functionality might stop working, or plots may look different e.g.&nbsp;missing labels or themes.</p>
+</section>
+<section id="what-you-can-do" class="level3">
+<h3 class="anchored" data-anchor-id="what-you-can-do">What You Can Do</h3>
+<p>If you use <code>ggplot2</code>, either directly or via a Bioconductor package, this update may affect you.</p>
+<p>Breakages can happen if you:</p>
+<ul>
+<li>Run <code>update.packages()</code><br>
+</li>
+<li>Install a CRAN or GitHub package that pulls in the new <code>ggplot2</code><br>
+</li>
+<li>Use a package manager like <code>{pak}</code> that updates dependencies automatically</li>
+</ul>
+<p><strong>To avoid disruptions</strong>:</p>
+<ul>
+<li><strong>Hold off updating <code>ggplot2</code> until you’ve tested that it works with your code and the packages you use.</strong></li>
+<li><strong>You can already test with the development version, see below.</strong></li>
+</ul>
+<p>If your code is working as expected, you don’t need to act immediately. But testing ahead of the CRAN release can give you confidence that everything will continue working once <code>ggplot2</code> 4.0.0 is out.</p>
+</section>
+<section id="how-to-check-if-youre-affected" class="level3">
+<h3 class="anchored" data-anchor-id="how-to-check-if-youre-affected">How to Check If You’re Affected</h3>
+<p>The development version of ggplot2 (4.0.0) is already available for testing using {pak}. The CRAN release is expected mid-to-late July. If you’re not sure whether to update once it’s out, here’s how you can test your current setup ahead of time.</p>
+<ul>
+<li>Create a temporary or isolated R project (e.g.&nbsp;using <code>{renv}</code> or RStudio Project)</li>
+<li>Install the development version of <code>ggplot2</code>:</li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"pak"</span>)</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>pak<span class="sc">::</span><span class="fu">pak</span>(<span class="st">"tidyverse/ggplot2"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<ul>
+<li>Re-run your code and check that plots appear as expected</li>
+</ul>
+<p>If something breaks, you can always roll back, or just hold off updating until patches are released.</p>
+</section>
+<section id="tools-to-help" class="level3">
+<h3 class="anchored" data-anchor-id="tools-to-help">Tools to Help</h3>
+<p>To manage versions and avoid surprises:</p>
+<ul>
+<li><p>Use <code>{renv}</code> to snapshot your current setup:</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a reproducible project setup</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>renv<span class="sc">::</span><span class="fu">init</span>()</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>renv<span class="sc">::</span><span class="fu">snapshot</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
+<li><p>When updating, use:</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">update.packages</span>(<span class="at">ask =</span> <span class="cn">TRUE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
+</ul>
+<p>and consider skipping <code>ggplot2</code> if you’re unsure.</p>
+</section>
+</section>
+<section id="final-notes" class="level2">
+<h2 class="anchored" data-anchor-id="final-notes">Final Notes</h2>
+<p>Thanks to everyone who has tested, reported, or patched packages ahead of this release. Special thanks to <a href="https://github.com/teunbrand">Teun van den Brand</a> and the <code>ggplot2</code> team for their proactive and open collaboration with the Bioconductor community.</p>
+<p>If you maintain a package using <code>ggplot2</code> and haven’t tested it yet, testing now can help your users, and save others from running into the same issues.</p>
+<p>Not a developer? Reporting even small glitches after updating ggplot2 can still be useful, if the issue isn’t already known. Before posting, it’s worth checking if the problem has been reported on the package’s GitHub or discussed in Bioconductor Zulip. If it has, you can add a comment or emoji reaction to help signal it’s affecting others too. That kind of input helps maintainers prioritise and can save time for everyone.</p>
+<p>Fixes may take time to propagate, especially with so many interdependent packages, and most Bioconductor maintainers contributing alongside full academic workloads. But progress is steady, and made easier when people flag issues early.</p>
+<p>Big changes like this aren’t always smooth, but open communication goes a long way. Whether you’re maintaining a package, reporting a bug, or just keeping an eye out, it all helps. Thanks for reading, and for being part of this collaborative process.</p>
+
+
+<!-- -->
+
+</section>
+</section>
+
+<p>
+© 2025 Bioconductor. Content is published under <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons CC-BY-4.0 License</a> for the text and <a href="https://opensource.org/licenses/BSD-3-Clause">BSD 3-Clause License</a> for any code. | <a href="https://www.r-bloggers.com">R-Bloggers</a>
+</p></main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+        const codeEl = trigger.previousElementSibling.cloneNode(true);
+        for (const childEl of codeEl.children) {
+          if (isCodeAnnotation(childEl)) {
+            childEl.remove();
+          }
+        }
+        return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+    const viewSource = window.document.getElementById('quarto-view-source') ||
+                       window.document.getElementById('quarto-code-tools-source');
+    if (viewSource) {
+      const sourceUrl = viewSource.getAttribute("data-quarto-source-url");
+      viewSource.addEventListener("click", function(e) {
+        if (sourceUrl) {
+          // rstudio viewer pane
+          if (/\bcapabilities=\b/.test(window.location)) {
+            window.open(sourceUrl);
+          } else {
+            window.location.href = sourceUrl;
+          }
+        } else {
+          const modal = new bootstrap.Modal(document.getElementById('quarto-embedded-source-code-modal'));
+          modal.show();
+        }
+        return false;
+      });
+    }
+    function toggleCodeHandler(show) {
+      return function(e) {
+        const detailsSrc = window.document.querySelectorAll(".cell > details > .sourceCode");
+        for (let i=0; i<detailsSrc.length; i++) {
+          const details = detailsSrc[i].parentElement;
+          if (show) {
+            details.open = true;
+          } else {
+            details.removeAttribute("open");
+          }
+        }
+        const cellCodeDivs = window.document.querySelectorAll(".cell > .sourceCode");
+        const fromCls = show ? "hidden" : "unhidden";
+        const toCls = show ? "unhidden" : "hidden";
+        for (let i=0; i<cellCodeDivs.length; i++) {
+          const codeDiv = cellCodeDivs[i];
+          if (codeDiv.classList.contains(fromCls)) {
+            codeDiv.classList.remove(fromCls);
+            codeDiv.classList.add(toCls);
+          } 
+        }
+        return false;
+      }
+    }
+    const hideAllCode = window.document.getElementById("quarto-hide-all-code");
+    if (hideAllCode) {
+      hideAllCode.addEventListener("click", toggleCodeHandler(false));
+    }
+    const showAllCode = window.document.getElementById("quarto-show-all-code");
+    if (showAllCode) {
+      showAllCode.addEventListener("click", toggleCodeHandler(true));
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/blog\.bioconductor\.org\/");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
+<div class="sourceCode" id="cb6" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> "Bioconductor and ggplot2 4.0.0: What’s Changing and How to Prepare"</span></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="an">description:</span><span class="co"> "Preparing for the upcoming update - key changes, potential breakages, and what developers and users can do"</span></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a><span class="an">author:</span><span class="co"> "Maria Doyle (Bioconductor Community Manager), with contributions from the Bioconductor and ggplot2 developer communities"</span></span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a><span class="an">date:</span><span class="co"> 2025-07-07</span></span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a><span class="an">image:</span><span class="co"> "bioc-ggpot2-r_logos.png"</span></span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a><span class="an">categories:</span><span class="co"> tech-notes</span></span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a><span class="an">format:</span></span>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a><span class="co">  html:</span></span>
+<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a><span class="co">    toc: true</span></span>
+<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a><span class="co">    toc-depth: 2</span></span>
+<span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a><span class="co">    code-fold: true</span></span>
+<span id="cb6-13"><a href="#cb6-13" aria-hidden="true" tabindex="-1"></a><span class="co">    code-tools: true</span></span>
+<span id="cb6-14"><a href="#cb6-14" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb6-15"><a href="#cb6-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-16"><a href="#cb6-16" aria-hidden="true" tabindex="-1"></a><span class="fu"># Introduction</span></span>
+<span id="cb6-17"><a href="#cb6-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-18"><a href="#cb6-18" aria-hidden="true" tabindex="-1"></a>A major update to <span class="in">`ggplot2`</span> (version 4.0.0) is expected around **mid-to-late July 2025**. It brings a significant internal change, replacing most of the S3 backend with the newer S7 object system. While this improves long-term maintainability and extensibility, it may break Bioconductor packages that depend on <span class="in">`ggplot2`</span>, especially those that customise how plots are built or styled. Packages that use <span class="in">`ggplot2`</span> for typical plotting tasks, such as creating plots with <span class="in">`ggplot()`</span> and <span class="in">`geom_*()`</span>, are unlikely to be affected.</span>
+<span id="cb6-19"><a href="#cb6-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-20"><a href="#cb6-20" aria-hidden="true" tabindex="-1"></a><span class="fu">## TL;DR</span></span>
+<span id="cb6-21"><a href="#cb6-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-22"><a href="#cb6-22" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="in">`ggplot2`</span> 4.0.0 is a major internal update switching to S7 classes</span>
+<span id="cb6-23"><a href="#cb6-23" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Some Bioconductor packages may break, especially those customising <span class="in">`ggplot`</span> themes/geoms</span>
+<span id="cb6-24"><a href="#cb6-24" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Only affects plotting - statistical or modelling functions remain unchanged</span>
+<span id="cb6-25"><a href="#cb6-25" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>If you're a user, hold off updating ggplot2 until your packages are confirmed to work</span>
+<span id="cb6-26"><a href="#cb6-26" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>If you're a developer, test now using <span class="in">`pak::pak("tidyverse/ggplot2")`</span> to prepare before release</span>
+<span id="cb6-27"><a href="#cb6-27" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Questions or issues? Join us on <span class="co">[</span><span class="ot">Zulip</span><span class="co">](https://chat.bioconductor.org/)</span></span>
+<span id="cb6-28"><a href="#cb6-28" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-29"><a href="#cb6-29" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-30"><a href="#cb6-30" aria-hidden="true" tabindex="-1"></a><span class="fu">## What’s Changing?</span></span>
+<span id="cb6-31"><a href="#cb6-31" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-32"><a href="#cb6-32" aria-hidden="true" tabindex="-1"></a>The 4.0.0 release of <span class="in">`ggplot2`</span> introduces a major internal refactor: S3 classes are being migrated to the new S7 system. While most users won’t notice the difference, some packages rely on how <span class="in">`ggplot2`</span> is built internally, for example, by modifying its themes, geoms, or using helper functions. These packages (e.g. <span class="in">`ComplexUpset`</span>, <span class="in">`ggtree`</span>, <span class="in">`plotly`</span>) may break if that internal structure changes.</span>
+<span id="cb6-33"><a href="#cb6-33" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-34"><a href="#cb6-34" aria-hidden="true" tabindex="-1"></a>Some issues may be minor, like test failures, while others may cause runtime errors. Either way, this is a good time to review your usage.</span>
+<span id="cb6-35"><a href="#cb6-35" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-36"><a href="#cb6-36" aria-hidden="true" tabindex="-1"></a><span class="fu">## Why S7?</span></span>
+<span id="cb6-37"><a href="#cb6-37" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-38"><a href="#cb6-38" aria-hidden="true" tabindex="-1"></a>S7 is a new object-oriented system in R that makes packages more robust, predictable, and easier to extend. It gives developers better tools for managing complex code, but switching to it can affect packages that rely on how things used to work under the old system (S3).</span>
+<span id="cb6-39"><a href="#cb6-39" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-40"><a href="#cb6-40" aria-hidden="true" tabindex="-1"></a>It offers:</span>
+<span id="cb6-41"><a href="#cb6-41" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-42"><a href="#cb6-42" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Formal class and method definitions\</span>
+<span id="cb6-43"><a href="#cb6-43" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Limited multiple dispatch\</span>
+<span id="cb6-44"><a href="#cb6-44" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Cleaner support for interoperability\</span>
+<span id="cb6-45"><a href="#cb6-45" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Greater consistency across packages</span>
+<span id="cb6-46"><a href="#cb6-46" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-47"><a href="#cb6-47" aria-hidden="true" tabindex="-1"></a>S7 is being developed by the R Consortium’s OOP Working Group, with contributors from R Core, Bioconductor, Posit, and others.</span>
+<span id="cb6-48"><a href="#cb6-48" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-49"><a href="#cb6-49" aria-hidden="true" tabindex="-1"></a>Learn more about S7 in the <span class="co">[</span><span class="ot">tidyverse blog</span><span class="co">](https://www.tidyverse.org/blog/2024/11/s7-0-2-0/)</span> and on the <span class="co">[</span><span class="ot">R Consortium site</span><span class="co">]</span>((https://rconsortium.github.io/S7/index.html).</span>
+<span id="cb6-50"><a href="#cb6-50" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-51"><a href="#cb6-51" aria-hidden="true" tabindex="-1"></a><span class="fu">## For Developers</span></span>
+<span id="cb6-52"><a href="#cb6-52" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-53"><a href="#cb6-53" aria-hidden="true" tabindex="-1"></a><span class="fu">### What Developers Should Do Now</span></span>
+<span id="cb6-54"><a href="#cb6-54" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-55"><a href="#cb6-55" aria-hidden="true" tabindex="-1"></a>You can test your package against the development version of <span class="in">`ggplot2`</span> using:</span>
+<span id="cb6-56"><a href="#cb6-56" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-57"><a href="#cb6-57" aria-hidden="true" tabindex="-1"></a><span class="in">```r</span></span>
+<span id="cb6-58"><a href="#cb6-58" aria-hidden="true" tabindex="-1"></a><span class="co"># install.packages("pak")</span></span>
+<span id="cb6-59"><a href="#cb6-59" aria-hidden="true" tabindex="-1"></a>pak<span class="sc">::</span><span class="fu">pak</span>(<span class="st">"tidyverse/ggplot2"</span>)</span>
+<span id="cb6-60"><a href="#cb6-60" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb6-61"><a href="#cb6-61" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-62"><a href="#cb6-62" aria-hidden="true" tabindex="-1"></a>We recommend testing in a clean or isolated environment (e.g. <span class="in">`{renv}`</span>, <span class="in">`{callr}`</span>) to avoid unexpected interactions.</span>
+<span id="cb6-63"><a href="#cb6-63" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-64"><a href="#cb6-64" aria-hidden="true" tabindex="-1"></a>If you find issues:</span>
+<span id="cb6-65"><a href="#cb6-65" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-66"><a href="#cb6-66" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Report a bug: <span class="co">[</span><span class="ot">github.com/tidyverse/ggplot2/issues</span><span class="co">](https://github.com/tidyverse/ggplot2/issues)</span>  </span>
+<span id="cb6-67"><a href="#cb6-67" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Tag <span class="co">[</span><span class="ot">@teunbrand on GitHub</span><span class="co">](https://github.com/teunbrand)</span> if you'd like input from the <span class="in">`ggplot2`</span> team</span>
+<span id="cb6-68"><a href="#cb6-68" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Discuss with the Bioconductor community: Post in <span class="co">[</span><span class="ot">Bioconductor Zulip</span><span class="co">](https://chat.bioconductor.org/)</span> or email the <span class="in">`bioc-devel@r-project.org`</span> mailing list </span>
+<span id="cb6-69"><a href="#cb6-69" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-70"><a href="#cb6-70" aria-hidden="true" tabindex="-1"></a><span class="fu">### Common Issues Already Reported</span></span>
+<span id="cb6-71"><a href="#cb6-71" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-72"><a href="#cb6-72" aria-hidden="true" tabindex="-1"></a>These are specific breakages already reported on the <span class="in">`ggplot2`</span> GitHub:</span>
+<span id="cb6-73"><a href="#cb6-73" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-74"><a href="#cb6-74" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Class checks**: Tests relying on exact class structures like <span class="in">`class(p)`</span> or <span class="in">`expect_type(p, "list")`</span> may now fail. Instead, use <span class="in">`expect_true(is_ggplot(p))`</span> or <span class="in">`expect_s3_class(p, "ggplot")`</span> for compatibility. See <span class="co">[</span><span class="ot">#6498</span><span class="co">](https://github.com/tidyverse/ggplot2/issues/6498)</span>.</span>
+<span id="cb6-75"><a href="#cb6-75" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Label handling**: Labels are now stricter and constructed later in the build step. Use <span class="in">`get_labs()`</span> in tests, and avoid unnamed or duplicate arguments in <span class="in">`labs()`</span>. See <span class="co">[</span><span class="ot">#6505</span><span class="co">](https://github.com/tidyverse/ggplot2/issues/6505)</span>.</span>
+<span id="cb6-76"><a href="#cb6-76" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Custom + methods**: Packages defining custom + operators (e.g. <span class="in">`+.gg`</span>) may need to revise their implementation, especially with mixed S3/S7 class use. See <span class="co">[</span><span class="ot">#6504</span><span class="co">](https://github.com/tidyverse/ggplot2/issues/6504)</span>.</span>
+<span id="cb6-77"><a href="#cb6-77" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Invalid element properties**: With S7 class adoption, element constructors like <span class="in">`element_text()`</span> now enforce stricter type checks (e.g. no TRUE for family, no decimal colours). Fix the incorrect properties in your package. See <span class="co">[</span><span class="ot">#6507</span><span class="co">](https://github.com/tidyverse/ggplot2/issues/6507)</span>.</span>
+<span id="cb6-78"><a href="#cb6-78" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**S3 method consistency**: Generics like <span class="in">`ggplot_build()`</span> and <span class="in">`ggplot_add()`</span> now include <span class="in">`...`</span> Your methods must include it too, even if unused, to avoid warnings. See <span class="co">[</span><span class="ot">#6515</span><span class="co">](https://github.com/tidyverse/ggplot2/issues/6515)</span>.</span>
+<span id="cb6-79"><a href="#cb6-79" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-80"><a href="#cb6-80" aria-hidden="true" tabindex="-1"></a>These are evolving, if something looks broken, it’s worth checking the <span class="co">[</span><span class="ot">ggplot2 issues page</span><span class="co">](https://github.com/tidyverse/ggplot2/issues)</span> for updates before opening a new one.</span>
+<span id="cb6-81"><a href="#cb6-81" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-82"><a href="#cb6-82" aria-hidden="true" tabindex="-1"></a>The Bioconductor core team has also been running automated tests on a subset of packages to help spot issues early. Due to resource constraints, this currently covers only a portion of the ecosystem, so it’s still important for developers to test their own packages.</span>
+<span id="cb6-83"><a href="#cb6-83" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-84"><a href="#cb6-84" aria-hidden="true" tabindex="-1"></a><span class="fu">### How Bioconductor Packages May Be Affected</span></span>
+<span id="cb6-85"><a href="#cb6-85" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-86"><a href="#cb6-86" aria-hidden="true" tabindex="-1"></a>We’ve compiled a list of packages in Bioconductor 3.21 that declare <span class="in">`ggplot2`</span> in <span class="in">`Depends`</span>, <span class="in">`Imports`</span>, or <span class="in">`Suggests`</span>:</span>
+<span id="cb6-87"><a href="#cb6-87" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-88"><a href="#cb6-88" aria-hidden="true" tabindex="-1"></a><span class="in">````{r message=FALSE, warning=FALSE}</span></span>
+<span id="cb6-89"><a href="#cb6-89" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(BiocManager)</span>
+<span id="cb6-90"><a href="#cb6-90" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb6-91"><a href="#cb6-91" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(reactable)</span>
+<span id="cb6-92"><a href="#cb6-92" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-93"><a href="#cb6-93" aria-hidden="true" tabindex="-1"></a>repos <span class="ot">&lt;-</span> <span class="fu">repositories</span>(<span class="at">version =</span> <span class="st">"3.21"</span>)</span>
+<span id="cb6-94"><a href="#cb6-94" aria-hidden="true" tabindex="-1"></a>bioc_repos <span class="ot">&lt;-</span> repos[<span class="fu">grepl</span>(<span class="st">"BioC"</span>, <span class="fu">names</span>(repos))]</span>
+<span id="cb6-95"><a href="#cb6-95" aria-hidden="true" tabindex="-1"></a>db <span class="ot">&lt;-</span> <span class="fu">available.packages</span>(<span class="fu">contrib.url</span>(bioc_repos))</span>
+<span id="cb6-96"><a href="#cb6-96" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-97"><a href="#cb6-97" aria-hidden="true" tabindex="-1"></a>pkg_df <span class="ot">&lt;-</span> <span class="fu">as_tibble</span>(db) <span class="sc">%&gt;%</span></span>
+<span id="cb6-98"><a href="#cb6-98" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(</span>
+<span id="cb6-99"><a href="#cb6-99" aria-hidden="true" tabindex="-1"></a>    <span class="at">ggplot2_usage =</span> <span class="fu">case_when</span>(</span>
+<span id="cb6-100"><a href="#cb6-100" aria-hidden="true" tabindex="-1"></a>      <span class="fu">grepl</span>(<span class="st">"ggplot2"</span>, Depends) <span class="sc">~</span> <span class="st">"Depends"</span>,</span>
+<span id="cb6-101"><a href="#cb6-101" aria-hidden="true" tabindex="-1"></a>      <span class="fu">grepl</span>(<span class="st">"ggplot2"</span>, Imports) <span class="sc">~</span> <span class="st">"Imports"</span>,</span>
+<span id="cb6-102"><a href="#cb6-102" aria-hidden="true" tabindex="-1"></a>      <span class="fu">grepl</span>(<span class="st">"ggplot2"</span>, Suggests) <span class="sc">~</span> <span class="st">"Suggests"</span>,</span>
+<span id="cb6-103"><a href="#cb6-103" aria-hidden="true" tabindex="-1"></a>      <span class="cn">TRUE</span> <span class="sc">~</span> <span class="cn">NA_character_</span></span>
+<span id="cb6-104"><a href="#cb6-104" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb6-105"><a href="#cb6-105" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">%&gt;%</span></span>
+<span id="cb6-106"><a href="#cb6-106" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(<span class="sc">!</span><span class="fu">is.na</span>(ggplot2_usage)) <span class="sc">%&gt;%</span></span>
+<span id="cb6-107"><a href="#cb6-107" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(Package, ggplot2_usage) <span class="sc">%&gt;%</span></span>
+<span id="cb6-108"><a href="#cb6-108" aria-hidden="true" tabindex="-1"></a>  <span class="fu">arrange</span>(Package)</span>
+<span id="cb6-109"><a href="#cb6-109" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-110"><a href="#cb6-110" aria-hidden="true" tabindex="-1"></a><span class="fu">reactable</span>(</span>
+<span id="cb6-111"><a href="#cb6-111" aria-hidden="true" tabindex="-1"></a>  pkg_df,</span>
+<span id="cb6-112"><a href="#cb6-112" aria-hidden="true" tabindex="-1"></a>  <span class="at">searchable =</span> <span class="cn">TRUE</span>,</span>
+<span id="cb6-113"><a href="#cb6-113" aria-hidden="true" tabindex="-1"></a>  <span class="at">filterable =</span> <span class="cn">TRUE</span>,</span>
+<span id="cb6-114"><a href="#cb6-114" aria-hidden="true" tabindex="-1"></a>  <span class="at">columns =</span> <span class="fu">list</span>(</span>
+<span id="cb6-115"><a href="#cb6-115" aria-hidden="true" tabindex="-1"></a>    <span class="at">Package =</span> <span class="fu">colDef</span>(<span class="at">name =</span> <span class="st">"Package"</span>),</span>
+<span id="cb6-116"><a href="#cb6-116" aria-hidden="true" tabindex="-1"></a>    <span class="at">ggplot2_usage =</span> <span class="fu">colDef</span>(<span class="at">name =</span> <span class="st">"ggplot2 Usage"</span>)</span>
+<span id="cb6-117"><a href="#cb6-117" aria-hidden="true" tabindex="-1"></a>  ),</span>
+<span id="cb6-118"><a href="#cb6-118" aria-hidden="true" tabindex="-1"></a>  <span class="at">defaultSorted =</span> <span class="st">"Package"</span>,</span>
+<span id="cb6-119"><a href="#cb6-119" aria-hidden="true" tabindex="-1"></a>  <span class="at">striped =</span> <span class="cn">TRUE</span>,</span>
+<span id="cb6-120"><a href="#cb6-120" aria-hidden="true" tabindex="-1"></a>  <span class="at">bordered =</span> <span class="cn">TRUE</span>,</span>
+<span id="cb6-121"><a href="#cb6-121" aria-hidden="true" tabindex="-1"></a>  <span class="at">highlight =</span> <span class="cn">TRUE</span>,</span>
+<span id="cb6-122"><a href="#cb6-122" aria-hidden="true" tabindex="-1"></a>  <span class="at">defaultPageSize =</span> <span class="dv">10</span>,</span>
+<span id="cb6-123"><a href="#cb6-123" aria-hidden="true" tabindex="-1"></a>  <span class="at">showPageSizeOptions =</span> <span class="cn">TRUE</span>,</span>
+<span id="cb6-124"><a href="#cb6-124" aria-hidden="true" tabindex="-1"></a>  <span class="at">compact =</span> <span class="cn">TRUE</span></span>
+<span id="cb6-125"><a href="#cb6-125" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb6-126"><a href="#cb6-126" aria-hidden="true" tabindex="-1"></a><span class="in">````</span></span>
+<span id="cb6-127"><a href="#cb6-127" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-128"><a href="#cb6-128" aria-hidden="true" tabindex="-1"></a>**Note:** Not all of these packages will be equally affected. In fact, many Bioconductor packages use <span class="in">`ggplot2`</span> in straightforward ways (e.g. to create standard plots using <span class="in">`ggplot()`</span> and <span class="in">`geom_*()`</span>), which are unlikely to break. The packages most at risk are those that define custom geoms, themes, or modify internal <span class="in">`ggplot2`</span> behaviour. </span>
+<span id="cb6-129"><a href="#cb6-129" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-130"><a href="#cb6-130" aria-hidden="true" tabindex="-1"></a>A total of 985 packages in Bioconductor 3.21 declare <span class="in">`ggplot2`</span> as a dependency: 91 in <span class="in">`Depends`</span>, 722 in <span class="in">`Imports`</span>, and 172 in <span class="in">`Suggests`</span>.</span>
+<span id="cb6-131"><a href="#cb6-131" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-132"><a href="#cb6-132" aria-hidden="true" tabindex="-1"></a>Packages listed under <span class="in">`Depends`</span> or <span class="in">`Imports`</span> are more likely to use <span class="in">`ggplot2`</span> in their main functionality, so users and developers may see breakages. Those listed under <span class="in">`Suggests`</span> typically only use <span class="in">`ggplot2`</span> in optional examples or vignettes, and may not be affected unless those features are run.</span>
+<span id="cb6-133"><a href="#cb6-133" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-134"><a href="#cb6-134" aria-hidden="true" tabindex="-1"></a>Developers of these packages have already been notified through the Bioconductor Zulip, the bioc-devel mailing list, and direct outreach on GitHub. Teun van den Brand from the <span class="in">`ggplot2`</span> team has been contacting affected maintainers, and several packages have already been patched or are in progress.</span>
+<span id="cb6-135"><a href="#cb6-135" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-136"><a href="#cb6-136" aria-hidden="true" tabindex="-1"></a><span class="fu">### Lessons from the Community: Practical Tips</span></span>
+<span id="cb6-137"><a href="#cb6-137" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-138"><a href="#cb6-138" aria-hidden="true" tabindex="-1"></a>Many developers have already been testing their packages and sharing their findings in the <span class="co">[</span><span class="ot">Bioconductor Zulip</span><span class="co">](https://chat.bioconductor.org)</span>. These discussions have surfaced some practical tips and patterns to watch for, useful whether you're maintaining a package or trying to understand why something might have broken:</span>
+<span id="cb6-139"><a href="#cb6-139" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-140"><a href="#cb6-140" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Tests relying on internal structure may fail.** Avoid checks like <span class="in">`class(p)`</span> or <span class="in">`expect_type(p, "list")`</span>. Use <span class="in">`expect_s3_class()`</span> or helper functions like <span class="in">`is_ggplot()`</span> instead.</span>
+<span id="cb6-141"><a href="#cb6-141" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Theme customisation is safer with best practices.** Build from a base theme using <span class="in">`%+replace%`</span>, and avoid storing theme objects in compiled code.</span>
+<span id="cb6-142"><a href="#cb6-142" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Related packages matter.** Updating packages like <span class="in">`patchwork`</span> or <span class="in">`plotly`</span> may help if your code uses them alongside <span class="in">`ggplot2`</span>.</span>
+<span id="cb6-143"><a href="#cb6-143" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Make your package easy to find and fix.** Ensure your <span class="in">`DESCRIPTION`</span> includes <span class="in">`URL`</span> and <span class="in">`BugReports`</span> fields so others can locate your repo or report issues.</span>
+<span id="cb6-144"><a href="#cb6-144" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-145"><a href="#cb6-145" aria-hidden="true" tabindex="-1"></a>You can follow the discussion in the <span class="co">[</span><span class="ot">Bioconductor Zulip</span><span class="co">](https://chat.bioconductor.org/)</span> topic: *Notifying Bioc maintainers (ggplot2 S7 reverse deps)*.</span>
+<span id="cb6-146"><a href="#cb6-146" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-147"><a href="#cb6-147" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-148"><a href="#cb6-148" aria-hidden="true" tabindex="-1"></a><span class="fu">## For Users</span></span>
+<span id="cb6-149"><a href="#cb6-149" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-150"><a href="#cb6-150" aria-hidden="true" tabindex="-1"></a><span class="fu">### Why This Might Break Your Code</span></span>
+<span id="cb6-151"><a href="#cb6-151" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-152"><a href="#cb6-152" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">Bioconductor has two scheduled releases</span><span class="co">](https://bioconductor.org/about/release-announcements/)</span> a year, and those versions are mostly fixed once released. But CRAN packages like <span class="in">`ggplot2`</span> update more frequently, and those updates can occasionally break Bioconductor packages, especially if you install the new version before Bioconductor packages have had a chance to adapt. In some cases, developers can patch their packages within the current Bioconductor release. But not always, it depends on the issue and whether the maintainer has time and capacity to update quickly.</span>
+<span id="cb6-153"><a href="#cb6-153" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-154"><a href="#cb6-154" aria-hidden="true" tabindex="-1"></a>This <span class="in">`ggplot2`</span> update doesn’t mean your whole installation will break. In most cases, only some plotting functionality might stop working, or plots may look different e.g. missing labels or themes.</span>
+<span id="cb6-155"><a href="#cb6-155" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-156"><a href="#cb6-156" aria-hidden="true" tabindex="-1"></a><span class="fu">### What You Can Do</span></span>
+<span id="cb6-157"><a href="#cb6-157" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-158"><a href="#cb6-158" aria-hidden="true" tabindex="-1"></a>If you use <span class="in">`ggplot2`</span>, either directly or via a Bioconductor package, this update may affect you.</span>
+<span id="cb6-159"><a href="#cb6-159" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-160"><a href="#cb6-160" aria-hidden="true" tabindex="-1"></a>Breakages can happen if you:</span>
+<span id="cb6-161"><a href="#cb6-161" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-162"><a href="#cb6-162" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Run <span class="in">`update.packages()`</span>  </span>
+<span id="cb6-163"><a href="#cb6-163" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Install a CRAN or GitHub package that pulls in the new <span class="in">`ggplot2`</span>  </span>
+<span id="cb6-164"><a href="#cb6-164" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Use a package manager like <span class="in">`{pak}`</span> that updates dependencies automatically  </span>
+<span id="cb6-165"><a href="#cb6-165" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-166"><a href="#cb6-166" aria-hidden="true" tabindex="-1"></a>**To avoid disruptions**:</span>
+<span id="cb6-167"><a href="#cb6-167" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-168"><a href="#cb6-168" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Hold off updating `ggplot2` until you’ve tested that it works with your code and the packages you use.**</span>
+<span id="cb6-169"><a href="#cb6-169" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**You can already test with the development version, see below.**</span>
+<span id="cb6-170"><a href="#cb6-170" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-171"><a href="#cb6-171" aria-hidden="true" tabindex="-1"></a>If your code is working as expected, you don’t need to act immediately. But testing ahead of the CRAN release can give you confidence that everything will continue working once <span class="in">`ggplot2`</span> 4.0.0 is out.</span>
+<span id="cb6-172"><a href="#cb6-172" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-173"><a href="#cb6-173" aria-hidden="true" tabindex="-1"></a><span class="fu">### How to Check If You’re Affected</span></span>
+<span id="cb6-174"><a href="#cb6-174" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-175"><a href="#cb6-175" aria-hidden="true" tabindex="-1"></a>The development version of ggplot2 (4.0.0) is already available for testing using {pak}. The CRAN release is expected mid-to-late July. If you’re not sure whether to update once it’s out, here’s how you can test your current setup ahead of time.</span>
+<span id="cb6-176"><a href="#cb6-176" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-177"><a href="#cb6-177" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Create a temporary or isolated R project (e.g. using <span class="in">`{renv}`</span> or RStudio Project)</span>
+<span id="cb6-178"><a href="#cb6-178" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Install the development version of <span class="in">`ggplot2`</span>:</span>
+<span id="cb6-179"><a href="#cb6-179" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-182"><a href="#cb6-182" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb6-183"><a href="#cb6-183" aria-hidden="true" tabindex="-1"></a><span class="co">#| eval: false</span></span>
+<span id="cb6-184"><a href="#cb6-184" aria-hidden="true" tabindex="-1"></a><span class="co">#| echo: true</span></span>
+<span id="cb6-185"><a href="#cb6-185" aria-hidden="true" tabindex="-1"></a><span class="co">#| code-fold: false</span></span>
+<span id="cb6-186"><a href="#cb6-186" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-187"><a href="#cb6-187" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"pak"</span>)</span>
+<span id="cb6-188"><a href="#cb6-188" aria-hidden="true" tabindex="-1"></a>pak<span class="sc">::</span><span class="fu">pak</span>(<span class="st">"tidyverse/ggplot2"</span>)</span>
+<span id="cb6-189"><a href="#cb6-189" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb6-190"><a href="#cb6-190" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-191"><a href="#cb6-191" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Re-run your code and check that plots appear as expected </span>
+<span id="cb6-192"><a href="#cb6-192" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-193"><a href="#cb6-193" aria-hidden="true" tabindex="-1"></a>If something breaks, you can always roll back, or just hold off updating until patches are released.</span>
+<span id="cb6-194"><a href="#cb6-194" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-195"><a href="#cb6-195" aria-hidden="true" tabindex="-1"></a><span class="fu">### Tools to Help</span></span>
+<span id="cb6-196"><a href="#cb6-196" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-197"><a href="#cb6-197" aria-hidden="true" tabindex="-1"></a>To manage versions and avoid surprises:</span>
+<span id="cb6-198"><a href="#cb6-198" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-199"><a href="#cb6-199" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Use <span class="in">`{renv}`</span> to snapshot your current setup:</span>
+<span id="cb6-200"><a href="#cb6-200" aria-hidden="true" tabindex="-1"></a>  <span class="in">```r</span></span>
+<span id="cb6-201"><a href="#cb6-201" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Create a reproducible project setup</span></span>
+<span id="cb6-202"><a href="#cb6-202" aria-hidden="true" tabindex="-1"></a>  renv<span class="sc">::</span><span class="fu">init</span>()</span>
+<span id="cb6-203"><a href="#cb6-203" aria-hidden="true" tabindex="-1"></a>  renv<span class="sc">::</span><span class="fu">snapshot</span>()</span>
+<span id="cb6-204"><a href="#cb6-204" aria-hidden="true" tabindex="-1"></a>  <span class="in">```</span></span>
+<span id="cb6-205"><a href="#cb6-205" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-206"><a href="#cb6-206" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>When updating, use:</span>
+<span id="cb6-207"><a href="#cb6-207" aria-hidden="true" tabindex="-1"></a>  <span class="in">```r</span></span>
+<span id="cb6-208"><a href="#cb6-208" aria-hidden="true" tabindex="-1"></a>  <span class="fu">update.packages</span>(<span class="at">ask =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb6-209"><a href="#cb6-209" aria-hidden="true" tabindex="-1"></a>  <span class="in">```</span></span>
+<span id="cb6-210"><a href="#cb6-210" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-211"><a href="#cb6-211" aria-hidden="true" tabindex="-1"></a>and consider skipping <span class="in">`ggplot2`</span> if you're unsure.</span>
+<span id="cb6-212"><a href="#cb6-212" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-213"><a href="#cb6-213" aria-hidden="true" tabindex="-1"></a><span class="fu">## Final Notes</span></span>
+<span id="cb6-214"><a href="#cb6-214" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-215"><a href="#cb6-215" aria-hidden="true" tabindex="-1"></a>Thanks to everyone who has tested, reported, or patched packages ahead of this release. Special thanks to <span class="co">[</span><span class="ot">Teun van den Brand</span><span class="co">](https://github.com/teunbrand)</span> and the <span class="in">`ggplot2`</span> team for their proactive and open collaboration with the Bioconductor community.</span>
+<span id="cb6-216"><a href="#cb6-216" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-217"><a href="#cb6-217" aria-hidden="true" tabindex="-1"></a>If you maintain a package using <span class="in">`ggplot2`</span> and haven’t tested it yet, testing now can help your users, and save others from running into the same issues.</span>
+<span id="cb6-218"><a href="#cb6-218" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-219"><a href="#cb6-219" aria-hidden="true" tabindex="-1"></a>Not a developer? Reporting even small glitches after updating ggplot2 can still be useful, if the issue isn’t already known. Before posting, it’s worth checking if the problem has been reported on the package's GitHub or discussed in Bioconductor Zulip. If it has, you can add a comment or emoji reaction to help signal it’s affecting others too. That kind of input helps maintainers prioritise and can save time for everyone.</span>
+<span id="cb6-220"><a href="#cb6-220" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-221"><a href="#cb6-221" aria-hidden="true" tabindex="-1"></a>Fixes may take time to propagate, especially with so many interdependent packages, and most Bioconductor maintainers contributing alongside full academic workloads. But progress is steady, and made easier when people flag issues early.</span>
+<span id="cb6-222"><a href="#cb6-222" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-223"><a href="#cb6-223" aria-hidden="true" tabindex="-1"></a>Big changes like this aren’t always smooth, but open communication goes a long way. Whether you're maintaining a package, reporting a bug, or just keeping an eye out, it all helps. Thanks for reading, and for being part of this collaborative process.</span>
+</code><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></pre></div>
+</div></div></div></div></div>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

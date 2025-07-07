@@ -10,14 +10,404 @@
 <atom:link href="https://blog.bioconductor.org/index.xml" rel="self" type="application/rss+xml"/>
 <description>A blog for the Bioconductor community!</description>
 <generator>quarto-1.7.32</generator>
-<lastBuildDate>Thu, 03 Jul 2025 00:00:00 GMT</lastBuildDate>
+<lastBuildDate>Mon, 07 Jul 2025 00:00:00 GMT</lastBuildDate>
+<item>
+  <title>Bioconductor and ggplot2 4.0.0: What’s Changing and How to Prepare</title>
+  <dc:creator>Maria Doyle (Bioconductor Community Manager), with contributions from the Bioconductor and ggplot2 developer communities</dc:creator>
+  <link>https://blog.bioconductor.org/posts/2025-07-07-ggplot2-update/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<section id="introduction" class="level1">
+<h1>Introduction</h1>
+<p>A major update to <code>ggplot2</code> (version 4.0.0) is expected around <strong>mid-to-late July 2025</strong>. It brings a significant internal change, replacing most of the S3 backend with the newer S7 object system. While this improves long-term maintainability and extensibility, it may break Bioconductor packages that depend on <code>ggplot2</code>, especially those that customise how plots are built or styled. Packages that use <code>ggplot2</code> for typical plotting tasks, such as creating plots with <code>ggplot()</code> and <code>geom_*()</code>, are unlikely to be affected.</p>
+<section id="tldr" class="level2">
+<h2 class="anchored" data-anchor-id="tldr">TL;DR</h2>
+<ul>
+<li><code>ggplot2</code> 4.0.0 is a major internal update switching to S7 classes</li>
+<li>Some Bioconductor packages may break, especially those customising <code>ggplot</code> themes/geoms</li>
+<li>Only affects plotting - statistical or modelling functions remain unchanged</li>
+<li>If you’re a user, hold off updating ggplot2 until your packages are confirmed to work</li>
+<li>If you’re a developer, test now using <code>pak::pak("tidyverse/ggplot2")</code> to prepare before release</li>
+<li>Questions or issues? Join us on <a href="https://chat.bioconductor.org/">Zulip</a></li>
+</ul>
+</section>
+<section id="whats-changing" class="level2">
+<h2 class="anchored" data-anchor-id="whats-changing">What’s Changing?</h2>
+<p>The 4.0.0 release of <code>ggplot2</code> introduces a major internal refactor: S3 classes are being migrated to the new S7 system. While most users won’t notice the difference, some packages rely on how <code>ggplot2</code> is built internally, for example, by modifying its themes, geoms, or using helper functions. These packages (e.g.&nbsp;<code>ComplexUpset</code>, <code>ggtree</code>, <code>plotly</code>) may break if that internal structure changes.</p>
+<p>Some issues may be minor, like test failures, while others may cause runtime errors. Either way, this is a good time to review your usage.</p>
+</section>
+<section id="why-s7" class="level2">
+<h2 class="anchored" data-anchor-id="why-s7">Why S7?</h2>
+<p>S7 is a new object-oriented system in R that makes packages more robust, predictable, and easier to extend. It gives developers better tools for managing complex code, but switching to it can affect packages that rely on how things used to work under the old system (S3).</p>
+<p>It offers:</p>
+<ul>
+<li>Formal class and method definitions<br>
+</li>
+<li>Limited multiple dispatch<br>
+</li>
+<li>Cleaner support for interoperability<br>
+</li>
+<li>Greater consistency across packages</li>
+</ul>
+<p>S7 is being developed by the R Consortium’s OOP Working Group, with contributors from R Core, Bioconductor, Posit, and others.</p>
+<p>Learn more about S7 in the <a href="https://www.tidyverse.org/blog/2024/11/s7-0-2-0/">tidyverse blog</a> and on the [R Consortium site]((https://rconsortium.github.io/S7/index.html).</p>
+</section>
+<section id="for-developers" class="level2">
+<h2 class="anchored" data-anchor-id="for-developers">For Developers</h2>
+<section id="what-developers-should-do-now" class="level3">
+<h3 class="anchored" data-anchor-id="what-developers-should-do-now">What Developers Should Do Now</h3>
+<p>You can test your package against the development version of <code>ggplot2</code> using:</p>
+<div class="sourceCode" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># install.packages("pak")</span></span>
+<span id="cb1-2">pak<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">pak</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"tidyverse/ggplot2"</span>)</span></code></pre></div>
+<p>We recommend testing in a clean or isolated environment (e.g.&nbsp;<code>{renv}</code>, <code>{callr}</code>) to avoid unexpected interactions.</p>
+<p>If you find issues:</p>
+<ul>
+<li>Report a bug: <a href="https://github.com/tidyverse/ggplot2/issues">github.com/tidyverse/ggplot2/issues</a><br>
+</li>
+<li>Tag <a href="https://github.com/teunbrand"><span class="citation" data-cites="teunbrand">@teunbrand</span> on GitHub</a> if you’d like input from the <code>ggplot2</code> team</li>
+<li>Discuss with the Bioconductor community: Post in <a href="https://chat.bioconductor.org/">Bioconductor Zulip</a> or email the <code>bioc-devel@r-project.org</code> mailing list</li>
+</ul>
+</section>
+<section id="common-issues-already-reported" class="level3">
+<h3 class="anchored" data-anchor-id="common-issues-already-reported">Common Issues Already Reported</h3>
+<p>These are specific breakages already reported on the <code>ggplot2</code> GitHub:</p>
+<ul>
+<li><strong>Class checks</strong>: Tests relying on exact class structures like <code>class(p)</code> or <code>expect_type(p, "list")</code> may now fail. Instead, use <code>expect_true(is_ggplot(p))</code> or <code>expect_s3_class(p, "ggplot")</code> for compatibility. See <a href="https://github.com/tidyverse/ggplot2/issues/6498">#6498</a>.</li>
+<li><strong>Label handling</strong>: Labels are now stricter and constructed later in the build step. Use <code>get_labs()</code> in tests, and avoid unnamed or duplicate arguments in <code>labs()</code>. See <a href="https://github.com/tidyverse/ggplot2/issues/6505">#6505</a>.</li>
+<li><strong>Custom + methods</strong>: Packages defining custom + operators (e.g.&nbsp;<code>+.gg</code>) may need to revise their implementation, especially with mixed S3/S7 class use. See <a href="https://github.com/tidyverse/ggplot2/issues/6504">#6504</a>.</li>
+<li><strong>Invalid element properties</strong>: With S7 class adoption, element constructors like <code>element_text()</code> now enforce stricter type checks (e.g.&nbsp;no TRUE for family, no decimal colours). Fix the incorrect properties in your package. See <a href="https://github.com/tidyverse/ggplot2/issues/6507">#6507</a>.</li>
+<li><strong>S3 method consistency</strong>: Generics like <code>ggplot_build()</code> and <code>ggplot_add()</code> now include <code>...</code> Your methods must include it too, even if unused, to avoid warnings. See <a href="https://github.com/tidyverse/ggplot2/issues/6515">#6515</a>.</li>
+</ul>
+<p>These are evolving, if something looks broken, it’s worth checking the <a href="https://github.com/tidyverse/ggplot2/issues">ggplot2 issues page</a> for updates before opening a new one.</p>
+<p>The Bioconductor core team has also been running automated tests on a subset of packages to help spot issues early. Due to resource constraints, this currently covers only a portion of the ecosystem, so it’s still important for developers to test their own packages.</p>
+</section>
+<section id="how-bioconductor-packages-may-be-affected" class="level3">
+<h3 class="anchored" data-anchor-id="how-bioconductor-packages-may-be-affected">How Bioconductor Packages May Be Affected</h3>
+<p>We’ve compiled a list of packages in Bioconductor 3.21 that declare <code>ggplot2</code> in <code>Depends</code>, <code>Imports</code>, or <code>Suggests</code>:</p>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">library</span>(BiocManager)</span>
+<span id="cb2-2"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">library</span>(tidyverse)</span>
+<span id="cb2-3"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">library</span>(reactable)</span>
+<span id="cb2-4"></span>
+<span id="cb2-5">repos <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">repositories</span>(<span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">version =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"3.21"</span>)</span>
+<span id="cb2-6">bioc_repos <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> repos[<span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">grepl</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"BioC"</span>, <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">names</span>(repos))]</span>
+<span id="cb2-7">db <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">available.packages</span>(<span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">contrib.url</span>(bioc_repos))</span>
+<span id="cb2-8"></span>
+<span id="cb2-9">pkg_df <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">as_tibble</span>(db) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">%&gt;%</span></span>
+<span id="cb2-10">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">mutate</span>(</span>
+<span id="cb2-11">    <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">ggplot2_usage =</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">case_when</span>(</span>
+<span id="cb2-12">      <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">grepl</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"ggplot2"</span>, Depends) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">~</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Depends"</span>,</span>
+<span id="cb2-13">      <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">grepl</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"ggplot2"</span>, Imports) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">~</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Imports"</span>,</span>
+<span id="cb2-14">      <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">grepl</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"ggplot2"</span>, Suggests) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">~</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Suggests"</span>,</span>
+<span id="cb2-15">      <span class="cn" style="color: #8f5902;
+background-color: null;
+font-style: inherit;">TRUE</span> <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">~</span> <span class="cn" style="color: #8f5902;
+background-color: null;
+font-style: inherit;">NA_character_</span></span>
+<span id="cb2-16">    )</span>
+<span id="cb2-17">  ) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">%&gt;%</span></span>
+<span id="cb2-18">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">filter</span>(<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">!</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">is.na</span>(ggplot2_usage)) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">%&gt;%</span></span>
+<span id="cb2-19">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">select</span>(Package, ggplot2_usage) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">%&gt;%</span></span>
+<span id="cb2-20">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">arrange</span>(Package)</span>
+<span id="cb2-21"></span>
+<span id="cb2-22"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">reactable</span>(</span>
+<span id="cb2-23">  pkg_df,</span>
+<span id="cb2-24">  <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">searchable =</span> <span class="cn" style="color: #8f5902;
+background-color: null;
+font-style: inherit;">TRUE</span>,</span>
+<span id="cb2-25">  <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">filterable =</span> <span class="cn" style="color: #8f5902;
+background-color: null;
+font-style: inherit;">TRUE</span>,</span>
+<span id="cb2-26">  <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">columns =</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">list</span>(</span>
+<span id="cb2-27">    <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">Package =</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">colDef</span>(<span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">name =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Package"</span>),</span>
+<span id="cb2-28">    <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">ggplot2_usage =</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">colDef</span>(<span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">name =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"ggplot2 Usage"</span>)</span>
+<span id="cb2-29">  ),</span>
+<span id="cb2-30">  <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">defaultSorted =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Package"</span>,</span>
+<span id="cb2-31">  <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">striped =</span> <span class="cn" style="color: #8f5902;
+background-color: null;
+font-style: inherit;">TRUE</span>,</span>
+<span id="cb2-32">  <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">bordered =</span> <span class="cn" style="color: #8f5902;
+background-color: null;
+font-style: inherit;">TRUE</span>,</span>
+<span id="cb2-33">  <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">highlight =</span> <span class="cn" style="color: #8f5902;
+background-color: null;
+font-style: inherit;">TRUE</span>,</span>
+<span id="cb2-34">  <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">defaultPageSize =</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">10</span>,</span>
+<span id="cb2-35">  <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">showPageSizeOptions =</span> <span class="cn" style="color: #8f5902;
+background-color: null;
+font-style: inherit;">TRUE</span>,</span>
+<span id="cb2-36">  <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">compact =</span> <span class="cn" style="color: #8f5902;
+background-color: null;
+font-style: inherit;">TRUE</span></span>
+<span id="cb2-37">)</span></code></pre></div>
+</details>
+<div class="cell-output-display">
+<div class="reactable html-widget html-fill-item" id="htmlwidget-5ea7c6cf8cb20dfd3bc0" style="width:auto;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-5ea7c6cf8cb20dfd3bc0">{"x":{"tag":{"name":"Reactable","attribs":{"data":{"Package":["ACE","ADAMgui","ADAPT","ALDEx2","AMARETTO","APAlyzer","APL","ASICS","ASSIGN","ASURAT","ATACseqTFEA","AlphaBeta","AlphaMissenseR","AlpsNMR","AnVILBilling","Anaquin","AneuFinder","BANDITS","BASiCS","BOBaFIT","BPRMeth","BUSpaRse","BaalChIP","Banksy","BatchQC","BatchSVG","BayesSpace","BindingSiteFinder","BioCor","BioGA","BioNAR","BioNERO","BioQC","BioTIP","BiocHail","BloodCancerMultiOmics2017","BloodGen3Module","BreastSubtypeR","BubbleTree","BulkSignalR","CAFE","CAGEr","CARDspa","CATALYST","CBNplot","CCPlotR","CDI","CEMiTool","CHETAH","CIMICE","CLLmethylation","CNEr","CNVPanelizer","CNVrd2","COCOA","COMPASS","CONFESS","CONSTANd","COTAN","CPSM","CRISPRball","CSSQ","CTDquerier","CTexploreR","CaDrA","CaMutQC","CatsCradle","CeTF","CellBarcode","CellBench","CellMixS","CellNOptR","CellTrails","CelliD","Cepo","ChAMP","ChIPQC","ChIPexoQual","ChIPpeakAnno","ChIPseeker","ChemmineR","ChromSCape","CircSeqAlignTk","CiteFuse","ClassifyR","CleanUpRNAseq","CluMSID","ClustAll","ClustIRR","ClusterFoldSimilarity","ClusterSignificance","CoGAPS","CoSIA","Cogito","ComPrAn","CrispRVariants","CuratedAtlasQueryR","CytoGLMM","CytoMDS","CytoPipeline","CytoPipelineGUI","DAMEfinder","DAPAR","DEGreport","DELocal","DEP","DESeq2","DESpace","DEqMS","DEsubs","DOSE","DRIMSeq","DaMiRseq","Damsel","DeMixT","DeconRNASeq","DeconvoBuddies","DeepTarget","DegNorm","DepInfeR","DepecheR","DiffBind","DifferentialRegulation","Dino","DiscoRhythm","Doscheda","Dune","DuoClustering2018","EGSEA","ELMER","ELViS","EMDomics","ERSSA","EWCE","EasyCellType","EnMCB","EnhancedVolcano","EnrichDO","EpiCompare","EpiMix","EpiTxDb","EpipwR","ExpHunterSuite","ExploreModelMatrix","FLAMES","FRASER","FindIT2","FlowSOM","FuseSOM","G4SNVHunter","GARS","GBScleanR","GDCRNATools","GEM","GENESIS","GEOexplorer","GNET2","GOTHiC","GOexpress","GPA","GRENITS","GRaNIE","GRmetrics","GSCA","GSEAmining","GSVA","GSgalgoR","GUIDEseq","GWENA","GeDi","GenVisR","GeneTonic","GenomicDataCommons","GenomicDistributions","GenomicInteractions","GenomicOZone","GenomicPlot","GenomicSuperSignature","GeoMxWorkflows","GeomxTools","GladiaTOX","GloScope","GrafGen","Guitar","HCATonsilData","HDCytoData","HGC","HIBAG","HIPPO","HMP16SData","HMP2Data","HPAanalyze","HPiP","HiCBricks","HiCDOC","HiCcompare","HiContacts","HiLDA","HicAggR","HuBMAPR","HybridExpress","IHW","IHWpaper","ILoReg","IMAS","INTACT","IONiseR","ISAnalytics","IVAS","IgGeneUsage","InPAS","InTAD","InterCellar","IsoBayes","IsoformSwitchAnalyzeR","KnowSeq","LACE","LRcell","LedPred","LegATo","Lheuristic","LimROTS","LinTInd","LinkHD","Linnorm","LymphoSeq","M3C","MACSQuantifyR","MAPFX","MAST","MBECS","MBQN","MCbiclust","MEAL","MGnifyR","MICSQTL","MIRA","MIRit","MLSeq","MMDiff2","MMUPHin","MOFA2","MOMA","MOSClip","MOSim","MPAC","MSA2dist","MSnID","MSnbase","MSstats","MSstatsLOBD","MSstatsLiP","MSstatsPTM","MSstatsQC","MSstatsShiny","MSstatsTMT","MWASTools","Maaslin2","MatrixQCvis","Melissa","MerfishData","MesKit","MetCirc","MetMashR","MetNet","MetaCyto","MetaNeighbor","MetaPhOR","MetaScope","MetaboDynamics","MethReg","MethylAid","MethylMix","MicrobiomeBenchmarkData","MicrobiomeProfiler","MicrobiotaProcess","MineICA","MoleculeExperiment","Moonlight2R","MotifPeeker","MouseFM","MsQuality","MultiBaC","MultiDataSet","MultiRNAflow","MutationalPatterns","NBAMSeq","NPARC","NanoMethViz","NanoStringNCTools","NanoTube","Nebulosa","NestLink","NewWave","NoRCE","NormalyzerDE","OGRE","OMICsPCA","OPWeight","ORFik","OSCA.advanced","OUTRIDER","OVESEG","Omixer","OmnipathR","OncoSimulR","Organism.dplyr","PAST","PCAtools","PDATK","PICB","PIUMA","PLSDAbatch","POMA","POWSC","PPInfer","PRONE","PathoStat","PeacoQC","Pedixplorer","PepsNMR","PharmacoGx","PhenStat","PhosR","PhyloProfile","Pigengene","Pirat","PoDCall","Polytect","Prostar","ProteinGymR","ProteoDisco","ProteoMM","PureCN","QFeatures","QSutils","R3CPET","RAIDS","RAREsim","RCAS","RCM","RCSL","RESOLVE","RFLOMICS","RITAN","RIVER","RNAAgeCalc","RNAdecay","RNAmodR","RNAsense","RTCGA","RTNsurvival","RUCova","Rbec","Rcollectl","ReactomeGSA","ReactomePA","ReducedExperiment","RegEnrich","RegionalST","ReportingTools","Rfastp","RforProteomics","RgnTX","RiboCrypt","RiboDiPA","RiboProfiling","RnBeads","RnaSeqSampleSize","Rnits","Rqc","Rtpca","SARC","SC3","SCnorm","SEraster","SEtools","SGCP","SIMAT","SMITE","SNPhood","SOMNiBUS","SPIAT","SPLINTER","SPONGE","SPOTlight","STATegRa","SUITOR","SVP","SWATH2stats","Sconify","ScreenR","SeqSQC","SigFuge","SimBu","Single.mTEC.Transcriptomes","SingleCellAlleleExperiment","SingleCellMultiModal","SingleMoleculeFootprinting","SingleR","SingscoreAMLMutations","SomaticCancerAlterations","SomaticSignatures","SpaNorm","SpaceMarkers","Spaniel","SparseSignatures","SpatialCPie","SpatialOmicsOverlay","SpliceWiz","SplicingFactory","SplineDV","SpotClean","SpotSweeper","Statial","StructuralVariantAnnotation","SubCellBarCode","SubcellularSpatialData","SurfR","TADCompare","TAPseq","TBSignatureProfiler","TCGAbiolinks","TCseq","TEKRABber","TENET","TFEA.ChIP","TFutils","TOAST","TOP","TPP","TPP2D","TREG","TSAR","TSCAN","TVTB","TabulaMurisSenisData","TargetDecoy","TimerQuant","TissueEnrich","ToxicoGx","TrIdent","TrajectoryGeometry","TreeAndLeaf","TreeSummarizedExperiment","TumourMethData","UCell","UMI4Cats","Ularcirc","VDJdive","VarCon","VariantAnnotation","VennDetail","ViSEAGO","Voyager","VplotR","XAItest","XINA","Xeva","YAPSA","abseqR","affycoretools","aggregateBioVar","airpart","alevinQC","amplican","animalcules","annotatr","artMS","atSNP","autonomics","awst","bacon","bambu","bandle","barbieQ","barcodetrackR","basecallQC","beadarray","beer","benchdamic","benchmarkfdrData2019","betaHMM","bettr","bioassayR","biobroom","biotmle","borealis","branchpointer","breakpointR","broadSeq","bugphyzz","cTRAP","cageminer","cardelino","ceRNAnetsim","celaref","celda","cellity","cellmigRation","censcyt","cfDNAPro","cfdnakit","chevreulPlot","chevreulShiny","chromVAR","cicero","circRNAprofiler","clevRvis","cliProfiler","clustSIGNAL","clustifyr","coRdon","cogena","cogeqc","comapr","combi","compSPOT","compcodeR","concordexR","condiments","consICA","consensusOV","consensusSeekeR","corral","coseq","cosmosR","countsimQC","cpvSNP","crumblr","crupR","ctsGE","cummeRbund","curatedAdipoChIP","curatedAdipoRNA","curatedBreastData","curatedPCaData","cyanoFilter","cytofQC","cytomapper","dStruct","dada2","dar","dce","ddPCRclust","dearseq","debrowser","decompTumor2Sig","decontX","decontam","deconvR","decoupleR","deltaCaptureC","deltaGseg","demuxmix","densvis","depmap","derfinder","derfinderPlot","destiny","diffUTR","diffuStats","dinoR","distinct","dittoSeq","dmrseq","doubletrouble","drawProteins","dreamlet","drugTargetInteractions","easier","edge","enrichViewNet","enrichplot","epialleleR","epidecodeR","epigraHMM","epimutacions","epiregulon.extra","epistasisGA","erccdashboard","erma","esATAC","escape","escheR","esetVis","evaluomeR","ewceData","extraChIPs","fCCAC","factR","fedup","fenr","fgsea","flowAI","flowCHIC","flowGate","flowGraph","flowSpecs","flowTime","flowWorkspace","fluentGenomics","fobitools","furrowSeg","gCrisprTools","gINTomics","gatom","gcatest","gemini","gemma.R","geneplast","genomation","geyser","gg4way","ggbio","ggcyto","ggkegg","ggmanh","ggmsa","ggsc","ggseqalign","ggspavis","ggtree","ggtreeDendro","ggtreeExtra","ggtreeSpace","glmGamPoi","glmSparseNet","goSorensen","granulator","graper","h5vc","hdxmsqc","hermes","hiAnnotator","hicVennDiagram","hipathia","hoodscanR","hypeR","iBMQ","iCNV","iCOBRA","iPath","iSEE","iSEEfier","iSEEhex","iSEEpathways","iSEEtree","iSEEu","icetea","ideal","idpr","idr2d","imageTCGA","imcRtools","immApex","immunogenViewer","immunotation","infercnv","interactiveDisplay","isobar","isomiRs","ivygapSE","jazzPanda","katdetectr","kissDE","knowYourCG","lefser","levi","lfa","limpca","lipidr","lisaClust","lute","mCSEA","maEndToEnd","maaslin3","magrene","marr","maser","mastR","mbQTL","mdp","memes","messina","metabinR","metabomxtr","metagene2","metapone","methimpute","methodical","methrix","methylCC","methylGSA","methylInheritance","methylclock","methylumi","mfa","miQC","miaSim","miaViz","microSTASIS","microbiome","microbiomeDASim","midasHLA","miloR","mina","mirIntegrator","mirTarRnaSeq","missRows","mist","mistyR","mitch","mitoClone2","mitology","mixOmics","mnem","mobileRNA","monaLisa","monocle","mosdef","motifStack","motifTestR","msPurity","msgbsR","mspms","muSpaData","multiWGCNA","multicrispr","multistateQTL","muscat","musicatk","ncRNAtools","nearBynding","netSmooth","nethet","netprioR","netresponse","ngsReports","nipalsMCIA","nnSVG","nucleR","nullranges","octad","omada","omicRexposome","omicsViewer","oncomix","openPrimeR","oppti","orthogene","orthos","orthosData","pRoloc","pRolocGUI","padma","pairedGSEA","pandaR","pathMED","pathlinkR","pcaExplorer","pcaMethods","peakPantheR","pepStat","periodicDNA","pgxRpi","phantasus","phenoTest","phenomis","phenopath","philr","phyloseq","pipeComp","planet","plotGrouper","plotgardener","plyranges","pmp","poem","pogos","ppcseq","pqsfinder","proActiv","profileplyr","progeny","projectR","protGear","psichomics","ptairMS","qPLEXanalyzer","qckitfastq","qcmetrics","qmtools","qsvaR","quantiseqr","quantro","qvalue","rCGH","rTRM","ramr","rawDiag","rcellminer","receptLoss","reconsi","recount","recountmethylation","recoup","regionReport","regioneReloaded","retrofit","rexposome","rgoslin","rhdf5","ribor","ribosomeProfilingQC","rifi","rifiComparative","rnaseqGene","roastgsa","ropls","rprimer","rrvgo","sRACIPE","sSNAPPY","sampleClassifier","sarks","satuRn","scAnnotatR","scBFA","scBubbletree","scClassify","scDD","scDDboost","scDataviz","scDblFinder","scDesign3","scDiagnostics","scDotPlot","scFeatureFilter","scGPS","scHOT","scHiCcompare","scMET","scMitoMut","scMultiSim","scPCA","scPipe","scQTLtools","scRNAseqApp","scRepertoire","scTGIF","scTensor","scTreeViz","scanMiR","scanMiRApp","scater","scatterHatch","sccomp","schex","scider","scifer","scmap","scmeth","scone","scp","scruff","scry","scviR","seahtrue","selectKSigs","seqArchR","seqArchRplus","seqCAT","seqcombo","seqsetvis","sesame","shinyDSP","shinyepico","sights","signatureSearch","signeR","signifinder","simPIC","simpleSeg","simplifyEnrichment","sincell","singleCellTK","singscore","sitePath","sketchR","slalom","smartid","smoppix","snifter","soGGi","sosta","spaSim","spacexr","sparrow","spatialDE","spatialFDA","spatialHeatmap","spatialLIBD","spatialSimGP","spatzie","speckle","spicyR","spicyWorkflow","spiky","spillR","splatter","splots","spqn","squallms","ssPATHS","ssviz","stJoincount","standR","strandCheckR","struct","structToolbox","subSeq","supersigs","surfaltr","svaNUMT","svaRetro","swfdr","switchde","synapsis","synaptome.db","synergyfinder","synlet","syntenet","systemPipeR","systemPipeShiny","systemPipeTools","tLOH","tRNA","tRNAscanImport","tadar","tanggle","tidyCoverage","tidyFlowCore","tidySingleCellExperiment","tidySpatialExperiment","tidySummarizedExperiment","tidybulk","tidyomics","tidytof","timeOmics","tissueTreg","tomoda","tomoseqr","topconfects","topdownr","tradeSeq","transcriptR","transcriptogramer","transite","transmogR","treeclimbR","treeio","treekoR","tricycle","tuberculosis","twoddpcr","uSORT","universalmotif","variancePartition","velociraptor","vidger","visiumStitched","vissE","vmrseq","vsn","wavClusteR","weitrix","wiggleplotr","wpm","xCell2","xenLite","zFPKM","zenith","zinbwave","zitools"],"ggplot2_usage":["Imports","Imports","Imports","Suggests","Imports","Imports","Imports","Imports","Imports","Suggests","Imports","Imports","Imports","Imports","Imports","Depends","Depends","Imports","Imports","Imports","Imports","Imports","Imports","Suggests","Imports","Imports","Imports","Imports","Suggests","Imports","Imports","Imports","Suggests","Suggests","Suggests","Imports","Imports","Imports","Imports","Imports","Imports","Imports","Imports","Imports","Imports","Imports","Imports","Imports","Depends","Imports","Suggests","Imports","Imports","Depends","Imports","Suggests","Imports","Suggests","Imports","Imports","Imports","Imports","Imports","Imports","Imports","Imports","Imports","Imports","Imports","Suggests","Imports","Depends","Imports","Imports","Imports","Imports","Depends","Imports","Imports","Imports","Imports","Imports","Imports","Imports","Imports","Imports","Imports","Imports","Imports","Imports","Suggests","Imports","Imports","Imports","Imports","Depends","Suggests","Imports","Imports","Imports","Imports","Imports","Suggests","Imports","Imports","Imports","Imports","Imports","Depends","Imports","Imports","Imports","Depends","Imports","Imports","Depends","Imports","Imports","Imports","Suggests","Imports","Imports","Imports","Suggests","Imports","Imports","Imports","Imports","Imports","Imports","Imports","Imports","Imports","Imports","Imports","Imports","Depends","Imports","Imports","Imports","Suggests","Imports","Imports","Imports","Imports","Imports","Imports","Imports","Imports","Imports","Depends","Imports","Imports","Imports","Suggests","Imports","Imports","Imports","Imports","Imports","Depends","Imports","Imports","Depends","Imports","Suggests","Suggests","Imports","Imports","Imports","Imports","Imports","Suggests","Imports","Imports","Depends","Imports","Imports","Imports","Imports","Imports","Imports","Imports","Depends","Suggests","Suggests","Imports","Suggests","Imports","Suggests","Suggests","Imports","Imports","Imports","Imports","Imports","Imports","Depends","Imports","Suggests","Imports","Suggests","Imports","Imports","Depends","Imports","Imports","Imports","Depends","Suggests","Imports","Imports","Imports","Imports","Depends","Imports","Imports","Imports","Imports","Imports","Imports","Suggests","Depends","Depends","Imports","Imports","Imports","Imports","Imports","Imports","Imports","Imports","Imports","Imports","Suggests","Imports","Imports","Imports","Depends","Imports","Imports","Imports","Imports","Imports","Imports","Imports","Suggests","Imports","Imports","Imports","Imports","Imports","Imports","Imports","Imports","Imports","Imports","Imports","Imports","Imports","Suggests","Imports","Imports","Imports","Imports","Imports","Imports","Imports","Imports","Imports","Imports","Imports","Imports","Suggests","Imports","Imports","Depends","Imports","Imports","Imports","Imports","Imports","Imports","Imports","Imports","Imports","Suggests","Suggests","Depends","Depends","Depends","Depends","Suggests","Suggests","Imports","Imports","Imports","Imports","Suggests","Imports","Depends","Imports","Suggests","Imports","Suggests","Imports","Suggests","Imports","Depends","Imports","Suggests","Depends","Imports","Imports","Imports","Depends","Imports","Imports","Imports","Imports","Imports","Imports","Imports","Imports","Imports","Imports","Imports","Imports","Imports","Imports","Imports","Suggests","Imports","Imports","Suggests","Suggests","Imports","Imports","Suggests","Imports","Imports","Imports","Imports","Depends","Imports","Imports","Imports","Imports","Imports","Imports","Imports","Imports","Imports","Imports","Imports","Imports","Imports","Imports","Imports","Imports","Imports","Imports","Suggests","Imports","Imports","Imports","Imports","Depends","Depends","Depends","Depends","Imports","Imports","Imports","Imports","Imports","Suggests","Imports","Imports","Imports","Imports","Imports","Imports","Imports","Imports","Imports","Imports","Imports","Imports","Imports","Imports","Imports","Imports","Imports","Imports","Suggests","Suggests","Suggests","Imports","Suggests","Imports","Suggests","Imports","Imports","Imports","Imports","Imports","Imports","Imports","Imports","Suggests","Suggests","Imports","Imports","Imports","Suggests","Imports","Suggests","Imports","Imports","Suggests","Imports","Imports","Imports","Suggests","Imports","Suggests","Suggests","Imports","Imports","Imports","Imports","Suggests","Imports","Imports","Imports","Suggests","Imports","Imports","Depends","Imports","Imports","Imports","Suggests","Suggests","Suggests","Suggests","Imports","Imports","Imports","Imports","Suggests","Imports","Imports","Imports","Depends","Imports","Imports","Imports","Depends","Imports","Imports","Suggests","Imports","Imports","Imports","Imports","Imports","Imports","Imports","Imports","Suggests","Depends","Suggests","Imports","Imports","Imports","Imports","Imports","Suggests","Imports","Suggests","Imports","Imports","Suggests","Suggests","Imports","Imports","Imports","Imports","Imports","Suggests","Imports","Imports","Imports","Imports","Imports","Imports","Imports","Suggests","Suggests","Imports","Imports","Imports","Imports","Imports","Imports","Imports","Imports","Imports","Suggests","Imports","Imports","Depends","Imports","Imports","Imports","Imports","Imports","Suggests","Suggests","Imports","Suggests","Suggests","Imports","Imports","Suggests","Imports","Imports","Depends","Imports","Imports","Depends","Suggests","Suggests","Depends","Suggests","Imports","Imports","Imports","Imports","Imports","Imports","Imports","Imports","Imports","Imports","Depends","Imports","Imports","Suggests","Suggests","Imports","Depends","Imports","Suggests","Suggests","Suggests","Imports","Imports","Imports","Suggests","Imports","Imports","Depends","Imports","Imports","Imports","Depends","Suggests","Imports","Suggests","Suggests","Imports","Suggests","Imports","Imports","Imports","Imports","Imports","Depends","Imports","Imports","Imports","Depends","Suggests","Imports","Suggests","Depends","Imports","Imports","Imports","Imports","Imports","Imports","Imports","Imports","Imports","Imports","Suggests","Imports","Suggests","Imports","Suggests","Imports","Imports","Imports","Suggests","Imports","Suggests","Suggests","Imports","Imports","Depends","Depends","Depends","Depends","Depends","Imports","Imports","Imports","Depends","Imports","Imports","Imports","Imports","Suggests","Imports","Suggests","Imports","Imports","Depends","Imports","Imports","Imports","Imports","Imports","Imports","Imports","Depends","Imports","Imports","Imports","Imports","Imports","Imports","Imports","Imports","Imports","Imports","Imports","Imports","Imports","Imports","Imports","Suggests","Imports","Imports","Imports","Imports","Imports","Imports","Imports","Suggests","Imports","Imports","Imports","Imports","Imports","Suggests","Imports","Imports","Imports","Imports","Imports","Depends","Imports","Suggests","Imports","Depends","Imports","Imports","Imports","Imports","Imports","Suggests","Imports","Imports","Depends","Depends","Depends","Imports","Suggests","Imports","Imports","Imports","Depends","Imports","Imports","Suggests","Depends","Imports","Depends","Imports","Suggests","Imports","Imports","Imports","Depends","Depends","Suggests","Imports","Imports","Imports","Imports","Depends","Imports","Imports","Imports","Depends","Imports","Imports","Depends","Imports","Imports","Imports","Suggests","Imports","Imports","Imports","Imports","Imports","Imports","Imports","Suggests","Imports","Imports","Imports","Depends","Imports","Suggests","Imports","Imports","Depends","Depends","Imports","Imports","Imports","Imports","Imports","Imports","Imports","Suggests","Imports","Imports","Suggests","Imports","Imports","Imports","Imports","Imports","Suggests","Imports","Imports","Imports","Imports","Imports","Depends","Imports","Imports","Imports","Imports","Imports","Suggests","Imports","Suggests","Suggests","Imports","Suggests","Imports","Imports","Suggests","Imports","Imports","Imports","Imports","Imports","Imports","Imports","Imports","Imports","Suggests","Imports","Imports","Imports","Imports","Imports","Imports","Suggests","Suggests","Imports","Imports","Imports","Imports","Suggests","Suggests","Depends","Suggests","Imports","Suggests","Imports","Suggests","Suggests","Imports","Imports","Imports","Imports","Depends","Imports","Imports","Imports","Imports","Imports","Depends","Imports","Suggests","Imports","Imports","Imports","Imports","Imports","Imports","Depends","Imports","Suggests","Imports","Imports","Imports","Imports","Imports","Imports","Imports","Imports","Imports","Imports","Suggests","Imports","Imports","Imports","Depends","Imports","Imports","Imports","Imports","Imports","Depends","Imports","Imports","Depends","Imports","Imports","Imports","Suggests","Suggests","Imports","Imports","Suggests","Suggests","Imports","Suggests","Imports","Imports","Imports","Imports","Depends","Imports","Imports","Imports","Imports","Imports","Imports","Imports","Suggests","Suggests","Suggests","Imports","Imports","Imports","Imports","Imports","Imports","Imports","Imports","Suggests","Imports","Imports","Imports","Imports","Imports","Imports","Imports","Imports","Imports","Suggests","Imports","Imports","Imports","Suggests","Imports","Imports","Suggests","Suggests","Depends","Imports","Suggests","Depends","Imports","Imports","Depends","Suggests","Imports","Imports","Suggests","Imports","Suggests","Suggests","Suggests","Imports","Suggests","Suggests","Imports","Imports","Imports","Imports","Imports","Imports","Imports","Imports","Suggests","Depends","Depends","Imports","Imports","Imports","Imports","Imports","Suggests","Suggests","Imports","Imports","Suggests","Imports","Imports","Imports","Imports","Imports","Imports","Imports","Imports","Imports","Imports","Suggests","Imports","Imports","Suggests","Imports","Suggests","Imports","Depends","Suggests","Imports","Suggests","Imports","Imports","Imports","Imports","Imports","Imports","Imports","Suggests","Imports","Imports","Imports","Suggests","Imports"]},"columns":[{"id":"Package","name":"Package","type":"character"},{"id":"ggplot2_usage","name":"ggplot2 Usage","type":"character"}],"filterable":true,"searchable":true,"defaultSorted":[{"id":"Package","desc":false}],"defaultPageSize":10,"showPageSizeOptions":true,"highlight":true,"bordered":true,"striped":true,"compact":true,"dataKey":"b2f56ef1b9549cd7a695861f6d8f46bb"},"children":[]},"class":"reactR_markup"},"evals":[],"jsHooks":[]}</script>
+</div>
+</div>
+<p><strong>Note:</strong> Not all of these packages will be equally affected. In fact, many Bioconductor packages use <code>ggplot2</code> in straightforward ways (e.g.&nbsp;to create standard plots using <code>ggplot()</code> and <code>geom_*()</code>), which are unlikely to break. The packages most at risk are those that define custom geoms, themes, or modify internal <code>ggplot2</code> behaviour.</p>
+<p>A total of 985 packages in Bioconductor 3.21 declare <code>ggplot2</code> as a dependency: 91 in <code>Depends</code>, 722 in <code>Imports</code>, and 172 in <code>Suggests</code>.</p>
+<p>Packages listed under <code>Depends</code> or <code>Imports</code> are more likely to use <code>ggplot2</code> in their main functionality, so users and developers may see breakages. Those listed under <code>Suggests</code> typically only use <code>ggplot2</code> in optional examples or vignettes, and may not be affected unless those features are run.</p>
+<p>Developers of these packages have already been notified through the Bioconductor Zulip, the bioc-devel mailing list, and direct outreach on GitHub. Teun van den Brand from the <code>ggplot2</code> team has been contacting affected maintainers, and several packages have already been patched or are in progress.</p>
+</section>
+<section id="lessons-from-the-community-practical-tips" class="level3">
+<h3 class="anchored" data-anchor-id="lessons-from-the-community-practical-tips">Lessons from the Community: Practical Tips</h3>
+<p>Many developers have already been testing their packages and sharing their findings in the <a href="https://chat.bioconductor.org">Bioconductor Zulip</a>. These discussions have surfaced some practical tips and patterns to watch for, useful whether you’re maintaining a package or trying to understand why something might have broken:</p>
+<ul>
+<li><strong>Tests relying on internal structure may fail.</strong> Avoid checks like <code>class(p)</code> or <code>expect_type(p, "list")</code>. Use <code>expect_s3_class()</code> or helper functions like <code>is_ggplot()</code> instead.</li>
+<li><strong>Theme customisation is safer with best practices.</strong> Build from a base theme using <code>%+replace%</code>, and avoid storing theme objects in compiled code.</li>
+<li><strong>Related packages matter.</strong> Updating packages like <code>patchwork</code> or <code>plotly</code> may help if your code uses them alongside <code>ggplot2</code>.</li>
+<li><strong>Make your package easy to find and fix.</strong> Ensure your <code>DESCRIPTION</code> includes <code>URL</code> and <code>BugReports</code> fields so others can locate your repo or report issues.</li>
+</ul>
+<p>You can follow the discussion in the <a href="https://chat.bioconductor.org/">Bioconductor Zulip</a> topic: <em>Notifying Bioc maintainers (ggplot2 S7 reverse deps)</em>.</p>
+</section>
+</section>
+<section id="for-users" class="level2">
+<h2 class="anchored" data-anchor-id="for-users">For Users</h2>
+<section id="why-this-might-break-your-code" class="level3">
+<h3 class="anchored" data-anchor-id="why-this-might-break-your-code">Why This Might Break Your Code</h3>
+<p><a href="https://bioconductor.org/about/release-announcements/">Bioconductor has two scheduled releases</a> a year, and those versions are mostly fixed once released. But CRAN packages like <code>ggplot2</code> update more frequently, and those updates can occasionally break Bioconductor packages, especially if you install the new version before Bioconductor packages have had a chance to adapt. In some cases, developers can patch their packages within the current Bioconductor release. But not always, it depends on the issue and whether the maintainer has time and capacity to update quickly.</p>
+<p>This <code>ggplot2</code> update doesn’t mean your whole installation will break. In most cases, only some plotting functionality might stop working, or plots may look different e.g.&nbsp;missing labels or themes.</p>
+</section>
+<section id="what-you-can-do" class="level3">
+<h3 class="anchored" data-anchor-id="what-you-can-do">What You Can Do</h3>
+<p>If you use <code>ggplot2</code>, either directly or via a Bioconductor package, this update may affect you.</p>
+<p>Breakages can happen if you:</p>
+<ul>
+<li>Run <code>update.packages()</code><br>
+</li>
+<li>Install a CRAN or GitHub package that pulls in the new <code>ggplot2</code><br>
+</li>
+<li>Use a package manager like <code>{pak}</code> that updates dependencies automatically</li>
+</ul>
+<p><strong>To avoid disruptions</strong>:</p>
+<ul>
+<li><strong>Hold off updating <code>ggplot2</code> until you’ve tested that it works with your code and the packages you use.</strong></li>
+<li><strong>You can already test with the development version, see below.</strong></li>
+</ul>
+<p>If your code is working as expected, you don’t need to act immediately. But testing ahead of the CRAN release can give you confidence that everything will continue working once <code>ggplot2</code> 4.0.0 is out.</p>
+</section>
+<section id="how-to-check-if-youre-affected" class="level3">
+<h3 class="anchored" data-anchor-id="how-to-check-if-youre-affected">How to Check If You’re Affected</h3>
+<p>The development version of ggplot2 (4.0.0) is already available for testing using {pak}. The CRAN release is expected mid-to-late July. If you’re not sure whether to update once it’s out, here’s how you can test your current setup ahead of time.</p>
+<ul>
+<li>Create a temporary or isolated R project (e.g.&nbsp;using <code>{renv}</code> or RStudio Project)</li>
+<li>Install the development version of <code>ggplot2</code>:</li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb3" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">install.packages</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"pak"</span>)</span>
+<span id="cb3-2">pak<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">pak</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"tidyverse/ggplot2"</span>)</span></code></pre></div>
+</div>
+<ul>
+<li>Re-run your code and check that plots appear as expected</li>
+</ul>
+<p>If something breaks, you can always roll back, or just hold off updating until patches are released.</p>
+</section>
+<section id="tools-to-help" class="level3">
+<h3 class="anchored" data-anchor-id="tools-to-help">Tools to Help</h3>
+<p>To manage versions and avoid surprises:</p>
+<ul>
+<li><p>Use <code>{renv}</code> to snapshot your current setup:</p>
+<div class="sourceCode" id="cb4" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Create a reproducible project setup</span></span>
+<span id="cb4-2">renv<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">init</span>()</span>
+<span id="cb4-3">renv<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">snapshot</span>()</span></code></pre></div></li>
+<li><p>When updating, use:</p>
+<div class="sourceCode" id="cb5" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">update.packages</span>(<span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">ask =</span> <span class="cn" style="color: #8f5902;
+background-color: null;
+font-style: inherit;">TRUE</span>)</span></code></pre></div></li>
+</ul>
+<p>and consider skipping <code>ggplot2</code> if you’re unsure.</p>
+</section>
+</section>
+<section id="final-notes" class="level2">
+<h2 class="anchored" data-anchor-id="final-notes">Final Notes</h2>
+<p>Thanks to everyone who has tested, reported, or patched packages ahead of this release. Special thanks to <a href="https://github.com/teunbrand">Teun van den Brand</a> and the <code>ggplot2</code> team for their proactive and open collaboration with the Bioconductor community.</p>
+<p>If you maintain a package using <code>ggplot2</code> and haven’t tested it yet, testing now can help your users, and save others from running into the same issues.</p>
+<p>Not a developer? Reporting even small glitches after updating ggplot2 can still be useful, if the issue isn’t already known. Before posting, it’s worth checking if the problem has been reported on the package’s GitHub or discussed in Bioconductor Zulip. If it has, you can add a comment or emoji reaction to help signal it’s affecting others too. That kind of input helps maintainers prioritise and can save time for everyone.</p>
+<p>Fixes may take time to propagate, especially with so many interdependent packages, and most Bioconductor maintainers contributing alongside full academic workloads. But progress is steady, and made easier when people flag issues early.</p>
+<p>Big changes like this aren’t always smooth, but open communication goes a long way. Whether you’re maintaining a package, reporting a bug, or just keeping an eye out, it all helps. Thanks for reading, and for being part of this collaborative process.</p>
+
+
+<!-- -->
+
+</section>
+</section>
+
+<p>
+© 2025 Bioconductor. Content is published under <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons CC-BY-4.0 License</a> for the text and <a href="https://opensource.org/licenses/BSD-3-Clause">BSD 3-Clause License</a> for any code. | <a href="https://www.r-bloggers.com">R-Bloggers</a>
+</p> ]]></description>
+  <category>tech-notes</category>
+  <guid>https://blog.bioconductor.org/posts/2025-07-07-ggplot2-update/</guid>
+  <pubDate>Mon, 07 Jul 2025 00:00:00 GMT</pubDate>
+  <media:content url="https://blog.bioconductor.org/posts/2025-07-07-ggplot2-update/bioc-ggpot2-r_logos.png" medium="image" type="image/png" height="81" width="144"/>
+</item>
 <item>
   <title>Bringing Bioconductor to Galaxy: A CoFest Collaboration</title>
-  <dc:creator>Gretta Yagudayeva</dc:creator>
-  <dc:creator>Maria Doyle</dc:creator>
-  <dc:creator>Charlotte Soneson</dc:creator>
-  <dc:creator>Marcel Ramos Pérez</dc:creator>
-  <dc:creator>Robert Castelo</dc:creator>
   <link>https://blog.bioconductor.org/posts/2025-07-03-bioc-to-galaxy/</link>
   <description><![CDATA[ 
 
@@ -884,79 +1274,6 @@ Becker, Richard A., and John M. Chambers. 1984. <em>S: An Interactive Environmen
   <guid>https://blog.bioconductor.org/posts/2025-02-26-outreachy-mentoring/</guid>
   <pubDate>Wed, 26 Feb 2025 00:00:00 GMT</pubDate>
   <media:content url="https://blog.bioconductor.org/posts/2025-02-26-outreachy-mentoring/Svetlanas_mentees_and_their_projects.png" medium="image" type="image/png" height="76" width="144"/>
-</item>
-<item>
-  <title>2024 SpatialData Workshop</title>
-  <dc:creator>Artür Manukyan</dc:creator>
-  <link>https://blog.bioconductor.org/posts/2025-01-08-bioc-in-scverse-workshop/</link>
-  <description><![CDATA[ 
-
-
-
-
-
-<p>The first SpatialData hackathon and workshop was organized by the <a href="https://scverse.org/">scverse</a> community on 12-14 November 2024 in Basel, Switzerland. 20 attendees had gathered to work on improving online materials, tutorials, and scalability of existing spatial omics and scverse frameworks where interoperability across software platforms were prioritized.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="1731708109822.png" class="lightbox" data-gallery="gallery-intro"><img src="https://blog.bioconductor.org/posts/2025-01-08-bioc-in-scverse-workshop/1731708109822.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:80.0%" alt="SpatialData Workshop attendees"></a></p>
-</figure>
-</div>
-<section id="interoperability-for-spatial-omics" class="level2">
-<h2 class="anchored" data-anchor-id="interoperability-for-spatial-omics">Interoperability for Spatial Omics</h2>
-<p>One of the key objectives of the workshop was to gather communities from R and Python, to harmonize spatial data formats towards R/Python interoperability and cross-framework integration.</p>
-<p>A group of R/Bioconductor developers led by Helena L. Crowell have teamed up to devise R bindings for the <a href="https://spatialdata.scverse.org/en/stable/">SpatialData</a> framework which will enable users to operate SpatialData objects across R and Python environments simultaneously.</p>
-<div id="gallery-carp" class="columns">
-<div class="column" style="width:50%;">
-<p><a href="1731708107583.png" class="lightbox" data-gallery="gallery-intro"><img src="https://blog.bioconductor.org/posts/2025-01-08-bioc-in-scverse-workshop/1731708107583.png" class="img-fluid" alt="R Interoperability Team"></a></p>
-</div><div class="column" style="width:50%;">
-<p><a href="PXL_20241112_084126060.MP.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3"><img src="https://blog.bioconductor.org/posts/2025-01-08-bioc-in-scverse-workshop/PXL_20241112_084126060.MP.png" class="img-fluid" alt="R Interoperability Slide"></a></p>
-</div><p><em>R Interoperability Team (clockwise): Artür Manukyan, Dario Righelli, Vincent Carey, Kevin Yamauchi, Louise Deconinck, Estella Yixing Dong, Helena L. Crowell</em></p>
-</div>
-<p>The event brought together scientists with expertise in <strong>(i)</strong> R and Bioconductor frameworks for spatial omics, <strong>(ii)</strong> R/Python interoperability for single cell frameworks (<a href="https://github.com/scverse/anndataR"><code>anndataR</code></a>) and <strong>(iii)</strong> <a href="https://zarr.readthedocs.io/en/stable/getting_started.html">Zarr</a> for the storage of chunked, compressed, N-dimensional arrays (<a href="https://bioconductor.org/packages/release/bioc/html/Rarr.html"><code>Rarr</code></a>, <a href="https://github.com/keller-mark/pizzarr"><code>pizzarr</code></a>).</p>
-<p>Further discussions were made on joint scverse/Bioconductor projects and how to fully utilize R-native frameworks for out of memory data management through file formats such as .zarr (via <a href="https://bioconductor.org/packages/release/bioc/html/DelayedArray.html"><code>DelayedArray</code></a>) and .parquet (via <a href="https://arrow.apache.org/docs/r/index.html"><code>arrow</code></a>) to scale up spatial omics analysis for the Bioconductor community.</p>
-</section>
-<section id="summary-of-hackathon" class="level2">
-<h2 class="anchored" data-anchor-id="summary-of-hackathon">Summary of Hackathon</h2>
-<p>The Hackathon event in Basel focused on four tracks which leveraged multiple programming languages, including Python, R, and JavaScript:</p>
-<ol type="1">
-<li><p><strong>R interoperability</strong>: Enhancing the integration and compatibility of R and Python with the SpatialData Python framework by using the language-agnostic SpatialData Zarr file format.</p></li>
-<li><p><strong>Visualization interoperability</strong>: Improving the seamless integration of visualization tools across different systems and programming languages via a tool-agnostic view configuration.</p></li>
-<li><p><strong>Scalability and benchmarking</strong>: Identifying, benchmarking, and addressing computational bottlenecks within the SpatialData framework.</p></li>
-<li><p><strong>Ergonomics and user-friendliness</strong>: Enhancing the usability and accessibility of the SpatialData framework for both first-time users and third-party developers.</p></li>
-</ol>
-<p>You can find more information on outcomes of each of these tracks in the <a href="https://osf.io/preprints/biohackrxiv/8ck3e">BioHackArxiv</a> preprint.</p>
-<p>For track 1 specifically, R/Bioconductor packages <a href="https://github.com/HelenaLC/SpatialData"><code>SpatialData</code></a> (representation), <a href="https://github.com/HelenaLC/SpatialData.plot"><code>SpatialData.plot</code></a> (visualization), <a href="https://github.com/HelenaLC/SpatialData.data"><code>SpatialData.data</code></a> (datasets) are under development, and a <a href="https://www.bioconductor.org/packages/release/bioc/html/BiocBook.html"><code>BiocBook</code></a> consolidation vignettes and scientific workflows is in planning.</p>
-</section>
-<section id="spatialdata-framework" class="level2">
-<h2 class="anchored" data-anchor-id="spatialdata-framework">SpatialData Framework</h2>
-<p>SpatialData is a data framework that comprises a FAIR storage format and a collection of libraries originally written in python for performant access, alignment, and processing of spatial omics datasets. SpatialData is currently maintained by the <a href="https://scverse.org/">scverse</a> consortium.</p>
-<p><strong>Website</strong>: <a href="https://spatialdata.scverse.org/">https://spatialdata.scverse.org/</a></p>
-<p><strong>SpatialData core team</strong>: Luca Marconato, Giovanni Palla, Kevin Yamauchi, Wouter-Michiel Vierdag, Tim Treis, Isaac Virshup, Josh Moore.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="spatialdata.png" class="lightbox" data-gallery="quarto-lightbox-gallery-4"><img src="https://blog.bioconductor.org/posts/2025-01-08-bioc-in-scverse-workshop/spatialdata.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:80.0%" alt="spatialdata framework"></a></p>
-</figure>
-</div>
-</section>
-<section id="scverse" class="level2">
-<h2 class="anchored" data-anchor-id="scverse">scverse</h2>
-<p>scverse is a consortium of foundational tools (mostly in Python) for omics data in life sciences. It has been founded to ensure the long-term maintenance of some known core tools such as anndata, scanpy, squidpy and spatialdata.</p>
-<p><strong>Website</strong>: <a href="https://scverse.org/">https://scverse.org/</a></p>
-</section>
-<section id="join-us" class="level2">
-<h2 class="anchored" data-anchor-id="join-us">Join Us!</h2>
-<p>Join the <code>#spatialdata-devel</code> channel in <a href="https://slack.bioconductor.org/">Bioconductor Slack</a> to take part in discussions, future work, and hackathons.</p>
-
-
-</section>
-
-<p>
-© 2025 Bioconductor. Content is published under <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons CC-BY-4.0 License</a> for the text and <a href="https://opensource.org/licenses/BSD-3-Clause">BSD 3-Clause License</a> for any code. | <a href="https://www.r-bloggers.com">R-Bloggers</a>
-</p> ]]></description>
-  <category>Bioconductor</category>
-  <guid>https://blog.bioconductor.org/posts/2025-01-08-bioc-in-scverse-workshop/</guid>
-  <pubDate>Wed, 08 Jan 2025 00:00:00 GMT</pubDate>
-  <media:content url="https://blog.bioconductor.org/posts/2025-01-08-bioc-in-scverse-workshop/1731708109822.png" medium="image" type="image/png" height="108" width="144"/>
 </item>
 </channel>
 </rss>
