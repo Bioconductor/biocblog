@@ -25,6 +25,9 @@ jobs:
 
       - name: Render site (with code freeze)
         run: quarto check && quarto render
+        
+      - name: Install xmllint
+        run: sudo apt-get update && sudo apt-get install -y libxml2-utils
 
       - name: Validate RSS feed
         run: |
