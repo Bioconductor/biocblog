@@ -2,7 +2,7 @@
 title: "Bioconductor and ggplot2 4.0.0: What’s Changing and How to Prepare"
 description: "Preparing for the upcoming update - key changes, potential breakages, and what developers and users can do"
 author: "Maria Doyle (Bioconductor Community Manager), with contributions from the Bioconductor and ggplot2 developer communities"
-date: 2025-07-09
+date: 2025-07-07
 image: "bioc-ggpot2-r_logos.png"
 categories: tech-notes
 format:
