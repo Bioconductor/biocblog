@@ -46,7 +46,7 @@ It offers:
 
 S7 is being developed by the R Consortium’s OOP Working Group, with contributors from R Core, Bioconductor, Posit, and others.
 
-Learn more about S7 in the [tidyverse blog](https://www.tidyverse.org/blog/2024/11/s7-0-2-0/) and on the [R Consortium site](https://rconsortium.github.io/S7/index.html).
+Learn more in the [tidyverse blog post](https://www.tidyverse.org/blog/2024/11/s7-0-2-0/) and on the [R Consortium's S7 site](https://rconsortium.github.io/S7/index.html).
 
 ## For Developers
 
@@ -59,7 +59,7 @@ You can test your package against the development version of `ggplot2` using:
 pak::pak("tidyverse/ggplot2")
 ```
 
-We recommend testing in a clean or isolated environment (e.g. `{renv}`, `{callr}`) to avoid unexpected interactions.
+We recommend testing in an isolated environment using `{renv}` to avoid unexpected interactions with your existing packages.
 
 If you find issues:
 
@@ -119,7 +119,7 @@ reactable(
   striped = TRUE,
   bordered = TRUE,
   highlight = TRUE,
-  defaultPageSize = 10,
+  defaultPageSize = 20,
   showPageSizeOptions = TRUE,
   compact = TRUE
 )
@@ -149,7 +149,7 @@ You can follow the discussion in the [Bioconductor Zulip](https://chat.bioconduc
 
 ### Why This Might Break Your Code
 
-[Bioconductor has two scheduled releases](https://bioconductor.org/about/release-announcements/) a year, and those versions are mostly fixed once released. But CRAN packages like `ggplot2` update more frequently, and those updates can occasionally break Bioconductor packages, especially if you install the new version before Bioconductor packages have had a chance to adapt. In some cases, developers can patch their packages within the current Bioconductor release. But not always, it depends on the issue and whether the maintainer has time and capacity to update quickly.
+[Bioconductor has two scheduled releases](https://bioconductor.org/about/release-announcements/) a year, and those versions are mostly fixed once released. But CRAN packages like `ggplot2` update more frequently, and those updates can occasionally break Bioconductor packages, especially if you install the new version before Bioconductor packages have had a chance to adapt. In some cases, developers can patch their packages within the current Bioconductor release. But that’s not always possible, it depends on the issue and whether the maintainer has time and capacity to update quickly.
 
 This `ggplot2` update doesn’t mean your whole installation will break. In most cases, only some plotting functionality might stop working, or plots may look different e.g. missing labels or themes.
 
@@ -174,7 +174,7 @@ If your code is working as expected, you don’t need to act immediately. But te
 
 The development version of ggplot2 (4.0.0) is already available for testing using {pak}. The CRAN release is expected mid-to-late July. If you’re not sure whether to update once it’s out, here’s how you can test your current setup ahead of time.
 
-- Create a temporary or isolated R project (e.g. using `{renv}` or RStudio Project)
+- Create a temporary or isolated environment using `{renv}`
 - Install the development version of `ggplot2`:
 
 ```{r}
