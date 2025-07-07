@@ -13,6 +13,8 @@ format:
     code-tools: true
 ---
 
+![](bioc-ggplot2-r_logos.png){fig-alt="Bioconductor, ggplot2 and R logos" fig-align="center" width="60%"}
+
 # Introduction
 
 A major update to [`ggplot2`](https://ggplot2.tidyverse.org/) (version 4.0.0) is expected around **mid-to-late July 2025**. It brings a significant internal change, replacing most of the S3 backend with the newer S7 object system. While this improves long-term maintainability and extensibility, it may break Bioconductor packages that depend on `ggplot2`, especially those that customise how plots are built or styled. Packages that use `ggplot2` for typical plotting tasks, such as creating plots with `ggplot()` and `geom_*()`, are unlikely to be affected.
