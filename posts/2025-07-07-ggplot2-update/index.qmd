@@ -46,7 +46,7 @@ It offers:
 
 S7 is being developed by the R Consortium’s OOP Working Group, with contributors from R Core, Bioconductor, Posit, and others.
 
-Learn more about S7 in the [tidyverse blog](https://www.tidyverse.org/blog/2024/11/s7-0-2-0/) and on the [R Consortium site]((https://rconsortium.github.io/S7/index.html).
+Learn more about S7 in the [tidyverse blog](https://www.tidyverse.org/blog/2024/11/s7-0-2-0/) and on the [R Consortium site](https://rconsortium.github.io/S7/index.html).
 
 ## For Developers
 
