@@ -3,7 +3,7 @@ title: "Bioconductor’s First Microbiome Course in Brazil: A Successful Worksho
 author: "Izabela Mamede"
 date: "2025-04-23"
 categories: [Events, Workshops, Microbiome]
-image: images/brazil_microbiome_2025_ufmg.png
+image: brazil_microbiome_2025_ufmg.png
 alt-text: "Participants of the Bioconductor microbiome workshop in Brazil gathered at UFMG"
 ---
 
