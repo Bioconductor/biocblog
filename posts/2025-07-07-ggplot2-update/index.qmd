@@ -3,7 +3,7 @@ title: "Bioconductor and ggplot2 4.0.0: What’s Changing and How to Prepare"
 description: "Preparing for the upcoming update - key changes, potential breakages, and what developers and users can do"
 author: "Maria Doyle (Bioconductor Community Manager), with contributions from the Bioconductor and ggplot2 developer communities"
 date: 2025-07-07
-image: "bioc-ggpot2-r_logos.png"
+image: "bioc-ggplot2-r_logos.png"
 categories: tech-notes
 format:
   html:
@@ -15,14 +15,14 @@ format:
 
 # Introduction
 
-A major update to `ggplot2` (version 4.0.0) is expected around **mid-to-late July 2025**. It brings a significant internal change, replacing most of the S3 backend with the newer S7 object system. While this improves long-term maintainability and extensibility, it may break Bioconductor packages that depend on `ggplot2`, especially those that customise how plots are built or styled. Packages that use `ggplot2` for typical plotting tasks, such as creating plots with `ggplot()` and `geom_*()`, are unlikely to be affected.
+A major update to [`ggplot2`](https://ggplot2.tidyverse.org/) (version 4.0.0) is expected around **mid-to-late July 2025**. It brings a significant internal change, replacing most of the S3 backend with the newer S7 object system. While this improves long-term maintainability and extensibility, it may break Bioconductor packages that depend on `ggplot2`, especially those that customise how plots are built or styled. Packages that use `ggplot2` for typical plotting tasks, such as creating plots with `ggplot()` and `geom_*()`, are unlikely to be affected.
 
 ## TL;DR
 
 - `ggplot2` 4.0.0 is a major internal update switching to S7 classes
-- Some Bioconductor packages may break, especially those customising `ggplot` themes/geoms
+- Some Bioconductor packages may break, especially those customising `ggplot2` themes/geoms
 - Only affects plotting - statistical or modelling functions remain unchanged
-- If you're a user, hold off updating ggplot2 until your packages are confirmed to work
+- If you're a user, hold off updating `ggplot2` until your packages are confirmed to work
 - If you're a developer, test now using `pak::pak("tidyverse/ggplot2")` to prepare before release
 - Questions or issues? Join us on [Zulip](https://chat.bioconductor.org/)
 
@@ -52,14 +52,14 @@ Learn more in the [tidyverse blog post](https://www.tidyverse.org/blog/2024/11/s
 
 ### What Developers Should Do Now
 
-You can test your package against the development version of `ggplot2` using:
+You can test your package against the development version of `ggplot2` using [`pak`](https://pak.r-lib.org/):
 
 ```r
 # install.packages("pak")
 pak::pak("tidyverse/ggplot2")
 ```
 
-We recommend testing in an isolated environment using `{renv}` to avoid unexpected interactions with your existing packages.
+We recommend testing in an isolated environment using [`renv`](https://rstudio.github.io/renv/)  to avoid unexpected interactions with your existing packages.
 
 If you find issues:
 
@@ -119,7 +119,7 @@ reactable(
   striped = TRUE,
   bordered = TRUE,
   highlight = TRUE,
-  defaultPageSize = 20,
+  defaultPageSize = 10,
   showPageSizeOptions = TRUE,
   compact = TRUE
 )
@@ -161,7 +161,7 @@ Breakages can happen if you:
 
 - Run `update.packages()`  
 - Install a CRAN or GitHub package that pulls in the new `ggplot2`  
-- Use a package manager like `{pak}` that updates dependencies automatically  
+- Use a package manager like `pak` that updates dependencies automatically  
 
 **To avoid disruptions**:
 
@@ -172,9 +172,9 @@ If your code is working as expected, you don’t need to act immediately. But te
 
 ### How to Check If You’re Affected
 
-The development version of ggplot2 (4.0.0) is already available for testing using {pak}. The CRAN release is expected mid-to-late July. If you’re not sure whether to update once it’s out, here’s how you can test your current setup ahead of time.
+The development version of ggplot2 (4.0.0) is already available for testing using `pak`. The CRAN release is expected mid-to-late July. If you’re not sure whether to update once it’s out, here’s how you can test your current setup ahead of time with [`renv`](https://rstudio.github.io/renv/) and [`pak`](https://pak.r-lib.org/):
 
-- Create a temporary or isolated environment using `{renv}`
+- Create a temporary or isolated environment using `renv`
 - Install the development version of `ggplot2`:
 
 ```{r}
@@ -194,7 +194,7 @@ If something breaks, you can always roll back, or just hold off updating until p
 
 To manage versions and avoid surprises:
 
-- Use `{renv}` to snapshot your current setup:
+- Use `renv` to snapshot your current setup:
   ```r
   # Create a reproducible project setup
   renv::init()
@@ -214,7 +214,7 @@ Thanks to everyone who has tested, reported, or patched packages ahead of this r
 
 If you maintain a package using `ggplot2` and haven’t tested it yet, testing now can help your users, and save others from running into the same issues.
 
-Not a developer? Reporting even small glitches after updating ggplot2 can still be useful, if the issue isn’t already known. Before posting, it’s worth checking if the problem has been reported on the package's GitHub or discussed in Bioconductor Zulip. If it has, you can add a comment or emoji reaction to help signal it’s affecting others too. That kind of input helps maintainers prioritise and can save time for everyone.
+Not a developer? Reporting even small glitches after updating `ggplot2` can still be useful, if the issue isn’t already known. Before posting, it’s worth checking if the problem has been reported on the package's GitHub or discussed in Bioconductor Zulip. If it has, you can add a comment or emoji reaction to help signal it’s affecting others too. That kind of input helps maintainers prioritise and can save time for everyone.
 
 Fixes may take time to propagate, especially with so many interdependent packages, and most Bioconductor maintainers contributing alongside full academic workloads. But progress is steady, and made easier when people flag issues early.
 
