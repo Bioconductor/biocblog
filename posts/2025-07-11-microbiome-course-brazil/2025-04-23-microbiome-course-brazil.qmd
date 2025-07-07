@@ -1,11 +1,15 @@
 ---
 title: "Bioconductor’s First Microbiome Course in Brazil: A Successful Workshop at UFMG in Belo Horizonte"
-author: "Izabela Mamede"
-date: "2025-04-23"
+author: 
+  - name: "Izabela Mamede"
+    url: https://github.com/iza-mcac
+date: "2025-07-11"
 categories: [Events, Workshops, Microbiome]
 image: brazil_microbiome_2025_ufmg.png
 alt-text: "Participants of the Bioconductor microbiome workshop in Brazil gathered at UFMG"
 ---
+
+![](brazil_microbiome_2025_ufmg.png){fig-alt="Participants of the Bioconductor microbiome workshop in Brazil gathered at UFMG" fig-align="center"}
 
 From April 23rd to 25th, 2025, we hosted the first Bioconductor microbiome course in Brazil, a three-afternoon workshop held at the Interunits Post-Graduate Program of Bioinformatics at the Federal University of Minas Gerais (UFMG) ([link](https://www.pgbioinfo.icb.ufmg.br/index.php)) in Belo Horizonte. The workshop brought together 24 enthusiastic participants, ranging from undergraduate students to full professors, all eager to deepen their knowledge of microbiome data analysis using R and Bioconductor.
 
@@ -23,7 +27,7 @@ Students especially enjoyed sessions on:
 - Community similarity  
 - Data visualization  
 
-The course followed best practices in data science education, inspired by the [Carpentries](http://carpentries.org) model, and was led by two Bioconductor Carpentries instructors. Both Professor Leo Lahti and Izabela Mamede were among the 31 instructors trained over the past two years as part of this initiative. Read more in the [Bioconductor Carpentries update](https://bioconductor.org/help/events/bioc-carpentries/).
+The course followed best practices in data science education, inspired by the [Carpentries](http://carpentries.org) model, and was led by two Bioconductor Carpentries instructors. Both Professor Leo Lahti and Izabela Mamede were among the 31 instructors trained over the past two years as part of this initiative. Read more in the [Bioconductor Carpentries update](https://blog.bioconductor.org/posts/2025-02-28-carpentries-update/).
 
 A big thank you to everyone who made this event possible, especially the Bioinformatics program heads, Professors Flávia Aburjaile and Raquel Minardi, Professor Glória R. Franco who helped set up and organize the workshop, the co-instructors João Paulo P. de Almeida and Izabela Mamede, the participants, and Professor Leo Lahti who traveled all the way from Finland to Brazil to teach the course. The event, as well as the disseminated methodology, was supported by the European Union’s Horizon 2020 research and innovation programme **FindingPheno** (grant 952914).
 
@@ -36,4 +40,4 @@ To stay connected and continue the conversation:
 - Join the `#miaverse` channel, dedicated to the framework we used in the course (like (Tree)SummarizedExperiment for microbiome). This directly fits the course methodology and is a good place for specific questions and shared learning.
 - Join the `#microbiome_metagenome` channel for broader microbiome discussions. This is more useful for general community building and connecting with researchers beyond the course cohort.
 
-👉 You can join the conversation at [https://community-bioc.zulipchat.com](https://community-bioc.zulipchat.com)
+👉 You can join the conversation at [https://chat.bioconductor.org](https://chat.bioconductor.org)
