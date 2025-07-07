@@ -1,0 +1,221 @@
+---
+title: "Bioconductor and ggplot2 4.0.0: What’s Changing and How to Prepare"
+description: "Preparing for the upcoming update - key changes, potential breakages, and what developers and users can do"
+author: "Maria Doyle (Bioconductor Community Manager), with contributions from the Bioconductor and ggplot2 developer communities"
+date: 2025-07-07
+image: "bioc-ggpot2-r_logos.png"
+categories: tech-notes
+format:
+  html:
+    toc: true
+    toc-depth: 2
+    code-fold: true
+    code-tools: true
+---
+
+# Introduction
+
+A major update to `ggplot2` (version 4.0.0) is expected around **mid-to-late July 2025**. It brings a significant internal change, replacing most of the S3 backend with the newer S7 object system. While this improves long-term maintainability and extensibility, it may break Bioconductor packages that depend on `ggplot2`, especially those that customise how plots are built or styled. Packages that use `ggplot2` for typical plotting tasks, such as creating plots with `ggplot()` and `geom_*()`, are unlikely to be affected.
+
+## TL;DR
+
+- `ggplot2` 4.0.0 is a major internal update switching to S7 classes
+- Some Bioconductor packages may break, especially those customising `ggplot` themes/geoms
+- Only affects plotting - statistical or modelling functions remain unchanged
+- If you're a user, hold off updating ggplot2 until your packages are confirmed to work
+- If you're a developer, test now using `pak::pak("tidyverse/ggplot2")` to prepare before release
+- Questions or issues? Join us on [Zulip](https://chat.bioconductor.org/)
+
+
+## What’s Changing?
+
+The 4.0.0 release of `ggplot2` introduces a major internal refactor: S3 classes are being migrated to the new S7 system. While most users won’t notice the difference, some packages rely on how `ggplot2` is built internally, for example, by modifying its themes, geoms, or using helper functions. These packages (e.g. `ComplexUpset`, `ggtree`, `plotly`) may break if that internal structure changes.
+
+Some issues may be minor, like test failures, while others may cause runtime errors. Either way, this is a good time to review your usage.
+
+## Why S7?
+
+S7 is a new object-oriented system in R that makes packages more robust, predictable, and easier to extend. It gives developers better tools for managing complex code, but switching to it can affect packages that rely on how things used to work under the old system (S3).
+
+It offers:
+
+- Formal class and method definitions\
+- Limited multiple dispatch\
+- Cleaner support for interoperability\
+- Greater consistency across packages
+
+S7 is being developed by the R Consortium’s OOP Working Group, with contributors from R Core, Bioconductor, Posit, and others.
+
+Learn more about S7 in the [tidyverse blog](https://www.tidyverse.org/blog/2024/11/s7-0-2-0/) and on the [R Consortium site]((https://rconsortium.github.io/S7/index.html).
+
+## For Developers
+
+### What Developers Should Do Now
+
+You can test your package against the development version of `ggplot2` using:
+
+```r
+# install.packages("pak")
+pak::pak("tidyverse/ggplot2")
+```
+
+We recommend testing in a clean or isolated environment (e.g. `{renv}`, `{callr}`) to avoid unexpected interactions.
+
+If you find issues:
+
+- Report a bug: [github.com/tidyverse/ggplot2/issues](https://github.com/tidyverse/ggplot2/issues)  
+- Tag [@teunbrand on GitHub](https://github.com/teunbrand) if you'd like input from the `ggplot2` team
+- Discuss with the Bioconductor community: Post in [Bioconductor Zulip](https://chat.bioconductor.org/) or email the `bioc-devel@r-project.org` mailing list 
+
+### Common Issues Already Reported
+
+These are specific breakages already reported on the `ggplot2` GitHub:
+
+- **Class checks**: Tests relying on exact class structures like `class(p)` or `expect_type(p, "list")` may now fail. Instead, use `expect_true(is_ggplot(p))` or `expect_s3_class(p, "ggplot")` for compatibility. See [#6498](https://github.com/tidyverse/ggplot2/issues/6498).
+- **Label handling**: Labels are now stricter and constructed later in the build step. Use `get_labs()` in tests, and avoid unnamed or duplicate arguments in `labs()`. See [#6505](https://github.com/tidyverse/ggplot2/issues/6505).
+- **Custom + methods**: Packages defining custom + operators (e.g. `+.gg`) may need to revise their implementation, especially with mixed S3/S7 class use. See [#6504](https://github.com/tidyverse/ggplot2/issues/6504).
+- **Invalid element properties**: With S7 class adoption, element constructors like `element_text()` now enforce stricter type checks (e.g. no TRUE for family, no decimal colours). Fix the incorrect properties in your package. See [#6507](https://github.com/tidyverse/ggplot2/issues/6507).
+- **S3 method consistency**: Generics like `ggplot_build()` and `ggplot_add()` now include `...` Your methods must include it too, even if unused, to avoid warnings. See [#6515](https://github.com/tidyverse/ggplot2/issues/6515).
+
+These are evolving, if something looks broken, it’s worth checking the [ggplot2 issues page](https://github.com/tidyverse/ggplot2/issues) for updates before opening a new one.
+
+The Bioconductor core team has also been running automated tests on a subset of packages to help spot issues early. Due to resource constraints, this currently covers only a portion of the ecosystem, so it’s still important for developers to test their own packages.
+
+### How Bioconductor Packages May Be Affected
+
+We’ve compiled a list of packages in Bioconductor 3.21 that declare `ggplot2` in `Depends`, `Imports`, or `Suggests`:
+
+````{r message=FALSE, warning=FALSE}
+library(BiocManager)
+library(tidyverse)
+library(reactable)
+
+repos <- repositories(version = "3.21")
+bioc_repos <- repos[grepl("BioC", names(repos))]
+db <- available.packages(contrib.url(bioc_repos))
+
+pkg_df <- as_tibble(db) %>%
+  mutate(
+    ggplot2_usage = case_when(
+      grepl("ggplot2", Depends) ~ "Depends",
+      grepl("ggplot2", Imports) ~ "Imports",
+      grepl("ggplot2", Suggests) ~ "Suggests",
+      TRUE ~ NA_character_
+    )
+  ) %>%
+  filter(!is.na(ggplot2_usage)) %>%
+  select(Package, ggplot2_usage) %>%
+  arrange(Package)
+
+reactable(
+  pkg_df,
+  searchable = TRUE,
+  filterable = TRUE,
+  columns = list(
+    Package = colDef(name = "Package"),
+    ggplot2_usage = colDef(name = "ggplot2 Usage")
+  ),
+  defaultSorted = "Package",
+  striped = TRUE,
+  bordered = TRUE,
+  highlight = TRUE,
+  defaultPageSize = 10,
+  showPageSizeOptions = TRUE,
+  compact = TRUE
+)
+````
+
+**Note:** Not all of these packages will be equally affected. In fact, many Bioconductor packages use `ggplot2` in straightforward ways (e.g. to create standard plots using `ggplot()` and `geom_*()`), which are unlikely to break. The packages most at risk are those that define custom geoms, themes, or modify internal `ggplot2` behaviour. 
+
+A total of 985 packages in Bioconductor 3.21 declare `ggplot2` as a dependency: 91 in `Depends`, 722 in `Imports`, and 172 in `Suggests`.
+
+Packages listed under `Depends` or `Imports` are more likely to use `ggplot2` in their main functionality, so users and developers may see breakages. Those listed under `Suggests` typically only use `ggplot2` in optional examples or vignettes, and may not be affected unless those features are run.
+
+Developers of these packages have already been notified through the Bioconductor Zulip, the bioc-devel mailing list, and direct outreach on GitHub. Teun van den Brand from the `ggplot2` team has been contacting affected maintainers, and several packages have already been patched or are in progress.
+
+### Lessons from the Community: Practical Tips
+
+Many developers have already been testing their packages and sharing their findings in the [Bioconductor Zulip](https://chat.bioconductor.org). These discussions have surfaced some practical tips and patterns to watch for, useful whether you're maintaining a package or trying to understand why something might have broken:
+
+- **Tests relying on internal structure may fail.** Avoid checks like `class(p)` or `expect_type(p, "list")`. Use `expect_s3_class()` or helper functions like `is_ggplot()` instead.
+- **Theme customisation is safer with best practices.** Build from a base theme using `%+replace%`, and avoid storing theme objects in compiled code.
+- **Related packages matter.** Updating packages like `patchwork` or `plotly` may help if your code uses them alongside `ggplot2`.
+- **Make your package easy to find and fix.** Ensure your `DESCRIPTION` includes `URL` and `BugReports` fields so others can locate your repo or report issues.
+
+You can follow the discussion in the [Bioconductor Zulip](https://chat.bioconductor.org/) topic: *Notifying Bioc maintainers (ggplot2 S7 reverse deps)*.
+
+
+## For Users
+
+### Why This Might Break Your Code
+
+[Bioconductor has two scheduled releases](https://bioconductor.org/about/release-announcements/) a year, and those versions are mostly fixed once released. But CRAN packages like `ggplot2` update more frequently, and those updates can occasionally break Bioconductor packages, especially if you install the new version before Bioconductor packages have had a chance to adapt. In some cases, developers can patch their packages within the current Bioconductor release. But not always, it depends on the issue and whether the maintainer has time and capacity to update quickly.
+
+This `ggplot2` update doesn’t mean your whole installation will break. In most cases, only some plotting functionality might stop working, or plots may look different e.g. missing labels or themes.
+
+### What You Can Do
+
+If you use `ggplot2`, either directly or via a Bioconductor package, this update may affect you.
+
+Breakages can happen if you:
+
+- Run `update.packages()`  
+- Install a CRAN or GitHub package that pulls in the new `ggplot2`  
+- Use a package manager like `{pak}` that updates dependencies automatically  
+
+**To avoid disruptions**:
+
+- **Hold off updating `ggplot2` until you’ve tested that it works with your code and the packages you use.**
+- **You can already test with the development version, see below.**
+
+If your code is working as expected, you don’t need to act immediately. But testing ahead of the CRAN release can give you confidence that everything will continue working once `ggplot2` 4.0.0 is out.
+
+### How to Check If You’re Affected
+
+The development version of ggplot2 (4.0.0) is already available for testing using {pak}. The CRAN release is expected mid-to-late July. If you’re not sure whether to update once it’s out, here’s how you can test your current setup ahead of time.
+
+- Create a temporary or isolated R project (e.g. using `{renv}` or RStudio Project)
+- Install the development version of `ggplot2`:
+
+```{r}
+#| eval: false
+#| echo: true
+#| code-fold: false
+
+install.packages("pak")
+pak::pak("tidyverse/ggplot2")
+```
+
+- Re-run your code and check that plots appear as expected 
+
+If something breaks, you can always roll back, or just hold off updating until patches are released.
+
+### Tools to Help
+
+To manage versions and avoid surprises:
+
+- Use `{renv}` to snapshot your current setup:
+  ```r
+  # Create a reproducible project setup
+  renv::init()
+  renv::snapshot()
+  ```
+
+- When updating, use:
+  ```r
+  update.packages(ask = TRUE)
+  ```
+
+and consider skipping `ggplot2` if you're unsure.
+
+## Final Notes
+
+Thanks to everyone who has tested, reported, or patched packages ahead of this release. Special thanks to [Teun van den Brand](https://github.com/teunbrand) and the `ggplot2` team for their proactive and open collaboration with the Bioconductor community.
+
+If you maintain a package using `ggplot2` and haven’t tested it yet, testing now can help your users, and save others from running into the same issues.
+
+Not a developer? Reporting even small glitches after updating ggplot2 can still be useful, if the issue isn’t already known. Before posting, it’s worth checking if the problem has been reported on the package's GitHub or discussed in Bioconductor Zulip. If it has, you can add a comment or emoji reaction to help signal it’s affecting others too. That kind of input helps maintainers prioritise and can save time for everyone.
+
+Fixes may take time to propagate, especially with so many interdependent packages, and most Bioconductor maintainers contributing alongside full academic workloads. But progress is steady, and made easier when people flag issues early.
+
+Big changes like this aren’t always smooth, but open communication goes a long way. Whether you're maintaining a package, reporting a bug, or just keeping an eye out, it all helps. Thanks for reading, and for being part of this collaborative process.
