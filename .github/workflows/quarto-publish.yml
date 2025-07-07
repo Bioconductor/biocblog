@@ -1,33 +1,60 @@
+name: Quarto Blog CI/CD
+
 on:
   push:
-    branches: 
+    branches:
       - main
-      - ggplot2-update # allow while sharing preview
-
-name: Render and Publish
+  pull_request:
 
 jobs:
-  build-deploy:
+  build:
+    name: Check & Preview Build
     runs-on: ubuntu-latest
-    permissions:
-      contents: write
+
     steps:
       - name: Check out repository
         uses: actions/checkout@v3
-        
+
       - name: Set up Quarto
         uses: quarto-dev/quarto-actions/setup@v2
-      
-      # add software dependencies here
-      - uses: r-lib/actions/setup-r@v2
+
+      - name: Install R (minimal)
+        uses: r-lib/actions/setup-r@v2
         with:
           use-public-rspm: true
-      - name: Install R dependencies
-        run: Rscript -e 'install.packages(c("jsonlite", "htmltools", "rmarkdown", "RefManageR", "dplyr"))'
 
-      - name: Publish to GitHub Pages (and render)
+      - name: Render site (with code freeze)
+        run: quarto check && quarto render
+        
+      - name: Install xmllint
+        run: sudo apt-get update && sudo apt-get install -y libxml2-utils
+
+      - name: Validate RSS feed
+        run: |
+          if [ -f _site/index.xml ]; then
+            xmllint --noout _site/index.xml
+          else
+            echo "RSS feed not found!" && exit 1
+          fi
+
+  deploy:
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    name: Publish to GitHub Pages
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v3
+
+      - name: Set up Quarto
+        uses: quarto-dev/quarto-actions/setup@v2
+
+      - name: Publish
         uses: quarto-dev/quarto-actions/publish@v2
         with:
           target: gh-pages
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # this secret is always available for github actions
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
