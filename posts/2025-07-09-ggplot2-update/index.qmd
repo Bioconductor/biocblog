@@ -3,6 +3,7 @@ title: "Bioconductor and ggplot2 4.0.0: What’s Changing and How to Prepare"
 description: "Preparing for the upcoming update - key changes, potential breakages, and what developers and users can do"
 author: "Maria Doyle (Bioconductor Community Manager), with contributions from the Bioconductor and ggplot2 developer communities"
 date: 2025-07-09
+image: "bioc-ggpot2-r_logos.png"
 categories: tech-notes
 format:
   html:
@@ -45,7 +46,7 @@ It offers:
 
 S7 is being developed by the R Consortium’s OOP Working Group, with contributors from R Core, Bioconductor, Posit, and others.
 
-[Read more about S7](https://www.tidyverse.org/blog/2024/11/s7-0-2-0/)
+Learn more about S7 in the [tidyverse blog](https://www.tidyverse.org/blog/2024/11/s7-0-2-0/) and on the [R Consortium site]((https://rconsortium.github.io/S7/index.html).
 
 ## For Developers
 
