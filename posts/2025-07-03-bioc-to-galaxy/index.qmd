@@ -1,7 +1,7 @@
 ---
 title: "Bringing Bioconductor to Galaxy: A CoFest Collaboration"
 description: "Written during CoFest at GBCC2025, this post shares training materials, introduces Galaxy tool wrapping, and previews what’s next for integrating Bioconductor tools in Galaxy."
-authors:
+author:
   - name: Gretta Yagudayeva
     url: https://github.com/gyagu98
   - name: Maria Doyle
