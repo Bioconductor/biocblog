@@ -1,0 +1,33 @@
+---
+title: "Exploring R and Rust in Bioinformatics – Online Developer Forum, 28 July 2025"
+author: 
+  name: "Lluís Revilla"
+  url: https://github.com/llrs
+date: 2025-07-09
+categories: events
+---
+
+Join us for an open developer forum exploring how R and Rust can work together in bioinformatics and Bioconductor development.
+Organised and hosted by Lluís Revilla ([Bioconductor Community Advisory Board](https://bioconductor.org/about/community-advisory-board/)), this online session will discuss technical and practical aspects of using Rust alongside R - covering bindings, performance, and real-world use cases. Whether you're Rust-curious or already experimenting, all are welcome.
+
+### 🗓 Event Details
+- **Date:** Monday, 28 July 2025\
+- **Time:** 17:00–18:00 CEST\
+- **Location:** Online (link to be shared closer to the event)
+
+### 📋 Agenda
+- 40 minutes – R and Rust bindings\
+- 20 minutes – Rust in bioinformatics
+
+### 🎤 Speakers
+- Sun Wenjie [Website](https://sun-wenjie.site) \
+- Mossa Merhi Reimert: [GitHub](https://github.com/CGMossa) \
+- Josiah Parry: [Website](https://josiahparry.com/) | [GitHub](https://github.com/JosiahParry)
+
+This session is open to all developers interested in bridging R and Rust, especially those working on packages for **Bioconductor** and **CRAN**.
+We’ll post the joining link and updates here and in the #events channel on [Bioconductor Zulip](https://chat.bioconductor.org). 
+
+☑️ **Please note:** By attending, you agree to abide by the [Bioconductor Code of Conduct](https://bioconductor.org/about/code-of-conduct/).  
+📹 The session will be recorded and may be shared on the [Bioconductor YouTube channel](https://www.youtube.com/playlist?list=PLdl4u5ZRDMQQLMupAtEzm2y4gUIUm_1n6).  
+
+💬 **Questions or suggestions?** Reach out in the Bioconductor Zulip.
