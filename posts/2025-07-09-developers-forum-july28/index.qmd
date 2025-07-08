@@ -1,11 +1,14 @@
 ---
 title: "Exploring R and Rust in Bioinformatics – Online Developer Forum, 28 July 2025"
 author: 
-  name: "Lluís Revilla"
-  url: https://github.com/llrs
+  name: "Lluís Revilla Sancho"
+  url: https://llrs.dev
 date: 2025-07-09
 categories: events
+image: "feRris.png"
 ---
+
+![](feRris.png)
 
 Join us for an open developer forum exploring how R and Rust can work together in bioinformatics and Bioconductor development.
 Organised and hosted by Lluís Revilla ([Bioconductor Community Advisory Board](https://bioconductor.org/about/community-advisory-board/)), this online session will discuss technical and practical aspects of using Rust alongside R - discussing extendr, Rust-based package development, and real-world use cases. Whether you're Rust-curious or already experimenting, all are welcome.
@@ -30,4 +33,4 @@ We’ll post the joining link and updates here and in the #events channel on [Bi
 ☑️ **Please note:** By attending, you agree to abide by the [Bioconductor Code of Conduct](https://bioconductor.org/about/code-of-conduct/).  
 📹 The session will be recorded and may be shared on the [Bioconductor YouTube channel](https://www.youtube.com/playlist?list=PLdl4u5ZRDMQQLMupAtEzm2y4gUIUm_1n6).  
 
-💬 **Questions or suggestions?** Reach out in the Bioconductor Zulip.
+💬 **Questions or suggestions?** Reach out in the [Bioconductor Zulip](https://chat.bioconductor.org).
