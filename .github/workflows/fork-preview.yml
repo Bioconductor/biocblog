@@ -21,12 +21,10 @@ jobs:
         with:
           use-public-rspm: true
       
-      - name: Render site
-        run: quarto render
-      
-      - name: Deploy preview
-        uses: peaceiris/actions-gh-pages@v3
+      - name: Publish to GitHub Pages (and render)
+        uses: quarto-dev/quarto-actions/publish@v2
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./_site
-          destination_dir: ${{ github.ref_name }}
+          target: gh-pages
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          
