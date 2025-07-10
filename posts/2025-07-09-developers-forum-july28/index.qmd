@@ -3,7 +3,7 @@ title: "Exploring R and Rust in Bioinformatics – Online Developer Forum, 28 Ju
 author: 
   name: "Lluís Revilla Sancho"
   url: https://llrs.dev
-date: 2025-07-09
+date: 2025-07-11
 categories: events
 image: "feRris.png"
 ---
