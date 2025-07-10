@@ -10,7 +10,62 @@
 <atom:link href="https://blog.bioconductor.org/index.xml" rel="self" type="application/rss+xml"/>
 <description>A blog for the Bioconductor community!</description>
 <generator>quarto-1.7.32</generator>
-<lastBuildDate>Mon, 07 Jul 2025 00:00:00 GMT</lastBuildDate>
+<lastBuildDate>Thu, 10 Jul 2025 00:00:00 GMT</lastBuildDate>
+<item>
+  <title>Bioconductor’s First Microbiome Course in Brazil: A Successful Workshop at UFMG in Belo Horizonte</title>
+  <dc:creator>Izabela Mamede</dc:creator>
+  <link>https://blog.bioconductor.org/posts/2025-07-10-microbiome-course-brazil/2025-04-23-microbiome-course-brazil.html</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://blog.bioconductor.org/posts/2025-07-10-microbiome-course-brazil/brazil_microbiome_2025_ufmg.png" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="Participants of the Bioconductor microbiome workshop in Brazil gathered at UFMG"></p>
+</figure>
+</div>
+<p>From April 23rd to 25th, 2025, we hosted the first Bioconductor microbiome course in Brazil, a three-afternoon workshop held at the Interunits Post-Graduate Program of Bioinformatics at the Federal University of Minas Gerais (UFMG) (<a href="https://www.pgbioinfo.icb.ufmg.br/index.php">link</a>) in Belo Horizonte. The workshop brought together 24 enthusiastic participants, ranging from undergraduate students to full professors, all eager to deepen their knowledge of microbiome data analysis using R and Bioconductor.</p>
+<p>We were honored to welcome Professor <strong>Leo Lahti</strong>, a Bioconductor developer from the University of Turku, Finland, who led the course. He was joined by local alumni João Pedro P. de Almeida and myself, <strong>Izabela Mamede</strong>, as co-instructors, delivering hands-on training and insights throughout the workshop.</p>
+<p>The course covered the fundamentals of microbiome data analysis, with practical sessions focused on utilizing the Bioconductor framework documented in the online book <em><a href="https://microbiome.github.io/OMA/docs/devel/">Orchestrating Microbiome Analysis with Bioconductor</a></em> for data manipulation, visualization, and statistical modeling. Participants learned how to manipulate, visualize, and statistically model microbiome data using R-based tools, gaining the skills to integrate Bioconductor workflows into their own research. Bioconductor is a global open-source community with a particular focus on statistical programming and multi-omic data integration in life sciences.</p>
+<p>Several participants traveled from other Brazilian states to join the workshop, underscoring the growing national interest in microbiome data analysis and Bioconductor tools.</p>
+<section id="workshop-highlights" class="level2">
+<h2 class="anchored" data-anchor-id="workshop-highlights">🔍 Workshop Highlights</h2>
+<p>Students especially enjoyed sessions on:</p>
+<ul>
+<li>Taxonomic assignment<br>
+</li>
+<li>Community similarity<br>
+</li>
+<li>Data visualization</li>
+</ul>
+<p>The course followed best practices in data science education, inspired by the <a href="http://carpentries.org">Carpentries</a> model, and was led by two Bioconductor Carpentries instructors. Both Professor Leo Lahti and Izabela Mamede were among the 31 instructors trained over the past two years as part of this initiative. Read more in the <a href="https://blog.bioconductor.org/posts/2025-02-28-carpentries-update/">Bioconductor Carpentries update</a>.</p>
+<p>A big thank you to everyone who made this event possible, especially the Bioinformatics program heads, Professors Flávia Aburjaile and Raquel Minardi, Professor Glória R. Franco who helped set up and organize the workshop, the co-instructors João Paulo P. de Almeida and Izabela Mamede, the participants, and Professor Leo Lahti who traveled all the way from Finland to Brazil to teach the course. The event, as well as the disseminated methodology, was supported by the European Union’s Horizon 2020 research and innovation programme <strong>FindingPheno</strong> (grant 952914).</p>
+<p>We hope this workshop serves as a stepping stone for future collaborations and research in microbiome data analysis in Brazil and beyond.</p>
+</section>
+<section id="continue-the-conversation-on-zulip" class="level2">
+<h2 class="anchored" data-anchor-id="continue-the-conversation-on-zulip">💬 Continue the Conversation on Zulip!</h2>
+<p>To stay connected and continue the conversation:</p>
+<ul>
+<li>Join the <code>#miaverse</code> channel, dedicated to the framework we used in the course (like (Tree)SummarizedExperiment for microbiome). This directly fits the course methodology and is a good place for specific questions and shared learning.</li>
+<li>Join the <code>#microbiome_metagenome</code> channel for broader microbiome discussions. This is more useful for general community building and connecting with researchers beyond the course cohort.</li>
+</ul>
+<p>👉 You can join the conversation at <a href="https://chat.bioconductor.org">https://chat.bioconductor.org</a></p>
+
+
+</section>
+
+<p>
+© 2025 Bioconductor. Content is published under <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons CC-BY-4.0 License</a> for the text and <a href="https://opensource.org/licenses/BSD-3-Clause">BSD 3-Clause License</a> for any code. | <a href="https://www.r-bloggers.com">R-Bloggers</a>
+</p> ]]></description>
+  <category>Events</category>
+  <category>Workshops</category>
+  <category>Microbiome</category>
+  <guid>https://blog.bioconductor.org/posts/2025-07-10-microbiome-course-brazil/2025-04-23-microbiome-course-brazil.html</guid>
+  <pubDate>Thu, 10 Jul 2025 00:00:00 GMT</pubDate>
+  <media:content url="https://blog.bioconductor.org/posts/2025-07-10-microbiome-course-brazil/brazil_microbiome_2025_ufmg.png" medium="image" type="image/png" height="71" width="144"/>
+</item>
 <item>
   <title>Bioconductor and ggplot2 4.0.0: What’s Changing and How to Prepare</title>
   <dc:creator>Maria Doyle (Bioconductor Community Manager), with contributions from the Bioconductor and ggplot2 developer communities</dc:creator>
@@ -1223,67 +1278,6 @@ Becker, Richard A., and John M. Chambers. 1984. <em>S: An Interactive Environmen
   <guid>https://blog.bioconductor.org/posts/2025-02-28-carpentries-update/</guid>
   <pubDate>Fri, 28 Feb 2025 00:00:00 GMT</pubDate>
   <media:content url="https://blog.bioconductor.org/posts/2025-02-28-carpentries-update/map.png" medium="image" type="image/png" height="103" width="144"/>
-</item>
-<item>
-  <title>Open Science Mentoring: My Journey with Outreachy Mentees</title>
-  <dc:creator>Svetlana Ugarcina Perovic</dc:creator>
-  <link>https://blog.bioconductor.org/posts/2025-02-26-outreachy-mentoring/</link>
-  <description><![CDATA[ 
-
-
-
-
-
-<p>Bioconductor has been participating in the Outreachy Internship program since 2022. In this post, I, Svetlana Ugarcina Perovic, a senior researcher in microbiome science, share my journey of Outreachy mentoring, detailing my experience with the Microbiome Study Curation project and open science projects.</p>
-<p>The recent <a href="https://www.youtube.com/watch?v=PiOm6nqzTVQ">Outreachy coffee chat</a> made me think about my mentoring journey and all the bright minds I’ve had the privilege to work with and learn from. What started in 2020 as a simple involvement in open science initiatives (<a href="https://microbiomedigest.com/">Microbiome Digest</a> and the <a href="https://nsurp.org/">National Summer Undergraduate Research Project</a>) has blossomed into something far more meaningful than I could have imagined.</p>
-<p><strong>How to become a (good) mentor?</strong> Despite spending years in academia, through a PhD and multiple postdoc positions, there was never a class or workshop called “How to Be a Good Mentor.” Like many scientists, I learned the art of mentoring through experience–watching my own mentors closely, noting what worked and what didn’t as I moved through five different labs across various countries. Some approaches inspired me, others showed me exactly what not to do. It’s a bit surprising when you think about it–in Life Sciences, we’re trained meticulously in experimental techniques and data analysis, but this crucial skill of guiding and supporting others? That’s something we’re largely expected to figure out on our own.</p>
-<p><strong>My path to mentoring with <a href="https://www.outreachy.org/">Outreachy</a></strong> began thanks to my wonderful colleagues at the <a href="https://www.microbiome-vif.org/en-US">Microbiome Virtual International Forum</a>, <a href="https://waldronlab.io/">Levi Waldron</a> and <a href="https://cunyisph.org/team/chloe-mirzayi/">Chloe Mirzayi</a>. They introduced me to this incredible open science community called <a href="https://www.bioconductor.org/">Bioconductor</a> and a project called <a href="https://bugsigdb.org/Main_Page">BugSigDB</a>. At its heart, BugSigDB is like a Wikipedia for microbiome science. We’re building a free, searchable database that maps out which microbes (the tiny organisms living in and on humans and other hosts) are linked to different health conditions. Scientists worldwide can contribute their findings (significant differential abundance results), making it easier to spot patterns–like which bacteria might be important in diseases or health. It is a community library where researchers share and standardize their discoveries about the microbiome, making this <strong>knowledge accessible to everyone</strong>. Whether you’re studying gut health or skin conditions, you can find and add information through BugSigDB platform. The best part? It’s truly global, with contributors from different parts of the world, all working together to better understand our microbiome companions.</p>
-<div style="text-align: center;">
-<p><a href="BugSigDB_team_meeting.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="https://blog.bioconductor.org/posts/2025-02-26-outreachy-mentoring/BugSigDB_team_meeting.png" class="img-fluid" style="width:70.0%" alt="BugSigDB team meeting"></a></p>
-<p style="text-align: center;">
-<em>BugSigDB team meeting</em>
-</p>
-</div>
-<p>Twice a year, we welcome Outreachy applicants and select interns for paid 3-month internships. As an Outreachy mentor, nothing has been more gratifying than watching our community growth. Since 2022, our project has attracted more than hundred applicants each round, representing ten different countries across Africa, Asia, and South America, and we’ve welcomed nine interns (<a href="https://blog.bioconductor.org/#category=Outreachy">read their blog posts here</a>). Each contributor enriches our community with their distinct perspectives and enthusiasm. It’s always thrilling to see familiar faces return for another round of applications.</p>
-<p>But let me be honest–mentoring isn’t all sunshine and rainbows. The biggest challenge I’ve faced is <strong>navigating different communication styles and learning paces</strong>. I’ve learned that regular check-ins are crucial, not just for tracking progress but for building trust and understanding. Often, in my mentoring experience, the best solutions come from pairing contributors together–and watching them support and learn from each other brings me immense joy.</p>
-<div style="text-align: center;">
-<p><a href="Svetlanas_mentees_and_their_projects.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2"><img src="https://blog.bioconductor.org/posts/2025-02-26-outreachy-mentoring/Svetlanas_mentees_and_their_projects.png" class="img-fluid" style="width:80.0%" alt="Svetlana’s_mentees_and_their_projects"></a></p>
-<p style="text-align: center;">
-<em>Svetlana’s mentees and their projects</em>
-</p>
-</div>
-<p>Recently, I was deeply moved when one of my mentees, <a href="https://www.linkedin.com/in/scholastica-urua-898659235/">Scholastica Urua</a>, presented her research on African microbiome data at the <a href="https://www.youtube.com/watch?v=tGwTAxmvEYc&amp;list=PLLOHGJKpTq6pG03Az_I80ZUReMYVmwqB9&amp;index=6">MVIF conference</a>. Scholastica’s talk exemplified the kind of collaborative science we aspire to–carefully documenting microbiome studies from regions that have historically been underrepresented in microbiome science databases. The community recognized Scholastica’s excellent work with the best microtalk award, but what truly mattered was how her contribution helped make our database more globally representative. Scholastica together with BugSigDB community demonstrated through their work that <strong>when we open doors to diverse perspectives in science, everyone benefits</strong>.</p>
-<p>Every day as an Outreachy mentor brings new challenges and victories. When I see our contributors challenging ideas thoughtfully, providing constructive feedback, and supporting each other, I know we’re doing something right. But perhaps the most fulfilling aspect is watching my mentees grow into mentors themselves. Or into moderators of the conference session:</p>
-<div style="text-align: center;">
-<img src="https://blog.bioconductor.org/posts/2025-02-26-outreachy-mentoring/x_post_screenshot.png" class="img-fluid" style="width:70.0%" alt="A proud-mentor moment when Victoria Poromon masterfully ran the Q&amp;A at MVIF 34">
-<p style="text-align: center;">
-<em>A proud-mentor moment when <a href="https://www.linkedin.com/in/victoria-poromon-1a37491bb/">Victoria Poromon</a> masterfully ran the Q&amp;A at MVIF 34</em>
-</p>
-</div>
-<p>To anyone considering mentoring in open science: yes, it requires time, patience, and dedication. But the rewards–the connections you make, the growth you witness, and the knowledge you gain–make it all worthwhile. After all, isn’t that what science is about? <strong>Learning together, growing together, and making the world a little bit better through shared knowledge and understanding.</strong></p>
-<p>So here’s to all the mentees who’ve taught me as much as I’ve taught them, to the global community that makes this possible, and to the future of open science. The journey continues, and I couldn’t be more excited about what lies ahead.</p>
-<section id="join-our-outreachy-community" class="level2">
-<h2 class="anchored" data-anchor-id="join-our-outreachy-community">Join Our Outreachy Community</h2>
-<p>As we reflect on the success of our current mentorship program, we’re excited to announce that Bioconductor will be participating in the next Outreachy internship round – from June to August 2025. Anyone within our community can propose an open source project to mentor an Outreachy intern. The <strong>deadline to submit a project is March 7, 2025 at 4 pm UTC</strong> at <a href="https://www.outreachy.org/communities/cfp/bioconductor/">Outreachy</a>.</p>
-<p>If you’re interested in getting involved:</p>
-<ul>
-<li><p>Join our #outreachy channel on <a href="https://slack.bioconductor.org/">Bioconductor Slack</a> to connect with current and past participants;</p></li>
-<li><p>Follow us on social media for regular updates: <a href="https://genomic.social/@bioconductor">Mastodon</a>, <a href="https://www.linkedin.com/company/bioconductor">LinkedIn</a> and <a href="https://bsky.app/profile/bioconductor.bsky.social">Bluesky</a>;</p></li>
-<li><p>Contact me directly on <a href="https://www.linkedin.com/in/svetlana-ugarcina-perovic">LinkedIn</a> with any questions or to express interest.</p></li>
-</ul>
-<p>Whether you’re looking to expand your skills as a mentee or share your expertise as a mentor, Outreachy offers a structured pathway to meaningful contribution in our community. We look forward to welcoming new voices and perspectives in our continued commitment to diversity and inclusion in bioinformatics.</p>
-
-
-</section>
-
-<p>
-© 2025 Bioconductor. Content is published under <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons CC-BY-4.0 License</a> for the text and <a href="https://opensource.org/licenses/BSD-3-Clause">BSD 3-Clause License</a> for any code. | <a href="https://www.r-bloggers.com">R-Bloggers</a>
-</p> ]]></description>
-  <category>Outreachy</category>
-  <category>open science</category>
-  <guid>https://blog.bioconductor.org/posts/2025-02-26-outreachy-mentoring/</guid>
-  <pubDate>Wed, 26 Feb 2025 00:00:00 GMT</pubDate>
-  <media:content url="https://blog.bioconductor.org/posts/2025-02-26-outreachy-mentoring/Svetlanas_mentees_and_their_projects.png" medium="image" type="image/png" height="76" width="144"/>
 </item>
 </channel>
 </rss>
