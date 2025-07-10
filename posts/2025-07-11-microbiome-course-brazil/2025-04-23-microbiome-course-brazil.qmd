@@ -3,7 +3,7 @@ title: "Bioconductor’s First Microbiome Course in Brazil: A Successful Worksho
 author: 
   - name: "Izabela Mamede"
     url: https://github.com/iza-mcac
-date: "2025-07-11"
+date: "2025-07-10"
 categories: [Events, Workshops, Microbiome]
 image: brazil_microbiome_2025_ufmg.png
 alt-text: "Participants of the Bioconductor microbiome workshop in Brazil gathered at UFMG"
