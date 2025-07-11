@@ -17,6 +17,8 @@ Organised and hosted by Lluís Revilla ([Bioconductor Community Advisory Board](
 - **Date:** Monday, 28 July 2025\
 - **Time:** 17:00–18:00 CEST\
 - **Location:** Online (link to be shared closer to the event)
+- **Add to calendar:** <a href="bioc_forum_r_rust.ics.zip" download>Download .ics file</a>
+
 
 ### 📋 Agenda
 - 40 minutes – R + Rust: extendr\
