@@ -10,7 +10,62 @@
 <atom:link href="https://blog.bioconductor.org/index.xml" rel="self" type="application/rss+xml"/>
 <description>A blog for the Bioconductor community!</description>
 <generator>quarto-1.7.32</generator>
-<lastBuildDate>Thu, 10 Jul 2025 00:00:00 GMT</lastBuildDate>
+<lastBuildDate>Fri, 11 Jul 2025 00:00:00 GMT</lastBuildDate>
+<item>
+  <title>Exploring R and Rust in Bioinformatics – Online Developer Forum, 28 July 2025</title>
+  <dc:creator>Lluís Revilla Sancho</dc:creator>
+  <link>https://blog.bioconductor.org/posts/2025-07-09-developers-forum-july28/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<p><img src="https://blog.bioconductor.org/posts/2025-07-09-developers-forum-july28/feRris.png" class="img-fluid"></p>
+<p>Join us for an open developer forum exploring how R and Rust can work together in bioinformatics and Bioconductor development. Organised and hosted by Lluís Revilla (<a href="https://bioconductor.org/about/community-advisory-board/">Bioconductor Community Advisory Board</a>), this online session will discuss technical and practical aspects of using Rust alongside R - discussing extendr, Rust-based package development, and real-world use cases. Whether you’re Rust-curious or already experimenting, all are welcome.</p>
+<section id="event-details" class="level3">
+<h3 class="anchored" data-anchor-id="event-details">🗓 Event Details</h3>
+<ul>
+<li><strong>Date:</strong> Monday, 28 July 2025<br>
+</li>
+<li><strong>Time:</strong> 17:00–18:00 CEST<br>
+</li>
+<li><strong>Location:</strong> Online (link to be shared closer to the event)</li>
+</ul>
+</section>
+<section id="agenda" class="level3">
+<h3 class="anchored" data-anchor-id="agenda">📋 Agenda</h3>
+<ul>
+<li>40 minutes – R + Rust: extendr<br>
+</li>
+<li>20 minutes – Rust in bioinformatics</li>
+</ul>
+</section>
+<section id="speakers" class="level3">
+<h3 class="anchored" data-anchor-id="speakers">🎤 Speakers</h3>
+<ul>
+<li>Sun Wenjie <a href="https://sun-wenjie.site">Website</a><br>
+</li>
+<li>Mossa Merhi Reimert: <a href="https://github.com/CGMossa">GitHub</a><br>
+</li>
+<li>Josiah Parry: <a href="https://www.linkedin.com/in/josiahparry/">LinkedIn</a> | <a href="https://josiahparry.com/">Website</a> | <a href="https://github.com/JosiahParry">GitHub</a></li>
+</ul>
+<p>This session is open to all developers interested in bridging R and Rust, especially those working on packages for <strong>Bioconductor</strong> and <strong>CRAN</strong>. We’ll post the joining link and updates here and in the #events channel on <a href="https://chat.bioconductor.org">Bioconductor Zulip</a>.</p>
+<p>☑️ <strong>Please note:</strong> By attending, you agree to abide by the <a href="https://bioconductor.org/about/code-of-conduct/">Bioconductor Code of Conduct</a>.<br>
+📹 The session will be recorded and may be shared on the <a href="https://www.youtube.com/playlist?list=PLdl4u5ZRDMQQLMupAtEzm2y4gUIUm_1n6">Bioconductor YouTube channel</a>.</p>
+<p>💬 <strong>Questions or suggestions?</strong> Reach out in the <a href="https://chat.bioconductor.org">Bioconductor Zulip</a>.</p>
+
+
+</section>
+
+<p>
+© 2025 Bioconductor. Content is published under <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons CC-BY-4.0 License</a> for the text and <a href="https://opensource.org/licenses/BSD-3-Clause">BSD 3-Clause License</a> for any code. | <a href="https://www.r-bloggers.com">R-Bloggers</a>
+</p> ]]></description>
+  <category>events</category>
+  <guid>https://blog.bioconductor.org/posts/2025-07-09-developers-forum-july28/</guid>
+  <pubDate>Fri, 11 Jul 2025 00:00:00 GMT</pubDate>
+  <media:content url="https://blog.bioconductor.org/posts/2025-07-09-developers-forum-july28/feRris.png" medium="image" type="image/png" height="108" width="144"/>
+</item>
 <item>
   <title>Bioconductor’s First Microbiome Course in Brazil: A Successful Workshop at UFMG in Belo Horizonte</title>
   <dc:creator>Izabela Mamede</dc:creator>
@@ -1165,119 +1220,6 @@ Becker, Richard A., and John M. Chambers. 1984. <em>S: An Interactive Environmen
   <guid>https://blog.bioconductor.org/posts/2025-03-05-CAB/</guid>
   <pubDate>Wed, 05 Mar 2025 00:00:00 GMT</pubDate>
   <media:content url="https://blog.bioconductor.org/posts/2025-03-05-CAB/CAB-map-2025.png" medium="image" type="image/png" height="81" width="144"/>
-</item>
-<item>
-  <title>Bioconductor Carpentry: Celebrating Two Years of Global Training</title>
-  <dc:creator>Maria Doyle</dc:creator>
-  <link>https://blog.bioconductor.org/posts/2025-02-28-carpentries-update/</link>
-  <description><![CDATA[ 
-
-
-
-
-
-<section id="two-years-of-bioconductor-carpentry-training" class="level2">
-<h2 class="anchored" data-anchor-id="two-years-of-bioconductor-carpentry-training">Two Years of Bioconductor Carpentry Training</h2>
-<p>As we complete two years of Instructor training, we reflect on our journey since becoming a member of <a href="https://carpentries.org/">The Carpentries</a> in August 2022 (<a href="https://blog.bioconductor.org/posts/2022-07-12-carpentries-membership/">announcement</a>). Our goal was to train 30 Instructors globally - 15 in year 1 and 15 in year 2. We began onboarding the first cohort in January 2023 (<a href="https://blog.bioconductor.org/posts/2023-02-24-carpentries-update/">year 1 update</a>), and our final Instructor from the second cohort was certified in January 2025.</p>
-<p>Since launching, 33 trainees have participated, with <strong>31 successfully completing</strong> their training - exceeding our original goal. This 94% completion rate is well above the typical rate. To earn <a href="https://carpentries.org/instructor-training/">Carpentries Certification</a>, trainees completed: an Instructor Training event (2 full days or 4 half days), a welcome session, a teaching demonstration, and a Get Involved task.</p>
-<p>Our certified Instructors include 7 from Lower-Middle Income countries and 3 from Upper-Middle Income countries, further strengthening our global impact. They are now leading workshops, expanding Bioconductor’s reach, and contributing to the global bioinformatics community.</p>
-<p>Interested in joining our training community? Find out how in the Get Involved section.</p>
-</section>
-<section id="global-impact-and-achievements" class="level2">
-<h2 class="anchored" data-anchor-id="global-impact-and-achievements">Global Impact and Achievements</h2>
-<ul>
-<li><strong>Workshops held worldwide</strong>, including North Africa, Brazil, India, and Europe.</li>
-<li><strong>Training materials</strong> developed for <a href="https://training.bioconductor.org/#modules">four Bioconductor Carpentry modules</a> have been widely adopted, contributing to the delivery of 28 <a href="https://training.bioconductor.org/carpentry/workshops.html">pre-conference and independent workshops</a> with strong participant engagement.</li>
-<li><strong>Instructor-led sessions</strong> at major Bioconductor conferences: <a href="https://blog.bioconductor.org/posts/2024-08-12-bioc2024-recap/#pre-conference">BioC2024</a>, <a href="https://blog.bioconductor.org/posts/2024-09-20-eurobioc2024-recap/#pre-conference">EuroBioC2024</a>, <a href="https://bioc2023.bioconductor.org/">BioC2023</a>, <a href="https://eurobioc2023.bioconductor.org/">EuroBioC2023</a> and <a href="https://biocasia2023.bioconductor.org/">BioCAsia2023</a>.</li>
-<li><strong>First Bioconductor Carpentry workshop in Africa</strong>, led by the Tunis R User Group. <a href="https://www.linkedin.com/feed/update/urn:li:activity:7259123374927278080/">This event</a> was an important step in strengthening the R and Bioconductor community in Tunisia.</li>
-<li><strong>Upcoming workshops</strong> in <a href="https://training.bioconductor.org/workshops/2025-03-Nairobi/index.html">Nairobi, Kenya (March 2025)</a>, <a href="https://iza-mcac.github.io/2025-04-21-biocrnaseq-cfbioinfo/">Belo Horizonte, Brazil (March 2025)</a>, at the Joint Statistical Meetings, Tennessee, USA (August 2025) and <a href="https://eurobioc2025.bioconductor.org/">EuroBioC2025, Barcelona, (September 2025)</a>, further expanding our global footprint.</li>
-<li><strong>Increased engagement</strong> with researchers and educators in underrepresented regions, helping to bridge bioinformatics training gaps.</li>
-</ul>
-<p>See where our certified Instructors are making an impact! Explore the interactive map below to view the global distribution of those trained through this two-year program.</p>
-<iframe src="map.html" width="100%" height="500">
-</iframe>
-</section>
-<section id="instructor-highlights" class="level2">
-<h2 class="anchored" data-anchor-id="instructor-highlights">Instructor Highlights</h2>
-<p>Many of these certified Instructors have already begun sharing their expertise. So far, thirteen have led <a href="https://training.bioconductor.org/carpentry/workshops.html">workshops using Bioconductor Carpentry material</a>, with four leading multiple sessions. An additional five Instructors have workshops planned for 2025, and we are looking forward to seeing even more apply their training in the future.</p>
-<p>Here are some highlights of Instructors making a tangible impact:</p>
-<ul>
-<li><strong>Ziru Chen</strong> became the first Instructor in mainland China to be Carpentries-certified, giving her teaching demo in Mandarin, a milestone in supporting Mandarin-speaking learners.</li>
-<li><strong>Rodrigo Arcoverde Cerveira da Silva</strong> led a workshop in Brazil, bringing bioinformatics training to researchers at the Evandro Chagas Institute in the Amazon region.</li>
-<li><strong>Leo Lahti</strong> incorporated Bioconductor Carpentry sessions into microbiome courses in India, Norway, and Finland, expanding Bioconductor education in microbial research.</li>
-<li><strong>Chia Sin Liew</strong> integrated Bioconductor Carpentry modules, particularly the RNA-Seq lessons, into university courses at the University of Nebraska-Lincoln to enrich teaching and foster more effective student learning experiences.</li>
-</ul>
-</section>
-<section id="what-instructors-say" class="level2">
-<h2 class="anchored" data-anchor-id="what-instructors-say">What Instructors Say</h2>
-<blockquote class="blockquote">
-<p><em>“Swapping the chilly embrace of Swedish winter for the familiar heat of my hometown in the Brazilian Amazon was a long warm hug. Teaching my first workshop here was incredibly rewarding.”</em> – Rodrigo Arcoverde Cerveira da Silva</p>
-</blockquote>
-<blockquote class="blockquote">
-<p><em>“Teaching in India, Oulu, and Norway helped us integrate Bioconductor Carpentry into microbiome courses. We are now planning to expand these efforts in more regions.”</em> – Leo Lahti</p>
-</blockquote>
-</section>
-<section id="expanding-the-impact" class="level2">
-<h2 class="anchored" data-anchor-id="expanding-the-impact">Expanding the Impact</h2>
-<p>While this program directly funded the certification of 31 Instructors, it also had a wider impact, inspiring others in the Bioconductor community to pursue Carpentries Instructor Certification and contribute to global bioinformatics training.</p>
-<p>Jenny Drnevich, for example, taught alongside our program’s Instructors at BioC2023 and BioC2024. Inspired by the experience, she completed her own Carpentries Instructor Certification during this time. Reflecting on her journey, she shared:</p>
-<blockquote class="blockquote">
-<p>“Before the BioC2023 conference in Boston, I helped teach the inaugural ‘RNA-Seq analysis with Bioconductor’ workshop, a 2-day Carpentries-style lesson I helped develop with others on the Training Committee. It was so wonderful to teach it in person, and we had several good discussions that are difficult to have during remote teaching. We got some excellent feedback about the lesson, what worked and what needed to be improved. Because of this experience, I finally got motivated to get my Carpentries Instructor Certification, which I finished in Jan 2024. The certification and the improvements to the lesson really increased the quality of the workshop I co-taught again before the BioC2024 conference in Grand Rapids. I look forward to helping to teach our workshops in the future for the Bioconductor Community!”</p>
-</blockquote>
-<p>Jenny’s story reflects how Bioconductor’s Carpentry training program has inspired and strengthened a wider teaching network, beyond the funded group.</p>
-</section>
-<section id="participant-feedback" class="level2">
-<h2 class="anchored" data-anchor-id="participant-feedback">Participant Feedback</h2>
-<p>The impact of our training is reflected in participant feedback:</p>
-<ul>
-<li><em>“Coding alongside the course, being able to fix problems as they came up, was incredibly helpful.”</em></li>
-<li><em>“The structure of the course, the pace, and the instructors’ enthusiasm made the learning experience exceptional.”</em></li>
-<li><em>“Engaging teachers, available to help, and very useful to have the online resources if needed.”</em></li>
-<li><em>“I liked the discussion that allowed for the thought behind the process.”</em></li>
-</ul>
-</section>
-<section id="looking-ahead" class="level2">
-<h2 class="anchored" data-anchor-id="looking-ahead">Looking Ahead</h2>
-<p>Looking ahead, we plan to:</p>
-<ul>
-<li>Expand training opportunities, particularly in underrepresented regions.</li>
-<li>Strengthen mentorship and support for new instructors.</li>
-<li>Continue enhancing lesson materials and community engagement.</li>
-<li>Build stronger collaborations with local bioinformatics groups to improve accessibility.</li>
-</ul>
-<p>We look forward to growing Bioconductor’s training efforts and welcoming even more instructors and participants into our global community.</p>
-</section>
-<section id="get-involved" class="level2">
-<h2 class="anchored" data-anchor-id="get-involved">Get Involved!</h2>
-<p>Interested in joining our growing training community? Explore our <a href="https://training.bioconductor.org/">Training site</a> to learn more about our training initiatives.</p>
-<ul>
-<li>Browse upcoming and past workshops: <a href="https://training.bioconductor.org/carpentry/workshops.html">See schedule.</a></li>
-<li>Meet our certified Instructors: <a href="https://training.bioconductor.org/carpentry/instructors.html">View list.</a></li>
-<li>Find out more about Bioconductor Carpentry and instructor certification: <a href="https://training.bioconductor.org/carpentry/index.html">Details here.</a></li>
-</ul>
-</section>
-<section id="acknowledgements" class="level2">
-<h2 class="anchored" data-anchor-id="acknowledgements">Acknowledgements</h2>
-<p>We thank everyone who participated in this program and earned certification. The certified Instructors are listed in the table below.</p>
-<div class="cell">
-<div class="cell-output-display">
-<div class="reactable html-widget html-fill-item" id="htmlwidget-db2dd253774d48aaf986" style="width:auto;height:auto;"></div>
-<script type="application/json" data-for="htmlwidget-db2dd253774d48aaf986">{"x":{"tag":{"name":"Reactable","attribs":{"data":{"name":["Javier Carpinteyro-Ponce","Fabricio Almeida-Silva","Anand Ruban Agarvas","Oliver Crook","Almut Lütge","Leo Lahti","Sehyun Oh","Umar Ahmad","Chia Sin Liew","Charlotte Hutchings","David Shih","Rodrigo Arcoverde Cerveira da Silva","Zuguang Gu","Givanna Putri","Zedias Chikwambi","Pageneck Chikondowa","Marie Hidjo","Kevin Stachelek","Erick Isaac Navarro Delgado","Pedro Baldoni","Princess Rodriguez","Tim Triche","Izabela Mamede","Jacques Serizay","Robert Ivanek","Hamdi Furkan Kepenek","Ziru Chen","Amal Boukteb","Arnab Mukherjee","Harvinder Singh","Janani Ravi"],"institution":["Carnegie Institution for Science","VIB-UGent Center for Plant Systems Biology","University Hospital Heidelberg","University of Oxford","University of Zürich","University of Turku","City University of New York","Bauchi State University","University of Nebraska-Lincoln","University of Cambridge","University of Hong Kong","Karolinska Institute","German Cancer Research Center","Walter and Eliza Hall Institute of Medical Research","Chinhoyi University of Technology","African Institute of Biomedical Science and Technology","African Institute of Biomedical Science and Technology","University of Southern California","University of British Columbia","University of Pittsburgh","University of Vermont","Van Andel Institute","Universidade Federal de Minas Gerais","Institut Pasteur","University of Basel, Swiss Institute of Bioinformatics","Abdullah Gül University","GuangZhou Lab","National Institute for Agricultural Research of Tunisia (INRAT)","Manipal Institute of Technology","Department of Translational and Regenerative Medicine, PGIMER","University of Colorado Anschutz Medical Campus"],"city":["Maryland","Ghent","Heidelberg","Oxford","Zurich","Turku","New York","Gadau","Nebraska","Cambridge","Hong Kong","Stockholm","Heidelberg","Melbourne","Chinhoyi","Harare","Harare","Los Angeles","Vancouver","Pittsburgh","Burlington","Grand Rapids","Belo Horizonte","Paris","Basel","Kayseri","Guangzhou","Tunis","Manipal","Chandigarh","Aurora"],"country":["United States","Belgium","Germany","United Kingdom","Switzerland","Finland","United States","Nigeria","United States","United Kingdom","China","Sweden","Germany","Australia","Zimbabwe","Zimbabwe","Zimbabwe","United States","Canada","United States","United States","United States","Brazil","France","Switzerland","Turkey","China","Tunisia","India","India","United States"],"region":["North America","Europe & Central Asia","Europe & Central Asia","Europe & Central Asia","Europe & Central Asia","Europe & Central Asia","North America","Sub-Saharan Africa","North America","Europe & Central Asia","East Asia & Pacific","Europe & Central Asia","Europe & Central Asia","East Asia & Pacific","Sub-Saharan Africa","Sub-Saharan Africa","Sub-Saharan Africa","North America","North America","North America","North America","North America","Latin America & Caribbean","Europe & Central Asia","Europe & Central Asia","Europe & Central Asia","East Asia & Pacific","Middle East & North Africa","South Asia","South Asia","North America"],"year":["Year 1","Year 1","Year 1","Year 1","Year 1","Year 1","Year 1","Year 1","Year 1","Year 1","Year 1","Year 1","Year 1","Year 1","Year 1","Year 1","Year 1","Year 2","Year 2","Year 2","Year 2","Year 2","Year 2","Year 2","Year 2","Year 2","Year 2","Year 2","Year 2","Year 2","Year 2"]},"columns":[{"id":"name","name":"Name","type":"character","cell":[{"name":"a","attribs":{"href":"https://bse.carnegiescience.edu/javier-carpinteyro-ponce","target":"_blank"},"children":["Javier Carpinteyro-Ponce"]},"Fabricio Almeida-Silva","Anand Ruban Agarvas","Oliver Crook","Almut Lütge","Leo Lahti","Sehyun Oh","Umar Ahmad","Chia Sin Liew","Charlotte Hutchings","David Shih","Rodrigo Arcoverde Cerveira da Silva","Zuguang Gu","Givanna Putri","Zedias Chikwambi","Pageneck Chikondowa","Marie Hidjo","Kevin Stachelek",{"name":"a","attribs":{"href":"https://erick-navarrodelgado.netlify.app","target":"_blank"},"children":["Erick Isaac Navarro Delgado"]},{"name":"a","attribs":{"href":"https://plbaldoni.rbind.io/","target":"_blank"},"children":["Pedro Baldoni"]},"Princess Rodriguez","Tim Triche","Izabela Mamede","Jacques Serizay","Robert Ivanek","Hamdi Furkan Kepenek","Ziru Chen","Amal Boukteb","Arnab Mukherjee","Harvinder Singh",{"name":"a","attribs":{"href":"https://jravilab.github.io","target":"_blank"},"children":["Janani Ravi"]}]},{"id":"institution","name":"Institution","type":"character"},{"id":"city","name":"City","type":"character"},{"id":"country","name":"Country","type":"character"},{"id":"region","name":"Region","type":"character"},{"id":"year","name":"Year","type":"factor"}],"filterable":true,"searchable":true,"defaultSorted":[{"id":"name","desc":false}],"defaultPageSize":100,"bordered":true,"striped":true,"compact":true,"style":{"border":"1px solid #ccc","stripedColor":"#f0f0f0","fontSize":"0.6rem"},"dataKey":"e0ff90aeb6da83b5004974c2befc3224"},"children":[]},"class":"reactR_markup"},"evals":[],"jsHooks":[]}</script>
-</div>
-</div>
-<p>We are grateful to the <a href="https://chanzuckerberg.com/eoss/proposals/bioconductor-high-quality-training-and-support-for-a-worldwide-community/">Chan Zuckerberg Initiative’s EOSS program</a> for their support. Their funding has been instrumental in making this program a success.</p>
-
-
-</section>
-
-<p>
-© 2025 Bioconductor. Content is published under <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons CC-BY-4.0 License</a> for the text and <a href="https://opensource.org/licenses/BSD-3-Clause">BSD 3-Clause License</a> for any code. | <a href="https://www.r-bloggers.com">R-Bloggers</a>
-</p> ]]></description>
-  <category>education</category>
-  <category>Carpentries</category>
-  <guid>https://blog.bioconductor.org/posts/2025-02-28-carpentries-update/</guid>
-  <pubDate>Fri, 28 Feb 2025 00:00:00 GMT</pubDate>
-  <media:content url="https://blog.bioconductor.org/posts/2025-02-28-carpentries-update/map.png" medium="image" type="image/png" height="103" width="144"/>
 </item>
 </channel>
 </rss>
