@@ -125,9 +125,11 @@ combined_maps <- subplot(
     yaxis = list(showline = FALSE, showgrid = FALSE, zeroline = FALSE)
   )
 
-# Display the plot
-combined_maps
+# Save the interactive plot as an HTML file
+htmlwidgets::saveWidget(combined_maps, file = "combined_maps.html")
 ```
+
+<iframe src="combined_maps.html" width="100%" height="500"></iframe>
 
 
 ## Pre-Conference

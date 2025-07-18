@@ -10,12 +10,15 @@ about:
     - icon: linkedin
       text: LinkedIn
       href: https://www.linkedin.com/company/bioconductor/
+    - icon: bluesky
+      text: Bluesky
+      href: https://bsky.app/profile/bioconductor.bsky.social   
     - icon: youtube
       text: YouTube
       href: https://www.youtube.com/user/bioconductor
-    - icon: slack
-      text: Slack
-      href: https://slack.bioconductor.org/
+    - icon: chat-dots
+      text: Chat
+      href: https://chat.bioconductor.org/
     - icon: github
       text: Github
       href: https://github.com/bioconductor/biocblog

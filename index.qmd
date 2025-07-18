@@ -5,7 +5,8 @@ listing:
   sort: "date desc"
   type: default
   categories: true
-  feed: true
+  feed: 
+    items: 10
   sort-ui: false
   filter-ui: false
 page-layout: full
