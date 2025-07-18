@@ -19,14 +19,14 @@ website:
         href: https://github.com/bioconductor/biocblog
       - icon: linkedin
         href: https://www.linkedin.com/company/bioconductor/
-      - text: "{{< fa brands bluesky >}}"
+      - icon: bluesky
         href: https://bsky.app/profile/bioconductor.bsky.social        
       - icon: mastodon
         href: https://genomic.social/@bioconductor
       - icon: youtube
         href: https://www.youtube.com/user/bioconductor
-      - icon: slack
-        href: https://slack.bioconductor.org/
+      - icon: chat-dots
+        href: https://chat.bioconductor.org/
       - icon: rss
         href: index.xml
   body-footer: |
@@ -36,5 +36,8 @@ format:
     theme: yeti
     css: styles.css
     include-in-header:
+    # Override default Quarto icons to enable newer icons like bi-bluesky (v1.12+)
+    # Uses CDN-pinned version for reproducibility
       text: |
-        <script defer data-domain="bioconductor.github.io/biocblog" src="https://plausible.io/js/script.js"></script>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.css" rel="stylesheet">
+      

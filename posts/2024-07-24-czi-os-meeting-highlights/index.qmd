@@ -1,6 +1,6 @@
 ---
 title: "Bioconductor highlights from the CZI Open Science Meeting"
-description: |
+description: "Bioconductor grantees gathered in Boston for the CZI Open Science Meeting."
 author:
   - name: Maria Doyle
     url: https://github.com/mblue9
