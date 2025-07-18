@@ -16,7 +16,7 @@ Organised and hosted by Lluís Revilla ([Bioconductor Community Advisory Board](
 ### 🗓 Event Details
 - **Date:** Monday, 28 July 2025\
 - **Time:** 17:00–18:00 CEST\
-- **Location:** Online (link to be shared closer to the event)
+- **Location:** Online – see details below.
 - **Add to calendar:** <a href="bioc_forum_r_rust.ics.zip" download>Download .ics file</a>
 
 
@@ -30,7 +30,13 @@ Organised and hosted by Lluís Revilla ([Bioconductor Community Advisory Board](
 - Josiah Parry: [LinkedIn](https://www.linkedin.com/in/josiahparry/) | [Website](https://josiahparry.com/) | [GitHub](https://github.com/JosiahParry) 
 
 This session is open to all developers interested in bridging R and Rust, especially those working on packages for **Bioconductor** and **CRAN**.
-We’ll post the joining link and updates here and in the #events channel on [Bioconductor Zulip](https://chat.bioconductor.org). 
+
+### 📍 Location
+- **Zoom link:** [https://us06web.zoom.us/j/83712090308?pwd=DuNbDvPaLkJAHC7a2HebwLWyl8U9Qw.1](https://us06web.zoom.us/j/83712090308?pwd=DuNbDvPaLkJAHC7a2HebwLWyl8U9Qw.1)  
+- **Meeting ID:** 837 1209 0308  
+- **Passcode:** 877331
+
+The joining link is now available above. We’ll also share updates in the #events channel on [Bioconductor Zulip](https://chat.bioconductor.org). 
 
 ☑️ **Please note:** By attending, you agree to abide by the [Bioconductor Code of Conduct](https://bioconductor.org/about/code-of-conduct/).  
 📹 The session will be recorded and may be shared on the [Bioconductor YouTube channel](https://www.youtube.com/playlist?list=PLdl4u5ZRDMQQLMupAtEzm2y4gUIUm_1n6).  
