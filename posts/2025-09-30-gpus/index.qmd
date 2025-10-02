@@ -18,9 +18,9 @@ Bioconductor is developing better support for maintainers authoring GPU-capable
 packages, including adding a new Nvidia GPU build machine maintained at the
 University of Padova, new release and devel (Nvidia) GPU software builds,
 GPU-aware containers, and a `biocViews` `GPU` term. This post shares these new
-resources and how Bioconductor package maintainers to take advantage of them.
+resources and how Bioconductor package maintainers can take advantage of them.
 
-## BBS GPU enhancements
+## GPU Support
 
 The BBS GPU Software reports are available at
 
@@ -34,11 +34,12 @@ Looking at the reports, you'll notice three new build nodes:
 * [amarone](https://bioconductor.org/checkResults/3.22/bioc-gpu-LATEST/amarone-NodeInfo.html)
   at the University of Padova
 * [kakapo1](https://bioconductor.org/checkResults/3.21/bioc-gpu-LATEST/kakpo1-NodeInfo.html)
-  at Dana-Farber Cancer Institute
+  at the Dana-Farber Cancer Institute
 
 The Nvidia CUDA compiler driver and the Nvidia System Management Interface for
 each machine appears at the bottom of their node info reports. Both amarone
-and kakapo1 use a [BBS-like container based on Nvidia's CUDA container](https://github.com/Bioconductor/bioconductor_salt).
+and kakapo1 use a [BBS-like container based on Nvidia's CUDA container](https://github.com/Bioconductor/bioconductor_salt) available
+to maintainers.
 
 Additionally, a `biocViews` term `GPU` has been added.
 
@@ -49,7 +50,7 @@ Additionally, a `biocViews` term `GPU` has been added.
 Add [GPU](https://bioconductor.org/packages/devel/BiocViews.html#___GPU) as a 
 [biocView](https://bioconductor.org/packages/biocView) term for your package.
 
-### Opt in to the BBS GPU build
+### Opt in to the BBS GPU Software builds
 
 The GPU Software builds, like the Long Tests builds, require a `.BBSoptions`
 file at the top level of a package repository with a `GPU_reliance` setting.
@@ -57,17 +58,17 @@ file at the top level of a package repository with a `GPU_reliance` setting.
 #### GPU-optional packages
 
 If a package supports GPU if available, maintainers can opt in to the GPU
-software build by setting `GPU_reliance` top `optional`:
+software build by setting `GPU_reliance` to `optional`:
 
 ```
 GPU_reliance: optional
 ```
 
-Make sure you have tests that utilize GPU if available.
+Make sure you have tests that utilize GPUs if available.
 
 #### GPU-required packages
 
-For maintainers creating packages that will require a GPU in order for the
+Maintainers creating packages requiring GPUs in order for the
 package to be build should set `GPU_reliance` to `required`:
 
 ```
@@ -82,5 +83,5 @@ for information.
 More work is being done to understand how we can make the best use of GPUs
 within Bioconductor by developing a package to understand GPU usage and
 best practices, but we also need a better understanding of what packages are
-utilizing GPUs and what our community needs.
-
+utilizing GPUs and what our community needs. Learn more about the project at
+https://waldronlab.io/czieoss6-biocgpu/.
