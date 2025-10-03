@@ -82,6 +82,6 @@ for information.
 
 More work is being done to understand how we can make the best use of GPUs
 within Bioconductor by developing a package to understand GPU usage and
-best practices, but we also need a better understanding of what packages are
-utilizing GPUs and what our community needs. Learn more about the project at
+propose best practices, but we also need a better understanding of what packages
+are using GPUs and what our community needs. Learn more about the project at
 https://waldronlab.io/czieoss6-biocgpu/.
