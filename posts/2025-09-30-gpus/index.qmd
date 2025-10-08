@@ -33,7 +33,7 @@ Looking at the reports, you'll notice three new build nodes:
   in Jetstream2
 * [amarone](https://bioconductor.org/checkResults/3.22/bioc-gpu-LATEST/amarone-NodeInfo.html)
   at the University of Padova
-* [kakapo1](https://bioconductor.org/checkResults/3.21/bioc-gpu-LATEST/kakpo1-NodeInfo.html)
+* [kakapo1](https://bioconductor.org/checkResults/3.21/bioc-gpu-LATEST/kakapo1-NodeInfo.html)
   at the Dana-Farber Cancer Institute
 
 The Nvidia CUDA compiler driver and the Nvidia System Management Interface for
