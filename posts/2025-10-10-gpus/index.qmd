@@ -4,7 +4,7 @@ description: |
   Support GPU-accelerated Bioconductor packages
 author:
   - name: Andres Wokaty
-date: 2025-09-30
+date: 2025-10-10
 creative_commons: CC BY
 categories:
   - GPU
@@ -13,7 +13,11 @@ categories:
 
 # Introduction
 
-Thanks to funding from [CZI EOSS 6](https://blog.bioconductor.org/posts/2024-07-12-czi-eoss6-grants/),
+GPU acceleration enables faster and more scalable analysis workflows,
+especially for tasks like deep learning, image processing, and large-scale
+genomics, making Bioconductor more powerful for researchers working with
+complex data.  Thanks to funding from
+[CZI EOSS 6](https://blog.bioconductor.org/posts/2024-07-12-czi-eoss6-grants/),
 Bioconductor is developing better support for maintainers authoring GPU-capable
 packages, including adding a new Nvidia GPU build machine maintained at the
 University of Padova, new release and devel (Nvidia) GPU software builds,
@@ -21,6 +25,8 @@ GPU-aware containers, and a `biocViews` `GPU` term. This post shares these new
 resources and how Bioconductor package maintainers can take advantage of them.
 
 ## GPU Support
+
+![3.22 GPU Software report](devel_build.png)
 
 The BBS GPU Software reports are available at
 
