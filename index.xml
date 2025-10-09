@@ -9,8 +9,82 @@
 <link>https://blog.bioconductor.org/</link>
 <atom:link href="https://blog.bioconductor.org/index.xml" rel="self" type="application/rss+xml"/>
 <description>A blog for the Bioconductor community!</description>
-<generator>quarto-1.7.32</generator>
-<lastBuildDate>Fri, 18 Jul 2025 00:00:00 GMT</lastBuildDate>
+<generator>quarto-1.8.25</generator>
+<lastBuildDate>Fri, 10 Oct 2025 00:00:00 GMT</lastBuildDate>
+<item>
+  <title>GPU Support in Bioconductor</title>
+  <dc:creator>Andres Wokaty</dc:creator>
+  <link>https://blog.bioconductor.org/posts/2025-10-10-gpus/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<section id="introduction" class="level1">
+<h1>Introduction</h1>
+<p>GPU acceleration enables faster and more scalable analysis workflows, especially for tasks like deep learning, image processing, and large-scale genomics, making Bioconductor more powerful for researchers working with complex data. Thanks to funding from <a href="https://blog.bioconductor.org/posts/2024-07-12-czi-eoss6-grants/">CZI EOSS 6</a>, Bioconductor is developing better support for maintainers authoring GPU-capable packages, including adding a new Nvidia GPU build machine maintained at the University of Padova, new release and devel (Nvidia) GPU software builds, GPU-aware containers, and a <code>biocViews</code> <code>GPU</code> term. This post shares these new resources and how Bioconductor package maintainers can take advantage of them.</p>
+<section id="gpu-support" class="level2">
+<h2 class="anchored" data-anchor-id="gpu-support">GPU Support</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://blog.bioconductor.org/posts/2025-10-10-gpus/devel_build.png" class="img-fluid figure-img"></p>
+<figcaption>3.22 GPU Software report</figcaption>
+</figure>
+</div>
+<p>The BBS GPU Software reports are available at</p>
+<ul>
+<li><a href="https://bioconductor.org/checkResults/devel/bioc-gpu-LATEST/">devel BBS GPU report</a></li>
+<li><a href="https://bioconductor.org/checkResults/release/bioc-gpu-LATEST/">release BBS GPU report</a></li>
+</ul>
+<p>Looking at the reports, you’ll notice three new build nodes:</p>
+<ul>
+<li><a href="https://bioconductor.org/checkResults/3.22/bioc-gpu-LATEST/biocgpu-NodeInfo.html">biocgpu</a> in Jetstream2</li>
+<li><a href="https://bioconductor.org/checkResults/3.22/bioc-gpu-LATEST/amarone-NodeInfo.html">amarone</a> at the University of Padova</li>
+<li><a href="https://bioconductor.org/checkResults/3.21/bioc-gpu-LATEST/kakapo1-NodeInfo.html">kakapo1</a> at the Dana-Farber Cancer Institute</li>
+</ul>
+<p>The Nvidia CUDA compiler driver and the Nvidia System Management Interface for each machine appears at the bottom of their node info reports. Both amarone and kakapo1 use a <a href="https://github.com/Bioconductor/bioconductor_salt">BBS-like container based on Nvidia’s CUDA container</a> available to maintainers.</p>
+<p>Additionally, a <code>biocViews</code> term <code>GPU</code> has been added.</p>
+</section>
+<section id="how-to-take-advantage-of-new-gpu-support" class="level2">
+<h2 class="anchored" data-anchor-id="how-to-take-advantage-of-new-gpu-support">How to take advantage of new GPU support</h2>
+<section id="help-users-find-your-gpu-capable-package" class="level3">
+<h3 class="anchored" data-anchor-id="help-users-find-your-gpu-capable-package">Help users find your GPU-capable package</h3>
+<p>Add <a href="https://bioconductor.org/packages/devel/BiocViews.html#___GPU">GPU</a> as a <a href="https://bioconductor.org/packages/biocView">biocView</a> term for your package.</p>
+</section>
+<section id="opt-in-to-the-bbs-gpu-software-builds" class="level3">
+<h3 class="anchored" data-anchor-id="opt-in-to-the-bbs-gpu-software-builds">Opt in to the BBS GPU Software builds</h3>
+<p>The GPU Software builds, like the Long Tests builds, require a <code>.BBSoptions</code> file at the top level of a package repository with a <code>GPU_reliance</code> setting.</p>
+<section id="gpu-optional-packages" class="level4">
+<h4 class="anchored" data-anchor-id="gpu-optional-packages">GPU-optional packages</h4>
+<p>If a package supports GPU if available, maintainers can opt in to the GPU software build by setting <code>GPU_reliance</code> to <code>optional</code>:</p>
+<pre><code>GPU_reliance: optional</code></pre>
+<p>Make sure you have tests that utilize GPUs if available.</p>
+</section>
+<section id="gpu-required-packages" class="level4">
+<h4 class="anchored" data-anchor-id="gpu-required-packages">GPU-required packages</h4>
+<p>Maintainers creating packages requiring GPUs in order for the package to be build should set <code>GPU_reliance</code> to <code>required</code>:</p>
+<pre><code>GPU_reliance: required</code></pre>
+<p>See <a href="https://contributions.bioconductor.org/advanced-build-options.html#gpu-builds">Advanced Build Options</a> for information.</p>
+</section>
+</section>
+<section id="future-work" class="level3">
+<h3 class="anchored" data-anchor-id="future-work">Future work</h3>
+<p>More work is being done to understand how we can make the best use of GPUs within Bioconductor by developing a package to understand GPU usage and propose best practices, but we also need a better understanding of what packages are using GPUs and what our community needs. Learn more about the project at https://waldronlab.io/czieoss6-biocgpu/.</p>
+
+
+</section>
+</section>
+</section>
+
+<p>
+© 2025 Bioconductor. Content is published under <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons CC-BY-4.0 License</a> for the text and <a href="https://opensource.org/licenses/BSD-3-Clause">BSD 3-Clause License</a> for any code. | <a href="https://www.r-bloggers.com">R-Bloggers</a>
+</p> ]]></description>
+  <category>GPU</category>
+  <category>CZI</category>
+  <guid>https://blog.bioconductor.org/posts/2025-10-10-gpus/</guid>
+  <pubDate>Fri, 10 Oct 2025 00:00:00 GMT</pubDate>
+</item>
 <item>
   <title>Tagging Bioconductor packages with EDAM</title>
   <dc:creator>Vince Carey</dc:creator>
@@ -44,7 +118,7 @@
 <h3 class="anchored" data-anchor-id="subviews">Subviews</h3>
 <p>Each view is curated by a team and a narrative web page is compiled to HTML. We use <a href="https://rvest.tidyverse.org/">rvest</a> to identify subtopics of the Omics view:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><span class="fu" style="color: #4758AB;
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">library</span>(rvest)</span>
 <span id="cb1-2"><span class="fu" style="color: #4758AB;
@@ -62,7 +136,7 @@ font-style: inherit;">"h3"</span>) <span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">|&gt;</span> <span class="fu" style="color: #4758AB;
 background-color: null;
-font-style: inherit;">html_text</span>()</span></code></pre></div>
+font-style: inherit;">html_text</span>()</span></code></pre></div></div>
 <div class="cell-output cell-output-stdout">
 <pre><code> [1] "Annotation and databases"    "Genomics"                   
  [3] "Transcriptomics"             "Proteomics"                 
@@ -381,7 +455,7 @@ This work has led to an ongoing collaboration between EDAM and Bioconductor comm
 <section id="what-developers-should-do-now" class="level3">
 <h3 class="anchored" data-anchor-id="what-developers-should-do-now">What Developers Should Do Now</h3>
 <p>You can test your package against the development version of <code>ggplot2</code> using <a href="https://pak.r-lib.org/"><code>pak</code></a>:</p>
-<div class="sourceCode" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><span class="co" style="color: #5E5E5E;
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><span class="co" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;"># install.packages("pak")</span></span>
 <span id="cb1-2">pak<span class="sc" style="color: #5E5E5E;
@@ -390,7 +464,7 @@ font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">pak</span>(<span class="st" style="color: #20794D;
 background-color: null;
-font-style: inherit;">"tidyverse/ggplot2"</span>)</span></code></pre></div>
+font-style: inherit;">"tidyverse/ggplot2"</span>)</span></code></pre></div></div>
 <p>We recommend testing in an isolated environment using <a href="https://rstudio.github.io/renv/"><code>renv</code></a> to avoid unexpected interactions with your existing packages.</p>
 <p>If you find issues:</p>
 <ul>
@@ -419,7 +493,7 @@ font-style: inherit;">"tidyverse/ggplot2"</span>)</span></code></pre></div>
 <div class="cell">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><span class="fu" style="color: #4758AB;
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">library</span>(BiocManager)</span>
 <span id="cb2-2"><span class="fu" style="color: #4758AB;
@@ -599,7 +673,7 @@ background-color: null;
 font-style: inherit;">compact =</span> <span class="cn" style="color: #8f5902;
 background-color: null;
 font-style: inherit;">TRUE</span></span>
-<span id="cb2-37">)</span></code></pre></div>
+<span id="cb2-37">)</span></code></pre></div></div>
 </details>
 <div class="cell-output-display">
 <div class="reactable html-widget html-fill-item" id="htmlwidget-df61ff56382f18a5669b" style="width:auto;height:auto;"></div>
@@ -656,7 +730,7 @@ font-style: inherit;">TRUE</span></span>
 <li>Install the development version of <code>ggplot2</code>:</li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb3" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><span class="fu" style="color: #4758AB;
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">install.packages</span>(<span class="st" style="color: #20794D;
 background-color: null;
@@ -667,7 +741,7 @@ font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">pak</span>(<span class="st" style="color: #20794D;
 background-color: null;
-font-style: inherit;">"tidyverse/ggplot2"</span>)</span></code></pre></div>
+font-style: inherit;">"tidyverse/ggplot2"</span>)</span></code></pre></div></div>
 </div>
 <ul>
 <li>Re-run your code and check that plots appear as expected</li>
@@ -679,7 +753,7 @@ font-style: inherit;">"tidyverse/ggplot2"</span>)</span></code></pre></div>
 <p>To manage versions and avoid surprises:</p>
 <ul>
 <li><p>Use <code>renv</code> to snapshot your current setup:</p>
-<div class="sourceCode" id="cb4" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><span class="co" style="color: #5E5E5E;
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><span class="co" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;"># Create a reproducible project setup</span></span>
 <span id="cb4-2">renv<span class="sc" style="color: #5E5E5E;
@@ -691,15 +765,15 @@ font-style: inherit;">init</span>()</span>
 background-color: null;
 font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
 background-color: null;
-font-style: inherit;">snapshot</span>()</span></code></pre></div></li>
+font-style: inherit;">snapshot</span>()</span></code></pre></div></div></li>
 <li><p>When updating, use:</p>
-<div class="sourceCode" id="cb5" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><span class="fu" style="color: #4758AB;
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">update.packages</span>(<span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">ask =</span> <span class="cn" style="color: #8f5902;
 background-color: null;
-font-style: inherit;">TRUE</span>)</span></code></pre></div></li>
+font-style: inherit;">TRUE</span>)</span></code></pre></div></div></li>
 </ul>
 <p>and consider skipping <code>ggplot2</code> if you’re unsure.</p>
 </section>
@@ -1239,135 +1313,6 @@ Becker, Richard A., and John M. Chambers. 1984. <em>S: An Interactive Environmen
   <guid>https://blog.bioconductor.org/posts/2025-05-21-kenya-course/</guid>
   <pubDate>Wed, 21 May 2025 00:00:00 GMT</pubDate>
   <media:content url="https://blog.bioconductor.org/posts/2025-05-21-kenya-course/group-photo.jpeg" medium="image" type="image/jpeg"/>
-</item>
-<item>
-  <title>Outreachy December 2024 Interns with Bioconductor</title>
-  <dc:creator>Kate Rasheed</dc:creator>
-  <dc:creator>Divine Aleru</dc:creator>
-  <link>https://blog.bioconductor.org/posts/2025-04-23-outreachy-interns-experience/</link>
-  <description><![CDATA[ 
-
-
-
-
-
-<section id="introduction" class="level2">
-<h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
-<p>Open source provides an accessible platform for individuals to develop and refine their skills while collaborating on real-world projects. For tech enthusiasts with little to no experience, contributing to open-source projects is a great way to gain hands-on experience, learn from experts, and become part of a global community. One program that actively supports newcomers in open source is <a href="https://www.outreachy.org">Outreachy</a>.</p>
-<p>Outreachy is a paid, remote internship program designed to support individuals who have faced bias or discrimination in any form. Its goal is to create an inclusive environment where everyone is welcome to contribute, develop their skills, and make a meaningful impact on the communities they work with.</p>
-<p>Outreachy interns work on diverse projects, including programming, design, and documentation, while receiving a $7,000 USD stipend and valuable mentorship. Many interns continue contributing to their chosen open-source communities long after the program ends. Microbiome Study Curation (BugSigDB project) is one of the diverse projects enlisted in Outreachy.</p>
-<section id="steps-to-becoming-an-outreachy-intern" class="level3">
-<h3 class="anchored" data-anchor-id="steps-to-becoming-an-outreachy-intern">Steps to Becoming an Outreachy Intern:</h3>
-<ol type="1">
-<li>Initial Application: Submit a well-written essay when the next round of internships is announced.</li>
-<li>Contribution Stage: Applicants who pass the initial application stage must select one or two projects they can meaningfully contribute to during this phase.</li>
-<li>Internship Stage: Congratulations! Interns who excel during the contribution phase and are selected by mentors move on to this stage—a world of hands-on learning and experience.</li>
-</ol>
-</section>
-</section>
-<section id="the-bugsigdb-project" class="level2">
-<h2 class="anchored" data-anchor-id="the-bugsigdb-project">The BugSigDB Project</h2>
-<p><a href="https://bugsigdb.org/">BugSigDB</a> is a comprehensive community-editable database designed to help make sense of the enormous amounts of data related to the human microbiome. As researchers continue to uncover the complex relationships between microbiota and human health, BugSigDB stores these microbial signatures associated with various health conditions. The microbial signatures are essentially patterns in the composition of the microbiome that are linked to specific diseases or health outcomes.</p>
-<p>Designed to make microbiome research more efficient and accessible, here are some of the key features of BugSigDB:</p>
-<ul>
-<li>Standardized study information: Key details from published microbiome studies are organized using ontologies and the NCBI taxonomy, so it is easier to compare results across different studies.</li>
-<li>Searchability: You can quickly find microbial signatures linked to conditions, host species, or body sites.</li>
-<li>Enrichment analysis tools: Either through <a href="https://bugsigdb.org/Help:Export">bulk exports</a>, <a href="https://github.com/waldronlab/BugSigDBExports">GMT files</a>, or the <a href="https://bioconductor.org/packages/release/bioc/html/bugsigdbr.html">bugsigdbr</a> R package, you can dig deeper into the data to discover patterns.</li>
-<li>Community collaboration: Anyone can request an account to contribute, explore, ask questions, or report issues on the <a href="https://www.dropbox.com/?q=%23bugsigdb"></a><a href="https://community-bioc.slack.com/archives/C04RATV9VCY/p1697144958544289">#bugsigdb channel</a> of the <strong>community-bioc</strong> Slack team.</li>
-</ul>
-<p>This simplicity and versatility makes BugSigDB an essential tool in microbiome research. For more details, the <a href="https://www.nature.com/articles/s41587-023-01872-y">article</a> <em>BugSigDB captures patterns of differential abundance across a broad range of host-associated microbial signatures</em> (Geistlinger et al., Nat Biotechnol., 2024.) offers an in-depth look at the project.</p>
-</section>
-<section id="our-journeys" class="level2">
-<h2 class="anchored" data-anchor-id="our-journeys">Our Journeys</h2>
-<section id="divines-experience" class="level3">
-<h3 class="anchored" data-anchor-id="divines-experience">Divine’s Experience</h3>
-<div style="text-align: center;">
-<p><a href="DivineAleru.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="https://blog.bioconductor.org/posts/2025-04-23-outreachy-interns-experience/DivineAleru.png" class="img-fluid" width="300"></a></p>
-<p style="text-align: center;">
-</p><p><em>Divine Aleru</em></p>
-<p></p>
-</div>
-<p>Hello Hello! My name is Divine Aleru. I am a Biochemist, a writer, and an aspiring researcher. Being selected as one of the Outreachy interns was truly a dream come true. You may wonder why, well, this is because I applied three times to the Bioconductor project before finally getting selected.</p>
-<p>When I first learned about Outreachy, one key detail stood out, I did not need to be super qualified to apply. It meant I could apply without feeling the weight of expectations or the fear of not measuring up. The idea that I could be considered based on my potential rather than what I knew gave me the courage to take that first step.</p>
-<p>Outreachy offered me something I did not even realize I needed, a reset. It was an opportunity to start fresh in an environment where I could be an unpolished version of myself, without having to prove what I already knew. I did apply three times before finally getting selected and although the wait and rejections were tough, each attempt made me more patient, reflective, and better at communicating my thoughts. Looking back, I realize that the process was preparing me for what was to come.</p>
-<section id="joining-the-bioconductor-bugsigdb-project" class="level4">
-<h4 class="anchored" data-anchor-id="joining-the-bioconductor-bugsigdb-project">Joining the Bioconductor (BugSigDB) Project</h4>
-<p>When I came across the <strong>Bioconductor’s Microbiome Study Curation (<a href="https://bugsigdb.org/">BugSigDB</a>)</strong> project, I was drawn to it not just because it was bio-related, which is something I was already familiar with (well, this was one of the reasons, say 45%), but also because I thought it would introduce me further to the world of human microbiome research, data curation, and exploratory data analysis in a way I had never experienced before and I was right.</p>
-<p>Before joining BugSigDB, I had a little idea of how scattered microbiome findings were across scientific literature and how hard it was to compare results between studies because there were tons of results. This project helps break down these barriers and makes it easier for researchers to see and compare patterns across different health outcomes.</p>
-<p>Now as a contributor, I have become part of something huge and impactful, a collaborative effort to organize microbiome signatures from published studies. I am immensely proud of myself and grateful for this opportunity and the support of my mentors, Chloe Mirzayi, Svetlana Ugarcina Perovic, Levi Waldron and Chioma Onyido, my co-intern, Kate Rasheed and the entire Bioconductor community for every feedback, insight, and support that has turned every challenge into an opportunity for growth and learning.</p>
-</section>
-<section id="my-achievements" class="level4">
-<h4 class="anchored" data-anchor-id="my-achievements">My Achievements</h4>
-<p>To date, I have contributed to over <a href="https://github.com/waldronlab/BugSigDBcuration/issues?q=is%3Aissue%20assignee%3AAleruDivine%20">100 issues</a> and <a href="https://bugsigdb.org/Special:Contributions/Aleru_Divine">study curations</a> so far, helping ensure the quality and reliability of the database. This experience has sharpened my attention to detail and made me more aware of how small contributions can have a significant impact.</p>
-<p>One thing that I am proud of is expanding data for underrepresented conditions. Towards the end of my internship, I focused on identifying studies related to glucose metabolism-associated microbiome signatures and curating them into the database. This work makes BugSigDB more comprehensive and also helps amplify knowledge in areas that are less explored.</p>
-<p>Before Outreachy, I had little experience with R programming. Through my internship, I have learned how to use R, from updating functions to fixing errors in analyses. This experience has been pushing me to expand my technical skills and I am gaining confidence in working with data every day. Currently, I am working on an analysis of the studies I recently added related to glucose metabolism-associated microbiome, something I never imagined I would be able to do just a few months ago. You can read more about my Outreachy experience in my <a href="https://divinealeru.substack.com/">blog</a>.</p>
-</section>
-<section id="where-im-going" class="level4">
-<h4 class="anchored" data-anchor-id="where-im-going">Where I’m Going?</h4>
-<p>As I look ahead, I am committed to deepening my R programming skills and broadening my understanding of data science. I plan to continue contributing to BugSigDB while pursuing extra learning in statistics and getting ready to start graduate school this Fall. What started as an internship has become a stepping stone toward a future where I can combine my interest in microbiome research and data science with Biochemistry.</p>
-<p>Outreachy and Bioconductor have shown me that growth begins in small steps, and that sometimes the best journeys are the ones that take a little longer to begin.</p>
-</section>
-</section>
-<section id="kate-rasheeds-experience" class="level3">
-<h3 class="anchored" data-anchor-id="kate-rasheeds-experience">Kate Rasheed’s Experience</h3>
-<div style="text-align: center;">
-<p><a href="KateRasheed.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2"><img src="https://blog.bioconductor.org/posts/2025-04-23-outreachy-interns-experience/KateRasheed.png" class="img-fluid" width="300"></a></p>
-<p style="text-align: center;">
-</p><p><em>Kate Rasheed</em></p>
-<p></p>
-</div>
-<p>Hello everyone! I am Kate Rasheed, an Outreachy intern working on the Microbiome Study Curation Project (BugSigDB).</p>
-<p>My journey into BugSigDB reflects the actions of my role model who “went, knowing not where he went”. During the contribution stage, I came across the Microbiome Study Project and I knew instantly that this is where I wanted to be. Despite having no background in Microbiology, Biochemistry, or the Sciences, I knew I could fit in.</p>
-<p>At first, I faced struggles and knowledge gaps, which turned me into a relentless question-asker. Whether during office hours or on Slack, I constantly sought answers because I didn’t know—but I truly wanted to learn. See more details <a href="https://katerasheed1.wordpress.com/2024/12/18/struggles-stretchers-and-yardsticks-for-growth/">here</a>.</p>
-<p>I am immensely grateful for the support of my mentors, Svetlana Ugarcina Perovic, Chloe Mirzayi, Peace Sandy, and Esther Afuape, as well as my fellow contributors and aspirants, Aleru Divine (co-intern), Adeshile Oluwatosin, Mildred Anashie, Yoko Corzon, and many others, whose peer reviews have helped shape my curations.</p>
-<section id="so-far" class="level4">
-<h4 class="anchored" data-anchor-id="so-far">So far</h4>
-<p>I am amazed at all I have achieved in the past three months—technically, mentally, and career-wise. This internship has been a period of immense growth. One of the most amusing and fulfilling aspects was publishing seven blog posts—you can check them out <a href="https://katerasheed1.wordpress.com/">here</a>.</p>
-<p>During the contribution and internship period, I have worked on over 100 <a href="https://github.com/waldronlab/BugSigDBcuration/issues?q=is%3Aissue%20assignee%3AKateRasheed%20">issues</a> and <a href="https://bugsigdb.org/Special:Contributions/KateRasheed">study curations</a>. Through curating and reviewing published microbiome articles, I have developed a deep appreciation for the importance of healthy living and the role of bacteria in and around us. I particularly contributed to curating a selection of whole genome metagenomic studies on Parkinson’s disease.</p>
-<p>Additionally, I worked on a side project comparing Paul Jensen’s findings on the “<a href="https://www.biorxiv.org/content/10.1101/2025.01.04.631297v1">Most Studied Species</a>” and BugSigDB’s most recorded species.</p>
-<p>According to Jensen’s preprint, ‘More than 90% of all bacteriology articles study fewer than 1% of species, creating a long tail of understudied microbes.’ This project aimed to determine whether BugSigDB exhibits a similar bias toward certain species. This comparison revealed that <em>Escherichia coli</em> (the most studied species from Paul Jensen’s findings) was seen as the third most recorded species in BugSigDB.</p>
-<div style="text-align: center;">
-<p><a href="Top_50_Species_in_BugSigDB.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3"><img src="https://blog.bioconductor.org/posts/2025-04-23-outreachy-interns-experience/Top_50_Species_in_BugSigDB.png" class="img-fluid" width="300"></a></p>
-<p style="text-align: center;">
-</p><p><em>Top 50 Species curated in BugSigDB</em></p>
-<p></p>
-</div>
-</section>
-<section id="my-mantra-during-this-outreachy-internship" class="level4">
-<h4 class="anchored" data-anchor-id="my-mantra-during-this-outreachy-internship">My mantra during this Outreachy internship:</h4>
-<ul>
-<li>Ask questions, don’t assume (adapted from BugSigDB community)</li>
-<li>Be kind (adapted from my mentor, Svetlana)</li>
-<li>Be clear and concise while communicating (adapted from my mentor, Svetlana)</li>
-<li>Be flexible and open-minded (adapted from my mentor, Chloe)</li>
-</ul>
-</section>
-</section>
-</section>
-<section id="upcoming-opportunities" class="level2">
-<h2 class="anchored" data-anchor-id="upcoming-opportunities">Upcoming Opportunities</h2>
-<p>For beginners looking to get involved, open source is an invaluable resource. It allows you to sharpen your technical skills, work on real-world projects, engage with a global community, and explore GitHub repositories to enhance learning and expertise.</p>
-<p>Below is a list of notable open-source programs, sourced from <a href="https://www.geeksforgeeks.org/best-open-source-programs-for-students-to-participate/">GeeksforGeeks</a>:</p>
-<ul>
-<li>DigitalOcean Hacktoberfest</li>
-<li>Google Summer of Code (GSoC)</li>
-<li>MLH Fellowship</li>
-<li>Google Season of Docs (GSoD)</li>
-<li>Outreachy: Interested applicants can apply via this link: <a href="https://www.outreachy.org/apply/">Apply to Outreachy</a>.</li>
-</ul>
-<p>If you are inspired to be a part of the BugSigDB project, reach out or connect with the Bioconductor community via <a href="https://community-bioc.slack.com/archives/C04RATV9VCY/p1697144958544289">Slack</a> and if you are interested in beginning your own open source journey, Outreachy provides ongoing internship opportunities. Applications for the December 2025 to March 2026 cohort will open in August 2025.</p>
-
-
-</section>
-
-<p>
-© 2025 Bioconductor. Content is published under <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons CC-BY-4.0 License</a> for the text and <a href="https://opensource.org/licenses/BSD-3-Clause">BSD 3-Clause License</a> for any code. | <a href="https://www.r-bloggers.com">R-Bloggers</a>
-</p> ]]></description>
-  <category>Outreachy</category>
-  <category>open science</category>
-  <guid>https://blog.bioconductor.org/posts/2025-04-23-outreachy-interns-experience/</guid>
-  <pubDate>Wed, 23 Apr 2025 00:00:00 GMT</pubDate>
-  <media:content url="https://blog.bioconductor.org/posts/2025-04-23-outreachy-interns-experience/featured-image.png" medium="image" type="image/png" height="76" width="144"/>
 </item>
 </channel>
 </rss>

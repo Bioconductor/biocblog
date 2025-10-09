@@ -2,6 +2,7 @@
   {
     "listing": "/index.html",
     "items": [
+      "/posts/2025-10-10-gpus/index.html",
       "/posts/2025-07-18-edam/index.html",
       "/posts/2025-07-09-developers-forum-july28/index.html",
       "/posts/2025-07-10-microbiome-course-brazil/index.html",
@@ -30,11 +31,11 @@
       "/posts/2023-11-17-twitter-exit/index.html",
       "/posts/2023-08-17-bioc2023-recap/index.html",
       "/posts/2023-08-01-website-redesign-update/index.html",
-      "/posts/2023-07-14-linux-arm64-github-actions/index.html",
       "/posts/2023-07-14-OutreachyInternshipExperience/index.html",
+      "/posts/2023-07-14-linux-arm64-github-actions/index.html",
       "/posts/2023-06-22-website-redesign/index.html",
-      "/posts/2023-06-16-ELIXIR-allhands-meeting/index.html",
       "/posts/2023-06-16-smorgasbord-recap/index.html",
+      "/posts/2023-06-16-ELIXIR-allhands-meeting/index.html",
       "/posts/2023-06-09-debug-linux-arm64-on-docker/index.html",
       "/posts/2023-03-01-transition-to-devel/index.html",
       "/posts/2023-02-24-carpentries-update/index.html",
