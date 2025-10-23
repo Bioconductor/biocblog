@@ -4,7 +4,7 @@ description: "Highlights from the 2025 European Bioconductor Conference in Barce
 author:
   - name: Laurah Ondari
     url: https://github.com/Nyasita
-date: 2025-10-22
+date: 2025-10-24
 categories:
   - Bioconductor
 image: "media/allparticipants_image.jpg"
