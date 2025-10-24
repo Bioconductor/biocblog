@@ -22,7 +22,7 @@
 
 
 <p><a href="media/allparticipants_image.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="https://blog.bioconductor.org/posts/2025-10-24-EuroBioC2025-recap/media/allparticipants_image.jpg" class="zoomable img-fluid" style="width:100.0%"></a></p>
-<p><img src="https://blog.bioconductor.org/posts/2025-10-24-EuroBioC2025-recap/media/EuroBioC2025Closing.png" class="img-fluid">{width=“70%”; class=“zoomable”; height:200px;“}</p>
+<p><img src="https://blog.bioconductor.org/posts/2025-10-24-EuroBioC2025-recap/media/EuroBioC2025Closing.png" class="img-fluid">{width=“70%”; class=“zoomable”; height:“200px”;}</p>
 <p>The European Bioconductor conference 2025 (<a href="https://eurobioc2025.bioconductor.org/"><u>EuroBioC2025</u></a>) took place between September 17 and 19, 2025, and was hosted at the Barcelona Biomedical Research Park (<a href="https://www.prbb.org/">PRBB</a>) in Barcelona by the Department of Medicine and Life Sciences of Universitat Pompeu Fabra (<a href="https://www.upf.edu/biomed">MELIS-UPF</a>)and the Barcelona Institute for Global Health (<a href="https://www.isglobal.org/en">ISGlobal</a>). The Catalan capital boasts a rich culture, a lively atmosphere, and a blend of art, history, and Mediterranean energy, which made it the perfect backdrop for a relaxing and learning atmosphere for EuroBioC 2025. The conference brought together 170 participants from all over the world to showcase the latest cutting-edge developments on Bioconductor software packages, as well as on broader emerging technologies impacting computational biology.</p>
 <p>The map below shows participants of EuroBioC2025 per country.</p>
 <iframe src="media/EuroBioC2025participants.html" width="100%" height="600" style="border:none;">
@@ -73,7 +73,12 @@
 <ul>
 <li>#eurobioc-conference-everyone – for announcements, updates, and general conference discussions.</li>
 </ul>
-<p>Inside #eurobioc-conference-everyone, the following topics were available to keep everything organised: - eurobioc2025:travel – for coordinating taxi shares, asking about transit options, and exchanging travel tips. - eurobioc2025:announcements – for conference updates, schedule changes, and important notices. - eurobioc2025:helpdesk – for participants to ask questions and receive assistance from organizers or fellow attendees. - eurobioc2025:general-chat – for casual conversations and connecting with other participants. - eurobioc2025:photos – for sharing snapshots and favorite moments from EuroBioC2025.</p>
+<p>Inside #eurobioc-conference-everyone, the following topics were available to keep everything organised:&nbsp; - eurobioc2025:travel – for coordinating taxi shares, asking about transit options, and exchanging travel tips.<br>
+- eurobioc2025:announcements – for conference updates, schedule changes, and important notices.<br>
+- eurobioc2025:helpdesk – for participants to ask questions and receive assistance from organizers or fellow attendees.<br>
+- eurobioc2025:general-chat – for casual conversations and connecting with other participants.<br>
+- eurobioc2025:photos – for sharing snapshots and favorite moments from EuroBioC2025.<br>
+</p>
 <p><strong>Scholarships</strong></p>
 <p>Thanks to the generous support of the sponsors, EuroBioC2025 awarded 27 scholarships to participants, enabling them to attend the conference in person. These scholarships helped ensure broader participation and continued Bioconductor’s commitment to equity, diversity, and inclusion within the community.</p>
 <p><strong>Sticker contest winners</strong></p>
