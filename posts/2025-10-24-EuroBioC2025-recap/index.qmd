@@ -16,7 +16,7 @@ lightbox: true
 
 ![](media/allparticipants_image.jpg){.zoomable width="100%"}
 
-![](media/EuroBioC2025Closing.png){width="70%"; class="zoomable"; height:"200px";}
+![](media/EuroBioC2025Closing.png){.zoomable width="100%"}
 
 The European Bioconductor conference 2025 ([[EuroBioC2025]{.underline}](https://eurobioc2025.bioconductor.org/)) took place between September 17 and 19, 2025, and was hosted at the Barcelona Biomedical Research Park ([PRBB](https://www.prbb.org/)) in Barcelona by the Department of Medicine and Life Sciences of Universitat Pompeu Fabra ([MELIS-UPF](https://www.upf.edu/biomed))and the Barcelona Institute for Global Health ([ISGlobal](https://www.isglobal.org/en)). The Catalan capital boasts a rich culture, a lively atmosphere, and a blend of art, history, and Mediterranean energy, which made it the perfect backdrop for a relaxing and learning atmosphere for EuroBioC 2025. The conference brought together 170 participants from all over the world to showcase the latest cutting-edge developments on Bioconductor software packages, as well as on broader emerging technologies impacting computational biology.
 
@@ -73,7 +73,7 @@ EuroBioC2025 featured a vibrant lineup of short talks highlighting new computati
 
 **Workshops**
 
-The workshop sessions were a major highlight, offering attendees interactive learning experiences with the latest Bioconductor tools set up in a [[workshop cloud platform]{.underline}](https://workshop.bioconductor.org) to avoid participants having to spend time installing software. From Orchestrating Spatial (Transcript-)Omics Analysis and Microbiome Analysis with Bioconductor, to authoring and deploying workshops on the new Bioconductor platform, these sessions emphasized reproducible workflows and cross-language integration for biological data analysis.
+The workshop sessions were a major highlight, offering attendees interactive learning experiences with the latest Bioconductor tools set up in a workshop cloud platform to avoid participants having to spend time installing software. From Orchestrating Spatial (Transcript-)Omics Analysis and Microbiome Analysis with Bioconductor, to authoring and deploying workshops on the new Bioconductor platform, these sessions emphasized reproducible workflows and cross-language integration for biological data analysis.
 
 **Poster Sessions**
 
@@ -170,7 +170,7 @@ Recordings from EuroBioC2025 are available on the [[Bioconductor YouTube channel
 
 ![](media/sponsors.png){.zoomable width="80%"}
 
-EuroBioC2025 was deeply grateful to all our sponsors for their generous support. Our Silver sponsors were [[Seqera]{.underline}](https://seqera.io/), the [[Chan Zuckerberg Initiative]{.underline}](https://chanzuckerberg.com/), and the [[Department of Medicine and Life Sciences (UPF)]{.underline} and](https://www.upf.edu/web/biomed/mdm) [[ISGlobal]{.underline}](https://www.isglobal.org/en/severo-ochoa) through their respective institutional grants [[Maria de Maeztu and Severo Ochoa]{.underline}](https://www.ciencia.gob.es/Organismos-y-Centros/SOMMA.html). Bronze sponsors included the [[R Consortium]{.underline}](https://r-consortium.org/), [[BigOmics Analytics]{.underline}](https://bigomics.ch/), [[MedBio Informatics]{.underline}](https://medbioinformatics.com/), and [[Physalia Courses.]{.underline}](https://www.physalia-courses.org/)
+EuroBioC2025 was deeply grateful to all our sponsors for their generous support. Our Silver sponsors were [[Seqera]{.underline}](https://seqera.io/), the [[Chan Zuckerberg Initiative]{.underline}](https://chanzuckerberg.com/), and the [[Department of Medicine and Life Sciences (UPF)]{.underline}](https://www.upf.edu/web/biomed/mdm) and [[ISGlobal]{.underline}](https://www.isglobal.org/en/severo-ochoa) through their respective institutional grants [[Maria de Maeztu and Severo Ochoa]{.underline}](https://www.ciencia.gob.es/Organismos-y-Centros/SOMMA.html). Bronze sponsors included the [[R Consortium]{.underline}](https://r-consortium.org/), [[BigOmics Analytics]{.underline}](https://bigomics.ch/), [[MedBio Informatics]{.underline}](https://medbioinformatics.com/), and [[Physalia Courses.]{.underline}](https://www.physalia-courses.org/)
 
 Their contributions made it possible to deliver a high-quality in-person event and to promote equity, diversity, and inclusion by reducing registration costs and supporting scholarships for students and researchers from lower-income regions or with limited access to funding.
 
