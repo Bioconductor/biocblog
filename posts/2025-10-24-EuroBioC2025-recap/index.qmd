@@ -44,7 +44,7 @@ Prior to the conference, EuroBioC2025 hosted [[two Bioconductor Carpentry worksh
 
 </p>
 
-### **Programme overview**
+### Programme overview
 
 ------------------------------------------------------------------------
 
@@ -61,15 +61,10 @@ On the final day, Birds-of-a-Feather (BoF) sessions encouraged open community di
 The keynote sessions at EuroBioC2025 brought together leading voices in bioinformatics, highlighting advances across genomics, spatial biology, and community-driven software development. Each talk provided attendees with both inspiration and practical insights into the evolving landscape of computational biology:
 
 -   **Vince Carey** (Mass General Brigham - Harvard Medical School) opened the conference with *"A coherent ecosystem for genomic data science: 25 years of Bioconductor,"* reflecting on Bioconductor's growth and its pivotal role in reproducible research.
-
 -   **Helena Crowell** (Centre Nacional d'Anàlisi Genòmica - CNAG) presented *"Colorectal cancer through the lens of whole transcriptome imaging,"* showcasing how spatial transcriptomics can reveal novel insights into cancer biology.
-
 -   **Susan Holmes** (Stanford University) delivered *"Latent variables as the best medicine for heterogeneity,"* exploring statistical approaches for understanding biological variation.
-
 -   **James Sharpe** (EMBL Barcelona) introduced *"C3PO: Cell 3D Positioning by Optical encoding and its application to spatial transcriptomics,"* detailing innovative imaging and computational methods for 3D cellular mapping.
-
 -   **Noelia Ferruz** (Centre de Regulació Genòmica - CRG) presented *"Controllable protein design with language models,"* demonstrating how AI and generative models are transforming protein engineering.
-
 -   **Jacques Serizay** (Institut Pasteur) closed the keynotes with *"Enhancing genomic research with community-driven flexible software,"* emphasizing collaboration and openness in advancing genomic analysis.
 
 **Short Talks**
@@ -101,6 +96,7 @@ The main channel was:
 -   #eurobioc-conference-everyone -- for announcements, updates, and general conference discussions.
 
 Inside #eurobioc-conference-everyone, the following topics were available to keep everything organised:\  
+
 -   eurobioc2025:travel -- for coordinating taxi shares, asking about transit options, and exchanging travel tips.\
 -   eurobioc2025:announcements -- for conference updates, schedule changes, and important notices.\
 -   eurobioc2025:helpdesk -- for participants to ask questions and receive assistance from organizers or fellow attendees.\
