@@ -16,7 +16,7 @@ lightbox: true
 
 ![](media/allparticipants_image.jpg){.zoomable width="100%"}
 
-![](media/EuroBioC2025Closing.png){width="70%"; class="zoomable"; height:200px;"}
+![](media/EuroBioC2025Closing.png){width="70%"; class="zoomable"; height:"200px";}
 
 The European Bioconductor conference 2025 ([[EuroBioC2025]{.underline}](https://eurobioc2025.bioconductor.org/)) took place between September 17 and 19, 2025, and was hosted at the Barcelona Biomedical Research Park ([PRBB](https://www.prbb.org/)) in Barcelona by the Department of Medicine and Life Sciences of Universitat Pompeu Fabra ([MELIS-UPF](https://www.upf.edu/biomed))and the Barcelona Institute for Global Health ([ISGlobal](https://www.isglobal.org/en)). The Catalan capital boasts a rich culture, a lively atmosphere, and a blend of art, history, and Mediterranean energy, which made it the perfect backdrop for a relaxing and learning atmosphere for EuroBioC 2025. The conference brought together 170 participants from all over the world to showcase the latest cutting-edge developments on Bioconductor software packages, as well as on broader emerging technologies impacting computational biology.
 
@@ -100,12 +100,12 @@ The main channel was:
 
 -   #eurobioc-conference-everyone -- for announcements, updates, and general conference discussions.
 
-Inside #eurobioc-conference-everyone, the following topics were available to keep everything organised:
--   eurobioc2025:travel -- for coordinating taxi shares, asking about transit options, and exchanging travel tips.
--   eurobioc2025:announcements -- for conference updates, schedule changes, and important notices.
--   eurobioc2025:helpdesk -- for participants to ask questions and receive assistance from organizers or fellow attendees.
--   eurobioc2025:general-chat -- for casual conversations and connecting with other participants.
--   eurobioc2025:photos -- for sharing snapshots and favorite moments from EuroBioC2025.
+Inside #eurobioc-conference-everyone, the following topics were available to keep everything organised:\  
+-   eurobioc2025:travel -- for coordinating taxi shares, asking about transit options, and exchanging travel tips.\
+-   eurobioc2025:announcements -- for conference updates, schedule changes, and important notices.\
+-   eurobioc2025:helpdesk -- for participants to ask questions and receive assistance from organizers or fellow attendees.\
+-   eurobioc2025:general-chat -- for casual conversations and connecting with other participants.\
+-   eurobioc2025:photos -- for sharing snapshots and favorite moments from EuroBioC2025.\
 
 **Scholarships**
 
