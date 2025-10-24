@@ -10,7 +10,401 @@
 <atom:link href="https://blog.bioconductor.org/index.xml" rel="self" type="application/rss+xml"/>
 <description>A blog for the Bioconductor community!</description>
 <generator>quarto-1.8.25</generator>
-<lastBuildDate>Fri, 10 Oct 2025 00:00:00 GMT</lastBuildDate>
+<lastBuildDate>Fri, 24 Oct 2025 00:00:00 GMT</lastBuildDate>
+<item>
+  <title>EuroBioC2025 conference recap</title>
+  <dc:creator>Laurah Ondari</dc:creator>
+  <link>https://blog.bioconductor.org/posts/2025-10-24-EuroBioC2025-recap/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<p><a href="media/allparticipants_image.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="https://blog.bioconductor.org/posts/2025-10-24-EuroBioC2025-recap/media/allparticipants_image.jpg" class="zoomable img-fluid" style="width:100.0%"></a></p>
+<p><img src="https://blog.bioconductor.org/posts/2025-10-24-EuroBioC2025-recap/media/EuroBioC2025Closing.png" class="img-fluid">{width=“70%; class=”zoomable”; height:200px;“}</p>
+<p>The European Bioconductor conference 2025 (<a href="https://eurobioc2025.bioconductor.org/"><u>EuroBioC2025</u></a>) took place between September 17 and 19, 2025, and was hosted at the Barcelona Biomedical Research Park (<a href="https://www.prbb.org/">PRBB</a>) in Barcelona by the Department of Medicine and Life Sciences of Universitat Pompeu Fabra (<a href="https://www.upf.edu/biomed">MELIS-UPF</a>)and the Barcelona Institute for Global Health (<a href="https://www.isglobal.org/en">ISGlobal</a>). The Catalan capital boasts a rich culture, a lively atmosphere, and a blend of art, history, and Mediterranean energy, which made it the perfect backdrop for a relaxing and learning atmosphere for EuroBioC 2025. The conference brought together 170 participants from all over the world to showcase the latest cutting-edge developments on Bioconductor software packages, as well as on broader emerging technologies impacting computational biology.</p>
+<p>The map below shows participants of EuroBioC2025 per country.</p>
+<iframe src="media/EuroBioC2025participants.html" width="100%" height="600" style="border:none;">
+</iframe>
+<section id="preconference" class="level3">
+<h3 class="anchored" data-anchor-id="preconference"><strong>Preconference</strong></h3>
+<hr>
+<p>Prior to the conference, EuroBioC2025 hosted <a href="https://eurobioc2025.bioconductor.org/pages/carpentryworkshops.html"><u>two Bioconductor Carpentry workshops</u></a> on Bulk RNA-seq and Single-cell RNA-seq analysis. Each workshop attracted about 20 participants and ran on September 15 and 16. The Bulk RNA-seq analysis module was taught by Estefania Mancini, Vasileios Panagoitis Lenis, and Jacques Serizay, while the Single-cell RNA-seq analysis workshop was taught by Robert Ivánek, Mireia Ramos, and Kevin Rue-Albrecht. The sessions combined live coding with short theoretical explanations of the covered materials. The feedback from participants was incredibly positive, with many appreciating how practical and engaging the sessions were. One participant shared that “<em>the hands-on experience brought by the instructors is the kind of thing that would have been difficult to get while going through the materials on our own</em>,” while another highlighted “<em>the written materials that include theory and explanation of the obtained results</em>” as particularly useful. Participants in the Single-cell RNA-seq workshop appreciated “<em>the comprehensive overview the lectures provided on scRNA-seq analysis</em>,” noting that “<em>they outlined the different steps clearly, using comparable timelines and emphasizing key details</em>,” which “<em>offers a standard framework for performing such analyses</em>.” Those in the Bulk RNA-seq module praised “<em>the materials [that] were really well prepared</em>,” the “<em>super nice instructors</em>” who “<em>tried to accommodate all of your needs</em>,” and “<em>gave many useful tips</em>,” adding that the content would be valuable for future reference. Overall, the majority of respondents rated the workshops as <em>“Very good”</em> or <em>“Excellent,”</em> describing them as well-organized, easy to follow, and “<em>an incredible learning experience</em>” that boosted both their confidence and technical skills in using Bioconductor.</p>
+<p style="text-align:center;">
+</p><p><img src="https://blog.bioconductor.org/posts/2025-10-24-EuroBioC2025-recap/media/ivanek_teaching.jpeg" class="zoomable" width="25%" style="margin: 6px;"> <img src="https://blog.bioconductor.org/posts/2025-10-24-EuroBioC2025-recap/media/kevin_teaching.jpeg" class="zoomable" width="25%" style="margin: 6px;"> <img src="https://blog.bioconductor.org/posts/2025-10-24-EuroBioC2025-recap/media/Mireia_teaching.jpg" class="zoomable" width="25%" style="margin: 6px;"></p>
+<p></p>
+<p style="text-align:center;">
+</p><p><img src="https://blog.bioconductor.org/posts/2025-10-24-EuroBioC2025-recap/media/bulk_instructor1.jpeg" class="zoomable" width="25%" style="margin: 6px;"> <img src="https://blog.bioconductor.org/posts/2025-10-24-EuroBioC2025-recap/media/bulk_instructor2.jpeg" class="zoomable" width="25%" style="margin: 6px;"> <img src="https://blog.bioconductor.org/posts/2025-10-24-EuroBioC2025-recap/media/Estefania_teaching.jpg" class="zoomable" width="25%" style="margin: 6px;"></p>
+<p></p>
+</section>
+<section id="programme-overview" class="level3">
+<h3 class="anchored" data-anchor-id="programme-overview"><strong>Programme overview</strong></h3>
+<hr>
+<p>EuroBioC2025 featured a dynamic three-day program that balanced scientific excellence, community exchange, and practical training. The schedule brought together keynotes from leading researchers, short and flash talks showcasing new Bioconductor packages and methods, and hands-on workshops that deepened participants’ technical skills.</p>
+<p>The opening keynote by Vince Carey reflected on <em>25 years of Bioconductor</em> as a coherent ecosystem for genomic data science, setting the tone for a conference that celebrated both innovation and collaboration. Keynotes by Helena Crowell, Susan Holmes, James Sharpe, Noelia Ferruz, and Jacques Serizay explored cutting-edge topics spanning whole-transcriptome imaging, statistical modeling, spatial omics, and AI-driven protein design.</p>
+<p>The short talks highlighted exciting package developments across the Bioconductor landscape, from metabolomics and spatial transcriptomics to reproducible workflows. The poster sessions showcased over 60 contributions, offering a vibrant space for discussion, collaboration, and mentorship.</p>
+<p>On the final day, Birds-of-a-Feather (BoF) sessions encouraged open community dialogue on key issues, reinforcing Bioconductor’s collaborative ethos.</p>
+<p><strong>Keynotes</strong></p>
+<p>The keynote sessions at EuroBioC2025 brought together leading voices in bioinformatics, highlighting advances across genomics, spatial biology, and community-driven software development. Each talk provided attendees with both inspiration and practical insights into the evolving landscape of computational biology:</p>
+<ul>
+<li><p><strong>Vince Carey</strong> (Mass General Brigham - Harvard Medical School) opened the conference with <em>“A coherent ecosystem for genomic data science: 25 years of Bioconductor,”</em> reflecting on Bioconductor’s growth and its pivotal role in reproducible research.</p></li>
+<li><p><strong>Helena Crowell</strong> (Centre Nacional d’Anàlisi Genòmica - CNAG) presented <em>“Colorectal cancer through the lens of whole transcriptome imaging,”</em> showcasing how spatial transcriptomics can reveal novel insights into cancer biology.</p></li>
+<li><p><strong>Susan Holmes</strong> (Stanford University) delivered <em>“Latent variables as the best medicine for heterogeneity,”</em> exploring statistical approaches for understanding biological variation.</p></li>
+<li><p><strong>James Sharpe</strong> (EMBL Barcelona) introduced <em>“C3PO: Cell 3D Positioning by Optical encoding and its application to spatial transcriptomics,”</em> detailing innovative imaging and computational methods for 3D cellular mapping.</p></li>
+<li><p><strong>Noelia Ferruz</strong> (Centre de Regulació Genòmica - CRG) presented <em>“Controllable protein design with language models,”</em> demonstrating how AI and generative models are transforming protein engineering.</p></li>
+<li><p><strong>Jacques Serizay</strong> (Institut Pasteur) closed the keynotes with <em>“Enhancing genomic research with community-driven flexible software,”</em> emphasizing collaboration and openness in advancing genomic analysis.</p></li>
+</ul>
+<p><strong>Short Talks</strong></p>
+<p>EuroBioC2025 featured a vibrant lineup of short talks highlighting new computational tools and methods across multi-omics, spatial, and single-cell biology. Presentations ranged from multi-omics integration frameworks and probabilistic models for transcription factor activity to improvements in widely used packages such as edgeR and new interoperability initiatives with ELIXIR. Speakers also introduced emerging software for mass spectrometry, microbiome, and spatial data analysis, showcasing the community’s ongoing innovation in data-driven biology.</p>
+<p><strong>Workshops</strong></p>
+<p>The workshop sessions were a major highlight, offering attendees interactive learning experiences with the latest Bioconductor tools set up in a <a href="https://workshop.bioconductor.org"><u>workshop cloud platform</u></a> to avoid participants having to spend time installing software. From Orchestrating Spatial (Transcript-)Omics Analysis and Microbiome Analysis with Bioconductor, to authoring and deploying workshops on the new Bioconductor platform, these sessions emphasized reproducible workflows and cross-language integration for biological data analysis.</p>
+<p><strong>Poster Sessions</strong></p>
+<p>The poster sessions at EuroBioC2025 showcased a diverse range of projects reflecting the richness of the Bioconductor ecosystem. Topics included multi-omics integration, benchmarking analytical methods, AI-driven microbiome and cancer research, and interactive visualization tools. Attendees particularly appreciated the concise poster pitches that provided quick overviews of ongoing research and facilitated meaningful discussions during the sessions.</p>
+<p><strong>Birds of a Feather (BoF) Sessions</strong></p>
+<p>This year’s BoF sessions provided space for informal, collaborative discussions on key community topics. Participants shared perspectives on integrating Bioconductor with the Nextflow workflow manager, improving interoperability across tools, enhancing developer onboarding, and shaping the future of Bioconductor training and governance. These conversations captured the conference’s spirit of open collaboration and community-driven growth.</p>
+</section>
+<section id="infrastructure-and-tools" class="level3">
+<h3 class="anchored" data-anchor-id="infrastructure-and-tools"><strong>Infrastructure and tools</strong></h3>
+<hr>
+<p><strong>EuroBioC2025 Zulip</strong></p>
+<p>In June 2025, <a href="https://blog.bioconductor.org/posts/2025-05-29-slack-to-zulip/"><u>Bioconductor’s community chat moved from Slack to Zulip</u></a>. The motivation behind the transition was to ensure long-term access to discussions on a platform that better reflects the project’s open-source values. Therefore, EuroBioC2025 used a dedicated Zulip workspace as the main digital hub for conference coordination and discussions. Zulip provided an organized, threaded platform where participants and organizers could collaborate seamlessly before, during, and after the conference.</p>
+<p>The main channel was:</p>
+<ul>
+<li>#eurobioc-conference-everyone – for announcements, updates, and general conference discussions.</li>
+</ul>
+<p>Inside #eurobioc-conference-everyone, the following topics were available to keep everything organised:</p>
+<ul>
+<li><p>eurobioc2025:travel – for coordinating taxi shares, asking about transit options, and exchanging travel tips.</p></li>
+<li><p>eurobioc2025:announcements – for conference updates, schedule changes, and important notices.</p></li>
+<li><p>eurobioc2025:helpdesk – for participants to ask questions and receive assistance from organizers or fellow attendees.</p></li>
+<li><p>eurobioc2025:general-chat – for casual conversations and connecting with other participants.</p></li>
+<li><p>eurobioc2025:photos – for sharing snapshots and favorite moments from EuroBioC2025.</p></li>
+</ul>
+<p><strong>Scholarships</strong></p>
+<p>Thanks to the generous support of the sponsors, EuroBioC2025 awarded 27 scholarships to participants, enabling them to attend the conference in person. These scholarships helped ensure broader participation and continued Bioconductor’s commitment to equity, diversity, and inclusion within the community.</p>
+<p><strong>Sticker contest winners</strong></p>
+<div style="overflow: auto; line-height: 1.6;">
+<img src="https://blog.bioconductor.org/posts/2025-10-24-EuroBioC2025-recap/media/EuroBioC2025logo_500x532.png" alt="EuroBioC2025 sticker design" class="zoomable" style="float: right; width: 22%; max-width: 200px; margin: 4px 0 8px 15px; border-radius: 8px; shape-outside: margin-box;">
+<p>
+The EuroBioC2025 sticker was eagerly anticipated by the community, and this year’s design did not disappoint. This year’s sticker, designed by Chaima Hkimi, beautifully captured the essence of Barcelona, featuring the <em>Sagrada Família</em> and the vibrant colours of <em>Park Güell</em>. In a creative touch, Chaima replaced the “i” in <em>BioC</em> with the Bioconductor logo — a clever nod to the project and its global community.
+</p>
+<p>
+Learn more about Chaima and her winning design in our <a href="https://genomic.social/@bioconductor/114258583707888219">Mastodon announcement.</a>
+</p>
+</div>
+<p><strong>Sticker Hexwall</strong></p>
+<p><a href="media/hexwall.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-2"><img src="https://blog.bioconductor.org/posts/2025-10-24-EuroBioC2025-recap/media/hexwall.jpg" class="zoomable img-fluid" style="width:100.0%"></a></p>
+<p>A fun new addition to EuroBioc2025 was the <a href="https://eurobioc2025.bioconductor.org/pages/hexwall.html"><u>sticker hexwall</u></a>; a colorful visual display of Bioconductor package stickers showcased at the photo-call area. The design, created by Kevin Rue-Albrecht, captured the variety and creativity within the Bioconductor community.</p>
+</section>
+<section id="social-interactions-and-networking" class="level3">
+<h3 class="anchored" data-anchor-id="social-interactions-and-networking"><strong>Social interactions and networking</strong></h3>
+<hr>
+<p><strong>Conference dinner</strong></p>
+<p>The EuroBioC 2025 conference dinner was held at the Old Hospital de Sant Pau, a UNESCO World Heritage site. The cocktail-style event provided a relaxed setting to network, exchange ideas, and celebrate the vibrant Bioconductor community.</p>
+<p><strong>Walking Tour</strong></p>
+<p>As part of the conference’s social activities, attendees enjoyed a guided walking tour through Ciutat Vella, Barcelona’s historic old city. The tour wound through the vibrant neighborhoods of <a href="https://en.wikipedia.org/wiki/La_Ribera"><u>La Ribera</u></a> and <a href="https://en.wikipedia.org/wiki/Gothic_Quarter,_Barcelona"><u>El Gòtic</u></a>, offering glimpses of medieval streets, lively plazas, and ending at <a href="https://en.wikipedia.org/wiki/Royal_Square_(Barcelona)"><u>Plaça Reial</u></a>, next to the famous <a href="https://en.wikipedia.org/wiki/La_Rambla,_Barcelona"><u>La</u> <u>Rambla</u></a> boulevard. Participants explored landmarks such as the former old market hall <a href="https://en.wikipedia.org/wiki/Mercat_del_Born"><u>El Born</u></a>, el <a href="https://en.wikipedia.org/wiki/Fossar_de_les_Moreres"><u>Fossar de les Moreres</u></a>, the <a href="https://en.wikipedia.org/wiki/Santa_Maria_del_Mar,_Barcelona"><u>Cathedral Santa Maria del Mar</u></a>, and the old <a href="https://en.wikipedia.org/wiki/Roman_walls_of_Barcelona"><u>Roman city walls</u></a>, while learning about the city’s evolution from its maritime roots to its modern cultural identity.</p>
+<p>The tour was organized by Mireia Ramos Rodríguez and volunteers from the Bioconductor community who reside in Barcelona, making it a warm, locally guided experience for all participants.</p>
+<p style="text-align:center;">
+</p><p><img src="https://blog.bioconductor.org/posts/2025-10-24-EuroBioC2025-recap/media/oldtown_tour.jpg" class="zoomable" height="300" style="margin: 0 6px; object-fit:cover;"> <img src="https://blog.bioconductor.org/posts/2025-10-24-EuroBioC2025-recap/media/oldtown_pic.jpg" class="zoomable" height="300" style="margin: 0 6px; object-fit:cover;"></p>
+<p></p>
+</section>
+<section id="conference-materials" class="level3">
+<h3 class="anchored" data-anchor-id="conference-materials"><strong>Conference materials</strong></h3>
+<hr>
+<p>Recordings from EuroBioC2025 are available on the <a href="https://www.youtube.com/playlist?list=PLdl4u5ZRDMQS_qvtLJNdDqHL6z5jj5y_7"><u>Bioconductor YouTube channel</u></a>. Presenters were encouraged to upload their slides and posters to the <a href="https://zenodo.org/communities/bioconductor/records?q=&amp;l=list&amp;p=1&amp;s=10&amp;sort=newest"><u>Bioconductor Zenodo community</u></a>, which allows their work to be assigned a DOI and makes it easier for others to access and cite. A short <a href="https://docs.google.com/document/d/1ZxLq-IkDr3zKq7THPAGP7J-oRUelC8r8yCH7vmBml3w/edit?usp=sharing"><u>guide</u></a> was shared to help contributors prepare and upload their materials effectively.</p>
+<p><strong>Upcoming conferences</strong></p>
+<ul>
+<li><p><a href="https://biocasia2025.bioconductor.org"><u>Bioconductor Asia conference 2025</u></a> (BioCAsia2025) in Adelaide on Nov 27 - 28, 2025</p></li>
+<li><p><a href="https://eurobioc2026.bioconductor.org/"><u>European Bioconductor conference 2026</u></a> (EuroBioC2026) in Turku on June 3 - 5, 2026,</p></li>
+<li><p><a href="https://bioc2026.bioconductor.org/"><u>Bioconductor conference 2026</u></a> (BioC2026) in Fred Hutch Cancer Center, Seattle, WA, on August 10 - 12, 2026</p></li>
+</ul>
+</section>
+<section id="acknowledgements" class="level3">
+<h3 class="anchored" data-anchor-id="acknowledgements"><strong>Acknowledgements</strong></h3>
+<hr>
+<p><strong>Sponsors</strong></p>
+<p><a href="media/sponsors.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3"><img src="https://blog.bioconductor.org/posts/2025-10-24-EuroBioC2025-recap/media/sponsors.png" class="zoomable img-fluid" style="width:80.0%"></a></p>
+<p>EuroBioC2025 was deeply grateful to all our sponsors for their generous support. Our Silver sponsors were <a href="https://seqera.io/"><u>Seqera</u></a>, the <a href="https://chanzuckerberg.com/"><u>Chan Zuckerberg Initiative</u></a>, and the <a href="https://www.upf.edu/web/biomed/mdm"><u>Department of Medicine and Life Sciences (UPF)</u> and</a> <a href="https://www.isglobal.org/en/severo-ochoa"><u>ISGlobal</u></a> through their respective institutional grants <a href="https://www.ciencia.gob.es/Organismos-y-Centros/SOMMA.html"><u>Maria de Maeztu and Severo Ochoa</u></a>. Bronze sponsors included the <a href="https://r-consortium.org/"><u>R Consortium</u></a>, <a href="https://bigomics.ch/"><u>BigOmics Analytics</u></a>, <a href="https://medbioinformatics.com/"><u>MedBio Informatics</u></a>, and <a href="https://www.physalia-courses.org/"><u>Physalia Courses.</u></a></p>
+<p>Their contributions made it possible to deliver a high-quality in-person event and to promote equity, diversity, and inclusion by reducing registration costs and supporting scholarships for students and researchers from lower-income regions or with limited access to funding.</p>
+<p><strong>Hosts</strong></p>
+<p>Barcelona Biomedical Research Park (<a href="https://www.prbb.org/"><u>PRBB</u></a>), Department of Medicine and Life Sciences - Universitat Pompeu Fabra (<a href="https://www.upf.edu/biomed"><u>MELIS-UPF</u></a>), Barcelona Institute of Global Health (<a href="https://www.isglobal.org/en"><u>ISGlobal</u></a>)</p>
+<p><strong>Organising committee</strong></p>
+<p><strong>Local Hosts and Organizers</strong></p>
+<ul>
+<li>Robert Castelo, Universitat Pompeu Fabra, Spain</li>
+<li>Juan Ramon Gonzalez, Barcelona Institute of Global Health, Spain</li>
+<li>Mireia Ramos, Universitat Pompeu Fabra, Spain</li>
+<li>Helena Crowell, Centro Nacional de Análisis Genómico, Spain</li>
+</ul>
+<p><strong>Community Organizers</strong></p>
+<ul>
+<li>Annekathrin Nedwed, Friedrich Miescher Institute for Biomedical Research, Switzerland</li>
+<li>Charlotte Soneson, Friedrich Miescher Institute for Biomedical Research, Switzerland</li>
+<li>Dario Righelli, University of Naples “Federico II”, Italy</li>
+<li>Davide Risso, University of Padua, Italy</li>
+<li>Eliana Ibrahimi, University of Tirana, Albania</li>
+<li>Federico Marini, University Medical Center Mainz, Germany</li>
+<li>James Dalgleish, University of Oxford, UK</li>
+<li>Kevin Rue-Albrecht, University of Oxford, UK</li>
+<li>Laurent Gatto, Université catholique de Louvain, Belgium</li>
+<li>Lena Morrill Gavarro, University of Oxford, UK</li>
+<li>Leo Lahti, University of Turku, Finland</li>
+<li>Lieven Clement, Ghent University, Belgium</li>
+<li>Maria Doyle, University of Limerick, Ireland</li>
+<li>Michael Stadler, Friedrich Miescher Institute for Biomedical Research, Switzerland</li>
+<li>Najla Abassi, Institut Pasteur de Tunis, Tunisia</li>
+<li>Robert Ivánek, University of Basel, Switzerland</li>
+<li>Simone Bell, EMBL Heidelberg, Germany</li>
+<li>Tuomas Borman, University of Turku, Finland</li>
+<li>Wolfgang Huber, EMBL Heidelberg, Germany</li>
+</ul>
+<!-- Clean zoomable image script -->
+<style>
+.zoomable {
+  cursor: zoom-in;
+  transition: transform 0.25s ease;
+  z-index: 1;
+  position: relative;
+}
+
+.zoomed {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1.2); /* smaller zoom (was 1.8) */
+  width: auto;
+  height: auto;
+  max-width: 80%;
+  max-height: 80%;
+  z-index: 9999;
+  cursor: zoom-out;
+  box-shadow: none !important;
+  filter: brightness(1.05);
+  background: none !important;
+}
+</style>
+<script>
+document.addEventListener('click', function(e) {
+  const img = e.target.closest('.zoomable');
+  if (img && !img.classList.contains('zoomed')) {
+    img.classList.add('zoomed');
+  } else if (img && img.classList.contains('zoomed')) {
+    img.classList.remove('zoomed');
+  } else {
+    document.querySelectorAll('.zoomed').forEach(z => z.classList.remove('zoomed'));
+  }
+});
+</script>
+
+
+</section>
+
+<p>
+© 2025 Bioconductor. Content is published under <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons CC-BY-4.0 License</a> for the text and <a href="https://opensource.org/licenses/BSD-3-Clause">BSD 3-Clause License</a> for any code. | <a href="https://www.r-bloggers.com">R-Bloggers</a>
+</p> ]]></description>
+  <category>Bioconductor</category>
+  <guid>https://blog.bioconductor.org/posts/2025-10-24-EuroBioC2025-recap/</guid>
+  <pubDate>Fri, 24 Oct 2025 00:00:00 GMT</pubDate>
+  <media:content url="https://blog.bioconductor.org/posts/2025-10-24-EuroBioC2025-recap/media/allparticipants_image.jpg" medium="image" type="image/jpeg"/>
+</item>
+<item>
+  <title>EuroBioC2025 conference recap</title>
+  <dc:creator>Laurah Ondari</dc:creator>
+  <link>https://blog.bioconductor.org/posts/2025-10-22-EuroBioC2025-recap/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<p><a href="media/allparticipants_image.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="https://blog.bioconductor.org/posts/2025-10-22-EuroBioC2025-recap/media/allparticipants_image.jpg" class="zoomable img-fluid" style="width:100.0%"></a></p>
+<p><img src="https://blog.bioconductor.org/posts/2025-10-22-EuroBioC2025-recap/media/EuroBioC2025Closing.png" class="img-fluid">{width=“70%; class=”zoomable”; height:200px;“}</p>
+<p>The European Bioconductor conference 2025 (<a href="https://eurobioc2025.bioconductor.org/"><u>EuroBioC2025</u></a>) took place between September 17 and 19, 2025, and was hosted at the Barcelona Biomedical Research Park (<a href="https://www.prbb.org/">PRBB</a>) in Barcelona by the Department of Medicine and Life Sciences of Universitat Pompeu Fabra (<a href="https://www.upf.edu/biomed">MELIS-UPF</a>)and the Barcelona Institute for Global Health (<a href="https://www.isglobal.org/en">ISGlobal</a>). The Catalan capital boasts a rich culture, a lively atmosphere, and a blend of art, history, and Mediterranean energy, which made it the perfect backdrop for a relaxing and learning atmosphere for EuroBioC 2025. The conference brought together 170 participants from all over the world to showcase the latest cutting-edge developments on Bioconductor software packages, as well as on broader emerging technologies impacting computational biology.</p>
+<p>The map below shows participants of EuroBioC2025 per country.</p>
+<iframe src="media/EuroBioC2025participants.html" width="100%" height="600" style="border:none;">
+</iframe>
+<section id="preconference" class="level3">
+<h3 class="anchored" data-anchor-id="preconference"><strong>Preconference</strong></h3>
+<hr>
+<p>Prior to the conference, EuroBioC2025 hosted <a href="https://eurobioc2025.bioconductor.org/pages/carpentryworkshops.html"><u>two Bioconductor Carpentry workshops</u></a> on Bulk RNA-seq and Single-cell RNA-seq analysis. Each workshop attracted about 20 participants and ran on September 15 and 16. The Bulk RNA-seq analysis module was taught by Estefania Mancini, Vasileios Panagoitis Lenis, and Jacques Serizay, while the Single-cell RNA-seq analysis workshop was taught by Robert Ivánek, Mireia Ramos, and Kevin Rue-Albrecht. The sessions combined live coding with short theoretical explanations of the covered materials. The feedback from participants was incredibly positive, with many appreciating how practical and engaging the sessions were. One participant shared that “<em>the hands-on experience brought by the instructors is the kind of thing that would have been difficult to get while going through the materials on our own</em>,” while another highlighted “<em>the written materials that include theory and explanation of the obtained results</em>” as particularly useful. Participants in the Single-cell RNA-seq workshop appreciated “<em>the comprehensive overview the lectures provided on scRNA-seq analysis</em>,” noting that “<em>they outlined the different steps clearly, using comparable timelines and emphasizing key details</em>,” which “<em>offers a standard framework for performing such analyses</em>.” Those in the Bulk RNA-seq module praised “<em>the materials [that] were really well prepared</em>,” the “<em>super nice instructors</em>” who “<em>tried to accommodate all of your needs</em>,” and “<em>gave many useful tips</em>,” adding that the content would be valuable for future reference. Overall, the majority of respondents rated the workshops as <em>“Very good”</em> or <em>“Excellent,”</em> describing them as well-organized, easy to follow, and “<em>an incredible learning experience</em>” that boosted both their confidence and technical skills in using Bioconductor.</p>
+<p style="text-align:center;">
+</p><p><img src="https://blog.bioconductor.org/posts/2025-10-22-EuroBioC2025-recap/media/ivanek_teaching.jpeg" class="zoomable" width="25%" style="margin: 6px;"> <img src="https://blog.bioconductor.org/posts/2025-10-22-EuroBioC2025-recap/media/kevin_teaching.jpeg" class="zoomable" width="25%" style="margin: 6px;"> <img src="https://blog.bioconductor.org/posts/2025-10-22-EuroBioC2025-recap/media/Mireia_teaching.jpg" class="zoomable" width="25%" style="margin: 6px;"></p>
+<p></p>
+<p style="text-align:center;">
+</p><p><img src="https://blog.bioconductor.org/posts/2025-10-22-EuroBioC2025-recap/media/bulk_instructor1.jpeg" class="zoomable" width="25%" style="margin: 6px;"> <img src="https://blog.bioconductor.org/posts/2025-10-22-EuroBioC2025-recap/media/bulk_instructor2.jpeg" class="zoomable" width="25%" style="margin: 6px;"> <img src="https://blog.bioconductor.org/posts/2025-10-22-EuroBioC2025-recap/media/Estefania_teaching.jpg" class="zoomable" width="25%" style="margin: 6px;"></p>
+<p></p>
+</section>
+<section id="programme-overview" class="level3">
+<h3 class="anchored" data-anchor-id="programme-overview"><strong>Programme overview</strong></h3>
+<hr>
+<p>EuroBioC2025 featured a dynamic three-day program that balanced scientific excellence, community exchange, and practical training. The schedule brought together keynotes from leading researchers, short and flash talks showcasing new Bioconductor packages and methods, and hands-on workshops that deepened participants’ technical skills.</p>
+<p>The opening keynote by Vince Carey reflected on <em>25 years of Bioconductor</em> as a coherent ecosystem for genomic data science, setting the tone for a conference that celebrated both innovation and collaboration. Keynotes by Helena Crowell, Susan Holmes, James Sharpe, Noelia Ferruz, and Jacques Serizay explored cutting-edge topics spanning whole-transcriptome imaging, statistical modeling, spatial omics, and AI-driven protein design.</p>
+<p>The short talks highlighted exciting package developments across the Bioconductor landscape, from metabolomics and spatial transcriptomics to reproducible workflows. The poster sessions showcased over 60 contributions, offering a vibrant space for discussion, collaboration, and mentorship.</p>
+<p>On the final day, Birds-of-a-Feather (BoF) sessions encouraged open community dialogue on key issues, reinforcing Bioconductor’s collaborative ethos.</p>
+<p><strong>Keynotes</strong></p>
+<p>The keynote sessions at EuroBioC2025 brought together leading voices in bioinformatics, highlighting advances across genomics, spatial biology, and community-driven software development. Each talk provided attendees with both inspiration and practical insights into the evolving landscape of computational biology:</p>
+<ul>
+<li><p><strong>Vince Carey</strong> (Mass General Brigham - Harvard Medical School) opened the conference with <em>“A coherent ecosystem for genomic data science: 25 years of Bioconductor,”</em> reflecting on Bioconductor’s growth and its pivotal role in reproducible research.</p></li>
+<li><p><strong>Helena Crowell</strong> (Centre Nacional d’Anàlisi Genòmica - CNAG) presented <em>“Colorectal cancer through the lens of whole transcriptome imaging,”</em> showcasing how spatial transcriptomics can reveal novel insights into cancer biology.</p></li>
+<li><p><strong>Susan Holmes</strong> (Stanford University) delivered <em>“Latent variables as the best medicine for heterogeneity,”</em> exploring statistical approaches for understanding biological variation.</p></li>
+<li><p><strong>James Sharpe</strong> (EMBL Barcelona) introduced <em>“C3PO: Cell 3D Positioning by Optical encoding and its application to spatial transcriptomics,”</em> detailing innovative imaging and computational methods for 3D cellular mapping.</p></li>
+<li><p><strong>Noelia Ferruz</strong> (Centre de Regulació Genòmica - CRG) presented <em>“Controllable protein design with language models,”</em> demonstrating how AI and generative models are transforming protein engineering.</p></li>
+<li><p><strong>Jacques Serizay</strong> (Institut Pasteur) closed the keynotes with <em>“Enhancing genomic research with community-driven flexible software,”</em> emphasizing collaboration and openness in advancing genomic analysis.</p></li>
+</ul>
+<p><strong>Short Talks</strong></p>
+<p>EuroBioC2025 featured a vibrant lineup of short talks highlighting new computational tools and methods across multi-omics, spatial, and single-cell biology. Presentations ranged from multi-omics integration frameworks and probabilistic models for transcription factor activity to improvements in widely used packages such as edgeR and new interoperability initiatives with ELIXIR. Speakers also introduced emerging software for mass spectrometry, microbiome, and spatial data analysis, showcasing the community’s ongoing innovation in data-driven biology.</p>
+<p><strong>Workshops</strong></p>
+<p>The workshop sessions were a major highlight, offering attendees interactive learning experiences with the latest Bioconductor tools set up in a <a href="https://workshop.bioconductor.org"><u>workshop cloud platform</u></a> to avoid participants having to spend time installing software. From Orchestrating Spatial (Transcript-)Omics Analysis and Microbiome Analysis with Bioconductor, to authoring and deploying workshops on the new Bioconductor platform, these sessions emphasized reproducible workflows and cross-language integration for biological data analysis.</p>
+<p><strong>Poster Sessions</strong></p>
+<p>The poster sessions at EuroBioC2025 showcased a diverse range of projects reflecting the richness of the Bioconductor ecosystem. Topics included multi-omics integration, benchmarking analytical methods, AI-driven microbiome and cancer research, and interactive visualization tools. Attendees particularly appreciated the concise poster pitches that provided quick overviews of ongoing research and facilitated meaningful discussions during the sessions.</p>
+<p><strong>Birds of a Feather (BoF) Sessions</strong></p>
+<p>This year’s BoF sessions provided space for informal, collaborative discussions on key community topics. Participants shared perspectives on integrating Bioconductor with the Nextflow workflow manager, improving interoperability across tools, enhancing developer onboarding, and shaping the future of Bioconductor training and governance. These conversations captured the conference’s spirit of open collaboration and community-driven growth.</p>
+</section>
+<section id="infrastructure-and-tools" class="level3">
+<h3 class="anchored" data-anchor-id="infrastructure-and-tools"><strong>Infrastructure and tools</strong></h3>
+<hr>
+<p><strong>EuroBioC2025 Zulip</strong></p>
+<p>In June 2025, <a href="https://blog.bioconductor.org/posts/2025-05-29-slack-to-zulip/"><u>Bioconductor’s community chat moved from Slack to Zulip</u></a>. The motivation behind the transition was to ensure long-term access to discussions on a platform that better reflects the project’s open-source values. Therefore, EuroBioC2025 used a dedicated Zulip workspace as the main digital hub for conference coordination and discussions. Zulip provided an organized, threaded platform where participants and organizers could collaborate seamlessly before, during, and after the conference.</p>
+<p>The main channel was:</p>
+<ul>
+<li>#eurobioc-conference-everyone – for announcements, updates, and general conference discussions.</li>
+</ul>
+<p>Inside #eurobioc-conference-everyone, the following topics were available to keep everything organised:</p>
+<ul>
+<li><p>eurobioc2025:travel – for coordinating taxi shares, asking about transit options, and exchanging travel tips.</p></li>
+<li><p>eurobioc2025:announcements – for conference updates, schedule changes, and important notices.</p></li>
+<li><p>eurobioc2025:helpdesk – for participants to ask questions and receive assistance from organizers or fellow attendees.</p></li>
+<li><p>eurobioc2025:general-chat – for casual conversations and connecting with other participants.</p></li>
+<li><p>eurobioc2025:photos – for sharing snapshots and favorite moments from EuroBioC2025.</p></li>
+</ul>
+<p><strong>Scholarships</strong></p>
+<p>Thanks to the generous support of the sponsors, EuroBioC2025 awarded 27 scholarships to participants, enabling them to attend the conference in person. These scholarships helped ensure broader participation and continued Bioconductor’s commitment to equity, diversity, and inclusion within the community.</p>
+<p><strong>Sticker contest winners</strong></p>
+<div style="overflow: auto; line-height: 1.6;">
+<img src="https://blog.bioconductor.org/posts/2025-10-22-EuroBioC2025-recap/media/EuroBioC2025logo_500x532.png" alt="EuroBioC2025 sticker design" class="zoomable" style="float: right; width: 22%; max-width: 200px; margin: 4px 0 8px 15px; border-radius: 8px; shape-outside: margin-box;">
+<p>
+The EuroBioC2025 sticker was eagerly anticipated by the community, and this year’s design did not disappoint. This year’s sticker, designed by Chaima Hkimi, beautifully captured the essence of Barcelona, featuring the <em>Sagrada Família</em> and the vibrant colours of <em>Park Güell</em>. In a creative touch, Chaima replaced the “i” in <em>BioC</em> with the Bioconductor logo — a clever nod to the project and its global community.
+</p>
+<p>
+Learn more about Chaima and her winning design in our <a href="https://genomic.social/@bioconductor/114258583707888219">Mastodon announcement.</a>
+</p>
+</div>
+<p><strong>Sticker Hexwall</strong></p>
+<p><a href="media/hexwall.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-2"><img src="https://blog.bioconductor.org/posts/2025-10-22-EuroBioC2025-recap/media/hexwall.jpg" class="zoomable img-fluid" style="width:100.0%"></a></p>
+<p>A fun new addition to EuroBioc2025 was the <a href="https://eurobioc2025.bioconductor.org/pages/hexwall.html"><u>sticker hexwall</u></a>; a colorful visual display of Bioconductor package stickers showcased at the photo-call area. The design, created by Kevin Rue-Albrecht, captured the variety and creativity within the Bioconductor community.</p>
+</section>
+<section id="social-interactions-and-networking" class="level3">
+<h3 class="anchored" data-anchor-id="social-interactions-and-networking"><strong>Social interactions and networking</strong></h3>
+<hr>
+<p><strong>Conference dinner</strong></p>
+<p>The EuroBioC 2025 conference dinner was held at the Old Hospital de Sant Pau, a UNESCO World Heritage site. The cocktail-style event provided a relaxed setting to network, exchange ideas, and celebrate the vibrant Bioconductor community.</p>
+<p><strong>Walking Tour</strong></p>
+<p>As part of the conference’s social activities, attendees enjoyed a guided walking tour through Ciutat Vella, Barcelona’s historic old city. The tour wound through the vibrant neighborhoods of <a href="https://en.wikipedia.org/wiki/La_Ribera"><u>La Ribera</u></a> and <a href="https://en.wikipedia.org/wiki/Gothic_Quarter,_Barcelona"><u>El Gòtic</u></a>, offering glimpses of medieval streets, lively plazas, and ending at <a href="https://en.wikipedia.org/wiki/Royal_Square_(Barcelona)"><u>Plaça Reial</u></a>, next to the famous <a href="https://en.wikipedia.org/wiki/La_Rambla,_Barcelona"><u>La</u> <u>Rambla</u></a> boulevard. Participants explored landmarks such as the former old market hall <a href="https://en.wikipedia.org/wiki/Mercat_del_Born"><u>El Born</u></a>, el <a href="https://en.wikipedia.org/wiki/Fossar_de_les_Moreres"><u>Fossar de les Moreres</u></a>, the <a href="https://en.wikipedia.org/wiki/Santa_Maria_del_Mar,_Barcelona"><u>Cathedral Santa Maria del Mar</u></a>, and the old <a href="https://en.wikipedia.org/wiki/Roman_walls_of_Barcelona"><u>Roman city walls</u></a>, while learning about the city’s evolution from its maritime roots to its modern cultural identity.</p>
+<p>The tour was organized by Mireia Ramos Rodríguez and volunteers from the Bioconductor community who reside in Barcelona, making it a warm, locally guided experience for all participants.</p>
+<p style="text-align:center;">
+</p><p><img src="https://blog.bioconductor.org/posts/2025-10-22-EuroBioC2025-recap/media/oldtown_tour.jpg" class="zoomable" height="300" style="margin: 0 6px; object-fit:cover;"> <img src="https://blog.bioconductor.org/posts/2025-10-22-EuroBioC2025-recap/media/oldtown_pic.jpg" class="zoomable" height="300" style="margin: 0 6px; object-fit:cover;"></p>
+<p></p>
+</section>
+<section id="conference-materials" class="level3">
+<h3 class="anchored" data-anchor-id="conference-materials"><strong>Conference materials</strong></h3>
+<hr>
+<p>Recordings from EuroBioC2025 are available on the <a href="https://www.youtube.com/playlist?list=PLdl4u5ZRDMQS_qvtLJNdDqHL6z5jj5y_7"><u>Bioconductor YouTube channel</u></a>. Presenters were encouraged to upload their slides and posters to the <a href="https://zenodo.org/communities/bioconductor/records?q=&amp;l=list&amp;p=1&amp;s=10&amp;sort=newest"><u>Bioconductor Zenodo community</u></a>, which allows their work to be assigned a DOI and makes it easier for others to access and cite. A short <a href="https://docs.google.com/document/d/1ZxLq-IkDr3zKq7THPAGP7J-oRUelC8r8yCH7vmBml3w/edit?usp=sharing"><u>guide</u></a> was shared to help contributors prepare and upload their materials effectively.</p>
+<p><strong>Upcoming conferences</strong></p>
+<ul>
+<li><p><a href="https://biocasia2025.bioconductor.org"><u>Bioconductor Asia conference 2025</u></a> (BioCAsia2025) in Adelaide on Nov 27 - 28, 2025</p></li>
+<li><p><a href="https://eurobioc2026.bioconductor.org/"><u>European Bioconductor conference 2026</u></a> (EuroBioC2026) in Turku on June 3 - 5, 2026,</p></li>
+<li><p><a href="https://bioc2026.bioconductor.org/"><u>Bioconductor conference 2026</u></a> (BioC2026) in Fred Hutch Cancer Center, Seattle, WA, on August 10 - 12, 2026</p></li>
+</ul>
+</section>
+<section id="acknowledgements" class="level3">
+<h3 class="anchored" data-anchor-id="acknowledgements"><strong>Acknowledgements</strong></h3>
+<hr>
+<p><strong>Sponsors</strong></p>
+<p><a href="media/sponsors.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3"><img src="https://blog.bioconductor.org/posts/2025-10-22-EuroBioC2025-recap/media/sponsors.png" class="zoomable img-fluid" style="width:80.0%"></a></p>
+<p>EuroBioC2025 was deeply grateful to all our sponsors for their generous support. Our Silver sponsors were <a href="https://seqera.io/"><u>Seqera</u></a>, the <a href="https://chanzuckerberg.com/"><u>Chan Zuckerberg Initiative</u></a>, and the <a href="https://www.upf.edu/web/biomed/mdm"><u>Department of Medicine and Life Sciences (UPF)</u> and</a> <a href="https://www.isglobal.org/en/severo-ochoa"><u>ISGlobal</u></a> through their respective institutional grants <a href="https://www.ciencia.gob.es/Organismos-y-Centros/SOMMA.html"><u>Maria de Maeztu and Severo Ochoa</u></a>. Bronze sponsors included the <a href="https://r-consortium.org/"><u>R Consortium</u></a>, <a href="https://bigomics.ch/"><u>BigOmics Analytics</u></a>, <a href="https://medbioinformatics.com/"><u>MedBio Informatics</u></a>, and <a href="https://www.physalia-courses.org/"><u>Physalia Courses.</u></a></p>
+<p>Their contributions made it possible to deliver a high-quality in-person event and to promote equity, diversity, and inclusion by reducing registration costs and supporting scholarships for students and researchers from lower-income regions or with limited access to funding.</p>
+<p><strong>Hosts</strong></p>
+<p>Barcelona Biomedical Research Park (<a href="https://www.prbb.org/"><u>PRBB</u></a>), Department of Medicine and Life Sciences - Universitat Pompeu Fabra (<a href="https://www.upf.edu/biomed"><u>MELIS-UPF</u></a>), Barcelona Institute of Global Health (<a href="https://www.isglobal.org/en"><u>ISGlobal</u></a>)</p>
+<p><strong>Organising committee</strong></p>
+<p><strong>Local Hosts and Organizers</strong></p>
+<ul>
+<li>Robert Castelo, Universitat Pompeu Fabra, Spain</li>
+<li>Juan Ramon Gonzalez, Barcelona Institute of Global Health, Spain</li>
+<li>Mireia Ramos, Universitat Pompeu Fabra, Spain</li>
+<li>Helena Crowell, Centro Nacional de Análisis Genómico, Spain</li>
+</ul>
+<p><strong>Community Organizers</strong></p>
+<ul>
+<li>Annekathrin Nedwed, Friedrich Miescher Institute for Biomedical Research, Switzerland</li>
+<li>Charlotte Soneson, Friedrich Miescher Institute for Biomedical Research, Switzerland</li>
+<li>Dario Righelli, University of Naples “Federico II”, Italy</li>
+<li>Davide Risso, University of Padua, Italy</li>
+<li>Eliana Ibrahimi, University of Tirana, Albania</li>
+<li>Federico Marini, University Medical Center Mainz, Germany</li>
+<li>James Dalgleish, University of Oxford, UK</li>
+<li>Kevin Rue-Albrecht, University of Oxford, UK</li>
+<li>Laurent Gatto, Université catholique de Louvain, Belgium</li>
+<li>Lena Morrill Gavarro, University of Oxford, UK</li>
+<li>Leo Lahti, University of Turku, Finland</li>
+<li>Lieven Clement, Ghent University, Belgium</li>
+<li>Maria Doyle, University of Limerick, Ireland</li>
+<li>Michael Stadler, Friedrich Miescher Institute for Biomedical Research, Switzerland</li>
+<li>Najla Abassi, Institut Pasteur de Tunis, Tunisia</li>
+<li>Robert Ivánek, University of Basel, Switzerland</li>
+<li>Simone Bell, EMBL Heidelberg, Germany</li>
+<li>Tuomas Borman, University of Turku, Finland</li>
+<li>Wolfgang Huber, EMBL Heidelberg, Germany</li>
+</ul>
+<!-- Clean zoomable image script -->
+<style>
+.zoomable {
+  cursor: zoom-in;
+  transition: transform 0.25s ease;
+  z-index: 1;
+  position: relative;
+}
+
+.zoomed {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1.2); /* smaller zoom (was 1.8) */
+  width: auto;
+  height: auto;
+  max-width: 80%;
+  max-height: 80%;
+  z-index: 9999;
+  cursor: zoom-out;
+  box-shadow: none !important;
+  filter: brightness(1.05);
+  background: none !important;
+}
+</style>
+<script>
+document.addEventListener('click', function(e) {
+  const img = e.target.closest('.zoomable');
+  if (img && !img.classList.contains('zoomed')) {
+    img.classList.add('zoomed');
+  } else if (img && img.classList.contains('zoomed')) {
+    img.classList.remove('zoomed');
+  } else {
+    document.querySelectorAll('.zoomed').forEach(z => z.classList.remove('zoomed'));
+  }
+});
+</script>
+
+
+</section>
+
+<p>
+© 2025 Bioconductor. Content is published under <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons CC-BY-4.0 License</a> for the text and <a href="https://opensource.org/licenses/BSD-3-Clause">BSD 3-Clause License</a> for any code. | <a href="https://www.r-bloggers.com">R-Bloggers</a>
+</p> ]]></description>
+  <category>Bioconductor</category>
+  <guid>https://blog.bioconductor.org/posts/2025-10-22-EuroBioC2025-recap/</guid>
+  <pubDate>Wed, 22 Oct 2025 00:00:00 GMT</pubDate>
+  <media:content url="https://blog.bioconductor.org/posts/2025-10-22-EuroBioC2025-recap/media/allparticipants_image.jpg" medium="image" type="image/jpeg"/>
+</item>
 <item>
   <title>GPU Support in Bioconductor</title>
   <dc:creator>Andres Wokaty</dc:creator>
@@ -1090,229 +1484,6 @@ Note
   <guid>https://blog.bioconductor.org/posts/2025-05-29-slack-to-zulip/</guid>
   <pubDate>Thu, 29 May 2025 00:00:00 GMT</pubDate>
   <media:content url="https://blog.bioconductor.org/posts/2025-05-29-slack-to-zulip/zulip-org-logo.svg" medium="image" type="image/svg+xml"/>
-</item>
-<item>
-  <title>Ask and you shall receive</title>
-  <dc:creator>Vince Carey</dc:creator>
-  <link>https://blog.bioconductor.org/posts/2025-05-26-ask/</link>
-  <description><![CDATA[ 
-
-
-
-
-
-<section id="in-the-beginning" class="level1">
-<h1>In the beginning …</h1>
-<p>… there was a 9-track tape shipped from Bell Labs. <a href="https://en.wikipedia.org/wiki/S_(programming_language)">S</a> would be installed for “unix”. Extensions could be programmed in Fortran. I started using this around 1985.</p>
-<p>S REPORT presaged Sweave and knitr: <a href="https://en.wikipedia.org/wiki/Troff">troff</a>, <a href="https://en.wikipedia.org/wiki/Eqn_(software)">eqn</a>, <a href="https://en.wikipedia.org/wiki/PIC_(markup_language)">pic</a> could be interlarded with S computations.</p>
-<p>Here’s a taste of inputs and outputs for S REPORT. In the left hand panel of Figure 1, .PP starts a paragraph, .EQ and .EN offset an equation markup, and backslash-left-bracket is used to start a block of S code that will be executed when the report is compiled. A right-bracket closes the code block. This markup generates the second paragraph in the right hand panel.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="https://blog.bioconductor.org/posts/2025-05-26-ask/combo.png" class="img-fluid figure-img"></p>
-<figcaption>Figure 1. Left panel: troff, eqn, and S code for processing by S REPORT. Right panel: output including a table for which code is not shown. From <span class="citation" data-cites="becker1984s">Becker and Chambers (1984)</span></figcaption>
-</figure>
-</div>
-</section>
-<section id="fast-forward" class="level1">
-<h1>Fast forward:</h1>
-<p>In May 2002, Bioconductor 1.0 was released with 15 packages, developed for version 1.5 of R. By April of 2025 the collection has grown to over 2300 software packages, developed for version 4.5 of R. To give a sense of the components and processes in play, I made a sketch:</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="https://blog.bioconductor.org/posts/2025-05-26-ask/crazy.jpg" class="img-fluid figure-img"></p>
-<figcaption>Figure 2. Author’s agitated overview of Bioconductor in early 2024. The motivation was, in part, an encounter with the notion that LaTeX might be replaced by Typst.</figcaption>
-</figure>
-</div>
-<p>The “infinity signs” are used with “refresh” circular arrows to indicate that the associated resources can be modified at any time, while Bioconductor’s release is nominally “stable” for six months.</p>
-</section>
-<section id="in-sum" class="level1">
-<h1>In sum</h1>
-<p>Figure 2 depicts many aspects of Bioconductor that are invisible to users <em>as they do their work</em>. “Ask and you shall receive” is not an overt commitment of Bioconductor’s core. I found it interesting to reflect on the ways in which new capabilities are introduced into the system. The user experience, particularly for those doing statistical analysis of numerical data, is not dramatically different from that of the user of S in the 1980s. The number of technologies involved, and the maintenance efforts required for those technologies and their interactions, is much greater.</p>
-<p>It is natural, in my view, to refer to Bioconductor as an ecosystem, as it forms a home for many beings and processes engaged in biological data science. “Ecosystem”, for me, leads to “ecology”, and in my view, ecology is not just a study of interactions between beings and their environments, but includes a normative component. An ecology of Bioconductor will address how to manage its growth and change, identifying principles for expanding along new frontiers, for forming new connections, and for shedding materials that have lost value.</p>
-</section>
-<section id="upcoming" class="level1">
-<h1>Upcoming</h1>
-<p>My purpose here is to set the stage for a series of posts examining some relatively new but underappreciated aspects of the project, including</p>
-<ul>
-<li>biocViews, EDAM, and the description of Bioconductor resources</li>
-<li>approaching GPU computing for genomics with Bioconductor</li>
-<li>containers and binaries to speed environment creation</li>
-<li>subcommunity dynamics: scverse, spatialdata, Bioconductor … how to relate?
-<ul>
-<li>python interop</li>
-<li>OME-Zarr</li>
-</ul></li>
-<li>values derived from excursions involving WebAssembly</li>
-<li>“vendoring” sources of important libraries</li>
-<li>curating genomic annotation</li>
-<li>large arrays: sparsity and indexing</li>
-</ul>
-</section>
-<section id="reference" class="level1">
-
-
-
-
-</section>
-
-<p>
-© 2025 Bioconductor. Content is published under <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons CC-BY-4.0 License</a> for the text and <a href="https://opensource.org/licenses/BSD-3-Clause">BSD 3-Clause License</a> for any code. | <a href="https://www.r-bloggers.com">R-Bloggers</a>
-</p><div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">Reference</h2><div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0">
-<div id="ref-becker1984s" class="csl-entry">
-Becker, Richard A., and John M. Chambers. 1984. <em>S: An Interactive Environment for Data Analysis and Graphics</em>. Pacific Grove, CA: Wadsworth.
-</div>
-</div></section></div> ]]></description>
-  <category>bioconductor-evolution</category>
-  <category>education</category>
-  <guid>https://blog.bioconductor.org/posts/2025-05-26-ask/</guid>
-  <pubDate>Mon, 26 May 2025 00:00:00 GMT</pubDate>
-  <media:content url="https://blog.bioconductor.org/posts/2025-05-26-ask/crazy.jpg" medium="image" type="image/jpeg"/>
-</item>
-<item>
-  <title>Bioconductor in Africa: Highlights from Our First In-Person Course</title>
-  <dc:creator>Maria Doyle</dc:creator>
-  <link>https://blog.bioconductor.org/posts/2025-05-21-kenya-course/</link>
-  <description><![CDATA[ 
-
-
-
-
-
-<p>In March 2025, Bioconductor marked an exciting milestone—our first in-person course on the African continent. Hosted by the International Institute of Tropical Agriculture (IITA) in Nairobi, this five-day workshop brought together 32 researchers for hands-on training in genomic data analysis using R and Bioconductor.</p>
-<p>With contributions from local and international instructors, the course highlighted the power of open-source tools to bridge global research gaps and foster community-led training initiatives.</p>
-<section id="what-we-taught" class="level2">
-<h2 class="anchored" data-anchor-id="what-we-taught">What We Taught</h2>
-<p>The course covered:</p>
-<ul>
-<li><strong>Introduction to R and Bioconductor</strong> (March 24–25): Data handling, visualisation, and reproducible workflows for genomic data.</li>
-<li><strong>RNA-seq analysis</strong> (March 26–27): Differential expression analysis using real datasets.</li>
-<li><strong>Bring Your Own Data Day</strong> (March 28): Participants applied their new skills to their own research questions with guidance from instructors.</li>
-</ul>
-</section>
-<section id="learning-community" class="level2">
-<h2 class="anchored" data-anchor-id="learning-community">Learning &amp; Community</h2>
-<p>Sessions were delivered by a diverse team, including:</p>
-<ul>
-<li>Laurent Gatto (UCLouvain, Belgium)</li>
-<li>Michael Landi (IITA, Kenya)</li>
-<li>Fabricio Almeida-Silva (VIB, Belgium)</li>
-<li>Laurah Ondari (IITA, Kenya)</li>
-<li>Zedias Chikwambi (AiBST, Zimbabwe)</li>
-</ul>
-<p>We received 145 applications for 32 places, underscoring strong regional demand for this type of training. Participants came from over a dozen institutions, primarily across East Africa, including Egerton University, ILRI, KALRO, ICIPE, University of Nairobi, and University of Ghana. Most were MSc or PhD students, alongside postdocs, lecturers, and research scientists from institutes working in genomics, infectious disease, and agriculture—highlighting the cross-disciplinary nature of bioinformatics training and its relevance to <a href="https://www.who.int/health-topics/one-health">One Health</a> efforts across human, animal, and environmental health.</p>
-<p>The course was deeply interactive, with hands-on coding exercises, breakout support, and flexible pacing. A highlight was the learner-centred revision group, which started small but quickly grew in demand—prompting us to hire a second room mid-course!</p>
-<p>Outside the classroom, participants enjoyed a lab tour of the ILRI campus, as well as informal networking during lunch, coffee breaks, and a BBQ on the final evening.</p>
-<div id="gallery-instructors" class="columns">
-<div class="column" style="width:20%;">
-<p><a href="laurent.jpeg" class="lightbox" data-gallery="gallery-instructors"><img src="https://blog.bioconductor.org/posts/2025-05-21-kenya-course/laurent.jpeg" class="img-fluid" style="padding-right: 1px;" alt="Laurent Gatto teaching"></a></p>
-</div><div class="column" style="width:20%;">
-<p><a href="michael.jpeg" class="lightbox" data-gallery="gallery-instructors"><img src="https://blog.bioconductor.org/posts/2025-05-21-kenya-course/michael.jpeg" class="img-fluid" style="padding-right: 1px;" alt="Michael Landi teaching"></a></p>
-</div><div class="column" style="width:20%;">
-<p><a href="laurah.jpeg" class="lightbox" data-gallery="gallery-instructors"><img src="https://blog.bioconductor.org/posts/2025-05-21-kenya-course/laurah.jpeg" class="img-fluid" style="padding-right: 1px;" alt="Laurah Ondari teaching"></a></p>
-</div><div class="column" style="width:20%;">
-<p><a href="fabricio.jpeg" class="lightbox" data-gallery="gallery-instructors"><img src="https://blog.bioconductor.org/posts/2025-05-21-kenya-course/fabricio.jpeg" class="img-fluid" style="padding-right: 1px;" alt="Fabricio Almeida-Silva teaching"></a></p>
-</div><div class="column" style="width:20%;">
-<p><a href="zedias.jpeg" class="lightbox" data-gallery="gallery-instructors"><img src="https://blog.bioconductor.org/posts/2025-05-21-kenya-course/zedias.jpeg" class="img-fluid" style="padding-right: 1px;" alt="Zedias Chikwambi teaching"></a></p>
-</div><div class="figure-caption" style="text-align: left; font-size: 90%;">
-<p>From left to right: Laurent Gatto, Michael Landi, Laurah Ondari, Fabricio Almeida-Silva, and Zedias Chikwambi, teaching at the Nairobi course</p>
-</div>
-</div>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="group-photo.jpeg" class="lightbox" data-gallery="quarto-lightbox-gallery-6" title="Participants at the Bioconductor Nairobi course"><img src="https://blog.bioconductor.org/posts/2025-05-21-kenya-course/group-photo.jpeg" class="img-fluid figure-img" alt="Participants at the Bioconductor Nairobi course"></a></p>
-<figcaption>Participants at the Bioconductor Nairobi course</figcaption>
-</figure>
-</div>
-</section>
-<section id="participant-voices" class="level2">
-<h2 class="anchored" data-anchor-id="participant-voices">Participant Voices</h2>
-<p><strong>Impact snapshot</strong>:<br>
-- 100% would recommend the course<br>
-- 97% rated it “Excellent” or “Very good”<br>
-- All participants reported an improvement in their R skills, with most rating it as significant (5 out of 5)<br>
-- Beginners and intermediates alike benefited, with average improvement scores of 4.4 and 4.8 respectively (on a 5-point scale)<br>
-- 25 expressed interest in contributing to future Bioconductor Africa activities</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="feedback-summary.png" class="lightbox" data-gallery="quarto-lightbox-gallery-7" title="Participant feedback summary"><img src="https://blog.bioconductor.org/posts/2025-05-21-kenya-course/feedback-summary.png" class="img-fluid figure-img" alt="Participant feedback summary"></a></p>
-<figcaption>Participant feedback summary</figcaption>
-</figure>
-</div>
-<p>Of the 32 participants, 29 completed the feedback survey — and 100% said they would recommend the course. Most rated it Excellent and reported a significant improvement in their R skills, especially among beginners. Participants praised the interactive teaching, patient instructors, and the split-track format, which allowed learners to progress at their own pace. Several suggested extending the course to two weeks and including accommodation support to enhance learning and peer interaction. Here’s what a few had to say:</p>
-<blockquote class="blockquote">
-<p>“I loved how helpful and knowledgeable the instructors were. They did a great job in giving me insight into the meanings and purpose of the codes. I also appreciated the fact that the biological and statistical significance behind differential expression was explained. Overall, this course greatly enhanced my knowledge of differential expression analysis and R programming.”</p>
-</blockquote>
-<blockquote class="blockquote">
-<p>“The hands-on experience with real datasets and comprehensive coverage of various Bioconductor packages relevant for data analysis. The instructors were highly knowledgeable, explaining complex topics in a clear and engaging way. I really appreciated the interactiveness of all the sessions and exercises that reinforced key concepts in bioinformatics and data analysis. Overall the materials were well organised and structured, making it easy to revisit and apply what I learned.”</p>
-</blockquote>
-<blockquote class="blockquote">
-<p>“The learner-centred approach was really helpful. I was particularly happy with the special room/clinic sessions that greatly guided me from a level of no experience with R to where I am now; I can gladly manipulate some functions in R and I am most grateful.”</p>
-</blockquote>
-<p>There was strong interest in future topics such as:</p>
-<ul>
-<li>Microbiome and metagenomics</li>
-<li>Genomic variation analysis, including SNPs and CNVs</li>
-<li>Linux and R integration</li>
-<li>Single-cell omics and machine learning</li>
-<li>Graph theory and chemoinformatics</li>
-</ul>
-<p>Importantly, 25 participants expressed interest in contributing to the Bioconductor Africa community through teaching, webinars, or organising events—highlighting the workshop’s role in building local capacity and leadership.</p>
-</section>
-<section id="social-media-highlights" class="level2">
-<h2 class="anchored" data-anchor-id="social-media-highlights">Social Media Highlights</h2>
-<p>Participants also shared their excitement online:</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="social-media.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-8" title="Social media posts during and after the workshop (shared with permission)"><img src="https://blog.bioconductor.org/posts/2025-05-21-kenya-course/social-media.jpg" class="img-fluid figure-img" alt="Social media posts during and after the workshop (shared with permission)"></a></p>
-<figcaption>Social media posts during and after the workshop (shared with permission)</figcaption>
-</figure>
-</div>
-</section>
-<section id="lessons-learned" class="level2">
-<h2 class="anchored" data-anchor-id="lessons-learned">Lessons Learned</h2>
-<p>A key insight from this workshop was the value of a flexible, split-track design. As the course progressed, it became clear that some participants—especially those newer to R—benefited from revisiting earlier material at a slower pace.</p>
-<p>To support this, we introduced a revision track during Days 3–5, focused on reinforcing the Introduction to R and Bioconductor lessons. Learners could move between the tracks based on their comfort level. This approach allowed novice users to build confidence without feeling left behind, while more experienced learners continued with RNA-seq material and prepared their own data for the final “Bring Your Own Data” day.</p>
-<p>The feedback was overwhelmingly positive. The revision group began with five participants and grew to ten by the end of the week. Although we hadn’t initially planned for this format, we secured a second room to support it—something we’ll now plan for from the outset.</p>
-</section>
-<section id="collaborators-acknowledgements" class="level2">
-<h2 class="anchored" data-anchor-id="collaborators-acknowledgements">Collaborators &amp; Acknowledgements</h2>
-<p>This course was co-organised by <strong>Maria Doyle</strong> (University of Limerick, Lead Organiser) and <strong>Trushar Shah</strong> (IITA, Local Host), with support from <strong>Aedín Culhane</strong> (University of Limerick), <strong>Charlotte Soneson</strong> (Friedrich Miescher Institute for Biomedical Research), <strong>Laurent Gatto</strong> (Institut de Duve, UCLouvain), <strong>Umar Ahmad</strong> (Bauchi State University / Africa CDC), and <strong>Zedias Chikwambi</strong> (African Institute of Biomedical Sciences and Technology), who contributed through regular planning meetings.</p>
-<p>The workshop was supported by a grant from the Chan Zuckerberg Initiative EOSS Cycle 6, one of five Bioconductor projects funded in this round to support training, developer infrastructure, and community engagement. <a href="https://blog.bioconductor.org/posts/2024-07-12-czi-eoss6-grants/">Read about the projects funded</a>. Maria’s travel was supported by Erasmus+ funding via UL Global.</p>
-</section>
-<section id="whats-next" class="level2">
-<h2 class="anchored" data-anchor-id="whats-next">What’s Next?</h2>
-<p>Planning is already underway for a West Africa workshop. One East Africa participant was so inspired by the experience that they’re now working to host the next event at their home institute in West Africa. We’ll be applying the lessons learned in Nairobi from the start—like budgeting for a second room to support the split-track structure.</p>
-<p>We’re also exploring potential collaborations with the <a href="https://bioinformaticsinstitute.africa">African Bioinformatics Institute (ABI)</a>, a new pan-African initiative launched in 2024 and funded by Wellcome and the Chan Zuckerberg Initiative to strengthen genomics and bioinformatics research across the continent. In parallel, we’re keen to connect with Bioconductor instructors and contributors on upcoming topics of interest—such as microbiome analysis, single-cell omics, and Linux integration—through future workshops, webinars, or community-led sessions. If you’re interested, feel free to get in touch: maria.doyle [at] ul [dot] ie.</p>
-</section>
-<section id="get-involved" class="level2">
-<h2 class="anchored" data-anchor-id="get-involved">Get Involved</h2>
-<p>Interested in helping grow Bioconductor’s training network in Africa? Reach out or explore our open training resources:</p>
-<ul>
-<li><a href="https://github.com/lgatto/202503-Bioconductor-Kenya">📘 Course materials</a> — includes links to the lessons, data, and original course info page</li>
-<li><a href="https://training.bioconductor.org/">🌍 About Bioconductor training</a></li>
-</ul>
-<p>Want to stay in the loop? <a href="https://training.bioconductor.org/workshops/2025-03-Nairobi/index.html#%F0%9F%8C%8D-join-the-bioconductor-africa-community">Join the Bioconductor Africa mailing list</a> or follow us on social media to hear about future opportunities.</p>
-<p>Stay connected:</p>
-<ul>
-<li><a href="https://www.linkedin.com/company/bioconductor/">LinkedIn</a><br>
-</li>
-<li><a href="https://genomic.social/@bioconductor">Mastodon</a><br>
-</li>
-<li><a href="https://bsky.app/profile/bioconductor.bsky.social">Bluesky</a></li>
-</ul>
-
-
-</section>
-
-<p>
-© 2025 Bioconductor. Content is published under <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons CC-BY-4.0 License</a> for the text and <a href="https://opensource.org/licenses/BSD-3-Clause">BSD 3-Clause License</a> for any code. | <a href="https://www.r-bloggers.com">R-Bloggers</a>
-</p> ]]></description>
-  <category>education</category>
-  <category>events</category>
-  <category>Carpentries</category>
-  <category>CZI</category>
-  <guid>https://blog.bioconductor.org/posts/2025-05-21-kenya-course/</guid>
-  <pubDate>Wed, 21 May 2025 00:00:00 GMT</pubDate>
-  <media:content url="https://blog.bioconductor.org/posts/2025-05-21-kenya-course/group-photo.jpeg" medium="image" type="image/jpeg"/>
 </item>
 </channel>
 </rss>
