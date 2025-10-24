@@ -1,6 +1,6 @@
 ---
 title: "EuroBioC2025 conference recap"
-description: "Highlights from the 2025 European Bioconductor Conference in Barcelona."
+description: "Highlights from the 2025 European Bioconductor Conference in Barcelona"
 author:
   - name: Laurah Ondari
     url: https://github.com/Nyasita
@@ -158,7 +158,7 @@ Recordings from EuroBioC2025 are available on the [[Bioconductor YouTube channel
 
 -   [[Bioconductor Asia conference 2025]{.underline}](https://biocasia2025.bioconductor.org) (BioCAsia2025) in Adelaide on Nov 27 - 28, 2025
 
--   [[European Bioconductor conference 2026]{.underline}](https://eurobioc2026.bioconductor.org/) (EuroBioC2026) in Turku on June 3 - 5, 2026,
+-   [[European Bioconductor conference 2026]{.underline}](https://eurobioc2026.bioconductor.org/) (EuroBioC2026) in Turku on June 3 - 5, 2026
 
 -   [[Bioconductor conference 2026]{.underline}](https://bioc2026.bioconductor.org/) (BioC2026) in Fred Hutch Cancer Center, Seattle, WA, on August 10 - 12, 2026
 
