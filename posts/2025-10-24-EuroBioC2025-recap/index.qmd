@@ -16,7 +16,7 @@ lightbox: true
 
 ![](media/allparticipants_image.jpg){.zoomable width="100%"}
 
-![](media/EuroBioC2025Closing.png){width="70%; class="zoomable"; height:200px;"}
+![](media/EuroBioC2025Closing.png){width="70%"; class="zoomable"; height:200px;"}
 
 The European Bioconductor conference 2025 ([[EuroBioC2025]{.underline}](https://eurobioc2025.bioconductor.org/)) took place between September 17 and 19, 2025, and was hosted at the Barcelona Biomedical Research Park ([PRBB](https://www.prbb.org/)) in Barcelona by the Department of Medicine and Life Sciences of Universitat Pompeu Fabra ([MELIS-UPF](https://www.upf.edu/biomed))and the Barcelona Institute for Global Health ([ISGlobal](https://www.isglobal.org/en)). The Catalan capital boasts a rich culture, a lively atmosphere, and a blend of art, history, and Mediterranean energy, which made it the perfect backdrop for a relaxing and learning atmosphere for EuroBioC 2025. The conference brought together 170 participants from all over the world to showcase the latest cutting-edge developments on Bioconductor software packages, as well as on broader emerging technologies impacting computational biology.
 
@@ -26,7 +26,7 @@ The map below shows participants of EuroBioC2025 per country.
 
 </iframe>
 
-### **Preconference**
+### Preconference
 
 ------------------------------------------------------------------------
 
@@ -88,7 +88,7 @@ The poster sessions at EuroBioC2025 showcased a diverse range of projects reflec
 
 This year's BoF sessions provided space for informal, collaborative discussions on key community topics. Participants shared perspectives on integrating Bioconductor with the Nextflow workflow manager, improving interoperability across tools, enhancing developer onboarding, and shaping the future of Bioconductor training and governance. These conversations captured the conference's spirit of open collaboration and community-driven growth.
 
-### **Infrastructure and tools**
+### Infrastructure and tools
 
 ------------------------------------------------------------------------
 
@@ -101,15 +101,10 @@ The main channel was:
 -   #eurobioc-conference-everyone -- for announcements, updates, and general conference discussions.
 
 Inside #eurobioc-conference-everyone, the following topics were available to keep everything organised:
-
 -   eurobioc2025:travel -- for coordinating taxi shares, asking about transit options, and exchanging travel tips.
-
 -   eurobioc2025:announcements -- for conference updates, schedule changes, and important notices.
-
 -   eurobioc2025:helpdesk -- for participants to ask questions and receive assistance from organizers or fellow attendees.
-
 -   eurobioc2025:general-chat -- for casual conversations and connecting with other participants.
-
 -   eurobioc2025:photos -- for sharing snapshots and favorite moments from EuroBioC2025.
 
 **Scholarships**
@@ -137,7 +132,7 @@ Thanks to the generous support of the sponsors, EuroBioC2025 awarded 27 scholars
 
 A fun new addition to EuroBioc2025 was the [[sticker hexwall]{.underline}](https://eurobioc2025.bioconductor.org/pages/hexwall.html); a colorful visual display of Bioconductor package stickers showcased at the photo-call area. The design, created by Kevin Rue-Albrecht, captured the variety and creativity within the Bioconductor community.
 
-### **Social interactions and networking**
+### Social interactions and networking
 
 ------------------------------------------------------------------------
 
@@ -157,7 +152,7 @@ The tour was organized by Mireia Ramos Rodríguez and volunteers from the Biocon
 
 </p>
 
-### **Conference materials**
+### Conference materials
 
 ------------------------------------------------------------------------
 
@@ -171,7 +166,7 @@ Recordings from EuroBioC2025 are available on the [[Bioconductor YouTube channel
 
 -   [[Bioconductor conference 2026]{.underline}](https://bioc2026.bioconductor.org/) (BioC2026) in Fred Hutch Cancer Center, Seattle, WA, on August 10 - 12, 2026
 
-### **Acknowledgements**
+### Acknowledgements
 
 ------------------------------------------------------------------------
 
@@ -195,6 +190,7 @@ Barcelona Biomedical Research Park ([[PRBB]{.underline}](https://www.prbb.org/))
 -   Juan Ramon Gonzalez, Barcelona Institute of Global Health, Spain
 -   Mireia Ramos, Universitat Pompeu Fabra, Spain
 -   Helena Crowell, Centro Nacional de Análisis Genómico, Spain
+-   Lluís Revilla Sancho, Roche, Spain.
 
 **Community Organizers**
 
