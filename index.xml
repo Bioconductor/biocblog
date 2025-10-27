@@ -273,7 +273,7 @@ document.addEventListener('click', function(e) {
 </section>
 <section id="future-work" class="level3">
 <h3 class="anchored" data-anchor-id="future-work">Future work</h3>
-<p>More work is being done to understand how we can make the best use of GPUs within Bioconductor by developing a package to understand GPU usage and propose best practices, but we also need a better understanding of what packages are using GPUs and what our community needs. Learn more about the project at https://waldronlab.io/czieoss6-biocgpu/.</p>
+<p>More work is being done to understand how we can make the best use of GPUs within Bioconductor by developing a package to understand GPU usage and propose best practices, but we also need a better understanding of what packages are using GPUs and what our community needs. Learn more about the project at <a href="https://waldronlab.io/czieoss6-biocgpu/">https://waldronlab.io/czieoss6-biocgpu/</a>.</p>
 
 
 </section>
