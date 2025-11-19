@@ -1,0 +1,150 @@
+---
+title: "Bioconductor in Africa: Ethiopia’s First In-Person Course"
+author: "Maria Doyle"
+date: 2025-11-24
+categories: [education, events, Carpentries, CZI]
+image: "group_photo.jpeg"
+format:
+  html:
+    toc: true
+    toc-depth: 2
+execute:
+  echo: false
+  message: false
+  warning: false
+lightbox: true
+---
+
+## Introduction
+Following the success of our first in-person [Bioconductor course in Nairobi](https://blog.bioconductor.org/posts/2025-05-21-kenya-course/) earlier this year, we continued building momentum across the continent with Ethiopia’s first Bioconductor workshop, held in Addis Ababa from 25–29 August 2025. Hosted by the [**Bio and Emerging Technology Institute (BETin)**](https://www.betin.gov.et/) in partnership with the [**International Institute of Tropical Agriculture (IITA)**](https://www.iita.org/) and the [**University of Limerick**](https://www.ul.ie/), the event brought together researchers, students, and educators to support and grow bioinformatics capacity in Ethiopia.
+
+## What we taught
+
+A five-day, hands-on programme covering:
+
+- R for data management, manipulation, visualisation, and reproducible analysis  
+- Bioconductor core data structures (e.g. `SummarizedExperiment`)  
+- Exploratory data analysis and quality control  
+- Differential expression with DESeq2  
+- Gene set enrichment analysis  
+
+Agenda and instructor list are on the [workshop page](https://training.bioconductor.org/workshops/2025-08-Addis-Ababa/index.html).
+
+We welcomed 26 participants from universities, national research institutes, and biotech groups across Ethiopia, reflecting a strong mix of MSc/PhD students, lecturers, and researchers working in agriculture, public health, genomics, and AI-driven biomedical research. The cohort was selected from more than 170 applicants - a clear sign of the growing demand for hands-on bioinformatics training.
+
+## Learning & Community
+
+The workshop opened with a warm welcome from BETin leadership, including Dr Zewdu Edea and Dr Hailu Dadi, with strong support from Prof Kassahun Tesfaye and Dr Helen Nigussie. Sessions were interactive and collaborative as participants worked through exercises together.
+
+::: {#gallery-instructors .columns}
+::: {.column width="20%"}
+![](yohannes.jpeg){group="gallery-instructors" alt="Dr. Yohannes Gedamu Gebre teaching"}
+:::
+
+::: {.column width="20%"}
+![](niguse.jpeg){group="gallery-instructors" alt="Niguse Kelile Lema teaching"}
+:::
+::: {.column width="20%"}
+![](helen.jpeg){group="gallery-instructors" alt="Dr. Helen Nigussie teaching"}
+:::
+
+::: {.column width="20%"}
+![](trushar.jpeg){group="gallery-instructors" alt="Trushar Shah teaching"}
+:::
+
+::: {.column width="20%"}
+![](maria.jpeg){group="gallery-instructors" alt="Dr. Maria Doyle teaching"}
+:::
+
+<div class="figure-caption" style="text-align: left; font-size: 90%;">
+  From left to right: Dr Yohannes Gedamu Gebre, Niguse Kelile Lema, Dr Helen Nigussie, Trushar Shah, and Dr Maria Doyle teaching at the Ethiopia course.
+</div>
+
+:::
+
+![Participants at the Bioconductor Ethiopia course](group_photo.jpeg){alt="Participants at the Bioconductor Ethiopia course"}
+
+## Participant voices
+
+**Impact snapshot**:  
+From the post-course survey (n=24):
+
+- 100% would recommend the workshop  
+- 92% rated the course “Excellent” or “Very good”
+- Average self-reported improvement in R skills: 4.3/5
+- 23 out of 24 respondents expressed interest in helping grow the Bioconductor Africa community
+
+![Participant feedback summary](feedback-summary.png)
+
+> “It’s very hands-on and engaging… The instructors were very experienced, knowledgeable, and approachable. It was a great learning experience!” 
+
+> “There were enough supporters for the trainees; those who were rounding and supporting when we got stuck were a wonderful approach. The training shoots the target from my side.” 
+
+> “I would appreciate it if the time for the training were increased.” 
+
+These sentiments echoed the hosts’ reflections:
+
+> “Participants were thrilled to have been given the chance and vowed to utilise the new skills they gained in their research and future careers.” — **Dr Zewdu Edea** (BETin), LinkedIn
+
+> “The workshop highlights the importance of international collaboration and knowledge exchange in advancing research and training, particularly in the African context.” — **Niguse Kelile Lema** (BETin), LinkedIn
+
+Encouragingly, many respondents expressed interest in helping grow the Bioconductor Africa community through teaching, webinars, or community sessions - a strong signal for sustainable, local leadership.
+
+
+## Lessons learned
+
+A key part of building a sustainable training programme is listening to feedback. A few themes stood out:
+
+* **More time for deeper dives:**  
+Participants were keen for extra time to practise and explore. While extending the main workshop isn’t always possible, we’re exploring optional drop-in coding sessions or “hacky hours” after future events so participants can spend more time working through exercises with instructor support.
+
+* **Clearer signposting of pre-workshop reading:**
+Although we shared pre-reading and background material, some participants noted they would have benefited from more emphasis on the publication describing the experimental dataset. We’ll highlight these resources more clearly in future courses.
+
+* **Mapping Future Topics:**
+Feedback included a range of topics people would like to see next - including GWAS, single-cell analysis, and multi-omics integration. This helps us map out future workshops and tailor training to local research priorities.
+
+## Highlights
+
+A short certificate ceremony on the final day was a lovely way to wrap up the week. BETin presented each participant with a certificate recognising their effort and commitment throughout the course. Participants were delighted to receive them, as reflected in the smiles during the ceremony.
+
+::: {#gallery-cert_ceremony .columns}
+
+::: {.column width="50%"}
+![](cert-ceremony1.jpeg){group="gallery-cert_ceremony" alt="Participant receiving course certificate"}
+::: 
+
+::: {.column width="50%"}
+![](cert-ceremony2.jpeg){group="gallery-cert_ceremony" alt="Another participant receiving course certificate"}
+:::
+
+::: 
+
+Another note from the week is that two of the local instructors, Yohannes and Niguse, were completing their Carpentries Instructor Certification, and this workshop served as their final teaching checkout.
+
+::: {#gallery-instructor-certification.columns}
+
+::: {.column width="100%"}
+![](yohannes-certified.png){group="gallery-cert_instructors" alt="Yohannes Carpentries certification"}
+::: 
+
+::: 
+
+## Collaborators & Acknowledgements
+
+This workshop was hosted and funded by the Bio and Emerging Technology Institute (BETin). We are deeply grateful for their leadership and commitment to strengthening bioinformatics capacity in Ethiopia.
+
+The event was co-organised with the International Institute of Tropical Agriculture (IITA) and the University of Limerick, with additional support from Bioconductor (CZI EOSS) and UL Global/Erasmus+.
+
+Our instructor team: Dr Yohannes Gedamu Gebre (BETin), Niguse Kelile Lema (BETin), Dr Helen Nigussie (AAU), Trushar Shah (IITA), Dr Maria Doyle (UL).
+
+## What’s next?
+
+Our next workshop took place in West Africa, in Benin, from 17–21 November 2025. If your institute is interested in co‑hosting or contributing to future workshops, we’d love to hear from you.
+
+## Get involved
+
+- [Workshop page](https://training.bioconductor.org/workshops/2025-08-Addis-Ababa/index.html)
+- [Materials](https://github.com/mblue9/202508-Bioconductor-Ethiopia/blob/main/README.md)
+- [About Bioconductor training](https://training.bioconductor.org)
+- [Join the Bioconductor Africa mailing list](https://training.bioconductor.org/workshops/2025-08-Addis-Ababa/index.html#%F0%9F%8C%8D-join-the-bioconductor-africa-community) or #bioc_africa channel in [Bioconductor Chat](https://chat.bioconductor.org)
