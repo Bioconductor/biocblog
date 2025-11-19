@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - main
+      - ehtiopia-course
   pull_request:
 
 jobs:
