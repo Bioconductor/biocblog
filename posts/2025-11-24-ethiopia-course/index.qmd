@@ -34,7 +34,7 @@ We welcomed 26 participants from universities, national research institutes, and
 
 ## Learning & Community
 
-The workshop opened with a warm welcome from BETin leadership, including Dr Zewdu Edea and Dr Hailu Dadi, with strong support from Prof Kassahun Tesfaye and Dr Helen Nigussie. Sessions were interactive and collaborative as participants worked through exercises together.
+The workshop opened with a warm welcome from BETin leadership, including Dr Zewdu Edea and Dr Hailu Dadi with strong support from Prof Kassahun Tesfaye, and Dr Helen Nigussie from [Addis Ababa University](https://aau.edu.et/). Sessions were interactive and collaborative as participants worked through exercises together.
 
 ::: {#gallery-instructors .columns}
 ::: {.column width="20%"}
@@ -62,7 +62,11 @@ The workshop opened with a warm welcome from BETin leadership, including Dr Zewd
 
 :::
 
-![Participants at the Bioconductor Ethiopia course](group_photo.jpeg){alt="Participants at the Bioconductor Ethiopia course"}
+![](group_photo.jpeg){alt="Participants at the Bioconductor Ethiopia course"}
+
+<div class="figure-caption" style="text-align: center; font-size: 90%;"> Participants at the Bioconductor Ethiopia course
+</div>
+
 
 ## Participant voices
 
@@ -74,7 +78,9 @@ From the post-course survey (n=24):
 - Average self-reported improvement in R skills: 4.3/5
 - 23 out of 24 respondents expressed interest in helping grow the Bioconductor Africa community
 
-![Participant feedback summary](feedback-summary.png)
+![](feedback-summary.png)
+<div class="figure-caption" style="text-align: center; font-size: 90%;"> Participant feedback summary.
+</div>
 
 > “It’s very hands-on and engaging… The instructors were very experienced, knowledgeable, and approachable. It was a great learning experience!” 
 
@@ -84,7 +90,7 @@ From the post-course survey (n=24):
 
 These sentiments echoed the hosts’ reflections:
 
-> “Participants were thrilled to have been given the chance and vowed to utilise the new skills they gained in their research and future careers.” — **Dr Zewdu Edea** (BETin), LinkedIn
+> “Participants were thrilled to have been given the chance and vowed to utilise the new skills they gained in their research and future careers.” — **Dr Zewdu Edea** (BETin), [LinkedIn](https://www.linkedin.com/posts/zewdu-edea-b7b051234_the-bio-and-emerging-technology-institute-activity-7368291732393730051-hAPs)
 
 > “The workshop highlights the importance of international collaboration and knowledge exchange in advancing research and training, particularly in the African context.” — **Niguse Kelile Lema** (BETin), LinkedIn
 
@@ -118,6 +124,9 @@ A short certificate ceremony on the final day was a lovely way to wrap up the we
 ![](cert-ceremony2.jpeg){group="gallery-cert_ceremony" alt="Another participant receiving course certificate"}
 :::
 
+<div class="figure-caption" style="text-align: center; font-size: 90%;"> Participants receiving their course certificates.
+</div>
+
 ::: 
 
 Another note from the week is that two of the local instructors, Yohannes and Niguse, were completing their Carpentries Instructor Certification, and this workshop served as their final teaching checkout.
@@ -127,6 +136,9 @@ Another note from the week is that two of the local instructors, Yohannes and Ni
 ::: {.column width="100%"}
 ![](yohannes-certified.png){group="gallery-cert_instructors" alt="Yohannes Carpentries certification"}
 ::: 
+
+<div class="figure-caption" style="text-align: center; font-size: 90%;"> Yohannes' story of how he and Niguse became certified Carpentry instructors. [LinkedIn](https://www.linkedin.com/pulse/how-i-became-certified-instructor-carpentries-courses-gebre-vqzdf/)
+</div>
 
 ::: 
 
