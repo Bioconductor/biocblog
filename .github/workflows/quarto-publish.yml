@@ -39,7 +39,7 @@ jobs:
           fi
 
   deploy:
-    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    if: github.event_name == 'push' && (github.ref == 'refs/heads/main' || github.ref == 'refs/heads/ethiopia-course')
     name: Publish to GitHub Pages
     needs: build
     runs-on: ubuntu-latest
