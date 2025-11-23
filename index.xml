@@ -10,7 +10,160 @@
 <atom:link href="https://blog.bioconductor.org/index.xml" rel="self" type="application/rss+xml"/>
 <description>A blog for the Bioconductor community!</description>
 <generator>quarto-1.8.26</generator>
-<lastBuildDate>Fri, 24 Oct 2025 00:00:00 GMT</lastBuildDate>
+<lastBuildDate>Mon, 24 Nov 2025 00:00:00 GMT</lastBuildDate>
+<item>
+  <title>Bioconductor in Africa: Ethiopia’s First In-Person Course</title>
+  <dc:creator>Maria Doyle</dc:creator>
+  <link>https://blog.bioconductor.org/posts/2025-11-24-ethiopia-course/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<section id="introduction" class="level2">
+<h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
+<p>Following the success of our first in-person <a href="https://blog.bioconductor.org/posts/2025-05-21-kenya-course/">Bioconductor course in Nairobi</a> earlier this year, we continued building momentum across the continent with Ethiopia’s first Bioconductor workshop, held in Addis Ababa from 25–29 August 2025. Hosted by the <a href="https://www.betin.gov.et/"><strong>Bio and Emerging Technology Institute (BETin)</strong></a> in partnership with the <a href="https://www.iita.org/"><strong>International Institute of Tropical Agriculture (IITA)</strong></a> and the <a href="https://www.ul.ie/"><strong>University of Limerick</strong></a>, the event brought together researchers, students, and educators to support and grow bioinformatics capacity in Ethiopia.</p>
+</section>
+<section id="what-we-taught" class="level2">
+<h2 class="anchored" data-anchor-id="what-we-taught">What we taught</h2>
+<p>A five-day, hands-on programme covering:</p>
+<ul>
+<li>R for data management, manipulation, visualisation, and reproducible analysis<br>
+</li>
+<li>Bioconductor core data structures (e.g.&nbsp;<code>SummarizedExperiment</code>)<br>
+</li>
+<li>Exploratory data analysis and quality control<br>
+</li>
+<li>Differential expression with DESeq2<br>
+</li>
+<li>Gene set enrichment analysis</li>
+</ul>
+<p>Agenda and instructor list are on the <a href="https://training.bioconductor.org/workshops/2025-08-Addis-Ababa/index.html">workshop page</a>.</p>
+<p>We welcomed 26 participants from universities, national research institutes, and biotech groups across Ethiopia, reflecting a strong mix of MSc/PhD students, lecturers, and researchers working in agriculture, public health, genomics, and AI-driven biomedical research. The cohort was selected from more than 170 applicants - a clear sign of the growing demand for hands-on bioinformatics training.</p>
+</section>
+<section id="learning-community" class="level2">
+<h2 class="anchored" data-anchor-id="learning-community">Learning &amp; Community</h2>
+<p>The workshop opened with a warm welcome from BETin leadership, including Dr Zewdu Edea and Dr Hailu Dadi with strong support from Prof Kassahun Tesfaye, and Dr Helen Nigussie from <a href="https://aau.edu.et/">Addis Ababa University</a>. Sessions were interactive and collaborative as participants worked through exercises together.</p>
+<div id="gallery-instructors" class="columns">
+<div class="column" style="width:20%;">
+<p><a href="yohannes.jpeg" class="lightbox" data-gallery="gallery-instructors"><img src="https://blog.bioconductor.org/posts/2025-11-24-ethiopia-course/yohannes.jpeg" class="img-fluid" alt="Dr. Yohannes Gedamu Gebre teaching"></a></p>
+</div><div class="column" style="width:20%;">
+<p><a href="niguse.jpeg" class="lightbox" data-gallery="gallery-instructors"><img src="https://blog.bioconductor.org/posts/2025-11-24-ethiopia-course/niguse.jpeg" class="img-fluid" alt="Niguse Kelile Lema teaching"></a></p>
+</div><div class="column" style="width:20%;">
+<p><a href="helen.jpeg" class="lightbox" data-gallery="gallery-instructors"><img src="https://blog.bioconductor.org/posts/2025-11-24-ethiopia-course/helen.jpeg" class="img-fluid" alt="Dr. Helen Nigussie teaching"></a></p>
+</div><div class="column" style="width:20%;">
+<p><a href="trushar.jpeg" class="lightbox" data-gallery="gallery-instructors"><img src="https://blog.bioconductor.org/posts/2025-11-24-ethiopia-course/trushar.jpeg" class="img-fluid" alt="Trushar Shah teaching"></a></p>
+</div><div class="column" style="width:20%;">
+<p><a href="maria.jpeg" class="lightbox" data-gallery="gallery-instructors"><img src="https://blog.bioconductor.org/posts/2025-11-24-ethiopia-course/maria.jpeg" class="img-fluid" alt="Dr. Maria Doyle teaching"></a></p>
+</div><div class="figure-caption" style="text-align: left; font-size: 90%;">
+<p>From left to right: Dr Yohannes Gedamu Gebre, Niguse Kelile Lema, Dr Helen Nigussie, Trushar Shah, and Dr Maria Doyle teaching at the Ethiopia course.</p>
+</div>
+</div>
+<p><a href="group_photo.jpeg" class="lightbox" data-gallery="quarto-lightbox-gallery-6"><img src="https://blog.bioconductor.org/posts/2025-11-24-ethiopia-course/group_photo.jpeg" class="img-fluid" alt="Participants at the Bioconductor Ethiopia course"></a></p>
+<div class="figure-caption" style="text-align: center; font-size: 90%;">
+<p>Participants at the Bioconductor Ethiopia course</p>
+</div>
+</section>
+<section id="participant-voices" class="level2">
+<h2 class="anchored" data-anchor-id="participant-voices">Participant voices</h2>
+<p><strong>Impact snapshot</strong>:<br>
+From the post-course survey (n=24):</p>
+<ul>
+<li>100% would recommend the workshop<br>
+</li>
+<li>92% rated the course “Excellent” or “Very good”</li>
+<li>Average self-reported improvement in R skills: 4.3/5</li>
+<li>23 out of 24 respondents expressed interest in helping grow the Bioconductor Africa community</li>
+</ul>
+<img src="https://blog.bioconductor.org/posts/2025-11-24-ethiopia-course/feedback-summary.png" class="img-fluid">
+<div class="figure-caption" style="text-align: center; font-size: 90%;">
+<p>Participant feedback summary.</p>
+</div>
+<blockquote class="blockquote">
+<p>“It’s very hands-on and engaging… The instructors were very experienced, knowledgeable, and approachable. It was a great learning experience!”</p>
+</blockquote>
+<blockquote class="blockquote">
+<p>“There were enough supporters for the trainees; those who were rounding and supporting when we got stuck were a wonderful approach. The training shoots the target from my side.”</p>
+</blockquote>
+<blockquote class="blockquote">
+<p>“I would appreciate it if the time for the training were increased.”</p>
+</blockquote>
+<p>These sentiments echoed the hosts’ reflections:</p>
+<blockquote class="blockquote">
+<p>“Participants were thrilled to have been given the chance and vowed to utilise the new skills they gained in their research and future careers.” — <strong>Dr Zewdu Edea</strong> (BETin), <a href="https://www.linkedin.com/posts/zewdu-edea-b7b051234_the-bio-and-emerging-technology-institute-activity-7368291732393730051-hAPs">LinkedIn</a></p>
+</blockquote>
+<blockquote class="blockquote">
+<p>“The workshop highlights the importance of international collaboration and knowledge exchange in advancing research and training, particularly in the African context.” — <strong>Niguse Kelile Lema</strong> (BETin), LinkedIn</p>
+</blockquote>
+<p>Encouragingly, many respondents expressed interest in helping grow the Bioconductor Africa community through teaching, webinars, or community sessions - a strong signal for sustainable, local leadership.</p>
+</section>
+<section id="lessons-learned" class="level2">
+<h2 class="anchored" data-anchor-id="lessons-learned">Lessons learned</h2>
+<p>A key part of building a sustainable training programme is listening to feedback. A few themes stood out:</p>
+<ul>
+<li><p><strong>More time for deeper dives:</strong><br>
+Participants were keen for extra time to practise and explore. While extending the main workshop isn’t always possible, we’re exploring optional drop-in coding sessions or “hacky hours” after future events so participants can spend more time working through exercises with instructor support.</p></li>
+<li><p><strong>Clearer signposting of pre-workshop reading:</strong> Although we shared pre-reading and background material, some participants noted they would have benefited from more emphasis on the publication describing the experimental dataset. We’ll highlight these resources more clearly in future courses.</p></li>
+<li><p><strong>Mapping Future Topics:</strong> Feedback included a range of topics people would like to see next - including GWAS, single-cell analysis, and multi-omics integration. This helps us map out future workshops and tailor training to local research priorities.</p></li>
+</ul>
+</section>
+<section id="highlights" class="level2">
+<h2 class="anchored" data-anchor-id="highlights">Highlights</h2>
+<p>A short certificate ceremony on the final day was a lovely way to wrap up the week. BETin presented each participant with a certificate recognising their effort and commitment throughout the course. Participants were delighted to receive them, as reflected in the smiles during the ceremony.</p>
+<div id="gallery-cert_ceremony" class="columns">
+<div class="column" style="width:50%;">
+<p><a href="cert-ceremony1.jpeg" class="lightbox" data-gallery="gallery-cert_ceremony"><img src="https://blog.bioconductor.org/posts/2025-11-24-ethiopia-course/cert-ceremony1.jpeg" class="img-fluid" alt="Participant receiving course certificate"></a></p>
+</div><div class="column" style="width:50%;">
+<p><a href="cert-ceremony2.jpeg" class="lightbox" data-gallery="gallery-cert_ceremony"><img src="https://blog.bioconductor.org/posts/2025-11-24-ethiopia-course/cert-ceremony2.jpeg" class="img-fluid" alt="Another participant receiving course certificate"></a></p>
+</div><div class="figure-caption" style="text-align: center; font-size: 90%;">
+<p>Participants receiving their course certificates.</p>
+</div>
+</div>
+<p>Another note from the week is that two of the local instructors, Yohannes and Niguse, were completing their Carpentries Instructor Certification, and this workshop served as their final teaching checkout.</p>
+<div id="gallery-instructor-certification.columns">
+<div class="column" style="width:100%;">
+<p><a href="yohannes-certified.png" class="lightbox" data-gallery="gallery-cert_instructors"><img src="https://blog.bioconductor.org/posts/2025-11-24-ethiopia-course/yohannes-certified.png" class="img-fluid" alt="Yohannes Carpentries certification"></a></p>
+</div>
+<div class="figure-caption" style="text-align: center; font-size: 90%;">
+<p>Yohannes’ story of how he and Niguse became certified Carpentry instructors. <a href="https://www.linkedin.com/pulse/how-i-became-certified-instructor-carpentries-courses-gebre-vqzdf/">LinkedIn</a></p>
+</div>
+</div>
+</section>
+<section id="collaborators-acknowledgements" class="level2">
+<h2 class="anchored" data-anchor-id="collaborators-acknowledgements">Collaborators &amp; Acknowledgements</h2>
+<p>This workshop was hosted and funded by the Bio and Emerging Technology Institute (BETin). We are deeply grateful for their leadership and commitment to strengthening bioinformatics capacity in Ethiopia.</p>
+<p>The event was co-organised with the International Institute of Tropical Agriculture (IITA) and the University of Limerick, with additional support from Bioconductor (CZI EOSS) and UL Global/Erasmus+.</p>
+<p>Our instructor team: Dr Yohannes Gedamu Gebre (BETin), Niguse Kelile Lema (BETin), Dr Helen Nigussie (AAU), Trushar Shah (IITA), Dr Maria Doyle (UL).</p>
+<p>We thank the <a href="http://www.mint.gov.et/">Ministry of Innovation and Technology</a> and <a href="https://innobiz-k.et/">Innobiz-K Ethiopia Incubation Center</a> for generously providing their facilities for the training.</p>
+</section>
+<section id="whats-next" class="level2">
+<h2 class="anchored" data-anchor-id="whats-next">What’s next?</h2>
+<p>Our next workshop took place in West Africa, in Benin, from 17–21 November 2025. If your institute is interested in co‑hosting or contributing to future workshops, we’d love to hear from you.</p>
+</section>
+<section id="get-involved" class="level2">
+<h2 class="anchored" data-anchor-id="get-involved">Get involved</h2>
+<ul>
+<li><a href="https://training.bioconductor.org/workshops/2025-08-Addis-Ababa/index.html">Workshop page</a></li>
+<li><a href="https://github.com/mblue9/202508-Bioconductor-Ethiopia/blob/main/README.md">Materials</a></li>
+<li><a href="https://training.bioconductor.org">About Bioconductor training</a></li>
+<li><a href="https://training.bioconductor.org/workshops/2025-08-Addis-Ababa/index.html#%F0%9F%8C%8D-join-the-bioconductor-africa-community">Join the Bioconductor Africa mailing list</a> or #bioc_africa channel in <a href="https://chat.bioconductor.org">Bioconductor Chat</a></li>
+</ul>
+
+
+</section>
+
+<p>
+© 2025 Bioconductor. Content is published under <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons CC-BY-4.0 License</a> for the text and <a href="https://opensource.org/licenses/BSD-3-Clause">BSD 3-Clause License</a> for any code. | <a href="https://www.r-bloggers.com">R-Bloggers</a>
+</p> ]]></description>
+  <category>education</category>
+  <category>events</category>
+  <category>Carpentries</category>
+  <category>CZI</category>
+  <guid>https://blog.bioconductor.org/posts/2025-11-24-ethiopia-course/</guid>
+  <pubDate>Mon, 24 Nov 2025 00:00:00 GMT</pubDate>
+  <media:content url="https://blog.bioconductor.org/posts/2025-11-24-ethiopia-course/group_photo.jpeg" medium="image" type="image/jpeg"/>
+</item>
 <item>
   <title>EuroBioC2025 conference recap</title>
   <dc:creator>Laurah Ondari</dc:creator>
@@ -1293,82 +1446,6 @@ Note
   <guid>https://blog.bioconductor.org/posts/2025-05-29-slack-to-zulip/</guid>
   <pubDate>Thu, 29 May 2025 00:00:00 GMT</pubDate>
   <media:content url="https://blog.bioconductor.org/posts/2025-05-29-slack-to-zulip/zulip-org-logo.svg" medium="image" type="image/svg+xml"/>
-</item>
-<item>
-  <title>Ask and you shall receive</title>
-  <dc:creator>Vince Carey</dc:creator>
-  <link>https://blog.bioconductor.org/posts/2025-05-26-ask/</link>
-  <description><![CDATA[ 
-
-
-
-
-
-<section id="in-the-beginning" class="level1">
-<h1>In the beginning …</h1>
-<p>… there was a 9-track tape shipped from Bell Labs. <a href="https://en.wikipedia.org/wiki/S_(programming_language)">S</a> would be installed for “unix”. Extensions could be programmed in Fortran. I started using this around 1985.</p>
-<p>S REPORT presaged Sweave and knitr: <a href="https://en.wikipedia.org/wiki/Troff">troff</a>, <a href="https://en.wikipedia.org/wiki/Eqn_(software)">eqn</a>, <a href="https://en.wikipedia.org/wiki/PIC_(markup_language)">pic</a> could be interlarded with S computations.</p>
-<p>Here’s a taste of inputs and outputs for S REPORT. In the left hand panel of Figure 1, .PP starts a paragraph, .EQ and .EN offset an equation markup, and backslash-left-bracket is used to start a block of S code that will be executed when the report is compiled. A right-bracket closes the code block. This markup generates the second paragraph in the right hand panel.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="https://blog.bioconductor.org/posts/2025-05-26-ask/combo.png" class="img-fluid figure-img"></p>
-<figcaption>Figure 1. Left panel: troff, eqn, and S code for processing by S REPORT. Right panel: output including a table for which code is not shown. From <span class="citation" data-cites="becker1984s">Becker and Chambers (1984)</span></figcaption>
-</figure>
-</div>
-</section>
-<section id="fast-forward" class="level1">
-<h1>Fast forward:</h1>
-<p>In May 2002, Bioconductor 1.0 was released with 15 packages, developed for version 1.5 of R. By April of 2025 the collection has grown to over 2300 software packages, developed for version 4.5 of R. To give a sense of the components and processes in play, I made a sketch:</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="https://blog.bioconductor.org/posts/2025-05-26-ask/crazy.jpg" class="img-fluid figure-img"></p>
-<figcaption>Figure 2. Author’s agitated overview of Bioconductor in early 2024. The motivation was, in part, an encounter with the notion that LaTeX might be replaced by Typst.</figcaption>
-</figure>
-</div>
-<p>The “infinity signs” are used with “refresh” circular arrows to indicate that the associated resources can be modified at any time, while Bioconductor’s release is nominally “stable” for six months.</p>
-</section>
-<section id="in-sum" class="level1">
-<h1>In sum</h1>
-<p>Figure 2 depicts many aspects of Bioconductor that are invisible to users <em>as they do their work</em>. “Ask and you shall receive” is not an overt commitment of Bioconductor’s core. I found it interesting to reflect on the ways in which new capabilities are introduced into the system. The user experience, particularly for those doing statistical analysis of numerical data, is not dramatically different from that of the user of S in the 1980s. The number of technologies involved, and the maintenance efforts required for those technologies and their interactions, is much greater.</p>
-<p>It is natural, in my view, to refer to Bioconductor as an ecosystem, as it forms a home for many beings and processes engaged in biological data science. “Ecosystem”, for me, leads to “ecology”, and in my view, ecology is not just a study of interactions between beings and their environments, but includes a normative component. An ecology of Bioconductor will address how to manage its growth and change, identifying principles for expanding along new frontiers, for forming new connections, and for shedding materials that have lost value.</p>
-</section>
-<section id="upcoming" class="level1">
-<h1>Upcoming</h1>
-<p>My purpose here is to set the stage for a series of posts examining some relatively new but underappreciated aspects of the project, including</p>
-<ul>
-<li>biocViews, EDAM, and the description of Bioconductor resources</li>
-<li>approaching GPU computing for genomics with Bioconductor</li>
-<li>containers and binaries to speed environment creation</li>
-<li>subcommunity dynamics: scverse, spatialdata, Bioconductor … how to relate?
-<ul>
-<li>python interop</li>
-<li>OME-Zarr</li>
-</ul></li>
-<li>values derived from excursions involving WebAssembly</li>
-<li>“vendoring” sources of important libraries</li>
-<li>curating genomic annotation</li>
-<li>large arrays: sparsity and indexing</li>
-</ul>
-</section>
-<section id="reference" class="level1">
-
-
-
-
-</section>
-
-<p>
-© 2025 Bioconductor. Content is published under <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons CC-BY-4.0 License</a> for the text and <a href="https://opensource.org/licenses/BSD-3-Clause">BSD 3-Clause License</a> for any code. | <a href="https://www.r-bloggers.com">R-Bloggers</a>
-</p><div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">Reference</h2><div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0">
-<div id="ref-becker1984s" class="csl-entry">
-Becker, Richard A., and John M. Chambers. 1984. <em>S: An Interactive Environment for Data Analysis and Graphics</em>. Pacific Grove, CA: Wadsworth.
-</div>
-</div></section></div> ]]></description>
-  <category>bioconductor-evolution</category>
-  <category>education</category>
-  <guid>https://blog.bioconductor.org/posts/2025-05-26-ask/</guid>
-  <pubDate>Mon, 26 May 2025 00:00:00 GMT</pubDate>
-  <media:content url="https://blog.bioconductor.org/posts/2025-05-26-ask/crazy.jpg" medium="image" type="image/jpeg"/>
 </item>
 </channel>
 </rss>
