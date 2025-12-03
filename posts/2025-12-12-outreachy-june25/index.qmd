@@ -15,7 +15,6 @@ image: "featured-image.png"
 format:
   html:
     toc: true
-lightbox: true
 ---
 
 ## Introduction
@@ -79,8 +78,10 @@ I am super thankful to everyone in the Bioconductor community for giving me a ch
 
 Hello, I am Anne-Marie Sharp. I am a Biomedical Scientist and an aspiring bioinformatician. 
 In late 2024, [my curiosity](https://annemariesharp.wordpress.com/2025/06/06/from-curiosity-to-contribution-a-new-chapter-with-outreachy/) led me to learn about the [Outreachy](https://www.outreachy.org/) internship for the first time and then to the Bioconductor project - Microbiome Study Curation [(BugSigDB)](https://www.bugsigdb.org/) where I contributed as an intern in the June 2025 Outreachy cohort. 
+
 I was completely new to the world of open source and it took extra effort for me to catch on quickly to not just the different online communication platforms but also to the art or rather science of microbiome study curation; but my curiosity and passion for science kept me going during the Outreachy contribution phase. 
 I was also excited about the new skills I was learning such as data-curation, analysis and literature review. And I was fascinated by the collaboration within the community. Thanks to this collaboration, I was also able to learn fast as I freely asked questions and got answers from mentors and fellow-curators, and I often teamed up with other curators which gave me different perspectives and insights on curation.
+
 As an avid learner, I was and I still am excited that there is always something new to learn working on the project. Whether in the core microbiome science, in improving my R-programming language skill, in curation itself or even in improving my soft skills. Indeed, it only gets better. 
 
 #### My Contributions
@@ -91,6 +92,7 @@ During the contribution and internship phase, I worked on over 50 [issues](https
 - finalizing incomplete curations,
 - reviewing existing curations, and
 - handling R-related tasks such as updating unit tests and fixing errors in codes.
+
 I also blogged frequently about my experience: [https://annemariesharp.wordpress.com/category/outreachy-blog/](https://annemariesharp.wordpress.com/category/outreachy-blog/)
 
 I am particularly proud of the work I have done in curating microbiome studies on vision threatening conditions such as glaucoma, age related macular degeneration and acute anterior uveitis. Integrating these underrepresented ocular microbiome findings into BugSigDB improves data discoverability, enables structured querying, and enhances cross-study reuse. And I plan to continue with this great work!
@@ -99,8 +101,11 @@ I am particularly proud of the work I have done in curating microbiome studies o
 #### So far
 
 Worthy to mention, that I am currently a co-mentor for the December 2025 Outreachy cohort! This transition from intern to co-mentor has been exciting. I now guide new contributors through the same journey I once took - from understanding GitHub workflows to mastering the intricacies of microbiome study curation. 
+
 So far, collaborating with experienced mentors has enlightened me on how they support and sustain the community and I am grateful for this opportunity to learn and to also give back.
-I am also grateful to the BugSigDB community, to my co-intern [Victoria Poromon](https://github.com/Buraah) who made working together easy and enjoyable, and to all my mentors who made this experience worthwhile for me - [Chloe Mirzayi](https://github.com/cmirzayi), [Svetlana Ugarcina Perovic](https://github.com/SvetlanaUP), [Chioma Onyido](https://github.com/Omabekee), [Kate Rasheed](https://github.com/KateRasheed), and [Divine Aleru](https://github.com/AleruDivine). Their patience with my endless questions, their thoughtful feedback on my curations, their willingness to share their expertise transformed me from a complete beginner into a confident contributor. Like the African proverb says, "it takes a village to raise a child" - their unique inputs, support, and guidance have truly been priceless.
+I am also grateful to the BugSigDB community, to my co-intern [Victoria Poromon](https://github.com/Buraah) who made working together easy and enjoyable, and to all my mentors who made this experience worthwhile for me - [Chloe Mirzayi](https://github.com/cmirzayi), [Svetlana Ugarcina Perovic](https://github.com/SvetlanaUP), [Chioma Onyido](https://github.com/Omabekee), [Kate Rasheed](https://github.com/KateRasheed), and [Divine Aleru](https://github.com/AleruDivine). 
+
+Their patience with my endless questions, their thoughtful feedback on my curations, their willingness to share their expertise transformed me from a complete beginner into a confident contributor. Like the African proverb says, "it takes a village to raise a child" - their unique inputs, support, and guidance have truly been priceless.
 
 
 
