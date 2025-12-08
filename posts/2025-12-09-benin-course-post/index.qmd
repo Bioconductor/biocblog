@@ -103,7 +103,7 @@ To close the workshop, the team also hosted a beautiful certificate ceremony, cr
 
 ## The impact Bioconductor has had across East and West Africa Participants
 
-From surveys conducted across Kenya, Ethiopia, and Benin, 100% of participants reported that they would recommend the Bioconductor training course to colleagues, indicating a strong and meaningful impact. The impact was also evident in skills development: every participant reported a significant improvement in their R abilities, with 60% rating their learning gains as “significant” and 40% as “significant”, a clear indication that the training effectively strengthened practical, hands-on bioinformatics skills.
+From surveys conducted across Kenya, Ethiopia, and Benin, 100% of participants reported that they would recommend the Bioconductor training course to colleagues, indicating a strong and meaningful impact. The impact was also evident in skills development: every participant reported a significant improvement in their R abilities. In Benin, 60% of the participants rated their learning gains as “significant” and 40% as “significant”, a clear indication that the training effectively strengthened practical, hands-on bioinformatics skills.
 
 
 ![](feedback-twocols-bycountry.png)
