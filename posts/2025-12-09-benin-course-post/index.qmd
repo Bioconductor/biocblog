@@ -16,7 +16,7 @@ lightbox: true
 ---
 
 ## Introduction
-From November 17 to 25, 2025, Bioconductor held its first in-person training workshop in West Africa. The workshop was held at the [Genetics, Biotechnology, and Seed Science Unit (GBioS)](https://gbios-uac.org/) University of Abomey-Calavi, in Abomey-Calavi, Benin, co-hosted in partnership with the UMAPha research unit. The workshop brought together 25 participants, comprising students, early-career researchers, and professionals from across Benin and neighboring countries, such as Senegal and Nigeria, for a week-long, hands-on course designed to strengthen participants’ skills in R, data handling, and Bioconductor workflows for bulk RNA-seq analysis. 
+From November 17 to 25, 2025, Bioconductor held its first in-person training workshop in West Africa. The workshop was held at the [Genetics, Biotechnology, and Seed Science Unit (GBioS)](https://gbios-uac.org/) University of Abomey-Calavi, in Abomey-Calavi, Benin, co-hosted in partnership with the Research Unit in Applied Microbiology and Pharmacology of Natural Substances (URMAPha). The workshop brought together 25 participants, comprising students, early-career researchers, and professionals from across Benin and neighboring countries, such as Senegal and Nigeria, for a week-long, hands-on course designed to strengthen participants’ skills in R, data handling, and Bioconductor workflows for bulk RNA-seq analysis. 
 
 What made this workshop special was not just the curriculum, but the enthusiasm of the participants and the strong sense of community that formed throughout the week. We collected feedback from all 25 participants, and their responses paint a clear picture of both the impact the course had and the opportunities ahead.
 
@@ -76,13 +76,13 @@ Link to French translated materials [here](https://bioconductor-translations.git
 
 ## Highlights
 
-GBioS and UMAPha graciously offered us a tour of their laboratory facilities, providing the instructors and participants with an opportunity to learn more about the impactful research they lead, ranging from safeguarding seed diversity to identifying pharmaceutically active compounds. 
+GBioS and URMAPha graciously offered us a tour of their laboratory facilities, providing the instructors and participants with an opportunity to learn more about the impactful research they lead, ranging from safeguarding seed diversity to identifying pharmaceutically active compounds. 
 
 Below is a photo of the instructors, hosts, and participants taken after the lab tours.
 
-![](afterlabtour.jpg){alt="Participants after the GBioS and UMAPha lab tours"}
+![](afterlabtour.jpg){alt="Participants after the GBioS and URMAPha lab tours"}
 <div class="figure-caption" style="text-align: center; font-size: 90%;"> 
-*Benin course participants posing outside the GBioS building at the University of Abomey-Calavi after touring GBioS and UMAPha labs.*
+*Benin course participants posing outside the GBioS building at the University of Abomey-Calavi after touring GBioS and URMAPha labs.*
 </div>
 
 To close the workshop, the team also hosted a beautiful certificate ceremony, creating a memorable and celebratory end to an impactful week. 
@@ -133,7 +133,7 @@ We’re exploring ways to make Bioconductor training more accessible, including 
 
 ## Collaborators & Acknowledgements
 
-This workshop was co-hosted by GBioS and UMAPha. We are deeply grateful for their leadership and commitment to strengthening bioinformatics capacity in Benin. Notably, there was a special link between the Kenya and Benin workshops: the Kenya training went so well that one of its participants, Abdou Mouizz Salaou, helped bring Bioconductor training to Benin, further expanding the impact of Bioconductor capacity-building efforts across the region.
+This workshop was co-hosted by GBioS and URMAPha. We are deeply grateful for their leadership and commitment to strengthening bioinformatics capacity in Benin. Notably, there was a special link between the Kenya and Benin workshops: the Kenya training went so well that one of its participants, Abdou Mouizz Salaou, helped bring Bioconductor training to Benin, further expanding the impact of Bioconductor capacity-building efforts across the region.
 
 The event was co-organised with the International Institute of Tropical Agriculture (IITA) and the University of Limerick, with additional support from Bioconductor (CZI EOSS).
 
