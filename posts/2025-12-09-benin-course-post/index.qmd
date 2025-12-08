@@ -61,6 +61,11 @@ Agenda and instructor list are on the [workshop page](https://training.bioconduc
 
 :::
 
+![](DSC_4981.jpg){alt="Participants learning at the Bioconductor Benin course"}
+
+<div class="figure-caption" style="text-align: center; font-size: 90%;"> *Benin course participants engaged in a hands-on session.*
+</div>
+
 
 ## Language accessibility and bilingual support
 
