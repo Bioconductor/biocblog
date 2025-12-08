@@ -23,7 +23,7 @@ What made this workshop special was not just the curriculum, but the enthusiasm 
 ![](benin_group_photo.jpg){alt="Participants at the Bioconductor Benin course"}
 
 
-<div class="figure-caption" style="text-align: center; font-size: 90%;"> *Benin course participants posing for a group photo at GBioS in the University of ABomey-Calavi, Cotonou, Benin.*
+<div class="figure-caption" style="text-align: center; font-size: 90%;"> *Benin course participants posing for a group photo at GBioS in the University of Abcp omey-Calavi, Cotonou, Benin.*
 </div>
 
 ## What we taught and what was learned
@@ -74,6 +74,20 @@ This was the first Bioconductor Africa course where French translations of intro
 
 Link to French translated materials [here](https://bioconductor-translations.github.io/bioc-intro-fr/)
 
+::: {#gallery-french .columns}
+::: {.column width="50%"}
+![](french1.png){group="gallery-french" alt="French learning"}
+:::
+::: {.column width="50%"}
+![](french2.png){group="gallery-french" alt="French learning"}
+:::
+
+<div class="figure-caption" style="text-align: center; font-size: 90%;">
+  *The imoact of French-translated materials and French-speaking instructors at the Benin workshop.*
+</div>
+
+:::
+
 ## Highlights
 
 GBioS and URMAPha graciously offered us a tour of their laboratory facilities, providing the instructors and participants with an opportunity to learn more about the impactful research they lead, ranging from safeguarding seed diversity to identifying pharmaceutically active compounds. 
@@ -103,7 +117,7 @@ To close the workshop, the team also hosted a beautiful certificate ceremony, cr
 
 ## The impact Bioconductor has had across East and West Africa Participants
 
-From surveys conducted across Kenya, Ethiopia, and Benin, 100% of participants reported that they would recommend the Bioconductor training course to colleagues, indicating a strong and meaningful impact. The impact was also evident in skills development: every participant reported a significant improvement in their R abilities. In Benin, 60% of the participants rated their learning gains as “significant” and 40% as “significant”, a clear indication that the training effectively strengthened practical, hands-on bioinformatics skills.
+From surveys conducted across Kenya, Ethiopia, and Benin, 100% of participants reported that they would recommend the Bioconductor training course to colleagues, indicating a strong and meaningful impact. The impact was also evident in skills development: every participant reported a significant improvement in their R abilities. In Benin, 60% of the participants rated their learning gains as “very significant” (scale 5) and 40% as “significant” (scale 4), a clear indication that the training effectively strengthened practical, hands-on bioinformatics skills.
 
 
 ![](feedback-twocols-bycountry.png)
