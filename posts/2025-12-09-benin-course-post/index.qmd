@@ -23,7 +23,7 @@ What made this workshop special was not just the curriculum, but the enthusiasm 
 ![](benin_group_photo.jpg){alt="Participants at the Bioconductor Benin course"}
 
 
-<div class="figure-caption" style="text-align: center; font-size: 90%;"> *Benin course participants posing for a group photo at GBioS in the University of Abcp omey-Calavi, Cotonou, Benin.*
+<div class="figure-caption" style="text-align: center; font-size: 90%;"> *Benin course participants posing for a group photo at GBioS in the University of Abomey-Calavi, Cotonou, Benin.*
 </div>
 
 ## What we taught and what was learned
