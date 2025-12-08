@@ -83,7 +83,7 @@ Link to French translated materials [here](https://bioconductor-translations.git
 :::
 
 <div class="figure-caption" style="text-align: center; font-size: 90%;">
-  *The imoact of French-translated materials and French-speaking instructors at the Benin workshop.*
+  *The impact of French-translated materials and French-speaking instructors at the Benin workshop.*
 </div>
 
 :::
