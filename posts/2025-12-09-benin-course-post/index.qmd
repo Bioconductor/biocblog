@@ -1,7 +1,7 @@
 ---
 title: "Bioconductor in Africa: Highlights from our first workshop in West Africa - Benin"
 author: "Laurah Ondari"
-date: 2025-12-05
+date: 2025-12-09
 categories: [education, events, Carpentries, CZI]
 image: "benin_group_photo.jpg"
 format:
