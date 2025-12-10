@@ -5,3 +5,4 @@
 .Rhistory
 renv
 .DS_Store
+**/*.quarto_ipynb

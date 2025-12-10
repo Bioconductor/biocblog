@@ -11,7 +11,7 @@ date: 2025-12-12
 categories:
   - Outreachy
   - open science
-image: "featured-image.png"
+image: "featured-image.jpg"
 format:
   html:
     toc: true
@@ -32,13 +32,7 @@ Interns work remotely for 3 months with experienced mentors from open source com
 ### Victoria's Experience
 
 ::: {style="text-align: center;"}
-![](VictoriaPoromon.png){width="300"}
-
-<p style="text-align: center;">
-
-*Victoria Poromon*
-
-</p>
+![Victoria Poromon](VictoriaPoromon.jpg){fig-alt="Photo of Victoria Poromon" width="300"}
 :::
 
 
@@ -67,13 +61,8 @@ I am super thankful to everyone in the Bioconductor community for giving me a ch
 ### Anne-Marie's Experience
 
 ::: {style="text-align: center;"}
-![](Anne-MarieSharp.png){width="300"}
+![Anne-Marie Sharp](Anne-MarieSharp.jpg){fig-alt="Photo of Anne-Marie Sharp" width="300"}
 
-<p style="text-align: center;">
-
-*Anne-Marie Sharp*
-
-</p>
 :::
 
 Hello, I am Anne-Marie Sharp. I am a Biomedical Scientist and an aspiring bioinformatician. 
@@ -106,6 +95,18 @@ So far, collaborating with experienced mentors has enlightened me on how they su
 I am also grateful to the BugSigDB community, to my co-intern [Victoria Poromon](https://github.com/Buraah) who made working together easy and enjoyable, and to all my mentors who made this experience worthwhile for me - [Chloe Mirzayi](https://github.com/cmirzayi), [Svetlana Ugarcina Perovic](https://github.com/SvetlanaUP), [Chioma Onyido](https://github.com/Omabekee), [Kate Rasheed](https://github.com/KateRasheed), and [Divine Aleru](https://github.com/AleruDivine). 
 
 Their patience with my endless questions, their thoughtful feedback on my curations, their willingness to share their expertise transformed me from a complete beginner into a confident contributor. Like the African proverb says, "it takes a village to raise a child" - their unique inputs, support, and guidance have truly been priceless.
+
+
+
+## Upcoming Opportunities
+
+One of the core values of open source is Community, because it ensures projects remain active, relevant, and adaptable over time, preventing stagnation.
+The Bioconductor community is participating in the current Outreachy internship round (December 2025 to March 2026).
+
+If you’re inspired by our journey and would like to contribute to the BugSigDB project, either through Outreachy or simply to share knowledge, feel free to join us on the Bioconductor [Zulip channel](https://chat.bioconductor.org/).
+
+Applications for the next internship round (May 2026 – August 2026) will open in early February 2026, so keep an eye out for announcements [here](https://www.outreachy.org/apply/project-selection/).
+
 
 
 
