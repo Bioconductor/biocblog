@@ -10,7 +10,133 @@
 <atom:link href="https://blog.bioconductor.org/index.xml" rel="self" type="application/rss+xml"/>
 <description>A blog for the Bioconductor community!</description>
 <generator>quarto-1.8.26</generator>
-<lastBuildDate>Mon, 24 Nov 2025 00:00:00 GMT</lastBuildDate>
+<lastBuildDate>Thu, 11 Dec 2025 00:00:00 GMT</lastBuildDate>
+<item>
+  <title>Bioconductor in Africa: Highlights from our first workshop in West Africa - Benin</title>
+  <dc:creator>Laurah Ondari</dc:creator>
+  <link>https://blog.bioconductor.org/posts/2025-12-11-benin-course/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<section id="introduction" class="level2">
+<h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
+<p>From November 17 to 25, 2025, Bioconductor held its first in-person training workshop in West Africa. The workshop was held at the <a href="https://gbios-uac.org/">Genetics, Biotechnology, and Seed Science Unit (GBioS)</a> University of Abomey-Calavi, in Abomey-Calavi, Benin, co-hosted in partnership with the Research Unit in Applied Microbiology and Pharmacology of Natural Substances (URMAPha). The workshop brought together 25 participants, comprising students, early-career researchers, and professionals from across Benin and neighboring countries, such as Senegal and Nigeria, for a week-long, hands-on course designed to strengthen participants’ skills in R, data handling, and Bioconductor workflows for bulk RNA-seq analysis.</p>
+<p>What made this workshop special was not just the curriculum, but the enthusiasm of the participants and the strong sense of community that formed throughout the week. We collected feedback from all 25 participants, and their responses paint a clear picture of both the impact the course had and the opportunities ahead.</p>
+<p><a href="benin_group_photo.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="https://blog.bioconductor.org/posts/2025-12-11-benin-course/benin_group_photo.jpg" class="img-fluid" alt="Participants at the Bioconductor Benin course"></a></p>
+<div class="figure-caption" style="text-align: center; font-size: 90%;">
+<p><em>Benin course participants posing for a group photo at GBioS in the University of Abomey-Calavi, Cotonou, Benin.</em></p>
+</div>
+</section>
+<section id="what-we-taught-and-what-was-learned" class="level2">
+<h2 class="anchored" data-anchor-id="what-we-taught-and-what-was-learned">What we taught and what was learned</h2>
+<p>During the week-long Bioconductor course at the University of Abomey-Calavi, participants were introduced to the foundations of R and RStudio, good coding practices, tidyverse workflows, data handling, and reproducible research, before progressing into hands-on Bioconductor analyses for bulk RNA-seq using DESeq2 and SummarizedExperiment. Participant feedback reflected exactly these learning goals. Many highlighted how practical and hands-on the sessions were, sharing that <em>“the course was very practical with a lot of explanations”</em> and that practicing directly on their laptops made the material easy to apply. The step-by-step guidance on dplyr, tidyverse, ggplot2, and RNA-seq workflows resonated strongly, with one participant noting <em>“the step-by-step explanation about dplyr and tidyverse was highly useful,”</em> while another said they especially appreciated <em>“good step-by-step guidance on RNA-seq data analysis.”</em> Participants repeatedly praised the teaching approach and the supportive environment, noting that <em>“the trainers always came to help us when we had difficulties without judgment,”</em> and <em>“even when we didn’t understand at first, they always took the time to explain clearly.”</em> Others valued the inclusive, interactive format: <em>“the course was inclusive, with a participatory approach,”</em> and <em>“we all practiced directly with the trainers, who were highly attentive to our concerns.”</em> Many also appreciated the organisation and materials, calling the course <em>“well organized,”</em> with <em>“great interaction,”</em> <em>“well-accessible documents and scripts,”</em> and resources they could return to later.</p>
+<p>Agenda and instructor list are on the <a href="https://training.bioconductor.org/workshops/2025-11-Abomey-Calavi/">workshop page</a>.</p>
+<div id="gallery-instructors" class="columns">
+<div class="column" style="width:20%;">
+<p><a href="axelle.jpg" class="lightbox" data-gallery="gallery-instructors"><img src="https://blog.bioconductor.org/posts/2025-12-11-benin-course/axelle.jpg" class="img-fluid" alt="Dr. Axelle Loriot teaching"></a></p>
+</div><div class="column" style="width:20%;">
+<p><a href="amal.jpg" class="lightbox" data-gallery="gallery-instructors"><img src="https://blog.bioconductor.org/posts/2025-12-11-benin-course/amal.jpg" class="img-fluid" alt="Dr Amal Boukteb teaching"></a></p>
+</div><div class="column" style="width:20%;">
+<p><a href="dedeou.jpg" class="lightbox" data-gallery="gallery-instructors"><img src="https://blog.bioconductor.org/posts/2025-12-11-benin-course/dedeou.jpg" class="img-fluid" alt="Dr. Dedeou Tchokponhoue teaching"></a></p>
+</div><div class="column" style="width:20%;">
+<p><a href="kevin.jpg" class="lightbox" data-gallery="gallery-instructors"><img src="https://blog.bioconductor.org/posts/2025-12-11-benin-course/kevin.jpg" class="img-fluid" alt="Kevin Sintondji teaching"></a></p>
+</div><div class="column" style="width:20%;">
+<p><a href="marie.jpg" class="lightbox" data-gallery="gallery-instructors"><img src="https://blog.bioconductor.org/posts/2025-12-11-benin-course/marie.jpg" class="img-fluid" alt="Marie Hidjo teaching"></a></p>
+</div><div class="figure-caption" style="text-align: left; font-size: 90%;">
+<p><em>From left to right: Dr Axelle Loriot, Dr Amal Boukteb, Dr Dedeou Tchokponhoue, Kevin Sintondji, and Marie Hidjo teaching at the Benin course.</em></p>
+</div>
+</div>
+<p><a href="DSC_4981.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-7"><img src="https://blog.bioconductor.org/posts/2025-12-11-benin-course/DSC_4981.jpg" class="img-fluid" alt="Participants learning at the Bioconductor Benin course"></a></p>
+<div class="figure-caption" style="text-align: center; font-size: 90%;">
+<p><em>Benin course participants engaged in a hands-on session.</em></p>
+</div>
+</section>
+<section id="language-accessibility-and-bilingual-support" class="level2">
+<h2 class="anchored" data-anchor-id="language-accessibility-and-bilingual-support">Language accessibility and bilingual support</h2>
+<p>This was the first Bioconductor Africa course where French translations of introductory materials were provided. Participants strongly appreciated having French-speaking instructors available throughout the week. Over half of the attendees (52%) found this support very helpful, with another 32% rating it helpful, emphasising that bilingual facilitation made it easier to follow explanations, ask questions, and stay engaged. While most participants felt comfortable with English as the primary teaching language (56% reported that English was sufficient), a significant portion noted that French support enhanced their understanding of the material. The French-translated Intro to R materials were also well received: one-third of participants used them during the workshop, and another third planned to consult them later.</p>
+<p>Link to French translated materials <a href="https://bioconductor-translations.github.io/bioc-intro-fr/">here</a></p>
+<div id="gallery-french" class="columns">
+<div class="column" style="width:50%;">
+<p><a href="french1.png" class="lightbox" data-gallery="gallery-french"><img src="https://blog.bioconductor.org/posts/2025-12-11-benin-course/french1.png" class="img-fluid" alt="French learning"></a></p>
+</div><div class="column" style="width:50%;">
+<p><a href="french2.png" class="lightbox" data-gallery="gallery-french"><img src="https://blog.bioconductor.org/posts/2025-12-11-benin-course/french2.png" class="img-fluid" alt="French learning"></a></p>
+</div><div class="figure-caption" style="text-align: center; font-size: 90%;">
+<p><em>The impact of French-translated materials and French-speaking instructors at the Benin workshop.</em></p>
+</div>
+</div>
+</section>
+<section id="highlights" class="level2">
+<h2 class="anchored" data-anchor-id="highlights">Highlights</h2>
+<p>GBioS and URMAPha graciously offered us a tour of their laboratory facilities, providing the instructors and participants with an opportunity to learn more about the impactful research they lead, ranging from safeguarding seed diversity to identifying pharmaceutically active compounds.</p>
+<p>Below is a photo of the instructors, hosts, and participants taken after the lab tours.</p>
+<img src="https://blog.bioconductor.org/posts/2025-12-11-benin-course/afterlabtour.jpg" class="img-fluid" alt="Participants after the GBioS and URMAPha lab tours">
+<div class="figure-caption" style="text-align: center; font-size: 90%;">
+<p><em>Benin course participants posing outside the GBioS building at the University of Abomey-Calavi after touring GBioS and URMAPha labs.</em></p>
+</div>
+<p>To close the workshop, the team also hosted a beautiful certificate ceremony, creating a memorable and celebratory end to an impactful week.</p>
+<div id="gallery-certificates" class="columns">
+<div class="column" style="width:50%;">
+<p><a href="men_certificates.jpg" class="lightbox" data-gallery="gallery-certificates"><img src="https://blog.bioconductor.org/posts/2025-12-11-benin-course/men_certificates.jpg" class="img-fluid" alt="Male participants holding their certificates"></a></p>
+</div><div class="column" style="width:50%;">
+<p><a href="women_certificates.jpg" class="lightbox" data-gallery="gallery-certificates"><img src="https://blog.bioconductor.org/posts/2025-12-11-benin-course/women_certificates.jpg" class="img-fluid" alt="Female participants holding their certificates"></a></p>
+</div><div class="figure-caption" style="text-align: center; font-size: 90%;">
+<p><em>Participants holding their certificates.</em></p>
+</div>
+</div>
+</section>
+<section id="the-impact-bioconductor-has-had-across-east-and-west-africa-participants" class="level2">
+<h2 class="anchored" data-anchor-id="the-impact-bioconductor-has-had-across-east-and-west-africa-participants">The impact Bioconductor has had across East and West Africa Participants</h2>
+<p>From surveys conducted across Kenya, Ethiopia, and Benin, 100% of participants reported that they would recommend the Bioconductor training course to colleagues, indicating a strong and meaningful impact. The impact was also evident in skills development: every participant reported a significant improvement in their R abilities. In Benin, 60% of the participants rated their learning gains as “very significant” (scale 5) and 40% as “significant” (scale 4), a clear indication that the training effectively strengthened practical, hands-on bioinformatics skills.</p>
+<img src="https://blog.bioconductor.org/posts/2025-12-11-benin-course/feedback-twocols-bycountry.png" class="img-fluid">
+<div class="figure-caption" style="text-align: center; font-size: 90%;">
+<p><em>Participant feedback summary across workshops.</em></p>
+</div>
+</section>
+<section id="looking-ahead-what-participants-want" class="level2">
+<h2 class="anchored" data-anchor-id="looking-ahead-what-participants-want">Looking ahead: what participants want</h2>
+<p>Across Kenya, Ethiopia, and Benin, participants expressed a strong interest in more advanced and diverse bioinformatics training that builds on the foundations of R and RNA-seq. The most recurring areas of interest were:</p>
+<ul>
+<li><p><strong>Advanced transcriptomics:</strong> advanced RNA-seq, transcript-level workflows, and single-cell RNA-seq.</p></li>
+<li><p><strong>Genomics &amp; population genetics:</strong> variant calling, SNP/CNV analysis, and GWAS/genomic selection.</p></li>
+<li><p><strong>NGS &amp; sequence analysis:</strong> raw sequence handling, QC, genome assembly, and phylogenetics.</p></li>
+<li><p><strong>Metagenomics &amp; microbiome analysis using Bioconductor tools.</strong></p></li>
+<li><p><strong>Multi-omics integration:</strong> combining genomics, transcriptomics, proteomics, and metabolomics.</p></li>
+<li><p><strong>Computational skills:</strong> Linux basics, command-line workflows, and version control (Git/GitHub).</p></li>
+<li><p><strong>Reproducible research &amp; visualisation:</strong> R Markdown/Quarto and more advanced data visualisation.</p></li>
+</ul>
+<p>We’re exploring ways to make Bioconductor training more accessible, including webinars and other online formats. One example is our new online seminar series, which recently featured a talk on <a href="https://www.linkedin.com/feed/update/urn:li:activity:7395141225655447552">“Deep-learning-based Gene Perturbation Effect Prediction Does Not Yet Outperform Simple Linear Baselines”</a> and attracted participants who attended our workshops in Africa this year.</p>
+</section>
+<section id="collaborators-acknowledgements" class="level2">
+<h2 class="anchored" data-anchor-id="collaborators-acknowledgements">Collaborators &amp; Acknowledgements</h2>
+<p>This workshop was co-hosted by GBioS and URMAPha. We are deeply grateful for their leadership and commitment to strengthening bioinformatics capacity in Benin. Notably, there was a special link between the Kenya and Benin workshops: the Kenya training went so well that one of its participants, Abdou Mouizz Salaou, helped bring Bioconductor training to Benin, further expanding the impact of Bioconductor capacity-building efforts across the region.</p>
+<p>The event was co-organised with the International Institute of Tropical Agriculture (IITA) and the University of Limerick, with additional support from Bioconductor (CZI EOSS).</p>
+<p>Our organising team: Abdou Mouizz Salaou (GBioS, University of Abomey-Calavi), Aristide Carlos Houdegbe (GBioS, University of Abomey-Calavi), Prof.&nbsp;Enoch G. Achigan-Dako (GBioS, University of Abomey-Calavi), Prof.&nbsp;Victorien Dougnon (URMAPha, University of Abomey-Calavi), Trushar Shah (International Institute of Tropical Agriculture), Laurah Ondari (International Institute of Tropical Agriculture), Maria Doyle (University of Limerick / Bioconductor).</p>
+</section>
+<section id="get-involved" class="level2">
+<h2 class="anchored" data-anchor-id="get-involved">Get involved</h2>
+<ul>
+<li><a href="https://training.bioconductor.org/workshops/2025-11-Abomey-Calavi/">Workshop page</a></li>
+<li><a href="https://training.bioconductor.org">About Bioconductor training</a></li>
+<li><a href="https://training.bioconductor.org/workshops/2025-08-Addis-Ababa/index.html#%F0%9F%8C%8D-join-the-bioconductor-africa-community">Join the Bioconductor Africa mailing list</a> or #bioc_africa channel in <a href="https://chat.bioconductor.org">Bioconductor Chat</a></li>
+</ul>
+
+
+</section>
+
+<p>
+© 2025 Bioconductor. Content is published under <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons CC-BY-4.0 License</a> for the text and <a href="https://opensource.org/licenses/BSD-3-Clause">BSD 3-Clause License</a> for any code. | <a href="https://www.r-bloggers.com">R-Bloggers</a>
+</p> ]]></description>
+  <category>education</category>
+  <category>events</category>
+  <category>Carpentries</category>
+  <category>CZI</category>
+  <guid>https://blog.bioconductor.org/posts/2025-12-11-benin-course/</guid>
+  <pubDate>Thu, 11 Dec 2025 00:00:00 GMT</pubDate>
+  <media:content url="https://blog.bioconductor.org/posts/2025-12-11-benin-course/benin_group_photo.jpg" medium="image" type="image/jpeg"/>
+</item>
 <item>
   <title>Bioconductor in Africa: Ethiopia’s First In-Person Course</title>
   <dc:creator>Maria Doyle</dc:creator>
@@ -1343,109 +1469,6 @@ To support inclusivity, Physalia will offer two free seats per eligible Biocondu
   <guid>https://blog.bioconductor.org/posts/2025-06-20-physalia-collaboration/</guid>
   <pubDate>Fri, 20 Jun 2025 00:00:00 GMT</pubDate>
   <media:content url="https://blog.bioconductor.org/posts/2025-06-20-physalia-collaboration/bioc-physalia.jpg" medium="image" type="image/jpeg"/>
-</item>
-<item>
-  <title>Bioconductor is Moving from Slack to Zulip for Community Chat</title>
-  <dc:creator>Maria Doyle</dc:creator>
-  <link>https://blog.bioconductor.org/posts/2025-05-29-slack-to-zulip/</link>
-  <description><![CDATA[ 
-
-
-
-
-
-<p>Bioconductor’s community chat is moving from Slack to <strong>Zulip</strong> on <strong>Monday 2 June 2025</strong>. The transition ensures long-term access to discussions and better reflects our open-source values.</p>
-<hr>
-<section id="why-were-moving-to-zulip" class="level2">
-<h2 class="anchored" data-anchor-id="why-were-moving-to-zulip">Why We’re Moving to Zulip</h2>
-<p>Our Slack Pro subscription ends on Sunday 1 June. Switching to the free tier would mean losing older messages — including valuable conversations, decisions, and shared knowledge. To preserve this history and stay true to our open principles, we’re migrating to <a href="https://zulip.com/">Zulip</a>.</p>
-<p>Zulip is already trusted by many open-source and academic communities. Its structured, topic-based approach makes it easier to follow and return to discussions — a good match for Bioconductor’s distributed, collaborative nature.</p>
-<p>Thanks to Zulip’s <a href="https://zulip.com/for/open-source/">open-source sponsorship programme</a>, Bioconductor receives access to the Standard plan at no cost, enabling high-quality, sustainable communication.</p>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Note
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>To help preserve Bioconductor’s history, messages from public Slack channels will be migrated to Zulip.</p>
-<p>We’re also exploring ways to improve long-term access to community discussions — such as public-read Zulip channels or archiving — in line with open-source norms. Any future changes will be clearly communicated and shaped by community input.</p>
-<p>Questions? Contact <em>maria.doyle [at] ul [dot] ie</em>.</p>
-</div>
-</div>
-<hr>
-</section>
-<section id="why-zulip-is-a-good-fit" class="level2">
-<h2 class="anchored" data-anchor-id="why-zulip-is-a-good-fit">Why Zulip is a Good Fit</h2>
-<ul>
-<li><strong>Structured conversations</strong>: Topics within channels keep threads focused and easy to revisit.<br>
-</li>
-<li><strong>Full history</strong>: No 90-day limit — all messages remain accessible.<br>
-</li>
-<li><strong>Open source</strong>: Zulip aligns with Bioconductor’s mission and values.<br>
-</li>
-<li><strong>Markdown and LaTeX</strong>: Ideal for technical and academic exchanges.</li>
-</ul>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="https://blog.bioconductor.org/posts/2025-05-29-slack-to-zulip/bioconductor-zulip-screenshot.png" class="img-fluid figure-img" style="width:70.0%"></p>
-<figcaption>Screenshot of Bioconductor’s Zulip space in testing. Channels are shown on the left, with topic-based threads in the <code>#general</code> channel.</figcaption>
-</figure>
-</div>
-<hr>
-</section>
-<section id="how-to-get-started" class="level2">
-<h2 class="anchored" data-anchor-id="how-to-get-started">How to Get Started</h2>
-<ol type="1">
-<li><strong>Final Slack export</strong>: We’ll export public Slack data on <strong>Friday 30 May</strong>.<br>
-</li>
-<li><strong>Join Zulip</strong>:
-<ul>
-<li>If you used your email on Bioconductor Slack, you’ll receive an invite.</li>
-<li>No need to create a new account — click “Forgot your password?” to set it.</li>
-</ul></li>
-<li><strong>New to Bioconductor Chat?</strong> Join us from <strong>Monday 2 June</strong> at <a href="https://chat.bioconductor.org">https://chat.bioconductor.org</a>.<br>
-</li>
-<li><strong>Prefer using an app?</strong> Zulip is available for <a href="https://zulip.com/apps/">desktop and mobile</a> on all major platforms.</li>
-</ol>
-<hr>
-</section>
-<section id="tips-for-using-zulip" class="level2">
-<h2 class="anchored" data-anchor-id="tips-for-using-zulip">Tips for Using Zulip</h2>
-<ul>
-<li><strong>Start a new topic</strong> for each subject — it keeps conversations clear.<br>
-→ <a href="https://zulip.com/help/introduction-to-topics">Intro to topics</a></li>
-<li><strong>Admins can help</strong> move or rename threads to keep things tidy.</li>
-<li><strong>Use Markdown and LaTeX</strong> for formatting and equations.</li>
-</ul>
-<p>💡 Want more tips? Explore our community-sourced <a href="https://docs.google.com/document/d/1BY_eWPRE4jvUcw1Uzem_obn6ryN7tmApWfEU0lxP63o/edit?usp=sharing">Zulip Tips &amp; Tricks for Bioconductor</a> guide.</p>
-<hr>
-</section>
-<section id="whats-next" class="level2">
-<h2 class="anchored" data-anchor-id="whats-next">What’s Next</h2>
-<ul>
-<li><strong>Slack retires on 1 June</strong>: It will revert to the free tier. A read-only archive may remain accessible for a limited time.<br>
-</li>
-<li><strong>Zulip launches on 2 June</strong>: You can join anytime — but we recommend getting set up early to stay in the loop.<br>
-</li>
-<li><strong>Need help or have feedback?</strong> Post in <code>#general</code> on Zulip or email <em>maria.doyle [at] ul [dot] ie</em>.</li>
-</ul>
-<p>We hope you’ll find Zulip a welcoming space — built for open communities like ours.</p>
-<p><em>Edited in June 2025: Added link to community-sourced Tips doc and updated link to Bioconductor Zulip.</em></p>
-
-
-</section>
-
-<p>
-© 2025 Bioconductor. Content is published under <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons CC-BY-4.0 License</a> for the text and <a href="https://opensource.org/licenses/BSD-3-Clause">BSD 3-Clause License</a> for any code. | <a href="https://www.r-bloggers.com">R-Bloggers</a>
-</p> ]]></description>
-  <category>bioconductor</category>
-  <guid>https://blog.bioconductor.org/posts/2025-05-29-slack-to-zulip/</guid>
-  <pubDate>Thu, 29 May 2025 00:00:00 GMT</pubDate>
-  <media:content url="https://blog.bioconductor.org/posts/2025-05-29-slack-to-zulip/zulip-org-logo.svg" medium="image" type="image/svg+xml"/>
 </item>
 </channel>
 </rss>
