@@ -142,7 +142,7 @@ Across Kenya, Ethiopia, and Benin, participants expressed a strong interest in m
 
 * **Reproducible research & visualisation:** R Markdown/Quarto and more advanced data visualisation.
 
-We’re exploring ways to make Bioconductor training more accessible, including webinars and other online formats. One example is our new online seminar series, which recently featured a talk on [“Deep-learning-based Gene Perturbation Effect Prediction Does Not Yet Outperform Simple Linear Baselines”](https://www.linkedin.com/feed/update/urn:li:activity:7395141225655447552) and attracted participants who attended our workshops in Africa this year.
+We’re exploring ways to make Bioconductor training more accessible, including webinars and other online formats. One example is our new online seminar series, which recently featured a talk on [“Deep-learning-based Gene Perturbation Effect Prediction Does Not Yet Outperform Simple Linear Baselines”](https://bioconductor.org/help/seminar-series/) and attracted participants who attended our workshops in Africa this year.
 
 
 ## Collaborators & Acknowledgements
