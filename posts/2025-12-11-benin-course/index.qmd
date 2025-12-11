@@ -115,7 +115,15 @@ To close the workshop, the team also hosted a beautiful certificate ceremony, cr
 
 :::
 
-## The impact Bioconductor has had across East and West Africa Participants
+## Carpentries Instructor Training and Capacity Building
+
+Through support from [the CZI EOSS6 grant](https://blog.bioconductor.org/posts/2024-07-12-czi-eoss6-grants/), two researchers from local institutions in Benin, Kevin Sintondji (URMAPha) and Dédéou Tchokponhoue (GBioS), are participating in Carpentries instructor training to become certified instructors. This initiative is helping build local capacity to deliver high-quality training and support reproducible research practices within their teams and the wider community. As they shared:
+*"The Carpentries training has been extremely valuable for strengthening our skills in data management and reproducible analysis. It helped us adopt more structured workflows, improve collaboration within our teams, and apply these methods directly in our AMR and environmental microbiology projects. This capacity building is already having a concrete impact on the quality of our research."*
+
+In addition to the Carpentries training supported by the CZI EOSS6 grant, two of the other instructors at the Benin workshop, Marie Hidjo (Benin) and Amal Boukteb (Tunisia), were previously certified through the Bioconductor Carpentries program funded by the CZI EOSS4 grant (see [summary blog post](https://blog.bioconductor.org/posts/2025-02-28-carpentries-update/)). This workshop was also an opportunity for these instructors to teach locally and share their expertise within the African bioinformatics community.
+
+
+## Impact of Bioconductor Training across East and West Africa
 
 From surveys conducted across Kenya, Ethiopia, and Benin, 100% of participants reported that they would recommend the Bioconductor training course to colleagues, indicating a strong and meaningful impact. The impact was also evident in skills development: every participant reported a significant improvement in their R abilities. In Benin, 60% of the participants rated their learning gains as “very significant” (scale 5) and 40% as “significant” (scale 4), a clear indication that the training effectively strengthened practical, hands-on bioinformatics skills.
 
@@ -149,7 +157,7 @@ We’re exploring ways to make Bioconductor training more accessible, including 
 
 This workshop was co-hosted by GBioS and URMAPha. We are deeply grateful for their leadership and commitment to strengthening bioinformatics capacity in Benin. Notably, there was a special link between the Kenya and Benin workshops: the Kenya training went so well that one of its participants, Abdou Mouizz Salaou, helped bring Bioconductor training to Benin, further expanding the impact of Bioconductor capacity-building efforts across the region.
 
-The event was co-organised with the International Institute of Tropical Agriculture (IITA) and the University of Limerick, with additional support from Bioconductor (CZI EOSS).
+The event was co-organised with the International Institute of Tropical Agriculture (IITA) and the University of Limerick, with funding support from [the Chan Zuckerberg Initiative (CZI) EOSS6 grant](https://blog.bioconductor.org/posts/2024-07-12-czi-eoss6-grants/).
 
 Our organising team: Abdou Mouizz Salaou (GBioS, University of Abomey-Calavi), Aristide Carlos Houdegbe (GBioS, University of Abomey-Calavi), Prof. Enoch G. Achigan-Dako (GBioS, University of Abomey-Calavi), Prof. Victorien Dougnon (URMAPha, University of Abomey-Calavi), Trushar Shah (International Institute of Tropical Agriculture), Laurah Ondari (International Institute of Tropical Agriculture), Maria Doyle (University of Limerick / Bioconductor).
 
