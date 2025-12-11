@@ -10,7 +10,105 @@
 <atom:link href="https://blog.bioconductor.org/index.xml" rel="self" type="application/rss+xml"/>
 <description>A blog for the Bioconductor community!</description>
 <generator>quarto-1.8.26</generator>
-<lastBuildDate>Thu, 11 Dec 2025 00:00:00 GMT</lastBuildDate>
+<lastBuildDate>Fri, 12 Dec 2025 00:00:00 GMT</lastBuildDate>
+<item>
+  <title>Outreachy June 2025 Interns with Bioconductor</title>
+  <dc:creator>Anne-Marie Sharp</dc:creator>
+  <dc:creator>Victoria Poromon</dc:creator>
+  <link>https://blog.bioconductor.org/posts/2025-12-12-outreachy-june25/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<section id="introduction" class="level2">
+<h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
+<p>To a beginner, open source can be one of the best pathways into a fulfilling tech career. It not only provides access to source codes but also connects you with a global community of people from diverse backgrounds and skill sets. Together, contributors share ideas, collaborate on projects, and continuously improve the software. This collective effort makes open source projects more reliable, innovative, and adaptable, as many perspectives shape their growth. These values strongly align with the mission of the Outreachy internship, which champions diversity, inclusivity, and creating opportunities for people from underrepresented groups in tech to contribute meaningfully to open source.</p>
+</section>
+<section id="outreachy" class="level2">
+<h2 class="anchored" data-anchor-id="outreachy">Outreachy</h2>
+<p><a href="https://www.outreachy.org">Outreachy</a> is a paid, remote internship program whose main goal is to support people from groups underrepresented in tech. They help newcomers to free software and open source make their first contributions.</p>
+<p>Interns work remotely for 3 months with experienced mentors from open source communities, gaining hands-on experience, building real-world skills, and contributing to meaningful projects. They receive guidance, feedback, and the support of a diverse and welcoming community.</p>
+</section>
+<section id="our-journeys" class="level2">
+<h2 class="anchored" data-anchor-id="our-journeys">Our Journeys</h2>
+<section id="victorias-experience" class="level3">
+<h3 class="anchored" data-anchor-id="victorias-experience">Victoria’s Experience</h3>
+<div style="text-align: center;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://blog.bioconductor.org/posts/2025-12-12-outreachy-june25/VictoriaPoromon.jpg" class="img-fluid figure-img" alt="Photo of Victoria Poromon" width="300"></p>
+<figcaption>Victoria Poromon</figcaption>
+</figure>
+</div>
+</div>
+<p>Hello, my name is Victoria Poromon, and I am a Microbiology graduate from the University of Port Harcourt, Nigeria. I have been contributing to the <a href="https://bugsigdb.org/Main_Page">BugSigDB</a> project since March 2024, and you can read about my experience as an Outreachy June2025 intern <a href="https://burah.hashnode.dev/outreachy-contribution-stage-my-experience">here</a>.</p>
+<p>Over the last few months, I’ve completed individual tasks, collaborated with fellow contributors and my co-intern, participated in peer reviews, written several blog posts, including one I’m especially proud of: the <a href="https://burah.hashnode.dev/step-by-step-guide-to-contributing-to-bugsigdb">Step-by-step Guide to contributing to BugSigDB</a>. More recently, I even took my first step into co-mentoring!</p>
+<p>Each encounter and milestone has taught me something new, broadened my perspective, and supported my personal and professional growth.</p>
+<p>Here are the lessons that have stayed with me:</p>
+<ul>
+<li><strong>Take your time</strong>: I’ve always believed in not rushing important work, and this project reinforced that mindset. Because it demands careful attention to detail and accuracy, moving too quickly can easily make you overlook what truly matters.</li>
+<li><strong>Collaborate, not compete</strong>: It’s natural for others to know things I don’t, but what isn’t acceptable is choosing to remain ignorant. Collaboration has allowed me to both learn from others and share my own knowledge in return.</li>
+<li><strong>Know when to ask questions</strong>: If you’ve been stuck on a task for hours despite troubleshooting and research, it’s the perfect time to ask your mentors for guidance. Doing so demonstrates curiosity, helps you overcome challenges more efficiently, and often leads to deeper learning.</li>
+<li><strong>Know when to ask for help</strong>: I’ve learned from my mentor, Svetlana, that asking for help is a valuable skill. It is not a sign of weakness, but a demonstration of strength, self-awareness, and a willingness to learn.</li>
+<li><strong>Always speak kindly</strong>: It’s not enough to simply know how to communicate; it’s equally important to do so kindly and with consideration for others. As both a contributor and co-mentor, I’ve come to value this quality deeply. Thoughtful communication not only shows respect but also helps create a safe and supportive environment.</li>
+</ul>
+<p>My journey with the Bioconductor community has been guided every step of the way, from the big things, like reviewing my tasks, teaching me new skills, and offering guidance on my job applications, to the small details, like dotting my i’s and placing my commas correctly. Every day, I’m reminded why I chose to stay.</p>
+<p>By the end of my internship (June 2025 cohort), I not only strengthened my technical abilities but also gained confidence, built a meaningful network, and laid a solid foundation for my continued involvement in open source. You can find all my contributions <a href="https://bugsigdb.org/Special:Contributions/Victoria">here</a>.</p>
+<p>I am super thankful to everyone in the Bioconductor community for giving me a chance, especially to my mentors <a href="https://github.com/SvetlanaUP">Svetlana</a>, <a href="https://github.com/cmirzayi">Chloe</a>, and <a href="https://github.com/KateRasheed">Kate</a>, for literally holding my hand every step of the way and my brilliant co-intern <a href="https://github.com/annemarie-sharp">Anne-Marie Sharp</a>. I’ve grown tremendously and become a better contributor because I learned from the absolutely best.</p>
+</section>
+<section id="anne-maries-experience" class="level3">
+<h3 class="anchored" data-anchor-id="anne-maries-experience">Anne-Marie’s Experience</h3>
+<div style="text-align: center;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://blog.bioconductor.org/posts/2025-12-12-outreachy-june25/Anne-MarieSharp.jpg" class="img-fluid figure-img" alt="Photo of Anne-Marie Sharp" width="300"></p>
+<figcaption>Anne-Marie Sharp</figcaption>
+</figure>
+</div>
+</div>
+<p>Hello, I am Anne-Marie Sharp. I am a Biomedical Scientist and an aspiring bioinformatician. In late 2024, <a href="https://annemariesharp.wordpress.com/2025/06/06/from-curiosity-to-contribution-a-new-chapter-with-outreachy/">my curiosity</a> led me to learn about the <a href="https://www.outreachy.org/">Outreachy</a> internship for the first time and then to the Bioconductor project - Microbiome Study Curation <a href="https://www.bugsigdb.org/">(BugSigDB)</a> where I contributed as an intern in the June 2025 Outreachy cohort.</p>
+<p>I was completely new to the world of open source and it took extra effort for me to catch on quickly to not just the different online communication platforms but also to the art or rather science of microbiome study curation; but my curiosity and passion for science kept me going during the Outreachy contribution phase. I was also excited about the new skills I was learning such as data-curation, analysis and literature review. And I was fascinated by the collaboration within the community. Thanks to this collaboration, I was also able to learn fast as I freely asked questions and got answers from mentors and fellow-curators, and I often teamed up with other curators which gave me different perspectives and insights on curation.</p>
+<p>As an avid learner, I was and I still am excited that there is always something new to learn working on the project. Whether in the core microbiome science, in improving my R-programming language skill, in curation itself or even in improving my soft skills. Indeed, it only gets better.</p>
+<section id="my-contributions" class="level4">
+<h4 class="anchored" data-anchor-id="my-contributions">My Contributions</h4>
+<p>During the contribution and internship phase, I worked on over 50 <a href="https://github.com/waldronlab/BugSigDBcuration/issues?q=is%3Aissue%20assignee%3Aannemarie-sharp">issues</a> and <a href="https://bugsigdb.org/Special:Contributions/Anne-mariesharp">study curations</a>, these involved:</p>
+<ul>
+<li>curating published microbiome studies mainly regarding eye health conditions such as glaucoma, age related macular degeneration, etc.,</li>
+<li>finalizing incomplete curations,</li>
+<li>reviewing existing curations, and</li>
+<li>handling R-related tasks such as updating unit tests and fixing errors in codes.</li>
+</ul>
+<p>I also blogged frequently about my experience: <a href="https://annemariesharp.wordpress.com/category/outreachy-blog/">https://annemariesharp.wordpress.com/category/outreachy-blog/</a></p>
+<p>I am particularly proud of the work I have done in curating microbiome studies on vision threatening conditions such as glaucoma, age related macular degeneration and acute anterior uveitis. Integrating these underrepresented ocular microbiome findings into BugSigDB improves data discoverability, enables structured querying, and enhances cross-study reuse. And I plan to continue with this great work!</p>
+</section>
+<section id="so-far" class="level4">
+<h4 class="anchored" data-anchor-id="so-far">So far</h4>
+<p>Worthy to mention, that I am currently a co-mentor for the December 2025 Outreachy cohort! This transition from intern to co-mentor has been exciting. I now guide new contributors through the same journey I once took - from understanding GitHub workflows to mastering the intricacies of microbiome study curation.</p>
+<p>So far, collaborating with experienced mentors has enlightened me on how they support and sustain the community and I am grateful for this opportunity to learn and to also give back. I am also grateful to the BugSigDB community, to my co-intern <a href="https://github.com/Buraah">Victoria Poromon</a> who made working together easy and enjoyable, and to all my mentors who made this experience worthwhile for me - <a href="https://github.com/cmirzayi">Chloe Mirzayi</a>, <a href="https://github.com/SvetlanaUP">Svetlana Ugarcina Perovic</a>, <a href="https://github.com/Omabekee">Chioma Onyido</a>, <a href="https://github.com/KateRasheed">Kate Rasheed</a>, and <a href="https://github.com/AleruDivine">Divine Aleru</a>.</p>
+<p>Their patience with my endless questions, their thoughtful feedback on my curations, their willingness to share their expertise transformed me from a complete beginner into a confident contributor. Like the African proverb says, “it takes a village to raise a child” - their unique inputs, support, and guidance have truly been priceless.</p>
+</section>
+</section>
+</section>
+<section id="upcoming-opportunities" class="level2">
+<h2 class="anchored" data-anchor-id="upcoming-opportunities">Upcoming Opportunities</h2>
+<p>One of the core values of open source is Community, because it ensures projects remain active, relevant, and adaptable over time, preventing stagnation. The Bioconductor community is participating in the current Outreachy internship round (December 2025 to March 2026).</p>
+<p>If you’re inspired by our journey and would like to contribute to the BugSigDB project, either through Outreachy or simply to share knowledge, feel free to join us on the Bioconductor <a href="https://chat.bioconductor.org/">Zulip channel</a>.</p>
+<p>Applications for the next internship round (May 2026 – August 2026) will open in early February 2026, so keep an eye out for announcements <a href="https://www.outreachy.org/apply/project-selection/">here</a>.</p>
+
+
+</section>
+
+<p>
+© 2025 Bioconductor. Content is published under <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons CC-BY-4.0 License</a> for the text and <a href="https://opensource.org/licenses/BSD-3-Clause">BSD 3-Clause License</a> for any code. | <a href="https://www.r-bloggers.com">R-Bloggers</a>
+</p> ]]></description>
+  <category>Outreachy</category>
+  <category>open science</category>
+  <guid>https://blog.bioconductor.org/posts/2025-12-12-outreachy-june25/</guid>
+  <pubDate>Fri, 12 Dec 2025 00:00:00 GMT</pubDate>
+  <media:content url="https://blog.bioconductor.org/posts/2025-12-12-outreachy-june25/featured-image.jpg" medium="image" type="image/jpeg"/>
+</item>
 <item>
   <title>Bioconductor in Africa: Highlights from our first workshop in West Africa - Benin</title>
   <dc:creator>Laurah Ondari</dc:creator>
@@ -1426,54 +1524,6 @@ font-style: inherit;">TRUE</span>)</span></code></pre></div></div></li>
   <guid>https://blog.bioconductor.org/posts/2025-07-03-bioc-to-galaxy/</guid>
   <pubDate>Thu, 03 Jul 2025 00:00:00 GMT</pubDate>
   <media:content url="https://blog.bioconductor.org/posts/2025-07-03-bioc-to-galaxy/bioc-galaxy-image.jpeg" medium="image" type="image/jpeg"/>
-</item>
-<item>
-  <title>Bioconductor Training partners with Physalia Courses</title>
-  <dc:creator>Maria Doyle, Charlotte Soneson, and Laurent Gatto</dc:creator>
-  <link>https://blog.bioconductor.org/posts/2025-06-20-physalia-collaboration/</link>
-  <description><![CDATA[ 
-
-
-
-
-
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="https://blog.bioconductor.org/posts/2025-06-20-physalia-collaboration/bioc-physalia.jpg" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:60.0%" alt="Bioconductor and Physalia logos"></p>
-</figure>
-</div>
-<p>We’re pleased to announce a new collaboration between the <a href="https://training.bioconductor.org/">Bioconductor Training Committee</a> and <a href="https://www.physalia-courses.org/">Physalia Courses</a>, aimed at expanding access to high-quality training in bioinformatics and computational biology.</p>
-<p>This partnership builds on shared goals around education, community engagement, and inclusivity. It was shaped through early discussions within the Bioconductor community, including contributions from Fabricio Almeida-Silva, a Bioconductor community member who has taught several Physalia courses. We’re also grateful to Carlo Pecoraro, Director of Physalia Courses, who welcomed the idea of a partnership and helped bring it to fruition.</p>
-<p>You can explore Bioconductor–Physalia courses on our <a href="https://training.bioconductor.org/collaborations/physalia">collaboration page</a>.</p>
-<section id="what-this-collaboration-looks-like" class="level2">
-<h2 class="anchored" data-anchor-id="what-this-collaboration-looks-like">What This Collaboration Looks Like</h2>
-<p><strong>Instructor Collaboration</strong><br>
-The Training Committee will identify and support instructors to co-develop and deliver courses on topics of shared interest. Some of these may be newly designed courses to address emerging needs in the community.</p>
-<p><strong>Joint Visibility</strong><br>
-Co-branded Bioconductor/Physalia courses will be promoted through Bioconductor’s communication channels and featured at events such as the <a href="https://eurobioc2025.bioconductor.org/">EuroBioC2025 conference</a>, where the collaboration will also be highlighted in a lightning talk.</p>
-<p><strong>Support and Sponsorship</strong><br>
-Physalia will manage course logistics and administration, and will also sponsor Bioconductor events such as EuroBioC to help amplify our shared mission.</p>
-<p><strong>Impact Tracking</strong><br>
-Physalia will share course participation and outcome data with the Training Committee to help assess the reach and effectiveness of our joint efforts.</p>
-<p><strong>Expanding Access</strong><br>
-To support inclusivity, Physalia will offer two free seats per eligible Bioconductor course to participants from low- or middle-income countries. These seats will be allocated by the Bioconductor Training Committee. Researchers based in eligible countries are warmly encouraged to <a href="https://forms.gle/3XEJJaKizJvuX9tu6">apply here</a> for a free place. This is a great opportunity to gain hands-on training and connect with the broader bioinformatics community.</p>
-</section>
-<section id="looking-ahead" class="level2">
-<h2 class="anchored" data-anchor-id="looking-ahead">Looking Ahead</h2>
-<p>The collaboration with Physalia has officially begun, marked by their sponsorship of the <a href="https://eurobioc2025.bioconductor.org/">EuroBioC2025 conference</a>. This partnership will run for one year, with the option to renew. We’re looking forward to seeing how it helps us reach more learners, support more researchers, and strengthen the global bioinformatics community.</p>
-<p>We’ll be sharing more course announcements soon and we hope you’ll join us in spreading the word or getting involved.</p>
-
-
-</section>
-
-<p>
-© 2025 Bioconductor. Content is published under <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons CC-BY-4.0 License</a> for the text and <a href="https://opensource.org/licenses/BSD-3-Clause">BSD 3-Clause License</a> for any code. | <a href="https://www.r-bloggers.com">R-Bloggers</a>
-</p> ]]></description>
-  <category>education</category>
-  <category>collaborations</category>
-  <guid>https://blog.bioconductor.org/posts/2025-06-20-physalia-collaboration/</guid>
-  <pubDate>Fri, 20 Jun 2025 00:00:00 GMT</pubDate>
-  <media:content url="https://blog.bioconductor.org/posts/2025-06-20-physalia-collaboration/bioc-physalia.jpg" medium="image" type="image/jpeg"/>
 </item>
 </channel>
 </rss>
