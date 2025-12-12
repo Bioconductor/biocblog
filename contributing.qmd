@@ -2,45 +2,84 @@
 title: "Contributing"
 ---
 
-We very much appreciate contributions to the Bioconductor community blog from the broader community.
-If you are interested in publishing some of your own work or insights, we'd love to hear from you!
+We very much appreciate contributions to the Bioconductor community blog from the broader community. If you are interested in publishing some of your own work or insights, we'd love to hear from you!
 
 # Requirements
 
-There are a few minimum requirements for a blog post to be considered for acceptance (adapted from [SciPy](https://blog.scientific-python.org/about/submit/)). 
+There are a few minimum requirements for a blog post to be considered for acceptance (adapted from [SciPy](https://blog.scientific-python.org/about/submit/)).
 
-* The main subject must relate to Bioconductor.
-* Content is published under Creative Common CC-BY-4.0 License for the text and BSD 3-Clause License for any code.
-* You have the right to publish any images included. 
-* Images must be compressed using a tool like `pngquant`.
-* Images must contain alt text for accessibility.
-* The post and authors abide by the Bioconductor [Code of Conduct](https://www.bioconductor.org/about/code-of-conduct).
-* The post must be written in English or a language we have a reviewer for. If not English, please open a [GitHub issue](https://github.com/Bioconductor/biocblog/issues) to check we can review.
+-   The main subject must relate to Bioconductor.
+-   Content is published under Creative Common CC-BY-4.0 License for the text and BSD 3-Clause License for any code.
+-   You have the right to publish any images included.
+-   Images must be optimised (see below).
+-   Images must contain alt text for accessibility.
+-   The post and authors abide by the Bioconductor [Code of Conduct](https://www.bioconductor.org/about/code-of-conduct).
+-   The post must be written in English or a language we have a reviewer for. If not English, please open a [GitHub issue](https://github.com/Bioconductor/biocblog/issues) to check we can review.
 
 # How to contribute
 
-Articles posted on the Bioconductor community blog are authored using
-[Quarto](https://quarto.org).
-The way to contribute a new article is as follows:
+Articles posted on the Bioconductor community blog are authored using [Quarto](https://quarto.org). The way to contribute a new article is as follows:
 
-1.  Create a fork of the [biocblog repository](https://github.com/Bioconductor/biocblog) on GitHub. ![](./GitHubForkButton.png) And Git clone it to your local environment!
+1. **Fork the repository**  
 
-2. [Install RStudio](https://rstudio.com/products/rstudio/download/) and double click the `biocblog.Rproj` file in the cloned repo. The latest release of RStudio (v2022.07 at this point) includes support for editing and preview of [Quarto](https://quarto.org) documents.
+Create a fork of the [biocblog repository](https://github.com/Bioconductor/biocblog) on GitHub. ![](./GitHubForkButton.png) and clone it to your local environment.
+   ✅ We recommend creating a **branch** in your fork for your post (e.g., `my-blog-post`) instead of committing to `main`. This keeps your fork clean and makes future contributions easier.
 
-3. [Create a new `qmd` file](https://quarto.org/docs/websites/website-blog.html#posts-directory) in your RStudio, and check the content with clicking `Preview Website` button under the `Build` tab! ![](./PreviewWebsiteButton.png)
+2. **Set up your environment**  
 
-4. If including images:
+[Install RStudio](https://rstudio.com/products/rstudio/download/) and double click the `biocblog.Rproj` file in the cloned repo.
 
-   i) compress the images with a tool like `pngquant`
-   `pngquant --ext .png --force my_figure.png`
-   
-   ii) add [Alt Text](https://quarto.org/docs/computations/execution-options.html#caption-and-alt-text).
-   
-5. If including code, render the `qmd` locally and commit files changed in the [`_freeze` directory](https://quarto.org/docs/projects/code-execution.html#using-freeze). 
+3. **Create your post** 
 
-6. When you're done, please `git commit` the raw `qmd` plus any static files you might have added/updated in the post's source directory or `_freeze` directory. Don't commit any generated files, such as html.
+   - In the [`posts` directory]((https://quarto.org/docs/websites/website-blog.html#posts-directory)), create a **new folder** named with the date and a short descriptive name for your post, for example:
+     ```
+     posts/2025-11-24-ethiopia-course
+     ```
+   - Inside that folder, create your `.qmd` file using the **same date** in the post’s front matter.
+   - Choose a date at least **one week after you plan to open the PR**. This gives time for review and scheduling before the post is published and promoted on Bioconductor social media channels.
+ - Open the `.qmd` file in RStudio and preview your content using the **Preview Website** button under the `Build` tab:
+![](./PreviewWebsiteButton.png)
+
+4. **If including images**:  
+
+    i) **Optimize images before committing** to keep pages fast and the repository lightweight:
+        -   Use **JPEG format** for all images (PNG only if transparency is required).
+
+        -   Resize and compress using [ImageMagick](https://imagemagick.org/):
+
+            ``` bash
+            magick input.jpg -resize 1200x -strip -quality 70 output.jpg
+            ```
+
+            ✅ Aim for \<500KB per image.\
+            ✅ If starting from PNG and transparency is not needed, convert to JPEG:
+
+            ``` bash
+            magick input.png -resize 1200x -strip -quality 70 output.jpg
+            ```
+    ii) **Add Alt Text for accessibility**:
+
+    -   In Quarto, use `fig-alt` for alt text and the bracket text for captions:  
     
-7. Send a Pull Request requesting that we accept your article! 
+    ``` bash
+    ![Visible Caption](image.jpg){fig-alt="Photo of Contributor" fig-align="center"}
+    ```
+    
+    -   If you don’t want a caption, leave the brackets empty:
+    
+    ``` bash    
+    ![](image.jpg){fig-alt="Photo of Contributor" fig-align="center"}
+    ```
+    
+5.  **If including code**:  
 
-Once we see your Pull Request, we'll take a look at your article, suggest
-changes as necessary, then publish it when it's ready.
+Render the `qmd` locally and commit files changed in the [`_freeze` directory](https://quarto.org/docs/projects/code-execution.html#using-freeze).
+
+6. **Commit your changes**  
+
+Commit the raw `.qmd` plus any static files you added/updated in the post's source directory or `_freeze` directory.  
+   ❌ Do **not** commit generated files such as `.html`.
+
+7. **Open a Pull Request**  
+
+Submit a PR from your branch to `main` in the Bioconductor repo. We'll review your article, suggest changes as needed, and publish it when ready.
