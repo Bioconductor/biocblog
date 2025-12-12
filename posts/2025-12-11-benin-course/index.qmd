@@ -35,9 +35,30 @@ Participant feedback reflected exactly these learning goals. Many highlighted ho
 Agenda and instructor list are on the [workshop page](https://training.bioconductor.org/workshops/2025-11-Abomey-Calavi/).
 
 
+<style>
+#gallery-instructors img {
+  height: 180px;
+  width: 100%;
+  object-fit: cover;
+  object-position: center center;
+}
+
+/* Optional focal point overrides */
+#gallery-instructors img.focus-left  { object-position: left center; }
+#gallery-instructors img.focus-right { object-position: right center; }
+
+
+/* Add spacing between columns */
+#gallery-instructors .column {
+  padding-right: 2px;
+}
+
+</style>
+
+
 ::: {#gallery-instructors .columns}
 ::: {.column width="20%"}
-![](axelle.jpg){group="gallery-instructors" alt="Dr. Axelle Loriot teaching"}
+![](axelle.jpg){group="gallery-instructors" alt="Dr. Axelle Loriot teaching" .focus-right}
 :::
 
 ::: {.column width="20%"}
@@ -100,6 +121,20 @@ Below is a photo of the instructors, hosts, and participants taken after the lab
 </div>
 
 To close the workshop, the team also hosted a beautiful certificate ceremony, creating a memorable and celebratory end to an impactful week. 
+
+
+<style>
+#gallery-certificates img {
+  height: 220px; /* adjust as needed */
+  width: 100%;
+  object-fit: cover;
+  display: block;
+}
+#gallery-certificates .column {
+  padding-right: 2px;
+}
+</style>
+
 
 ::: {#gallery-certificates .columns}
 ::: {.column width="50%"}
