@@ -132,9 +132,28 @@
 <h2 class="anchored" data-anchor-id="what-we-taught-and-what-was-learned">What we taught and what was learned</h2>
 <p>During the week-long Bioconductor course at the University of Abomey-Calavi, participants were introduced to the foundations of R and RStudio, good coding practices, tidyverse workflows, data handling, and reproducible research, before progressing into hands-on Bioconductor analyses for bulk RNA-seq using DESeq2 and SummarizedExperiment. Participant feedback reflected exactly these learning goals. Many highlighted how practical and hands-on the sessions were, sharing that <em>“the course was very practical with a lot of explanations”</em> and that practicing directly on their laptops made the material easy to apply. The step-by-step guidance on dplyr, tidyverse, ggplot2, and RNA-seq workflows resonated strongly, with one participant noting <em>“the step-by-step explanation about dplyr and tidyverse was highly useful,”</em> while another said they especially appreciated <em>“good step-by-step guidance on RNA-seq data analysis.”</em> Participants repeatedly praised the teaching approach and the supportive environment, noting that <em>“the trainers always came to help us when we had difficulties without judgment,”</em> and <em>“even when we didn’t understand at first, they always took the time to explain clearly.”</em> Others valued the inclusive, interactive format: <em>“the course was inclusive, with a participatory approach,”</em> and <em>“we all practiced directly with the trainers, who were highly attentive to our concerns.”</em> Many also appreciated the organisation and materials, calling the course <em>“well organized,”</em> with <em>“great interaction,”</em> <em>“well-accessible documents and scripts,”</em> and resources they could return to later.</p>
 <p>Agenda and instructor list are on the <a href="https://training.bioconductor.org/workshops/2025-11-Abomey-Calavi/">workshop page</a>.</p>
+<style>
+#gallery-instructors img {
+  height: 180px;
+  width: 100%;
+  object-fit: cover;
+  object-position: center center;
+}
+
+/* Optional focal point overrides */
+#gallery-instructors img.focus-left  { object-position: left center; }
+#gallery-instructors img.focus-right { object-position: right center; }
+
+
+/* Add spacing between columns */
+#gallery-instructors .column {
+  padding-right: 2px;
+}
+
+</style>
 <div id="gallery-instructors" class="columns">
 <div class="column" style="width:20%;">
-<p><a href="axelle.jpg" class="lightbox" data-gallery="gallery-instructors"><img src="https://blog.bioconductor.org/posts/2025-12-11-benin-course/axelle.jpg" class="img-fluid" alt="Dr. Axelle Loriot teaching"></a></p>
+<p><a href="axelle.jpg" class="lightbox" data-gallery="gallery-instructors"><img src="https://blog.bioconductor.org/posts/2025-12-11-benin-course/axelle.jpg" class="focus-right img-fluid" alt="Dr. Axelle Loriot teaching"></a></p>
 </div><div class="column" style="width:20%;">
 <p><a href="amal.jpg" class="lightbox" data-gallery="gallery-instructors"><img src="https://blog.bioconductor.org/posts/2025-12-11-benin-course/amal.jpg" class="img-fluid" alt="Dr Amal Boukteb teaching"></a></p>
 </div><div class="column" style="width:20%;">
@@ -175,6 +194,17 @@
 <p><em>Benin course participants posing outside the GBioS building at the University of Abomey-Calavi after touring GBioS and URMAPha labs.</em></p>
 </div>
 <p>To close the workshop, the team also hosted a beautiful certificate ceremony, creating a memorable and celebratory end to an impactful week.</p>
+<style>
+#gallery-certificates img {
+  height: 220px; /* adjust as needed */
+  width: 100%;
+  object-fit: cover;
+  display: block;
+}
+#gallery-certificates .column {
+  padding-right: 2px;
+}
+</style>
 <div id="gallery-certificates" class="columns">
 <div class="column" style="width:50%;">
 <p><a href="men_certificates.jpg" class="lightbox" data-gallery="gallery-certificates"><img src="https://blog.bioconductor.org/posts/2025-12-11-benin-course/men_certificates.jpg" class="img-fluid" alt="Male participants holding their certificates"></a></p>
