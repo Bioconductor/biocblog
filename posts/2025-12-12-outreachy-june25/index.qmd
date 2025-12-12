@@ -1,0 +1,112 @@
+---
+title: "Outreachy June 2025 Interns with Bioconductor"
+description: |
+  Bioconductor participated in the Outreachy Internship program for the June 2025 to August 2025 cohort. Our interns share their experience working on their various projects and Bioconductor in general.
+author:
+  - name: Anne-Marie Sharp
+    url: https://github.com/annemarie-sharp
+  - name: Victoria Poromon
+    url: https://github.com/Buraah
+date: 2025-12-12
+categories:
+  - Outreachy
+  - open science
+image: "featured-image.jpg"
+format:
+  html:
+    toc: true
+---
+
+## Introduction
+To a beginner, open source can be one of the best pathways into a fulfilling tech career. It not only provides access to source codes but also connects you with a global community of people from diverse backgrounds and skill sets. Together, contributors share ideas, collaborate on projects, and continuously improve the software. This collective effort makes open source projects more reliable, innovative, and adaptable, as many perspectives shape their growth.
+These values strongly align with the mission of the Outreachy internship, which champions diversity, inclusivity, and creating opportunities for people from underrepresented groups in tech to contribute meaningfully to open source.
+
+## Outreachy
+[Outreachy](https://www.outreachy.org) is a paid, remote internship program whose main goal is to support people from groups underrepresented in tech. They help newcomers to free software and open source make their first contributions.
+
+Interns work remotely for 3 months with experienced mentors from open source communities, gaining hands-on experience, building real-world skills, and contributing to meaningful projects. They receive guidance, feedback, and the support of a diverse and welcoming community. 
+
+
+## Our Journeys
+
+### Victoria's Experience
+
+::: {style="text-align: center;"}
+![Victoria Poromon](VictoriaPoromon.jpg){fig-alt="Photo of Victoria Poromon" width="300"}
+:::
+
+
+Hello, my name is Victoria Poromon, and I am a Microbiology graduate from the University of Port Harcourt, Nigeria. I have been contributing to the [BugSigDB](https://bugsigdb.org/Main_Page)  project since March 2024, and you can read about my experience as an Outreachy June2025 intern [here](https://burah.hashnode.dev/outreachy-contribution-stage-my-experience).
+
+Over the last few months, I’ve completed individual tasks, collaborated with fellow contributors and my co-intern, participated in peer reviews, written several blog posts, including one I’m especially proud of: the [Step-by-step Guide to contributing to BugSigDB](https://burah.hashnode.dev/step-by-step-guide-to-contributing-to-bugsigdb). More recently, I even took my first step into co-mentoring!
+
+Each encounter and milestone has taught me something new, broadened my perspective, and supported my personal and professional growth.
+
+Here are the lessons that have stayed with me:
+
+- **Take your time**: I’ve always believed in not rushing important work, and this project reinforced that mindset. Because it demands careful attention to detail and accuracy, moving too quickly can easily make you overlook what truly matters.
+- **Collaborate, not compete**: It’s natural for others to know things I don’t, but what isn’t acceptable is choosing to remain ignorant. Collaboration has allowed me to both learn from others and share my own knowledge in return.
+- **Know when to ask questions**: If you’ve been stuck on a task for hours despite troubleshooting and research, it’s the perfect time to ask your mentors for guidance. Doing so demonstrates curiosity, helps you overcome challenges more efficiently, and often leads to deeper learning.
+- **Know when to ask for help**: I’ve learned from my mentor, Svetlana, that asking for help is a valuable skill. It is not a sign of weakness, but a demonstration of strength, self-awareness, and a willingness to learn.
+- **Always speak kindly**: It’s not enough to simply know how to communicate; it’s equally important to do so kindly and with consideration for others. As both a contributor and co-mentor, I’ve come to value this quality deeply. Thoughtful communication not only shows respect but also helps create a safe and supportive environment.
+
+My journey with the Bioconductor community has been guided every step of the way, from the big things, like reviewing my tasks, teaching me new skills, and offering guidance on my job applications, to the small details, like dotting my i’s and placing my commas correctly. Every day, I’m reminded why I chose to stay. 
+
+By the end of my internship (June 2025 cohort), I not only strengthened my technical abilities but also gained confidence, built a meaningful network, and laid a solid foundation for my continued involvement in open source. You can find all my contributions [here](https://bugsigdb.org/Special:Contributions/Victoria).
+
+I am super thankful to everyone in the Bioconductor community for giving me a chance, especially to my mentors [Svetlana](https://github.com/SvetlanaUP), [Chloe](https://github.com/cmirzayi), and [Kate](https://github.com/KateRasheed), for literally holding my hand every step of the way and my brilliant co-intern [Anne-Marie Sharp](https://github.com/annemarie-sharp). I’ve grown tremendously and become a better contributor because I learned from the absolutely best.
+
+
+
+### Anne-Marie's Experience
+
+::: {style="text-align: center;"}
+![Anne-Marie Sharp](Anne-MarieSharp.jpg){fig-alt="Photo of Anne-Marie Sharp" width="300"}
+
+:::
+
+Hello, I am Anne-Marie Sharp. I am a Biomedical Scientist and an aspiring bioinformatician. 
+In late 2024, [my curiosity](https://annemariesharp.wordpress.com/2025/06/06/from-curiosity-to-contribution-a-new-chapter-with-outreachy/) led me to learn about the [Outreachy](https://www.outreachy.org/) internship for the first time and then to the Bioconductor project - Microbiome Study Curation [(BugSigDB)](https://www.bugsigdb.org/) where I contributed as an intern in the June 2025 Outreachy cohort. 
+
+I was completely new to the world of open source and it took extra effort for me to catch on quickly to not just the different online communication platforms but also to the art or rather science of microbiome study curation; but my curiosity and passion for science kept me going during the Outreachy contribution phase. 
+I was also excited about the new skills I was learning such as data-curation, analysis and literature review. And I was fascinated by the collaboration within the community. Thanks to this collaboration, I was also able to learn fast as I freely asked questions and got answers from mentors and fellow-curators, and I often teamed up with other curators which gave me different perspectives and insights on curation.
+
+As an avid learner, I was and I still am excited that there is always something new to learn working on the project. Whether in the core microbiome science, in improving my R-programming language skill, in curation itself or even in improving my soft skills. Indeed, it only gets better. 
+
+#### My Contributions
+
+During the contribution and internship phase, I worked on over 50 [issues](https://github.com/waldronlab/BugSigDBcuration/issues?q=is%3Aissue%20assignee%3Aannemarie-sharp) and [study curations](https://bugsigdb.org/Special:Contributions/Anne-mariesharp), these involved:   
+
+- curating published microbiome studies mainly regarding eye health conditions such as glaucoma, age related macular degeneration, etc.,
+- finalizing incomplete curations,
+- reviewing existing curations, and
+- handling R-related tasks such as updating unit tests and fixing errors in codes.
+
+I also blogged frequently about my experience: [https://annemariesharp.wordpress.com/category/outreachy-blog/](https://annemariesharp.wordpress.com/category/outreachy-blog/)
+
+I am particularly proud of the work I have done in curating microbiome studies on vision threatening conditions such as glaucoma, age related macular degeneration and acute anterior uveitis. Integrating these underrepresented ocular microbiome findings into BugSigDB improves data discoverability, enables structured querying, and enhances cross-study reuse. And I plan to continue with this great work!
+
+
+#### So far
+
+Worthy to mention, that I am currently a co-mentor for the December 2025 Outreachy cohort! This transition from intern to co-mentor has been exciting. I now guide new contributors through the same journey I once took - from understanding GitHub workflows to mastering the intricacies of microbiome study curation. 
+
+So far, collaborating with experienced mentors has enlightened me on how they support and sustain the community and I am grateful for this opportunity to learn and to also give back.
+I am also grateful to the BugSigDB community, to my co-intern [Victoria Poromon](https://github.com/Buraah) who made working together easy and enjoyable, and to all my mentors who made this experience worthwhile for me - [Chloe Mirzayi](https://github.com/cmirzayi), [Svetlana Ugarcina Perovic](https://github.com/SvetlanaUP), [Chioma Onyido](https://github.com/Omabekee), [Kate Rasheed](https://github.com/KateRasheed), and [Divine Aleru](https://github.com/AleruDivine). 
+
+Their patience with my endless questions, their thoughtful feedback on my curations, their willingness to share their expertise transformed me from a complete beginner into a confident contributor. Like the African proverb says, "it takes a village to raise a child" - their unique inputs, support, and guidance have truly been priceless.
+
+
+
+## Upcoming Opportunities
+
+One of the core values of open source is Community, because it ensures projects remain active, relevant, and adaptable over time, preventing stagnation.
+The Bioconductor community is participating in the current Outreachy internship round (December 2025 to March 2026).
+
+If you’re inspired by our journey and would like to contribute to the BugSigDB project, either through Outreachy or simply to share knowledge, feel free to join us on the Bioconductor [Zulip channel](https://chat.bioconductor.org/).
+
+Applications for the next internship round (May 2026 – August 2026) will open in early February 2026, so keep an eye out for announcements [here](https://www.outreachy.org/apply/project-selection/).
+
+
+
+
