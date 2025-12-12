@@ -20,6 +20,41 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -182,7 +217,7 @@ ul.task-list li input[type="checkbox"] {
 <li>The main subject must relate to Bioconductor.</li>
 <li>Content is published under Creative Common CC-BY-4.0 License for the text and BSD 3-Clause License for any code.</li>
 <li>You have the right to publish any images included.</li>
-<li>Images must be compressed using a tool like <code>pngquant</code>.</li>
+<li>Images must be optimised (see below).</li>
 <li>Images must contain alt text for accessibility.</li>
 <li>The post and authors abide by the Bioconductor <a href="https://www.bioconductor.org/about/code-of-conduct">Code of Conduct</a>.</li>
 <li>The post must be written in English or a language we have a reviewer for. If not English, please open a <a href="https://github.com/Bioconductor/biocblog/issues">GitHub issue</a> to check we can review.</li>
@@ -192,19 +227,59 @@ ul.task-list li input[type="checkbox"] {
 <h1>How to contribute</h1>
 <p>Articles posted on the Bioconductor community blog are authored using <a href="https://quarto.org">Quarto</a>. The way to contribute a new article is as follows:</p>
 <ol type="1">
-<li><p>Create a fork of the <a href="https://github.com/Bioconductor/biocblog">biocblog repository</a> on GitHub. <img src="./GitHubForkButton.png" class="img-fluid"> And Git clone it to your local environment!</p></li>
-<li><p><a href="https://rstudio.com/products/rstudio/download/">Install RStudio</a> and double click the <code>biocblog.Rproj</code> file in the cloned repo. The latest release of RStudio (v2022.07 at this point) includes support for editing and preview of <a href="https://quarto.org">Quarto</a> documents.</p></li>
-<li><p><a href="https://quarto.org/docs/websites/website-blog.html#posts-directory">Create a new <code>qmd</code> file</a> in your RStudio, and check the content with clicking <code>Preview Website</code> button under the <code>Build</code> tab! <img src="./PreviewWebsiteButton.png" class="img-fluid"></p></li>
-<li><p>If including images:</p>
-<ol type="i">
-<li><p>compress the images with a tool like <code>pngquant</code> <code>pngquant --ext .png --force my_figure.png</code></p></li>
-<li><p>add <a href="https://quarto.org/docs/computations/execution-options.html#caption-and-alt-text">Alt Text</a>.</p></li>
-</ol></li>
-<li><p>If including code, render the <code>qmd</code> locally and commit files changed in the <a href="https://quarto.org/docs/projects/code-execution.html#using-freeze"><code>_freeze</code> directory</a>.</p></li>
-<li><p>When you’re done, please <code>git commit</code> the raw <code>qmd</code> plus any static files you might have added/updated in the post’s source directory or <code>_freeze</code> directory. Don’t commit any generated files, such as html.</p></li>
-<li><p>Send a Pull Request requesting that we accept your article!</p></li>
+<li><strong>Fork the repository</strong></li>
 </ol>
-<p>Once we see your Pull Request, we’ll take a look at your article, suggest changes as necessary, then publish it when it’s ready.</p>
+<p>Create a fork of the <a href="https://github.com/Bioconductor/biocblog">biocblog repository</a> on GitHub. <img src="./GitHubForkButton.png" class="img-fluid"> and clone it to your local environment. ✅ We recommend creating a <strong>branch</strong> in your fork for your post (e.g., <code>my-blog-post</code>) instead of committing to <code>main</code>. This keeps your fork clean and makes future contributions easier.</p>
+<ol start="2" type="1">
+<li><strong>Set up your environment</strong></li>
+</ol>
+<p><a href="https://rstudio.com/products/rstudio/download/">Install RStudio</a> and double click the <code>biocblog.Rproj</code> file in the cloned repo.</p>
+<ol start="3" type="1">
+<li><p><strong>Create your post</strong></p>
+<ul>
+<li><p>In the <a href="(https://quarto.org/docs/websites/website-blog.html#posts-directory)"><code>posts</code> directory</a>, create a <strong>new folder</strong> named with the date and a short descriptive name for your post, for example:</p>
+<pre><code>posts/2025-11-24-ethiopia-course</code></pre></li>
+<li><p>Inside that folder, create your <code>.qmd</code> file using the <strong>same date</strong> in the post’s front matter.</p></li>
+<li><p>Choose a date at least <strong>one week after you plan to open the PR</strong>. This gives time for review and scheduling before the post is published and promoted on Bioconductor social media channels.</p></li>
+</ul></li>
+</ol>
+<ul>
+<li>Open the <code>.qmd</code> file in RStudio and preview your content using the <strong>Preview Website</strong> button under the <code>Build</code> tab: <img src="./PreviewWebsiteButton.png" class="img-fluid"></li>
+</ul>
+<ol start="4" type="1">
+<li><p><strong>If including images</strong>:</p>
+<ol type="i">
+<li><strong>Optimize images before committing</strong> to keep pages fast and the repository lightweight:
+<ul>
+<li><p>Use <strong>JPEG format</strong> for all images (PNG only if transparency is required).</p></li>
+<li><p>Resize and compress using <a href="https://imagemagick.org/">ImageMagick</a>:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">magick</span> input.jpg <span class="at">-resize</span> 1200x <span class="at">-strip</span> <span class="at">-quality</span> 70 output.jpg</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>✅ Aim for &lt;500KB per image.<br>
+✅ If starting from PNG and transparency is not needed, convert to JPEG:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="ex">magick</span> input.png <span class="at">-resize</span> 1200x <span class="at">-strip</span> <span class="at">-quality</span> 70 output.jpg</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div></li>
+</ul></li>
+<li><strong>Add Alt Text for accessibility</strong>:</li>
+</ol>
+<ul>
+<li>In Quarto, use <code>fig-alt</code> for alt text and the bracket text for captions:</li>
+</ul>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="ex">![Visible</span> Caption]<span class="er">(</span><span class="ex">image.jpg</span><span class="kw">)</span><span class="ex">{fig-alt=</span><span class="st">"Photo of Contributor"</span> fig-align=<span class="st">"center"</span>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<ul>
+<li>If you don’t want a caption, leave the brackets empty:</li>
+</ul>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="ex">![]</span><span class="er">(</span><span class="ex">image.jpg</span><span class="kw">)</span><span class="ex">{fig-alt=</span><span class="st">"Photo of Contributor"</span> fig-align=<span class="st">"center"</span>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div></li>
+<li><p><strong>If including code</strong>:</p></li>
+</ol>
+<p>Render the <code>qmd</code> locally and commit files changed in the <a href="https://quarto.org/docs/projects/code-execution.html#using-freeze"><code>_freeze</code> directory</a>.</p>
+<ol start="6" type="1">
+<li><strong>Commit your changes</strong></li>
+</ol>
+<p>Commit the raw <code>.qmd</code> plus any static files you added/updated in the post’s source directory or <code>_freeze</code> directory.<br>
+❌ Do <strong>not</strong> commit generated files such as <code>.html</code>.</p>
+<ol start="7" type="1">
+<li><strong>Open a Pull Request</strong></li>
+</ol>
+<p>Submit a PR from your branch to <code>main</code> in the Bioconductor repo. We’ll review your article, suggest changes as needed, and publish it when ready.</p>
 
 
 </section>
