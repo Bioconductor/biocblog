@@ -31,7 +31,7 @@ Create a fork of the [biocblog repository](https://github.com/Bioconductor/biocb
 
 3. **Create your post** 
 
-   - In the [`posts` directory]((https://quarto.org/docs/websites/website-blog.html#posts-directory)), create a **new folder** named with the date and a short descriptive name for your post, for example:
+   - In the [`posts` directory](https://quarto.org/docs/websites/website-blog.html#posts-directory), create a **new folder** named with the date and a short descriptive name for your post, for example:
      ```
      posts/2025-11-24-ethiopia-course
      ```
