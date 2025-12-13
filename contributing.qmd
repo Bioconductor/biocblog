@@ -55,7 +55,7 @@ Create a fork of the [biocblog repository](https://github.com/Bioconductor/biocb
             ✅ If starting from PNG and transparency is not needed, convert to JPEG:
 
             ``` bash
-            magick input.png -resize 1200x -strip -quality 70 output.jpg
+            magick input.png -resize 1200x -strip -quality 80 output.jpg
             ```
     ii) **Add Alt Text for accessibility**:
 
