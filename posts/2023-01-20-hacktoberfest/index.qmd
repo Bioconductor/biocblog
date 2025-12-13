@@ -23,7 +23,7 @@ To take part, people had to [register](https://hacktoberfest.com/auth/) before O
 have four pull requests accepted (i.e., merged) between October 1<sup>st</sup> and October 31<sup>st</sup>.
 The first 40,000 participants (both maintainers and contributors) who complete Hacktoberfest can choose a prize that is either a tree planted in their name or a t-shirt.
 
-![](hacktoberfest_website.png)
+![](hacktoberfest_website.jpg)
 
 ## Why did Bioconductor join?
 

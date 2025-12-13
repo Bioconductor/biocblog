@@ -16,7 +16,7 @@ lightbox: true
 
 The first SpatialData hackathon and workshop was organized by the [scverse](https://scverse.org/) community on 12-14 November 2024 in Basel, Switzerland. 20 attendees had gathered to work on improving online materials, tutorials, and scalability of existing spatial omics and scverse frameworks where interoperability across software platforms were prioritized.
 
-![](1731708109822.png){width="80%" fig-align="center" group="gallery-intro" alt="SpatialData Workshop attendees"}
+![](1731708109822.jpg){width="80%" fig-align="center" group="gallery-intro" alt="SpatialData Workshop attendees"}
 
 ## Interoperability for Spatial Omics
 
@@ -26,11 +26,11 @@ A group of R/Bioconductor developers led by Helena L. Crowell have teamed up to 
 
 ::::: {#gallery-carp .columns}
 ::: {.column width="50%"}
-![](1731708107583.png){group="gallery-intro" alt="R Interoperability Team"}
+![](1731708107583.jpg){group="gallery-intro" alt="R Interoperability Team"}
 :::
 
 ::: {.column width="50%"}
-![](PXL_20241112_084126060.MP.png){alt="R Interoperability Slide"}
+![](PXL_20241112_084126060.MP.jpg){alt="R Interoperability Slide"}
 :::
 *R Interoperability Team (clockwise): Artür Manukyan, Dario Righelli, Vincent Carey, Kevin Yamauchi, Louise Deconinck, Estella Yixing Dong, Helena L. Crowell*
 :::::
