@@ -179,7 +179,7 @@ types of data and data identifiers, and data formats.
 
 A taste of the conceptual network is given in Figure 3.  Visit [the data node](https://edamontology.github.io/edam-browser/#data_0006) to explore data types enumerated in the system.
 
-![Figure 3.  A snapshot of an expansion of the interactive network viewer for EDAM.](edamslice.png)
+![Figure 3.  A snapshot of an expansion of the interactive network viewer for EDAM.](edamslice.jpg)
 
 ## Comparing biocViews and EDAM
 

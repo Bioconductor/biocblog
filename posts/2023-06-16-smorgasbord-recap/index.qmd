@@ -11,7 +11,7 @@ date: 2023-06-16
 categories:
   - events
   - education
-image: "bioconductor-galaxy.png"
+image: "bioconductor-galaxy.jpg"
 ---
 
 We're delighted to share that Bioconductor was part of the [Galaxy Smörgåsbord](https://gallantries.github.io/video-library/events/smorgasbord3/) global online training for the first time this year. Over the week of May 22-26, we extended the power of R and Bioconductor to a wider, global audience.
@@ -28,7 +28,7 @@ To further encourage active participation, we ran a friendly competition. Partic
 
 The Smörgåsbord event also marked the public launch of the new Bioconductor Workshop platform, a successor to the [Orchestra platform](https://github.com/seandavi/Orchestra). The new platform ([workshop.bioconductor.org](https://workshop.bioconductor.org/)) is a Kubernetes deployment of a Galaxy fork, notably leveraging the Kubernetes Interactive Tools runner to launch Bioconductor RStudio-based containers, each representing a workshop. This stack is running on a cluster of Jetstream2 nodes, supported by NSF ACCESS allocation BIR190004. This platform will be employed for the annual Bioconductor conference [BioC2023](https://bioc2023.bioconductor.org/), and the [ISMB/ECCB 2023](https://www.iscb.org/ismbeccb2023) conference.
 
-![Bioconductor Galaxy Platform](bioconductor-galaxy.png)
+![Bioconductor Galaxy Platform](bioconductor-galaxy.jpg)
 
 ## Looking Ahead
 

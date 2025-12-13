@@ -66,7 +66,7 @@ To put that into perspective, the Bioconductor project is now (Bioconductor 3.14
 
 That is about 1 new package every other day for the past twenty years. Way to go!
 
-![The Bioconductor website in 2022.](bioconductor-website-2022.png)
+![The Bioconductor website in 2022.](bioconductor-website-2022.jpg)
 
 That collection of core-maintained and community-contributed packages has grown so large that there is now an entire hierarchy of terms to categorise those packages, called [BiocViews][biocviews-website].
 Check them out!

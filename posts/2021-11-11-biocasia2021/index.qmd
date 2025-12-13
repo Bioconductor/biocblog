@@ -7,7 +7,7 @@ description: |
 author: "Kozo Nishida"
 date: 2021-12-09
 categories: [BioC, Diversity]
-image: "Lori_Japanese_caption.png"
+image: "Lori_Japanese_caption.jpg"
 ---
 
 We,
@@ -41,7 +41,7 @@ The talk of the keynote speaker Lori Ann Shepherd on November 2, 2021 was made
 by broadcasting a YouTube video with Japanese translation subtitles
 on a pre-recorded English speech.
 
-![](Lori_Japanese_caption.png)
+![](Lori_Japanese_caption.jpg)
 
 You can see this Japanese translation subtitles by opening
 https://www.youtube.com/watch?v=NMv27jgHRb4
@@ -57,7 +57,7 @@ In 2020, the parallel workshops were held in English and Mandarin,
 but in 2021, we held parallel workshops in his **three** languages,
 including Japanese.
 
-![](parallel_workshop.png)
+![](parallel_workshop.jpg)
 
 ## Conclusion
 

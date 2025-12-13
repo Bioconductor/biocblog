@@ -31,7 +31,7 @@ to start a block of S code that will be executed when the report
 is compiled.  A right-bracket closes the code block.
 This markup generates the second paragraph in the right hand panel.
 
-![Figure 1.  Left panel: troff, eqn, and S code for processing by S REPORT.  Right panel: output including a table for which code is not shown.  From @becker1984s](combo.png)
+![Figure 1.  Left panel: troff, eqn, and S code for processing by S REPORT.  Right panel: output including a table for which code is not shown.  From @becker1984s](combo.jpg)
 
 # Fast forward:
 

@@ -7,7 +7,7 @@ author:
 date: 2025-01-08
 categories:
   - Bioconductor
-image: "1731708109822.png"
+image: "1731708109822.jpg"
 format:
   html:
     toc: true

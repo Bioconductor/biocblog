@@ -5,11 +5,11 @@ author:
     url: https://github.com/iza-mcac
 date: "2025-07-10"
 categories: [Events, Workshops, Microbiome]
-image: brazil_microbiome_2025_ufmg.png
+image: brazil_microbiome_2025_ufmg.jpg
 alt-text: "Participants of the Bioconductor microbiome workshop in Brazil gathered at UFMG"
 ---
 
-![](brazil_microbiome_2025_ufmg.png){fig-alt="Participants of the Bioconductor microbiome workshop in Brazil gathered at UFMG" fig-align="center"}
+![](brazil_microbiome_2025_ufmg.jpg){fig-alt="Participants of the Bioconductor microbiome workshop in Brazil gathered at UFMG" fig-align="center"}
 
 From April 23rd to 25th, 2025, we hosted the first Bioconductor microbiome course in Brazil, a three-afternoon workshop held at the Interunits Post-Graduate Program of Bioinformatics at the Federal University of Minas Gerais (UFMG) ([link](https://www.pgbioinfo.icb.ufmg.br/index.php)) in Belo Horizonte. The workshop brought together 24 enthusiastic participants, ranging from undergraduate students to full professors, all eager to deepen their knowledge of microbiome data analysis using R and Bioconductor.
 

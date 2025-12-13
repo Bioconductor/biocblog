@@ -90,7 +90,7 @@ Outreachy and Bioconductor have shown me that growth begins in small steps, and 
 ### Kate Rasheed’s Experience
 
 ::: {style="text-align: center;"}
-![](KateRasheed.png){width="300"}
+![](KateRasheed.jpg){width="300"}
 
 
 <p style="text-align: center;">

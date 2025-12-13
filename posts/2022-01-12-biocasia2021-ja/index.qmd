@@ -12,7 +12,7 @@ categories:
   - Japanese
   - BioC
   - Diversity
-preview: "Lori_Japanese_caption.png"
+preview: "Lori_Japanese_caption.jpg"
 ---
 
 [私達 BioC Asia 2021 運営委員会](https://biocasia2021.bioconductor.org/organizers/) は
@@ -42,7 +42,7 @@ Zoom には
 2021 年 11 月 2 日 のキーノートスピーカー Lori Ann Shepherd の発表は、
 英語スピーチの事前録画物に日本語翻訳字幕をつけた YouTube 動画を放送する形で行いました。
 
-![](Lori_Japanese_caption.png)
+![](Lori_Japanese_caption.jpg)
 
 この日本語翻訳字幕は https://www.youtube.com/watch?v=NMv27jgHRb4 を開き、下記画像のように YouTube で字幕設定を行っていただくことでご覧いただけます。
 
@@ -56,7 +56,7 @@ Zoom には
 2020年度は英語とMandarinでワークショップが行われたのですが、
 2021年度、私達はそれにさらに日本語を加えた 3 つの言語でのパラレルワークショップを開催しました。
 
-![](parallel_workshop.png)
+![](parallel_workshop.jpg)
 
 ## まとめ
 
