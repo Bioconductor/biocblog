@@ -972,7 +972,7 @@ This work has led to an ongoing collaboration between EDAM and Bioconductor comm
 
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="https://blog.bioconductor.org/posts/2025-07-10-microbiome-course-brazil/brazil_microbiome_2025_ufmg.png" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="Participants of the Bioconductor microbiome workshop in Brazil gathered at UFMG"></p>
+<p><img src="https://blog.bioconductor.org/posts/2025-07-10-microbiome-course-brazil/brazil_microbiome_2025_ufmg.jpg" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="Participants of the Bioconductor microbiome workshop in Brazil gathered at UFMG"></p>
 </figure>
 </div>
 <p>From April 23rd to 25th, 2025, we hosted the first Bioconductor microbiome course in Brazil, a three-afternoon workshop held at the Interunits Post-Graduate Program of Bioinformatics at the Federal University of Minas Gerais (UFMG) (<a href="https://www.pgbioinfo.icb.ufmg.br/index.php">link</a>) in Belo Horizonte. The workshop brought together 24 enthusiastic participants, ranging from undergraduate students to full professors, all eager to deepen their knowledge of microbiome data analysis using R and Bioconductor.</p>
@@ -1013,7 +1013,7 @@ This work has led to an ongoing collaboration between EDAM and Bioconductor comm
   <category>Microbiome</category>
   <guid>https://blog.bioconductor.org/posts/2025-07-10-microbiome-course-brazil/</guid>
   <pubDate>Thu, 10 Jul 2025 00:00:00 GMT</pubDate>
-  <media:content url="https://blog.bioconductor.org/posts/2025-07-10-microbiome-course-brazil/brazil_microbiome_2025_ufmg.png" medium="image" type="image/png" height="71" width="144"/>
+  <media:content url="https://blog.bioconductor.org/posts/2025-07-10-microbiome-course-brazil/brazil_microbiome_2025_ufmg.jpg" medium="image" type="image/jpeg"/>
 </item>
 <item>
   <title>Bioconductor and ggplot2 4.0.0: What’s Changing and How to Prepare</title>
