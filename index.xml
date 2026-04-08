@@ -9,8 +9,109 @@
 <link>https://blog.bioconductor.org/</link>
 <atom:link href="https://blog.bioconductor.org/index.xml" rel="self" type="application/rss+xml"/>
 <description>A blog for the Bioconductor community!</description>
-<generator>quarto-1.8.26</generator>
-<lastBuildDate>Fri, 12 Dec 2025 00:00:00 GMT</lastBuildDate>
+<generator>quarto-1.9.36</generator>
+<lastBuildDate>Wed, 08 Apr 2026 00:00:00 GMT</lastBuildDate>
+<item>
+  <title>Collaborating between Bioconductor and R-universe on Development of Common Infrastructure</title>
+  <dc:creator>The rOpenSci Team</dc:creator>
+  <dc:creator>The Bioconductor Team</dc:creator>
+  <link>https://blog.bioconductor.org/posts/2026-04-08-r-universe-collaboration/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<p><small><i>This article is cross-posted on <a href="https://ropensci.org/blog/">rOpenSci</a> and <a href="https://r-consortium.org/blog/">R-Consortium</a> blogs.</i></small></p>
+<p>For more than two decades, the <a href="https://www.bioconductor.org/">Bioconductor project</a> has been a cornerstone of the R ecosystem, providing high-quality, peer-reviewed tools for bioinformatics and computational biology. Its curated repository model, rigorous review standards, and tightly coordinated release process have helped establish Bioconductor as one of the most trusted distribution channels in scientific computing.</p>
+<p>However, the infrastructure that supports such a long-standing and large-scale project inevitably accumulates technical debt. Legacy build systems, bespoke tooling, and historically grown workflows add up to costly and unsustainable maintenance work. For this reason, Bioconductor is collaborating with <a href="https://r-universe.dev/">R-universe</a> to gradually modernize parts of its infrastructure, while accommodating the project’s scale, governance, and established processes. In turn, Bioconductor is helping R-universe expand and refine its features as we learn to serve the complex needs of the Bioconductor community.</p>
+<p>This collaboration reflects a core principle of R-universe as an R Consortium <a href="https://r-consortium.org/all-projects/">Infrastructure Steering Committee (ISC)</a> top-level project: supporting reviewed package repositories such as rOpenSci and Bioconductor, and providing modern, open, and reusable infrastructure that strengthens the broader R ecosystem.</p>
+<section id="a-shared-mission-tooling-for-managed-repositories" class="level2">
+<h2 class="anchored" data-anchor-id="a-shared-mission-tooling-for-managed-repositories">A Shared Mission: Tooling for Managed Repositories</h2>
+<p>R-universe was designed as a next-generation package distribution and build system for R. It provides:</p>
+<ul>
+<li>Continuous building and checking of R packages across platforms<br>
+</li>
+<li>Binary packages for Windows, macOS, Linux, and WebAssembly<br>
+</li>
+<li>Transparent and reproducible build environments managed via GitHub actions<br>
+</li>
+<li>Dashboards and metadata APIs for monitoring ecosystem health and activity<br>
+</li>
+<li>CRAN-like package repositories with discoverable metrics and documentation</li>
+</ul>
+<p>From the outset, a key objective has been to support curated and reviewed communities — such as rOpenSci and Bioconductor — by offering modern infrastructure without requiring them to redesign their governance model or review processes.</p>
+<p>For Bioconductor, this means incrementally introducing piece-wise functionality, with consideration for established release cycles and quality control mechanisms:</p>
+<ol type="1">
+<li>Setting up independent build and dashboard tooling, replicating processes from the current Bioconductor build systems on R-universe infrastructure</li>
+<li>Mirroring Windows and macOS binaries produced on R-universe to Bioconductor</li>
+<li>Exploring further integration of results and metadata produced by R-universe for Bioconductor health/activity monitoring and aiding the curation processes</li>
+<li>Potential future steps toward deeper automation and harmonization</li>
+</ol>
+<p>By taking small gradual steps towards adopting R-universe components, everyone gets the opportunity to experiment with new tooling and evaluate where adjustments may be needed in order to minimize disruption to existing practices.</p>
+<p>An important milestone in this venture is that Bioconductor now uses R-universe to build the Windows and macOS binaries, which significantly reduces costs and the maintenance load on the Bioconductor team. Beyond binary distribution, we are currently exploring deeper integration of R-universe’s continuous check results into Bioconductor’s quality control and release processes.</p>
+</section>
+<section id="two-universes-release-and-development" class="level2">
+<h2 class="anchored" data-anchor-id="two-universes-release-and-development">Two Universes: Release and Development</h2>
+<p>Bioconductor maintains two distinct repositories:</p>
+<ul>
+<li>A <strong>release</strong> branch for stable packages<br>
+</li>
+<li>A <strong>devel</strong> branch for ongoing development and the next release cycle</li>
+</ul>
+<p>To mirror this structure, we currently operate two dedicated R-universe instances:</p>
+<ul>
+<li><strong>Development branch:</strong> <a href="https://bioc.r-universe.dev">https://bioc.r-universe.dev</a><br>
+</li>
+<li><strong>Release branch:</strong> <a href="https://bioc-release.r-universe.dev">https://bioc-release.r-universe.dev</a></li>
+</ul>
+<p>These universes integrate directly with Bioconductor’s existing Git infrastructure and provide continuous builds for packages in both branches.</p>
+<p>Through the R-universe dashboard, package maintainers and users can:</p>
+<ul>
+<li>Inspect cross-platform check results<br>
+</li>
+<li>Review extended BiocCheck diagnostics<br>
+</li>
+<li>Monitor build logs and dependency graphs<br>
+</li>
+<li>Explore rich package metadata and metrics<br>
+</li>
+<li>Publish binary packages for Windows, macOS, and Linux</li>
+</ul>
+<p>This provides a familiar yet modern interface for Bioconductor contributors, aligned with what users increasingly expect from contemporary R package infrastructure.</p>
+<p>Information about each package is available on <code>https://bioc.r-universe.dev/{pkgname}</code>. For example, <a href="https://bioc.r-universe.dev/DESeq2">https://bioc.r-universe.dev/DESeq2</a> provides details on the DESeq2 package as shown below:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="https://docs.r-universe.dev/img/bioc-pkg.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="screenshot of r-universe"><img src="https://docs.r-universe.dev/img/bioc-pkg.png" class="img-fluid figure-img" alt="screenshot of r-universe"></a></p>
+<figcaption>screenshot of r-universe</figcaption>
+</figure>
+</div>
+<p>If this is your first time visiting R-universe, we recommend clicking the “Website Tour” button which will walk you through the most important information in 1 or 2 minutes.</p>
+</section>
+<section id="technical-documentation-for-bioconductor-maintainers" class="level2">
+<h2 class="anchored" data-anchor-id="technical-documentation-for-bioconductor-maintainers">Technical Documentation for Bioconductor Maintainers</h2>
+<p>The R-universe project maintains comprehensive technical documentation at <a href="https://docs.r-universe.dev">https://docs.r-universe.dev</a>. For Bioconductor specifically, we created a dedicated section summarizing the most relevant topics for developers to get started with R-universe: <a href="https://docs.r-universe.dev/bioconductor/">https://docs.r-universe.dev/bioconductor/</a></p>
+<p>As the collaboration evolves and new components get introduced, the documentation will continue to be expanded. The goal is to provide Bioconductor maintainers with a clear reference point for understanding how R-universe fits into their development workflow, while maintaining compatibility with the established practices that have made Bioconductor a successful project within the R community.</p>
+</section>
+<section id="looking-ahead" class="level2">
+<h2 class="anchored" data-anchor-id="looking-ahead">Looking Ahead</h2>
+<p>Adopting new infrastructure inevitably involves adjustments. For Bioconductor developers, integrating with a new build and distribution system will likely require some changes to workflows, and time to become familiar with new or different package checks, build diagnostics, and binary distribution.</p>
+<p>However, by gradually moving toward common infrastructure, the Bioconductor project will benefit from improvements that are being continuously developed and maintained for the broader R ecosystem. A system based on modern continuous integration (CI) will provide developers with improved tooling, and will give the core team more time to focus on community coordination and quality control, rather than on maintaining costly infrastructure. At the same time, the shared platform provided by R-universe can help to increase the visibility and accessibility of Bioconductor software to the greater R community.</p>
+<p>We look forward to continuing this alliance and to working with the Bioconductor community to ensure that the next generation of infrastructure supports the project for many years to come.</p>
+
+
+</section>
+
+<p>
+© 2025 Bioconductor. Content is published under <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons CC-BY-4.0 License</a> for the text and <a href="https://opensource.org/licenses/BSD-3-Clause">BSD 3-Clause License</a> for any code. | <a href="https://www.r-bloggers.com">R-Bloggers</a>
+</p> ]]></description>
+  <category>Bioconductor</category>
+  <category>R-universe</category>
+  <category>Infrastructure</category>
+  <guid>https://blog.bioconductor.org/posts/2026-04-08-r-universe-collaboration/</guid>
+  <pubDate>Wed, 08 Apr 2026 00:00:00 GMT</pubDate>
+  <media:content url="https://docs.r-universe.dev/img/bioc-pkg.png" medium="image" type="image/png"/>
+</item>
 <item>
   <title>Outreachy June 2025 Interns with Bioconductor</title>
   <dc:creator>Anne-Marie Sharp</dc:creator>
@@ -1414,146 +1515,6 @@ font-style: inherit;">TRUE</span>)</span></code></pre></div></div></li>
   <guid>https://blog.bioconductor.org/posts/2025-07-07-ggplot2-update/</guid>
   <pubDate>Mon, 07 Jul 2025 00:00:00 GMT</pubDate>
   <media:content url="https://blog.bioconductor.org/posts/2025-07-07-ggplot2-update/bioc-ggplot2-r_logos.png" medium="image" type="image/png" height="81" width="144"/>
-</item>
-<item>
-  <title>Bringing Bioconductor to Galaxy: A CoFest Collaboration</title>
-  <dc:creator>Gretta Yagudayeva</dc:creator>
-  <dc:creator>Maria Doyle</dc:creator>
-  <dc:creator>Charlotte Soneson</dc:creator>
-  <dc:creator>Marcel Ramos Pérez</dc:creator>
-  <dc:creator>Robert Castelo</dc:creator>
-  <link>https://blog.bioconductor.org/posts/2025-07-03-bioc-to-galaxy/</link>
-  <description><![CDATA[ 
-
-
-
-
-
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="bioc-galaxy-image.jpeg" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="https://blog.bioconductor.org/posts/2025-07-03-bioc-to-galaxy/bioc-galaxy-image.jpeg" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:60.0%" alt="Bioconductor and Galaxy logos"></a></p>
-</figure>
-</div>
-<section id="introduction" class="level2">
-<h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
-<p>This blog post was written during CoFest (CollaborationFest) that took place after the <a href="https://gbcc2025.bioconductor.org/about/overview/">2025 Galaxy Bioconductor Community Conference</a>, held this year at Cold Spring Harbor Laboratory in New York. For the first time, this joint meeting brought together two of the most widely used open-source platforms in bioinformatics, Galaxy and Bioconductor, to explore how their strengths can complement each other and expand access to bioinformatics tools.</p>
-<p>In this post, we spotlight one of the most exciting sessions from the event: <strong>“Streamlining Bioinformatics: Adding Bioconductor Tools in Galaxy”</strong>, presented by <a href="https://github.com/cumbof">Fabio Cumbo</a>, <a href="https://github.com/jaidevjoshi83">Jayadev Joshi</a>, <a href="https://github.com/thepineapplepirate">Bryan Raubenolt</a>, and <a href="https://github.com/blankenberg">Daniel Blankenberg</a>. The session explored how developers can integrate Bioconductor tools into Galaxy by wrapping them within the web-based platform to expand accessibility and usability for researchers.</p>
-<p>If you missed it, you can access the full set of training materials, including slides and example files, on their <a href="https://github.com/cumbof/gbcc25_training_session">GitHub repository</a>.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="bioc-galaxy-image3.jpeg" class="lightbox" data-gallery="quarto-lightbox-gallery-2"><img src="https://blog.bioconductor.org/posts/2025-07-03-bioc-to-galaxy/bioc-galaxy-image3.jpeg" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%" alt="Github linked here"></a></p>
-</figure>
-</div>
-<div style="text-align: center;">
-<p><em>“Streamlining Bioinformatics: Adding Bioconductor Tools in Galaxy” GitHub repo.</em></p>
-</div>
-</section>
-<section id="why-galaxy" class="level2">
-<h2 class="anchored" data-anchor-id="why-galaxy">Why Galaxy?</h2>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="bioc-galaxy-image2.jpeg" class="lightbox" data-gallery="quarto-lightbox-gallery-3"><img src="https://blog.bioconductor.org/posts/2025-07-03-bioc-to-galaxy/bioc-galaxy-image2.jpeg" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%" alt="Galaxy Home Page"></a></p>
-</figure>
-</div>
-<div style="text-align: center;">
-<p><em>Galaxy Home Page.</em></p>
-</div>
-<p><a href="https://usegalaxy.org/">Galaxy</a> is an open source, web-based platform that makes complex analyses more accessible, no coding or specialised infrastructure required. Like Bioconductor, it prioritises reproducibility and transparency, but delivers these through a user-friendly, point-and-click interface.</p>
-<p>This is especially powerful for researchers without programming experience or access to high-performance computing. A great example comes from this <a href="https://zenodo.org/records/15776929">GBCC2025 presentation</a> by Carolina Santana from UEFS in Brazil, where students analysed environmental microbiomes while working with limited infrastructure, often sharing a single laptop. Tools like Galaxy help level the playing field.</p>
-<p>Now imagine what’s possible when Bioconductor tools, some of the most robust analytical methods in genomics, can be run in Galaxy.</p>
-</section>
-<section id="why-bring-bioconductor-tools-into-galaxy" class="level2">
-<h2 class="anchored" data-anchor-id="why-bring-bioconductor-tools-into-galaxy">Why bring Bioconductor tools into Galaxy?</h2>
-<p>Bioconductor is a powerful ecosystem of R-based packages covering everything from differential expression and pathway analysis to spatial and single-cell methods. But for many researchers, these tools remain out of reach, either due to limited R experience, missing dependencies, or lack of compute resources.</p>
-<p>That’s where Galaxy comes in.</p>
-<section id="whats-in-it-for-developers" class="level3">
-<h3 class="anchored" data-anchor-id="whats-in-it-for-developers">What’s in it for developers?</h3>
-<p>Wrapping your Bioconductor tool for Galaxy can:</p>
-<ul>
-<li><p><strong>Expand access</strong> – Make your method usable by researchers without coding experience, and by educators and students in teaching settings.</p></li>
-<li><p><strong>Increase visibility</strong> – Gain exposure and potential citations as part of workflows and training materials beyond the R/Bioconductor sphere.</p></li>
-<li><p><strong>Surface hidden impact</strong> – A tool installed once on a Galaxy server may be used by hundreds. Emerging efforts to link usage metrics with Bioconductor maintainers could make this more visible in future.</p></li>
-</ul>
-<p>It may require modest effort, but the potential impact is significant.</p>
-</section>
-</section>
-<section id="wrapping-and-integrating-tools-into-galaxy" class="level2">
-<h2 class="anchored" data-anchor-id="wrapping-and-integrating-tools-into-galaxy">Wrapping and Integrating Tools into Galaxy</h2>
-<p>Wrapping a tool means making it available through Galaxy’s graphical interface so users can run it without touching the command line. There are multiple ways to do this depending on how the tool is built. Below is a gallery from the GBCC2025 training session showing the key components of a Galaxy tool wrapper:</p>
-<div id="awards-gallery" class="columns">
-<div class="column" style="width:18.5%;">
-<p><a href="bioc-galaxy-4.png" class="lightbox" data-gallery="slides-gallery"><img src="https://blog.bioconductor.org/posts/2025-07-03-bioc-to-galaxy/bioc-galaxy-4.png" class="img-fluid" style="border: 1px solid #ccc; padding: 5px;" alt="Overview of Galaxy XML tool structure, including sections for inputs, outputs, dependencies, and test data."></a></p>
-</div><div class="column" style="width:18.5%;">
-<p><a href="bioc-galaxy-5.png" class="lightbox" data-gallery="slides-gallery"><img src="https://blog.bioconductor.org/posts/2025-07-03-bioc-to-galaxy/bioc-galaxy-5.png" class="img-fluid" style="border: 1px solid #ccc; padding: 5px;" alt="Version control conventions for tool wrappers — tracking Bioconductor and Galaxy tool versions."></a></p>
-</div><div class="column" style="width:18.5%;">
-<p><a href="bioc-galaxy-6.png" class="lightbox" data-gallery="slides-gallery"><img src="https://blog.bioconductor.org/posts/2025-07-03-bioc-to-galaxy/bioc-galaxy-6.png" class="img-fluid" style="border: 1px solid #ccc; padding: 5px;" alt="Specifying software dependencies using Bioconda to ensure reproducible tool environments."></a></p>
-</div><div class="column" style="width:18.5%;">
-<p><a href="bioc-galaxy-7.png" class="lightbox" data-gallery="slides-gallery"><img src="https://blog.bioconductor.org/posts/2025-07-03-bioc-to-galaxy/bioc-galaxy-7.png" class="img-fluid" style="border: 1px solid #ccc; padding: 5px;" alt="Defining command-line prompts to run the tool logic, with parameters passed directly from the Galaxy interface."></a></p>
-</div><div class="column" style="width:18.5%;">
-<p><a href="bioc-galaxy-8.png" class="lightbox" data-gallery="slides-gallery"><img src="https://blog.bioconductor.org/posts/2025-07-03-bioc-to-galaxy/bioc-galaxy-8.png" class="img-fluid" style="border: 1px solid #ccc; padding: 5px;" alt="Advanced command configuration using conditional logic and GPU settings."></a></p>
-</div><div class="column" style="width:18.5%;">
-<p><a href="bioc-galaxy-9.png" class="lightbox" data-gallery="slides-gallery"><img src="https://blog.bioconductor.org/posts/2025-07-03-bioc-to-galaxy/bioc-galaxy-9.png" class="img-fluid" style="border: 1px solid #ccc; padding: 5px;" alt="Declaring input parameters including dataset and user-defined variables."></a></p>
-</div><div class="column" style="width:18.5%;">
-<p><a href="bioc-galaxy-10.png" class="lightbox" data-gallery="slides-gallery"><img src="https://blog.bioconductor.org/posts/2025-07-03-bioc-to-galaxy/bioc-galaxy-10.png" class="img-fluid" style="border: 1px solid #ccc; padding: 5px;" alt="Grouping input parameters by section and defining allowed values."></a></p>
-</div><div class="column" style="width:18.5%;">
-<p><a href="bioc-galaxy-11.png" class="lightbox" data-gallery="slides-gallery"><img src="https://blog.bioconductor.org/posts/2025-07-03-bioc-to-galaxy/bioc-galaxy-11.png" class="img-fluid" style="border: 1px solid #ccc; padding: 5px;" alt="Defining output files and formats for result datasets."></a></p>
-</div><div class="column" style="width:18.5%;">
-<p><a href="bioc-galaxy-12.png" class="lightbox" data-gallery="slides-gallery"><img src="https://blog.bioconductor.org/posts/2025-07-03-bioc-to-galaxy/bioc-galaxy-12.png" class="img-fluid" style="border: 1px solid #ccc; padding: 5px;" alt="Tool testing: providing test input/output files to validate reproducibility."></a></p>
-</div><div class="column" style="width:18.5%;">
-<p><a href="bioc-galaxy-13.png" class="lightbox" data-gallery="slides-gallery"><img src="https://blog.bioconductor.org/posts/2025-07-03-bioc-to-galaxy/bioc-galaxy-13.png" class="img-fluid" style="border: 1px solid #ccc; padding: 5px;" alt="Adding citations to acknowledge upstream software and tools used."></a></p>
-</div><div class="column" style="width:18.5%;">
-<p><a href="bioc-galaxy-14.png" class="lightbox" data-gallery="slides-gallery"><img src="https://blog.bioconductor.org/posts/2025-07-03-bioc-to-galaxy/bioc-galaxy-14.png" class="img-fluid" style="border: 1px solid #ccc; padding: 5px;" alt="Running Planemo lint on a Galaxy tool"></a></p>
-</div><div class="column" style="width:18.5%;">
-<p><a href="bioc-galaxy-15.png" class="lightbox" data-gallery="slides-gallery"><img src="https://blog.bioconductor.org/posts/2025-07-03-bioc-to-galaxy/bioc-galaxy-15.png" class="img-fluid" style="border: 1px solid #ccc; padding: 5px;" alt="Running Planemo test on a Galaxy tool"></a></p>
-</div><div class="column" style="width:18.5%;">
-<p><a href="bioc-galaxy-16.png" class="lightbox" data-gallery="slides-gallery"><img src="https://blog.bioconductor.org/posts/2025-07-03-bioc-to-galaxy/bioc-galaxy-16.png" class="img-fluid" style="border: 1px solid #ccc; padding: 5px;" alt="Manually adding tools to Galaxy via tool_conf.xml"></a></p>
-</div>
-</div>
-<div style="text-align: center;">
-<p><em>Slides from the GBCC2025 training session showing the basics of a Galaxy wrapper.</em></p>
-</div>
-<p>The presenters also shared a basic “Hello World” tool to demonstrate how Galaxy runs tools behind the scenes. This hands-on demo gave participants a practical foundation, and you can try it too using the <a href="https://github.com/cumbof/gbcc25_training_session/blob/main/Deck.pptx">training slide deck</a>.</p>
-</section>
-<section id="bioconductor-package-example-gsva-in-galaxy---coming-soon" class="level2">
-<h2 class="anchored" data-anchor-id="bioconductor-package-example-gsva-in-galaxy---coming-soon">Bioconductor package example (GSVA) in Galaxy - coming soon</h2>
-<p>With expert input from GSVA developer Robert Castelo, we’re currently working on wrapping the Bioconductor package <a href="https://www.bioconductor.org/packages/release/bioc/html/GSVA.html">GSVA (Gene Set Variation Analysis)</a> in Galaxy. Widely used for functional enrichment analysis, GSVA will serve as a concrete example of how to bring Bioconductor methods into Galaxy.</p>
-<p>We’ve opened a <a href="https://github.com/rcastelo/GSVA/pull/247">draft pull request for the GSVA wrapper</a> to share our early work and invite feedback. Testing and refinement are ongoing, we’ll share what we learn in an upcoming follow-up post.</p>
-</section>
-<section id="part-of-cofest-2025" class="level2">
-<h2 class="anchored" data-anchor-id="part-of-cofest-2025">Part of CoFest 2025</h2>
-<p>This work was part of <a href="https://gbcc2025.bioconductor.org/cofest/overview/">CoFest 2025</a>, a hands-on collaboration event held after GBCC on June 27–28. <strong>CoFest was more than a hackathon</strong>—it was a friendly and productive space for Galaxy and Bioconductor developers to connect and build things together.</p>
-<p>At CoFest, teams focused on various software development projects like workflow integration, parameter handling, app development, interface design, and more. You can explore this year’s CoFest projects in the community <a href="https://docs.google.com/presentation/d/1zSIr1Z1eUzsCf0q5lah0mHziACqMLhb2F0HFkT0xoXs/edit?slide=id.g36b0fb0613a_2_6#slide=id.g36b0fb0613a_2_6">slide deck</a>!</p>
-<p>Our group—Maria, Gretta, Charlotte, and Marcel—worked in person at CoFest, supported remotely by Robert Castelo, who initiated the idea for this blog post and provided expert input on the GSVA wrapper. It was Gretta’s first time contributing to CoFest, and she jumped right in, bringing clear, thoughtful edits and valuable input. We also began experimenting with using LLMs to draft wrappers, an idea sparked by conversations with <a href="https://github.com/bwlang">Brad Langhorst</a> and <a href="https://github.com/dannon">Dannon Baker</a>. The initial GSVA wrapper was created with Gemini and will be refined in the coming weeks.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="cofest.jpeg" class="lightbox" data-gallery="quarto-lightbox-gallery-17"><img src="https://blog.bioconductor.org/posts/2025-07-03-bioc-to-galaxy/cofest.jpeg" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%" alt="CoFest 2025 team at work"></a></p>
-</figure>
-</div>
-<div style="text-align: center;">
-<p><em>CoFest 2025 Day 2 wrap-up.</em></p>
-</div>
-</section>
-<section id="whats-next" class="level2">
-<h2 class="anchored" data-anchor-id="whats-next">What’s next?</h2>
-<ul>
-<li><p><strong>Guide for Bioconductor developers</strong> - We’re creating a worked example wrapping GSVA in Galaxy, exploring different approaches (including Gemini CLI). Once we’ve refined the process, we’ll share a step-by-step guide, tips, and lessons learned. Follow the <a href="https://github.com/rcastelo/GSVA/pull/247">draft pull request</a> to stay in the loop.</p></li>
-<li><p><strong>Shiny apps in Galaxy</strong> - Marcel Ramos is experimenting with embedding <a href="https://github.com/bioconductor/BiocHubsShiny/tree/galaxy_wrapper">BiocHubsShiny within Galaxy</a> and building more Bioconductor-friendly wrapper templates. If you’ve explored similar ideas, get in touch.</p></li>
-<li><p><strong>Linking usage to Bioconductor maintainers</strong> - During CoFest, <a href="https://github.com/GarethPrice-Aus">Gareth Price</a> from Galaxy Australia proposed adding a <em>maintainer</em> field to Galaxy tool XML (<a href="https://github.com/galaxyproject/galaxy/issues/20583">see GitHub issue</a>). This could help surface usage that isn’t visible through download stats, support community recognition, and feed into reporting for grants or tenure.</p></li>
-</ul>
-<p>If you’re curious about any of this work or thinking of wrapping your own tool, pop into the #galaxy channel on <a href="https://chat.bioconductor.org">chat.bioconductor.org</a>. We’re still figuring things out ourselves, and would love to share ideas, troubleshoot together, and learn along the way.</p>
-
-
-</section>
-
-<p>
-© 2025 Bioconductor. Content is published under <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons CC-BY-4.0 License</a> for the text and <a href="https://opensource.org/licenses/BSD-3-Clause">BSD 3-Clause License</a> for any code. | <a href="https://www.r-bloggers.com">R-Bloggers</a>
-</p> ]]></description>
-  <category>education</category>
-  <category>collaborations</category>
-  <category>galaxy</category>
-  <guid>https://blog.bioconductor.org/posts/2025-07-03-bioc-to-galaxy/</guid>
-  <pubDate>Thu, 03 Jul 2025 00:00:00 GMT</pubDate>
-  <media:content url="https://blog.bioconductor.org/posts/2025-07-03-bioc-to-galaxy/bioc-galaxy-image.jpeg" medium="image" type="image/jpeg"/>
 </item>
 </channel>
 </rss>
