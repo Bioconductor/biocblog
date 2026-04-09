@@ -1,0 +1,41 @@
+---
+title: "Developer Engagement and Bioconductor"
+description: |
+  Introducing myself as the new Developer Engagement Lead for Bioconductor.
+author:
+  - name: Nicholas Cooley, PhD
+    url: https://github.com/npcooley
+date: 2026-04-09
+categories:
+  - Developer Engagement
+image: "featured-image.jpeg"
+format:
+  html:
+    toc: true
+---
+
+## Introduction
+During the Chan Zuckerberg Institute's [Essential Open Source Software for Science](https://blog.bioconductor.org/posts/2024-07-12-czi-eoss6-grants/) cycle 6 funding round, the Bioconductor Community Manager, Maria Doyle, secured a grant to fund a developer engagement position for Bioconductor, and I was fortunate enough to be offered that role. I am Nick Cooley, and I'm excited to see what this role can bring to Bioconductor. My background is relatively diverse, I received my PhD in organic chemistry from the University of Missouri, and I worked on prokaryotic genomics and functional genomics at the University of Pittsburgh from 2017 to 2025.
+
+## Role responsibilities
+The mandate of this role is somewhat broad. Bioconductor, and academic computing generally face a myriad of distinct and interrelated challenges as hardware, computing paradigms, and education environments change rapidly. Improving developer resources for tackling new and existing challenges, modernizing Bioconductor developer onboarding materials (particularly for early career researchers), and improving recognition mechanisms for community members who volunteer time and effort to the Bioconductor project are all general themes within the role scope.
+
+## Some Specific Efforts
+A few of the specific efforts I'll be working on in this role include:
+
+### Developer Forum
+The [Developer Forum](https://bioconductor.org/developers/developers-forum/) had previously been run on a volunteer basis, and served as a community resource for discussing technical and infrastructure issues, concerns, and opportunities. The creation of the Developer Engagement Lead allowed us include the Forum as direct responsibility of this role.
+
+### Developer Champions Program
+[Bioconductor working groups](https://workinggroups.bioconductor.org) have been a pillar of Bioconductor for a while, and represent a considerable amount of volunteer work towards the project. Improving the visibility of the working groups themselves, and the recognition that project contributors receive for their participation in the working groups can go a long way towards ensuring that that work is valued by contributors home institutions and funding mechanisms. The Champions Program aims to create a clear recognition mechanism for those volunteer efforts.
+
+### Bioconductor hackathon events
+Community and collaboration are irreplaceable engines of strong research. Many Bioconductor contributors find community and collaboration within their own disciplines or institutions. Providing an avenue for collaborative and technical events within Bioconductor can fill persistent gaps in the the research tooling present in the project, and present networking opportunities for early career researchers. Part of this role is [planning and running these events](https://bioconductor.org/developers/bioccommits/).
+
+### Bioconductor documentation and LLMs
+The ways that researchers search for information, tools, and workflow examples are changing with the rise of large language models and their interfaces. There are opportunities for improving how bioinformaticians, especially those outside of the Bioconductor community, find and familiarize themselves with research solutions within the Bioconductor project, including through improvements to website search and documentation discoverability. A long term goal of this role is to work on documentation templates and checking tools to improve their searchability by LLMs, and explore the feasibility of Bioconductor sanctioned and managed LLMs.
+
+
+## How to get in touch
+
+For developer discussions and ideas, the [Bioconductor Zulip](https://chat.bioconductor.org) is the best place to connect.
