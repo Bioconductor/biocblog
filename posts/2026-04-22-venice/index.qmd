@@ -3,8 +3,8 @@ title: "Bioconductor-centric hackathon on spatial omics and image-derived data"
 description: "19-22 April 2026 on San Servolo island, Italy"
 author:
   - name: Davide Risso
+  - name: Helena Crowell
   - name: Wolfgang Huber
-  - name: Helena L. Crowell
 date: 2026-04-22
 image: terrace.jpeg
 creative_commons: CC BY
@@ -52,3 +52,5 @@ These results have been synthesized into a **collaborative preprint**, with each
 ***
 
 The event was organized by the Department of Statistical Sciences of the University of Padova in collaboration with EMBL and Venice International University, funded in part by the European Research Council (ERC) Grant CoG 101171662, and supported by EMBL's Transversal Theme Theory\@EMBL.
+
+***
