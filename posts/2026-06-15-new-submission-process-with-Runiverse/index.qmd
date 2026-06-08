@@ -13,6 +13,7 @@ categories:
   - GitHub Actions
   - Developer Engagement
   - New Submissions
+  - bioconductor-evolution
 image: "featured-image.jpg"
 format:
   html:
