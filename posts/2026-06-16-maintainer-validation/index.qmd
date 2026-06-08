@@ -1,0 +1,52 @@
+---
+title: "Bioconductor Maintainer Validation"
+description: |
+  Bioconductor Package Maintainer Validation System
+author:
+  - name: Lori Shepherd-Kern
+    url: https://github.com/lshep
+date: 2026-06-15
+categories:
+  - Bioconductor
+  - Infrastructure
+  - Developer Engagement
+  - Policies and Procedures
+image: "featured-image.jpg"
+format:
+  html:
+    toc: true
+---
+
+## Introduction
+
+Bioconductor policies include being an active and reachable
+maintainer. Maintainer emails in the DESCRIPTION of packages often go stale as
+maintainers change positions. There is also a necessity to have maintainers opt
+into Bioconductor policies and procedures as they change over time.
+
+We have created an application that utilizes AWS SES services to send periodic
+emails to maintainers to check if the endpoint is reachable and to send a
+verification opt-in of Bioconductor current policies and procedures and code of
+conduct once a year.
+
+![](MaintainerEmail.jpg){fig-alt="Photo of Email" fig-align="center"}
+
+Initial feedback is that this email is "spammy" and may be marked as such by
+institutions, but it is an initial attempt at compliance.  We will look at
+altrenatives to emails like specialized maintainer account access at a future
+date.
+
+#### Access to Information
+
+The information is in a publicly accessible database. We do not recommend
+connecting directly to the webservice but instead using the accompanied
+Bioconductor R package
+[BiocMaintainerApp](https://bioconductor.org/packages/BiocMaintainerApp/). It
+provides a ShinyApp interface for querying Bioconductor package maintainers'
+information.
+
+![](feature-image.jpg){fig-alt="Photo of ShinyApp" fig-align="center"}
+
+#### Thank you
+
+We appreciate all maintainer compliance moving forward.
