@@ -1,0 +1,84 @@
+---
+title: "New Package Submission Process"
+description: |
+  The SPB for new incoming package submissions to Bioconductor is replaced.
+author:
+  - name: Lori Shepherd-Kern
+    url: https://github.com/lshep
+date: 2026-06-15
+categories:
+  - Bioconductor
+  - R-universe
+  - Infrastructure
+  - GitHub Actions
+  - Developer Engagement
+  - New Submissions
+image: "featured-image.jpg"
+format:
+  html:
+    toc: true
+---
+
+## Introduction
+
+Bioconductor is moving towards using R-universe for it's daily build system. See
+previous blog post [Collaborating between Bioconductor and R-universe on
+Development of Common
+Infrastructure](https://blog.bioconductor.org/posts/2026-04-08-r-universe-collaboration/). As
+we move in this direction it was also necessary to update the submission process
+for Bioconductor packages. While the daily builders are still transitioning, the
+new submission process location is now live. The new system utilizes GitHub
+Actions to trigger review milestones and R-Universe as the build/check
+backend. The new system is a smoother experience; It is more automated and
+avoids administrative steps that have historically bottlenecked the review
+process.
+
+## Information
+
+#### Location:
+
+The new location for submitting new packages to Bioconductor for review is
+[BiocContributions](https://github.com/Bioconductor/BiocContributions).  This
+replaces the old location at `Bioconductor/Contributions`. 
+
+#### Documentation
+
+There is documentation on [What to
+Expect](https://github.com/Bioconductor/BiocContributions/blob/devel/docs/submitters.md)
+as well as a detailed [Slide
+Deck](https://docs.google.com/presentation/d/1EK2wsDoRbtVGECdYC1GU5nGtYkN-h_7R-on-CSUC6CQ/edit?slide=id.p#slide=id.p).
+
+There is also a [FAQ](https://github.com/Bioconductor/BiocContributions/blob/devel/docs/FAQs.md) for commonly asked questions, concerns, or
+troubleshooting.
+
+If you need to report an issue with the new system, please open an Issue on the
+[BiocSubmissionProcess](https://github.com/BiocStaging/BiocSubmissionProcess)
+GitHub repository. 
+
+#### What about Bioconductor/Contributions
+
+The submission location at `Bioconductor/Contributions` has been frozen and will
+no longer accept new issues. The
+[BiocContributions](https://github.com/Bioconductor/BiocContributions) replaces
+this location.  If you already submitted to the old location, if you are
+assigned a reviewer, your review will finish there. If you have not been
+assigned a reviewer yet, we will be posting shortly to close out your submission
+and move to the new location.
+
+
+#### Easier Reproducibility
+
+One of the frequent comments we receive is how do we reproduce the results of
+the build reports Bioconductor creates.  The switch to using R-universe as the
+building and checking backend allows for a reproducible testing environment. Any
+maintainer can apply R-Universe checking on their personal GitHub repository for
+a Bioconductor package by following these
+[instructions](https://docs.r-universe.dev/bioconductor/#debugging-the-ci). This
+allows for a maintainer to test before submitting to Bioconductor and testing
+any future changes before pushing directly to Bioconductor.
+
+
+#### Thank you!
+
+We appreicate you patience and understanding as we transition to the new
+system. 
