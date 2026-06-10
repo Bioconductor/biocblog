@@ -11,7 +11,7 @@ categories:
   - Infrastructure
   - Developer Engagement
   - Policies and Procedures
-image: "featured-image.jpg"
+image: "feature-image.jpg"
 format:
   html:
     toc: true
