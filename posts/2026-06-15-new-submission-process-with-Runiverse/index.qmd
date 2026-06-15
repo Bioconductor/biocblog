@@ -59,7 +59,7 @@ GitHub repository.
 #### What about Bioconductor/Contributions
 
 The submission location at `Bioconductor/Contributions` has been frozen and will
-no longer accept new issues. The
+no longer accept new issues. 
 [BiocContributions](https://github.com/Bioconductor/BiocContributions) replaces
 this location.  If you already submitted to the old location, if you are
 assigned a reviewer, your review will finish there. If you have not been
