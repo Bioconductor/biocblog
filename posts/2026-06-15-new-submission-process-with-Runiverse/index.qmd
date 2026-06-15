@@ -1,7 +1,7 @@
 ---
 title: "New Package Submission Process"
 description: |
-  The SPB for new incoming package submissions to Bioconductor is replaced.
+  The Single Package Builder (SPB) previously used for new Bioconductor package submissions has been replaced.
 author:
   - name: Lori Shepherd-Kern
     url: https://github.com/lshep
