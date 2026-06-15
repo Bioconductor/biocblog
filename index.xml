@@ -10,7 +10,7 @@
 <atom:link href="https://blog.bioconductor.org/index.xml" rel="self" type="application/rss+xml"/>
 <description>A blog for the Bioconductor community!</description>
 <generator>quarto-1.9.38</generator>
-<lastBuildDate>Mon, 15 Jun 2026 00:00:00 GMT</lastBuildDate>
+<lastBuildDate>Tue, 16 Jun 2026 00:00:00 GMT</lastBuildDate>
 <item>
   <title>Bioconductor Maintainer Validation</title>
   <dc:creator>Lori Shepherd-Kern</dc:creator>
@@ -56,7 +56,7 @@
   <category>Developer Engagement</category>
   <category>Policies and Procedures</category>
   <guid>https://blog.bioconductor.org/posts/2026-06-16-maintainer-validation/</guid>
-  <pubDate>Mon, 15 Jun 2026 00:00:00 GMT</pubDate>
+  <pubDate>Tue, 16 Jun 2026 00:00:00 GMT</pubDate>
   <media:content url="https://blog.bioconductor.org/posts/2026-06-16-maintainer-validation/feature-image.jpg" medium="image" type="image/jpeg"/>
 </item>
 <item>
