@@ -22,7 +22,7 @@ format:
 
 ## Introduction
 
-Bioconductor is moving towards using R-universe for it's daily build system. See
+Bioconductor is moving towards using R-universe for its daily build system. See our
 previous blog post [Collaborating between Bioconductor and R-universe on
 Development of Common
 Infrastructure](https://blog.bioconductor.org/posts/2026-04-08-r-universe-collaboration/). As
