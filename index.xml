@@ -9,8 +9,56 @@
 <link>https://blog.bioconductor.org/</link>
 <atom:link href="https://blog.bioconductor.org/index.xml" rel="self" type="application/rss+xml"/>
 <description>A blog for the Bioconductor community!</description>
-<generator>quarto-1.9.36</generator>
-<lastBuildDate>Thu, 09 Apr 2026 00:00:00 GMT</lastBuildDate>
+<generator>quarto-1.9.38</generator>
+<lastBuildDate>Mon, 15 Jun 2026 00:00:00 GMT</lastBuildDate>
+<item>
+  <title>Bioconductor Maintainer Validation</title>
+  <dc:creator>Lori Shepherd-Kern</dc:creator>
+  <link>https://blog.bioconductor.org/posts/2026-06-16-maintainer-validation/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<section id="introduction" class="level2">
+<h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
+<p>Bioconductor policies include being an active and reachable maintainer. Maintainer emails in the DESCRIPTION of packages often go stale as maintainers change positions. There is also a necessity to have maintainers opt into Bioconductor policies and procedures as they change over time.</p>
+<p>We have created an application that uses Amazon Simple Email Service (SES) to send periodic emails to maintainers to check if the endpoint is reachable and to send a verification opt-in of Bioconductor current policies and procedures and code of conduct once a year.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://blog.bioconductor.org/posts/2026-06-16-maintainer-validation/MaintainerEmail.jpg" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="Photo of Email"></p>
+</figure>
+</div>
+<p>Initial feedback is that this email is “spammy” and may be marked as such by institutions, but it is an initial attempt at compliance. We will look at alternatives to emails like specialized maintainer account access at a future date.</p>
+<section id="access-to-information" class="level4">
+<h4 class="anchored" data-anchor-id="access-to-information">Access to Information</h4>
+<p>The information is in a publicly accessible database. We do not recommend connecting directly to the webservice but instead using the accompanied Bioconductor R package <a href="https://bioconductor.org/packages/BiocMaintainerApp/">BiocMaintainerApp</a>. It provides a Shiny application interface for querying Bioconductor package maintainers’ information.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://blog.bioconductor.org/posts/2026-06-16-maintainer-validation/feature-image.jpg" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="Photo of ShinyApp"></p>
+</figure>
+</div>
+</section>
+<section id="thank-you" class="level4">
+<h4 class="anchored" data-anchor-id="thank-you">Thank you</h4>
+<p>We appreciate maintainers’ cooperation moving forward.</p>
+
+
+</section>
+</section>
+
+<p>
+© 2026 Bioconductor. Content is published under <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons CC-BY-4.0 License</a> for the text and <a href="https://opensource.org/licenses/BSD-3-Clause">BSD 3-Clause License</a> for any code. | <a href="https://www.r-bloggers.com">R-Bloggers</a>
+</p> ]]></description>
+  <category>Bioconductor</category>
+  <category>Infrastructure</category>
+  <category>Developer Engagement</category>
+  <category>Policies and Procedures</category>
+  <guid>https://blog.bioconductor.org/posts/2026-06-16-maintainer-validation/</guid>
+  <pubDate>Mon, 15 Jun 2026 00:00:00 GMT</pubDate>
+  <media:content url="https://blog.bioconductor.org/posts/2026-06-16-maintainer-validation/feature-image.jpg" medium="image" type="image/jpeg"/>
+</item>
 <item>
   <title>Developer Engagement and Bioconductor</title>
   <dc:creator>Nicholas Cooley, PhD</dc:creator>
@@ -1113,61 +1161,6 @@ This work has led to an ongoing collaboration between EDAM and Bioconductor comm
   <guid>https://blog.bioconductor.org/posts/2025-07-09-developers-forum-july28/</guid>
   <pubDate>Fri, 11 Jul 2025 00:00:00 GMT</pubDate>
   <media:content url="https://blog.bioconductor.org/posts/2025-07-09-developers-forum-july28/feRris.png" medium="image" type="image/png" height="108" width="144"/>
-</item>
-<item>
-  <title>Bioconductor’s First Microbiome Course in Brazil: A Successful Workshop at UFMG in Belo Horizonte</title>
-  <dc:creator>Izabela Mamede</dc:creator>
-  <link>https://blog.bioconductor.org/posts/2025-07-10-microbiome-course-brazil/</link>
-  <description><![CDATA[ 
-
-
-
-
-
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="https://blog.bioconductor.org/posts/2025-07-10-microbiome-course-brazil/brazil_microbiome_2025_ufmg.jpg" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="Participants of the Bioconductor microbiome workshop in Brazil gathered at UFMG"></p>
-</figure>
-</div>
-<p>From April 23rd to 25th, 2025, we hosted the first Bioconductor microbiome course in Brazil, a three-afternoon workshop held at the Interunits Post-Graduate Program of Bioinformatics at the Federal University of Minas Gerais (UFMG) (<a href="https://www.pgbioinfo.icb.ufmg.br/index.php">link</a>) in Belo Horizonte. The workshop brought together 24 enthusiastic participants, ranging from undergraduate students to full professors, all eager to deepen their knowledge of microbiome data analysis using R and Bioconductor.</p>
-<p>We were honored to welcome Professor <strong>Leo Lahti</strong>, a Bioconductor developer from the University of Turku, Finland, who led the course. He was joined by local alumni João Pedro P. de Almeida and myself, <strong>Izabela Mamede</strong>, as co-instructors, delivering hands-on training and insights throughout the workshop.</p>
-<p>The course covered the fundamentals of microbiome data analysis, with practical sessions focused on utilizing the Bioconductor framework documented in the online book <em><a href="https://microbiome.github.io/OMA/docs/devel/">Orchestrating Microbiome Analysis with Bioconductor</a></em> for data manipulation, visualization, and statistical modeling. Participants learned how to manipulate, visualize, and statistically model microbiome data using R-based tools, gaining the skills to integrate Bioconductor workflows into their own research. Bioconductor is a global open-source community with a particular focus on statistical programming and multi-omic data integration in life sciences.</p>
-<p>Several participants traveled from other Brazilian states to join the workshop, underscoring the growing national interest in microbiome data analysis and Bioconductor tools.</p>
-<section id="workshop-highlights" class="level2">
-<h2 class="anchored" data-anchor-id="workshop-highlights">🔍 Workshop Highlights</h2>
-<p>Students especially enjoyed sessions on:</p>
-<ul>
-<li>Taxonomic assignment<br>
-</li>
-<li>Community similarity<br>
-</li>
-<li>Data visualization</li>
-</ul>
-<p>The course followed best practices in data science education, inspired by the <a href="http://carpentries.org">Carpentries</a> model, and was led by two Bioconductor Carpentries instructors. Both Professor Leo Lahti and Izabela Mamede were among the 31 instructors trained over the past two years as part of this initiative. Read more in the <a href="https://blog.bioconductor.org/posts/2025-02-28-carpentries-update/">Bioconductor Carpentries update</a>.</p>
-<p>A big thank you to everyone who made this event possible, especially the Bioinformatics program heads, Professors Flávia Aburjaile and Raquel Minardi, Professor Glória R. Franco who helped set up and organize the workshop, the co-instructors João Paulo P. de Almeida and Izabela Mamede, the participants, and Professor Leo Lahti who traveled all the way from Finland to Brazil to teach the course. The event, as well as the disseminated methodology, was supported by the European Union’s Horizon 2020 research and innovation programme <strong>FindingPheno</strong> (grant 952914).</p>
-<p>We hope this workshop serves as a stepping stone for future collaborations and research in microbiome data analysis in Brazil and beyond.</p>
-</section>
-<section id="continue-the-conversation-on-zulip" class="level2">
-<h2 class="anchored" data-anchor-id="continue-the-conversation-on-zulip">💬 Continue the Conversation on Zulip!</h2>
-<p>To stay connected and continue the conversation:</p>
-<ul>
-<li>Join the <code>#miaverse</code> channel, dedicated to the framework we used in the course (like (Tree)SummarizedExperiment for microbiome). This directly fits the course methodology and is a good place for specific questions and shared learning.</li>
-<li>Join the <code>#microbiome_metagenome</code> channel for broader microbiome discussions. This is more useful for general community building and connecting with researchers beyond the course cohort.</li>
-</ul>
-<p>👉 You can join the conversation at <a href="https://chat.bioconductor.org">https://chat.bioconductor.org</a></p>
-
-
-</section>
-
-<p>
-© 2026 Bioconductor. Content is published under <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons CC-BY-4.0 License</a> for the text and <a href="https://opensource.org/licenses/BSD-3-Clause">BSD 3-Clause License</a> for any code. | <a href="https://www.r-bloggers.com">R-Bloggers</a>
-</p> ]]></description>
-  <category>Events</category>
-  <category>Workshops</category>
-  <category>Microbiome</category>
-  <guid>https://blog.bioconductor.org/posts/2025-07-10-microbiome-course-brazil/</guid>
-  <pubDate>Thu, 10 Jul 2025 00:00:00 GMT</pubDate>
-  <media:content url="https://blog.bioconductor.org/posts/2025-07-10-microbiome-course-brazil/brazil_microbiome_2025_ufmg.jpg" medium="image" type="image/jpeg"/>
 </item>
 </channel>
 </rss>
