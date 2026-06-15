@@ -22,7 +22,8 @@ Articles posted on the Bioconductor community blog are authored using [Quarto](h
 
 1. **Fork the repository**  
 
-Create a fork of the [biocblog repository](https://github.com/Bioconductor/biocblog) on GitHub. ![](./GitHubForkButton.png) and clone it to your local environment.  
+Create a fork of the [biocblog repository](https://github.com/Bioconductor/biocblog) on GitHub and clone it to your local environment. 
+![](./GitHubForkButton.png)  
    ✅ We recommend creating a **branch** in your fork for your post (e.g., `my-blog-post`) instead of committing to `main`. This keeps your fork clean and makes future contributions easier.
 
 2. **Set up your environment**  
@@ -37,7 +38,7 @@ Create a fork of the [biocblog repository](https://github.com/Bioconductor/biocb
      ```
    - Inside that folder, create your `.qmd` file using the **same date** in the post’s front matter.
    - Choose a date at least **one week after you plan to open the PR**. This gives time for review and scheduling before the post is published and promoted on Bioconductor social media channels. If multiple posts are submitted around the same time, we typically space them out by a day or so to improve visibility across channels.
- - Open the `.qmd` file in RStudio and preview your content using the **Preview Website** button under the `Build` tab:
+   - Open the `.qmd` file in RStudio and preview your content using the **Preview Website** button under the `Build` tab:
 ![](./PreviewWebsiteButton.png)
 
 4. **If including images**:  
