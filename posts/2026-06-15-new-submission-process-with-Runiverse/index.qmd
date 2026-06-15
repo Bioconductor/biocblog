@@ -30,7 +30,7 @@ we move in this direction it was also necessary to update the submission process
 for Bioconductor packages. While the daily builders are still transitioning, the
 new submission process location is now live. The new system utilizes GitHub
 Actions to trigger review milestones and R-Universe as the build/check
-backend. The new system is a smoother experience; It is more automated and
+backend. The new system provides a smoother experience; it is more automated and
 avoids administrative steps that have historically bottlenecked the review
 process.
 
