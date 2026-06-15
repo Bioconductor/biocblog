@@ -81,5 +81,5 @@ any future changes before pushing directly to Bioconductor.
 
 #### Thank you!
 
-We appreicate you patience and understanding as we transition to the new
+We appreciate your patience and understanding as we transition to the new
 system. 
