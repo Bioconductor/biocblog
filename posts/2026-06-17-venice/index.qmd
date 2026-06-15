@@ -48,7 +48,7 @@ To ensure these developments remain accessible to the community, teams documente
 These results have been synthesized into a **collaborative preprint**, with each group contributing a detailed section summarizing their specific theme and findings.
 
 - [GitHub repository](https://github.com/BiocCodingCollaborations/VeniceHackathon2026) housing code and resources developed during the hackathon.
-- [Collaborative preprint](https://doi.org/10.37044/osf.io/9ej32) summarizing the format, themes, and outputs of the hackathon.
+- [Collaborative preprint](https://doi.org/10.37044/osf.io/9ej32_v1) summarizing the format, themes, and outputs of the hackathon.
 
 ***
 
