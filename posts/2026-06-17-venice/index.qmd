@@ -10,6 +10,7 @@ image: terrace.jpeg
 creative_commons: CC BY
 categories:
   - events
+  - hackathon
 ---
 
 A Bioconductor-centric hackathon dedicated to spatial omics was organized by members of the Bioconductor community -- Davide Risso (University of Padua, Italy), Helena Crowell (CNAG Barcelona, Spain), and Wolfgang Huber (EMBL) -- on **19-22 April on San Servolo, Italy**, an island off the coast of Venice, facing the Campanile of St. Mark's Square. 
