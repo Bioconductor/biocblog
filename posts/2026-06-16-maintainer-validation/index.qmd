@@ -24,7 +24,7 @@ maintainer. Maintainer emails in the DESCRIPTION of packages often go stale as
 maintainers change positions. There is also a necessity to have maintainers opt
 into Bioconductor policies and procedures as they change over time.
 
-We have created an application that utilizes AWS SES services to send periodic
+We have created an application that uses Amazon Simple Email Service (SES) to send periodic
 emails to maintainers to check if the endpoint is reachable and to send a
 verification opt-in of Bioconductor current policies and procedures and code of
 conduct once a year.
@@ -33,7 +33,7 @@ conduct once a year.
 
 Initial feedback is that this email is "spammy" and may be marked as such by
 institutions, but it is an initial attempt at compliance.  We will look at
-altrenatives to emails like specialized maintainer account access at a future
+alternatives to emails like specialized maintainer account access at a future
 date.
 
 #### Access to Information
@@ -42,11 +42,11 @@ The information is in a publicly accessible database. We do not recommend
 connecting directly to the webservice but instead using the accompanied
 Bioconductor R package
 [BiocMaintainerApp](https://bioconductor.org/packages/BiocMaintainerApp/). It
-provides a ShinyApp interface for querying Bioconductor package maintainers'
+provides a Shiny application interface for querying Bioconductor package maintainers'
 information.
 
 ![](feature-image.jpg){fig-alt="Photo of ShinyApp" fig-align="center"}
 
 #### Thank you
 
-We appreciate all maintainer compliance moving forward.
+We appreciate maintainers' cooperation moving forward.
