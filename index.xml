@@ -60,6 +60,62 @@
   <media:content url="https://blog.bioconductor.org/posts/2026-06-16-maintainer-validation/feature-image.jpg" medium="image" type="image/jpeg"/>
 </item>
 <item>
+  <title>New Package Submission Process</title>
+  <dc:creator>Lori Shepherd-Kern</dc:creator>
+  <link>https://blog.bioconductor.org/posts/2026-06-15-new-submission-process-with-Runiverse/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<section id="introduction" class="level2">
+<h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
+<p>Bioconductor is moving towards using R-universe for its daily build system. See our previous blog post <a href="https://blog.bioconductor.org/posts/2026-04-08-r-universe-collaboration/">Collaborating between Bioconductor and R-universe on Development of Common Infrastructure</a>. As we move in this direction it was also necessary to update the submission process for Bioconductor packages. While the daily builders are still transitioning, the new submission process location is now live. The new system utilizes GitHub Actions to trigger review milestones and R-Universe as the build/check backend. The new system provides a smoother experience; it is more automated and avoids administrative steps that have historically bottlenecked the review process.</p>
+</section>
+<section id="information" class="level2">
+<h2 class="anchored" data-anchor-id="information">Information</h2>
+<section id="location" class="level4">
+<h4 class="anchored" data-anchor-id="location">Location:</h4>
+<p>The new location for submitting new packages to Bioconductor for review is <a href="https://github.com/Bioconductor/BiocContributions">BiocContributions</a>. This replaces the old location at <code>Bioconductor/Contributions</code>.</p>
+</section>
+<section id="documentation" class="level4">
+<h4 class="anchored" data-anchor-id="documentation">Documentation</h4>
+<p>There is documentation on <a href="https://github.com/Bioconductor/BiocContributions/blob/devel/docs/submitters.md">What to Expect</a> as well as a detailed <a href="https://docs.google.com/presentation/d/1EK2wsDoRbtVGECdYC1GU5nGtYkN-h_7R-on-CSUC6CQ/edit?slide=id.p#slide=id.p">Slide Deck</a>.</p>
+<p>There is also a <a href="https://github.com/Bioconductor/BiocContributions/blob/devel/docs/FAQs.md">FAQ</a> for commonly asked questions, concerns, or troubleshooting.</p>
+<p>If you need to report an issue with the new system, please open an Issue on the <a href="https://github.com/BiocStaging/BiocSubmissionProcess">BiocSubmissionProcess</a> GitHub repository.</p>
+</section>
+<section id="what-about-bioconductorcontributions" class="level4">
+<h4 class="anchored" data-anchor-id="what-about-bioconductorcontributions">What about Bioconductor/Contributions</h4>
+<p>The submission location at <code>Bioconductor/Contributions</code> has been frozen and will no longer accept new issues. <a href="https://github.com/Bioconductor/BiocContributions">BiocContributions</a> replaces this location. If you already submitted to the old location, if you are assigned a reviewer, your review will finish there. If you have not been assigned a reviewer yet, we will be posting shortly to close out your submission and move to the new location.</p>
+</section>
+<section id="easier-reproducibility" class="level4">
+<h4 class="anchored" data-anchor-id="easier-reproducibility">Easier Reproducibility</h4>
+<p>One of the frequent comments we receive is how do we reproduce the results of the build reports Bioconductor creates. The switch to using R-universe as the building and checking backend allows for a reproducible testing environment. Any maintainer can apply R-Universe checking on their personal GitHub repository for a Bioconductor package by following these <a href="https://docs.r-universe.dev/bioconductor/#debugging-the-ci">instructions</a>. This allows for a maintainer to test before submitting to Bioconductor and testing any future changes before pushing directly to Bioconductor.</p>
+</section>
+<section id="thank-you" class="level4">
+<h4 class="anchored" data-anchor-id="thank-you">Thank you!</h4>
+<p>We appreciate your patience and understanding as we transition to the new system.</p>
+
+
+</section>
+</section>
+
+<p>
+© 2026 Bioconductor. Content is published under <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons CC-BY-4.0 License</a> for the text and <a href="https://opensource.org/licenses/BSD-3-Clause">BSD 3-Clause License</a> for any code. | <a href="https://www.r-bloggers.com">R-Bloggers</a>
+</p> ]]></description>
+  <category>Bioconductor</category>
+  <category>R-universe</category>
+  <category>Infrastructure</category>
+  <category>GitHub Actions</category>
+  <category>Developer Engagement</category>
+  <category>New Submissions</category>
+  <category>bioconductor-evolution</category>
+  <guid>https://blog.bioconductor.org/posts/2026-06-15-new-submission-process-with-Runiverse/</guid>
+  <pubDate>Mon, 15 Jun 2026 00:00:00 GMT</pubDate>
+  <media:content url="https://blog.bioconductor.org/posts/2026-06-15-new-submission-process-with-Runiverse/featured-image.jpg" medium="image" type="image/jpeg"/>
+</item>
+<item>
   <title>Developer Engagement and Bioconductor</title>
   <dc:creator>Nicholas Cooley, PhD</dc:creator>
   <link>https://blog.bioconductor.org/posts/2026-04-09-developer-engagement/</link>
@@ -1094,73 +1150,6 @@ This work has led to an ongoing collaboration between EDAM and Bioconductor comm
   <category>CZI</category>
   <guid>https://blog.bioconductor.org/posts/2025-07-18-edam/</guid>
   <pubDate>Fri, 18 Jul 2025 00:00:00 GMT</pubDate>
-</item>
-<item>
-  <title>Exploring R and Rust in Bioinformatics – Online Developer Forum, 28 July 2025</title>
-  <dc:creator>Lluís Revilla Sancho</dc:creator>
-  <link>https://blog.bioconductor.org/posts/2025-07-09-developers-forum-july28/</link>
-  <description><![CDATA[ 
-
-
-
-
-
-<p><img src="https://blog.bioconductor.org/posts/2025-07-09-developers-forum-july28/feRris.png" class="img-fluid"></p>
-<p>Join us for an open developer forum exploring how R and Rust can work together in bioinformatics and Bioconductor development. Organised and hosted by Lluís Revilla (<a href="https://bioconductor.org/about/community-advisory-board/">Bioconductor Community Advisory Board</a>), this online session will discuss technical and practical aspects of using Rust alongside R - discussing extendr, Rust-based package development, and real-world use cases. Whether you’re Rust-curious or already experimenting, all are welcome.</p>
-<section id="event-details" class="level3">
-<h3 class="anchored" data-anchor-id="event-details">🗓 Event Details</h3>
-<ul>
-<li><strong>Date:</strong> Monday, 28 July 2025<br>
-</li>
-<li><strong>Time:</strong> 17:00–18:00 CEST<br>
-</li>
-<li><strong>Location:</strong> Online – see details below.</li>
-<li><strong>Add to calendar:</strong> <a href="bioc_forum_r_rust.ics.zip" download="">Download .ics file</a></li>
-</ul>
-</section>
-<section id="agenda" class="level3">
-<h3 class="anchored" data-anchor-id="agenda">📋 Agenda</h3>
-<ul>
-<li>40 minutes – R + Rust: extendr<br>
-</li>
-<li>20 minutes – Rust in bioinformatics</li>
-</ul>
-</section>
-<section id="speakers" class="level3">
-<h3 class="anchored" data-anchor-id="speakers">🎤 Speakers</h3>
-<ul>
-<li>Sun Wenjie <a href="https://sun-wenjie.site">Website</a><br>
-</li>
-<li>Mossa Merhi Reimert: <a href="https://github.com/CGMossa">GitHub</a><br>
-</li>
-<li>Josiah Parry: <a href="https://www.linkedin.com/in/josiahparry/">LinkedIn</a> | <a href="https://josiahparry.com/">Website</a> | <a href="https://github.com/JosiahParry">GitHub</a></li>
-</ul>
-<p>This session is open to all developers interested in bridging R and Rust, especially those working on packages for <strong>Bioconductor</strong> and <strong>CRAN</strong>.</p>
-</section>
-<section id="location" class="level3">
-<h3 class="anchored" data-anchor-id="location">📍 Location</h3>
-<ul>
-<li><strong>Zoom link:</strong> <a href="https://us06web.zoom.us/j/83712090308?pwd=DuNbDvPaLkJAHC7a2HebwLWyl8U9Qw.1">https://us06web.zoom.us/j/83712090308?pwd=DuNbDvPaLkJAHC7a2HebwLWyl8U9Qw.1</a><br>
-</li>
-<li><strong>Meeting ID:</strong> 837 1209 0308<br>
-</li>
-<li><strong>Passcode:</strong> 877331</li>
-</ul>
-<p>The joining link is now available above. We’ll also share updates in the #events channel on <a href="https://chat.bioconductor.org">Bioconductor Zulip</a>.</p>
-<p>☑️ <strong>Please note:</strong> By attending, you agree to abide by the <a href="https://bioconductor.org/about/code-of-conduct/">Bioconductor Code of Conduct</a>.<br>
-📹 The session will be recorded and may be shared on the <a href="https://www.youtube.com/playlist?list=PLdl4u5ZRDMQQLMupAtEzm2y4gUIUm_1n6">Bioconductor YouTube channel</a>.</p>
-<p>💬 <strong>Questions or suggestions?</strong> Reach out in the <a href="https://chat.bioconductor.org">Bioconductor Zulip</a>.</p>
-
-
-</section>
-
-<p>
-© 2026 Bioconductor. Content is published under <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons CC-BY-4.0 License</a> for the text and <a href="https://opensource.org/licenses/BSD-3-Clause">BSD 3-Clause License</a> for any code. | <a href="https://www.r-bloggers.com">R-Bloggers</a>
-</p> ]]></description>
-  <category>events</category>
-  <guid>https://blog.bioconductor.org/posts/2025-07-09-developers-forum-july28/</guid>
-  <pubDate>Fri, 11 Jul 2025 00:00:00 GMT</pubDate>
-  <media:content url="https://blog.bioconductor.org/posts/2025-07-09-developers-forum-july28/feRris.png" medium="image" type="image/png" height="108" width="144"/>
 </item>
 </channel>
 </rss>
