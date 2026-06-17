@@ -10,7 +10,69 @@
 <atom:link href="https://blog.bioconductor.org/index.xml" rel="self" type="application/rss+xml"/>
 <description>A blog for the Bioconductor community!</description>
 <generator>quarto-1.9.38</generator>
-<lastBuildDate>Tue, 16 Jun 2026 00:00:00 GMT</lastBuildDate>
+<lastBuildDate>Wed, 17 Jun 2026 00:00:00 GMT</lastBuildDate>
+<item>
+  <title>Bioconductor-centric hackathon on spatial omics and image-derived data</title>
+  <dc:creator>Davide Risso</dc:creator>
+  <dc:creator>Helena Crowell</dc:creator>
+  <dc:creator>Wolfgang Huber</dc:creator>
+  <link>https://blog.bioconductor.org/posts/2026-06-17-venice/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<p>A Bioconductor-centric hackathon dedicated to spatial omics was organized by members of the Bioconductor community – Davide Risso (University of Padua, Italy), Helena Crowell (CNAG Barcelona, Spain), and Wolfgang Huber (EMBL) – on <strong>19-22 April on San Servolo, Italy</strong>, an island off the coast of Venice, facing the Campanile of St.&nbsp;Mark’s Square.</p>
+<p>The hackathon brought together <strong>27 researchers and software developers</strong> – from Germany, Switzerland, Italy, Spain, and the USA – to advance Bioconductor capabilities in spatial data handling and analysis, as well as the related topic of image analysis.</p>
+<p>Participants were invited based on their experience with the hackathon’s research themes and software development, followed by an open call to the Bioconductor community (and beyond). The final group of participants included a mix of early-career and senior researchers, including two <a href="https://scverse.org/">scverse</a> members and one industry researcher, with a range of expertise in spatial omics, image analysis, and software development.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://blog.bioconductor.org/posts/2026-06-17-venice/terrace.jpeg" class="img-fluid figure-img"></p>
+<figcaption>Picture time on a terrace overlooking St.&nbsp;Mark’s Square from San Servolo island. (Back:) Elisabeth Purdom, Wolfgang Huber, Pere Moles Serò, Rafael Irizarry, Helena Crowell, Martin Emons, Dario Righelli, Juan Henao, Sean Davis, Gabriele Sales, Mike Smith, Ilaria Billato, Patrick Danaher, Hugo Gruson, Carissa Chen, Daria Lazic, Luca Marconato, Artür Manukyan. (Front:) Davide Risso, Sviatoslav Kharuk, Michael Stadler, Samuel Gunz, Robert Castelo, Charlotte Soneson, Matteo Calgaro, Gabriel Grajeda, Riccardo Ceccaroni.</figcaption>
+</figure>
+</div>
+<p>The hackathon centered on spatial omics and other bioimaging data, with emphasis on data representation, interoperable serialization, scalable data handling, Python interoperability, interactive visualization. The hackathon ran over three days with the majority of the time spent in teams who independently developed and implemented a plan that addressed a challenge or met a goal important to team members.</p>
+<p>On the first day, the participants organized themselves into four major themes:</p>
+<ul>
+<li><strong>Spatially stratified differential expression analysis</strong><br>
+(Matteo Calgaro, Robert Castelo, Patrick Danaher, Pere Moles Serò)</li>
+<li><strong>Image and segmentation data manipulation and visualization</strong><br>
+(Riccardo Ceccaroni, Carissa Chen, Davide Risso, Mike Smith)</li>
+<li><strong>Infrastructure and interoperability of spatial data in Bioconductor</strong><br>
+(Helena Crowell, Martin Emons, Gabriel Grajeda, Hugo Gruson, Samuel Gunz, Rafael Irizarry, Daria Lazic, Luca Marconato, Charlotte Soneson, Michael Stadler)</li>
+<li><strong>Facilitating use of foundation models for the Bioconductor community</strong><br>
+(Ilaria Billato, Juan Henao, Wolfgang Huber, Sviatoslav Kharuk, Artür Manukyan, Elisabeth Purdom, Dario Righelli, Gabriele Sales)</li>
+</ul>
+<p><img src="https://blog.bioconductor.org/posts/2026-06-17-venice/working.jpeg" class="img-fluid"></p>
+<p>Each day started with a brief session in which each team set up goals for the day. Day 1 also included a single slide, five-minute <strong>project plan presentation</strong> right after lunch. This presentation mid-day served to help teams develop a focused project quickly, with the understanding that the project plan would likely change over the next 2 days.</p>
+<p>Days 1 and 2 ended with the opportunity for each team to present their work and challenges they faced that day, again with a one-slide presentation. These <strong>daily afternoon summaries</strong> were helpful to identify shared challenges, crystallize work from the day, and to provide visibility across project teams.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://blog.bioconductor.org/posts/2026-06-17-venice/marco.jpeg" class="img-fluid figure-img"></p>
+<figcaption>On the second day, the group journeyed across the water for a stroll through the streets of Venice towards Italian dinner. This group picture was taken on St.&nbsp;Mark’s Square (Piazza San Marco), featuring St.&nbsp;Mark’s Basilica and Campanile (bell tower) in the background.</figcaption>
+</figure>
+</div>
+<p>The hackathon ended with a <strong>concluding showcase</strong> where each team presented their progress and demonstrated their technical achievements. To ensure these developments remain accessible to the community, teams documented their work (code, vignettes, and resources) in a dedicated <strong>GitHub repository</strong>. These results have been synthesized into a <strong>collaborative preprint</strong>, with each group contributing a detailed section summarizing their specific theme and findings.</p>
+<ul>
+<li><a href="https://github.com/BiocCodingCollaborations/VeniceHackathon2026">GitHub repository</a> housing code and resources developed during the hackathon.</li>
+<li><a href="https://doi.org/10.37044/osf.io/9ej32_v1">Collaborative preprint</a> summarizing the format, themes, and outputs of the hackathon.</li>
+</ul>
+<hr>
+<p>The event was organized by the Department of Statistical Sciences of the University of Padova in collaboration with EMBL and Venice International University, funded in part by the European Research Council (ERC) Grant CoG 101171662, and supported by EMBL’s Transversal Theme Theory@EMBL.</p>
+<hr>
+
+
+
+<p>
+© 2026 Bioconductor. Content is published under <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons CC-BY-4.0 License</a> for the text and <a href="https://opensource.org/licenses/BSD-3-Clause">BSD 3-Clause License</a> for any code. | <a href="https://www.r-bloggers.com">R-Bloggers</a>
+</p> ]]></description>
+  <category>events</category>
+  <category>hackathon</category>
+  <guid>https://blog.bioconductor.org/posts/2026-06-17-venice/</guid>
+  <pubDate>Wed, 17 Jun 2026 00:00:00 GMT</pubDate>
+  <media:content url="https://blog.bioconductor.org/posts/2026-06-17-venice/terrace.jpeg" medium="image" type="image/jpeg"/>
+</item>
 <item>
   <title>Bioconductor Maintainer Validation</title>
   <dc:creator>Lori Shepherd-Kern</dc:creator>
@@ -957,199 +1019,6 @@ document.addEventListener('click', function(e) {
   <category>CZI</category>
   <guid>https://blog.bioconductor.org/posts/2025-10-10-gpus/</guid>
   <pubDate>Fri, 10 Oct 2025 00:00:00 GMT</pubDate>
-</item>
-<item>
-  <title>Tagging Bioconductor packages with EDAM</title>
-  <dc:creator>Vince Carey</dc:creator>
-  <dc:creator>Lori Kern</dc:creator>
-  <link>https://blog.bioconductor.org/posts/2025-07-18-edam/</link>
-  <description><![CDATA[ 
-
-
-
-
-
-<section id="introduction" class="level1">
-<h1>Introduction</h1>
-<p>The <a href="https://edamontology.org">EDAM ontology</a> is used to provide conceptual organization of resources in major initiatives like <a href="https://bio.tools/">ELIXIR bio.tools</a> and <a href="https://f1000research.com/posters/6-1032">Galaxy</a>.</p>
-<p>Bioconductor’s methods and data are tagged using an ad hoc terminologic hierarchy called <a href="https://www.bioconductor.org/packages/release/bioc/html/biocViews.html">biocViews</a>.</p>
-<p>In 2024, a proposal to enhance discoverability of Bioconductor resources through collaboration with EDAM’s ontology developers was funded through the <a href="../../posts/2024-07-12-czi-eoss6-grants/">Chan-Zuckerberg Initiative Essential Open Source Software program</a>. This blog post gives an update on the project.</p>
-</section>
-<section id="task-views-starting-with-cran" class="level1">
-<h1>“Task views”, starting with CRAN</h1>
-<p><a href="https://cran.r-project.org/web/views">CRAN task views</a> are a bonanza for practicing data scientists. Introduced in 2005, “[t]hey provide guidance about which CRAN packages are relevant for tasks related to a certain topic, and can also facilitate automatic installation of all corresponding packages (<a id="cite-ctvarx"></a>Zeileis et al.&nbsp;(2023)).</p>
-<section id="exploring-cran-task-views" class="level3">
-<h3 class="anchored" data-anchor-id="exploring-cran-task-views">Exploring CRAN task views</h3>
-<p>But what is a “task view”, and how can a task view do so much? The current content stack for CRAN task views lives in a <a href="https://github.com/cran-task-views">GitHub organization</a>. The <a href="https://github.com/cran-task-views/ctv/">ctv package</a> interrogates the view collection so that we can compute</p>
-<ul>
-<li>the number of views on 2025-07-17 to be 48,</li>
-<li>a random sample of view names (Survival, ExperimentalDesign, Databases, Omics, MachineLearning), and</li>
-<li>the average number of packages per view (121.1).</li>
-</ul>
-</section>
-<section id="subviews" class="level3">
-<h3 class="anchored" data-anchor-id="subviews">Subviews</h3>
-<p>Each view is curated by a team and a narrative web page is compiled to HTML. We use <a href="https://rvest.tidyverse.org/">rvest</a> to identify subtopics of the Omics view:</p>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">library</span>(rvest)</span>
-<span id="cb1-2"><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">read_html</span>(<span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"https://cran.r-project.org/web/views/Omics.html"</span>) <span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">|&gt;</span> </span>
-<span id="cb1-3">  <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">html_elements</span>(<span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"h3"</span>) <span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">|&gt;</span> <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">html_text</span>()</span></code></pre></div></div>
-<div class="cell-output cell-output-stdout">
-<pre><code> [1] "Annotation and databases"    "Genomics"                   
- [3] "Transcriptomics"             "Proteomics"                 
- [5] "Metabolomics"                "Other omics"                
- [7] "Multiple omics"              "Specific tasks"             
- [9] "Specific application fields" "CRAN packages"              
-[11] "Related links"               "Other resources"            </code></pre>
-</div>
-</div>
-<p>This approach can be used to learn the subtopics of any task view.</p>
-</section>
-<section id="upshots" class="level3">
-<h3 class="anchored" data-anchor-id="upshots">Upshots</h3>
-<p>CRAN task views provide a vocabulary for organizing software packages for data science, narrations of tasks addressed by various packages, mechanisms for tagging packages for discovery through view search, and protocols for adding new views and for adding new packages to existing views. See Zeileis et al.&nbsp;(2023) for full details.</p>
-<p>Of note: while CRAN hosts over 22,000 software packages, the number of packages assigned to some view at this time is 4908.</p>
-</section>
-</section>
-<section id="biocviews-a-graph-is-all-you-get" class="level1">
-<h1>biocViews: a graph is all you get</h1>
-<p>The <a href="https://bioconductor.org/packages/biocViews">biocViews</a> has a badge indicating that it has been in Bioconductor for 19 years. Briefly, the intent was to emulate CRAN task views, with a vocabulary and curation of packages using topics relevant to genomic data science. Figure 1 gives a basic idea of the vocabulary and its structure. There are 497 terms in a directed graph with root “BiocViews”.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="https://blog.bioconductor.org/posts/2025-07-18-edam/bcv20.png" class="img-fluid figure-img"></p>
-<figcaption>Figure 1. A “dot” layout of 20 nodes from the biocViewsVocab graph.</figcaption>
-</figure>
-</div>
-<p>The mapping from biocViews terms to packages is specified in each package’s DESCRIPTION file. For a given release of Bioconductor, the <a href="https://bioconductor.org/packages/BiocPkgTools">BiocPkgTools</a> includes the mapping from each package to the list of biocViews terms chosen by the package developer to characterize package capabilities. All packages map to at least one term. The average number of terms for software packages is 9, and the maximum number of terms in use for any package is 45, for <a href="https://bioconductor.org/packages/roastgsa">roastgsa</a>.</p>
-<section id="exploring-biocviews" class="level3">
-<h3 class="anchored" data-anchor-id="exploring-biocviews">Exploring biocViews</h3>
-<p>An R package, <a href="https://github.com/vjcitn/biocEDAM">biocEDAM</a>, under development in GitHub, provides a shiny app for comprehensive exploration of the biocViews vocabulary and its mapping to Bioconductor software, annotation, experiment, and workflow packages. Figure 2 provides a screenshot. The app is available for general use at <a href="https://vjcitn.shinyapps.io/bvbrowse">shinyapps.io</a>.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="https://blog.bioconductor.org/posts/2025-07-18-edam/bvbr.png" class="img-fluid figure-img"></p>
-<figcaption>Figure 2. A view of the bvbrowse app with focus on packages mapped to the biocViews term “DifferentialSplicing”, which is a kind of “BiologicalQuestion”.</figcaption>
-</figure>
-</div>
-</section>
-<section id="upshots-1" class="level3">
-<h3 class="anchored" data-anchor-id="upshots-1">Upshots</h3>
-<p>Motivated by CRAN task views, the biocViews vocabulary is deeply entrenched in Bioconductor’s operations. Every package maps to at least one term. The mappings given in DESCRIPTION files are used to sort contributions into Software, Annotation, Experiment and Workflow classes.</p>
-<p>Figure 2 shows the family of “biological questions” addressed in the vocabulary. This subvocabulary was created in an <em>ad hoc</em> matter, by request or perceived need. The most recent additions to the vocabulary appear to have been made in 2023, involving the terms LongRead, WorkflowManagement, and <a href="https://github.com/Bioconductor/Organism.dplyr/issues/18">Salmo_salar</a>.</p>
-<p>Unfortunately, the original motivation of producing curated and narrated topic-level documents in the manner of CRAN task views, was never achieved.</p>
-</section>
-</section>
-<section id="edam-formal-ontology-for-bioinformatics" class="level1">
-<h1>EDAM: Formal ontology for bioinformatics</h1>
-<section id="views-of-the-edam-conceptual-hierarchy" class="level2">
-<h2 class="anchored" data-anchor-id="views-of-the-edam-conceptual-hierarchy">Views of the EDAM conceptual hierarchy</h2>
-<p>From <a href="https://edamontology.org">edamontology.org</a>:</p>
-<blockquote class="blockquote">
-<p>EDAM is a comprehensive ontology of well-established, familiar concepts that are prevalent within scientific data analysis and data management (both within and beyond life sciences and imaging). EDAM includes topics, operations, types of data and data identifiers, and data formats.</p>
-</blockquote>
-<p>A taste of the conceptual network is given in Figure 3. Visit <a href="https://edamontology.github.io/edam-browser/#data_0006">the data node</a> to explore data types enumerated in the system.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="https://blog.bioconductor.org/posts/2025-07-18-edam/edamslice.png" class="img-fluid figure-img"></p>
-<figcaption>Figure 3. A snapshot of an expansion of the interactive network viewer for EDAM.</figcaption>
-</figure>
-</div>
-</section>
-<section id="comparing-biocviews-and-edam" class="level2">
-<h2 class="anchored" data-anchor-id="comparing-biocviews-and-edam">Comparing biocViews and EDAM</h2>
-<p>It is natural to expect that natural language processing tools would help identify correspondences between the biocViews vocabulary and EDAM. We used the text2term system <a id="cite-gon2024"></a>Gonçalves et al.&nbsp;(2024) to help identify potential matches of terms using lexical and semantic analysis. Figure 4 gives a slice of the outcome of this approach. The top 3 scoring terms in EDAM are provided for each term in biocViews.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="https://blog.bioconductor.org/posts/2025-07-18-edam/sheetBiocVIews2EDAM.png" class="img-fluid figure-img"></p>
-<figcaption>Figure 4. Application of text2term to biocViews for scoring matches to the EDAM ontology.</figcaption>
-</figure>
-</div>
-<p>The interpretation of this analysis is ongoing. Figure 4 shows, for example, that the biocViews term “SingleCell” can be mapped to topic, operation, data concepts in EDAM. The biocViews term seems intended to address single cell sequencing, and perhaps it should be replaced by EDAM topic 4028. It is not clear that an adjudication and replacement process of this sort could scale over the whole biocViews vocabulary, but some direct or very near matches are observed.</p>
-</section>
-<section id="using-large-language-model-methods-to-tag-package-content" class="level2">
-<h2 class="anchored" data-anchor-id="using-large-language-model-methods-to-tag-package-content">Using large language model methods to tag package content</h2>
-<p>Thanks to code and data made available by Anh Nguyet Vu of Sage Bionetworks, the <a href="https://vjcitn.github.io/biocEDAM">biocEDAM R package</a> (under development) can use gpt-4o to produce EDAM term assignments for Bioconductor packages. The current process has two steps. The function <code>vig2data</code> processes HTML or PDF vignettes, and uses the <a href="https://ellmer.tidyverse.org/news/index.html#ellmer-010"><code>extract_data</code></a> feature of <code>ellmer::chat_openai</code> to produce a fixed-length summary. This summary is then analyzed against schemas for the four main concepts of EDAM: topic, format, operation, data, using specific prompting for extraction of relevant concepts “as specifically as possible”.</p>
-<p>Building on this foundation, we are exploring integration with Gemini (via Ellmer) to offer a key‑free backend that makes testing easier for a wider audience. This ongoing work will also be part of discussions at the <a href="https://www.open-bio.org/events/bosc-2025/ismb-collaborationfest-2025/">ISMB/ECCB 2025 CollaborationFest (July 23-24)</a>, where we invite contributions and feedback. See <a href="https://github.com/mblue9/biocedam-cofest-2025">our project page</a> for details.</p>
-<p>Figure 5 provides the output of this approach for the <a href="https://www.bioconductor.org/packages/release/bioc/vignettes/MSnbase/inst/doc/v05-MSnbase-development.html">development vignette</a> of the MSnbase package, which describes data types for analyzing mass spectrometry data.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="https://blog.bioconductor.org/posts/2025-07-18-edam/edamizeMSnbase.png" class="img-fluid figure-img"></p>
-<figcaption>Figure 5. EDAM terms for the MSnbase package, based on gpt-4o analysis of a vignette for the package that describes how data classes of the package are structured.</figcaption>
-</figure>
-</div>
-<div id="tip-biocedam" class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Tip&nbsp;1: Try biocEDAM on Your Package
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>We invite Bioconductor developers and contributors to explore the <a href="https://vjcitn.github.io/biocEDAM">biocEDAM R package</a> to test EDAM term assignments on their own packages.</p>
-<ul>
-<li>Does the suggested EDAM tagging reflect your package’s functionality?</li>
-<li>Are there important concepts missing from EDAM?</li>
-<li>Would you suggest refinements to the prompts or mappings?</li>
-</ul>
-<p>Your feedback will help improve the tool and guide future ontology development. Please share your thoughts via <a href="https://github.com/vjcitn/biocEDAM/issues">GitHub issues</a> or join the ongoing <a href="https://workinggroups.bioconductor.org/currently-active-working-groups-committees.html#edam-collaboration">EDAM-Bioconductor working group</a>.</p>
-</div>
-</div>
-</section>
-</section>
-<section id="summary" class="level1">
-<h1>Summary</h1>
-<p>This project began with the notion that an <em>ad hoc</em> enumeration of concepts used to tag Bioconductor packages (biocViews) could be “replaced” with a more systematic ontology (EDAM). It turns out that biocViews has purposes beyond package “tagging” for discovery support, and modifications to the vocabulary have ramifications in other domains of the Bioconductor software ecosystem. It is also clear that EDAM “lacks” concepts that are used in biocViews, and will need to be updated. This is a formal process requiring review and consensus among EDAM maintainers. See this <a href="https://github.com/edamontology/edamontology/pull/916">pull request</a> for an example arising from this project.</p>
-<p>Ultimately we believe that tooling related to that provided in the biocEDAM package will help propose term assignments for Bioconductor packages (and other artifacts useful in genomic data science) that developers and content creators can adopt as they see fit. This will lead to gains in resource discoverability and will provide values for organizing ecosystems and workflow collections like Bioconductor and bio.tools.</p>
-<p>For a broader view of Bioconductor’s future direction, see Vince Carey’s recent opinion piece in Patterns: <a href="https://doi.org/10.1016/j.patter.2025.101319">https://doi.org/10.1016/j.patter.2025.101319</a>.</p>
-<p>We welcome feedback and contributions — especially from those working on package metadata. If you’d like to try the biocEDAM tooling, see Tip&nbsp;1 above.</p>
-</section>
-<section id="acknowledgments" class="level1">
-<h1>Acknowledgments</h1>
-<p>This work was supported in part by a Chan-Zuckerberg Initiative <a href="https://blog.bioconductor.org/posts/2024-07-12-czi-eoss6-grants/">Essential Open Source Software</a> project EOSS6-0000000067, “Ontological resource tagging and discovery for Bioconductor”. Important milestones were reported in a <a href="https://osf.io/preprints/biohackrxiv/dsgnw_v1">BioHackathon Europe 2024 preprint</a>. A Bioconductor Technical Advisory Board <a href="https://workinggroups.bioconductor.org/currently-active-working-groups-committees.html#edam-collaboration">Working Group</a> is currently engaged with these activities.</p>
-<!--
-This work has led to an ongoing collaboration between EDAM and Bioconductor community members to explore indexing the Bioconductor ecosystem using the EDAM ontology. The working group aims to increase the visibility of Bioconductor packages, expand EDAM coverage, and foster interoperability across platforms like bio.tools and TeSS. Read the preprint and/or join the discussion.
--->
-</section>
-<section id="references" class="level1">
-<h1>References</h1>
-<p>
-<cite><a id="bib-gon2024"></a>Gonçalves, R. S. et al. (2024). <em>The text2term tool to map free-text descriptions of biomedical terms to ontologies</em>. arXiv: 2407.02626 [cs.DB]. URL: <a href="https://arxiv.org/abs/2407.02626">https://arxiv.org/abs/2407.02626</a>.</cite>
-</p>
-<p>
-<cite><a id="bib-ctvarx"></a>Zeileis, A. et al. (2023). <em>CRAN Task Views: The Next Generation</em>. arXiv: 2305.17573 [stat.CO]. URL: <a href="https://arxiv.org/abs/2305.17573">https://arxiv.org/abs/2305.17573</a>.</cite>
-</p>
-
-
-</section>
-
-<p>
-© 2026 Bioconductor. Content is published under <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons CC-BY-4.0 License</a> for the text and <a href="https://opensource.org/licenses/BSD-3-Clause">BSD 3-Clause License</a> for any code. | <a href="https://www.r-bloggers.com">R-Bloggers</a>
-</p> ]]></description>
-  <category>bioconductor-evolution</category>
-  <category>ontology</category>
-  <category>biocViews</category>
-  <category>EDAM</category>
-  <category>education</category>
-  <category>CZI</category>
-  <guid>https://blog.bioconductor.org/posts/2025-07-18-edam/</guid>
-  <pubDate>Fri, 18 Jul 2025 00:00:00 GMT</pubDate>
 </item>
 </channel>
 </rss>
