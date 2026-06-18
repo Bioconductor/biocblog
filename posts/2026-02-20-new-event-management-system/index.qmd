@@ -1,0 +1,184 @@
+---
+title: "Introducing Bioconductor's New Event Management System and Champion Program"
+description: |
+  Learn about the transition from GitHub Issue Forms to an automated event management system using Google Forms and Google Apps Script, and how the Bioconductor Champion Program supports event organizers.
+author:
+  - name: Kozo Nishida
+    url: https://github.com/kozo2
+date: 2026-02-20
+categories:
+  - community
+  - events
+  - automation
+format:
+  html:
+    toc: true
+---
+
+## Introduction
+
+The Bioconductor community is dedicated to fostering collaboration and knowledge sharing through various community events worldwide. As our community continues to grow, we recognized the need to improve our event management processes to better serve both event organizers and participants. This post introduces our new automated event management system and the exciting opportunities it brings for community members.
+
+## Challenges with the Previous System
+
+Previously, Bioconductor used GitHub Issue Forms to manage event applications. While this approach aligned with our development workflow, it presented several significant challenges that limited its effectiveness:
+
+### Requirement for a GitHub Account
+
+Event applicants were required to have their own GitHub account to submit a request. This created an unnecessary barrier to entry, particularly for:
+
+- Community members who are new to open source development
+- Event organizers who primarily focus on teaching and outreach rather than software development
+- Participants from regions where GitHub may not be the primary collaboration platform
+
+This requirement essentially excluded potential event organizers who could contribute valuable activities to the Bioconductor community but didn't have or want to create a GitHub account.
+
+### Lack of Privacy
+
+Since GitHub Issues do not have a private mode, it was impossible to process event applications that required privacy or confidentiality. This limitation meant that:
+
+- All event application details were publicly visible
+- Sensitive information such as budget details, venue negotiations, or personal contact information could not be safely included
+- Some organizers were hesitant to apply due to concerns about public disclosure of planning details
+
+This lack of privacy was particularly problematic for events in their early planning stages or those involving sensitive institutional relationships.
+
+### Risk of Oversight
+
+There was a significant risk of missing new event applications if GitHub notifications were not monitored consistently. GitHub's notification system, while powerful for development workflows, is not optimized for managing event applications:
+
+- Notifications could get lost among other repository activities
+- No dedicated workflow for tracking application status
+- Difficult to ensure timely responses to applicants
+- No automated reminders or follow-up mechanisms
+
+These challenges highlighted the need for a more streamlined, accessible, and privacy-conscious solution.
+
+To visualize the manual steps and potential bottlenecks, the diagram below summarizes the current workflow we are replacing.
+
+![Current event management workflow: GitHub issue forms, manual review, manual replies, manual PRs, calendar updates, and closing issues.](old_eventworkflow.png)
+
+## Transition to an Automated System
+
+To address these limitations, we have developed a new automated event management system using Google Forms and Google Apps Script. This solution is available in the [@kozo2/bioc-event-workflow](https://github.com/kozo2/bioc-event-workflow) repository.
+
+### Key Features of the New System
+
+The new system offers several important improvements:
+
+**Accessibility**: No GitHub account is required to submit an event application. Anyone with an email address can apply, significantly lowering the barrier to entry.
+
+**Privacy Protection**: Event applications are submitted through Google Forms and stored privately. Only designated community managers have access to the submissions, ensuring confidentiality throughout the review process.
+
+**Automated Workflow**: The Google Apps Script automation handles:
+
+- Notification to reviewers when new applications are received
+- Status tracking throughout the review process
+- Systematic follow-up mechanisms
+
+**Improved Organization**: Applications are stored in a structured format in Google Sheets, making it easy to:
+
+- Track application status
+- Search and filter submissions
+- Generate reports and statistics
+- Ensure no application goes unnoticed
+
+This transition represents a significant step forward in making Bioconductor event management more inclusive, efficient, and professional.
+
+The following diagram illustrates the new, automated workflow, showing how submissions move from Google Forms to review, scheduling, and automated updates.
+
+![New event management workflow: Google Forms submission, review in Google Sheets, automated calendar updates and PR creation via Apps Script, and thank-you replies.](new_eventworkflow.png)
+
+## Application Procedures
+
+### For Event Organizers
+
+If you're interested in organizing a Bioconductor-related event, here's how to apply through the new system:
+
+1. **Access the Application Form**: Visit the new Bioconductor event application form ([https://forms.gle/2SRaGTpv3EtQ9F8SA](https://forms.gle/2SRaGTpv3EtQ9F8SA)).
+
+2. **Complete the Application**: Provide details about your proposed event, including:
+   - Explanation of relevance to the Bioconductor community
+   - Description of the event content
+   - Submitter email address
+   - Proposed date and location
+
+3. **Submit and Confirm**: After submission, you'll receive an automated acknowledgment email confirming that your application has been received.
+
+4. **Review Process**: The Bioconductor community team will review your application and typically respond within two weeks with:
+   - Approval and posting of the event information at https://www.bioconductor.org/help/events/
+   - Requests for additional information
+   - Suggestions for event improvement
+   - Information about available support resources
+
+5. **Event Planning Support**: Once approved, you'll receive guidance on:
+   - Promotional materials and communication channels
+   - Access to Bioconductor educational resources
+   - Connection with experienced community members who can help
+   - Potential funding through community programs
+
+### For Participants
+
+For those interested in attending Bioconductor events:
+
+- Keep an eye on the [Bioconductor events page](https://bioconductor.org/help/events/) for upcoming events
+- Subscribe to Bioconductor community channels for event announcements
+- Reach out to event organizers directly for registration information
+
+## Bioconductor Champion Program
+
+To further support event organizers and recognize their valuable contributions to the community, Bioconductor offers the **Champion Program** as an important incentive.
+
+### What is the Champion Program?
+
+The Bioconductor Champion Program is designed to empower community members who are passionate about sharing knowledge and growing the Bioconductor ecosystem. Champions receive:
+
+**Training and Resources**:
+- Access to Bioconductor teaching materials and resources
+- Training on best practices for running effective workshops and events
+- Connection with experienced mentors who can provide guidance
+
+**Financial Support**:
+- Potential funding for event expenses (venue, catering, materials)
+- Travel support for bringing in expert instructors
+- Resources for promotional materials and swag
+
+**Recognition**:
+- Official recognition as a Bioconductor Champion
+- Featured profiles on the Bioconductor website and blog
+- Certificate of contribution to the community
+
+**Community Connection**:
+- Direct access to Bioconductor core team members
+- Priority support for technical questions
+- Networking opportunities with other Champions worldwide
+
+### How to Become a Champion
+
+Community members can apply for the Champion Program through the event management system. When submitting an event application, you can also express interest in becoming a Champion. The program is particularly well-suited for:
+
+- Educators and instructors passionate about bioinformatics training
+- Researchers who want to share Bioconductor expertise with their local communities
+- Community organizers interested in building Bioconductor user groups
+- Contributors who want to make a lasting impact on computational biology education
+
+For more information about the Champion Program, visit the Bioconductor website or contact the community team through the event application form.
+
+## Conclusion
+
+The transition to our new automated event management system represents Bioconductor's commitment to building a more inclusive, efficient, and supportive community. By addressing the limitations of the previous GitHub Issue Forms approach, we're making it easier for anyone to organize and participate in Bioconductor events worldwide.
+
+We encourage all community members—whether you're a seasoned Bioconductor developer or someone new to the project—to consider organizing events in your local area. With our improved application process and the support of the Champion Program, you have the resources and backing needed to create meaningful learning experiences for others.
+
+Together, we can continue to grow the Bioconductor community and advance computational biology education around the world.
+
+## Get Involved
+
+Ready to organize a Bioconductor event or join the Champion Program? Here's how to get started:
+
+- Visit the Bioconductor events page for the application form
+- Join the conversation on [Bioconductor Zulip](https://chat.bioconductor.org/)
+- Follow Bioconductor on social media for event announcements
+- Reach out to the community team with questions or ideas
+
+We look forward to supporting your event and welcoming you as part of the growing Bioconductor community!
