@@ -25,74 +25,12 @@ The figures below summarise EuroBioC2026 at a glance: 147 attendees from 23 coun
 ## Participants by country
 Participants travelled to Turku from across Europe and beyond, reflecting the increasingly global nature of the Bioconductor community. While Finland represented the largest delegation, attendees also joined from Italy, Belgium, Germany, Switzerland, the United States, Sweden, the United Kingdom, Ireland, Spain, Kenya, South Korea, Australia, and several other countries.
 
-```{r, echo=FALSE, warning=FALSE, message=FALSE, cache=TRUE}
-
-library(ggplot2)
-library(dplyr)
-library(readr)
-library(sf)
-library(rnaturalearth)
-library(rnaturalearthdata)
-library(viridis)
-library(plotly)
-
-data_2026 <- read_csv("media/eurobioc2026_countries.csv")
-
-counts <- data_2026 %>%
-  rename(
-    Country = country,
-    Count = participants
-  ) %>%
-  mutate(Country = case_when(
-    Country == "United States" ~ "United States of America",
-    Country == "South Korea" ~ "Republic of Korea",
-    TRUE ~ Country
-  ))
-
-world <- ne_countries(scale = "medium", returnclass = "sf")
-world <- world %>% filter(name != "Antarctica")
-world <- left_join(world, counts, by = c("name" = "Country"))
-
-world$log_Count <- log1p(world$Count)
-
-max_count <- ceiling(max(counts$Count, na.rm = TRUE) / 50) * 50
-
-breaks <- unique(c(0, log1p(1), log1p(5), log1p(10), log1p(50), log1p(max_count)))
-labels <- round(expm1(breaks))
-
-p <- ggplot(data = world) +
-  geom_sf(
-    aes(fill = log_Count, text = paste(name, Count)),
-    color = "white"
-  ) +
-  scale_fill_viridis(
-    option = "magma",
-    na.value = "grey",
-    name = "Participants",
-    limits = c(0, log1p(max_count)),
-    breaks = breaks,
-    labels = labels,
-    direction = -1
-  ) +
-  coord_sf(
-    xlim = c(-180, 180),
-    ylim = c(-60, 90),
-    expand = FALSE
-  ) +
-  theme_void() +
-  theme(axis.line.y = element_blank())
-
-ggplotly(p, tooltip = "text") %>%
-  layout(
-    xaxis = list(
-      showline = FALSE,
-      showticklabels = FALSE,
-      zeroline = FALSE,
-      title_standoff = 5
-    )
-  )
-
-```
+<iframe
+  src="media/eurobioc2026-participants-map.html"
+  width="100%"
+  height="600"
+  frameborder="0">
+</iframe>
 
 ## Preconference
 Ahead of the main conference, EuroBioC2026 hosted two preconference events on June 1-2. These were delivered in collaboration with the University of Turku, CompLifeSci, the Finnish Society for Bioinformatics, and members of the Bioconductor community. Running in parallel over two days, the events allowed participants to either strengthen their analytical skills through hands-on training or contribute directly to the development of Bioconductor software through collaborative coding projects.
