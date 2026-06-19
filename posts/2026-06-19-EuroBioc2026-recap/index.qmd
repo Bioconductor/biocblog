@@ -222,6 +222,7 @@ EuroBioC2026 gratefully acknowledges the support of all sponsors and partners wh
 - [Liedon Säästöpankkisäätiö](https://liedonsaastopankkisaatio.fi/)
 
 ### Supporting organisations
+- [CSC - IT Center for Science, Finland](https://csc.fi/en/) for providing computational resources for the workshops
 - [Nordic Computational Biology](https://www.nordic-compbio.org/)
 
 ### Hosts
