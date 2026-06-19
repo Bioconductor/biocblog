@@ -10,7 +10,229 @@
 <atom:link href="https://blog.bioconductor.org/index.xml" rel="self" type="application/rss+xml"/>
 <description>A blog for the Bioconductor community!</description>
 <generator>quarto-1.9.38</generator>
-<lastBuildDate>Wed, 17 Jun 2026 00:00:00 GMT</lastBuildDate>
+<lastBuildDate>Fri, 19 Jun 2026 00:00:00 GMT</lastBuildDate>
+<item>
+  <title>EuroBioC2026 conference recap</title>
+  <dc:creator>Laurah Ondari</dc:creator>
+  <link>https://blog.bioconductor.org/posts/2026-06-19-EuroBioc2026-recap/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<p><a href="media/eurobioc-main-image.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="https://blog.bioconductor.org/posts/2026-06-19-EuroBioc2026-recap/media/eurobioc-main-image.jpg" class="zoomable img-fluid" style="width:100.0%"></a></p>
+<p>The European Bioconductor Conference 2026 (<a href="https://eurobioc2026.bioconductor.org/">EuroBioC2026</a>) took place from June 3-5, 2026, in Turku, Finland. Hosted by the <a href="https://www.utu.fi/en">University of Turku</a> and the <a href="https://www.bioinf.fi/">Finnish Society for Bioinformatics</a> at BioCity, the conference brought together the Bioconductor community to showcase the latest developments in Bioconductor software packages and discuss emerging technologies shaping computational biology. This year’s conference welcomed 147 in-person participants from 23 countries. Across three days, attendees participated in keynote lectures, short and flash talks, workshops, poster sessions, Birds-of-a-Feather discussions, and community events. The conference also marked an important milestone for the project as Bioconductor celebrated its 25th anniversary. The figures below summarise EuroBioC2026 at a glance: 147 attendees from 23 countries, 4 keynote speakers, 25 speakers, 68 posters, 6 workshops, 9 flash talks, and 3 Birds-of-a-Feather sessions.</p>
+<p><a href="media/eurobioc-by-numbers.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2"><img src="https://blog.bioconductor.org/posts/2026-06-19-EuroBioc2026-recap/media/eurobioc-by-numbers.png" class="zoomable img-fluid" style="width:100.0%"></a></p>
+<section id="participants-by-country" class="level2">
+<h2 class="anchored" data-anchor-id="participants-by-country">Participants by country</h2>
+<p>Participants travelled to Turku from across Europe and beyond, reflecting the increasingly global nature of the Bioconductor community. While Finland represented the largest delegation, attendees also joined from Italy, Belgium, Germany, Switzerland, the United States, Sweden, the United Kingdom, Ireland, Spain, Kenya, South Korea, Australia, and several other countries.</p>
+<iframe src="media/eurobioc2026-participants-map.html" width="100%" height="600" frameborder="0">
+</iframe>
+</section>
+<section id="preconference" class="level2">
+<h2 class="anchored" data-anchor-id="preconference">Preconference</h2>
+<p>Ahead of the main conference, EuroBioC2026 hosted two preconference events on June 1-2. These were delivered in collaboration with the University of Turku, CompLifeSci, the Finnish Society for Bioinformatics, and members of the Bioconductor community. Running in parallel over two days, the events allowed participants to either strengthen their analytical skills through hands-on training or contribute directly to the development of Bioconductor software through collaborative coding projects.</p>
+<section id="workshop-orchestrating-microbiome-analysis-with-bioconductor" class="level3">
+<h3 class="anchored" data-anchor-id="workshop-orchestrating-microbiome-analysis-with-bioconductor">Workshop: Orchestrating Microbiome Analysis with Bioconductor</h3>
+<p>The preconference workshop focused on microbiome data analysis using Bioconductor and followed the Bioconductor Carpentry model, combining interactive instruction with practical exercises. Over two days, participants learned how to import, process, and analyse microbiome datasets using the established Bioconductor workflow; <a href="https://microbiome.github.io/OMA/docs/devel/">Orchestrating Microbiome Analysis (OMA)</a>. The workshop covered diversity analyses, differential abundance testing, and approaches for integrating microbiome data with other omics data types. A key component of the workshop was the use of cloud computing resources from <a href="https://csc.fi/en/">CSC</a> (Finnish IT Centre for Science) using <a href="https://noppe.2.rahtiapp.fi/welcome">Noppe</a>, that provided participants with immediate access to all required datasets, software, and computing resources. By removing installation and configuration barriers, instructors were able to begin teaching immediately and spend more time focusing on the workshop content rather than troubleshooting technical issues. The platform also ensured that all participants worked within the same environment, creating a smoother learning experience for everyone involved. The workshop was hands-on throughout: participants asked questions, worked through exercises, and discussed how the workflows related to their own projects. This practical, open, instructor-led format aligns well with the approach shared by both Bioconductor and The Carpentries. The workshop was led by Leo Lahti, Himel Mallick, Thomaz Bastiaanssen, Tuomas Borman, and Giulio Benedetti.</p>
+<img src="https://blog.bioconductor.org/posts/2026-06-19-EuroBioc2026-recap/media/benedetti-workshop.jpg" class="zoomable img-fluid" style="width:100.0%">
+<center>
+<p><em>Participants during the pre-conference microbiome workshop.</em></p>
+</center>
+</section>
+<section id="hackathon" class="level3">
+<h3 class="anchored" data-anchor-id="hackathon">Hackathon</h3>
+<p>We held the first of our series of hackathons attached to Bioconductor conferences this June at EuroBioC2026 in Turku, Finland. Eighteen in-person attendees worked on four projects focused on interoperability, and at least three of those are now being prepared for submission to <a href="https://index.biohackrxiv.org/tag/EuroBioc2026">BioHackrXiv</a>.</p>
+<p>A big congratulations to all the participants for their effort. You can read more about the projects from the <a href="https://github.com/BiocCodingCollaborations/EuroBioc2026_Hackathon">EuroBioC2026 Hackathon</a>. We’re looking forward to building on this work at the North American Bioconductor conference, BioC2026, in Seattle this August. See the <a href="https://github.com/BiocCodingCollaborations/BiocNA2026_Hackathon">BioC2026 Hackathon</a> for more details.</p>
+<img src="https://blog.bioconductor.org/posts/2026-06-19-EuroBioc2026-recap/media/hackathon.jpg" class="zoomable img-fluid" style="width:100.0%">
+<center>
+<p><em>Participants during the pre-conference hackathon.</em></p>
+</center>
+</section>
+</section>
+<section id="programme-overview" class="level2">
+<h2 class="anchored" data-anchor-id="programme-overview">Programme overview</h2>
+<p>EuroBioC2026 covered both established and emerging areas of computational biology, with a consistent focus on reproducible and open-source research.</p>
+<section id="keynotes" class="level3">
+<h3 class="anchored" data-anchor-id="keynotes">Keynotes</h3>
+<p>Keynotes at EuroBioC2026 covered functional genomics, machine learning, microbiome research, and the direction of computational biology. Across four talks, speakers addressed how data science is changing biological research, and what that means for reproducibility, interpretation, and open-source software.</p>
+<p><strong>Helena Kilpinen</strong> opened the conference with <em>Morphological profiling of in vitro neurons: Visualizing complexity in cellular disease models</em>. Her talk explored how high-content imaging and morphological profiling can be used to better understand cellular phenotypes in disease models. By combining large-scale imaging data with computational approaches, she demonstrated how researchers can uncover subtle cellular differences that may provide insights into disease mechanisms.</p>
+<p><strong>Anders Krogh</strong> presented <em>A Deep Generative Model for Gene Expression and Multimodal Data</em>, showcasing how modern machine learning approaches can be used to model increasingly complex biological datasets. His keynote highlighted the potential of generative models to integrate multiple data modalities and improve our understanding of gene regulation and cellular states.</p>
+<p><strong>Aura Raulo</strong> delivered a keynote titled <em>Modeling the spread of microbial communities in contact networks</em>. Drawing on concepts from ecology, microbiology, and network science, they explored how microbial communities are transmitted between individuals and populations. The talk examined how host-associated microbiomes are shaped and shared, and what drives their spread.</p>
+<p>The final keynote was delivered by <strong>Levi Waldron</strong>, who addressed a topic now central to many scientific discussions: <em>Bioconductor in the age of AI. What do we do now?</em> His talk examined the opportunities and challenges that AI presents for open-source scientific software. He encouraged the community to think about how AI tools can complement existing work, without compromising the transparency, reproducibility, and scientific rigour the project has built over 25 years.</p>
+</section>
+<section id="short-talks-and-flash-talks" class="level3">
+<h3 class="anchored" data-anchor-id="short-talks-and-flash-talks">Short talks and flash talks</h3>
+<p>The short talks at EuroBioC2026 reflected the diversity of the Bioconductor community, spanning topics from single-cell and spatial biology to microbiome research, proteomics, metabolomics, and multi-omics data integration. Several presentations introduced new software packages and statistical methods aimed at improving reproducibility, scalability, and interoperability in biological data analysis. Alongside methodological advances, speakers also covered broader community topics, including sustainable open-source software, environmentally conscious computing, training initiatives, and the growing role of artificial intelligence in computational biology. Together, the talks provided a good picture of the scientific questions being addressed with Bioconductor and the people driving its development.</p>
+</section>
+<section id="poster-sessions" class="level3">
+<h3 class="anchored" data-anchor-id="poster-sessions">Poster sessions</h3>
+<p>The 68 posters presented at EuroBioC2026 covered a broad mix of biological applications and software development. Topics included spatial omics, microbiome research, proteomics, metabolomics, disease modelling, and machine learning, as well as new packages and infrastructure projects from across the Bioconductor ecosystem. The poster sessions encouraged interactions between package developers, researchers, students, and first-time conference attendees, helping strengthen collaborations across the community.</p>
+<img src="https://blog.bioconductor.org/posts/2026-06-19-EuroBioc2026-recap/media/poster-session.jpg" class="zoomable img-fluid" style="width:100.0%">
+<center>
+<p><em>EuroBioC2026 participants during a poster session.</em></p>
+</center>
+</section>
+<section id="birds-of-a-feather-sessions" class="level3">
+<h3 class="anchored" data-anchor-id="birds-of-a-feather-sessions">Birds-of-a-Feather sessions</h3>
+<p>The three 90-minute Birds-of-a-Feather (BoF) sessions offered attendees an opportunity to connect around shared interests and exchange experiences, discuss challenges, and share ideas. The sessions were proposed by participants during the conference including sessions focused on strengthening the Finnish Bioconductor community, supporting early-career researchers, and embedding environmental sustainability into Bioconductor packages and research workflows. One outcome from the early-career researcher discussion was the creation of a dedicated student–ECR Zulip channel to support continued connection within the community. The BoF sessions continued a tradition of community-led discussion that has been part of Bioconductor events for years.</p>
+</section>
+<section id="workshops" class="level3">
+<h3 class="anchored" data-anchor-id="workshops">Workshops</h3>
+<p>The workshop sessions offered attendees an opportunity to explore a range of Bioconductor tools and workflows through hands-on demonstrations led by community members. Topics included proteomics data analysis, integrative analysis of histopathological images and multi-omics data, ChIP-seq analysis, differential expression analysis, post-translational modification analysis, and interoperable mass spectrometry workflows combining R and Python. Participants had the opportunity to engage directly with instructors, ask questions, and learn how the presented tools could be applied to their own research projects. Together, the workshops showcased the breadth of analytical domains supported by the Bioconductor ecosystem.</p>
+</section>
+<section id="celebrating-25-years-of-bioconductor" class="level3">
+<h3 class="anchored" data-anchor-id="celebrating-25-years-of-bioconductor">Celebrating 25 years of Bioconductor</h3>
+<p>A major highlight of EuroBioC2026 was the celebration of Bioconductor’s 25th anniversary. Since its founding in 2001, Bioconductor has grown from a small collection of software packages into a global open-source community used by thousands of researchers worldwide. Over the past quarter-century, it has become a central resource for reproducible computational biology, providing infrastructure, software, training, and community support across numerous biological disciplines.</p>
+<p><a href="media/bioc25years.svg" class="lightbox" data-gallery="quarto-lightbox-gallery-3"><img src="https://blog.bioconductor.org/posts/2026-06-19-EuroBioc2026-recap/media/bioc25years.svg" class="zoomable img-fluid" style="width:100.0%"></a></p>
+<p>One of the highlights of the celebration was a retrospective presented by Maria Doyle, Bioconductor Community Manager, who took attendees through the history of Bioconductor, from the earliest contribution on the Bioconductor support site to the project’s growth into the global community it is today. The presentation highlighted how the project has evolved over the past 25 years and its impact on computational biology. The celebrations continued at the conference dinner, where attendees marked the occasion with a special anniversary cake. During the evening, Levi Waldron, one of Bioconductor’s Principal Investigators, shared a personal reflection on his journey with Bioconductor, from first encountering the project through his collaborations with Martin Morgan to becoming part of its leadership.</p>
+<img src="https://blog.bioconductor.org/posts/2026-06-19-EuroBioc2026-recap/media/levispeech.jpg" class="zoomable img-fluid" style="width:100.0%">
+<center>
+<p><em>Levi Waldron shares a personal reflection on his journey with Bioconductor during the 25th anniversary celebrations.</em></p>
+</center>
+</section>
+</section>
+<section id="infrastructure-and-tools" class="level2">
+<h2 class="anchored" data-anchor-id="infrastructure-and-tools">Infrastructure and tools</h2>
+<section id="zulip" class="level3">
+<h3 class="anchored" data-anchor-id="zulip">Zulip</h3>
+<p>EuroBioC2026 continued to use Zulip as its primary communication platform. A dedicated conference channel, along with a separate hackathon channel, organised into topic-based threads, served as a central location for announcements, technical support, social interactions, and discussions before, during, and after the event. The threaded conversation model made it easier to follow discussions and kept participants connected throughout the conference.</p>
+</section>
+<section id="sticker-hexwall" class="level3">
+<h3 class="anchored" data-anchor-id="sticker-hexwall">Sticker Hexwall</h3>
+<p>The sticker hexwall returned for EuroBioC2026 following its successful introduction in 2025. The display showcased Bioconductor package stickers contributed by Bioconductor community members and served as a visual representation of the diversity of software projects within the ecosystem.</p>
+<p>The hexwall quickly became a popular gathering point and photo location throughout the conference.</p>
+<img src="https://blog.bioconductor.org/posts/2026-06-19-EuroBioc2026-recap/media/hexwall.jpg" class="zoomable img-fluid" style="width:100.0%">
+<center>
+<p><em>The hexwall at EuroBioC2026.</em></p>
+</center>
+</section>
+</section>
+<section id="social-interactions-and-networking" class="level2">
+<h2 class="anchored" data-anchor-id="social-interactions-and-networking">Social interactions and networking</h2>
+<section id="conference-dinner" class="level3">
+<h3 class="anchored" data-anchor-id="conference-dinner">Conference Dinner</h3>
+<p>The conference dinner took place on the island of Ruissalo, one of Turku’s most popular recreational areas and the gateway to the Turku Archipelago. It was hosted at the historic Villa Marjaniemi, a 150-year-old villa overlooking the sea, and the evening was inspired by Juhannus, Finland’s traditional midsummer celebration.</p>
+<p>Attendees were welcomed by a live band as they arrived, then enjoyed dinner and celebrations marking 25 years of Bioconductor. The evening continued with outdoor games and activities, and was a good chance to catch up with familiar faces and meet people for the first time.</p>
+</section>
+<section id="walking-tour" class="level3">
+<h3 class="anchored" data-anchor-id="walking-tour">Walking tour</h3>
+<p>On Thursday evening, participants joined an optional walking tour. During the tour, participants learned about Finnish history while exploring the historic city centre, stopping at the Old Great Square and Brinkkala Hall, whose balcony has served as the site of the annual (<a href="https://en.wikipedia.org/wiki/Christmas_Peace">Christmas Peace</a>) declaration since the Middle Ages. The tour also highlighted notable Finnish figures, including the legendary runner (<a href="https://en.wikipedia.org/wiki/Paavo_Nurmi">Paavo Nurmi</a>), famously known as the “Flying Finn.”</p>
+<p>The tour naturally flowed into the evening’s social activities. Some participants stopped at a traditional Finnish grill kiosk to try makkaraperunat, a popular local fast-food dish, while others continued their conversations at Office (Toimisto in Finnish), a local bar where they sang karaoke until 3 AM.</p>
+<div class="columns">
+<div class="column" style="width:48%;">
+<p><a href="media/walking-tour.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-4"><img src="https://blog.bioconductor.org/posts/2026-06-19-EuroBioc2026-recap/media/walking-tour.jpg" class="img-fluid" style="width:100.0%"></a></p>
+</div><div class="column" style="width:48%;">
+<p><a href="media/dinner.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-5"><img src="https://blog.bioconductor.org/posts/2026-06-19-EuroBioc2026-recap/media/dinner.jpg" class="img-fluid" style="width:100.0%"></a></p>
+</div>
+</div>
+<center>
+<p><em>EuroBioC2026 Participants during the walking tour (left) and enjoying the conference dinner (right).</em></p>
+</center>
+</section>
+</section>
+<section id="conference-materials" class="level2">
+<h2 class="anchored" data-anchor-id="conference-materials">Conference materials</h2>
+<p>Conference recordings will be available on the <a href="http://www.youtube.com/@bioconductor">Bioconductor YouTube channel</a> in the coming weeks. Auditorium sessions were also live streamed, and Slido was used to facilitate audience questions from both in-person and remote participants, alongside traditional in-room discussion. Presenters were encouraged to upload their slides, posters, and supplementary materials to the <a href="https://zenodo.org/communities/bioconductor">Bioconductor Zenodo Community</a>, making conference outputs openly available and citable through persistent digital object identifiers (DOIs).</p>
+<p>These resources make conference outputs available to those who could not attend and support continued learning across the community. Additional photos from EuroBioC2026, including talks, workshops, posters, social events, and the conference dinner, are available in the <a href="https://eurobioc2026.bioconductor.org/pages/photo-gallery.html">conference photo gallery</a>.</p>
+</section>
+<section id="coming-up" class="level2">
+<h2 class="anchored" data-anchor-id="coming-up">Coming up…</h2>
+<p>The 25th anniversary year will continue when the Bioconductor community gather next at (<a href="https://bioc2026.bioconductor.org/">BioC2026</a>), which will take place from August 10-12, 2026 at the Fred Hutch Cancer Center in Seattle, Washington. The conference will continue the tradition of bringing together developers, researchers, and educators to share new software, methods, and applications in computational biology.</p>
+<p>Later in the year, the community will head to Melbourne, Australia, for (<a href="https://biocasia2026.bioconductor.org/">BioCAsia2026</a>), taking place on November 19-20, 2026, immediately following the ABACBS conference. BioCAsia brings together researchers across the Asia-Pacific region for scientific exchange, training, and community building. The (<a href="https://brisbanebioinformatics.org/event/qld-week-biocasia/">BioCAsia Seminar Series</a>) has also expanded to a bi-monthly schedule. alongside growing regional initiatives such as the (<a href="https://training.bioconductor.org/workshops/bioc-africa-seminars/">Bioconductor Africa Seminar Series</a>) and the Bioconductor Latin America seminar series. Stay connected with the community through dedicated Zulip channels.</p>
+<p>EuroBioC2026 concluded with an invitation to Basel, Switzerland, where EuroBioC2027 will take place from September 8–10, 2027. See you there.</p>
+</section>
+<section id="acknowledgements" class="level2">
+<h2 class="anchored" data-anchor-id="acknowledgements">Acknowledgements</h2>
+<section id="sponsors" class="level3">
+<h3 class="anchored" data-anchor-id="sponsors">Sponsors</h3>
+<p>EuroBioC2026 gratefully acknowledges the support of all sponsors and partners whose contributions and support made the conference possible.</p>
+<p><a href="media/sponsors-partners.png" class="lightbox" data-gallery="quarto-lightbox-gallery-6"><img src="https://blog.bioconductor.org/posts/2026-06-19-EuroBioc2026-recap/media/sponsors-partners.png" class="zoomable img-fluid" style="width:100.0%"></a></p>
+</section>
+<section id="diamond-sponsors" class="level3">
+<h3 class="anchored" data-anchor-id="diamond-sponsors">Diamond sponsors</h3>
+<ul>
+<li><a href="https://www.tsv.fi/en">Federation of Finnish Learned Societies</a></li>
+<li><a href="https://skr.fi/en/">Finnish Cultural Foundation</a></li>
+</ul>
+</section>
+<section id="gold-sponsors" class="level3">
+<h3 class="anchored" data-anchor-id="gold-sponsors">Gold sponsors</h3>
+<ul>
+<li><a href="https://biocityturku.fi/">BioCity, Turku</a></li>
+<li><a href="https://stiftelsenabo.fi/en/">Åbo Akademi University Foundation</a></li>
+</ul>
+</section>
+<section id="bronze-sponsors" class="level3">
+<h3 class="anchored" data-anchor-id="bronze-sponsors">Bronze sponsors</h3>
+<ul>
+<li><a href="https://bigomics.ch/">BigOmics Analytics</a></li>
+<li><a href="https://www.physalia-courses.org/">Physalia Courses</a></li>
+<li><a href="https://r-consortium.org/">R Consortium</a></li>
+<li><a href="https://www.loimu.fi/en/">LOIMU</a></li>
+<li><a href="https://liedonsaastopankkisaatio.fi/">Liedon Säästöpankkisäätiö</a></li>
+</ul>
+</section>
+<section id="supporting-organisations" class="level3">
+<h3 class="anchored" data-anchor-id="supporting-organisations">Supporting organisations</h3>
+<ul>
+<li><a href="https://www.nordic-compbio.org/">Nordic Computational Biology</a></li>
+</ul>
+</section>
+<section id="hosts" class="level3">
+<h3 class="anchored" data-anchor-id="hosts">Hosts</h3>
+<ul>
+<li><a href="https://www.utu.fi/en">University of Turku</a></li>
+<li><a href="https://biocityturku.fi/research-programs/complifesci/">CompLifeSci, BioCity Turku</a></li>
+<li><a href="https://www.bioinf.fi/">Finnish Society for Bioinformatics</a></li>
+</ul>
+</section>
+<section id="organising-committee" class="level3">
+<h3 class="anchored" data-anchor-id="organising-committee">Organising committee</h3>
+<p>We thank the local organisers, programme committee, workshop instructors, keynote speakers, volunteers, sponsors, and all participants whose contributions made EuroBioC2026 a success.</p>
+<p><strong>Organising Committee</strong></p>
+<ul>
+<li>Leo Lahti (Chair)</li>
+<li>Tuomas Borman (Local Chair)</li>
+<li>Akewak Jeba (Website)</li>
+<li>Anna Kaisanlahti (Local Organiser)</li>
+<li>Annekathrin Nedwed</li>
+<li>Charlotte Soneson (Scientific Programme)</li>
+<li>Dania Machlab</li>
+<li>Dario Righelli</li>
+<li>Eliana Ibrahimi</li>
+<li>Federico Marini</li>
+<li>James Dalgleish</li>
+<li>Julia Mathlin (Local Organiser)</li>
+<li>Kevin Rue-Albrecht</li>
+<li>Laurent Gatto</li>
+<li>Lieven Clement</li>
+<li>Maria Doyle (Communications)</li>
+<li>Mark Robinson</li>
+<li>Michael Love</li>
+<li>Michael Stadler</li>
+<li>Miina Vulli (Local Organiser)</li>
+<li>Najla Abassi</li>
+<li>Nicholas Cooley (Hackathon)</li>
+<li>Nyasita Laurah Ondari (Communications)</li>
+<li>Robert Castelo</li>
+<li>Robert Ivánek</li>
+<li>Teemu Daniel Laajala (Local Organiser)</li>
+</ul>
+
+
+</section>
+</section>
+
+<p>
+© 2026 Bioconductor. Content is published under <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons CC-BY-4.0 License</a> for the text and <a href="https://opensource.org/licenses/BSD-3-Clause">BSD 3-Clause License</a> for any code. | <a href="https://www.r-bloggers.com">R-Bloggers</a>
+</p> ]]></description>
+  <category>Bioconductor</category>
+  <guid>https://blog.bioconductor.org/posts/2026-06-19-EuroBioc2026-recap/</guid>
+  <pubDate>Fri, 19 Jun 2026 00:00:00 GMT</pubDate>
+  <media:content url="https://blog.bioconductor.org/posts/2026-06-19-EuroBioc2026-recap/media/eurobioc-main-image.jpg" medium="image" type="image/jpeg"/>
+</item>
 <item>
   <title>Bioconductor-centric hackathon on spatial omics and image-derived data</title>
   <dc:creator>Davide Risso</dc:creator>
@@ -945,80 +1167,6 @@ document.addEventListener('click', function(e) {
   <guid>https://blog.bioconductor.org/posts/2025-10-24-EuroBioC2025-recap/</guid>
   <pubDate>Fri, 24 Oct 2025 00:00:00 GMT</pubDate>
   <media:content url="https://blog.bioconductor.org/posts/2025-10-24-EuroBioC2025-recap/media/allparticipants_image.jpg" medium="image" type="image/jpeg"/>
-</item>
-<item>
-  <title>GPU Support in Bioconductor</title>
-  <dc:creator>Andres Wokaty</dc:creator>
-  <link>https://blog.bioconductor.org/posts/2025-10-10-gpus/</link>
-  <description><![CDATA[ 
-
-
-
-
-
-<section id="introduction" class="level1">
-<h1>Introduction</h1>
-<p>GPU acceleration enables faster and more scalable analysis workflows, especially for tasks like deep learning, image processing, and large-scale genomics, making Bioconductor more powerful for researchers working with complex data. Thanks to funding from <a href="https://blog.bioconductor.org/posts/2024-07-12-czi-eoss6-grants/">CZI EOSS 6</a>, Bioconductor is developing better support for maintainers authoring GPU-capable packages, including adding a new Nvidia GPU build machine maintained at the University of Padova, new release and devel (Nvidia) GPU software builds, GPU-aware containers, and a <code>biocViews</code> <code>GPU</code> term. This post shares these new resources and how Bioconductor package maintainers can take advantage of them.</p>
-<section id="gpu-support" class="level2">
-<h2 class="anchored" data-anchor-id="gpu-support">GPU Support</h2>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="https://blog.bioconductor.org/posts/2025-10-10-gpus/devel_build.png" class="img-fluid figure-img"></p>
-<figcaption>3.22 GPU Software report</figcaption>
-</figure>
-</div>
-<p>The BBS GPU Software reports are available at</p>
-<ul>
-<li><a href="https://bioconductor.org/checkResults/devel/bioc-gpu-LATEST/">devel BBS GPU report</a></li>
-<li><a href="https://bioconductor.org/checkResults/release/bioc-gpu-LATEST/">release BBS GPU report</a></li>
-</ul>
-<p>Looking at the reports, you’ll notice three new build nodes:</p>
-<ul>
-<li><a href="https://bioconductor.org/checkResults/3.22/bioc-gpu-LATEST/biocgpu-NodeInfo.html">biocgpu</a> in Jetstream2</li>
-<li><a href="https://bioconductor.org/checkResults/3.22/bioc-gpu-LATEST/amarone-NodeInfo.html">amarone</a> at the University of Padova</li>
-<li><a href="https://bioconductor.org/checkResults/3.21/bioc-gpu-LATEST/kakapo1-NodeInfo.html">kakapo1</a> at the Dana-Farber Cancer Institute</li>
-</ul>
-<p>The Nvidia CUDA compiler driver and the Nvidia System Management Interface for each machine appears at the bottom of their node info reports. Both amarone and kakapo1 use a <a href="https://github.com/Bioconductor/bioconductor_salt">BBS-like container based on Nvidia’s CUDA container</a> available to maintainers.</p>
-<p>Additionally, a <code>biocViews</code> term <code>GPU</code> has been added.</p>
-</section>
-<section id="how-to-take-advantage-of-new-gpu-support" class="level2">
-<h2 class="anchored" data-anchor-id="how-to-take-advantage-of-new-gpu-support">How to take advantage of new GPU support</h2>
-<section id="help-users-find-your-gpu-capable-package" class="level3">
-<h3 class="anchored" data-anchor-id="help-users-find-your-gpu-capable-package">Help users find your GPU-capable package</h3>
-<p>Add <a href="https://bioconductor.org/packages/devel/BiocViews.html#___GPU">GPU</a> as a <a href="https://bioconductor.org/packages/biocView">biocView</a> term for your package.</p>
-</section>
-<section id="opt-in-to-the-bbs-gpu-software-builds" class="level3">
-<h3 class="anchored" data-anchor-id="opt-in-to-the-bbs-gpu-software-builds">Opt in to the BBS GPU Software builds</h3>
-<p>The GPU Software builds, like the Long Tests builds, require a <code>.BBSoptions</code> file at the top level of a package repository with a <code>GPU_reliance</code> setting.</p>
-<section id="gpu-optional-packages" class="level4">
-<h4 class="anchored" data-anchor-id="gpu-optional-packages">GPU-optional packages</h4>
-<p>If a package supports GPU if available, maintainers can opt in to the GPU software build by setting <code>GPU_reliance</code> to <code>optional</code>:</p>
-<pre><code>GPU_reliance: optional</code></pre>
-<p>Make sure you have tests that utilize GPUs if available.</p>
-</section>
-<section id="gpu-required-packages" class="level4">
-<h4 class="anchored" data-anchor-id="gpu-required-packages">GPU-required packages</h4>
-<p>Maintainers creating packages requiring GPUs in order for the package to be build should set <code>GPU_reliance</code> to <code>required</code>:</p>
-<pre><code>GPU_reliance: required</code></pre>
-<p>See <a href="https://contributions.bioconductor.org/advanced-build-options.html#gpu-builds">Advanced Build Options</a> for information.</p>
-</section>
-</section>
-<section id="future-work" class="level3">
-<h3 class="anchored" data-anchor-id="future-work">Future work</h3>
-<p>More work is being done to understand how we can make the best use of GPUs within Bioconductor by developing a package to understand GPU usage and propose best practices, but we also need a better understanding of what packages are using GPUs and what our community needs. Learn more about the project at <a href="https://waldronlab.io/czieoss6-biocgpu/">https://waldronlab.io/czieoss6-biocgpu/</a>.</p>
-
-
-</section>
-</section>
-</section>
-
-<p>
-© 2026 Bioconductor. Content is published under <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons CC-BY-4.0 License</a> for the text and <a href="https://opensource.org/licenses/BSD-3-Clause">BSD 3-Clause License</a> for any code. | <a href="https://www.r-bloggers.com">R-Bloggers</a>
-</p> ]]></description>
-  <category>GPU</category>
-  <category>CZI</category>
-  <guid>https://blog.bioconductor.org/posts/2025-10-10-gpus/</guid>
-  <pubDate>Fri, 10 Oct 2025 00:00:00 GMT</pubDate>
 </item>
 </channel>
 </rss>

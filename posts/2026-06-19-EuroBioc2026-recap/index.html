@@ -1,0 +1,892 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.9.38">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Laurah Ondari">
+<meta name="dcterms.date" content="2026-06-19">
+<meta name="description" content="Highlights from the 2026 European Bioconductor Conference in Turku, Finland">
+
+<title>EuroBioC2026 conference recap – Bioconductor community blog</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-703c9532075cde06ab04a16b69a0e953.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="../../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="../../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.css" rel="stylesheet">
+
+
+<link rel="stylesheet" href="../../styles.css">
+<meta property="og:title" content="EuroBioC2026 conference recap – Bioconductor community blog">
+<meta property="og:description" content="Highlights from the 2026 European Bioconductor Conference in Turku, Finland">
+<meta property="og:image" content="https://blog.bioconductor.org/posts/2026-06-19-EuroBioc2026-recap/media/eurobioc-main-image.jpg">
+<meta property="og:site_name" content="Bioconductor community blog">
+</head>
+
+<body class="nav-fixed quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top quarto-banner">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">Bioconductor community blog</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../about.html"> 
+<span class="menu-text">About</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../contributing.html"> 
+<span class="menu-text">Contributing</span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/bioconductor/biocblog"> <i class="bi bi-github" role="img">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://www.linkedin.com/company/bioconductor/"> <i class="bi bi-linkedin" role="img">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://bsky.app/profile/bioconductor.bsky.social"> <i class="bi bi-bluesky" role="img">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://genomic.social/@bioconductor"> <i class="bi bi-mastodon" role="img">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://www.youtube.com/user/bioconductor"> <i class="bi bi-youtube" role="img">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://chat.bioconductor.org/"> <i class="bi bi-chat-dots" role="img">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="../../index.xml"> <i class="bi bi-rss" role="img">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<header id="title-block-header" class="quarto-title-block default page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      <h1 class="title">EuroBioC2026 conference recap</h1>
+                  <div>
+        <div class="description">
+          Highlights from the 2026 European Bioconductor Conference in Turku, Finland
+        </div>
+      </div>
+                          <div class="quarto-categories">
+                <div class="quarto-category">Bioconductor</div>
+              </div>
+                  </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta">
+
+      <div>
+      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-contents">
+               <p><a href="https://github.com/Nyasita">Laurah Ondari</a> </p>
+            </div>
+    </div>
+      
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">June 19, 2026</p>
+      </div>
+    </div>
+    
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#participants-by-country" id="toc-participants-by-country" class="nav-link active" data-scroll-target="#participants-by-country">Participants by country</a></li>
+  <li><a href="#preconference" id="toc-preconference" class="nav-link" data-scroll-target="#preconference">Preconference</a>
+  <ul class="collapse">
+  <li><a href="#workshop-orchestrating-microbiome-analysis-with-bioconductor" id="toc-workshop-orchestrating-microbiome-analysis-with-bioconductor" class="nav-link" data-scroll-target="#workshop-orchestrating-microbiome-analysis-with-bioconductor">Workshop: Orchestrating Microbiome Analysis with Bioconductor</a></li>
+  <li><a href="#hackathon" id="toc-hackathon" class="nav-link" data-scroll-target="#hackathon">Hackathon</a></li>
+  </ul></li>
+  <li><a href="#programme-overview" id="toc-programme-overview" class="nav-link" data-scroll-target="#programme-overview">Programme overview</a>
+  <ul class="collapse">
+  <li><a href="#keynotes" id="toc-keynotes" class="nav-link" data-scroll-target="#keynotes">Keynotes</a></li>
+  <li><a href="#short-talks-and-flash-talks" id="toc-short-talks-and-flash-talks" class="nav-link" data-scroll-target="#short-talks-and-flash-talks">Short talks and flash talks</a></li>
+  <li><a href="#poster-sessions" id="toc-poster-sessions" class="nav-link" data-scroll-target="#poster-sessions">Poster sessions</a></li>
+  <li><a href="#birds-of-a-feather-sessions" id="toc-birds-of-a-feather-sessions" class="nav-link" data-scroll-target="#birds-of-a-feather-sessions">Birds-of-a-Feather sessions</a></li>
+  <li><a href="#workshops" id="toc-workshops" class="nav-link" data-scroll-target="#workshops">Workshops</a></li>
+  <li><a href="#celebrating-25-years-of-bioconductor" id="toc-celebrating-25-years-of-bioconductor" class="nav-link" data-scroll-target="#celebrating-25-years-of-bioconductor">Celebrating 25 years of Bioconductor</a></li>
+  </ul></li>
+  <li><a href="#infrastructure-and-tools" id="toc-infrastructure-and-tools" class="nav-link" data-scroll-target="#infrastructure-and-tools">Infrastructure and tools</a>
+  <ul class="collapse">
+  <li><a href="#zulip" id="toc-zulip" class="nav-link" data-scroll-target="#zulip">Zulip</a></li>
+  <li><a href="#sticker-hexwall" id="toc-sticker-hexwall" class="nav-link" data-scroll-target="#sticker-hexwall">Sticker Hexwall</a></li>
+  </ul></li>
+  <li><a href="#social-interactions-and-networking" id="toc-social-interactions-and-networking" class="nav-link" data-scroll-target="#social-interactions-and-networking">Social interactions and networking</a>
+  <ul class="collapse">
+  <li><a href="#conference-dinner" id="toc-conference-dinner" class="nav-link" data-scroll-target="#conference-dinner">Conference Dinner</a></li>
+  <li><a href="#walking-tour" id="toc-walking-tour" class="nav-link" data-scroll-target="#walking-tour">Walking tour</a></li>
+  </ul></li>
+  <li><a href="#conference-materials" id="toc-conference-materials" class="nav-link" data-scroll-target="#conference-materials">Conference materials</a></li>
+  <li><a href="#coming-up" id="toc-coming-up" class="nav-link" data-scroll-target="#coming-up">Coming up…</a></li>
+  <li><a href="#acknowledgements" id="toc-acknowledgements" class="nav-link" data-scroll-target="#acknowledgements">Acknowledgements</a>
+  <ul class="collapse">
+  <li><a href="#sponsors" id="toc-sponsors" class="nav-link" data-scroll-target="#sponsors">Sponsors</a></li>
+  <li><a href="#diamond-sponsors" id="toc-diamond-sponsors" class="nav-link" data-scroll-target="#diamond-sponsors">Diamond sponsors</a></li>
+  <li><a href="#gold-sponsors" id="toc-gold-sponsors" class="nav-link" data-scroll-target="#gold-sponsors">Gold sponsors</a></li>
+  <li><a href="#bronze-sponsors" id="toc-bronze-sponsors" class="nav-link" data-scroll-target="#bronze-sponsors">Bronze sponsors</a></li>
+  <li><a href="#supporting-organisations" id="toc-supporting-organisations" class="nav-link" data-scroll-target="#supporting-organisations">Supporting organisations</a></li>
+  <li><a href="#hosts" id="toc-hosts" class="nav-link" data-scroll-target="#hosts">Hosts</a></li>
+  <li><a href="#organising-committee" id="toc-organising-committee" class="nav-link" data-scroll-target="#organising-committee">Organising committee</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content quarto-banner-title-block" id="quarto-document-content">
+
+
+
+
+
+<p><a href="media/eurobioc-main-image.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="media/eurobioc-main-image.jpg" class="zoomable img-fluid" style="width:100.0%"></a></p>
+<p>The European Bioconductor Conference 2026 (<a href="https://eurobioc2026.bioconductor.org/">EuroBioC2026</a>) took place from June 3-5, 2026, in Turku, Finland. Hosted by the <a href="https://www.utu.fi/en">University of Turku</a> and the <a href="https://www.bioinf.fi/">Finnish Society for Bioinformatics</a> at BioCity, the conference brought together the Bioconductor community to showcase the latest developments in Bioconductor software packages and discuss emerging technologies shaping computational biology. This year’s conference welcomed 147 in-person participants from 23 countries. Across three days, attendees participated in keynote lectures, short and flash talks, workshops, poster sessions, Birds-of-a-Feather discussions, and community events. The conference also marked an important milestone for the project as Bioconductor celebrated its 25th anniversary. The figures below summarise EuroBioC2026 at a glance: 147 attendees from 23 countries, 4 keynote speakers, 25 speakers, 68 posters, 6 workshops, 9 flash talks, and 3 Birds-of-a-Feather sessions.</p>
+<p><a href="media/eurobioc-by-numbers.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2"><img src="media/eurobioc-by-numbers.png" class="zoomable img-fluid" style="width:100.0%"></a></p>
+<section id="participants-by-country" class="level2">
+<h2 class="anchored" data-anchor-id="participants-by-country">Participants by country</h2>
+<p>Participants travelled to Turku from across Europe and beyond, reflecting the increasingly global nature of the Bioconductor community. While Finland represented the largest delegation, attendees also joined from Italy, Belgium, Germany, Switzerland, the United States, Sweden, the United Kingdom, Ireland, Spain, Kenya, South Korea, Australia, and several other countries.</p>
+<iframe src="media/eurobioc2026-participants-map.html" width="100%" height="600" frameborder="0">
+</iframe>
+</section>
+<section id="preconference" class="level2">
+<h2 class="anchored" data-anchor-id="preconference">Preconference</h2>
+<p>Ahead of the main conference, EuroBioC2026 hosted two preconference events on June 1-2. These were delivered in collaboration with the University of Turku, CompLifeSci, the Finnish Society for Bioinformatics, and members of the Bioconductor community. Running in parallel over two days, the events allowed participants to either strengthen their analytical skills through hands-on training or contribute directly to the development of Bioconductor software through collaborative coding projects.</p>
+<section id="workshop-orchestrating-microbiome-analysis-with-bioconductor" class="level3">
+<h3 class="anchored" data-anchor-id="workshop-orchestrating-microbiome-analysis-with-bioconductor">Workshop: Orchestrating Microbiome Analysis with Bioconductor</h3>
+<p>The preconference workshop focused on microbiome data analysis using Bioconductor and followed the Bioconductor Carpentry model, combining interactive instruction with practical exercises. Over two days, participants learned how to import, process, and analyse microbiome datasets using the established Bioconductor workflow; <a href="https://microbiome.github.io/OMA/docs/devel/">Orchestrating Microbiome Analysis (OMA)</a>. The workshop covered diversity analyses, differential abundance testing, and approaches for integrating microbiome data with other omics data types. A key component of the workshop was the use of cloud computing resources from <a href="https://csc.fi/en/">CSC</a> (Finnish IT Centre for Science) using <a href="https://noppe.2.rahtiapp.fi/welcome">Noppe</a>, that provided participants with immediate access to all required datasets, software, and computing resources. By removing installation and configuration barriers, instructors were able to begin teaching immediately and spend more time focusing on the workshop content rather than troubleshooting technical issues. The platform also ensured that all participants worked within the same environment, creating a smoother learning experience for everyone involved. The workshop was hands-on throughout: participants asked questions, worked through exercises, and discussed how the workflows related to their own projects. This practical, open, instructor-led format aligns well with the approach shared by both Bioconductor and The Carpentries. The workshop was led by Leo Lahti, Himel Mallick, Thomaz Bastiaanssen, Tuomas Borman, and Giulio Benedetti.</p>
+<img src="media/benedetti-workshop.jpg" class="zoomable img-fluid" style="width:100.0%">
+<center>
+<p><em>Participants during the pre-conference microbiome workshop.</em></p>
+</center>
+</section>
+<section id="hackathon" class="level3">
+<h3 class="anchored" data-anchor-id="hackathon">Hackathon</h3>
+<p>We held the first of our series of hackathons attached to Bioconductor conferences this June at EuroBioC2026 in Turku, Finland. Eighteen in-person attendees worked on four projects focused on interoperability, and at least three of those are now being prepared for submission to <a href="https://index.biohackrxiv.org/tag/EuroBioc2026">BioHackrXiv</a>.</p>
+<p>A big congratulations to all the participants for their effort. You can read more about the projects from the <a href="https://github.com/BiocCodingCollaborations/EuroBioc2026_Hackathon">EuroBioC2026 Hackathon</a>. We’re looking forward to building on this work at the North American Bioconductor conference, BioC2026, in Seattle this August. See the <a href="https://github.com/BiocCodingCollaborations/BiocNA2026_Hackathon">BioC2026 Hackathon</a> for more details.</p>
+<img src="media/hackathon.jpg" class="zoomable img-fluid" style="width:100.0%">
+<center>
+<p><em>Participants during the pre-conference hackathon.</em></p>
+</center>
+</section>
+</section>
+<section id="programme-overview" class="level2">
+<h2 class="anchored" data-anchor-id="programme-overview">Programme overview</h2>
+<p>EuroBioC2026 covered both established and emerging areas of computational biology, with a consistent focus on reproducible and open-source research.</p>
+<section id="keynotes" class="level3">
+<h3 class="anchored" data-anchor-id="keynotes">Keynotes</h3>
+<p>Keynotes at EuroBioC2026 covered functional genomics, machine learning, microbiome research, and the direction of computational biology. Across four talks, speakers addressed how data science is changing biological research, and what that means for reproducibility, interpretation, and open-source software.</p>
+<p><strong>Helena Kilpinen</strong> opened the conference with <em>Morphological profiling of in vitro neurons: Visualizing complexity in cellular disease models</em>. Her talk explored how high-content imaging and morphological profiling can be used to better understand cellular phenotypes in disease models. By combining large-scale imaging data with computational approaches, she demonstrated how researchers can uncover subtle cellular differences that may provide insights into disease mechanisms.</p>
+<p><strong>Anders Krogh</strong> presented <em>A Deep Generative Model for Gene Expression and Multimodal Data</em>, showcasing how modern machine learning approaches can be used to model increasingly complex biological datasets. His keynote highlighted the potential of generative models to integrate multiple data modalities and improve our understanding of gene regulation and cellular states.</p>
+<p><strong>Aura Raulo</strong> delivered a keynote titled <em>Modeling the spread of microbial communities in contact networks</em>. Drawing on concepts from ecology, microbiology, and network science, they explored how microbial communities are transmitted between individuals and populations. The talk examined how host-associated microbiomes are shaped and shared, and what drives their spread.</p>
+<p>The final keynote was delivered by <strong>Levi Waldron</strong>, who addressed a topic now central to many scientific discussions: <em>Bioconductor in the age of AI. What do we do now?</em> His talk examined the opportunities and challenges that AI presents for open-source scientific software. He encouraged the community to think about how AI tools can complement existing work, without compromising the transparency, reproducibility, and scientific rigour the project has built over 25 years.</p>
+</section>
+<section id="short-talks-and-flash-talks" class="level3">
+<h3 class="anchored" data-anchor-id="short-talks-and-flash-talks">Short talks and flash talks</h3>
+<p>The short talks at EuroBioC2026 reflected the diversity of the Bioconductor community, spanning topics from single-cell and spatial biology to microbiome research, proteomics, metabolomics, and multi-omics data integration. Several presentations introduced new software packages and statistical methods aimed at improving reproducibility, scalability, and interoperability in biological data analysis. Alongside methodological advances, speakers also covered broader community topics, including sustainable open-source software, environmentally conscious computing, training initiatives, and the growing role of artificial intelligence in computational biology. Together, the talks provided a good picture of the scientific questions being addressed with Bioconductor and the people driving its development.</p>
+</section>
+<section id="poster-sessions" class="level3">
+<h3 class="anchored" data-anchor-id="poster-sessions">Poster sessions</h3>
+<p>The 68 posters presented at EuroBioC2026 covered a broad mix of biological applications and software development. Topics included spatial omics, microbiome research, proteomics, metabolomics, disease modelling, and machine learning, as well as new packages and infrastructure projects from across the Bioconductor ecosystem. The poster sessions encouraged interactions between package developers, researchers, students, and first-time conference attendees, helping strengthen collaborations across the community.</p>
+<img src="media/poster-session.jpg" class="zoomable img-fluid" style="width:100.0%">
+<center>
+<p><em>EuroBioC2026 participants during a poster session.</em></p>
+</center>
+</section>
+<section id="birds-of-a-feather-sessions" class="level3">
+<h3 class="anchored" data-anchor-id="birds-of-a-feather-sessions">Birds-of-a-Feather sessions</h3>
+<p>The three 90-minute Birds-of-a-Feather (BoF) sessions offered attendees an opportunity to connect around shared interests and exchange experiences, discuss challenges, and share ideas. The sessions were proposed by participants during the conference including sessions focused on strengthening the Finnish Bioconductor community, supporting early-career researchers, and embedding environmental sustainability into Bioconductor packages and research workflows. One outcome from the early-career researcher discussion was the creation of a dedicated student–ECR Zulip channel to support continued connection within the community. The BoF sessions continued a tradition of community-led discussion that has been part of Bioconductor events for years.</p>
+</section>
+<section id="workshops" class="level3">
+<h3 class="anchored" data-anchor-id="workshops">Workshops</h3>
+<p>The workshop sessions offered attendees an opportunity to explore a range of Bioconductor tools and workflows through hands-on demonstrations led by community members. Topics included proteomics data analysis, integrative analysis of histopathological images and multi-omics data, ChIP-seq analysis, differential expression analysis, post-translational modification analysis, and interoperable mass spectrometry workflows combining R and Python. Participants had the opportunity to engage directly with instructors, ask questions, and learn how the presented tools could be applied to their own research projects. Together, the workshops showcased the breadth of analytical domains supported by the Bioconductor ecosystem.</p>
+</section>
+<section id="celebrating-25-years-of-bioconductor" class="level3">
+<h3 class="anchored" data-anchor-id="celebrating-25-years-of-bioconductor">Celebrating 25 years of Bioconductor</h3>
+<p>A major highlight of EuroBioC2026 was the celebration of Bioconductor’s 25th anniversary. Since its founding in 2001, Bioconductor has grown from a small collection of software packages into a global open-source community used by thousands of researchers worldwide. Over the past quarter-century, it has become a central resource for reproducible computational biology, providing infrastructure, software, training, and community support across numerous biological disciplines.</p>
+<p><a href="media/bioc25years.svg" class="lightbox" data-gallery="quarto-lightbox-gallery-3"><img src="media/bioc25years.svg" class="zoomable img-fluid" style="width:100.0%"></a></p>
+<p>One of the highlights of the celebration was a retrospective presented by Maria Doyle, Bioconductor Community Manager, who took attendees through the history of Bioconductor, from the earliest contribution on the Bioconductor support site to the project’s growth into the global community it is today. The presentation highlighted how the project has evolved over the past 25 years and its impact on computational biology. The celebrations continued at the conference dinner, where attendees marked the occasion with a special anniversary cake. During the evening, Levi Waldron, one of Bioconductor’s Principal Investigators, shared a personal reflection on his journey with Bioconductor, from first encountering the project through his collaborations with Martin Morgan to becoming part of its leadership.</p>
+<img src="media/levispeech.jpg" class="zoomable img-fluid" style="width:100.0%">
+<center>
+<p><em>Levi Waldron shares a personal reflection on his journey with Bioconductor during the 25th anniversary celebrations.</em></p>
+</center>
+</section>
+</section>
+<section id="infrastructure-and-tools" class="level2">
+<h2 class="anchored" data-anchor-id="infrastructure-and-tools">Infrastructure and tools</h2>
+<section id="zulip" class="level3">
+<h3 class="anchored" data-anchor-id="zulip">Zulip</h3>
+<p>EuroBioC2026 continued to use Zulip as its primary communication platform. A dedicated conference channel, along with a separate hackathon channel, organised into topic-based threads, served as a central location for announcements, technical support, social interactions, and discussions before, during, and after the event. The threaded conversation model made it easier to follow discussions and kept participants connected throughout the conference.</p>
+</section>
+<section id="sticker-hexwall" class="level3">
+<h3 class="anchored" data-anchor-id="sticker-hexwall">Sticker Hexwall</h3>
+<p>The sticker hexwall returned for EuroBioC2026 following its successful introduction in 2025. The display showcased Bioconductor package stickers contributed by Bioconductor community members and served as a visual representation of the diversity of software projects within the ecosystem.</p>
+<p>The hexwall quickly became a popular gathering point and photo location throughout the conference.</p>
+<img src="media/hexwall.jpg" class="zoomable img-fluid" style="width:100.0%">
+<center>
+<p><em>The hexwall at EuroBioC2026.</em></p>
+</center>
+</section>
+</section>
+<section id="social-interactions-and-networking" class="level2">
+<h2 class="anchored" data-anchor-id="social-interactions-and-networking">Social interactions and networking</h2>
+<section id="conference-dinner" class="level3">
+<h3 class="anchored" data-anchor-id="conference-dinner">Conference Dinner</h3>
+<p>The conference dinner took place on the island of Ruissalo, one of Turku’s most popular recreational areas and the gateway to the Turku Archipelago. It was hosted at the historic Villa Marjaniemi, a 150-year-old villa overlooking the sea, and the evening was inspired by Juhannus, Finland’s traditional midsummer celebration.</p>
+<p>Attendees were welcomed by a live band as they arrived, then enjoyed dinner and celebrations marking 25 years of Bioconductor. The evening continued with outdoor games and activities, and was a good chance to catch up with familiar faces and meet people for the first time.</p>
+</section>
+<section id="walking-tour" class="level3">
+<h3 class="anchored" data-anchor-id="walking-tour">Walking tour</h3>
+<p>On Thursday evening, participants joined an optional walking tour. During the tour, participants learned about Finnish history while exploring the historic city centre, stopping at the Old Great Square and Brinkkala Hall, whose balcony has served as the site of the annual (<a href="https://en.wikipedia.org/wiki/Christmas_Peace">Christmas Peace</a>) declaration since the Middle Ages. The tour also highlighted notable Finnish figures, including the legendary runner (<a href="https://en.wikipedia.org/wiki/Paavo_Nurmi">Paavo Nurmi</a>), famously known as the “Flying Finn.”</p>
+<p>The tour naturally flowed into the evening’s social activities. Some participants stopped at a traditional Finnish grill kiosk to try makkaraperunat, a popular local fast-food dish, while others continued their conversations at Office (Toimisto in Finnish), a local bar where they sang karaoke until 3 AM.</p>
+<div class="columns">
+<div class="column" style="width:48%;">
+<p><a href="media/walking-tour.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-4"><img src="media/walking-tour.jpg" class="img-fluid" style="width:100.0%"></a></p>
+</div><div class="column" style="width:48%;">
+<p><a href="media/dinner.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-5"><img src="media/dinner.jpg" class="img-fluid" style="width:100.0%"></a></p>
+</div>
+</div>
+<center>
+<p><em>EuroBioC2026 Participants during the walking tour (left) and enjoying the conference dinner (right).</em></p>
+</center>
+</section>
+</section>
+<section id="conference-materials" class="level2">
+<h2 class="anchored" data-anchor-id="conference-materials">Conference materials</h2>
+<p>Conference recordings will be available on the <a href="http://www.youtube.com/@bioconductor">Bioconductor YouTube channel</a> in the coming weeks. Auditorium sessions were also live streamed, and Slido was used to facilitate audience questions from both in-person and remote participants, alongside traditional in-room discussion. Presenters were encouraged to upload their slides, posters, and supplementary materials to the <a href="https://zenodo.org/communities/bioconductor">Bioconductor Zenodo Community</a>, making conference outputs openly available and citable through persistent digital object identifiers (DOIs).</p>
+<p>These resources make conference outputs available to those who could not attend and support continued learning across the community. Additional photos from EuroBioC2026, including talks, workshops, posters, social events, and the conference dinner, are available in the <a href="https://eurobioc2026.bioconductor.org/pages/photo-gallery.html">conference photo gallery</a>.</p>
+</section>
+<section id="coming-up" class="level2">
+<h2 class="anchored" data-anchor-id="coming-up">Coming up…</h2>
+<p>The 25th anniversary year will continue when the Bioconductor community gather next at (<a href="https://bioc2026.bioconductor.org/">BioC2026</a>), which will take place from August 10-12, 2026 at the Fred Hutch Cancer Center in Seattle, Washington. The conference will continue the tradition of bringing together developers, researchers, and educators to share new software, methods, and applications in computational biology.</p>
+<p>Later in the year, the community will head to Melbourne, Australia, for (<a href="https://biocasia2026.bioconductor.org/">BioCAsia2026</a>), taking place on November 19-20, 2026, immediately following the ABACBS conference. BioCAsia brings together researchers across the Asia-Pacific region for scientific exchange, training, and community building. The (<a href="https://brisbanebioinformatics.org/event/qld-week-biocasia/">BioCAsia Seminar Series</a>) has also expanded to a bi-monthly schedule. alongside growing regional initiatives such as the (<a href="https://training.bioconductor.org/workshops/bioc-africa-seminars/">Bioconductor Africa Seminar Series</a>) and the Bioconductor Latin America seminar series. Stay connected with the community through dedicated Zulip channels.</p>
+<p>EuroBioC2026 concluded with an invitation to Basel, Switzerland, where EuroBioC2027 will take place from September 8–10, 2027. See you there.</p>
+</section>
+<section id="acknowledgements" class="level2">
+<h2 class="anchored" data-anchor-id="acknowledgements">Acknowledgements</h2>
+<section id="sponsors" class="level3">
+<h3 class="anchored" data-anchor-id="sponsors">Sponsors</h3>
+<p>EuroBioC2026 gratefully acknowledges the support of all sponsors and partners whose contributions and support made the conference possible.</p>
+<p><a href="media/sponsors-partners.png" class="lightbox" data-gallery="quarto-lightbox-gallery-6"><img src="media/sponsors-partners.png" class="zoomable img-fluid" style="width:100.0%"></a></p>
+</section>
+<section id="diamond-sponsors" class="level3">
+<h3 class="anchored" data-anchor-id="diamond-sponsors">Diamond sponsors</h3>
+<ul>
+<li><a href="https://www.tsv.fi/en">Federation of Finnish Learned Societies</a></li>
+<li><a href="https://skr.fi/en/">Finnish Cultural Foundation</a></li>
+</ul>
+</section>
+<section id="gold-sponsors" class="level3">
+<h3 class="anchored" data-anchor-id="gold-sponsors">Gold sponsors</h3>
+<ul>
+<li><a href="https://biocityturku.fi/">BioCity, Turku</a></li>
+<li><a href="https://stiftelsenabo.fi/en/">Åbo Akademi University Foundation</a></li>
+</ul>
+</section>
+<section id="bronze-sponsors" class="level3">
+<h3 class="anchored" data-anchor-id="bronze-sponsors">Bronze sponsors</h3>
+<ul>
+<li><a href="https://bigomics.ch/">BigOmics Analytics</a></li>
+<li><a href="https://www.physalia-courses.org/">Physalia Courses</a></li>
+<li><a href="https://r-consortium.org/">R Consortium</a></li>
+<li><a href="https://www.loimu.fi/en/">LOIMU</a></li>
+<li><a href="https://liedonsaastopankkisaatio.fi/">Liedon Säästöpankkisäätiö</a></li>
+</ul>
+</section>
+<section id="supporting-organisations" class="level3">
+<h3 class="anchored" data-anchor-id="supporting-organisations">Supporting organisations</h3>
+<ul>
+<li><a href="https://www.nordic-compbio.org/">Nordic Computational Biology</a></li>
+</ul>
+</section>
+<section id="hosts" class="level3">
+<h3 class="anchored" data-anchor-id="hosts">Hosts</h3>
+<ul>
+<li><a href="https://www.utu.fi/en">University of Turku</a></li>
+<li><a href="https://biocityturku.fi/research-programs/complifesci/">CompLifeSci, BioCity Turku</a></li>
+<li><a href="https://www.bioinf.fi/">Finnish Society for Bioinformatics</a></li>
+</ul>
+</section>
+<section id="organising-committee" class="level3">
+<h3 class="anchored" data-anchor-id="organising-committee">Organising committee</h3>
+<p>We thank the local organisers, programme committee, workshop instructors, keynote speakers, volunteers, sponsors, and all participants whose contributions made EuroBioC2026 a success.</p>
+<p><strong>Organising Committee</strong></p>
+<ul>
+<li>Leo Lahti (Chair)</li>
+<li>Tuomas Borman (Local Chair)</li>
+<li>Akewak Jeba (Website)</li>
+<li>Anna Kaisanlahti (Local Organiser)</li>
+<li>Annekathrin Nedwed</li>
+<li>Charlotte Soneson (Scientific Programme)</li>
+<li>Dania Machlab</li>
+<li>Dario Righelli</li>
+<li>Eliana Ibrahimi</li>
+<li>Federico Marini</li>
+<li>James Dalgleish</li>
+<li>Julia Mathlin (Local Organiser)</li>
+<li>Kevin Rue-Albrecht</li>
+<li>Laurent Gatto</li>
+<li>Lieven Clement</li>
+<li>Maria Doyle (Communications)</li>
+<li>Mark Robinson</li>
+<li>Michael Love</li>
+<li>Michael Stadler</li>
+<li>Miina Vulli (Local Organiser)</li>
+<li>Najla Abassi</li>
+<li>Nicholas Cooley (Hackathon)</li>
+<li>Nyasita Laurah Ondari (Communications)</li>
+<li>Robert Castelo</li>
+<li>Robert Ivánek</li>
+<li>Teemu Daniel Laajala (Local Organiser)</li>
+</ul>
+
+
+</section>
+</section>
+
+<p>
+© 2026 Bioconductor. Content is published under <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons CC-BY-4.0 License</a> for the text and <a href="https://opensource.org/licenses/BSD-3-Clause">BSD 3-Clause License</a> for any code. | <a href="https://www.r-bloggers.com">R-Bloggers</a>
+</p></main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/blog\.bioconductor\.org\/");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","descPosition":"bottom","loop":false,"openEffect":"zoom","selector":".lightbox"});
+(function() {
+  let previousOnload = window.onload;
+  window.onload = () => {
+    if (previousOnload) {
+      previousOnload();
+    }
+    lightboxQuarto.on('slide_before_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      const href = trigger.getAttribute('href');
+      if (href !== null) {
+        const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+        if (imgEl !== null) {
+          const srcAttr = imgEl.getAttribute("src");
+          if (srcAttr && srcAttr.startsWith("data:")) {
+            slideConfig.href = srcAttr;
+          }
+        }
+      } 
+    });
+  
+    lightboxQuarto.on('slide_after_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(slideNode);
+      }
+    });
+  
+  };
+  
+})();
+          </script>
+
+
+
+
+</body></html>
