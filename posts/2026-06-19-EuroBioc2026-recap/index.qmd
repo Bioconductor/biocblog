@@ -222,12 +222,12 @@ EuroBioC2026 gratefully acknowledges the support of all sponsors and partners wh
 - [Liedon Säästöpankkisäätiö](https://liedonsaastopankkisaatio.fi/)
 
 ### Supporting organisations
-- Nordic Computational Biology
+- [Nordic Computational Biology](https://www.nordic-compbio.org/)
 
 ### Hosts
-- University of Turku
-- CompLifeSci, BioCity Turku
-- Finnish Society for Bioinformatics
+- [University of Turku](https://www.utu.fi/en)
+- [CompLifeSci, BioCity Turku](https://biocityturku.fi/research-programs/complifesci/)
+- [Finnish Society for Bioinformatics](https://www.bioinf.fi/)
 
 
 ### Organising committee
