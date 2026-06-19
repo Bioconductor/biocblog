@@ -36,7 +36,7 @@ library(rnaturalearthdata)
 library(viridis)
 library(plotly)
 
-data_2026 <- read_csv("gitexclude/eurobioc2026_countries.csv")
+data_2026 <- read_csv("media/eurobioc2026_countries.csv")
 
 counts <- data_2026 %>%
   rename(
