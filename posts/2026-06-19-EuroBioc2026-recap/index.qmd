@@ -7,7 +7,7 @@ author:
 date: 2026-06-19
 categories:
   - Bioconductor
-image: "media/allparticipants_image.jpg"
+image: "media/eurobioc-main-image.jpg"
 format:
   html:
     toc: true
@@ -20,7 +20,7 @@ The European Bioconductor Conference 2026 ([EuroBioC2026](https://eurobioc2026.b
 This year's conference welcomed 147 in-person participants from 23 countries. Across three days, attendees participated in keynote lectures, short and flash talks, workshops, poster sessions, Birds-of-a-Feather discussions, and community events. The conference also marked an important milestone for the project as Bioconductor celebrated its 25th anniversary.
 The figures below summarise EuroBioC2026 at a glance: 147 attendees from 23 countries, 4 keynote speakers, 25 speakers, 68 posters, 6 workshops, 9 flash talks, and 3 Birds-of-a-Feather sessions.
 
-![](media/EuroBioC2026bynumbers.svg){.zoomable width="100%"}
+![](media/eurobioc-by-numbers.png){.zoomable width="100%"}
 
 ## Participants by country
 Participants travelled to Turku from across Europe and beyond, reflecting the increasingly global nature of the Bioconductor community. While Finland represented the largest delegation, attendees also joined from Italy, Belgium, Germany, Switzerland, the United States, Sweden, the United Kingdom, Ireland, Spain, Kenya, South Korea, Australia, and several other countries.
