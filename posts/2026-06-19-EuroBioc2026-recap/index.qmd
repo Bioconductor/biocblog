@@ -4,7 +4,7 @@ description: "Highlights from the 2026 European Bioconductor Conference in Turku
 author:
   - name: Laurah Ondari
     url: https://github.com/Nyasita
-date: 2025-10-24
+date: 2026-06-19
 categories:
   - Bioconductor
 image: "media/allparticipants_image.jpg"
@@ -16,7 +16,7 @@ lightbox: true
 ![](media/eurobioc-main-image.jpg){.zoomable width="100%"}
 
 
-The European Bioconductor Conference 2026 ([EuroBioC2026](https://eurobioc2026.bioconductor.org/)) took place from June 3-5, 2026, in Turku, Finland. Hosted by the ([University of Turku](https://www.utu.fi/en)) and the ([Finnish Society for Bioinformatics](https://www.bioinf.fi/)) at BioCity, the conference brought together the Bioconductor community to showcase the latest developments in Bioconductor software packages and discuss emerging technologies shaping computational biology.
+The European Bioconductor Conference 2026 ([EuroBioC2026](https://eurobioc2026.bioconductor.org/)) took place from June 3-5, 2026, in Turku, Finland. Hosted by the [University of Turku](https://www.utu.fi/en) and the [Finnish Society for Bioinformatics](https://www.bioinf.fi/) at BioCity, the conference brought together the Bioconductor community to showcase the latest developments in Bioconductor software packages and discuss emerging technologies shaping computational biology.
 This year's conference welcomed 147 in-person participants from 23 countries. Across three days, attendees participated in keynote lectures, short and flash talks, workshops, poster sessions, Birds-of-a-Feather discussions, and community events. The conference also marked an important milestone for the project as Bioconductor celebrated its 25th anniversary.
 The figures below summarise EuroBioC2026 at a glance: 147 attendees from 23 countries, 4 keynote speakers, 25 speakers, 68 posters, 6 workshops, 9 flash talks, and 3 Birds-of-a-Feather sessions.
 
@@ -25,26 +25,104 @@ The figures below summarise EuroBioC2026 at a glance: 147 attendees from 23 coun
 ## Participants by country
 Participants travelled to Turku from across Europe and beyond, reflecting the increasingly global nature of the Bioconductor community. While Finland represented the largest delegation, attendees also joined from Italy, Belgium, Germany, Switzerland, the United States, Sweden, the United Kingdom, Ireland, Spain, Kenya, South Korea, Australia, and several other countries.
 
+```{r, echo=FALSE, warning=FALSE, message=FALSE, cache=TRUE}
+
+library(ggplot2)
+library(dplyr)
+library(readr)
+library(sf)
+library(rnaturalearth)
+library(rnaturalearthdata)
+library(viridis)
+library(plotly)
+
+data_2026 <- read_csv("gitexclude/eurobioc2026_countries.csv")
+
+counts <- data_2026 %>%
+  rename(
+    Country = country,
+    Count = participants
+  ) %>%
+  mutate(Country = case_when(
+    Country == "United States" ~ "United States of America",
+    Country == "South Korea" ~ "Republic of Korea",
+    TRUE ~ Country
+  ))
+
+world <- ne_countries(scale = "medium", returnclass = "sf")
+world <- world %>% filter(name != "Antarctica")
+world <- left_join(world, counts, by = c("name" = "Country"))
+
+world$log_Count <- log1p(world$Count)
+
+max_count <- ceiling(max(counts$Count, na.rm = TRUE) / 50) * 50
+
+breaks <- unique(c(0, log1p(1), log1p(5), log1p(10), log1p(50), log1p(max_count)))
+labels <- round(expm1(breaks))
+
+p <- ggplot(data = world) +
+  geom_sf(
+    aes(fill = log_Count, text = paste(name, Count)),
+    color = "white"
+  ) +
+  scale_fill_viridis(
+    option = "magma",
+    na.value = "grey",
+    name = "Participants",
+    limits = c(0, log1p(max_count)),
+    breaks = breaks,
+    labels = labels,
+    direction = -1
+  ) +
+  coord_sf(
+    xlim = c(-180, 180),
+    ylim = c(-60, 90),
+    expand = FALSE
+  ) +
+  theme_void() +
+  theme(axis.line.y = element_blank())
+
+ggplotly(p, tooltip = "text") %>%
+  layout(
+    xaxis = list(
+      showline = FALSE,
+      showticklabels = FALSE,
+      zeroline = FALSE,
+      title_standoff = 5
+    )
+  )
+
+```
+
 ## Preconference
 Ahead of the main conference, EuroBioC2026 hosted two preconference events on June 1-2. These were delivered in collaboration with the University of Turku, CompLifeSci, the Finnish Society for Bioinformatics, and members of the Bioconductor community. Running in parallel over two days, the events allowed participants to either strengthen their analytical skills through hands-on training or contribute directly to the development of Bioconductor software through collaborative coding projects.
 
 ### Workshop: Orchestrating Microbiome Analysis with Bioconductor
-The preconference workshop focused on microbiome data analysis using Bioconductor and followed the Bioconductor Carpentry model, combining interactive instruction with practical exercises. Over two days, participants learned how to import, process, and analyse microbiome datasets using the established Bioconductor workflow; ([Orchestrating Microbiome Analysis (OMA)](https://microbiome.github.io/OMA/docs/devel/)). The workshop covered diversity analyses, differential abundance testing, and approaches for integrating microbiome data with other omics data types.
-A key component of the workshop was the use ofcloud computing resources from ([CSC](https://csc.fi/en/)) (Finnish IT Centre for Science) using ([Noppe](https://noppe.2.rahtiapp.fi/welcome)), that provided participants with immediate access to all required datasets, software, and computing resources. By removing installation and configuration barriers, instructors were able to begin teaching immediately and spend more time focusing on the workshop content rather than troubleshooting technical issues. The platform also ensured that all participants worked within the same environment, creating a smoother learning experience for everyone involved.
+The preconference workshop focused on microbiome data analysis using Bioconductor and followed the Bioconductor Carpentry model, combining interactive instruction with practical exercises. Over two days, participants learned how to import, process, and analyse microbiome datasets using the established Bioconductor workflow; [Orchestrating Microbiome Analysis (OMA)](https://microbiome.github.io/OMA/docs/devel/). The workshop covered diversity analyses, differential abundance testing, and approaches for integrating microbiome data with other omics data types.
+A key component of the workshop was the use ofcloud computing resources from [CSC](https://csc.fi/en/) (Finnish IT Centre for Science) using [Noppe](https://noppe.2.rahtiapp.fi/welcome), that provided participants with immediate access to all required datasets, software, and computing resources. By removing installation and configuration barriers, instructors were able to begin teaching immediately and spend more time focusing on the workshop content rather than troubleshooting technical issues. The platform also ensured that all participants worked within the same environment, creating a smoother learning experience for everyone involved.
 The workshop was hands-on throughout: participants asked questions, worked through exercises, and discussed how the workflows related to their own projects. The format, being practical, open, and instructor-led, fit well with the approach shared by both Bioconductor and The Carpentries.
 The workshop was led by Leo Lahti, Himel Mallick, Thomaz Bastiaanssen, Tuomas Borman, and Giulio Benedetti.
 
 ![](media/benedetti-workshop.jpg){.zoomable width="100%"}
+<center>
 
+*Participants during the pre-conference microbiome workshop.*
+
+</center>
 
 ### Hackathon
 
-We held the first of our series of hackathons attached to Bioconductor conferences this June at EuroBioC2026 in Turku, Finland. Eighteen in-person attendees worked on four projects focused on interoperability, and at least three of those are now being prepared for submission to ([BioHackrXiv](https://index.biohackrxiv.org/tag/EuroBioc2026)). 
+We held the first of our series of hackathons attached to Bioconductor conferences this June at EuroBioC2026 in Turku, Finland. Eighteen in-person attendees worked on four projects focused on interoperability, and at least three of those are now being prepared for submission to [BioHackrXiv](https://index.biohackrxiv.org/tag/EuroBioc2026). 
+
 A big congratulations to all the participants for their effort. You can read more about the projects from the [EuroBioC2026 Hackathon](https://github.com/BiocCodingCollaborations/EuroBioc2026_Hackathon).
 We’re looking forward to building on this work at the North American Bioconductor conference, BioC2026, in Seattle this August. See the [BioC2026 Hackathon](https://github.com/BiocCodingCollaborations/BiocNA2026_Hackathon) for more details.
 
 ![](media/hackathon.jpg){.zoomable width="100%"}
+<center>
 
+*Participants during the pre-conference hackathon.*
+
+</center>
 
 ## Programme overview
 
@@ -55,8 +133,11 @@ EuroBioC2026 covered both established and emerging areas of computational biolog
 Keynotes at EuroBioC2026 covered functional genomics, machine learning, microbiome research, and the direction of computational biology. Across four talks, speakers addressed how data science is changing biological research, and what that means for reproducibility, interpretation, and open-source software. 
 
 **Helena Kilpinen** opened the conference with *Morphological profiling of in vitro neurons: Visualizing complexity in cellular disease models*. Her talk explored how high-content imaging and morphological profiling can be used to better understand cellular phenotypes in disease models. By combining large-scale imaging data with computational approaches, she demonstrated how researchers can uncover subtle cellular differences that may provide insights into disease mechanisms.
+
 **Anders Krogh** presented *A Deep Generative Model for Gene Expression and Multimodal Data*, showcasing how modern machine learning approaches can be used to model increasingly complex biological datasets. His keynote highlighted the potential of generative models to integrate multiple data modalities and improve our understanding of gene regulation and cellular states.
+
 **Aura Raulo** delivered a keynote titled *Modeling the spread of microbial communities in contact networks*. Drawing on concepts from ecology, microbiology, and network science, they explored how microbial communities are transmitted between individuals and populations. The talk examined how host-associated microbiomes are shaped and shared, and what drives their spread.
+
 The final keynote was delivered by **Levi Waldron**, who addressed a topic now central to many scientific discussions: *Bioconductor in the age of AI. What do we do now?* His talk examined the opportunities and challenges that AI presents for open-source scientific software. He encouraged the community to think about how AI tools can complement existing work, without compromising the transparency, reproducibility, and scientific rigour the project has built over 25 years.
 
 
@@ -70,10 +151,16 @@ Alongside methodological advances, speakers also covered broader community topic
 The 68 posters presented at EuroBioC2026 covered a broad mix of biological applications and software development. Topics included spatial omics, microbiome research, proteomics, metabolomics, disease modelling, and machine learning, as well as new packages and infrastructure projects from across the Bioconductor ecosystem. 
 The poster sessions encouraged interactions between package developers, researchers, students, and first-time conference attendees, helping strengthen collaborations across the community.
 
+![](media/poster-session.jpg){.zoomable width="100%"}
+<center>
+
+*EuroBioC2026 participants during a poster session.*
+
+</center>
 
 ### Birds-of-a-Feather sessions
 
-The three 90-minute Birds-of-a-Feather (BoF) sessions offered attendees an opportunity to connect around shared interests and exchange experiences, discuss challenges, and share ideas. The sessions were proposed by participants during the conference including sessions focused on strengthening the Finnish Bioconductor community, supporting early-career researchers, and embedding environmental sustainability into Bioconductor packages and research workflows.
+The three 90-minute Birds-of-a-Feather (BoF) sessions offered attendees an opportunity to connect around shared interests and exchange experiences, discuss challenges, and share ideas. The sessions were proposed by participants during the conference including sessions focused on strengthening the Finnish Bioconductor community, supporting early-career researchers, and embedding environmental sustainability into Bioconductor packages and research workflows. One outcome from the early-career researcher discussion was the creation of a dedicated student–ECR Zulip channel to support continued connection within the community.
 The BoF sessions continued a tradition of community-led discussion that has been part of Bioconductor events for years.
 
 
@@ -109,9 +196,11 @@ EuroBioC2026 continued to use Zulip as its primary communication platform. A ded
 The threaded conversation model made it easier to follow discussions and kept participants connected throughout the conference.
 
 
+
 ### Sticker Hexwall
 
 The sticker hexwall returned for EuroBioC2026 following its successful introduction in 2025. The display showcased Bioconductor package stickers contributed by Bioconductor community members and served as a visual representation of the diversity of software projects within the ecosystem.
+
 The hexwall quickly became a popular gathering point and photo location throughout the conference.
 
 ![](media/hexwall.jpg){.zoomable width="100%"}
@@ -125,20 +214,23 @@ The hexwall quickly became a popular gathering point and photo location througho
 
 ### Conference Dinner
 The conference dinner took place on the island of Ruissalo, one of Turku's most popular recreational areas and the gateway to the Turku Archipelago. It was hosted at the historic Villa Marjaniemi, a 150-year-old villa overlooking the sea, and the evening was inspired by Juhannus, Finland's traditional midsummer celebration.
+
 Attendees were welcomed by a live band as they arrived, then enjoyed dinner and celebrations marking 25 years of Bioconductor. The evening continued with outdoor games and activities, and was a good chance to catch up with familiar faces and meet people for the first time.
+
 
 ### Walking tour
 
 On Thursday evening, participants joined an optional walking tour. During the tour, participants learned about Finnish history while exploring the historic city centre, stopping at the Old Great Square and Brinkkala Hall, whose balcony has served as the site of the annual ([Christmas Peace](https://en.wikipedia.org/wiki/Christmas_Peace)) declaration since the Middle Ages. The tour also highlighted notable Finnish figures, including the legendary runner ([Paavo Nurmi](https://en.wikipedia.org/wiki/Paavo_Nurmi)), famously known as the “Flying Finn.”
+
 The tour naturally flowed into the evening’s social activities. Some participants stopped at a traditional Finnish grill kiosk to try makkaraperunat, a popular local fast-food dish, while others continued their conversations at Office (Toimisto in Finnish), a local bar where they sang karaoke until 3 AM.
 
 ::: {.columns}
 
-::: {.column width="50%"}
+::: {.column width="48%"}
 ![](media/walking-tour.jpg){width=100%}
 :::
 
-::: {.column width="50%"}
+::: {.column width="48%"}
 ![](media/dinner.jpg){width=100%}
 :::
 
@@ -152,8 +244,9 @@ The tour naturally flowed into the evening’s social activities. Some participa
 
 ## Conference materials
 
-Conference recordings will be available on the ([Bioconductor YouTube channel](http://www.youtube.com/@bioconductor)) in the coming weeks. Auditorium sessions were also live streamed, and Slido was used to facilitate audience questions from both in-person and remote participants, alongside traditional in-room discussion.
+Conference recordings will be available on the [Bioconductor YouTube channel](http://www.youtube.com/@bioconductor) in the coming weeks. Auditorium sessions were also live streamed, and Slido was used to facilitate audience questions from both in-person and remote participants, alongside traditional in-room discussion.
 Presenters were encouraged to upload their slides, posters, and supplementary materials to the [Bioconductor Zenodo Community](https://zenodo.org/communities/bioconductor), making conference outputs openly available and citable through persistent digital object identifiers (DOIs).
+
 These resources make conference outputs available to those who could not attend and support continued learning across the community.
 Additional photos from EuroBioC2026, including talks, workshops, posters, social events, and the conference dinner, are available in the [conference photo gallery](https://eurobioc2026.bioconductor.org/pages/photo-gallery.html).
 
@@ -176,19 +269,19 @@ EuroBioC2026 gratefully acknowledges the support of all sponsors and partners wh
 ![](media/sponsors-partners.png){.zoomable width="100%"}
 
 ### Diamond sponsors
-- Federation of Finnish Learned Societies
-- Finnish Cultural Foundation
+- [Federation of Finnish Learned Societies](https://www.tsv.fi/en)
+- [Finnish Cultural Foundation](https://skr.fi/en/)
 
 ### Gold sponsors
-- BioCity, Turku
-- Åbo Akademi University Foundation
+- [BioCity, Turku](https://biocityturku.fi/)
+- [Åbo Akademi University Foundation](https://stiftelsenabo.fi/en/)
 
 ### Bronze sponsors
-- BigOmics Analytics
-- Physalia Courses
-- R Consortium
-- LOIMU
-- Liedon Säästöpankkisäätiö
+- [BigOmics Analytics](https://bigomics.ch/)
+- [Physalia Courses](https://www.physalia-courses.org/)
+- [R Consortium](https://r-consortium.org/)
+- [LOIMU](https://www.loimu.fi/en/)
+- [Liedon Säästöpankkisäätiö](https://liedonsaastopankkisaatio.fi/)
 
 ### Supporting organisations
 - Nordic Computational Biology
@@ -203,6 +296,7 @@ EuroBioC2026 gratefully acknowledges the support of all sponsors and partners wh
 We thank the local organisers, programme committee, workshop instructors, keynote speakers, volunteers, sponsors, and all participants whose contributions made EuroBioC2026 a success.
 
 **Organising Committee**
+
 - Leo Lahti (Chair)
 - Tuomas Borman (Local Chair)
 - Akewak Jeba (Website)
