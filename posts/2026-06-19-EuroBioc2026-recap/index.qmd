@@ -186,7 +186,8 @@ Conference recordings will be available on the [Bioconductor YouTube channel](ht
 Presenters were encouraged to upload their slides, posters, and supplementary materials to the [Bioconductor Zenodo Community](https://zenodo.org/communities/bioconductor), making conference outputs openly available and citable through persistent digital object identifiers (DOIs).
 
 These resources make conference outputs available to those who could not attend and support continued learning across the community.
-Additional photos from EuroBioC2026, including talks, workshops, posters, social events, and the conference dinner, are available in the [conference photo gallery](https://eurobioc2026.bioconductor.org/pages/photo-gallery.html).
+Additional photos from EuroBioC2026, including talks, workshops, posters, social events, and the conference dinner, are available in the [conference photo gallery](https://eurobioc2026.bioconductor.org/pages/photo-gallery.html). 
+A short recap video capturing moments from the conference is also available [on YouTube](https://youtube.com/shorts/PdMdkpTPMeM?si=Q7hu4AwztXEsZuZM).
 
 
 ## Coming up...
