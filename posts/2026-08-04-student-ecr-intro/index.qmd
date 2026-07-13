@@ -1,0 +1,67 @@
+---
+title: "Introducing the Bioconductor Early Career Council"
+description: "Supporting early-career researchers in the Bioconductor community"
+author:
+  - name: Carissa Chen
+  - name: Guillaume Deflandre
+  - name: Jasper Spitzer
+  - name: Sophie-Marie Wind
+date: 2026-08-04
+image: first-meeting.jpg
+creative_commons: CC BY
+categories:
+  - Bioconductor
+  - events
+  - ecr
+---
+
+## Announcing the Bioconductor Early Career Council
+
+From an idea that hatched during the EuroBioC2026 Birds of a Feather session, we are super excited to announce the formation of the [Early Career Council](https://workinggroups.bioconductor.org/currently-active-working-groups-committees.html#early-career-council)!
+
+As a newly established committee, we aim to support **students and early-career researchers (ECRs)** in the Bioconductor community by providing a platform that brings together **developers and data scientists** through mentorship, networking, and professional development opportunities. 
+
+## Meet the leads
+
+![The first virtual committee meeting on 21st July, 2026. *Left to right* Carissa Chen, Guillaume Deflandre, Jasper Spitzer, Sophie-Marie Wind](first-meeting.jpg){fig-alt="Photos of the committee leads" fig-align="center"}
+
+- Carissa Chen (Postdoctoral Researcher at University of Padova, Italy)
+
+I am a computational biologist with a background in molecular biology and bioinformatics. My current research combines deep learning and statistical methods to jointly analyse sub-cellular spatial transcriptomics and histology images. I have been a long-time user of Bioconductor packages and I am now taking my first steps into computational method development. By joining the Early Career Council, I hope to support interdisciplinary researchers like myself to navigate the Bioconductor community. 
+
+- Guillaume Deflandre ()
+
+- Jasper Spitzer ()
+
+- Sophie-Marie Wind ()
+
+## Our vision 
+
+We aim to create an inclusive and diverse environment for students and early-career researchers in the Bioconductor community, from those discovering Bioconductor for the first time to long-time users and developers of Bioconductor packages.
+
+Using this platform, our goal is to create opportunities for early-career researchers (ECRs) to connect with one another, cultivating a positive and supportive community that embraces open science and reproducible research practices. We also aim to empower researchers to contribute to Bioconductor projects, strengthening transparency and encourage community-driven software development. At the same time, we hope to strengthen the feedback loop between users and developers, encouraging collaboration and helping shape and continuously improve the Bioconductor ecosystem.
+
+A few of our proposed initiatives include:
+
+- **Mentorship program** providing peer support alongside technical guidance on areas such as package development, coding best practices, and contributing to Bioconductor
+- **Targeted seminars** covering dissemination of the latest research and career panels
+- **Workshops** such as community-contributed package demonstrations
+- **"Good First Issue" hackathons** to help new contributors gain experience by working on beginner-friendly issues
+
+...and more!
+
+As we're just getting started, **we would also love to hear your ideas** for future events and initiatives! If you have any suggestions, please take a few minutes to fill in our [poll](publish_link).
+
+To be notified about upcoming activities, please subscribe to our [Zulip channel](https://community-bioc.zulipchat.com/#narrow/channel/611088-student-ecr)!
+
+## Join us!
+
+We welcome anyone from **all career stages and scientific backgrounds** to join our committee and contribute to our activities. If you are interested in joining the Early Career Council, please connect with us on our dedicated [Zulip channel](https://community-bioc.zulipchat.com/#narrow/channel/611088-student-ecr), or reach out to us via [email](student-ecr@bioconductor.org). If you would like an idea of what we are currently working on, feel free to pop by our regular committee meetings on the third Tuesday of every month at 9AM CET.
+
+Or just virtually say hi and introduce yourself on Zulip! (We need more friends!)
+
+![](help-us-grow.png){fig-alt="Stick man holding megaphone with text: 'Help us grow!'" fig-align="center"}
+
+## BioC2026 in Seattle
+
+We will be having a casual gathering during the [BioC2026 conference](https://bioc2026.bioconductor.org/) in Seattle from August 10-12. Come along and meet other ECRs in the Biocoductor community and learn more about how to get involved with the Early Career Council!
