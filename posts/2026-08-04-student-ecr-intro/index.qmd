@@ -60,7 +60,7 @@ We welcome anyone from **all career stages and scientific backgrounds** to join 
 
 Or just virtually say hi and introduce yourself on Zulip! (We need more friends!)
 
-![](help-us-grow.png){fig-alt="Stick man holding megaphone with text: 'Help us grow!'" fig-align="center"}
+![](help-us-grow.jpg){fig-alt="Stick man holding megaphone with text: 'Help us grow!'" fig-align="center"}
 
 ## BioC2026 in Seattle
 
