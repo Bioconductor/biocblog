@@ -77,7 +77,7 @@ If you are interested in participating in the Bioconductor Mentorship Programme,
 
 ## Join us!
 
-We welcome anyone from **all career stages and scientific backgrounds** to join the committee and contribute to our activities. If you are interested in joining the Student-ECR Council, please connect with us on our dedicated [Zulip channel](https://community-bioc.zulipchat.com/#narrow/channel/611088-student-ecr), or reach out to us via [email](student-ecr@bioconductor.org). If you would like an idea of what we are currently working on, feel free to pop by our regular committee meetings on the [third Tuesday of every month]{.underline}(https://bioconductor.org/help/events/).
+We welcome anyone from **all career stages and scientific backgrounds** to join the committee and contribute to our activities. If you are interested in joining the Student-ECR Council, please connect with us on our dedicated [Zulip channel](https://community-bioc.zulipchat.com/#narrow/channel/611088-student-ecr), or reach out to us via [email](student-ecr@bioconductor.org). If you would like an idea of what we are currently working on, feel free to pop by our regular committee meetings on the [third Tuesday of every month](https://bioconductor.org/help/events/){.underline}.
 
 Or just say hi and [introduce yourself on Zulip](https://community-bioc.zulipchat.com/#narrow/channel/611088-student-ecr/topic/Welcome.20and.20overview/with/604108019)! (We need more friends!)
 
