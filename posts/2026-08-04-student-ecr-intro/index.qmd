@@ -84,4 +84,4 @@ Or just say hi and [introduce yourself on Zulip](https://community-bioc.zulipcha
 
 ## BioC2026 in Seattle
 
-We will be having a casual gathering during the [BioC2026 conference](https://bioc2026.bioconductor.org/) in Seattle from August 10-12. Come along and meet other ECRs in the Biocoductor community and learn more about how to get involved with the Student-ECR Council!
+We will be holding a live Q&A and casual Student-ECR gathering during [BioC2026 on Tuesday, August 11, from 8:30 to 9:00 am PT](https://bioc2026.bioconductor.org/schedule/). Members of the Council will join by Zoom to meet attendees and answer questions following their pre-recorded lightning talk on Monday. Come along to meet other ECRs in the Bioconductor community and learn more about how to get involved with the Student-ECR Council!
