@@ -6,7 +6,7 @@ author:
   - name: Guillaume Deflandre
   - name: Jasper Spitzer
   - name: Sophie-Marie Wind
-date: 2026-08-04
+date: 2026-08-06
 image: first-zoom.jpg
 creative_commons: CC BY
 categories:
@@ -31,7 +31,7 @@ I am a computational biologist with a background in molecular biology and bioinf
 
 - Guillaume Deflandre (PhD student at UCLouvain in Brussels, Belgium)
 
-I am a computational biologist with a background in bio-engineering. Initially out of touch with the biomedical field, I took a leap of faith during my Master’s thesis and absolutely loved it! Since then, I have been doing research on how to optimise peptidoform identification in single-cell proteomics. As soon as I delved into this world of bioinformatics, I was introduced to Bioconductor, its packages and its community. They have helped me so much so far, and by joining the Student-ECR council, I hope to help other researchers in the same way.
+I am a computational biologist with a background in bio-engineering. Initially out of touch with the biomedical field, I took a leap of faith during my Master’s thesis and absolutely loved it! Since then, I have been doing research on how to optimise peptidoform identification in single-cell proteomics. As soon as I delved into this world of bioinformatics, I was introduced to Bioconductor, its packages and its community. They have helped me so much so far, and by joining the Student-ECR Council, I hope to help other researchers in the same way.
 
 - Jasper Spitzer (Postdoctoral Researcher at the University of Bonn, Germany)
 
