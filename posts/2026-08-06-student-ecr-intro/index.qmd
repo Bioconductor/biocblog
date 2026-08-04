@@ -19,6 +19,8 @@ categories:
 
 From an idea that hatched during the EuroBioC2026 Birds of a Feather session, we are super excited to announce the formation of the [Student-ECR Council](https://workinggroups.bioconductor.org/currently-active-working-groups-committees.html#early-career-council)!
 
+![](student-ecr-logo.png){fig-alt="Student-ECR Council logo featuring symbols of mentorship, community, events, networking, and career development within Bioconductor." width="250" fig-align="center"}
+
 As a newly established Council, we aim to support **students and early-career researchers (ECRs)** in the Bioconductor community by providing a platform that brings together **developers and data scientists** through mentorship, networking, and professional development opportunities. 
 
 ## Meet the Council members
