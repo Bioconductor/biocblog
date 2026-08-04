@@ -45,6 +45,10 @@ I am a bioinformatician with a focus on high-throughput data analysis and method
 
 I am a computational biologist with a background in molecular biology and genetics. My research focuses on splicing analysis in Mendelian diseases. I was first introduced to Bioconductor packages during my Master’s, and during my PhD, I joined EuroBioC. I deeply appreciate the supportive and collaborative nature of this community. Currently, we are working to establish a Czech BioC community and create educational initiatives to support early career researchers working at the intersection of biology and informatics.
 
+- Nyasita Ondari (Research Associate at International Instutute of Tropical Agriculture (IITA))
+
+I am a bioinformatician focused on building pipelines and workflows for the analysis of large-scale biological data. I have a background in bioinformatics and medical biochemistry. My first introduction to Bioconductor came during my MSc, where I used its packages to analyse my data in R. Since then, my involvement has grown. In March 2025, I instructed the first Bioconductor workshop ever held in Africa, in Nairobi. Today, I lead the Bioconductor Africa Seminar Series and support community engagement and social media across the Bioconductor project.
+
 ## Our vision 
 
 We aim to create an **inclusive and diverse environment** for students and early-career researchers in the Bioconductor community, from those **discovering Bioconductor for the first time to long-time users and developers** of Bioconductor packages.
