@@ -68,7 +68,7 @@ A few of our proposed initiatives include:
 
 As we're just getting started, **we would also love to hear your ideas** for future events and initiatives! If you have any suggestions, please take a few minutes to fill in our [poll](https://forms.gle/KQfGcs3ALAPhCYws6).
 
-To be notified about upcoming activities, please subscribe to our [Zulip channel](https://community-bioc.zulipchat.com/#narrow/channel/611088-student-ecr)!
+To be notified about upcoming activities, please subscribe to our [Zulip channel](https://community-bioc.zulipchat.com/join/u2omcenbfxykrjg3m4aet37t/)!
 
 ## Bioconductor Mentorship Programme
 
