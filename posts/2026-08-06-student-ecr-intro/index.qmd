@@ -86,9 +86,9 @@ We welcome anyone from **all career stages and scientific backgrounds** to join 
 
 Feel free to pop by our regular Council meetings on the [third Tuesday of every month at 9am CET](https://bioconductor.org/help/events/){.underline} to learn more. As we are welcoming new members who may be from different timezones, the meeting time is amenable to change so please don't hesitate to contact us.
 
-If you are interested in joining the Student-ECR Council, please connect with us on our dedicated [Zulip channel](https://community-bioc.zulipchat.com/#narrow/channel/611088-student-ecr), or reach out to us via [email](student-ecr@bioconductor.org). 
+If you are interested in joining the Student-ECR Council, please connect with us on our dedicated [Zulip channel](https://community-bioc.zulipchat.com/join/u2omcenbfxykrjg3m4aet37t/), or reach out to us via [email](student-ecr@bioconductor.org). 
 
-Or just say hi and [introduce yourself on Zulip](https://community-bioc.zulipchat.com/#narrow/channel/611088-student-ecr/topic/Welcome.20and.20overview/with/604108019)! (We need more friends!)
+Or just say hi and [introduce yourself on Zulip](https://community-bioc.zulipchat.com/join/u2omcenbfxykrjg3m4aet37t/)! (We need more friends!)
 
 ![](help-us-grow.jpg){fig-alt="Stick man holding megaphone with text: 'Help us grow!'" fig-align="center"}
 
