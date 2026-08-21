@@ -10,6 +10,8 @@ author:
     url: https://github.com/almahmoud
   - name: Lindsay V. Clark
     url: https://github.com/lvclark
+  - name: Taylor Firman
+    url: https://github.com/tefirman
 
 date: 2026-08-13
 image: biocjobs-targets.jpg
