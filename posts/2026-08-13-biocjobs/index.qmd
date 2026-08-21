@@ -12,6 +12,7 @@ author:
     url: https://github.com/lvclark
 
 date: 2026-08-13
+image: biocjobs-targets.jpg
 creative_commons: CC BY
 categories:
   - Bioconductor
@@ -165,6 +166,8 @@ the BiocJobs framework. The rest of the file is ordinary analysis code reading
 
 ## What comes out
 
+![](biocjobs-targets.jpg){fig-alt="Diagram showing two files written by the package author, a job YAML declaration and an R analysis script under inst/biocjobs/, passing through BiocJobs, which validates them and generates four artifacts: a Galaxy tool wrapper XML, a GA4GH TES task template, a Nextflow DSL2 module and a WDL task." fig-align="center"}
+
 From that one declaration, BiocJobs generates:
 
 | Target | Artifact |
@@ -249,10 +252,27 @@ That pushed out a parallel subproject: a pipeline to **automatically build
 and host a container per Bioconductor package**, or per group of packages,
 or per BiocJobs script. Each image would carry one package plus everything
 it declares (`Depends`, `Imports`, `LinkingTo` and `Suggests`) so that
-vignettes, examples and the package's own tests all run inside it. The one
-image that exists so far, `ghcr.io/almahmoud/deseq2:devel`, was built ad hoc
-from the DESeq2 fork, and is what the WDL evaluation described above actually
-ran against. The work in progress for building all packages lives at
+vignettes, examples and the package's own tests all run inside it.
+
+This is not a replacement for the container infrastructure Bioconductor and
+BioContainers already provide; it builds directly on top of it. Images are
+layered on the existing Bioconductor base stacks, both the familiar
+[`bioconductor_docker`](https://bioconductor.org/help/docker/) images and the
+newer `bioc2u` stack, which installs packages as Debian binaries and so builds
+far faster. The distinction from what exists today is granularity. Bioconductor
+publishes broad base images, and
+[BioContainers](https://biocontainers.pro/) publishes per-package images built
+from the Bioconda recipes; what a dispatched job wants is an image scoped to
+exactly one package and its full declared dependency closure, tracking the
+Bioconductor release directly. Longer term, the ambition is to work with
+BioContainers so that these images are published in their Quay repository
+alongside the Bioconda-derived ones, since that is where workflow authors
+already look. Per-package images on GHCR are simply the first target, because
+they can be built and iterated on without coordination.
+
+The one image that exists so far, `ghcr.io/almahmoud/deseq2:devel`, was built
+ad hoc from the DESeq2 fork, and is what the WDL evaluation described above
+actually ran against. The work in progress for building all packages lives at
 [almahmoud/biocpkgcontainers](https://github.com/almahmoud/biocpkgcontainers).
 
 ## How this was built
@@ -299,6 +319,16 @@ manually to validate their correctness. If that describes you or your package,
 open an issue on the [BiocJobs repository][biocjobs] and say which package you
 have in mind!
 
+There is also a good opportunity to work on this together in person or
+remotely. BiocJobs is one of the projects at the
+[**BioFAIR 2026 Workflow Interoperability Sprint**][sprint], a hybrid event
+running **15 to 17 September 2026** in Milton Keynes, United Kingdom, which
+brings together developers from across the Bioconductor, Galaxy, Nextflow,
+nf-core and WDL ecosystems. If you would like to join, in person or remotely,
+the sprint repository has the details, and the
+`#biofair2026-workflow-sprint` channel on
+[Bioconductor Zulip](https://chat.bioconductor.org/) is where planning happens.
+
 ## Links
 
 - **[BiocJobs on GitHub][biocjobs]**, the first implementation, and where to
@@ -318,4 +348,5 @@ exist without the people who kept raising these ideas.
 [biocjobs]: https://github.com/almahmoud/BiocJobs
 [deseq2fork]: https://github.com/almahmoud/DESeq2
 [wilds]: https://github.com/getwilds/wilds-wdl-library/pull/392
+[sprint]: https://github.com/BiocCodingCollaborations/BioFAIR2026_Sprint
 [biocexecute]: https://github.com/BiocCodingCollaborations/BiocExecute

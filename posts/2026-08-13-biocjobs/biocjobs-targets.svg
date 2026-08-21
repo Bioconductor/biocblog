@@ -1,0 +1,109 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5"
+            markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#8a99a8"/>
+    </marker>
+  </defs>
+
+  <rect width="1200" height="630" fill="#ffffff"/>
+
+  <!-- header -->
+  <text x="60" y="72" font-family="Helvetica, Arial, sans-serif" font-size="34"
+        font-weight="bold" fill="#1a1d20">BiocJobs</text>
+  <text x="60" y="106" font-family="Helvetica, Arial, sans-serif" font-size="21"
+        fill="#5b6770">One declaration in your package, many execution targets</text>
+  <line x1="60" y1="128" x2="1140" y2="128" stroke="#e3e8ec" stroke-width="2"/>
+
+  <!-- ============ column 1: what the author writes ============ -->
+  <text x="60" y="171" font-family="Helvetica, Arial, sans-serif" font-size="13"
+        font-weight="bold" fill="#8a99a8" letter-spacing="1.4">WHAT THE AUTHOR WRITES</text>
+
+  <rect x="60" y="192" width="330" height="232" rx="10"
+        fill="#f7f9fb" stroke="#d3dbe2" stroke-width="2"/>
+  <text x="84" y="224" font-family="Courier, monospace" font-size="16"
+        fill="#5b6770">inst/biocjobs/</text>
+
+  <rect x="84" y="242" width="282" height="76" rx="7"
+        fill="#ffffff" stroke="#1a81c2" stroke-width="2"/>
+  <text x="102" y="270" font-family="Courier, monospace" font-size="16"
+        fill="#17588a">&lt;job&gt;.yaml</text>
+  <text x="102" y="295" font-family="Helvetica, Arial, sans-serif" font-size="15"
+        fill="#5b6770">inputs, outputs, options</text>
+
+  <rect x="84" y="330" width="282" height="76" rx="7"
+        fill="#ffffff" stroke="#1a81c2" stroke-width="2"/>
+  <text x="102" y="358" font-family="Courier, monospace" font-size="16"
+        fill="#17588a">scripts/&lt;job&gt;.R</text>
+  <text x="102" y="383" font-family="Helvetica, Arial, sans-serif" font-size="15"
+        fill="#5b6770">plain analysis code</text>
+
+  <text x="60" y="462" font-family="Helvetica, Arial, sans-serif" font-size="15"
+        fill="#8a99a8">Two files. Nothing else about</text>
+  <text x="60" y="484" font-family="Helvetica, Arial, sans-serif" font-size="15"
+        fill="#8a99a8">the package changes.</text>
+
+  <!-- arrow 1 -->
+  <line x1="404" y1="308" x2="452" y2="308" stroke="#8a99a8" stroke-width="2.5"
+        marker-end="url(#arrow)"/>
+
+  <!-- ============ column 2: biocjobs ============ -->
+  <rect x="466" y="248" width="238" height="120" rx="10"
+        fill="#1a81c2" stroke="#17588a" stroke-width="2"/>
+  <text x="585" y="298" text-anchor="middle" font-family="Helvetica, Arial, sans-serif"
+        font-size="24" font-weight="bold" fill="#ffffff">BiocJobs</text>
+  <text x="585" y="327" text-anchor="middle" font-family="Helvetica, Arial, sans-serif"
+        font-size="15" fill="#d5e8f5">validate</text>
+  <text x="585" y="349" text-anchor="middle" font-family="Helvetica, Arial, sans-serif"
+        font-size="15" fill="#d5e8f5">and generate</text>
+
+  <!-- arrow 2 with fan-out -->
+  <line x1="718" y1="308" x2="762" y2="308" stroke="#8a99a8" stroke-width="2.5"/>
+  <line x1="762" y1="222" x2="762" y2="394" stroke="#8a99a8" stroke-width="2.5"/>
+  <line x1="762" y1="222" x2="806" y2="222" stroke="#8a99a8" stroke-width="2.5" marker-end="url(#arrow)"/>
+  <line x1="762" y1="279" x2="806" y2="279" stroke="#8a99a8" stroke-width="2.5" marker-end="url(#arrow)"/>
+  <line x1="762" y1="337" x2="806" y2="337" stroke="#8a99a8" stroke-width="2.5" marker-end="url(#arrow)"/>
+  <line x1="762" y1="394" x2="806" y2="394" stroke="#8a99a8" stroke-width="2.5" marker-end="url(#arrow)"/>
+
+  <!-- ============ column 3: generated ============ -->
+  <text x="820" y="171" font-family="Helvetica, Arial, sans-serif" font-size="13"
+        font-weight="bold" fill="#8a99a8" letter-spacing="1.4">WHAT IS GENERATED</text>
+
+  <rect x="820" y="196" width="320" height="52" rx="7"
+        fill="#ffffff" stroke="#d3dbe2" stroke-width="2"/>
+  <text x="842" y="222" font-family="Helvetica, Arial, sans-serif" font-size="17"
+        font-weight="bold" fill="#1a1d20">Galaxy</text>
+  <text x="842" y="240" font-family="Helvetica, Arial, sans-serif" font-size="14"
+        fill="#5b6770">tool wrapper XML</text>
+
+  <rect x="820" y="253" width="320" height="52" rx="7"
+        fill="#ffffff" stroke="#d3dbe2" stroke-width="2"/>
+  <text x="842" y="279" font-family="Helvetica, Arial, sans-serif" font-size="17"
+        font-weight="bold" fill="#1a1d20">GA4GH TES</text>
+  <text x="842" y="297" font-family="Helvetica, Arial, sans-serif" font-size="14"
+        fill="#5b6770">task template</text>
+
+  <rect x="820" y="311" width="320" height="52" rx="7"
+        fill="#ffffff" stroke="#d3dbe2" stroke-width="2"/>
+  <text x="842" y="337" font-family="Helvetica, Arial, sans-serif" font-size="17"
+        font-weight="bold" fill="#1a1d20">Nextflow</text>
+  <text x="842" y="355" font-family="Helvetica, Arial, sans-serif" font-size="14"
+        fill="#5b6770">DSL2 module</text>
+
+  <rect x="820" y="368" width="320" height="52" rx="7"
+        fill="#ffffff" stroke="#d3dbe2" stroke-width="2"/>
+  <text x="842" y="394" font-family="Helvetica, Arial, sans-serif" font-size="17"
+        font-weight="bold" fill="#1a1d20">WDL</text>
+  <text x="842" y="412" font-family="Helvetica, Arial, sans-serif" font-size="14"
+        fill="#5b6770">task</text>
+
+  <text x="820" y="462" font-family="Helvetica, Arial, sans-serif" font-size="15"
+        fill="#8a99a8">Regenerated at each release,</text>
+  <text x="820" y="484" font-family="Helvetica, Arial, sans-serif" font-size="15"
+        fill="#8a99a8">never hand-edited.</text>
+
+  <!-- footer strip -->
+  <line x1="60" y1="530" x2="1140" y2="530" stroke="#e3e8ec" stroke-width="2"/>
+  <text x="60" y="566" font-family="Courier, monospace" font-size="16" fill="#5b6770">Rscript -e 'BiocJobs::execJob("DESeq2", "deseq2-differential-expression")' --counts counts.tsv ...</text>
+  <text x="60" y="592" font-family="Helvetica, Arial, sans-serif" font-size="15" fill="#8a99a8">Every target runs the same self-locating command.</text>
+</svg>
