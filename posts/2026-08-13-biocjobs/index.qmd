@@ -191,8 +191,8 @@ Rscript -e 'BiocJobs::execJob("DESeq2", "deseq2-differential-expression")' \
 
 ## First implementation, at the BioC2026 hackathon
 
-The first working implementation was built at the **BioC2026 hackathon in
-Seattle** in August 2026, spearheaded by Alexandru Mahmoud, and taken far
+The first working implementation was built at the [BioC2026 hackathon in
+Seattle](https://github.com/BiocCodingCollaborations/BiocNA2026_Hackathon) in August 2026, spearheaded by Alexandru Mahmoud, and taken far
 enough to get a first working example.
 
 **DESeq2** was chosen for this purpose. It is a popular package, batch-shaped,
