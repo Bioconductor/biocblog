@@ -1,0 +1,14 @@
+---
+title: "Your blog post title"
+description: |
+  This is short description about my blog.
+author:
+  - name: YOUR NAME
+    url: https://github.com/kozo2
+date: 2022-10-26
+categories:
+  - SOME_TAG
+preview: "cover.png"
+---
+
+SOME MARKDOWN HERE.
