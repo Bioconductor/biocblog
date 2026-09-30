@@ -36,27 +36,29 @@ The audience included researchers at different stages of their careers, with sta
 ## Programme overview
 
 ### Keynotes
-The conference featured three keynote speakers:
+The conference featured three keynote speakers:  
 - [Jeff Leek speaking on "Building Open Infrastructure for Translational AI in a Cancer Center"](https://www.youtube.com/watch?v=FuFSePQXVhM&t=187s)  
 - [Ting Ye speaking on "From Association to Causation: Genetic-Anchored Causal Inference in Human Biology"](https://www.youtube.com/watch?v=ZG0weEXGvlA&t=21s)  
 - [Michael Lawrence speaking on "S7 for Bioconductor"](https://www.youtube.com/watch?v=_-sitxM0pNM)   
 
-<div style="display:flex; gap:3px;">
 
-  <img src="media/leek_keynote.jpeg"
-       style="width:33.33%; height:200px; object-fit:cover;">
+::: {#gallery-keynote .columns}
+::: {.column width="33%"}
+![](media/leek_keynote.jpeg){group="gallery-keynote" style="padding-right: 1px;" alt="Jeff Leek giving his keynote at BioC2026"}
+:::
 
-  <img src="media/lawrence_keynote.jpeg"
-       style="width:33.33%; height:200px; object-fit:cover;">
+::: {.column width="33%"}
+![](media/ting_keynote.jpg){group="gallery-keynote" style="padding-right: 1px;" alt="Ting Ye giving her keynote at BioC2026"}
+:::
 
-  <img src="media/ting_keynote.jpg"
-       style="width:33.33%; height:200px; object-fit:cover;">
+::: {.column width="33%"}
+![](media/lawrence_keynote.jpeg){group="gallery-keynote" style="padding-right: 1px;" alt="Michael Lawrence giving his keynote at BioC2026"}
+:::
+:::
 
-</div>
-
-<div style="text-align:center; font-style:italic; font-size:0.9em; margin-top:5px;">
-(Left to Right: Jeff Leek, Michael Lawrence and Ting Ye giving their keynotes at BioC2026)
-</div>
+::: {style="text-align: center;"}
+*Left to Right: Jeff Leek, Michael Lawrence and Ting Ye giving their keynotes at BioC2026*
+:::
 
 ### Short talks
 Twenty contributed speakers shared their work across the conference programme. The short talks at BioC2026 reflected the breadth of research and development across the Bioconductor community. Topics ranged from community training and developer engagement to multi-omics exploration, reproducible workflows, and AI infrastructure. The programme also covered emerging areas of biological data analysis, including spatial transcriptomics, antibody repertoire analysis, rare variant testing, DNA methylation, structural variation, and Perturb-seq. 
@@ -68,7 +70,7 @@ The posters provided an opportunity for attendees to discuss new methods and too
 Feedback from the conference showed that these interactions were particularly valuable, with attendees highlighting conversations around posters and package demonstrations as some of the most useful networking opportunities.
 
 
-![](media/bioc2026_poster_session.jpg){.zoomable width="100%"}
+  ![](media/bioc2026_poster_session.jpg){.zoomable width="100%"}
 <center>
 
 *Participants during the poster session.*
@@ -78,20 +80,19 @@ Feedback from the conference showed that these interactions were particularly va
 ### Celebrating 25 years of Bioconductor
 The celebrations marking Bioconductor’s 25th anniversary continued at BioC2026 following the celebrations that began at EuroBioC2026 earlier in the year. The milestone was marked with a specially branded anniversary cake, thanking participants and community members for being part of the Bioconductor community and contributing to its growth over the past 25 years. 
 
-<div style="display:flex; gap:3px;">
+::: {#gallery-25 .columns}
+::: {.column width="50%"}
+![](media/bioc_25_cake.jpeg){group="gallery-25" style="padding-right: 1px;" alt="Cake with Bioconductor 25th anniversary logo and text 'Thank you for being part of the community!'"}
+:::
 
-  <img src="media/bioc_25_cake.jpeg"
-       style="width:calc(50% - 1.5px); height:250px; object-fit:cover;">
+::: {.column width="50%"}
+![](media/Bioc2026_25years.png){group="gallery-25" style="padding-right: 1px;" alt="Image with text 'Bioconductor celebrates 25 years!', 25th anniversary logo, and text 'From a handful of developers to a global community!'"}
+:::
+:::
 
-  <img src="media/Bioc2026_25years.png"
-       style="width:calc(50% - 1.5px); height:250px; object-fit:cover;">
-
-</div>
-<center>
-
+::: {style="text-align: center;"}
 *Bioconductor at 25 celebrations.*
-
-</center>
+:::
 
 ## Community and networking
 
@@ -149,20 +150,21 @@ All conference recordings are available on the [Bioconductor YouTube channel](ht
 On August 13–14, participants took part in a Carpentries workshop focused on orchestrating large-scale single-cell analysis with Bioconductor led by Ted Laderas and Wes Wilson.
 The workshop was attended by 11 participants and provided a hands-on environment for participants to work through approaches for analysing large-scale single-cell datasets using Bioconductor tools and workflows. Feedback highlighted the value of the live coding, small-group format and complementary teaching approaches.
 
-<div style="display:flex; gap:3px;">
 
-  <img src="media/carpentry-workshop1.jpeg"
-       style="width:calc(50% - 1.5px); height:250px; object-fit:cover;">
+::: {#gallery-carp .columns}
+::: {.column width="50%"}
+![](media/carpentry-workshop1.jpeg){group="gallery-carp" style="padding-right: 1px;" alt="Ted Laderas teaching at the Carpentries workshop"}
+:::
 
-  <img src="media/scrna_bioc2026_workshop_1.jpeg"
-       style="width:calc(50% - 1.5px); height:250px; object-fit:cover;">
+::: {.column width="50%"}
+![](media/scrna_bioc2026_workshop_1.jpeg){group="gallery-carp" style="padding-right: 1px;" alt="Wes Wilson teaching at the Carpentries workshop"}
+:::
+:::
 
-</div>
-<center>
+::: {style="text-align: center;"}
+*Bioconductor Carpentry instructors, Ted and Wes, and participants during the scRNA-seq workshop.*
+:::
 
-*Participants during the scRNA-seq workshop.*
-
-</center>
 
 ### Bioconductor North America 2026 Hackathon
 
