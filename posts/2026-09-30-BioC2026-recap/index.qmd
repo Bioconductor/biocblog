@@ -195,7 +195,7 @@ The community will thereafter gather in Basel, Switzerland, for EuroBioC2027, ta
 BioC2026 gratefully acknowledges the support of all sponsors and partners whose contributions and support made the conference possible.
 
 ### Sponsors
-BioC2026 was proudly supported by Cortex, R consortium and Posit
+BioC2026 was proudly supported by [Cortex](https://cortexbiolabs.com/), [R Consortium](https://r-consortium.org/) and [Posit](https://posit.co/).
 
 
 ![](media/Bioc2026_sponsors.png){.zoomable width="100%"}
