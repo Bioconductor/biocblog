@@ -26,17 +26,12 @@ The conference was then followed by two community events on August 13-14: a Carp
 Participants travelled to Seattle from across North America and beyond, reflecting the international reach of the Bioconductor community. Attendees joined from the United States, Canada, Germany, Ireland, the United Kingdom, Australia, and Nigeria.
 The audience included researchers at different stages of their careers, with staff representing 42% of attendees, followed by students and postdoctoral researchers at 28%, faculty at 13.8%, industry at 13.8%, and government at 2.4%.
 
-<iframe
-  src="media/eurobioc2026-participants-map.html"
-  width="100%"
-  height="600"
-  frameborder="0">
-</iframe>
 
 ## Programme overview
 
 ### Keynotes
-The conference featured three keynote speakers:  
+The conference featured three keynote speakers: 
+
 - [Jeff Leek speaking on "Building Open Infrastructure for Translational AI in a Cancer Center"](https://www.youtube.com/watch?v=FuFSePQXVhM&t=187s)  
 - [Ting Ye speaking on "From Association to Causation: Genetic-Anchored Causal Inference in Human Biology"](https://www.youtube.com/watch?v=ZG0weEXGvlA&t=21s)  
 - [Michael Lawrence speaking on "S7 for Bioconductor"](https://www.youtube.com/watch?v=_-sitxM0pNM)   
@@ -105,7 +100,8 @@ Networking was consistently identified as one of the most valuable aspects of th
 
 ### Zulip
 
-During BioC2026, Zulip provided a dedicated space for participants to connect, interact and stay engaged throughout the conference. The conference space included topic-based discussions covering:  
+During BioC2026, Zulip provided a dedicated space for participants to connect, interact and stay engaged throughout the conference. The conference space included topic-based discussions covering: 
+
 - **Workshops**: Dedicated topics for individual workshops, including Single Cell, Bioconductor in Workflows, microbiome, WebR, and other training sessions.  
 - **Training & education**: A space for broader conversations around training activities and educational sessions.  
 - **Social**: Topics for informal conversations, social activities and connecting with other participants.  
@@ -170,6 +166,7 @@ The workshop was attended by 11 participants and provided a hands-on environment
 
 The Bioconductor North America 2026 Hackathon took place on August 13–14, bringing community members together to collaborate on software and infrastructure projects that strengthen interoperability, software development, and the wider Bioconductor ecosystem. 
 These projects included:  
+
 - AI harness tools for standardizing how users within organizations would interact with agents on shared projects and on shared institutional resources. Link: [https://github.com/eisenefaust/harness_agent](https://github.com/eisenefaust/harness_agent)
 
 - Bioconductor tooling for including CLI executable components in Bioconductor packages. Link: [https://blog.bioconductor.org/posts/2026-08-21-biocjobs/](https://blog.bioconductor.org/posts/2026-08-21-biocjobs/)
