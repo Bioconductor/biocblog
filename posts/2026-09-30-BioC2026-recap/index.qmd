@@ -52,7 +52,7 @@ The conference featured three keynote speakers:
 :::
 
 ::: {style="text-align: center;"}
-*Left to Right: Jeff Leek, Michael Lawrence and Ting Ye giving their keynotes at BioC2026*
+*Left to Right: Jeff Leek, Ting Ye and Michael Lawrence giving their keynotes at BioC2026*
 :::
 
 ### Short talks
