@@ -22,7 +22,7 @@
 
 
 <p><a href="media/bioc2026_groupshot.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="https://blog.bioconductor.org/posts/2026-09-30-BioC2026-recap/media/bioc2026_groupshot.jpg" class="zoomable img-fluid" style="width:100.0%"></a></p>
-<p>The North American Bioconductor Conference 2026 (([BioC2026])(https://bioc2026.bioconductor.org/)) took place from August 10-12, 2026, at the Fred Hutchinson Cancer Center in Seattle, Washington. The conference brought together researchers, developers, educators, and community members to explore current developments within and beyond the Bioconductor project. BioC2026 welcomed 108 attendees, with 70 participating in person and 38 joining virtually. Across the three days, the programme featured three keynote speakers, 20 contributed speakers, and 17 sessions. The programme highlighted the breadth of biological research supported by Bioconductor, as well as the tools, infrastructure, and communities that enable open and reproducible computational biology. The conference was then followed by two community events on August 13-14: a Carpentries workshop on orchestrating large-scale single-cell analysis with Bioconductor and the Bioconductor North America 2026 Hackathon.</p>
+<p>The North American Bioconductor Conference 2026 (<a href="https://bioc2026.bioconductor.org/">BioC2026</a>) took place from August 10-12, 2026, at the Fred Hutchinson Cancer Center in Seattle, Washington. The conference brought together researchers, developers, educators, and community members to explore current developments within and beyond the Bioconductor project. BioC2026 welcomed 108 attendees, with 70 participating in person and 38 joining virtually. Across the three days, the programme featured three keynote speakers, 20 contributed speakers, and 17 sessions. The programme highlighted the breadth of biological research supported by Bioconductor, as well as the tools, infrastructure, and communities that enable open and reproducible computational biology. The conference was then followed by two community events on August 13-14: a Carpentries workshop on orchestrating large-scale single-cell analysis with Bioconductor and the Bioconductor North America 2026 Hackathon.</p>
 <p><a href="media/Closing Remarks 2026.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2"><img src="https://blog.bioconductor.org/posts/2026-09-30-BioC2026-recap/media/Closing Remarks 2026.png" class="zoomable img-fluid" style="width:100.0%"></a></p>
 <section id="participants-by-country" class="level2">
 <h2 class="anchored" data-anchor-id="participants-by-country">Participants by country</h2>
@@ -34,14 +34,21 @@
 <h2 class="anchored" data-anchor-id="programme-overview">Programme overview</h2>
 <section id="keynotes" class="level3">
 <h3 class="anchored" data-anchor-id="keynotes">Keynotes</h3>
-<p>The conference featured three keynote speakers: - <a href="https://www.youtube.com/watch?v=FuFSePQXVhM&amp;t=187s">Jeff Leek speaking on “Building Open Infrastructure for Translational AI in a Cancer Center”</a> - <a href="https://www.youtube.com/watch?v=ZG0weEXGvlA&amp;t=21s">Ting Ye speaking on “From Association to Causation: Genetic-Anchored Causal Inference in Human Biology”</a> - <a href="https://www.youtube.com/watch?v=_-sitxM0pNM">Michael Lawrence speaking on “S7 for Bioconductor”</a></p>
-<div style="display:flex; gap:3px;">
-<p><img src="https://blog.bioconductor.org/posts/2026-09-30-BioC2026-recap/media/leek_keynote.jpeg" style="width:33.33%; height:200px; object-fit:cover;"></p>
-<p><img src="https://blog.bioconductor.org/posts/2026-09-30-BioC2026-recap/media/lawrence_keynote.jpeg" style="width:33.33%; height:200px; object-fit:cover;"></p>
-<p><img src="https://blog.bioconductor.org/posts/2026-09-30-BioC2026-recap/media/ting_keynote.jpg" style="width:33.33%; height:200px; object-fit:cover;"></p>
+<p>The conference featured three keynote speakers:<br>
+- <a href="https://www.youtube.com/watch?v=FuFSePQXVhM&amp;t=187s">Jeff Leek speaking on “Building Open Infrastructure for Translational AI in a Cancer Center”</a><br>
+- <a href="https://www.youtube.com/watch?v=ZG0weEXGvlA&amp;t=21s">Ting Ye speaking on “From Association to Causation: Genetic-Anchored Causal Inference in Human Biology”</a><br>
+- <a href="https://www.youtube.com/watch?v=_-sitxM0pNM">Michael Lawrence speaking on “S7 for Bioconductor”</a></p>
+<div id="gallery-keynote" class="columns">
+<div class="column" style="width:33%;">
+<p><a href="media/leek_keynote.jpeg" class="lightbox" data-gallery="gallery-keynote"><img src="https://blog.bioconductor.org/posts/2026-09-30-BioC2026-recap/media/leek_keynote.jpeg" class="img-fluid" style="padding-right: 1px;" alt="Jeff Leek giving his keynote at BioC2026"></a></p>
+</div><div class="column" style="width:33%;">
+<p><a href="media/ting_keynote.jpg" class="lightbox" data-gallery="gallery-keynote"><img src="https://blog.bioconductor.org/posts/2026-09-30-BioC2026-recap/media/ting_keynote.jpg" class="img-fluid" style="padding-right: 1px;" alt="Ting Ye giving her keynote at BioC2026"></a></p>
+</div><div class="column" style="width:33%;">
+<p><a href="media/lawrence_keynote.jpeg" class="lightbox" data-gallery="gallery-keynote"><img src="https://blog.bioconductor.org/posts/2026-09-30-BioC2026-recap/media/lawrence_keynote.jpeg" class="img-fluid" style="padding-right: 1px;" alt="Michael Lawrence giving his keynote at BioC2026"></a></p>
 </div>
-<div style="text-align:center; font-style:italic; font-size:0.9em; margin-top:5px;">
-<p>(Left to Right: Jeff Leek, Michael Lawrence and Ting Ye giving their keynotes at BioC2026)</p>
+</div>
+<div style="text-align: center;">
+<p><em>Left to Right: Jeff Leek, Michael Lawrence and Ting Ye giving their keynotes at BioC2026</em></p>
 </div>
 </section>
 <section id="short-talks" class="level3">
@@ -60,13 +67,16 @@
 <section id="celebrating-25-years-of-bioconductor" class="level3">
 <h3 class="anchored" data-anchor-id="celebrating-25-years-of-bioconductor">Celebrating 25 years of Bioconductor</h3>
 <p>The celebrations marking Bioconductor’s 25th anniversary continued at BioC2026 following the celebrations that began at EuroBioC2026 earlier in the year. The milestone was marked with a specially branded anniversary cake, thanking participants and community members for being part of the Bioconductor community and contributing to its growth over the past 25 years.</p>
-<div style="display:flex; gap:3px;">
-<p><img src="https://blog.bioconductor.org/posts/2026-09-30-BioC2026-recap/media/bioc_25_cake.jpeg" style="width:calc(50% - 1.5px); height:250px; object-fit:cover;"></p>
-<p><img src="https://blog.bioconductor.org/posts/2026-09-30-BioC2026-recap/media/Bioc2026_25years.png" style="width:calc(50% - 1.5px); height:250px; object-fit:cover;"></p>
+<div id="gallery-25" class="columns">
+<div class="column" style="width:50%;">
+<p><a href="media/bioc_25_cake.jpeg" class="lightbox" data-gallery="gallery-25"><img src="https://blog.bioconductor.org/posts/2026-09-30-BioC2026-recap/media/bioc_25_cake.jpeg" class="img-fluid" style="padding-right: 1px;" alt="Cake with Bioconductor 25th anniversary logo and text 'Thank you for being part of the community!'"></a></p>
+</div><div class="column" style="width:50%;">
+<p><a href="media/Bioc2026_25years.png" class="lightbox" data-gallery="gallery-25"><img src="https://blog.bioconductor.org/posts/2026-09-30-BioC2026-recap/media/Bioc2026_25years.png" class="img-fluid" style="padding-right: 1px;" alt="Image with text 'Bioconductor celebrates 25 years!', 25th anniversary logo, and text 'From a handful of developers to a global community!'"></a></p>
 </div>
-<center>
+</div>
+<div style="text-align: center;">
 <p><em>Bioconductor at 25 celebrations.</em></p>
-</center>
+</div>
 </section>
 </section>
 <section id="community-and-networking" class="level2">
@@ -77,7 +87,14 @@
 <h2 class="anchored" data-anchor-id="infrastructure-and-tools">Infrastructure and tools</h2>
 <section id="zulip" class="level3">
 <h3 class="anchored" data-anchor-id="zulip">Zulip</h3>
-<p>During BioC2026, Zulip provided a dedicated space for participants to connect, interact and stay engaged throughout the conference. The conference space included topic-based discussions covering: - <strong>Workshops</strong>: Dedicated topics for individual workshops, including Single Cell, Bioconductor in Workflows, microbiome, WebR, and other training sessions. - <strong>Training &amp; education</strong>: A space for broader conversations around training activities and educational sessions. - <strong>Social</strong>: Topics for informal conversations, social activities and connecting with other participants. - <strong>Introductions</strong>: Participants could introduce themselves and connect with others attending the conference. - <strong>Conference logistics channels</strong>: For travel, rooms, schedules, Day 1 information, and general conference support. - <strong>Community engagement</strong>: Dedicated spaces for the developer survey, student and early-career researcher activities, and other community initiatives. - <strong>Help and support</strong>: Dedicated topics such as the helpdesk, lost and found, and issues accessing virtual sessions.</p>
+<p>During BioC2026, Zulip provided a dedicated space for participants to connect, interact and stay engaged throughout the conference. The conference space included topic-based discussions covering:<br>
+- <strong>Workshops</strong>: Dedicated topics for individual workshops, including Single Cell, Bioconductor in Workflows, microbiome, WebR, and other training sessions.<br>
+- <strong>Training &amp; education</strong>: A space for broader conversations around training activities and educational sessions.<br>
+- <strong>Social</strong>: Topics for informal conversations, social activities and connecting with other participants.<br>
+- <strong>Introductions</strong>: Participants could introduce themselves and connect with others attending the conference.<br>
+- <strong>Conference logistics channels</strong>: For travel, rooms, schedules, Day 1 information, and general conference support.<br>
+- <strong>Community engagement</strong>: Dedicated spaces for the developer survey, student and early-career researcher activities, and other community initiatives.<br>
+- <strong>Help and support</strong>: Dedicated topics such as the helpdesk, lost and found, and issues accessing virtual sessions.</p>
 </section>
 <section id="sticker-contest-winner" class="level3">
 <h3 class="anchored" data-anchor-id="sticker-contest-winner">Sticker contest winner</h3>
@@ -102,19 +119,25 @@ See the announcement here: <a href="https://lnkd.in/p/emAWMGX">https://lnkd.in/p
 <section id="orchestrating-large-scale-single-cell-analysis-with-bioconductor" class="level3">
 <h3 class="anchored" data-anchor-id="orchestrating-large-scale-single-cell-analysis-with-bioconductor">Orchestrating Large-Scale Single-Cell Analysis with Bioconductor</h3>
 <p>On August 13–14, participants took part in a Carpentries workshop focused on orchestrating large-scale single-cell analysis with Bioconductor led by Ted Laderas and Wes Wilson. The workshop was attended by 11 participants and provided a hands-on environment for participants to work through approaches for analysing large-scale single-cell datasets using Bioconductor tools and workflows. Feedback highlighted the value of the live coding, small-group format and complementary teaching approaches.</p>
-<div style="display:flex; gap:3px;">
-<p><img src="https://blog.bioconductor.org/posts/2026-09-30-BioC2026-recap/media/carpentry-workshop1.jpeg" style="width:calc(50% - 1.5px); height:250px; object-fit:cover;"></p>
-<p><img src="https://blog.bioconductor.org/posts/2026-09-30-BioC2026-recap/media/scrna_bioc2026_workshop_1.jpeg" style="width:calc(50% - 1.5px); height:250px; object-fit:cover;"></p>
+<div id="gallery-carp" class="columns">
+<div class="column" style="width:50%;">
+<p><a href="media/carpentry-workshop1.jpeg" class="lightbox" data-gallery="gallery-carp"><img src="https://blog.bioconductor.org/posts/2026-09-30-BioC2026-recap/media/carpentry-workshop1.jpeg" class="img-fluid" style="padding-right: 1px;" alt="Ted Laderas teaching at the Carpentries workshop"></a></p>
+</div><div class="column" style="width:50%;">
+<p><a href="media/scrna_bioc2026_workshop_1.jpeg" class="lightbox" data-gallery="gallery-carp"><img src="https://blog.bioconductor.org/posts/2026-09-30-BioC2026-recap/media/scrna_bioc2026_workshop_1.jpeg" class="img-fluid" style="padding-right: 1px;" alt="Wes Wilson teaching at the Carpentries workshop"></a></p>
 </div>
-<center>
-<p><em>Participants during the scRNA-seq workshop.</em></p>
-</center>
+</div>
+<div style="text-align: center;">
+<p><em>Bioconductor Carpentry instructors, Ted and Wes, and participants during the scRNA-seq workshop.</em></p>
+</div>
 </section>
 <section id="bioconductor-north-america-2026-hackathon" class="level3">
 <h3 class="anchored" data-anchor-id="bioconductor-north-america-2026-hackathon">Bioconductor North America 2026 Hackathon</h3>
-<p>The Bioconductor North America 2026 Hackathon took place on August 13–14, bringing community members together to collaborate on software and infrastructure projects that strengthen interoperability, software development, and the wider Bioconductor ecosystem. These projects included: AI harness tools for standardizing how users within organizations would interact with agents on shared projects and on shared institutional resources. Link: <a href="https://github.com/eisenefaust/harness_agent">https://github.com/eisenefaust/harness_agent</a></p>
-<p>Bioconductor tooling for including CLI executable components in Bioconductor packages. Link: <a href="https://blog.bioconductor.org/posts/2026-08-21-biocjobs/">https://blog.bioconductor.org/posts/2026-08-21-biocjobs/</a></p>
-<p>An exploration on benchmarking LLM generated workflows, building out infrastructure and paradigms for how we can evaluate what LLMs return as work product to scientific questions. Link: <a href="https://github.com/Amisor/LLM_BioBenchmarking/tree/main">https://github.com/Amisor/LLM_BioBenchmarking/tree/main</a></p>
+<p>The Bioconductor North America 2026 Hackathon took place on August 13–14, bringing community members together to collaborate on software and infrastructure projects that strengthen interoperability, software development, and the wider Bioconductor ecosystem. These projects included:<br>
+- AI harness tools for standardizing how users within organizations would interact with agents on shared projects and on shared institutional resources. Link: <a href="https://github.com/eisenefaust/harness_agent">https://github.com/eisenefaust/harness_agent</a></p>
+<ul>
+<li><p>Bioconductor tooling for including CLI executable components in Bioconductor packages. Link: <a href="https://blog.bioconductor.org/posts/2026-08-21-biocjobs/">https://blog.bioconductor.org/posts/2026-08-21-biocjobs/</a></p></li>
+<li><p>An exploration on benchmarking LLM generated workflows, building out infrastructure and paradigms for how we can evaluate what LLMs return as work product to scientific questions. Link: <a href="https://github.com/Amisor/LLM_BioBenchmarking/tree/main">https://github.com/Amisor/LLM_BioBenchmarking/tree/main</a></p></li>
+</ul>
 <img src="https://blog.bioconductor.org/posts/2026-09-30-BioC2026-recap/media/bioc2026_hackathon.jpeg" class="zoomable img-fluid" style="width:100.0%">
 <center>
 <p><em>Participants during the Hackathon.</em></p>
@@ -130,8 +153,8 @@ See the announcement here: <a href="https://lnkd.in/p/emAWMGX">https://lnkd.in/p
 <p>BioC2026 gratefully acknowledges the support of all sponsors and partners whose contributions and support made the conference possible.</p>
 <section id="sponsors" class="level3">
 <h3 class="anchored" data-anchor-id="sponsors">Sponsors</h3>
-<p>BioC2026 was proudly supported by Cortex, R consortium and Posit</p>
-<p><a href="media/Bioc2026_sponsors.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3"><img src="https://blog.bioconductor.org/posts/2026-09-30-BioC2026-recap/media/Bioc2026_sponsors.png" class="zoomable img-fluid" style="width:100.0%"></a></p>
+<p>BioC2026 was proudly supported by <a href="https://cortexbiolabs.com/">Cortex</a>, <a href="https://r-consortium.org/">R Consortium</a> and <a href="https://posit.co/">Posit</a>.</p>
+<p><a href="media/Bioc2026_sponsors.png" class="lightbox" data-gallery="quarto-lightbox-gallery-10"><img src="https://blog.bioconductor.org/posts/2026-09-30-BioC2026-recap/media/Bioc2026_sponsors.png" class="zoomable img-fluid" style="width:100.0%"></a></p>
 </section>
 <section id="organising-committee" class="level3">
 <h3 class="anchored" data-anchor-id="organising-committee">Organising committee</h3>
