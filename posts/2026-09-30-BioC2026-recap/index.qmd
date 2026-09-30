@@ -49,7 +49,7 @@ The conference featured three keynote speakers:
   <img src="media/lawrence_keynote.jpeg"
        style="width:33.33%; height:200px; object-fit:cover;">
 
-  <img src="media/ting_keynote.png"
+  <img src="media/ting_keynote.jpg"
        style="width:33.33%; height:200px; object-fit:cover;">
 
 </div>
@@ -68,7 +68,7 @@ The posters provided an opportunity for attendees to discuss new methods and too
 Feedback from the conference showed that these interactions were particularly valuable, with attendees highlighting conversations around posters and package demonstrations as some of the most useful networking opportunities.
 
 
-![](media/bioc2026_poster_session.png){.zoomable width="100%"}
+![](media/bioc2026_poster_session.jpg){.zoomable width="100%"}
 <center>
 
 *Participants during the poster session.*
