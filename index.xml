@@ -10,7 +10,165 @@
 <atom:link href="https://blog.bioconductor.org/index.xml" rel="self" type="application/rss+xml"/>
 <description>A blog for the Bioconductor community!</description>
 <generator>quarto-1.10.18</generator>
-<lastBuildDate>Fri, 21 Aug 2026 00:00:00 GMT</lastBuildDate>
+<lastBuildDate>Wed, 30 Sep 2026 00:00:00 GMT</lastBuildDate>
+<item>
+  <title>BioC2026 conference recap</title>
+  <dc:creator>Laurah Ondari</dc:creator>
+  <link>https://blog.bioconductor.org/posts/2026-09-30-BioC2026-recap/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<p><a href="media/bioc2026_groupshot.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="https://blog.bioconductor.org/posts/2026-09-30-BioC2026-recap/media/bioc2026_groupshot.jpg" class="zoomable img-fluid" style="width:100.0%"></a></p>
+<p>The North American Bioconductor Conference 2026 (([BioC2026])(https://bioc2026.bioconductor.org/)) took place from August 10-12, 2026, at the Fred Hutchinson Cancer Center in Seattle, Washington. The conference brought together researchers, developers, educators, and community members to explore current developments within and beyond the Bioconductor project. BioC2026 welcomed 108 attendees, with 70 participating in person and 38 joining virtually. Across the three days, the programme featured three keynote speakers, 20 contributed speakers, and 17 sessions. The programme highlighted the breadth of biological research supported by Bioconductor, as well as the tools, infrastructure, and communities that enable open and reproducible computational biology. The conference was then followed by two community events on August 13-14: a Carpentries workshop on orchestrating large-scale single-cell analysis with Bioconductor and the Bioconductor North America 2026 Hackathon.</p>
+<p><a href="media/Closing Remarks 2026.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2"><img src="https://blog.bioconductor.org/posts/2026-09-30-BioC2026-recap/media/Closing Remarks 2026.png" class="zoomable img-fluid" style="width:100.0%"></a></p>
+<section id="participants-by-country" class="level2">
+<h2 class="anchored" data-anchor-id="participants-by-country">Participants by country</h2>
+<p>Participants travelled to Seattle from across North America and beyond, reflecting the international reach of the Bioconductor community. Attendees joined from the United States, Canada, Germany, Ireland, the United Kingdom, Australia, and Nigeria. The audience included researchers at different stages of their careers, with staff representing 42% of attendees, followed by students and postdoctoral researchers at 28%, faculty at 13.8%, industry at 13.8%, and government at 2.4%.</p>
+<iframe src="media/eurobioc2026-participants-map.html" width="100%" height="600" frameborder="0">
+</iframe>
+</section>
+<section id="programme-overview" class="level2">
+<h2 class="anchored" data-anchor-id="programme-overview">Programme overview</h2>
+<section id="keynotes" class="level3">
+<h3 class="anchored" data-anchor-id="keynotes">Keynotes</h3>
+<p>The conference featured three keynote speakers: - <a href="https://www.youtube.com/watch?v=FuFSePQXVhM&amp;t=187s">Jeff Leek speaking on “Building Open Infrastructure for Translational AI in a Cancer Center”</a> - <a href="https://www.youtube.com/watch?v=ZG0weEXGvlA&amp;t=21s">Ting Ye speaking on “From Association to Causation: Genetic-Anchored Causal Inference in Human Biology”</a> - <a href="https://www.youtube.com/watch?v=_-sitxM0pNM">Michael Lawrence speaking on “S7 for Bioconductor”</a></p>
+<div style="display:flex; gap:3px;">
+<p><img src="https://blog.bioconductor.org/posts/2026-09-30-BioC2026-recap/media/leek_keynote.jpeg" style="width:33.33%; height:200px; object-fit:cover;"></p>
+<p><img src="https://blog.bioconductor.org/posts/2026-09-30-BioC2026-recap/media/lawrence_keynote.jpeg" style="width:33.33%; height:200px; object-fit:cover;"></p>
+<p><img src="https://blog.bioconductor.org/posts/2026-09-30-BioC2026-recap/media/ting_keynote.jpg" style="width:33.33%; height:200px; object-fit:cover;"></p>
+</div>
+<div style="text-align:center; font-style:italic; font-size:0.9em; margin-top:5px;">
+<p>(Left to Right: Jeff Leek, Michael Lawrence and Ting Ye giving their keynotes at BioC2026)</p>
+</div>
+</section>
+<section id="short-talks" class="level3">
+<h3 class="anchored" data-anchor-id="short-talks">Short talks</h3>
+<p>Twenty contributed speakers shared their work across the conference programme. The short talks at BioC2026 reflected the breadth of research and development across the Bioconductor community. Topics ranged from community training and developer engagement to multi-omics exploration, reproducible workflows, and AI infrastructure. The programme also covered emerging areas of biological data analysis, including spatial transcriptomics, antibody repertoire analysis, rare variant testing, DNA methylation, structural variation, and Perturb-seq.</p>
+</section>
+<section id="poster-sessions-and-package-demo-sessions" class="level3">
+<h3 class="anchored" data-anchor-id="poster-sessions-and-package-demo-sessions">Poster sessions and package demo sessions</h3>
+<p>The poster session showcased a diverse range of research applications and software development projects from across the Bioconductor community. Topics included single-cell and spatial transcriptomics, multi-omics integration, microbiome analysis, proteomics, antibody repertoire analysis, functional enrichment, ancestry inference, genomic data processing, and AI-guided drug discovery. The posters provided an opportunity for attendees to discuss new methods and tools in a more informal setting, while connecting researchers, package developers, and community members working across different areas of computational biology. The sessions also complemented the package demonstrations, creating space for participants to explore new software and engage directly with the people developing and applying Bioconductor tools.</p>
+<p>Feedback from the conference showed that these interactions were particularly valuable, with attendees highlighting conversations around posters and package demonstrations as some of the most useful networking opportunities.</p>
+<img src="https://blog.bioconductor.org/posts/2026-09-30-BioC2026-recap/media/bioc2026_poster_session.jpg" class="zoomable img-fluid" style="width:100.0%">
+<center>
+<p><em>Participants during the poster session.</em></p>
+</center>
+</section>
+<section id="celebrating-25-years-of-bioconductor" class="level3">
+<h3 class="anchored" data-anchor-id="celebrating-25-years-of-bioconductor">Celebrating 25 years of Bioconductor</h3>
+<p>The celebrations marking Bioconductor’s 25th anniversary continued at BioC2026 following the celebrations that began at EuroBioC2026 earlier in the year. The milestone was marked with a specially branded anniversary cake, thanking participants and community members for being part of the Bioconductor community and contributing to its growth over the past 25 years.</p>
+<div style="display:flex; gap:3px;">
+<p><img src="https://blog.bioconductor.org/posts/2026-09-30-BioC2026-recap/media/bioc_25_cake.jpeg" style="width:calc(50% - 1.5px); height:250px; object-fit:cover;"></p>
+<p><img src="https://blog.bioconductor.org/posts/2026-09-30-BioC2026-recap/media/Bioc2026_25years.png" style="width:calc(50% - 1.5px); height:250px; object-fit:cover;"></p>
+</div>
+<center>
+<p><em>Bioconductor at 25 celebrations.</em></p>
+</center>
+</section>
+</section>
+<section id="community-and-networking" class="level2">
+<h2 class="anchored" data-anchor-id="community-and-networking">Community and networking</h2>
+<p>One of the strongest themes to emerge from the BioC2026 survey was the value of the Bioconductor community itself. Participants described the conference as welcoming, collaborative, and interactive, and appreciated the opportunity to reconnect with colleagues and meet new people. All respondents who answered the question said they would recommend BioC2026 to their colleagues. The smaller size of the conference was also seen as a strength. Several respondents noted that the more intimate format made it easier to engage in conversations and build connections across different roles and career stages. Networking was consistently identified as one of the most valuable aspects of the event. Participants appreciated both the formal scientific programme and the informal conversations that happened around talks, posters, and demonstrations. Looking ahead, many attendees expressed interest in even more dedicated time for networking and informal interaction.</p>
+</section>
+<section id="infrastructure-and-tools" class="level2">
+<h2 class="anchored" data-anchor-id="infrastructure-and-tools">Infrastructure and tools</h2>
+<section id="zulip" class="level3">
+<h3 class="anchored" data-anchor-id="zulip">Zulip</h3>
+<p>During BioC2026, Zulip provided a dedicated space for participants to connect, interact and stay engaged throughout the conference. The conference space included topic-based discussions covering: - <strong>Workshops</strong>: Dedicated topics for individual workshops, including Single Cell, Bioconductor in Workflows, microbiome, WebR, and other training sessions. - <strong>Training &amp; education</strong>: A space for broader conversations around training activities and educational sessions. - <strong>Social</strong>: Topics for informal conversations, social activities and connecting with other participants. - <strong>Introductions</strong>: Participants could introduce themselves and connect with others attending the conference. - <strong>Conference logistics channels</strong>: For travel, rooms, schedules, Day 1 information, and general conference support. - <strong>Community engagement</strong>: Dedicated spaces for the developer survey, student and early-career researcher activities, and other community initiatives. - <strong>Help and support</strong>: Dedicated topics such as the helpdesk, lost and found, and issues accessing virtual sessions.</p>
+</section>
+<section id="sticker-contest-winner" class="level3">
+<h3 class="anchored" data-anchor-id="sticker-contest-winner">Sticker contest winner</h3>
+<p><img src="https://blog.bioconductor.org/posts/2026-09-30-BioC2026-recap/media/BioC2026_sticker.png" style="float:right; width:40%; margin-left:20px; margin-bottom:10px;"></p>
+<p>
+Kayva Vaddadi was BioC2026’s sticker design contest winner. Kayva’s design celebrated Seattle as the host city of BioC2026, featuring well-known landmarks such as the Space Needle, the Seattle Great Wheel, Mount Rainier, and the surrounding evergreen forests. Puget Sound and a Washington State ferry reflect Seattle’s maritime landscape and the culture of connection across the region. The BioC2026 hot air balloon on the sticker was inspired by the scenic balloon views popular in the Seattle area and represents the celebratory and exploratory spirit of the Bioconductor community.
+</p>
+<p>
+See the announcement here: <a href="https://lnkd.in/p/emAWMGX">https://lnkd.in/p/emAWMGX</a>
+</p>
+<div style="clear:both;">
+
+</div>
+</section>
+</section>
+<section id="conference-materials" class="level2">
+<h2 class="anchored" data-anchor-id="conference-materials">Conference materials</h2>
+<p>All conference recordings are available on the <a href="https://www.youtube.com/watch?v=OzpgIa2W414&amp;list=PLMYePXTcNLQo">Bioconductor YouTube channel</a>. BioC2026 workshops will also be available in the “Archived” section of <a href="http://workshop.bioconductor.org">workshop.bioconductor.org</a>, alongside workshops from previous BioC, EuroBioC, and BiocAsia events. If you’d like to add additional materials or use the platform for your own workshop or course, contact us at <a href="http://support.bioconductor.org">support.bioconductor.org</a>.</p>
+</section>
+<section id="post-conference-events" class="level2">
+<h2 class="anchored" data-anchor-id="post-conference-events">Post-conference events</h2>
+<section id="orchestrating-large-scale-single-cell-analysis-with-bioconductor" class="level3">
+<h3 class="anchored" data-anchor-id="orchestrating-large-scale-single-cell-analysis-with-bioconductor">Orchestrating Large-Scale Single-Cell Analysis with Bioconductor</h3>
+<p>On August 13–14, participants took part in a Carpentries workshop focused on orchestrating large-scale single-cell analysis with Bioconductor led by Ted Laderas and Wes Wilson. The workshop was attended by 11 participants and provided a hands-on environment for participants to work through approaches for analysing large-scale single-cell datasets using Bioconductor tools and workflows. Feedback highlighted the value of the live coding, small-group format and complementary teaching approaches.</p>
+<div style="display:flex; gap:3px;">
+<p><img src="https://blog.bioconductor.org/posts/2026-09-30-BioC2026-recap/media/carpentry-workshop1.jpeg" style="width:calc(50% - 1.5px); height:250px; object-fit:cover;"></p>
+<p><img src="https://blog.bioconductor.org/posts/2026-09-30-BioC2026-recap/media/scrna_bioc2026_workshop_1.jpeg" style="width:calc(50% - 1.5px); height:250px; object-fit:cover;"></p>
+</div>
+<center>
+<p><em>Participants during the scRNA-seq workshop.</em></p>
+</center>
+</section>
+<section id="bioconductor-north-america-2026-hackathon" class="level3">
+<h3 class="anchored" data-anchor-id="bioconductor-north-america-2026-hackathon">Bioconductor North America 2026 Hackathon</h3>
+<p>The Bioconductor North America 2026 Hackathon took place on August 13–14, bringing community members together to collaborate on software and infrastructure projects that strengthen interoperability, software development, and the wider Bioconductor ecosystem. These projects included: AI harness tools for standardizing how users within organizations would interact with agents on shared projects and on shared institutional resources. Link: <a href="https://github.com/eisenefaust/harness_agent">https://github.com/eisenefaust/harness_agent</a></p>
+<p>Bioconductor tooling for including CLI executable components in Bioconductor packages. Link: <a href="https://blog.bioconductor.org/posts/2026-08-21-biocjobs/">https://blog.bioconductor.org/posts/2026-08-21-biocjobs/</a></p>
+<p>An exploration on benchmarking LLM generated workflows, building out infrastructure and paradigms for how we can evaluate what LLMs return as work product to scientific questions. Link: <a href="https://github.com/Amisor/LLM_BioBenchmarking/tree/main">https://github.com/Amisor/LLM_BioBenchmarking/tree/main</a></p>
+<img src="https://blog.bioconductor.org/posts/2026-09-30-BioC2026-recap/media/bioc2026_hackathon.jpeg" class="zoomable img-fluid" style="width:100.0%">
+<center>
+<p><em>Participants during the Hackathon.</em></p>
+</center>
+</section>
+</section>
+<section id="up-next" class="level2">
+<h2 class="anchored" data-anchor-id="up-next">Up next…</h2>
+<p>Later this year, the Bioconductor community will head to Melbourne, Australia, for BioCAsia2026, taking place on November 19-20, 2026. <a href="https://biocasia2026.bioconductor.org/">BioCAsia2026</a> brings together researchers, developers, and data scientists from across the Asia-Pacific region and beyond to share advances in bioinformatics, computational biology, and open-source software. The meeting will highlight practical training, community building, and the latest developments in R and Bioconductor. BioC2027 will then take place in early summer in Boston, Massachusetts, continuing the North American Bioconductor conference series and bringing the community together once again for scientific exchange, collaboration, and community building. The community will thereafter gather in Basel, Switzerland, for EuroBioC2027, taking place from September 8–10, 2027. The European Bioconductor Conference will continue to bring together researchers, developers, and educators from across Europe and beyond to share new software, methods, and applications in computational biology.</p>
+</section>
+<section id="acknowledgements" class="level2">
+<h2 class="anchored" data-anchor-id="acknowledgements">Acknowledgements</h2>
+<p>BioC2026 gratefully acknowledges the support of all sponsors and partners whose contributions and support made the conference possible.</p>
+<section id="sponsors" class="level3">
+<h3 class="anchored" data-anchor-id="sponsors">Sponsors</h3>
+<p>BioC2026 was proudly supported by Cortex, R consortium and Posit</p>
+<p><a href="media/Bioc2026_sponsors.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3"><img src="https://blog.bioconductor.org/posts/2026-09-30-BioC2026-recap/media/Bioc2026_sponsors.png" class="zoomable img-fluid" style="width:100.0%"></a></p>
+</section>
+<section id="organising-committee" class="level3">
+<h3 class="anchored" data-anchor-id="organising-committee">Organising committee</h3>
+<p>We thank the local organisers, programme committee, workshop instructors, keynote speakers, volunteers, sponsors, and all participants whose contributions made BioC2026 a success.</p>
+<ul>
+<li>Marc Carlson, Seattle Children’s Hospital</li>
+<li>Nicholas Cooley, University of Limerick</li>
+<li>Sean Davis, University of Colorado Cancer Center</li>
+<li>Maria Doyle, University of Limerick</li>
+<li>Mikhail Dozmorov, Virginia Commonwealth University</li>
+<li>Jenny Drnevich, University of Illinois at Urbana-Champaign</li>
+<li>Russell Eberts, Fred Hutchinson Cancer Center</li>
+<li>Erica Feick, Dana-Farber Cancer Institute</li>
+<li>Sana Hirata, Fred Hutchinson Cancer Center</li>
+<li>Ted Laderas, Fred Hutchinson Cancer Center</li>
+<li>Alexandru Mahmoud, University of Limerick</li>
+<li>Matthew McCall, University of Rochester Medical Center</li>
+<li>Lori (Shepherd) Kern, Roswell Park Comprehensive Cancer Center</li>
+<li>Laurah Nyasita Ondari, International Institute of Tropical Agriculture (IITA)</li>
+<li>Charlotte Soneson, Friedrich Miescher Institute for Biomedical Research</li>
+<li>Tim Triche, Van Andel Institute</li>
+<li>Levi Waldron, CUNY Graduate School of Public Health and Health Policy</li>
+<li>Wes Wilson, Princess Margaret Cancer Centre</li>
+</ul>
+
+
+</section>
+</section>
+
+<p>
+© 2026 Bioconductor. Content is published under <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons CC-BY-4.0 License</a> for the text and <a href="https://opensource.org/licenses/BSD-3-Clause">BSD 3-Clause License</a> for any code. | <a href="https://www.r-bloggers.com">R-Bloggers</a>
+</p> ]]></description>
+  <category>Bioconductor</category>
+  <guid>https://blog.bioconductor.org/posts/2026-09-30-BioC2026-recap/</guid>
+  <pubDate>Wed, 30 Sep 2026 00:00:00 GMT</pubDate>
+  <media:content url="https://blog.bioconductor.org/posts/2026-09-30-BioC2026-recap/media/bioc2026_groupshot.jpg" medium="image" type="image/jpeg"/>
+</item>
 <item>
   <title>BiocJobs: declaring dispatchable jobs inside Bioconductor packages</title>
   <dc:creator>Alexandru Mahmoud</dc:creator>
@@ -1332,167 +1490,6 @@ font-style: inherit;">--alpha</span> 0.05</span></code></pre></div></div>
   <guid>https://blog.bioconductor.org/posts/2025-12-12-outreachy-june25/</guid>
   <pubDate>Fri, 12 Dec 2025 00:00:00 GMT</pubDate>
   <media:content url="https://blog.bioconductor.org/posts/2025-12-12-outreachy-june25/featured-image.jpg" medium="image" type="image/jpeg"/>
-</item>
-<item>
-  <title>Bioconductor in Africa: Highlights from our first workshop in West Africa - Benin</title>
-  <dc:creator>Laurah Ondari</dc:creator>
-  <link>https://blog.bioconductor.org/posts/2025-12-11-benin-course/</link>
-  <description><![CDATA[ 
-
-
-
-
-
-<section id="introduction" class="level2">
-<h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
-<p>From November 17 to 21, 2025, Bioconductor held its first in-person training workshop in West Africa. The workshop was held at the <a href="https://gbios-uac.org/">Genetics, Biotechnology, and Seed Science Unit (GBioS)</a> University of Abomey-Calavi, in Abomey-Calavi, Benin, co-hosted in partnership with the Research Unit in Applied Microbiology and Pharmacology of Natural Substances (URMAPha). The workshop brought together 25 participants, comprising students, early-career researchers, and professionals from across Benin and neighboring countries, such as Senegal and Nigeria, for a week-long, hands-on course designed to strengthen participants’ skills in R, data handling, and Bioconductor workflows for bulk RNA-seq analysis.</p>
-<p>What made this workshop special was not just the curriculum, but the enthusiasm of the participants and the strong sense of community that formed throughout the week. We collected feedback from all 25 participants, and their responses paint a clear picture of both the impact the course had and the opportunities ahead.</p>
-<p><a href="benin_group_photo.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="https://blog.bioconductor.org/posts/2025-12-11-benin-course/benin_group_photo.jpg" class="img-fluid" alt="Participants at the Bioconductor Benin course"></a></p>
-<div class="figure-caption" style="text-align: center; font-size: 90%;">
-<p><em>Benin course participants posing for a group photo at GBioS in the University of Abomey-Calavi, Cotonou, Benin.</em></p>
-</div>
-</section>
-<section id="what-we-taught-and-what-was-learned" class="level2">
-<h2 class="anchored" data-anchor-id="what-we-taught-and-what-was-learned">What we taught and what was learned</h2>
-<p>During the week-long Bioconductor course at the University of Abomey-Calavi, participants were introduced to the foundations of R and RStudio, good coding practices, tidyverse workflows, data handling, and reproducible research, before progressing into hands-on Bioconductor analyses for bulk RNA-seq using DESeq2 and SummarizedExperiment. Participant feedback reflected exactly these learning goals. Many highlighted how practical and hands-on the sessions were, sharing that <em>“the course was very practical with a lot of explanations”</em> and that practicing directly on their laptops made the material easy to apply. The step-by-step guidance on dplyr, tidyverse, ggplot2, and RNA-seq workflows resonated strongly, with one participant noting <em>“the step-by-step explanation about dplyr and tidyverse was highly useful,”</em> while another said they especially appreciated <em>“good step-by-step guidance on RNA-seq data analysis.”</em> Participants repeatedly praised the teaching approach and the supportive environment, noting that <em>“the trainers always came to help us when we had difficulties without judgment,”</em> and <em>“even when we didn’t understand at first, they always took the time to explain clearly.”</em> Others valued the inclusive, interactive format: <em>“the course was inclusive, with a participatory approach,”</em> and <em>“we all practiced directly with the trainers, who were highly attentive to our concerns.”</em> Many also appreciated the organisation and materials, calling the course <em>“well organized,”</em> with <em>“great interaction,”</em> <em>“well-accessible documents and scripts,”</em> and resources they could return to later.</p>
-<p>Agenda and instructor list are on the <a href="https://training.bioconductor.org/workshops/2025-11-Abomey-Calavi/">workshop page</a>.</p>
-<style>
-#gallery-instructors img {
-  height: 180px;
-  width: 100%;
-  object-fit: cover;
-  object-position: center center;
-}
-
-/* Optional focal point overrides */
-#gallery-instructors img.focus-left  { object-position: left center; }
-#gallery-instructors img.focus-right { object-position: right center; }
-
-
-/* Add spacing between columns */
-#gallery-instructors .column {
-  padding-right: 2px;
-}
-
-</style>
-<div id="gallery-instructors" class="columns">
-<div class="column" style="width:20%;">
-<p><a href="axelle.jpg" class="lightbox" data-gallery="gallery-instructors"><img src="https://blog.bioconductor.org/posts/2025-12-11-benin-course/axelle.jpg" class="focus-right img-fluid" alt="Dr. Axelle Loriot teaching"></a></p>
-</div><div class="column" style="width:20%;">
-<p><a href="amal.jpg" class="lightbox" data-gallery="gallery-instructors"><img src="https://blog.bioconductor.org/posts/2025-12-11-benin-course/amal.jpg" class="img-fluid" alt="Dr Amal Boukteb teaching"></a></p>
-</div><div class="column" style="width:20%;">
-<p><a href="dedeou.jpg" class="lightbox" data-gallery="gallery-instructors"><img src="https://blog.bioconductor.org/posts/2025-12-11-benin-course/dedeou.jpg" class="img-fluid" alt="Dr. Dedeou Tchokponhoue teaching"></a></p>
-</div><div class="column" style="width:20%;">
-<p><a href="kevin.jpg" class="lightbox" data-gallery="gallery-instructors"><img src="https://blog.bioconductor.org/posts/2025-12-11-benin-course/kevin.jpg" class="img-fluid" alt="Kevin Sintondji teaching"></a></p>
-</div><div class="column" style="width:20%;">
-<p><a href="marie.jpg" class="lightbox" data-gallery="gallery-instructors"><img src="https://blog.bioconductor.org/posts/2025-12-11-benin-course/marie.jpg" class="img-fluid" alt="Marie Hidjo teaching"></a></p>
-</div><div class="figure-caption" style="text-align: left; font-size: 90%;">
-<p><em>From left to right: Dr Axelle Loriot, Dr Amal Boukteb, Dr Dedeou Tchokponhoue, Kevin Sintondji, and Marie Hidjo teaching at the Benin course.</em></p>
-</div>
-</div>
-<p><a href="DSC_4981.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-7"><img src="https://blog.bioconductor.org/posts/2025-12-11-benin-course/DSC_4981.jpg" class="img-fluid" alt="Participants learning at the Bioconductor Benin course"></a></p>
-<div class="figure-caption" style="text-align: center; font-size: 90%;">
-<p><em>Benin course participants engaged in a hands-on session.</em></p>
-</div>
-</section>
-<section id="language-accessibility-and-bilingual-support" class="level2">
-<h2 class="anchored" data-anchor-id="language-accessibility-and-bilingual-support">Language accessibility and bilingual support</h2>
-<p>This was the first Bioconductor Africa course where French translations of introductory materials were provided. Participants strongly appreciated having French-speaking instructors available throughout the week. Over half of the attendees (52%) found this support very helpful, with another 32% rating it helpful, emphasising that bilingual facilitation made it easier to follow explanations, ask questions, and stay engaged. While most participants felt comfortable with English as the primary teaching language (56% reported that English was sufficient), a significant portion noted that French support enhanced their understanding of the material. The French-translated Intro to R materials were also well received: one-third of participants used them during the workshop, and another third planned to consult them later.</p>
-<p>Link to French translated materials <a href="https://bioconductor-translations.github.io/bioc-intro-fr/">here</a></p>
-<div id="gallery-french" class="columns">
-<div class="column" style="width:50%;">
-<p><a href="french1.png" class="lightbox" data-gallery="gallery-french"><img src="https://blog.bioconductor.org/posts/2025-12-11-benin-course/french1.png" class="img-fluid" alt="French learning"></a></p>
-</div><div class="column" style="width:50%;">
-<p><a href="french2.png" class="lightbox" data-gallery="gallery-french"><img src="https://blog.bioconductor.org/posts/2025-12-11-benin-course/french2.png" class="img-fluid" alt="French learning"></a></p>
-</div><div class="figure-caption" style="text-align: center; font-size: 90%;">
-<p><em>The impact of French-translated materials and French-speaking instructors at the Benin workshop.</em></p>
-</div>
-</div>
-</section>
-<section id="highlights" class="level2">
-<h2 class="anchored" data-anchor-id="highlights">Highlights</h2>
-<p>GBioS and URMAPha graciously offered us a tour of their laboratory facilities, providing the instructors and participants with an opportunity to learn more about the impactful research they lead, ranging from safeguarding seed diversity to identifying pharmaceutically active compounds.</p>
-<p>Below is a photo of the instructors, hosts, and participants taken after the lab tours.</p>
-<img src="https://blog.bioconductor.org/posts/2025-12-11-benin-course/afterlabtour.jpg" class="img-fluid" alt="Participants after the GBioS and URMAPha lab tours">
-<div class="figure-caption" style="text-align: center; font-size: 90%;">
-<p><em>Benin course participants posing outside the GBioS building at the University of Abomey-Calavi after touring GBioS and URMAPha labs.</em></p>
-</div>
-<p>To close the workshop, the team also hosted a beautiful certificate ceremony, creating a memorable and celebratory end to an impactful week.</p>
-<style>
-#gallery-certificates img {
-  height: 220px; /* adjust as needed */
-  width: 100%;
-  object-fit: cover;
-  display: block;
-}
-#gallery-certificates .column {
-  padding-right: 2px;
-}
-</style>
-<div id="gallery-certificates" class="columns">
-<div class="column" style="width:50%;">
-<p><a href="men_certificates.jpg" class="lightbox" data-gallery="gallery-certificates"><img src="https://blog.bioconductor.org/posts/2025-12-11-benin-course/men_certificates.jpg" class="img-fluid" alt="Male participants holding their certificates"></a></p>
-</div><div class="column" style="width:50%;">
-<p><a href="women_certificates.jpg" class="lightbox" data-gallery="gallery-certificates"><img src="https://blog.bioconductor.org/posts/2025-12-11-benin-course/women_certificates.jpg" class="img-fluid" alt="Female participants holding their certificates"></a></p>
-</div><div class="figure-caption" style="text-align: center; font-size: 90%;">
-<p><em>Participants holding their certificates.</em></p>
-</div>
-</div>
-</section>
-<section id="carpentries-instructor-training-and-capacity-building" class="level2">
-<h2 class="anchored" data-anchor-id="carpentries-instructor-training-and-capacity-building">Carpentries Instructor Training and Capacity Building</h2>
-<p>Through support from <a href="https://blog.bioconductor.org/posts/2024-07-12-czi-eoss6-grants/">the CZI EOSS6 grant</a>, two researchers from local institutions in Benin, Kevin Sintondji (URMAPha) and Dédéou Tchokponhoue (GBioS), are participating in Carpentries instructor training to become certified instructors. This initiative is helping build local capacity to deliver high-quality training and support reproducible research practices within their teams and the wider community. As they shared: <em>“The Carpentries training has been extremely valuable for strengthening our skills in data management and reproducible analysis. It helped us adopt more structured workflows, improve collaboration within our teams, and apply these methods directly in our AMR and environmental microbiology projects. This capacity building is already having a concrete impact on the quality of our research.”</em></p>
-<p>In addition to the Carpentries training supported by the CZI EOSS6 grant, two of the other instructors at the Benin workshop, Marie Hidjo (Benin) and Amal Boukteb (Tunisia), were previously certified through the Bioconductor Carpentries program funded by the CZI EOSS4 grant (see <a href="https://blog.bioconductor.org/posts/2025-02-28-carpentries-update/">summary blog post</a>). This workshop was also an opportunity for these instructors to teach locally and share their expertise within the African bioinformatics community.</p>
-</section>
-<section id="impact-of-bioconductor-training-across-east-and-west-africa" class="level2">
-<h2 class="anchored" data-anchor-id="impact-of-bioconductor-training-across-east-and-west-africa">Impact of Bioconductor Training across East and West Africa</h2>
-<p>From surveys conducted across Kenya, Ethiopia, and Benin, 100% of participants reported that they would recommend the Bioconductor training course to colleagues, indicating a strong and meaningful impact. The impact was also evident in skills development: every participant reported a significant improvement in their R abilities. In Benin, 60% of the participants rated their learning gains as “very significant” (scale 5) and 40% as “significant” (scale 4), a clear indication that the training effectively strengthened practical, hands-on bioinformatics skills.</p>
-<img src="https://blog.bioconductor.org/posts/2025-12-11-benin-course/feedback-twocols-bycountry.png" class="img-fluid">
-<div class="figure-caption" style="text-align: center; font-size: 90%;">
-<p><em>Participant feedback summary across workshops.</em></p>
-</div>
-</section>
-<section id="looking-ahead-what-participants-want" class="level2">
-<h2 class="anchored" data-anchor-id="looking-ahead-what-participants-want">Looking ahead: what participants want</h2>
-<p>Across Kenya, Ethiopia, and Benin, participants expressed a strong interest in more advanced and diverse bioinformatics training that builds on the foundations of R and RNA-seq. The most recurring areas of interest were:</p>
-<ul>
-<li><p><strong>Advanced transcriptomics:</strong> advanced RNA-seq, transcript-level workflows, and single-cell RNA-seq.</p></li>
-<li><p><strong>Genomics &amp; population genetics:</strong> variant calling, SNP/CNV analysis, and GWAS/genomic selection.</p></li>
-<li><p><strong>NGS &amp; sequence analysis:</strong> raw sequence handling, QC, genome assembly, and phylogenetics.</p></li>
-<li><p><strong>Metagenomics &amp; microbiome analysis using Bioconductor tools.</strong></p></li>
-<li><p><strong>Multi-omics integration:</strong> combining genomics, transcriptomics, proteomics, and metabolomics.</p></li>
-<li><p><strong>Computational skills:</strong> Linux basics, command-line workflows, and version control (Git/GitHub).</p></li>
-<li><p><strong>Reproducible research &amp; visualisation:</strong> R Markdown/Quarto and more advanced data visualisation.</p></li>
-</ul>
-<p>We’re exploring ways to make Bioconductor training more accessible, including webinars and other online formats. One example is our new online seminar series, which recently featured a talk on <a href="https://bioconductor.org/help/seminar-series/">“Deep-learning-based Gene Perturbation Effect Prediction Does Not Yet Outperform Simple Linear Baselines”</a> and attracted participants who attended our workshops in Africa this year.</p>
-</section>
-<section id="collaborators-acknowledgements" class="level2">
-<h2 class="anchored" data-anchor-id="collaborators-acknowledgements">Collaborators &amp; Acknowledgements</h2>
-<p>This workshop was co-hosted by GBioS and URMAPha. We are deeply grateful for their leadership and commitment to strengthening bioinformatics capacity in Benin. Notably, there was a special link between the Kenya and Benin workshops: the Kenya training went so well that one of its participants, Abdou Mouizz Salaou, helped bring Bioconductor training to Benin, further expanding the impact of Bioconductor capacity-building efforts across the region.</p>
-<p>The event was co-organised with the International Institute of Tropical Agriculture (IITA) and the University of Limerick, with funding support from <a href="https://blog.bioconductor.org/posts/2024-07-12-czi-eoss6-grants/">the Chan Zuckerberg Initiative (CZI) EOSS6 grant</a>.</p>
-<p>Our organising team: Abdou Mouizz Salaou (GBioS, University of Abomey-Calavi), Aristide Carlos Houdegbe (GBioS, University of Abomey-Calavi), Prof.&nbsp;Enoch G. Achigan-Dako (GBioS, University of Abomey-Calavi), Prof.&nbsp;Victorien Dougnon (URMAPha, University of Abomey-Calavi), Trushar Shah (International Institute of Tropical Agriculture), Laurah Ondari (International Institute of Tropical Agriculture), Maria Doyle (University of Limerick / Bioconductor).</p>
-</section>
-<section id="get-involved" class="level2">
-<h2 class="anchored" data-anchor-id="get-involved">Get involved</h2>
-<ul>
-<li><a href="https://training.bioconductor.org/workshops/2025-11-Abomey-Calavi/">Workshop page</a></li>
-<li><a href="https://training.bioconductor.org">About Bioconductor training</a></li>
-<li><a href="https://training.bioconductor.org/workshops/2025-08-Addis-Ababa/index.html#%F0%9F%8C%8D-join-the-bioconductor-africa-community">Join the Bioconductor Africa mailing list</a> or #bioc_africa channel in <a href="https://chat.bioconductor.org">Bioconductor Chat</a></li>
-</ul>
-
-
-</section>
-
-<p>
-© 2026 Bioconductor. Content is published under <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons CC-BY-4.0 License</a> for the text and <a href="https://opensource.org/licenses/BSD-3-Clause">BSD 3-Clause License</a> for any code. | <a href="https://www.r-bloggers.com">R-Bloggers</a>
-</p> ]]></description>
-  <category>education</category>
-  <category>events</category>
-  <category>Carpentries</category>
-  <category>CZI</category>
-  <guid>https://blog.bioconductor.org/posts/2025-12-11-benin-course/</guid>
-  <pubDate>Thu, 11 Dec 2025 00:00:00 GMT</pubDate>
-  <media:content url="https://blog.bioconductor.org/posts/2025-12-11-benin-course/benin_group_photo.jpg" medium="image" type="image/jpeg"/>
 </item>
 </channel>
 </rss>
