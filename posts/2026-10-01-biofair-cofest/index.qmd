@@ -27,7 +27,7 @@ author:
 
 
 date: 2026-10-01
-image: biocjobs-targets.jpg
+image: biocjobs-workflow.jpg
 creative_commons: CC BY
 categories:
   - Bioconductor
