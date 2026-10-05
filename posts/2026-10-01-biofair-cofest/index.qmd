@@ -43,7 +43,7 @@ format:
 On 15-17 September 2026, members of the [Bioconductor][bioconductor], [Galaxy][galaxy] and [nf-core][nf-core] communities came together at [The Open University][the_open_university] in Milton Keynes for the [BioFAIR Data to Discovery][biofair_data_to_discovery] and [BioFAIR Collaboration Fest (CoFest)][biofair_collaboration_fest_cofest] joint event.
 
 The three-day event combined hands-on training with collaborative work on research software interoperability.
-It was jointly organised by [BioFAIR Fellow][biofair_fellows] [Marisa Loach][marisa_loach_orcid] and [BioFAIR Pathfinder][biofair_pathfinder_project] project lead and [Institute of Research Software 2026 Fellow][kevin_rue_fellowship] [Kevin Rue-Albrecht][kevin_rue-albrecht_orcid].
+It was jointly organised by [BioFAIR Fellow][biofair_fellows] [Marisa Loach][marisa_loach_orcid] and [BioFAIR Pathfinder][biofair_pathfinder_project] project lead and [Institute for Research Software 2026 Fellow][kevin_rue_fellowship] [Kevin Rue-Albrecht][kevin_rue-albrecht_orcid].
 
 The CoFest brought together contributors based in the UK, Ireland, Germany, India and the USA, with both in-person and remote participation.
 
