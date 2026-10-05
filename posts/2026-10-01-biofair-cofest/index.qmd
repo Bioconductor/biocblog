@@ -26,7 +26,7 @@ author:
     orcid: 0000-0002-6230-4574
 
 
-date: 2026-10-01
+date: 2026-10-07
 image: biocjobs-workflow.jpg
 creative_commons: CC BY
 categories:
