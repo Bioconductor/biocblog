@@ -88,7 +88,7 @@ Bringing Bioconductor package developers, Galaxy contributors, and nf-core devel
 
 The event also reinforced the value of working from a concrete scientific use case.
 Using a real single-cell workflow gave participants something shared to build, test and discuss, while exposing questions that would have been difficult to anticipate from design discussions alone.
-The [CoFest notes] capture several of those emerging questions, particularly around how reusable jobs should be structured and composed.
+The [CoFest notes][cofest_notes] capture several of those emerging questions, particularly around how reusable jobs should be structured and composed.
 
 ## What comes next
 
