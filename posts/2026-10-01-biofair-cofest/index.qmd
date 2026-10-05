@@ -100,7 +100,7 @@ We are also planning follow-up events in the first quarter of 2027. These will p
 
 The longer-term aim is simple: make it easier for software developed in one research community to become useful, sustainable building blocks in another.
 
-Interested in getting involved? Join the Bioconductor Zulip and the #biofair2026-workflow-sprint channel and follow the BiocJobs topic for ongoing discussion.
+Interested in getting involved? [Join the Bioconductor Zulip and the #biofair2026-workflow-sprint channel](https://community-bioc.zulipchat.com/join/zsfbiqh64t3nq5ldrmv72b4w/) and follow the BiocJobs topic for ongoing discussion.
 
 [bioconductor]: https://www.bioconductor.org/
 [galaxy]: https://galaxyproject.org/
