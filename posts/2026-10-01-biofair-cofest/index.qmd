@@ -7,13 +7,13 @@ description: |
   ways to make Bioconductor methods more readily reusable across workflow ecosystems.
 author:
   - name: Kevin Rue
-    url: https://github.com/kevinrue
+    orcid: 0000-0003-3899-3872
   - name: Jyoti Bhogal
-    url: https://github.com/jyoti-bhogal
+    orcid: 0000-0002-6289-0737
   - name: Kedar Natarajan
-    url: https://github.com/Natarajanlab
+    orcid: 0000-0002-9264-1280
   - name: Lindsay V. Clark
-    url: https://github.com/lvclark
+    orcid: 0000-0002-3881-9252
   - name: Maria Doyle
     orcid: 0000-0003-4847-8436
   - name: Marisa Loach
@@ -21,9 +21,9 @@ author:
   - name: Michael Lynch
     orcid: 0000-0001-9535-6461
   - name: Pavankumar Videm
-    url: https://github.com/pavanvidem/
+    orcid: 0000-0002-5192-126X
   - name: Shreyansh Priyadarshi
-    url: https://github.com/iamspriyadarshi
+    orcid: 0000-0002-6230-4574
 
 
 date: 2026-10-01
