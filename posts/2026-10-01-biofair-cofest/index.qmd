@@ -73,7 +73,7 @@ This gave contributors a concrete way to test the process, improve documentation
 
 On the final day, we captured the workflow we had been working towards in a single diagram: from a commit to a Bioconductor package repository, through the automatic building and publishing of tool wrappers, to their use in Galaxy, nf-core and other workflow environments.
 
-![](biocjobs-workflow.jpg){fig-alt="Workflow diagram illustrating the contribution process and automated building and dissemination of Bioconductor tool wrappers across other software ecosystems." fig-align="center"}
+![](BiocJobs-workflow.jpg){fig-alt="Workflow diagram illustrating the contribution process and automated building and dissemination of Bioconductor tool wrappers across other software ecosystems." fig-align="center"}
 
 Three days were not enough to fully implement the workflow captured in the diagram - nor was that the goal.
 Instead, the CoFest demonstrated the process on a small number of selected workflow steps, while documenting how others could contribute.
