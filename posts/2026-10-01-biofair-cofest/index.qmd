@@ -6,7 +6,7 @@ description: |
   applying the BiocJobs approach to a single-cell workflow and developing
   ways to make Bioconductor methods more readily reusable across workflow ecosystems.
 author:
-  - name: Kevin Rue
+  - name: Kevin Rue-Albrecht
     orcid: 0000-0003-3899-3872
   - name: Jyoti Bhogal
     orcid: 0000-0002-6289-0737
@@ -100,7 +100,7 @@ We are also planning follow-up events in the first quarter of 2027. These will p
 
 The longer-term aim is simple: make it easier for software developed in one research community to become useful, sustainable building blocks in another.
 
-Interested in getting involved? [Join the Bioconductor Zulip and the #biofair2026-workflow-sprint channel](https://community-bioc.zulipchat.com/join/zsfbiqh64t3nq5ldrmv72b4w/) and follow the BiocJobs topic for ongoing discussion.
+Interested in getting involved? [Join the Bioconductor Zulip and the #biofair2026-workflow-sprint channel][zulip_biofair2026-workflow-sprint] and follow the BiocJobs topic for ongoing discussion.
 
 [bioconductor]: https://www.bioconductor.org/
 [galaxy]: https://galaxyproject.org/
@@ -117,3 +117,4 @@ Interested in getting involved? [Join the Bioconductor Zulip and the #biofair202
 [biocjobs]: https://blog.bioconductor.org/posts/2026-08-21-biocjobs/
 [exemplar_single-cell_analysis_workflow]: https://kevinrue.github.io/biofair-pathfinder-2026/tutorial-singlecell-bioconductor/
 [cofest_notes]: https://docs.google.com/document/d/1eKNACIPJf6vLIzBrE-8yrtCrYcmiXGMzYhBouuoVxR0/edit?usp=sharing
+[zulip_biofair2026-workflow-sprint]: https://community-bioc.zulipchat.com/join/zsfbiqh64t3nq5ldrmv72b4w/
