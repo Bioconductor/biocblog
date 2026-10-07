@@ -9,8 +9,84 @@
 <link>https://blog.bioconductor.org/</link>
 <atom:link href="https://blog.bioconductor.org/index.xml" rel="self" type="application/rss+xml"/>
 <description>A blog for the Bioconductor community!</description>
-<generator>quarto-1.10.18</generator>
-<lastBuildDate>Wed, 30 Sep 2026 00:00:00 GMT</lastBuildDate>
+<generator>quarto-1.10.19</generator>
+<lastBuildDate>Wed, 07 Oct 2026 00:00:00 GMT</lastBuildDate>
+<item>
+  <title>A Collaboration Fest for research software interoperability</title>
+  <dc:creator>Kevin Rue-Albrecht</dc:creator>
+  <dc:creator>Jyoti Bhogal</dc:creator>
+  <dc:creator>Kedar Natarajan</dc:creator>
+  <dc:creator>Lindsay V. Clark</dc:creator>
+  <dc:creator>Maria Doyle</dc:creator>
+  <dc:creator>Marisa Loach</dc:creator>
+  <dc:creator>Michael Lynch</dc:creator>
+  <dc:creator>Pavankumar Videm</dc:creator>
+  <dc:creator>Shreyansh Priyadarshi</dc:creator>
+  <link>https://blog.bioconductor.org/posts/2026-10-07-biofair-cofest/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<p>On 15-17 September 2026, members of the <a href="https://www.bioconductor.org/">Bioconductor</a>, <a href="https://galaxyproject.org/">Galaxy</a> and <a href="https://nf-co.re/">nf-core</a> communities came together at <a href="https://www.open.ac.uk/">The Open University</a> in Milton Keynes for the <a href="https://training.galaxyproject.org/training-material/events/2026-07-06-biofair.html">BioFAIR Data to Discovery</a> and <a href="https://github.com/BiocCodingCollaborations/BioFAIR2026_Sprint">BioFAIR Collaboration Fest (CoFest)</a> joint event.</p>
+<p>The three-day event combined hands-on training with collaborative work on research software interoperability. It was jointly organised by <a href="https://biofair.uk/fellows/">BioFAIR Fellow</a> <a href="https://orcid.org/0000-0001-6979-6930">Marisa Loach</a> and <a href="https://www.software.ac.uk/news/ssi-fellow-awarded-biofair-pathfinder-project">BioFAIR Pathfinder</a> project lead and <a href="https://www.software.ac.uk/fellowship-programme/kevin-rue-albrecht">Institute for Research Software 2026 Fellow</a> <a href="https://orcid.org/0000-0003-3899-3872">Kevin Rue-Albrecht</a>.</p>
+<p>The CoFest brought together contributors based in the UK, Ireland, Germany, India and the USA, with both in-person and remote participation.</p>
+<p>Marisa led the <strong>Data to Discovery</strong> training, introducing participants to single-cell analysis using the European instance of the Galaxy platform (<a href="https://usegalaxy.eu/" class="uri">https://usegalaxy.eu/</a>), while Kevin led the hybrid <strong>CoFest</strong> focused on making methods developed as Bioconductor R packages more readily accessible through infrastructures such as Galaxy and nf-core.</p>
+<p><em>A <a href="https://galaxyproject.org/news/2026-09-24-biofair-cofest/">Galaxy community recap</a> of the event also covers the training and CoFest from the Galaxy perspective.</em></p>
+<section id="the-challenge-making-methods-reusable-across-ecosystems" class="level2">
+<h2 class="anchored" data-anchor-id="the-challenge-making-methods-reusable-across-ecosystems">The challenge: making methods reusable across ecosystems</h2>
+<p>There are numerous communities in the bioinformatics space focusing on different aspects like code development, making non-code GUIs, creating tutorials and documentation, and more. Some of these are Bioconductor, Galaxy and nf-core, which play complementary roles in bioinformatics. <strong>Bioconductor</strong> provides a large ecosystem of R packages implementing analysis methods; <strong>Galaxy</strong> provides an accessible environment for running and sharing reproducible analyses; and <strong>nf-core</strong> provides a community framework for portable <a href="https://www.nextflow.io/">Nextflow</a> pipelines.</p>
+<p>The challenge is that making the same method available across these environments often requires separate wrappers, metadata and maintenance. The <strong>BioFAIR Pathfinder</strong> project behind the event is exploring ways to reduce that duplication, including tooling for adapting Bioconductor methods as Galaxy tools and nf-core modules.</p>
+<p>A major focus of the CoFest was <a href="https://blog.bioconductor.org/posts/2026-08-21-biocjobs/">BiocJobs</a>, an approach being developed that allows analysis tasks to be described alongside Bioconductor packages and used to generate representations for different workflow systems.</p>
+</section>
+<section id="putting-the-idea-into-practice" class="level2">
+<h2 class="anchored" data-anchor-id="putting-the-idea-into-practice">Putting the idea into practice</h2>
+<p>Rather than only <em>discussing</em> interoperability, participants <em>applied</em> this approach to an <a href="https://kevinrue.github.io/biofair-pathfinder-2026/tutorial-singlecell-bioconductor/">exemplar single-cell analysis workflow</a>.</p>
+<p>The group mapped parts of that workflow to reusable package-level ‘BiocJobs’ and tested the path from descriptions maintained alongside Bioconductor packages to generated workflow components. Work covered steps including data import, quality control, normalisation, dimensionality reduction and marker analysis.</p>
+<p>This gave contributors a concrete way to test the process, improve documentation, and identify what would be needed to make it easier for others to contribute.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://blog.bioconductor.org/posts/2026-10-07-biofair-cofest/participants.jpg" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="Photo of participants working during the CoFest."></p>
+</figure>
+</div>
+<p>On the final day, we captured the workflow we had been working towards in a single diagram: from a commit to a Bioconductor package repository, through the automatic building and publishing of tool wrappers, to their use in Galaxy, nf-core and other workflow environments.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://blog.bioconductor.org/posts/2026-10-07-biofair-cofest/biocjobs-workflow.jpg" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="Workflow diagram illustrating the contribution process and automated building and dissemination of Bioconductor tool wrappers across other software ecosystems."></p>
+</figure>
+</div>
+<p>Three days were not enough to fully implement the workflow captured in the diagram - nor was that the goal. Instead, the CoFest demonstrated the process on a small number of selected workflow steps, while documenting how others could contribute. This created a foundation for onboarding new contributors and, over time, enabling more contributors to create wrappers for other widely used Bioconductor methods.</p>
+</section>
+<section id="what-we-learned" class="level2">
+<h2 class="anchored" data-anchor-id="what-we-learned">What we learned</h2>
+<p>One of the clearest lessons was that interoperability is not just about writing software that connects one platform to another.</p>
+<p>It also depends on deciding where information should live, who is best placed to maintain it, and how contributions can fit naturally into the practices of each community. Bringing Bioconductor package developers, Galaxy contributors, and nf-core developers into the same room made it possible to look at the process end to end rather than from the perspective of a single ecosystem.</p>
+<p>The event also reinforced the value of working from a concrete scientific use case. Using a real single-cell workflow gave participants something shared to build, test and discuss, while exposing questions that would have been difficult to anticipate from design discussions alone. The <a href="https://docs.google.com/document/d/1eKNACIPJf6vLIzBrE-8yrtCrYcmiXGMzYhBouuoVxR0/edit?usp=sharing">CoFest notes</a> capture several of those emerging questions, particularly around how reusable jobs should be structured and composed.</p>
+</section>
+<section id="what-comes-next" class="level2">
+<h2 class="anchored" data-anchor-id="what-comes-next">What comes next</h2>
+<p>The CoFest was intended as a starting point rather than a one-off sprint.</p>
+<p>The immediate next step is to continue refining the workflow demonstrated during the event: improving the tooling and documentation, testing it on additional Bioconductor methods, and making it easier for new contributors to take part.</p>
+<p>We are also planning follow-up events in the first quarter of 2027. These will provide an opportunity to bring the communities together again, build on the examples developed in Milton Keynes and involve more contributors in extending the approach to other widely used methods.</p>
+<p>The longer-term aim is simple: make it easier for software developed in one research community to become useful, sustainable building blocks in another.</p>
+<p>Interested in getting involved? <a href="https://community-bioc.zulipchat.com/join/zsfbiqh64t3nq5ldrmv72b4w/">Join the Bioconductor Zulip and the #biofair2026-workflow-sprint channel</a> and follow the BiocJobs topic for ongoing discussion.</p>
+
+
+</section>
+
+<p>
+© 2026 Bioconductor. Content is published under <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons CC-BY-4.0 License</a> for the text and <a href="https://opensource.org/licenses/BSD-3-Clause">BSD 3-Clause License</a> for any code. | <a href="https://www.r-bloggers.com">R-Bloggers</a>
+</p> ]]></description>
+  <category>Bioconductor</category>
+  <category>FAIR</category>
+  <category>hackathon</category>
+  <category>galaxy</category>
+  <category>nf-core</category>
+  <guid>https://blog.bioconductor.org/posts/2026-10-07-biofair-cofest/</guid>
+  <pubDate>Wed, 07 Oct 2026 00:00:00 GMT</pubDate>
+  <media:content url="https://blog.bioconductor.org/posts/2026-10-07-biofair-cofest/biocjobs-workflow.jpg" medium="image" type="image/jpeg"/>
+</item>
 <item>
   <title>BioC2026 conference recap</title>
   <dc:creator>Laurah Ondari</dc:creator>
@@ -1425,104 +1501,6 @@ font-style: inherit;">--alpha</span> 0.05</span></code></pre></div></div>
   <guid>https://blog.bioconductor.org/posts/2026-04-08-r-universe-collaboration/</guid>
   <pubDate>Wed, 08 Apr 2026 00:00:00 GMT</pubDate>
   <media:content url="https://docs.r-universe.dev/img/bioc-pkg.png" medium="image" type="image/png"/>
-</item>
-<item>
-  <title>Outreachy June 2025 Interns with Bioconductor</title>
-  <dc:creator>Anne-Marie Sharp</dc:creator>
-  <dc:creator>Victoria Poromon</dc:creator>
-  <link>https://blog.bioconductor.org/posts/2025-12-12-outreachy-june25/</link>
-  <description><![CDATA[ 
-
-
-
-
-
-<section id="introduction" class="level2">
-<h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
-<p>To a beginner, open source can be one of the best pathways into a fulfilling tech career. It not only provides access to source codes but also connects you with a global community of people from diverse backgrounds and skill sets. Together, contributors share ideas, collaborate on projects, and continuously improve the software. This collective effort makes open source projects more reliable, innovative, and adaptable, as many perspectives shape their growth. These values strongly align with the mission of the Outreachy internship, which champions diversity, inclusivity, and creating opportunities for people from underrepresented groups in tech to contribute meaningfully to open source.</p>
-</section>
-<section id="outreachy" class="level2">
-<h2 class="anchored" data-anchor-id="outreachy">Outreachy</h2>
-<p><a href="https://www.outreachy.org">Outreachy</a> is a paid, remote internship program whose main goal is to support people from groups underrepresented in tech. They help newcomers to free software and open source make their first contributions.</p>
-<p>Interns work remotely for 3 months with experienced mentors from open source communities, gaining hands-on experience, building real-world skills, and contributing to meaningful projects. They receive guidance, feedback, and the support of a diverse and welcoming community.</p>
-</section>
-<section id="our-journeys" class="level2">
-<h2 class="anchored" data-anchor-id="our-journeys">Our Journeys</h2>
-<section id="victorias-experience" class="level3">
-<h3 class="anchored" data-anchor-id="victorias-experience">Victoria’s Experience</h3>
-<div style="text-align: center;">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="https://blog.bioconductor.org/posts/2025-12-12-outreachy-june25/VictoriaPoromon.jpg" class="img-fluid figure-img" alt="Photo of Victoria Poromon" width="300"></p>
-<figcaption>Victoria Poromon</figcaption>
-</figure>
-</div>
-</div>
-<p>Hello, my name is Victoria Poromon, and I am a Microbiology graduate from the University of Port Harcourt, Nigeria. I have been contributing to the <a href="https://bugsigdb.org/Main_Page">BugSigDB</a> project since March 2024, and you can read about my experience as an Outreachy June2025 intern <a href="https://burah.hashnode.dev/outreachy-contribution-stage-my-experience">here</a>.</p>
-<p>Over the last few months, I’ve completed individual tasks, collaborated with fellow contributors and my co-intern, participated in peer reviews, written several blog posts, including one I’m especially proud of: the <a href="https://burah.hashnode.dev/step-by-step-guide-to-contributing-to-bugsigdb">Step-by-step Guide to contributing to BugSigDB</a>. More recently, I even took my first step into co-mentoring!</p>
-<p>Each encounter and milestone has taught me something new, broadened my perspective, and supported my personal and professional growth.</p>
-<p>Here are the lessons that have stayed with me:</p>
-<ul>
-<li><strong>Take your time</strong>: I’ve always believed in not rushing important work, and this project reinforced that mindset. Because it demands careful attention to detail and accuracy, moving too quickly can easily make you overlook what truly matters.</li>
-<li><strong>Collaborate, not compete</strong>: It’s natural for others to know things I don’t, but what isn’t acceptable is choosing to remain ignorant. Collaboration has allowed me to both learn from others and share my own knowledge in return.</li>
-<li><strong>Know when to ask questions</strong>: If you’ve been stuck on a task for hours despite troubleshooting and research, it’s the perfect time to ask your mentors for guidance. Doing so demonstrates curiosity, helps you overcome challenges more efficiently, and often leads to deeper learning.</li>
-<li><strong>Know when to ask for help</strong>: I’ve learned from my mentor, Svetlana, that asking for help is a valuable skill. It is not a sign of weakness, but a demonstration of strength, self-awareness, and a willingness to learn.</li>
-<li><strong>Always speak kindly</strong>: It’s not enough to simply know how to communicate; it’s equally important to do so kindly and with consideration for others. As both a contributor and co-mentor, I’ve come to value this quality deeply. Thoughtful communication not only shows respect but also helps create a safe and supportive environment.</li>
-</ul>
-<p>My journey with the Bioconductor community has been guided every step of the way, from the big things, like reviewing my tasks, teaching me new skills, and offering guidance on my job applications, to the small details, like dotting my i’s and placing my commas correctly. Every day, I’m reminded why I chose to stay.</p>
-<p>By the end of my internship (June 2025 cohort), I not only strengthened my technical abilities but also gained confidence, built a meaningful network, and laid a solid foundation for my continued involvement in open source. You can find all my contributions <a href="https://bugsigdb.org/Special:Contributions/Victoria">here</a>.</p>
-<p>I am super thankful to everyone in the Bioconductor community for giving me a chance, especially to my mentors <a href="https://github.com/SvetlanaUP">Svetlana</a>, <a href="https://github.com/cmirzayi">Chloe</a>, and <a href="https://github.com/KateRasheed">Kate</a>, for literally holding my hand every step of the way and my brilliant co-intern <a href="https://github.com/annemarie-sharp">Anne-Marie Sharp</a>. I’ve grown tremendously and become a better contributor because I learned from the absolutely best.</p>
-</section>
-<section id="anne-maries-experience" class="level3">
-<h3 class="anchored" data-anchor-id="anne-maries-experience">Anne-Marie’s Experience</h3>
-<div style="text-align: center;">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="https://blog.bioconductor.org/posts/2025-12-12-outreachy-june25/Anne-MarieSharp.jpg" class="img-fluid figure-img" alt="Photo of Anne-Marie Sharp" width="300"></p>
-<figcaption>Anne-Marie Sharp</figcaption>
-</figure>
-</div>
-</div>
-<p>Hello, I am Anne-Marie Sharp. I am a Biomedical Scientist and an aspiring bioinformatician. In late 2024, <a href="https://annemariesharp.wordpress.com/2025/06/06/from-curiosity-to-contribution-a-new-chapter-with-outreachy/">my curiosity</a> led me to learn about the <a href="https://www.outreachy.org/">Outreachy</a> internship for the first time and then to the Bioconductor project - Microbiome Study Curation <a href="https://www.bugsigdb.org/">(BugSigDB)</a> where I contributed as an intern in the June 2025 Outreachy cohort.</p>
-<p>I was completely new to the world of open source and it took extra effort for me to catch on quickly to not just the different online communication platforms but also to the art or rather science of microbiome study curation; but my curiosity and passion for science kept me going during the Outreachy contribution phase. I was also excited about the new skills I was learning such as data-curation, analysis and literature review. And I was fascinated by the collaboration within the community. Thanks to this collaboration, I was also able to learn fast as I freely asked questions and got answers from mentors and fellow-curators, and I often teamed up with other curators which gave me different perspectives and insights on curation.</p>
-<p>As an avid learner, I was and I still am excited that there is always something new to learn working on the project. Whether in the core microbiome science, in improving my R-programming language skill, in curation itself or even in improving my soft skills. Indeed, it only gets better.</p>
-<section id="my-contributions" class="level4">
-<h4 class="anchored" data-anchor-id="my-contributions">My Contributions</h4>
-<p>During the contribution and internship phase, I worked on over 50 <a href="https://github.com/waldronlab/BugSigDBcuration/issues?q=is%3Aissue%20assignee%3Aannemarie-sharp">issues</a> and <a href="https://bugsigdb.org/Special:Contributions/Anne-mariesharp">study curations</a>, these involved:</p>
-<ul>
-<li>curating published microbiome studies mainly regarding eye health conditions such as glaucoma, age related macular degeneration, etc.,</li>
-<li>finalizing incomplete curations,</li>
-<li>reviewing existing curations, and</li>
-<li>handling R-related tasks such as updating unit tests and fixing errors in codes.</li>
-</ul>
-<p>I also blogged frequently about my experience: <a href="https://annemariesharp.wordpress.com/category/outreachy-blog/">https://annemariesharp.wordpress.com/category/outreachy-blog/</a></p>
-<p>I am particularly proud of the work I have done in curating microbiome studies on vision threatening conditions such as glaucoma, age related macular degeneration and acute anterior uveitis. Integrating these underrepresented ocular microbiome findings into BugSigDB improves data discoverability, enables structured querying, and enhances cross-study reuse. And I plan to continue with this great work!</p>
-</section>
-<section id="so-far" class="level4">
-<h4 class="anchored" data-anchor-id="so-far">So far</h4>
-<p>Worthy to mention, that I am currently a co-mentor for the December 2025 Outreachy cohort! This transition from intern to co-mentor has been exciting. I now guide new contributors through the same journey I once took - from understanding GitHub workflows to mastering the intricacies of microbiome study curation.</p>
-<p>So far, collaborating with experienced mentors has enlightened me on how they support and sustain the community and I am grateful for this opportunity to learn and to also give back. I am also grateful to the BugSigDB community, to my co-intern <a href="https://github.com/Buraah">Victoria Poromon</a> who made working together easy and enjoyable, and to all my mentors who made this experience worthwhile for me - <a href="https://github.com/cmirzayi">Chloe Mirzayi</a>, <a href="https://github.com/SvetlanaUP">Svetlana Ugarcina Perovic</a>, <a href="https://github.com/Omabekee">Chioma Onyido</a>, <a href="https://github.com/KateRasheed">Kate Rasheed</a>, and <a href="https://github.com/AleruDivine">Divine Aleru</a>.</p>
-<p>Their patience with my endless questions, their thoughtful feedback on my curations, their willingness to share their expertise transformed me from a complete beginner into a confident contributor. Like the African proverb says, “it takes a village to raise a child” - their unique inputs, support, and guidance have truly been priceless.</p>
-</section>
-</section>
-</section>
-<section id="upcoming-opportunities" class="level2">
-<h2 class="anchored" data-anchor-id="upcoming-opportunities">Upcoming Opportunities</h2>
-<p>One of the core values of open source is Community, because it ensures projects remain active, relevant, and adaptable over time, preventing stagnation. The Bioconductor community is participating in the current Outreachy internship round (December 2025 to March 2026).</p>
-<p>If you’re inspired by our journey and would like to contribute to the BugSigDB project, either through Outreachy or simply to share knowledge, feel free to join us on the Bioconductor <a href="https://chat.bioconductor.org/">Zulip channel</a>.</p>
-<p>Applications for the next internship round (May 2026 – August 2026) will open in early February 2026, so keep an eye out for announcements <a href="https://www.outreachy.org/apply/project-selection/">here</a>.</p>
-
-
-</section>
-
-<p>
-© 2026 Bioconductor. Content is published under <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons CC-BY-4.0 License</a> for the text and <a href="https://opensource.org/licenses/BSD-3-Clause">BSD 3-Clause License</a> for any code. | <a href="https://www.r-bloggers.com">R-Bloggers</a>
-</p> ]]></description>
-  <category>Outreachy</category>
-  <category>open science</category>
-  <guid>https://blog.bioconductor.org/posts/2025-12-12-outreachy-june25/</guid>
-  <pubDate>Fri, 12 Dec 2025 00:00:00 GMT</pubDate>
-  <media:content url="https://blog.bioconductor.org/posts/2025-12-12-outreachy-june25/featured-image.jpg" medium="image" type="image/jpeg"/>
 </item>
 </channel>
 </rss>
