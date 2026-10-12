@@ -3,7 +3,7 @@ title: "Bioconductor Training partners with Physalia Courses"
 description: "A new collaboration to expand access to bioinformatics training through co-branded courses, instructor support, and inclusive access."
 author: "Maria Doyle, Charlotte Soneson, and Laurent Gatto"
 date: 2025-06-20
-categories: [education, collaborations]
+categories: [education, collaborations, Physalia]
 image: bioc-physalia.jpg
 ---
 
