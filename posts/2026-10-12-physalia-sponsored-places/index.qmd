@@ -6,7 +6,7 @@ author:
   - name: Carlo Pecoraro
   - name: Maria Doyle
 date: 2026-10-12
-categories: [education, collaborations]
+categories: [education, collaborations, Physalia]
 image: "sponsored-places-map.jpg"
 ---
 
