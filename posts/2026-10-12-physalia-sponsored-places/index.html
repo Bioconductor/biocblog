@@ -1,0 +1,675 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.10.19">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Carlo Pecoraro">
+<meta name="author" content="Maria Doyle">
+<meta name="dcterms.date" content="2026-10-12">
+<meta name="description" content="Researchers reflect on specialist training, new analytical skills, and how they hope to use what they learned.">
+
+<title>Beyond the course: Reflections from the Bioconductor–Physalia sponsorship programme – Bioconductor community blog</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-bf27225e3a48a9273f3daa8f8e829971.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-38838b12d2c25e08a8e0512b421f47c2.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.css" rel="stylesheet">
+
+
+<link rel="stylesheet" href="../../styles.css">
+<meta property="og:title" content="Beyond the course: Reflections from the Bioconductor–Physalia sponsorship programme – Bioconductor community blog">
+<meta property="og:description" content="Researchers reflect on specialist training, new analytical skills, and how they hope to use what they learned.">
+<meta property="og:image" content="https://blog.bioconductor.org/posts/2026-10-12-physalia-sponsored-places/sponsored-places-map.jpg">
+<meta property="og:site_name" content="Bioconductor community blog">
+</head>
+
+<body class="nav-fixed fullcontent quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top quarto-banner">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">Bioconductor community blog</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../about.html"> 
+<span class="menu-text">About</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../contributing.html"> 
+<span class="menu-text">Contributing</span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/bioconductor/biocblog"> <i class="bi bi-github" role="img">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://www.linkedin.com/company/bioconductor/"> <i class="bi bi-linkedin" role="img">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://bsky.app/profile/bioconductor.bsky.social"> <i class="bi bi-bluesky" role="img">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://genomic.social/@bioconductor"> <i class="bi bi-mastodon" role="img">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://www.youtube.com/user/bioconductor"> <i class="bi bi-youtube" role="img">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://chat.bioconductor.org/"> <i class="bi bi-chat-dots" role="img">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="../../index.xml"> <i class="bi bi-rss" role="img">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<header id="title-block-header" class="quarto-title-block default page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      <h1 class="title">Beyond the course: Reflections from the Bioconductor–Physalia sponsorship programme</h1>
+            <p class="subtitle lead">Researchers reflect on specialist training, new analytical skills, and how they hope to use what they learned.</p>
+                  <div>
+        <div class="description">
+          Researchers reflect on specialist training, new analytical skills, and how they hope to use what they learned.
+        </div>
+      </div>
+                          <div class="quarto-categories">
+                <div class="quarto-category">education</div>
+                <div class="quarto-category">collaborations</div>
+                <div class="quarto-category">Physalia</div>
+              </div>
+                  </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta">
+
+      <div>
+      <div class="quarto-title-meta-heading">Authors</div>
+      <div class="quarto-title-meta-contents">
+               <p>Carlo Pecoraro </p>
+               <p>Maria Doyle </p>
+            </div>
+    </div>
+      
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">October 12, 2026</p>
+      </div>
+    </div>
+    
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    
+<!-- main -->
+<main class="content quarto-banner-title-block" id="quarto-document-content">
+
+
+
+
+
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="sponsored-places-map.jpg" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%" alt="World map showing 18 sponsored course places across nine countries from November 2025 to October 2026: Nigeria 5; Benin, Egypt, India, Kenya and Nepal 2 each; Brazil, The Gambia and Tanzania 1 each."></p>
+</figure>
+</div>
+<p>What difference can a sponsored place on a bioinformatics course make? For some researchers, it means access to training they would otherwise struggle to afford. For others, it is an opportunity to explore a new field, work through unfamiliar analytical methods, or find new ways to approach an existing research question.</p>
+<p>Through the <a href="https://blog.bioconductor.org/posts/2025-06-20-physalia-collaboration/">Bioconductor–Physalia collaboration</a>, Physalia offers two free places on eligible courses to researchers based in low- and middle-income countries (LMICs). The Bioconductor Community Manager coordinates the application process and works with the <a href="https://training.bioconductor.org/">Training Committee</a> co-chairs on selecting participants, while Bioconductor helps promote the courses through its community channels. Between November 2025 and October 2026, the programme provided 18 sponsored places across nine courses, covering topics ranging from RNA-seq and proteomics to microbiome analysis, epigenomics and network biology.</p>
+<p>The aim is to make specialist training more accessible to researchers who might otherwise miss out on these opportunities. We asked participants what they found useful about their courses and how they planned to use what they had learned. Their responses offer a glimpse into the different ways the training connects with their work.</p>
+<section id="making-training-accessible" class="level2">
+<h2 class="anchored" data-anchor-id="making-training-accessible">Making training accessible</h2>
+<p>Access was a recurring theme in the feedback. For Blessing Chioma Oselu, a PhD student and Bioinformatics Research Assistant at Covenant University in Nigeria, the opportunity to attend the <em>Single-cell RNA-seq Analysis with R/Bioconductor</em> course meant learning directly from experts and having structured materials to return to afterward.</p>
+<p>“The access to expert teaching and the structured materials were the most valuable parts for me,” she wrote.</p>
+<p>Blessing plans to continue working through the recorded sessions at her own pace. For researchers balancing training with other commitments, being able to revisit course material can be just as useful as attending the live sessions.</p>
+<p>Another participant, from Benin, came to the <em>Epigenomics Data Analysis</em> course without previous experience in the subject. The step-by-step walkthroughs of methods including ChIP-seq and ATAC-seq helped make the material more manageable.</p>
+<p>“I left the course at a clearly higher level than I started, and I feel ready to work with my own data when the time comes,” the participant reflected.</p>
+<p>They also noted that opportunities like this are rare where they are based, and that support from Bioconductor and Physalia made a real difference.</p>
+</section>
+<section id="taking-new-methods-back-to-research" class="level2">
+<h2 class="anchored" data-anchor-id="taking-new-methods-back-to-research">Taking new methods back to research</h2>
+<p>Participants also described how the training related to questions they were already working on, or hoped to explore.</p>
+<p>For Amira M. F. Abozaid, a PhD student and Assistant Lecturer at Alexandria University and E-JUST in Egypt, the <em>RNA-seq data analysis with R/Bioconductor</em> course provided a deeper understanding of the RNA-seq workflow, from quality control and normalization to differential expression and visualization.</p>
+<p>Amira wrote that she had already started applying the workflows to her cancer genomics projects and sharing the skills with colleagues and students at her home institutions.</p>
+<p>Other participants were looking at different applications. Idris Ishola Adejumobi, a Research Associate at the International Institute of Tropical Agriculture in Nigeria, described how the <em>Epigenomics Data Analysis</em> course broadened his understanding of how epigenetic variation can influence complex traits and complement genomic information in crop improvement. He also identified further training in the integration of epigenomic, genomic, and transcriptomic data as a useful next step for agricultural and plant-breeding research.</p>
+<p>Rabiath Adigoun, a postdoctoral researcher at the University of Abomey-Calavi in Benin, highlighted the relevance of <em>Orchestrating Microbiome Analysis with Bioconductor</em> to her ongoing and future research on plant microbiomes.</p>
+<p>“The expertise and methodological skills I have acquired will substantially strengthen my ongoing and future research on the plant microbiome in Benin and across Africa,” she wrote.</p>
+<p>Sally Karimi Kinyua, a Research Assistant based in Kenya, attended the Network Analysis in Systems Biology with R/Bioconductor course. She hopes to apply what she learned about gene networks to research into mutations associated with malaria resistance. Sally also highlighted how the sponsored place gave her access to training that would otherwise have been out of reach because of limited resources.</p>
+<p>These examples span different fields, but the underlying theme is similar: participants are looking for ways to connect computational methods with the biological questions they want to answer.</p>
+</section>
+<section id="learning-to-work-with-unfamiliar-data" class="level2">
+<h2 class="anchored" data-anchor-id="learning-to-work-with-unfamiliar-data">Learning to work with unfamiliar data</h2>
+<p>Sometimes, what matters most is finding a way into a subject that initially seems difficult.</p>
+<p>A participant in the <em>Statistical Methods for Metatranscriptomics</em> course described how the practical sessions helped make complex concepts easier to follow. They particularly appreciated the explanations of foundational terminology before moving on to more technical material.</p>
+<p>The course also introduced them to ways of analysing microbial gene expression data using computational tools and reproducible workflows. Coming from a bachelor’s degree background, they described it as one of their first deeper exposures to this area of bioinformatics.</p>
+<p>Another participant, Binod Rayamajhee, a Research Fellow at the Kathmandu Research Institute for Biological Sciences in Nepal, highlighted the course’s combination of conceptual teaching and practical work with Bioconductor tools.</p>
+<p>The training relates directly to his work in microbiome data analysis, and he anticipates applying the methods to study host–microbe interactions in bowel disease models.</p>
+<p>Binod also hopes to share what he learned through workshops and one-to-one mentoring with colleagues and junior researchers, particularly those working in resource-limited settings.</p>
+</section>
+<section id="sharing-what-comes-next" class="level2">
+<h2 class="anchored" data-anchor-id="sharing-what-comes-next">Sharing what comes next</h2>
+<p>Knowledge sharing appeared in several participants’ reflections, whether through helping colleagues, teaching students, or bringing new analytical approaches into research groups.</p>
+<p>Sandra Achieng Otieno, an MSc student at icipe in Kenya, attended the microbiome analysis course. She was particularly interested in learning how to structure microbiome data using TreeSummarizedExperiment and how different transformations can affect downstream analyses, including diversity estimation and ordination.</p>
+<p>She hopes to apply these skills to research combining microbiome data with target gene expression and elemental analysis.</p>
+<p>As Sandra put it, the course gave her “a clearer framework for integrating multi-omics biological data in a structured and reproducible way.”</p>
+<p>For others, training may also open the door to contributing to Bioconductor itself. Marco Antonio Campanário Sampaio, a PhD student in Brazil who attended the Developing R/Bioconductor Packages for Genomics course, wrote, “I hope to become a contributor to the Bioconductor community soon.”</p>
+<p>These are plans at different stages, and their longer-term outcomes remain to be seen. Still, it is useful to hear participants identify specific methods they want to try, datasets they want to analyse, and colleagues with whom they hope to share their knowledge.</p>
+</section>
+<section id="continuing-the-conversation" class="level2">
+<h2 class="anchored" data-anchor-id="continuing-the-conversation">Continuing the conversation</h2>
+<p>The feedback collected so far gives us a better sense of what participants value in specialist bioinformatics training. Expert teaching and well-organised materials matter, as do practical exercises that make unfamiliar methods easier to approach. Just as importantly, participants want to connect what they learn to their own research.</p>
+<p>We would like to thank everyone who shared their reflections, along with the instructors and organisers who contributed to the courses. We’d also like to thank Laurah Nyasita Ondari for helping promote these opportunities through Bioconductor’s social media channels.</p>
+<p>We hope to hear from participants again as they put their new skills into practice. In the meantime, their experiences offer a useful reminder of why access to training matters: it gives researchers more opportunities to learn new methods, explore their research questions, and contribute to the scientific communities around them.</p>
+<p>For the full list of the Physalia courses and workshops, please visit <a href="https://www.physalia-courses.org">www.physalia-courses.org</a>. To find out more about the collaboration, explore the <a href="https://training.bioconductor.org/collaborations/physalia/">Bioconductor-Physalia course listings</a>, including upcoming courses and how to apply for a sponsored place.</p>
+<p>Interested in developing or teaching a Bioconductor-related course? Physalia welcomes ideas from potential instructors and is happy to discuss possible topics, content and formats. <a href="https://www.physalia-courses.org/contact/">Get in touch with Physalia</a> to explore an idea.</p>
+<p><em>This article is also published on the <a href="https://www.physalia-courses.org/courses-workshops/blogpost/">Physalia website</a>.</em></p>
+
+
+</section>
+
+<p>
+© 2026 Bioconductor. Content is published under <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons CC-BY-4.0 License</a> for the text and <a href="https://opensource.org/licenses/BSD-3-Clause">BSD 3-Clause License</a> for any code. | <a href="https://www.r-bloggers.com">R-Bloggers</a>
+</p></main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/blog\.bioconductor\.org\/");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

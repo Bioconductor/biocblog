@@ -10,7 +10,86 @@
 <atom:link href="https://blog.bioconductor.org/index.xml" rel="self" type="application/rss+xml"/>
 <description>A blog for the Bioconductor community!</description>
 <generator>quarto-1.10.19</generator>
-<lastBuildDate>Wed, 07 Oct 2026 00:00:00 GMT</lastBuildDate>
+<lastBuildDate>Mon, 12 Oct 2026 00:00:00 GMT</lastBuildDate>
+<item>
+  <title>Beyond the course: Reflections from the Bioconductor–Physalia sponsorship programme</title>
+  <dc:creator>Carlo Pecoraro</dc:creator>
+  <dc:creator>Maria Doyle</dc:creator>
+  <link>https://blog.bioconductor.org/posts/2026-10-12-physalia-sponsored-places/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://blog.bioconductor.org/posts/2026-10-12-physalia-sponsored-places/sponsored-places-map.jpg" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%" alt="World map showing 18 sponsored course places across nine countries from November 2025 to October 2026: Nigeria 5; Benin, Egypt, India, Kenya and Nepal 2 each; Brazil, The Gambia and Tanzania 1 each."></p>
+</figure>
+</div>
+<p>What difference can a sponsored place on a bioinformatics course make? For some researchers, it means access to training they would otherwise struggle to afford. For others, it is an opportunity to explore a new field, work through unfamiliar analytical methods, or find new ways to approach an existing research question.</p>
+<p>Through the <a href="https://blog.bioconductor.org/posts/2025-06-20-physalia-collaboration/">Bioconductor–Physalia collaboration</a>, Physalia offers two free places on eligible courses to researchers based in low- and middle-income countries (LMICs). The Bioconductor Community Manager coordinates the application process and works with the <a href="https://training.bioconductor.org/">Training Committee</a> co-chairs on selecting participants, while Bioconductor helps promote the courses through its community channels. Between November 2025 and October 2026, the programme provided 18 sponsored places across nine courses, covering topics ranging from RNA-seq and proteomics to microbiome analysis, epigenomics and network biology.</p>
+<p>The aim is to make specialist training more accessible to researchers who might otherwise miss out on these opportunities. We asked participants what they found useful about their courses and how they planned to use what they had learned. Their responses offer a glimpse into the different ways the training connects with their work.</p>
+<section id="making-training-accessible" class="level2">
+<h2 class="anchored" data-anchor-id="making-training-accessible">Making training accessible</h2>
+<p>Access was a recurring theme in the feedback. For Blessing Chioma Oselu, a PhD student and Bioinformatics Research Assistant at Covenant University in Nigeria, the opportunity to attend the <em>Single-cell RNA-seq Analysis with R/Bioconductor</em> course meant learning directly from experts and having structured materials to return to afterward.</p>
+<p>“The access to expert teaching and the structured materials were the most valuable parts for me,” she wrote.</p>
+<p>Blessing plans to continue working through the recorded sessions at her own pace. For researchers balancing training with other commitments, being able to revisit course material can be just as useful as attending the live sessions.</p>
+<p>Another participant, from Benin, came to the <em>Epigenomics Data Analysis</em> course without previous experience in the subject. The step-by-step walkthroughs of methods including ChIP-seq and ATAC-seq helped make the material more manageable.</p>
+<p>“I left the course at a clearly higher level than I started, and I feel ready to work with my own data when the time comes,” the participant reflected.</p>
+<p>They also noted that opportunities like this are rare where they are based, and that support from Bioconductor and Physalia made a real difference.</p>
+</section>
+<section id="taking-new-methods-back-to-research" class="level2">
+<h2 class="anchored" data-anchor-id="taking-new-methods-back-to-research">Taking new methods back to research</h2>
+<p>Participants also described how the training related to questions they were already working on, or hoped to explore.</p>
+<p>For Amira M. F. Abozaid, a PhD student and Assistant Lecturer at Alexandria University and E-JUST in Egypt, the <em>RNA-seq data analysis with R/Bioconductor</em> course provided a deeper understanding of the RNA-seq workflow, from quality control and normalization to differential expression and visualization.</p>
+<p>Amira wrote that she had already started applying the workflows to her cancer genomics projects and sharing the skills with colleagues and students at her home institutions.</p>
+<p>Other participants were looking at different applications. Idris Ishola Adejumobi, a Research Associate at the International Institute of Tropical Agriculture in Nigeria, described how the <em>Epigenomics Data Analysis</em> course broadened his understanding of how epigenetic variation can influence complex traits and complement genomic information in crop improvement. He also identified further training in the integration of epigenomic, genomic, and transcriptomic data as a useful next step for agricultural and plant-breeding research.</p>
+<p>Rabiath Adigoun, a postdoctoral researcher at the University of Abomey-Calavi in Benin, highlighted the relevance of <em>Orchestrating Microbiome Analysis with Bioconductor</em> to her ongoing and future research on plant microbiomes.</p>
+<p>“The expertise and methodological skills I have acquired will substantially strengthen my ongoing and future research on the plant microbiome in Benin and across Africa,” she wrote.</p>
+<p>Sally Karimi Kinyua, a Research Assistant based in Kenya, attended the Network Analysis in Systems Biology with R/Bioconductor course. She hopes to apply what she learned about gene networks to research into mutations associated with malaria resistance. Sally also highlighted how the sponsored place gave her access to training that would otherwise have been out of reach because of limited resources.</p>
+<p>These examples span different fields, but the underlying theme is similar: participants are looking for ways to connect computational methods with the biological questions they want to answer.</p>
+</section>
+<section id="learning-to-work-with-unfamiliar-data" class="level2">
+<h2 class="anchored" data-anchor-id="learning-to-work-with-unfamiliar-data">Learning to work with unfamiliar data</h2>
+<p>Sometimes, what matters most is finding a way into a subject that initially seems difficult.</p>
+<p>A participant in the <em>Statistical Methods for Metatranscriptomics</em> course described how the practical sessions helped make complex concepts easier to follow. They particularly appreciated the explanations of foundational terminology before moving on to more technical material.</p>
+<p>The course also introduced them to ways of analysing microbial gene expression data using computational tools and reproducible workflows. Coming from a bachelor’s degree background, they described it as one of their first deeper exposures to this area of bioinformatics.</p>
+<p>Another participant, Binod Rayamajhee, a Research Fellow at the Kathmandu Research Institute for Biological Sciences in Nepal, highlighted the course’s combination of conceptual teaching and practical work with Bioconductor tools.</p>
+<p>The training relates directly to his work in microbiome data analysis, and he anticipates applying the methods to study host–microbe interactions in bowel disease models.</p>
+<p>Binod also hopes to share what he learned through workshops and one-to-one mentoring with colleagues and junior researchers, particularly those working in resource-limited settings.</p>
+</section>
+<section id="sharing-what-comes-next" class="level2">
+<h2 class="anchored" data-anchor-id="sharing-what-comes-next">Sharing what comes next</h2>
+<p>Knowledge sharing appeared in several participants’ reflections, whether through helping colleagues, teaching students, or bringing new analytical approaches into research groups.</p>
+<p>Sandra Achieng Otieno, an MSc student at icipe in Kenya, attended the microbiome analysis course. She was particularly interested in learning how to structure microbiome data using TreeSummarizedExperiment and how different transformations can affect downstream analyses, including diversity estimation and ordination.</p>
+<p>She hopes to apply these skills to research combining microbiome data with target gene expression and elemental analysis.</p>
+<p>As Sandra put it, the course gave her “a clearer framework for integrating multi-omics biological data in a structured and reproducible way.”</p>
+<p>For others, training may also open the door to contributing to Bioconductor itself. Marco Antonio Campanário Sampaio, a PhD student in Brazil who attended the Developing R/Bioconductor Packages for Genomics course, wrote, “I hope to become a contributor to the Bioconductor community soon.”</p>
+<p>These are plans at different stages, and their longer-term outcomes remain to be seen. Still, it is useful to hear participants identify specific methods they want to try, datasets they want to analyse, and colleagues with whom they hope to share their knowledge.</p>
+</section>
+<section id="continuing-the-conversation" class="level2">
+<h2 class="anchored" data-anchor-id="continuing-the-conversation">Continuing the conversation</h2>
+<p>The feedback collected so far gives us a better sense of what participants value in specialist bioinformatics training. Expert teaching and well-organised materials matter, as do practical exercises that make unfamiliar methods easier to approach. Just as importantly, participants want to connect what they learn to their own research.</p>
+<p>We would like to thank everyone who shared their reflections, along with the instructors and organisers who contributed to the courses. We’d also like to thank Laurah Nyasita Ondari for helping promote these opportunities through Bioconductor’s social media channels.</p>
+<p>We hope to hear from participants again as they put their new skills into practice. In the meantime, their experiences offer a useful reminder of why access to training matters: it gives researchers more opportunities to learn new methods, explore their research questions, and contribute to the scientific communities around them.</p>
+<p>For the full list of the Physalia courses and workshops, please visit <a href="https://www.physalia-courses.org">www.physalia-courses.org</a>. To find out more about the collaboration, explore the <a href="https://training.bioconductor.org/collaborations/physalia/">Bioconductor-Physalia course listings</a>, including upcoming courses and how to apply for a sponsored place.</p>
+<p>Interested in developing or teaching a Bioconductor-related course? Physalia welcomes ideas from potential instructors and is happy to discuss possible topics, content and formats. <a href="https://www.physalia-courses.org/contact/">Get in touch with Physalia</a> to explore an idea.</p>
+<p><em>This article is also published on the <a href="https://www.physalia-courses.org/courses-workshops/blogpost/">Physalia website</a>.</em></p>
+
+
+</section>
+
+<p>
+© 2026 Bioconductor. Content is published under <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons CC-BY-4.0 License</a> for the text and <a href="https://opensource.org/licenses/BSD-3-Clause">BSD 3-Clause License</a> for any code. | <a href="https://www.r-bloggers.com">R-Bloggers</a>
+</p> ]]></description>
+  <category>education</category>
+  <category>collaborations</category>
+  <category>Physalia</category>
+  <guid>https://blog.bioconductor.org/posts/2026-10-12-physalia-sponsored-places/</guid>
+  <pubDate>Mon, 12 Oct 2026 00:00:00 GMT</pubDate>
+  <media:content url="https://blog.bioconductor.org/posts/2026-10-12-physalia-sponsored-places/sponsored-places-map.jpg" medium="image" type="image/jpeg"/>
+</item>
 <item>
   <title>A Collaboration Fest for research software interoperability</title>
   <dc:creator>Kevin Rue-Albrecht</dc:creator>
@@ -1400,107 +1479,6 @@ font-style: inherit;">--alpha</span> 0.05</span></code></pre></div></div>
   <guid>https://blog.bioconductor.org/posts/2026-04-09-developer-engagement/</guid>
   <pubDate>Thu, 09 Apr 2026 00:00:00 GMT</pubDate>
   <media:content url="https://blog.bioconductor.org/posts/2026-04-09-developer-engagement/featured-image.jpeg" medium="image" type="image/jpeg"/>
-</item>
-<item>
-  <title>Collaborating between Bioconductor and R-universe on Development of Common Infrastructure</title>
-  <dc:creator>The rOpenSci Team</dc:creator>
-  <dc:creator>The Bioconductor Team</dc:creator>
-  <link>https://blog.bioconductor.org/posts/2026-04-08-r-universe-collaboration/</link>
-  <description><![CDATA[ 
-
-
-
-
-
-<p><small><i>This article is cross-posted on <a href="https://ropensci.org/blog/">rOpenSci</a> and <a href="https://r-consortium.org/blog/">R-Consortium</a> blogs.</i></small></p>
-<p>For more than two decades, the <a href="https://www.bioconductor.org/">Bioconductor project</a> has been a cornerstone of the R ecosystem, providing high-quality, peer-reviewed tools for bioinformatics and computational biology. Its curated repository model, rigorous review standards, and tightly coordinated release process have helped establish Bioconductor as one of the most trusted distribution channels in scientific computing.</p>
-<p>However, the infrastructure that supports such a long-standing and large-scale project inevitably accumulates technical debt. Legacy build systems, bespoke tooling, and historically grown workflows add up to costly and unsustainable maintenance work. For this reason, Bioconductor is collaborating with <a href="https://r-universe.dev/">R-universe</a> to gradually modernize parts of its infrastructure, while accommodating the project’s scale, governance, and established processes. In turn, Bioconductor is helping R-universe expand and refine its features as we learn to serve the complex needs of the Bioconductor community.</p>
-<p>This collaboration reflects a core principle of R-universe as an R Consortium <a href="https://r-consortium.org/all-projects/">Infrastructure Steering Committee (ISC)</a> top-level project: supporting reviewed package repositories such as rOpenSci and Bioconductor, and providing modern, open, and reusable infrastructure that strengthens the broader R ecosystem.</p>
-<section id="a-shared-mission-tooling-for-managed-repositories" class="level2">
-<h2 class="anchored" data-anchor-id="a-shared-mission-tooling-for-managed-repositories">A Shared Mission: Tooling for Managed Repositories</h2>
-<p>R-universe was designed as a next-generation package distribution and build system for R. It provides:</p>
-<ul>
-<li>Continuous building and checking of R packages across platforms<br>
-</li>
-<li>Binary packages for Windows, macOS, Linux, and WebAssembly<br>
-</li>
-<li>Transparent and reproducible build environments managed via GitHub actions<br>
-</li>
-<li>Dashboards and metadata APIs for monitoring ecosystem health and activity<br>
-</li>
-<li>CRAN-like package repositories with discoverable metrics and documentation</li>
-</ul>
-<p>From the outset, a key objective has been to support curated and reviewed communities — such as rOpenSci and Bioconductor — by offering modern infrastructure without requiring them to redesign their governance model or review processes.</p>
-<p>For Bioconductor, this means incrementally introducing piece-wise functionality, with consideration for established release cycles and quality control mechanisms:</p>
-<ol type="1">
-<li>Setting up independent build and dashboard tooling, replicating processes from the current Bioconductor build systems on R-universe infrastructure</li>
-<li>Mirroring Windows and macOS binaries produced on R-universe to Bioconductor</li>
-<li>Exploring further integration of results and metadata produced by R-universe for Bioconductor health/activity monitoring and aiding the curation processes</li>
-<li>Potential future steps toward deeper automation and harmonization</li>
-</ol>
-<p>By taking small gradual steps towards adopting R-universe components, everyone gets the opportunity to experiment with new tooling and evaluate where adjustments may be needed in order to minimize disruption to existing practices.</p>
-<p>An important milestone in this venture is that Bioconductor now uses R-universe to build the Windows and macOS binaries, which significantly reduces costs and the maintenance load on the Bioconductor team. Beyond binary distribution, we are currently exploring deeper integration of R-universe’s continuous check results into Bioconductor’s quality control and release processes.</p>
-</section>
-<section id="two-universes-release-and-development" class="level2">
-<h2 class="anchored" data-anchor-id="two-universes-release-and-development">Two Universes: Release and Development</h2>
-<p>Bioconductor maintains two distinct repositories:</p>
-<ul>
-<li>A <strong>release</strong> branch for stable packages<br>
-</li>
-<li>A <strong>devel</strong> branch for ongoing development and the next release cycle</li>
-</ul>
-<p>To mirror this structure, we currently operate two dedicated R-universe instances:</p>
-<ul>
-<li><strong>Development branch:</strong> <a href="https://bioc.r-universe.dev">https://bioc.r-universe.dev</a><br>
-</li>
-<li><strong>Release branch:</strong> <a href="https://bioc-release.r-universe.dev">https://bioc-release.r-universe.dev</a></li>
-</ul>
-<p>These universes integrate directly with Bioconductor’s existing Git infrastructure and provide continuous builds for packages in both branches.</p>
-<p>Through the R-universe dashboard, package maintainers and users can:</p>
-<ul>
-<li>Inspect cross-platform check results<br>
-</li>
-<li>Review extended BiocCheck diagnostics<br>
-</li>
-<li>Monitor build logs and dependency graphs<br>
-</li>
-<li>Explore rich package metadata and metrics<br>
-</li>
-<li>Publish binary packages for Windows, macOS, and Linux</li>
-</ul>
-<p>This provides a familiar yet modern interface for Bioconductor contributors, aligned with what users increasingly expect from contemporary R package infrastructure.</p>
-<p>Information about each package is available on <code>https://bioc.r-universe.dev/{pkgname}</code>. For example, <a href="https://bioc.r-universe.dev/DESeq2">https://bioc.r-universe.dev/DESeq2</a> provides details on the DESeq2 package as shown below:</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="https://docs.r-universe.dev/img/bioc-pkg.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="screenshot of r-universe"><img src="https://docs.r-universe.dev/img/bioc-pkg.png" class="img-fluid figure-img" alt="screenshot of r-universe"></a></p>
-<figcaption>screenshot of r-universe</figcaption>
-</figure>
-</div>
-<p>If this is your first time visiting R-universe, we recommend clicking the “Website Tour” button which will walk you through the most important information in 1 or 2 minutes.</p>
-</section>
-<section id="technical-documentation-for-bioconductor-maintainers" class="level2">
-<h2 class="anchored" data-anchor-id="technical-documentation-for-bioconductor-maintainers">Technical Documentation for Bioconductor Maintainers</h2>
-<p>The R-universe project maintains comprehensive technical documentation at <a href="https://docs.r-universe.dev">https://docs.r-universe.dev</a>. For Bioconductor specifically, we created a dedicated section summarizing the most relevant topics for developers to get started with R-universe: <a href="https://docs.r-universe.dev/bioconductor/">https://docs.r-universe.dev/bioconductor/</a></p>
-<p>As the collaboration evolves and new components get introduced, the documentation will continue to be expanded. The goal is to provide Bioconductor maintainers with a clear reference point for understanding how R-universe fits into their development workflow, while maintaining compatibility with the established practices that have made Bioconductor a successful project within the R community.</p>
-</section>
-<section id="looking-ahead" class="level2">
-<h2 class="anchored" data-anchor-id="looking-ahead">Looking Ahead</h2>
-<p>Adopting new infrastructure inevitably involves adjustments. For Bioconductor developers, integrating with a new build and distribution system will likely require some changes to workflows, and time to become familiar with new or different package checks, build diagnostics, and binary distribution.</p>
-<p>However, by gradually moving toward common infrastructure, the Bioconductor project will benefit from improvements that are being continuously developed and maintained for the broader R ecosystem. A system based on modern continuous integration (CI) will provide developers with improved tooling, and will give the core team more time to focus on community coordination and quality control, rather than on maintaining costly infrastructure. At the same time, the shared platform provided by R-universe can help to increase the visibility and accessibility of Bioconductor software to the greater R community.</p>
-<p>We look forward to continuing this alliance and to working with the Bioconductor community to ensure that the next generation of infrastructure supports the project for many years to come.</p>
-
-
-</section>
-
-<p>
-© 2026 Bioconductor. Content is published under <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons CC-BY-4.0 License</a> for the text and <a href="https://opensource.org/licenses/BSD-3-Clause">BSD 3-Clause License</a> for any code. | <a href="https://www.r-bloggers.com">R-Bloggers</a>
-</p> ]]></description>
-  <category>Bioconductor</category>
-  <category>R-universe</category>
-  <category>Infrastructure</category>
-  <guid>https://blog.bioconductor.org/posts/2026-04-08-r-universe-collaboration/</guid>
-  <pubDate>Wed, 08 Apr 2026 00:00:00 GMT</pubDate>
-  <media:content url="https://docs.r-universe.dev/img/bioc-pkg.png" medium="image" type="image/png"/>
 </item>
 </channel>
 </rss>
