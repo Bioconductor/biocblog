@@ -48,9 +48,9 @@ This could give learners a supported route into contributing: learning to use a 
 
 There are several ways to contribute, depending on your experience and interests:
 
-- Package developers could identify documentation gaps and suggest tasks where community input would be welcome.
-- Experienced users and instructors could develop tutorials, examples or bridging materials for learners ready to explore further.
-- Course participants could test instructions, point out confusing steps and take part in supported documentation activities as these develop.
+- **Package developers** could identify documentation gaps and suggest tasks where community input would be welcome.
+- **Experienced users and instructors** could develop tutorials, examples or bridging materials for learners ready to explore further.
+- **Course participants** could test instructions, point out confusing steps and take part in supported documentation activities as these develop.
 
 Interested in joining or following the discussions? [Join Bioconductor Zulip](https://community-bioc.zulipchat.com/join/5pgmjejclfuvidu5dbu46xqw/) and subscribe to the **cytometry** channel to introduce yourself, share ideas and help shape the group’s first activities. Users, learners, instructors and package developers are all welcome.
 
