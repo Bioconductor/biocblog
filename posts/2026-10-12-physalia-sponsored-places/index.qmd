@@ -1,7 +1,6 @@
 ---
 title: "Beyond the course: Reflections from the Bioconductor–Physalia sponsorship programme"
-subtitle: "Researchers reflect on specialist training, new analytical skills, and how they hope to use what they learned."
-description: "Researchers reflect on specialist training, new analytical skills, and how they hope to use what they learned."
+description: "Researchers who received sponsored places through the Bioconductor–Physalia collaboration reflect on what they learned and how they plan to use it."
 author:
   - name: Carlo Pecoraro
   - name: Maria Doyle
