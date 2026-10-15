@@ -10,7 +10,63 @@
 <atom:link href="https://blog.bioconductor.org/index.xml" rel="self" type="application/rss+xml"/>
 <description>A blog for the Bioconductor community!</description>
 <generator>quarto-1.10.19</generator>
-<lastBuildDate>Mon, 12 Oct 2026 00:00:00 GMT</lastBuildDate>
+<lastBuildDate>Thu, 15 Oct 2026 00:00:00 GMT</lastBuildDate>
+<item>
+  <title>Cytometry in R and opportunities to contribute to Bioconductor</title>
+  <dc:creator>Maria Doyle</dc:creator>
+  <dc:creator>David Rach</dc:creator>
+  <link>https://blog.bioconductor.org/posts/2026-10-15-cytometry-in-r/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<p><img src="https://blog.bioconductor.org/posts/2026-10-15-cytometry-in-r/WebsiteBanner.jpg" class="img-fluid"></p>
+<p>Flow cytometry researchers have a growing collection of R and Bioconductor tools available to them. But for someone who is comfortable working with cytometry data and has little programming experience, knowing where to begin can be difficult. That is the gap the free Cytometry in R course aims to fill.</p>
+<section id="a-starting-point-for-cytometry-researchers" class="level2">
+<h2 class="anchored" data-anchor-id="a-starting-point-for-cytometry-researchers">A starting point for cytometry researchers</h2>
+<p>Developed by David Rach and colleagues at the Flow Cytometry Shared Resource of the University of Maryland Greenebaum Comprehensive Cancer Center, Cytometry in R began in February 2026 as a free weekly course for people with cytometry experience but little or no coding background.</p>
+<p>The course starts with practical foundations, including setting up R, working with GitHub and installing packages, before moving into data handling, visualisation and cytometry analysis workflows. Sessions are offered online and in person, with recordings, code and teaching materials openly available. Learners can work through the materials at their own pace and ask questions through GitHub Discussions.</p>
+<p>The response has been encouraging. In his <a href="https://youtu.be/krVI-HXm4_w?si=E3fzttBKJr2zFHfI&amp;t=1475">BioC2026 presentation</a>, David reported close to 2,000 expressions of interest worldwide and several hundred viewers for individual weekly topics.</p>
+<p><a href="https://umgcccfcsr.github.io/CytometryInR/Schedule.html">Explore the course materials and schedule</a> | <a href="https://youtube.com/playlist?list=PL7tGF31b_cVqEkSLFvAX3kbtzUVpMe-VB&amp;si=nsC9Wmg_Jvc5uVG3">Watch course recordings</a></p>
+</section>
+<section id="what-comes-after-the-introductory-course" class="level2">
+<h2 class="anchored" data-anchor-id="what-comes-after-the-introductory-course">What comes after the introductory course?</h2>
+<p>At the October 2026 <a href="https://training.bioconductor.org">Bioconductor Training Committee</a> meeting, David described an opportunity to build on the course. It introduces many cytometry packages, but a gap remains between the introductory training and the knowledge needed to work through some individual package vignettes.</p>
+<p>Additional materials addressing these gaps could help. Package authors, experienced users and instructors might contribute worked examples, reproducible case studies or step-by-step tutorials. These could help learners explore packages beyond those covered by the course and apply them to their own research questions.</p>
+</section>
+<section id="connecting-course-participants-and-package-developers" class="level2">
+<h2 class="anchored" data-anchor-id="connecting-course-participants-and-package-developers">Connecting course participants and package developers</h2>
+<p>David, who recently joined Bioconductor’s <a href="https://bioconductor.org/about/community-advisory-board/">Community Advisory Board</a>, now coordinates the newly established <a href="https://workinggroups.bioconductor.org/currently-active-working-groups-committees.html#cytometry">Bioconductor Cytometry Working Group</a>, which aims to support community efforts around documentation and longer-term maintenance of packages for conventional, spectral, imaging and mass cytometry.</p>
+<p>His plan is to reconnect with package developers, understand their priorities and identify where additional documentation or support would be welcome. One possibility is a focused writing or documentation sprint, bringing interested Cytometry in R participants together with package maintainers to work on specific, manageable tasks.</p>
+<p>This could give learners a supported route into contributing: learning to use a package, gaining confidence with its documentation and examples, and helping improve the experience for the next person.</p>
+</section>
+<section id="get-involved" class="level2">
+<h2 class="anchored" data-anchor-id="get-involved">Get involved</h2>
+<p>There are several ways to contribute, depending on your experience and interests:</p>
+<ul>
+<li><strong>Package developers</strong> could identify documentation gaps and suggest tasks where community input would be welcome.</li>
+<li><strong>Experienced users and instructors</strong> could develop tutorials, examples or bridging materials for learners ready to explore further.</li>
+<li><strong>Course participants</strong> could test instructions, point out confusing steps and take part in supported documentation activities as these develop.</li>
+</ul>
+<p>Interested in joining or following the discussions? <a href="https://community-bioc.zulipchat.com/join/5pgmjejclfuvidu5dbu46xqw/">Join Bioconductor Zulip</a> and subscribe to the <strong>cytometry</strong> channel to introduce yourself, share ideas and help shape the group’s first activities. Users, learners, instructors and package developers are all welcome.</p>
+<p>For questions about the course itself, the <a href="https://github.com/UMGCCCFCSR/CytometryInR/discussions">Cytometry in R GitHub Discussions</a> remain a place to connect with instructors and fellow learners.</p>
+<p>The course offers an accessible starting point for cytometry researchers new to R. The working group provides a way to build on that learning and contribute to the tools and resources the community relies on.</p>
+
+
+</section>
+
+<p>
+© 2026 Bioconductor. Content is published under <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons CC-BY-4.0 License</a> for the text and <a href="https://opensource.org/licenses/BSD-3-Clause">BSD 3-Clause License</a> for any code. | <a href="https://www.r-bloggers.com">R-Bloggers</a>
+</p> ]]></description>
+  <category>Training</category>
+  <category>Community</category>
+  <category>Cytometry</category>
+  <guid>https://blog.bioconductor.org/posts/2026-10-15-cytometry-in-r/</guid>
+  <pubDate>Thu, 15 Oct 2026 00:00:00 GMT</pubDate>
+  <media:content url="https://blog.bioconductor.org/posts/2026-10-15-cytometry-in-r/WebsiteBanner.jpg" medium="image" type="image/jpeg"/>
+</item>
 <item>
   <title>Beyond the course: Reflections from the Bioconductor–Physalia sponsorship programme</title>
   <dc:creator>Carlo Pecoraro</dc:creator>
@@ -1426,59 +1482,6 @@ font-style: inherit;">--alpha</span> 0.05</span></code></pre></div></div>
   <guid>https://blog.bioconductor.org/posts/2026-06-15-new-submission-process-with-Runiverse/</guid>
   <pubDate>Mon, 15 Jun 2026 00:00:00 GMT</pubDate>
   <media:content url="https://blog.bioconductor.org/posts/2026-06-15-new-submission-process-with-Runiverse/featured-image.jpg" medium="image" type="image/jpeg"/>
-</item>
-<item>
-  <title>Developer Engagement and Bioconductor</title>
-  <dc:creator>Nicholas Cooley, PhD</dc:creator>
-  <link>https://blog.bioconductor.org/posts/2026-04-09-developer-engagement/</link>
-  <description><![CDATA[ 
-
-
-
-
-
-<section id="introduction" class="level2">
-<h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
-<p>During the Chan Zuckerberg Institute’s <a href="https://blog.bioconductor.org/posts/2024-07-12-czi-eoss6-grants/">Essential Open Source Software for Science</a> cycle 6 funding round, the Bioconductor Community Manager, Maria Doyle, secured a grant to fund a developer engagement position for Bioconductor, and I was fortunate enough to be offered that role. I am Nick Cooley, and I’m excited to see what this role can bring to Bioconductor. My background is relatively diverse, I received my PhD in organic chemistry from the University of Missouri, and I worked on prokaryotic genomics and functional genomics at the University of Pittsburgh from 2017 to 2025.</p>
-</section>
-<section id="role-responsibilities" class="level2">
-<h2 class="anchored" data-anchor-id="role-responsibilities">Role responsibilities</h2>
-<p>The mandate of this role is somewhat broad. Bioconductor, and academic computing generally face a myriad of distinct and interrelated challenges as hardware, computing paradigms, and education environments change rapidly. Improving developer resources for tackling new and existing challenges, modernizing Bioconductor developer onboarding materials (particularly for early career researchers), and improving recognition mechanisms for community members who volunteer time and effort to the Bioconductor project are all general themes within the role scope.</p>
-</section>
-<section id="some-specific-efforts" class="level2">
-<h2 class="anchored" data-anchor-id="some-specific-efforts">Some Specific Efforts</h2>
-<p>A few of the specific efforts I’ll be working on in this role include:</p>
-<section id="developer-forum" class="level3">
-<h3 class="anchored" data-anchor-id="developer-forum">Developer Forum</h3>
-<p>The <a href="https://bioconductor.org/developers/developers-forum/">Developer Forum</a> had previously been run on a volunteer basis, and served as a community resource for discussing technical and infrastructure issues, concerns, and opportunities. The creation of the Developer Engagement Lead allowed us include the Forum as direct responsibility of this role.</p>
-</section>
-<section id="developer-champions-program" class="level3">
-<h3 class="anchored" data-anchor-id="developer-champions-program">Developer Champions Program</h3>
-<p><a href="https://workinggroups.bioconductor.org">Bioconductor working groups</a> have been a pillar of Bioconductor for a while, and represent a considerable amount of volunteer work towards the project. Improving the visibility of the working groups themselves, and the recognition that project contributors receive for their participation in the working groups can go a long way towards ensuring that that work is valued by contributors home institutions and funding mechanisms. The Champions Program aims to create a clear recognition mechanism for those volunteer efforts.</p>
-</section>
-<section id="bioconductor-hackathon-events" class="level3">
-<h3 class="anchored" data-anchor-id="bioconductor-hackathon-events">Bioconductor hackathon events</h3>
-<p>Community and collaboration are irreplaceable engines of strong research. Many Bioconductor contributors find community and collaboration within their own disciplines or institutions. Providing an avenue for collaborative and technical events within Bioconductor can fill persistent gaps in the the research tooling present in the project, and present networking opportunities for early career researchers. Part of this role is <a href="https://bioconductor.org/developers/bioccommits/">planning and running these events</a>.</p>
-</section>
-<section id="bioconductor-documentation-and-llms" class="level3">
-<h3 class="anchored" data-anchor-id="bioconductor-documentation-and-llms">Bioconductor documentation and LLMs</h3>
-<p>The ways that researchers search for information, tools, and workflow examples are changing with the rise of large language models and their interfaces. There are opportunities for improving how bioinformaticians, especially those outside of the Bioconductor community, find and familiarize themselves with research solutions within the Bioconductor project, including through improvements to website search and documentation discoverability. A long term goal of this role is to work on documentation templates and checking tools to improve their searchability by LLMs, and explore the feasibility of Bioconductor sanctioned and managed LLMs.</p>
-</section>
-</section>
-<section id="how-to-get-in-touch" class="level2">
-<h2 class="anchored" data-anchor-id="how-to-get-in-touch">How to get in touch</h2>
-<p>For developer discussions and ideas, the <a href="https://chat.bioconductor.org">Bioconductor Zulip</a> is the best place to connect.</p>
-
-
-</section>
-
-<p>
-© 2026 Bioconductor. Content is published under <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons CC-BY-4.0 License</a> for the text and <a href="https://opensource.org/licenses/BSD-3-Clause">BSD 3-Clause License</a> for any code. | <a href="https://www.r-bloggers.com">R-Bloggers</a>
-</p> ]]></description>
-  <category>Developer Engagement</category>
-  <guid>https://blog.bioconductor.org/posts/2026-04-09-developer-engagement/</guid>
-  <pubDate>Thu, 09 Apr 2026 00:00:00 GMT</pubDate>
-  <media:content url="https://blog.bioconductor.org/posts/2026-04-09-developer-engagement/featured-image.jpeg" medium="image" type="image/jpeg"/>
 </item>
 </channel>
 </rss>
