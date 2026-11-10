@@ -1,5 +1,5 @@
 ---
-title: "Bioconductor Carpentries workshops in Japanese: a belated report from Japan"
+title: "Bioconductor Carpentries workshops in Japanese: lessons from Japan"
 description: |
   In August and September 2025 the Japanese Bioconductor community ran its
   first two Bioconductor Carpentries workshops taught entirely in Japanese,
