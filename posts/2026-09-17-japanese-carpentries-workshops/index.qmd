@@ -176,7 +176,7 @@ and it is not easy to manage.
 
 At the same time, the world has changed since I made that proposal. AI
 translation quality has improved substantially, and with
-[Agent Skills](https://agentskills.io/) an AI agent can now translate
+[Agent Skills](https://agentskills.io/) an AI agent can now produce a first translation
 according to project rules: a shared glossary, consistent terminology, and
 clear instructions about what to leave untouched, such as code, package names
 and function names. Under these conditions, managing translations directly in
