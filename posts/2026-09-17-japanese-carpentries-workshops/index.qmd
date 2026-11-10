@@ -185,7 +185,7 @@ through pull requests, is more efficient than keeping a Crowdin and GitHub
 integration alive.
 
 So, in order to make Bioconductor teaching materials available in more languages, 
-materials, I no longer think we should keep using
+I no longer think we should keep using
 [bioconductor.crowdin.com](https://bioconductor.crowdin.com/), and I intend
 to retire it. This is not a complaint about Crowdin. It is a recognition that
 the tool was the right one for a different kind of source document, and that
