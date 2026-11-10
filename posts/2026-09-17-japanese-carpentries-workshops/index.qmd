@@ -179,7 +179,7 @@ translation quality has improved substantially, and with
 [Agent Skills](https://agentskills.io/) an AI agent can now produce a first translation
 according to project rules: a shared glossary, consistent terminology, and
 clear instructions about what to leave untouched, such as code, package names
-and function names. Under these conditions, managing translations directly in
+and function names. The resulting translation can then be reviewed by community members with appropriate language and domain expertise. Under these conditions, managing translations directly in
 GitHub, with translated lessons living alongside their sources and reviewed
 through pull requests, is more efficient than keeping a Crowdin and GitHub
 integration alive.
