@@ -9,8 +9,45 @@
 <link>https://blog.bioconductor.org/</link>
 <atom:link href="https://blog.bioconductor.org/index.xml" rel="self" type="application/rss+xml"/>
 <description>A blog for the Bioconductor community!</description>
-<generator>quarto-1.10.19</generator>
-<lastBuildDate>Thu, 15 Oct 2026 00:00:00 GMT</lastBuildDate>
+<generator>quarto-1.11.9</generator>
+<lastBuildDate>Tue, 10 Nov 2026 00:00:00 GMT</lastBuildDate>
+<item>
+  <title>Growing the BiocAsia community</title>
+  <dc:creator>Maria Doyle</dc:creator>
+  <link>https://blog.bioconductor.org/posts/2026-11-10-growing-biocasia-community/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<p>With <a href="https://biocasia2026.bioconductor.org/">BiocAsia 2026</a> coming up in Melbourne, community members have been organising seminars and exploring ways to take part locally.</p>
+<p>More than 200 people joined the latest <a href="https://biocasia2026.bioconductor.org/seminars/">BiocAsia seminar</a> on 13 October 2026. The session ran for two and a half hours, with discussion continuing well beyond the planned finish. It was the first seminar in the series hosted from China, with Mandarin as the main language. Shixiang Wang spoke about building an open-source ecosystem around UCSC Xena and visualisation tools, and Zhougeng Xu shared his experience developing open-source tools for AI in science.</p>
+<p>The seminar was organised by Zuguang Gu, a member of the <a href="https://bioconductor.org/about/community-advisory-board/">Bioconductor Community Advisory Board</a> and an active contributor to BiocAsia based in China. The next seminar will take place in December.</p>
+<div style="text-align: center;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://blog.bioconductor.org/posts/2026-11-10-growing-biocasia-community/biocasia-seminar.jpg" class="img-fluid figure-img" alt="Screenshot of the online seminar during Zhougeng Xu’s talk."></p>
+<figcaption>Zhougeng Xu’s presentation at the October 2026 BiocAsia seminar</figcaption>
+</figure>
+</div>
+</div>
+<p>Alongside the seminars, Jyoti Bhogal and Malvika Kharbanda have been discussing watch party options in India for BiocAsia 2026. The aim is to give people who cannot travel to Melbourne a chance to take part in the conference and meet others nearby.</p>
+<p>Join us at <a href="https://biocasia2026.bioconductor.org/">BiocAsia 2026</a> on <strong>19 and 20 November at RMIT City Campus, Melbourne</strong>, for workshops, talks and a chance to meet others working with R and Bioconductor. <a href="https://biocasia2026.bioconductor.org/registration/"><strong>Registration is open</strong></a>, and we’d love to see you there.</p>
+<p>To keep in touch between events, <a href="https://community-bioc.zulipchat.com/join/cr4isltci5v232hkkrhti656/">join the <strong>BiocAsia channel on Bioconductor Zulip</strong></a>. It’s a place to hear about future seminars, discuss watch parties and share ideas for other activities.</p>
+<p>A big thank you to the speakers, organisers and everyone giving their time to make these activities happen.</p>
+
+
+
+<p>
+© 2026 Bioconductor. Content is published under <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons CC-BY-4.0 License</a> for the text and <a href="https://opensource.org/licenses/BSD-3-Clause">BSD 3-Clause License</a> for any code. | <a href="https://www.r-bloggers.com">R-Bloggers</a>
+</p> ]]></description>
+  <category>Bioconductor</category>
+  <category>events</category>
+  <guid>https://blog.bioconductor.org/posts/2026-11-10-growing-biocasia-community/</guid>
+  <pubDate>Tue, 10 Nov 2026 00:00:00 GMT</pubDate>
+  <media:content url="https://blog.bioconductor.org/posts/2026-11-10-growing-biocasia-community/biocasia-seminar.jpg" medium="image" type="image/jpeg" height="95" width="144"/>
+</item>
 <item>
   <title>Cytometry in R and opportunities to contribute to Bioconductor</title>
   <dc:creator>Maria Doyle</dc:creator>
@@ -65,7 +102,7 @@
   <category>Cytometry</category>
   <guid>https://blog.bioconductor.org/posts/2026-10-15-cytometry-in-r/</guid>
   <pubDate>Thu, 15 Oct 2026 00:00:00 GMT</pubDate>
-  <media:content url="https://blog.bioconductor.org/posts/2026-10-15-cytometry-in-r/WebsiteBanner.jpg" medium="image" type="image/jpeg"/>
+  <media:content url="https://blog.bioconductor.org/posts/2026-10-15-cytometry-in-r/WebsiteBanner.jpg" medium="image" type="image/jpeg" height="44" width="144"/>
 </item>
 <item>
   <title>Beyond the course: Reflections from the Bioconductor–Physalia sponsorship programme</title>
@@ -144,7 +181,7 @@
   <category>Physalia</category>
   <guid>https://blog.bioconductor.org/posts/2026-10-12-physalia-sponsored-places/</guid>
   <pubDate>Mon, 12 Oct 2026 00:00:00 GMT</pubDate>
-  <media:content url="https://blog.bioconductor.org/posts/2026-10-12-physalia-sponsored-places/sponsored-places-map.jpg" medium="image" type="image/jpeg"/>
+  <media:content url="https://blog.bioconductor.org/posts/2026-10-12-physalia-sponsored-places/sponsored-places-map.jpg" medium="image" type="image/jpeg" height="76" width="144"/>
 </item>
 <item>
   <title>A Collaboration Fest for research software interoperability</title>
@@ -220,7 +257,7 @@
   <category>nf-core</category>
   <guid>https://blog.bioconductor.org/posts/2026-10-07-biofair-cofest/</guid>
   <pubDate>Wed, 07 Oct 2026 00:00:00 GMT</pubDate>
-  <media:content url="https://blog.bioconductor.org/posts/2026-10-07-biofair-cofest/biocjobs-workflow.jpg" medium="image" type="image/jpeg"/>
+  <media:content url="https://blog.bioconductor.org/posts/2026-10-07-biofair-cofest/biocjobs-workflow.jpg" medium="image" type="image/jpeg" height="72" width="144"/>
 </item>
 <item>
   <title>BioC2026 conference recap</title>
@@ -411,7 +448,7 @@ See the announcement here: <a href="https://lnkd.in/p/emAWMGX">https://lnkd.in/p
   <category>Bioconductor</category>
   <guid>https://blog.bioconductor.org/posts/2026-09-30-BioC2026-recap/</guid>
   <pubDate>Wed, 30 Sep 2026 00:00:00 GMT</pubDate>
-  <media:content url="https://blog.bioconductor.org/posts/2026-09-30-BioC2026-recap/media/bioc2026_groupshot.jpg" medium="image" type="image/jpeg"/>
+  <media:content url="https://blog.bioconductor.org/posts/2026-09-30-BioC2026-recap/media/bioc2026_groupshot.jpg" medium="image" type="image/jpeg" height="108" width="144"/>
 </item>
 <item>
   <title>BiocJobs: declaring dispatchable jobs inside Bioconductor packages</title>
@@ -982,7 +1019,7 @@ font-style: inherit;">--alpha</span> 0.05</span></code></pre></div></div>
   <category>galaxy</category>
   <guid>https://blog.bioconductor.org/posts/2026-08-21-biocjobs/</guid>
   <pubDate>Fri, 21 Aug 2026 00:00:00 GMT</pubDate>
-  <media:content url="https://blog.bioconductor.org/posts/2026-08-21-biocjobs/biocjobs-targets.jpg" medium="image" type="image/jpeg"/>
+  <media:content url="https://blog.bioconductor.org/posts/2026-08-21-biocjobs/biocjobs-targets.jpg" medium="image" type="image/jpeg" height="76" width="144"/>
 </item>
 <item>
   <title>Introducing the Bioconductor Student-ECR Council</title>
@@ -1092,7 +1129,7 @@ font-style: inherit;">--alpha</span> 0.05</span></code></pre></div></div>
   <category>ecr</category>
   <guid>https://blog.bioconductor.org/posts/2026-08-06-student-ecr-intro/</guid>
   <pubDate>Thu, 06 Aug 2026 00:00:00 GMT</pubDate>
-  <media:content url="https://blog.bioconductor.org/posts/2026-08-06-student-ecr-intro/first-zoom.jpg" medium="image" type="image/jpeg"/>
+  <media:content url="https://blog.bioconductor.org/posts/2026-08-06-student-ecr-intro/first-zoom.jpg" medium="image" type="image/jpeg" height="119" width="144"/>
 </item>
 <item>
   <title>EuroBioC2026 conference recap</title>
@@ -1315,7 +1352,7 @@ font-style: inherit;">--alpha</span> 0.05</span></code></pre></div></div>
   <category>Bioconductor</category>
   <guid>https://blog.bioconductor.org/posts/2026-06-19-EuroBioc2026-recap/</guid>
   <pubDate>Fri, 19 Jun 2026 00:00:00 GMT</pubDate>
-  <media:content url="https://blog.bioconductor.org/posts/2026-06-19-EuroBioc2026-recap/media/eurobioc-main-image.jpg" medium="image" type="image/jpeg"/>
+  <media:content url="https://blog.bioconductor.org/posts/2026-06-19-EuroBioc2026-recap/media/eurobioc-main-image.jpg" medium="image" type="image/jpeg" height="108" width="144"/>
 </item>
 <item>
   <title>Bioconductor-centric hackathon on spatial omics and image-derived data</title>
@@ -1377,7 +1414,7 @@ font-style: inherit;">--alpha</span> 0.05</span></code></pre></div></div>
   <category>hackathon</category>
   <guid>https://blog.bioconductor.org/posts/2026-06-17-venice/</guid>
   <pubDate>Wed, 17 Jun 2026 00:00:00 GMT</pubDate>
-  <media:content url="https://blog.bioconductor.org/posts/2026-06-17-venice/terrace.jpeg" medium="image" type="image/jpeg"/>
+  <media:content url="https://blog.bioconductor.org/posts/2026-06-17-venice/terrace.jpeg" medium="image" type="image/jpeg" height="108" width="144"/>
 </item>
 <item>
   <title>Bioconductor Maintainer Validation</title>
@@ -1425,63 +1462,7 @@ font-style: inherit;">--alpha</span> 0.05</span></code></pre></div></div>
   <category>Policies and Procedures</category>
   <guid>https://blog.bioconductor.org/posts/2026-06-16-maintainer-validation/</guid>
   <pubDate>Tue, 16 Jun 2026 00:00:00 GMT</pubDate>
-  <media:content url="https://blog.bioconductor.org/posts/2026-06-16-maintainer-validation/feature-image.jpg" medium="image" type="image/jpeg"/>
-</item>
-<item>
-  <title>New Package Submission Process</title>
-  <dc:creator>Lori Shepherd-Kern</dc:creator>
-  <link>https://blog.bioconductor.org/posts/2026-06-15-new-submission-process-with-Runiverse/</link>
-  <description><![CDATA[ 
-
-
-
-
-
-<section id="introduction" class="level2">
-<h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
-<p>Bioconductor is moving towards using R-universe for its daily build system. See our previous blog post <a href="https://blog.bioconductor.org/posts/2026-04-08-r-universe-collaboration/">Collaborating between Bioconductor and R-universe on Development of Common Infrastructure</a>. As we move in this direction it was also necessary to update the submission process for Bioconductor packages. While the daily builders are still transitioning, the new submission process location is now live. The new system utilizes GitHub Actions to trigger review milestones and R-Universe as the build/check backend. The new system provides a smoother experience; it is more automated and avoids administrative steps that have historically bottlenecked the review process.</p>
-</section>
-<section id="information" class="level2">
-<h2 class="anchored" data-anchor-id="information">Information</h2>
-<section id="location" class="level4">
-<h4 class="anchored" data-anchor-id="location">Location:</h4>
-<p>The new location for submitting new packages to Bioconductor for review is <a href="https://github.com/Bioconductor/BiocContributions">BiocContributions</a>. This replaces the old location at <code>Bioconductor/Contributions</code>.</p>
-</section>
-<section id="documentation" class="level4">
-<h4 class="anchored" data-anchor-id="documentation">Documentation</h4>
-<p>There is documentation on <a href="https://github.com/Bioconductor/BiocContributions/blob/devel/docs/submitters.md">What to Expect</a> as well as a detailed <a href="https://docs.google.com/presentation/d/1EK2wsDoRbtVGECdYC1GU5nGtYkN-h_7R-on-CSUC6CQ/edit?slide=id.p#slide=id.p">Slide Deck</a>.</p>
-<p>There is also a <a href="https://github.com/Bioconductor/BiocContributions/blob/devel/docs/FAQs.md">FAQ</a> for commonly asked questions, concerns, or troubleshooting.</p>
-<p>If you need to report an issue with the new system, please open an Issue on the <a href="https://github.com/BiocStaging/BiocSubmissionProcess">BiocSubmissionProcess</a> GitHub repository.</p>
-</section>
-<section id="what-about-bioconductorcontributions" class="level4">
-<h4 class="anchored" data-anchor-id="what-about-bioconductorcontributions">What about Bioconductor/Contributions</h4>
-<p>The submission location at <code>Bioconductor/Contributions</code> has been frozen and will no longer accept new issues. <a href="https://github.com/Bioconductor/BiocContributions">BiocContributions</a> replaces this location. If you already submitted to the old location, if you are assigned a reviewer, your review will finish there. If you have not been assigned a reviewer yet, we will be posting shortly to close out your submission and move to the new location.</p>
-</section>
-<section id="easier-reproducibility" class="level4">
-<h4 class="anchored" data-anchor-id="easier-reproducibility">Easier Reproducibility</h4>
-<p>One of the frequent comments we receive is how do we reproduce the results of the build reports Bioconductor creates. The switch to using R-universe as the building and checking backend allows for a reproducible testing environment. Any maintainer can apply R-Universe checking on their personal GitHub repository for a Bioconductor package by following these <a href="https://docs.r-universe.dev/bioconductor/#debugging-the-ci">instructions</a>. This allows for a maintainer to test before submitting to Bioconductor and testing any future changes before pushing directly to Bioconductor.</p>
-</section>
-<section id="thank-you" class="level4">
-<h4 class="anchored" data-anchor-id="thank-you">Thank you!</h4>
-<p>We appreciate your patience and understanding as we transition to the new system.</p>
-
-
-</section>
-</section>
-
-<p>
-© 2026 Bioconductor. Content is published under <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons CC-BY-4.0 License</a> for the text and <a href="https://opensource.org/licenses/BSD-3-Clause">BSD 3-Clause License</a> for any code. | <a href="https://www.r-bloggers.com">R-Bloggers</a>
-</p> ]]></description>
-  <category>Bioconductor</category>
-  <category>R-universe</category>
-  <category>Infrastructure</category>
-  <category>GitHub Actions</category>
-  <category>Developer Engagement</category>
-  <category>New Submissions</category>
-  <category>bioconductor-evolution</category>
-  <guid>https://blog.bioconductor.org/posts/2026-06-15-new-submission-process-with-Runiverse/</guid>
-  <pubDate>Mon, 15 Jun 2026 00:00:00 GMT</pubDate>
-  <media:content url="https://blog.bioconductor.org/posts/2026-06-15-new-submission-process-with-Runiverse/featured-image.jpg" medium="image" type="image/jpeg"/>
+  <media:content url="https://blog.bioconductor.org/posts/2026-06-16-maintainer-validation/feature-image.jpg" medium="image" type="image/jpeg" height="74" width="144"/>
 </item>
 </channel>
 </rss>
