@@ -29,8 +29,7 @@ lightbox: true
 This post should have been written a year ago. The two workshops it describes
 took place in August and September 2025, and a report in Japanese appeared in
 the newsletter of the Japanese Society for Bioinformatics (JSBi) in January
-2026. The report to the wider, English-speaking Bioconductor community is only
-arriving now, in September 2026.
+2026. The report to the wider, English-speaking Bioconductor community is only arriving now, in November 2026.
 
 I am sorry for the delay. I owe this apology to the participants, helpers and
 co-hosts who made the workshops happen, and to everyone in the Bioconductor
