@@ -1,8 +1,8 @@
 ---
 title: "Introducing PLaMo-based AI translation for Bioconductor lessons"
 description: |
-  Explore five language editions of the introductory Bioconductor lesson
-  and a GitHub-based workflow that combines local AI translation,
+  Explore five language editions of the introductory Bioconductor Carpentry
+  lesson and a GitHub-based workflow that combines local AI translation,
   reusable translation memory and community review.
 author:
   - name: Kozo Nishida
