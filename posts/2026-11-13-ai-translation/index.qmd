@@ -203,8 +203,9 @@ the English lesson. We especially welcome help with:
 Open an issue in the relevant repository with the episode name, the passage
 you are referring to, and a suggested correction or explanation. Pull requests
 are welcome too; please follow that repository's contribution and translation
-guides. If you are interested in another language or another lesson, join the
-discussion in the
+guides. If you are interested in reviewing translations, adding support for
+another language, or translating another lesson, join the discussion in the
+#documentation-translation channel on the
 [Bioconductor community chat](https://chat.bioconductor.org/).
 
 Thank you to the original lesson authors and maintainers, and to everyone
