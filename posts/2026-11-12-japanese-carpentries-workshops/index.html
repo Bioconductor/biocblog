@@ -1,0 +1,857 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.11.9">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Kozo Nishida">
+<meta name="dcterms.date" content="2026-11-12">
+<meta name="description" content="In August and September 2025 the Japanese Bioconductor community ran its first two Bioconductor Carpentries workshops taught entirely in Japanese, co-hosted with the Japanese Society for Bioinformatics. This is a long-overdue report on those workshops, an honest account of why it is late, and a look at where Bioconductor translation work is heading next.">
+
+<title>Bioconductor Carpentries workshops in Japanese: lessons from Japan – Bioconductor community blog</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/scrollable-regions/scrollable-regions.js" type="module"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-63b5708e65d6cd79cd7618c58d0c21e7.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-b19755bc548e5ae647c056af8171e9df.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="../../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="../../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.css" rel="stylesheet">
+
+
+<link rel="stylesheet" href="../../styles.css">
+<meta property="og:title" content="Bioconductor Carpentries workshops in Japanese: lessons from Japan – Bioconductor community blog">
+<meta property="og:description" content="In August and September 2025 the Japanese Bioconductor community ran its first two Bioconductor Carpentries workshops taught entirely in Japanese, co-hosted with the Japanese Society for Bioinformatics. This is a long-overdue report on those workshops, an honest account of why it is late, and a look at where Bioconductor translation work is heading next.">
+<meta property="og:image" content="https://blog.bioconductor.org/posts/2026-11-12-japanese-carpentries-workshops/kyoto-workshop.jpg">
+<meta property="og:site_name" content="Bioconductor community blog">
+<meta property="og:image:height" content="486">
+<meta property="og:image:width" content="479">
+</head>
+
+<body class="nav-fixed quarto-light"><a id="quarto-skip-link" class="visually-hidden-focusable" href="#quarto-document-content">Skip to main content</a>
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top quarto-banner">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark" aria-label="Site">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">Bioconductor community blog</span>
+    </a>
+  </div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../about.html"> 
+<span class="menu-text">About</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../contributing.html"> 
+<span class="menu-text">Contributing</span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/bioconductor/biocblog"> <i class="bi bi-github" role="img">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://www.linkedin.com/company/bioconductor/"> <i class="bi bi-linkedin" role="img">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://bsky.app/profile/bioconductor.bsky.social"> <i class="bi bi-bluesky" role="img">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://genomic.social/@bioconductor"> <i class="bi bi-mastodon" role="img">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://www.youtube.com/user/bioconductor"> <i class="bi bi-youtube" role="img">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://chat.bioconductor.org/"> <i class="bi bi-chat-dots" role="img">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="../../index.xml"> <i class="bi bi-rss" role="img">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+            <div id="quarto-search" class="" title="Search"></div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<header id="title-block-header" class="quarto-title-block default page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      <h1 class="title">Bioconductor Carpentries workshops in Japanese: lessons from Japan</h1>
+                  <div>
+        <div class="description">
+          <p>In August and September 2025 the Japanese Bioconductor community ran its first two Bioconductor Carpentries workshops taught entirely in Japanese, co-hosted with the Japanese Society for Bioinformatics. This is a long-overdue report on those workshops, an honest account of why it is late, and a look at where Bioconductor translation work is heading next.</p>
+        </div>
+      </div>
+                          <div class="quarto-categories">
+                <div class="quarto-category">education</div>
+                <div class="quarto-category">events</div>
+                <div class="quarto-category">Carpentries</div>
+                <div class="quarto-category">CZI</div>
+                <div class="quarto-category">Japanese</div>
+              </div>
+                  </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta">
+
+      <div>
+      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-contents">
+               <p><a href="https://github.com/kozo2">Kozo Nishida</a> </p>
+            </div>
+    </div>
+      
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">November 12, 2026</p>
+      </div>
+    </div>
+    
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" aria-labelledby="toc-title" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul class="collapse">
+  <li><a href="#an-apology-first" id="toc-an-apology-first" class="nav-link active" data-scroll-target="#an-apology-first">An apology first</a></li>
+  <li><a href="#the-first-bioconductor-carpentries-workshops-taught-in-japanese" id="toc-the-first-bioconductor-carpentries-workshops-taught-in-japanese" class="nav-link" data-scroll-target="#the-first-bioconductor-carpentries-workshops-taught-in-japanese">The first Bioconductor Carpentries workshops taught in Japanese</a></li>
+  <li><a href="#where-the-materials-live" id="toc-where-the-materials-live" class="nav-link" data-scroll-target="#where-the-materials-live">Where the materials live</a></li>
+  <li><a href="#why-this-post-is-late-and-what-i-have-learned-about-our-translation-setup" id="toc-why-this-post-is-late-and-what-i-have-learned-about-our-translation-setup" class="nav-link" data-scroll-target="#why-this-post-is-late-and-what-i-have-learned-about-our-translation-setup">Why this post is late, and what I have learned about our translation setup</a></li>
+  <li><a href="#what-comes-next" id="toc-what-comes-next" class="nav-link" data-scroll-target="#what-comes-next">What comes next</a></li>
+  <li><a href="#get-involved" id="toc-get-involved" class="nav-link" data-scroll-target="#get-involved">Get involved</a></li>
+  <li><a href="#acknowledgements" id="toc-acknowledgements" class="nav-link" data-scroll-target="#acknowledgements">Acknowledgements</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content quarto-banner-title-block" id="quarto-document-content" tabindex="-1">
+
+
+
+
+
+<section id="an-apology-first" class="level2">
+<h2 class="anchored" data-anchor-id="an-apology-first">An apology first</h2>
+<p>This post should have been written a year ago. The two workshops it describes took place in August and September 2025, and a report in Japanese appeared in the newsletter of the Japanese Society for Bioinformatics (JSBi) in January 2026. The report to the wider, English-speaking Bioconductor community is only arriving now, in November 2026.</p>
+<p>I am sorry for the delay. I owe this apology to the participants, helpers and co-hosts who made the workshops happen, and to everyone in the Bioconductor community who has been curious about how teaching Bioconductor in a local language went in Japan. Part of the reason for the delay is explained later in this post, because it is tied to the future of our translation infrastructure.</p>
+</section>
+<section id="the-first-bioconductor-carpentries-workshops-taught-in-japanese" class="level2">
+<h2 class="anchored" data-anchor-id="the-first-bioconductor-carpentries-workshops-taught-in-japanese">The first Bioconductor Carpentries workshops taught in Japanese</h2>
+<p>Bioconductor has been a member organisation of <a href="https://carpentries.org/">The Carpentries</a> since August 2022 (<a href="https://blog.bioconductor.org/posts/2022-07-12-carpentries-membership/">announcement</a>). The Bioconductor Training Committee maintains a set of Carpentries-style <a href="https://training.bioconductor.org/#modules">lesson modules</a>, ranging from an introduction to R and Bioconductor to an advanced course on bulk RNA-seq analysis. How these lessons are developed and taught is described in <a href="https://doi.org/10.1371/journal.pcbi.1012925">Drnevich et al.&nbsp;(2025), <em>PLOS Computational Biology</em></a>.</p>
+<p>Bringing this training to communities around the world in their own languages is supported by the Chan Zuckerberg Initiative (CZI) Essential Open Source Software for Science (EOSS) grant <a href="https://chanzuckerberg.com/eoss/proposals/delivering-high-quality-bioconductor-training-for-a-worldwide-community/"><em>Delivering High Quality Bioconductor Training for a Worldwide Community</em></a>.</p>
+<p>As part of that effort, the Japanese Bioconductor community organised two two-day workshops in 2025, co-hosted with the <a href="https://www.jsbi.org/">Japanese Society for Bioinformatics (JSBi)</a>. To our knowledge these were the first Bioconductor workshops ever taught in Japanese. Both were hybrid events, with an in-person classroom and a Zoom connection for remote participants. I (Kozo Nishida) was the instructor for both. I serve on the Bioconductor Community Advisory Board and in the working group that translates Bioconductor teaching materials, and these workshops were the first time our Japanese translations were used in front of a class.</p>
+<section id="workshop-1-introduction-to-r-and-bioconductor-osaka-56-august-2025" class="level3">
+<h3 class="anchored" data-anchor-id="workshop-1-introduction-to-r-and-bioconductor-osaka-56-august-2025">Workshop 1: Introduction to R and Bioconductor (Osaka, 5–6 August 2025)</h3>
+<p>The first workshop took place at the Taniguchi Memorial Hall in the Integrated Life Science Building of the Research Institute for Microbial Diseases, Osaka University, with Naohisa Goto as helper and local host.</p>
+<ul>
+<li><strong>Day 1</strong> followed the Japanese translation of <a href="https://bioconductor-translations.github.io/bioc-intro-ja/"><em>Introduction to data analysis with R and Bioconductor</em></a> (<code>bioc-intro</code>): how to organise data for analysis, then data manipulation and visualisation with the tidyverse packages, taught by live coding with every participant typing along.</li>
+<li><strong>Day 2</strong> followed the Japanese translation of <a href="https://bioconductor-translations.github.io/bioc-project-ja/"><em>The Bioconductor project</em></a> (<code>bioc-project</code>): installing Bioconductor packages, getting help, S4 classes, biological sequences, <code>GenomicRanges</code>, annotation resources and <code>SummarizedExperiment</code>.</li>
+</ul>
+<p>The <a href="https://bioconductor-translations.github.io/2025-08-05-osaka/">workshop website</a> and <a href="https://bioconductor-translations.github.io/2025-08-05-osaka-slides/">slides</a> are online, in Japanese.</p>
+</section>
+<section id="workshop-2-rna-seq-analysis-with-bioconductor-kyoto-1112-september-2025" class="level3">
+<h3 class="anchored" data-anchor-id="workshop-2-rna-seq-analysis-with-bioconductor-kyoto-1112-september-2025">Workshop 2: RNA-seq analysis with Bioconductor (Kyoto, 11–12 September 2025)</h3>
+<p>The second workshop was the advanced course, held at the Inamori Memorial Hall of Kyoto Prefectural University, with Atsushi Fukushima as helper and local host. We used the Japanese translation of <a href="https://bioconductor-translations.github.io/bioc-rnaseq-ja/"><em>RNA-seq analysis with Bioconductor</em></a> (<code>bioc-rnaseq</code>) and live-coded the whole bulk RNA-seq workflow, apart from the read quantification step that produces the count matrix.</p>
+<ul>
+<li><strong>Day 1</strong> covered an introduction to RNA-seq, RStudio projects and the experimental data, importing quantified data into R and annotating it, and exploratory analysis and quality control, everything that comes before differential expression analysis.</li>
+<li><strong>Day 2</strong> covered differential expression analysis, a closer look at design matrices, and gene set enrichment analysis for interpreting the results.</li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="kyoto-workshop.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="The second workshop, at Kyoto Prefectural University."><img src="kyoto-workshop.jpg" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="A lecture room at Kyoto Prefectural University during the second workshop. Participants sit at long desks with laptops while the instructor stands at the front next to a screen showing R code."></a></p>
+</figure>
+</div>
+<figcaption>The second workshop, at Kyoto Prefectural University.</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="bioc-rnaseq-ja.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="The Japanese translation of the RNA-seq analysis with Bioconductor lesson, used in the second workshop."><img src="bioc-rnaseq-ja.jpg" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="Screenshot of the Japanese translation of the RNA-seq analysis with Bioconductor lesson, showing the gene set enrichment analysis episode with its questions and objectives in Japanese."></a></p>
+</figure>
+</div>
+<figcaption>The Japanese translation of the <em>RNA-seq analysis with Bioconductor</em> lesson, used in the second workshop.</figcaption>
+</figure>
+</div>
+<p>The <a href="https://bioconductor-translations.github.io/2025-09-11-kyoto/">workshop website</a> and <a href="https://bioconductor-translations.github.io/2025-09-11-kyoto-slides/">slides</a> are online as well.</p>
+</section>
+<section id="who-took-part" class="level3">
+<h3 class="anchored" data-anchor-id="who-took-part">Who took part</h3>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Workshop</th>
+<th>In person</th>
+<th>Online</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Osaka, August 2025</td>
+<td>about 3</td>
+<td>about 45</td>
+</tr>
+<tr class="even">
+<td>Kyoto, September 2025</td>
+<td>about 6</td>
+<td>about 45</td>
+</tr>
+</tbody>
+</table>
+<p>Attendance fluctuated over the two long days, so these are approximate numbers. Most participants joined online, which reflects how geographically spread out the Japanese bioinformatics community is. The hybrid format clearly lowered the barrier to attending.</p>
+<p>We are grateful to JSBi for co-hosting, to the venue hosts at Osaka University and Kyoto Prefectural University, and above all to everyone who took part. We intend to keep running and improving these workshops. Our hope is that participants will not only learn from them but go on to teach, so that the circle keeps widening.</p>
+<p>A report on both workshops, written in Japanese together with Naohisa Goto and Atsushi Fukushima, appeared in <a href="https://www.jsbi.org/media/files/_u/topic/file/nl48.pdf">JSBi Newsletter No.&nbsp;48 (January 2026, PDF in Japanese)</a>.</p>
+</section>
+</section>
+<section id="where-the-materials-live" class="level2">
+<h2 class="anchored" data-anchor-id="where-the-materials-live">Where the materials live</h2>
+<p>Everything we used is in the <a href="https://github.com/bioconductor-translations">bioconductor-translations</a> GitHub organisation, and anyone is welcome to use it for their own teaching:</p>
+<ul>
+<li>Japanese lesson translations: <a href="https://github.com/bioconductor-translations/bioc-intro-ja">bioc-intro-ja</a>, <a href="https://github.com/bioconductor-translations/bioc-project-ja">bioc-project-ja</a> and <a href="https://github.com/bioconductor-translations/bioc-rnaseq-ja">bioc-rnaseq-ja</a>.</li>
+<li>Workshop websites and slides: <a href="https://github.com/bioconductor-translations/2025-08-05-osaka">2025-08-05-osaka</a>, <a href="https://github.com/bioconductor-translations/2025-08-05-osaka-slides">2025-08-05-osaka-slides</a>, <a href="https://github.com/bioconductor-translations/2025-09-11-kyoto">2025-09-11-kyoto</a> and <a href="https://github.com/bioconductor-translations/2025-09-11-kyoto-slides">2025-09-11-kyoto-slides</a>.</li>
+<li>The organisation also hosts the French translation <a href="https://bioconductor-translations.github.io/bioc-intro-fr/">bioc-intro-fr</a>, which was used in the <a href="https://blog.bioconductor.org/posts/2025-12-11-benin-course/">Bioconductor course in Benin</a>.</li>
+</ul>
+</section>
+<section id="why-this-post-is-late-and-what-i-have-learned-about-our-translation-setup" class="level2">
+<h2 class="anchored" data-anchor-id="why-this-post-is-late-and-what-i-have-learned-about-our-translation-setup">Why this post is late, and what I have learned about our translation setup</h2>
+<p>Here is the honest part. One reason this post took so long is that I have not been able to maintain <a href="https://bioconductor.crowdin.com/">bioconductor.crowdin.com</a> and the <a href="https://github.com/bioconductor-translations">bioconductor-translations</a> repositories the way they deserve, and I felt guilty writing a cheerful report about workshops while the infrastructure behind them was falling behind.</p>
+<p>Some background. I was the one who proposed that the Bioconductor community use Crowdin to manage translations. The model was <a href="https://turingway.crowdin.com/">The Turing Way</a>, which translates its handbook on Crowdin with great success. Crowdin’s support for open-source projects has been generous, and I remain very grateful for it.</p>
+<p>However, the two projects differ in an important way. The Turing Way’s source documents are plain Markdown. The Carpentries lessons are written in R Markdown, with executable code chunks and lesson-specific fenced blocks for callouts, challenges and solutions. To feed them into Crowdin we had to convert R Markdown to Markdown into separate translation repositories, sync the translated strings back, and reassemble buildable lessons from the result. The Crowdin and GitHub integration that this requires is complex and fragile, and it is not easy to manage.</p>
+<p>At the same time, the world has changed since I made that proposal. AI translation quality has improved substantially, and with <a href="https://agentskills.io/">Agent Skills</a> an AI agent can now produce a first translation according to project rules: a shared glossary, consistent terminology, and clear instructions about what to leave untouched, such as code, package names and function names. The resulting translation can then be reviewed by community members with appropriate language and domain expertise. Under these conditions, managing translations directly in GitHub, with translated lessons living alongside their sources and reviewed through pull requests, is more efficient than keeping a Crowdin and GitHub integration alive.</p>
+<p>So, in order to make Bioconductor teaching materials available in more languages, I no longer think we should keep using <a href="https://bioconductor.crowdin.com/">bioconductor.crowdin.com</a>, and I intend to retire it. This is not a complaint about Crowdin. It is a recognition that the tool was the right one for a different kind of source document, and that a simpler workflow now serves our lessons better.</p>
+</section>
+<section id="what-comes-next" class="level2">
+<h2 class="anchored" data-anchor-id="what-comes-next">What comes next</h2>
+<p>I am setting up new, GitHub-only translation repositories together with an Agent Skill for rule-following AI translation, its documentation, and the outreach needed to bring more languages and more contributors on board. This work is supported by the <a href="https://bioconductor.org/developers/developer-champions-program/">Bioconductor Developer Champions Program</a>.</p>
+<p>Please give me a little more time before the formal announcement. When it is ready, I will share it here on the blog.</p>
+</section>
+<section id="get-involved" class="level2">
+<h2 class="anchored" data-anchor-id="get-involved">Get involved</h2>
+<ul>
+<li>Teach with the materials. The Japanese lessons, the workshop websites and the slides linked above are openly licensed and free for anyone to use.</li>
+<li>If you are interested in translating Bioconductor teaching materials into your own language, watch the <a href="https://github.com/bioconductor-translations">bioconductor-translations</a> organisation for the upcoming announcement.</li>
+<li>Join the Bioconductor community through the <a href="https://www.bioconductor.org/help/support/">support site</a> and the <a href="https://chat.bioconductor.org/">community chat</a>.</li>
+</ul>
+</section>
+<section id="acknowledgements" class="level2">
+<h2 class="anchored" data-anchor-id="acknowledgements">Acknowledgements</h2>
+<p>Thank you to Naohisa Goto and Atsushi Fukushima for helping at and hosting the workshops, to JSBi for co-hosting them, and to every participant. This work was supported by the <a href="https://chanzuckerberg.com/eoss/proposals/delivering-high-quality-bioconductor-training-for-a-worldwide-community/">Chan Zuckerberg Initiative EOSS program</a> and by the <a href="https://bioconductor.org/developers/developer-champions-program/">Bioconductor Developer Champions Program</a>.</p>
+
+
+</section>
+
+<p>
+© 2026 Bioconductor. Content is published under <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons CC-BY-4.0 License</a> for the text and <a href="https://opensource.org/licenses/BSD-3-Clause">BSD 3-Clause License</a> for any code. | <a href="https://www.r-bloggers.com">R-Bloggers</a>
+</p></main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/blog\.bioconductor\.org\/");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+      window.quartoDecorateExternalLinks = function (root) {
+     var links = (root || window.document).querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+          if (!link.classList.contains('no-external-icon')) {
+          }
+        }
+      }
+      };
+      window.quartoDecorateExternalLinks(window.document);
+    // Esc closes the popup (WCAG 1.4.13) and focus leaving both trigger and
+    // popup closes it (WCAG 2.4.11); tippy handles neither for interactive popups.
+    const hideOnEscAndFocusOut = {
+      name: 'hideOnEscAndFocusOut',
+      defaultValue: true,
+      fn(instance) {
+        const dismiss = () => {
+          // A show scheduled by the trigger delay would otherwise reopen it
+          instance.clearDelayTimeouts();
+          instance.hide();
+        };
+        const onKeyDown = (event) => {
+          if (event.key !== 'Escape') {
+            return;
+          }
+          // Keep Esc from also reaching page handlers (e.g. reveal.js overview),
+          // except an open reveal.js slide menu, which Esc should close too.
+          // The menu handles keys only when its keyboard option is on.
+          const menuHandlesEsc = window.Reveal?.getPlugin?.('menu')?.isOpen() &&
+            window.Reveal.getConfig().menu?.keyboard !== false;
+          if (!menuHandlesEsc) {
+            event.stopPropagation();
+          }
+          if (instance.popper.contains(window.document.activeElement)) {
+            // Disabled while refocusing so the focus trigger does not reopen it
+            instance.disable();
+            instance.reference.focus();
+            instance.enable();
+          }
+          dismiss();
+        };
+        const onFocusOut = (event) => {
+          const target = event.relatedTarget;
+          if (target && !instance.reference.contains(target) &&
+              !instance.popper.contains(target)) {
+            dismiss();
+          }
+        };
+        // On the trigger too: a click trigger (code-annotations: select) has no
+        // blur handling. Attached for the instance's lifetime so leaving the
+        // trigger also cancels a show still pending on the trigger delay.
+        instance.reference.addEventListener('focusout', onFocusOut);
+        return {
+          onShow() {
+            window.document.addEventListener('keydown', onKeyDown, true);
+            instance.popper.addEventListener('focusout', onFocusOut);
+          },
+          onHide() {
+            window.document.removeEventListener('keydown', onKeyDown, true);
+            instance.popper.removeEventListener('focusout', onFocusOut);
+          },
+          onDestroy() {
+            instance.reference.removeEventListener('focusout', onFocusOut);
+          },
+        };
+      },
+    };
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+        plugins: [hideOnEscAndFocusOut],
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          // Each band is positioned against its own containing block, which is
+          // not the offsetParent of the lines, so place it from client rects.
+          const placeBand = (band, firstEl, lastEl, codeBlock) => {
+            const container = band.offsetParent;
+            if (container === null) {
+              return;
+            }
+            const containerRect = container.getBoundingClientRect();
+            // Reveal.js scales slides with a transform, so convert client
+            // pixels back to the CSS pixels of the container.
+            const scale = containerRect.height / container.offsetHeight || 1;
+            const firstRect = firstEl.getBoundingClientRect();
+            const lastRect = lastEl.getBoundingClientRect();
+            const top = (firstRect.top - containerRect.top) / scale - container.clientTop + container.scrollTop;
+            const height = (lastRect.bottom - firstRect.top) / scale;
+            band.style.top = top - 2 + "px";
+            band.style.height = height + 4 + "px";
+            if (codeBlock) {
+              // Without the copy button wrapper, the containing block is wider
+              // than the code block, so span the code block explicitly.
+              const blockRect = codeBlock.getBoundingClientRect();
+              band.style.left = (blockRect.left - containerRect.left) / scale - container.clientLeft + container.scrollLeft + "px";
+              band.style.width = blockRect.width / scale + "px";
+            }
+          };
+          if (lineIds.length > 0) {
+            const el = window.document.getElementById(lineIds[0]);
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const parent = el.parentElement.parentElement;
+            // cook up a div (if necessary) and position it
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            placeBand(div, el, lastEl, parent.closest("div.sourceCode") || parent);
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            placeBand(gutterDiv, el, lastEl);
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+  <script type="application/javascript">
+  window.quartoScrollableRegionsLabels = {"code":"Scrollable code","output":"Scrollable output"};
+  </script>
+</div> <!-- /content -->
+<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","descPosition":"bottom","loop":false,"openEffect":"zoom","selector":".lightbox"});
+(function() {
+  let previousOnload = window.onload;
+  window.onload = () => {
+    if (previousOnload) {
+      previousOnload();
+    }
+    lightboxQuarto.on('slide_before_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      const href = trigger.getAttribute('href');
+      if (href !== null) {
+        const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+        if (imgEl !== null) {
+          const srcAttr = imgEl.getAttribute("src");
+          if (srcAttr && srcAttr.startsWith("data:")) {
+            slideConfig.href = srcAttr;
+          }
+        }
+      } 
+    });
+  
+    lightboxQuarto.on('slide_after_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(slideNode);
+      }
+    });
+  
+  };
+  
+})();
+          </script>
+
+
+
+
+</body></html>

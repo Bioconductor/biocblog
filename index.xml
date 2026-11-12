@@ -10,7 +10,142 @@
 <atom:link href="https://blog.bioconductor.org/index.xml" rel="self" type="application/rss+xml"/>
 <description>A blog for the Bioconductor community!</description>
 <generator>quarto-1.11.9</generator>
-<lastBuildDate>Tue, 10 Nov 2026 00:00:00 GMT</lastBuildDate>
+<lastBuildDate>Thu, 12 Nov 2026 00:00:00 GMT</lastBuildDate>
+<item>
+  <title>Bioconductor Carpentries workshops in Japanese: lessons from Japan</title>
+  <dc:creator>Kozo Nishida</dc:creator>
+  <link>https://blog.bioconductor.org/posts/2026-11-12-japanese-carpentries-workshops/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<section id="an-apology-first" class="level2">
+<h2 class="anchored" data-anchor-id="an-apology-first">An apology first</h2>
+<p>This post should have been written a year ago. The two workshops it describes took place in August and September 2025, and a report in Japanese appeared in the newsletter of the Japanese Society for Bioinformatics (JSBi) in January 2026. The report to the wider, English-speaking Bioconductor community is only arriving now, in November 2026.</p>
+<p>I am sorry for the delay. I owe this apology to the participants, helpers and co-hosts who made the workshops happen, and to everyone in the Bioconductor community who has been curious about how teaching Bioconductor in a local language went in Japan. Part of the reason for the delay is explained later in this post, because it is tied to the future of our translation infrastructure.</p>
+</section>
+<section id="the-first-bioconductor-carpentries-workshops-taught-in-japanese" class="level2">
+<h2 class="anchored" data-anchor-id="the-first-bioconductor-carpentries-workshops-taught-in-japanese">The first Bioconductor Carpentries workshops taught in Japanese</h2>
+<p>Bioconductor has been a member organisation of <a href="https://carpentries.org/">The Carpentries</a> since August 2022 (<a href="https://blog.bioconductor.org/posts/2022-07-12-carpentries-membership/">announcement</a>). The Bioconductor Training Committee maintains a set of Carpentries-style <a href="https://training.bioconductor.org/#modules">lesson modules</a>, ranging from an introduction to R and Bioconductor to an advanced course on bulk RNA-seq analysis. How these lessons are developed and taught is described in <a href="https://doi.org/10.1371/journal.pcbi.1012925">Drnevich et al.&nbsp;(2025), <em>PLOS Computational Biology</em></a>.</p>
+<p>Bringing this training to communities around the world in their own languages is supported by the Chan Zuckerberg Initiative (CZI) Essential Open Source Software for Science (EOSS) grant <a href="https://chanzuckerberg.com/eoss/proposals/delivering-high-quality-bioconductor-training-for-a-worldwide-community/"><em>Delivering High Quality Bioconductor Training for a Worldwide Community</em></a>.</p>
+<p>As part of that effort, the Japanese Bioconductor community organised two two-day workshops in 2025, co-hosted with the <a href="https://www.jsbi.org/">Japanese Society for Bioinformatics (JSBi)</a>. To our knowledge these were the first Bioconductor workshops ever taught in Japanese. Both were hybrid events, with an in-person classroom and a Zoom connection for remote participants. I (Kozo Nishida) was the instructor for both. I serve on the Bioconductor Community Advisory Board and in the working group that translates Bioconductor teaching materials, and these workshops were the first time our Japanese translations were used in front of a class.</p>
+<section id="workshop-1-introduction-to-r-and-bioconductor-osaka-56-august-2025" class="level3">
+<h3 class="anchored" data-anchor-id="workshop-1-introduction-to-r-and-bioconductor-osaka-56-august-2025">Workshop 1: Introduction to R and Bioconductor (Osaka, 5–6 August 2025)</h3>
+<p>The first workshop took place at the Taniguchi Memorial Hall in the Integrated Life Science Building of the Research Institute for Microbial Diseases, Osaka University, with Naohisa Goto as helper and local host.</p>
+<ul>
+<li><strong>Day 1</strong> followed the Japanese translation of <a href="https://bioconductor-translations.github.io/bioc-intro-ja/"><em>Introduction to data analysis with R and Bioconductor</em></a> (<code>bioc-intro</code>): how to organise data for analysis, then data manipulation and visualisation with the tidyverse packages, taught by live coding with every participant typing along.</li>
+<li><strong>Day 2</strong> followed the Japanese translation of <a href="https://bioconductor-translations.github.io/bioc-project-ja/"><em>The Bioconductor project</em></a> (<code>bioc-project</code>): installing Bioconductor packages, getting help, S4 classes, biological sequences, <code>GenomicRanges</code>, annotation resources and <code>SummarizedExperiment</code>.</li>
+</ul>
+<p>The <a href="https://bioconductor-translations.github.io/2025-08-05-osaka/">workshop website</a> and <a href="https://bioconductor-translations.github.io/2025-08-05-osaka-slides/">slides</a> are online, in Japanese.</p>
+</section>
+<section id="workshop-2-rna-seq-analysis-with-bioconductor-kyoto-1112-september-2025" class="level3">
+<h3 class="anchored" data-anchor-id="workshop-2-rna-seq-analysis-with-bioconductor-kyoto-1112-september-2025">Workshop 2: RNA-seq analysis with Bioconductor (Kyoto, 11–12 September 2025)</h3>
+<p>The second workshop was the advanced course, held at the Inamori Memorial Hall of Kyoto Prefectural University, with Atsushi Fukushima as helper and local host. We used the Japanese translation of <a href="https://bioconductor-translations.github.io/bioc-rnaseq-ja/"><em>RNA-seq analysis with Bioconductor</em></a> (<code>bioc-rnaseq</code>) and live-coded the whole bulk RNA-seq workflow, apart from the read quantification step that produces the count matrix.</p>
+<ul>
+<li><strong>Day 1</strong> covered an introduction to RNA-seq, RStudio projects and the experimental data, importing quantified data into R and annotating it, and exploratory analysis and quality control, everything that comes before differential expression analysis.</li>
+<li><strong>Day 2</strong> covered differential expression analysis, a closer look at design matrices, and gene set enrichment analysis for interpreting the results.</li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="kyoto-workshop.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="The second workshop, at Kyoto Prefectural University."><img src="https://blog.bioconductor.org/posts/2026-11-12-japanese-carpentries-workshops/kyoto-workshop.jpg" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="A lecture room at Kyoto Prefectural University during the second workshop. Participants sit at long desks with laptops while the instructor stands at the front next to a screen showing R code."></a></p>
+</figure>
+</div>
+<figcaption>The second workshop, at Kyoto Prefectural University.</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="bioc-rnaseq-ja.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="The Japanese translation of the RNA-seq analysis with Bioconductor lesson, used in the second workshop."><img src="https://blog.bioconductor.org/posts/2026-11-12-japanese-carpentries-workshops/bioc-rnaseq-ja.jpg" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="Screenshot of the Japanese translation of the RNA-seq analysis with Bioconductor lesson, showing the gene set enrichment analysis episode with its questions and objectives in Japanese."></a></p>
+</figure>
+</div>
+<figcaption>The Japanese translation of the <em>RNA-seq analysis with Bioconductor</em> lesson, used in the second workshop.</figcaption>
+</figure>
+</div>
+<p>The <a href="https://bioconductor-translations.github.io/2025-09-11-kyoto/">workshop website</a> and <a href="https://bioconductor-translations.github.io/2025-09-11-kyoto-slides/">slides</a> are online as well.</p>
+</section>
+<section id="who-took-part" class="level3">
+<h3 class="anchored" data-anchor-id="who-took-part">Who took part</h3>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Workshop</th>
+<th>In person</th>
+<th>Online</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Osaka, August 2025</td>
+<td>about 3</td>
+<td>about 45</td>
+</tr>
+<tr class="even">
+<td>Kyoto, September 2025</td>
+<td>about 6</td>
+<td>about 45</td>
+</tr>
+</tbody>
+</table>
+<p>Attendance fluctuated over the two long days, so these are approximate numbers. Most participants joined online, which reflects how geographically spread out the Japanese bioinformatics community is. The hybrid format clearly lowered the barrier to attending.</p>
+<p>We are grateful to JSBi for co-hosting, to the venue hosts at Osaka University and Kyoto Prefectural University, and above all to everyone who took part. We intend to keep running and improving these workshops. Our hope is that participants will not only learn from them but go on to teach, so that the circle keeps widening.</p>
+<p>A report on both workshops, written in Japanese together with Naohisa Goto and Atsushi Fukushima, appeared in <a href="https://www.jsbi.org/media/files/_u/topic/file/nl48.pdf">JSBi Newsletter No.&nbsp;48 (January 2026, PDF in Japanese)</a>.</p>
+</section>
+</section>
+<section id="where-the-materials-live" class="level2">
+<h2 class="anchored" data-anchor-id="where-the-materials-live">Where the materials live</h2>
+<p>Everything we used is in the <a href="https://github.com/bioconductor-translations">bioconductor-translations</a> GitHub organisation, and anyone is welcome to use it for their own teaching:</p>
+<ul>
+<li>Japanese lesson translations: <a href="https://github.com/bioconductor-translations/bioc-intro-ja">bioc-intro-ja</a>, <a href="https://github.com/bioconductor-translations/bioc-project-ja">bioc-project-ja</a> and <a href="https://github.com/bioconductor-translations/bioc-rnaseq-ja">bioc-rnaseq-ja</a>.</li>
+<li>Workshop websites and slides: <a href="https://github.com/bioconductor-translations/2025-08-05-osaka">2025-08-05-osaka</a>, <a href="https://github.com/bioconductor-translations/2025-08-05-osaka-slides">2025-08-05-osaka-slides</a>, <a href="https://github.com/bioconductor-translations/2025-09-11-kyoto">2025-09-11-kyoto</a> and <a href="https://github.com/bioconductor-translations/2025-09-11-kyoto-slides">2025-09-11-kyoto-slides</a>.</li>
+<li>The organisation also hosts the French translation <a href="https://bioconductor-translations.github.io/bioc-intro-fr/">bioc-intro-fr</a>, which was used in the <a href="https://blog.bioconductor.org/posts/2025-12-11-benin-course/">Bioconductor course in Benin</a>.</li>
+</ul>
+</section>
+<section id="why-this-post-is-late-and-what-i-have-learned-about-our-translation-setup" class="level2">
+<h2 class="anchored" data-anchor-id="why-this-post-is-late-and-what-i-have-learned-about-our-translation-setup">Why this post is late, and what I have learned about our translation setup</h2>
+<p>Here is the honest part. One reason this post took so long is that I have not been able to maintain <a href="https://bioconductor.crowdin.com/">bioconductor.crowdin.com</a> and the <a href="https://github.com/bioconductor-translations">bioconductor-translations</a> repositories the way they deserve, and I felt guilty writing a cheerful report about workshops while the infrastructure behind them was falling behind.</p>
+<p>Some background. I was the one who proposed that the Bioconductor community use Crowdin to manage translations. The model was <a href="https://turingway.crowdin.com/">The Turing Way</a>, which translates its handbook on Crowdin with great success. Crowdin’s support for open-source projects has been generous, and I remain very grateful for it.</p>
+<p>However, the two projects differ in an important way. The Turing Way’s source documents are plain Markdown. The Carpentries lessons are written in R Markdown, with executable code chunks and lesson-specific fenced blocks for callouts, challenges and solutions. To feed them into Crowdin we had to convert R Markdown to Markdown into separate translation repositories, sync the translated strings back, and reassemble buildable lessons from the result. The Crowdin and GitHub integration that this requires is complex and fragile, and it is not easy to manage.</p>
+<p>At the same time, the world has changed since I made that proposal. AI translation quality has improved substantially, and with <a href="https://agentskills.io/">Agent Skills</a> an AI agent can now produce a first translation according to project rules: a shared glossary, consistent terminology, and clear instructions about what to leave untouched, such as code, package names and function names. The resulting translation can then be reviewed by community members with appropriate language and domain expertise. Under these conditions, managing translations directly in GitHub, with translated lessons living alongside their sources and reviewed through pull requests, is more efficient than keeping a Crowdin and GitHub integration alive.</p>
+<p>So, in order to make Bioconductor teaching materials available in more languages, I no longer think we should keep using <a href="https://bioconductor.crowdin.com/">bioconductor.crowdin.com</a>, and I intend to retire it. This is not a complaint about Crowdin. It is a recognition that the tool was the right one for a different kind of source document, and that a simpler workflow now serves our lessons better.</p>
+</section>
+<section id="what-comes-next" class="level2">
+<h2 class="anchored" data-anchor-id="what-comes-next">What comes next</h2>
+<p>I am setting up new, GitHub-only translation repositories together with an Agent Skill for rule-following AI translation, its documentation, and the outreach needed to bring more languages and more contributors on board. This work is supported by the <a href="https://bioconductor.org/developers/developer-champions-program/">Bioconductor Developer Champions Program</a>.</p>
+<p>Please give me a little more time before the formal announcement. When it is ready, I will share it here on the blog.</p>
+</section>
+<section id="get-involved" class="level2">
+<h2 class="anchored" data-anchor-id="get-involved">Get involved</h2>
+<ul>
+<li>Teach with the materials. The Japanese lessons, the workshop websites and the slides linked above are openly licensed and free for anyone to use.</li>
+<li>If you are interested in translating Bioconductor teaching materials into your own language, watch the <a href="https://github.com/bioconductor-translations">bioconductor-translations</a> organisation for the upcoming announcement.</li>
+<li>Join the Bioconductor community through the <a href="https://www.bioconductor.org/help/support/">support site</a> and the <a href="https://chat.bioconductor.org/">community chat</a>.</li>
+</ul>
+</section>
+<section id="acknowledgements" class="level2">
+<h2 class="anchored" data-anchor-id="acknowledgements">Acknowledgements</h2>
+<p>Thank you to Naohisa Goto and Atsushi Fukushima for helping at and hosting the workshops, to JSBi for co-hosting them, and to every participant. This work was supported by the <a href="https://chanzuckerberg.com/eoss/proposals/delivering-high-quality-bioconductor-training-for-a-worldwide-community/">Chan Zuckerberg Initiative EOSS program</a> and by the <a href="https://bioconductor.org/developers/developer-champions-program/">Bioconductor Developer Champions Program</a>.</p>
+
+
+</section>
+
+<p>
+© 2026 Bioconductor. Content is published under <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons CC-BY-4.0 License</a> for the text and <a href="https://opensource.org/licenses/BSD-3-Clause">BSD 3-Clause License</a> for any code. | <a href="https://www.r-bloggers.com">R-Bloggers</a>
+</p> ]]></description>
+  <category>education</category>
+  <category>events</category>
+  <category>Carpentries</category>
+  <category>CZI</category>
+  <category>Japanese</category>
+  <guid>https://blog.bioconductor.org/posts/2026-11-12-japanese-carpentries-workshops/</guid>
+  <pubDate>Thu, 12 Nov 2026 00:00:00 GMT</pubDate>
+  <media:content url="https://blog.bioconductor.org/posts/2026-11-12-japanese-carpentries-workshops/kyoto-workshop.jpg" medium="image" type="image/jpeg" height="146" width="144"/>
+</item>
 <item>
   <title>Growing the BiocAsia community</title>
   <dc:creator>Maria Doyle</dc:creator>
@@ -1415,54 +1550,6 @@ font-style: inherit;">--alpha</span> 0.05</span></code></pre></div></div>
   <guid>https://blog.bioconductor.org/posts/2026-06-17-venice/</guid>
   <pubDate>Wed, 17 Jun 2026 00:00:00 GMT</pubDate>
   <media:content url="https://blog.bioconductor.org/posts/2026-06-17-venice/terrace.jpeg" medium="image" type="image/jpeg" height="108" width="144"/>
-</item>
-<item>
-  <title>Bioconductor Maintainer Validation</title>
-  <dc:creator>Lori Shepherd-Kern</dc:creator>
-  <link>https://blog.bioconductor.org/posts/2026-06-16-maintainer-validation/</link>
-  <description><![CDATA[ 
-
-
-
-
-
-<section id="introduction" class="level2">
-<h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
-<p>Bioconductor policies include being an active and reachable maintainer. Maintainer emails in the DESCRIPTION of packages often go stale as maintainers change positions. There is also a necessity to have maintainers opt into Bioconductor policies and procedures as they change over time.</p>
-<p>We have created an application that uses Amazon Simple Email Service (SES) to send periodic emails to maintainers to check if the endpoint is reachable and to send a verification opt-in of Bioconductor current policies and procedures and code of conduct once a year.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="https://blog.bioconductor.org/posts/2026-06-16-maintainer-validation/MaintainerEmail.jpg" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="Photo of Email"></p>
-</figure>
-</div>
-<p>Initial feedback is that this email is “spammy” and may be marked as such by institutions, but it is an initial attempt at compliance. We will look at alternatives to emails like specialized maintainer account access at a future date.</p>
-<section id="access-to-information" class="level4">
-<h4 class="anchored" data-anchor-id="access-to-information">Access to Information</h4>
-<p>The information is in a publicly accessible database. We do not recommend connecting directly to the webservice but instead using the accompanied Bioconductor R package <a href="https://bioconductor.org/packages/BiocMaintainerApp/">BiocMaintainerApp</a>. It provides a Shiny application interface for querying Bioconductor package maintainers’ information.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="https://blog.bioconductor.org/posts/2026-06-16-maintainer-validation/feature-image.jpg" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="Photo of ShinyApp"></p>
-</figure>
-</div>
-</section>
-<section id="thank-you" class="level4">
-<h4 class="anchored" data-anchor-id="thank-you">Thank you</h4>
-<p>We appreciate maintainers’ cooperation moving forward.</p>
-
-
-</section>
-</section>
-
-<p>
-© 2026 Bioconductor. Content is published under <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons CC-BY-4.0 License</a> for the text and <a href="https://opensource.org/licenses/BSD-3-Clause">BSD 3-Clause License</a> for any code. | <a href="https://www.r-bloggers.com">R-Bloggers</a>
-</p> ]]></description>
-  <category>Bioconductor</category>
-  <category>Infrastructure</category>
-  <category>Developer Engagement</category>
-  <category>Policies and Procedures</category>
-  <guid>https://blog.bioconductor.org/posts/2026-06-16-maintainer-validation/</guid>
-  <pubDate>Tue, 16 Jun 2026 00:00:00 GMT</pubDate>
-  <media:content url="https://blog.bioconductor.org/posts/2026-06-16-maintainer-validation/feature-image.jpg" medium="image" type="image/jpeg" height="74" width="144"/>
 </item>
 </channel>
 </rss>
