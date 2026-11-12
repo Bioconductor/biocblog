@@ -8,6 +8,7 @@ author:
   - name: Kozo Nishida
     url: https://github.com/kozo2
 date: 2026-11-13
+image: translation-workflow.jpg
 categories:
   - education
   - Carpentries
@@ -85,6 +86,8 @@ and translation guide still refer to Japanese and need adaptation before
 being used to regenerate Urdu text.
 
 ## How the translation system works
+
+![Matching passages reuse translation memory; new or changed prose is translated with PLaMo. Protected code and markup rejoin the text before structural checks, community review and a lesson build.](translation-workflow.jpg){#fig-translation-workflow fig-alt="Workflow diagram: English lesson prose either reuses matching translation memory or is translated locally by PLaMo using a glossary and context. Protected code and lesson markup bypass generation. The reassembled lessons undergo structure checks, community review and a build. Reviewed corrections are saved to translation memory." fig-align="center" width="1200"}
 
 1. **Read an English source revision.** The translator reads the upstream
    lesson's R Markdown files from a Git revision without checking it out over
