@@ -1,0 +1,854 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.11.9">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Kozo Nishida">
+<meta name="dcterms.date" content="2026-11-13">
+<meta name="description" content="Explore five language editions of the introductory Bioconductor Carpentry lesson and a GitHub-based workflow that combines local AI translation, reusable translation memory and community review.">
+
+<title>Introducing PLaMo-based AI translation for Bioconductor lessons – Bioconductor community blog</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/scrollable-regions/scrollable-regions.js" type="module"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-63b5708e65d6cd79cd7618c58d0c21e7.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-b19755bc548e5ae647c056af8171e9df.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.css" rel="stylesheet">
+
+
+<link rel="stylesheet" href="../../styles.css">
+<meta property="og:title" content="Introducing PLaMo-based AI translation for Bioconductor lessons – Bioconductor community blog">
+<meta property="og:description" content="Explore five language editions of the introductory Bioconductor Carpentry lesson and a GitHub-based workflow that combines local AI translation, reusable translation memory and community review.">
+<meta property="og:image" content="https://blog.bioconductor.org/posts/2026-11-13-ai-translation/translation-workflow.jpg">
+<meta property="og:site_name" content="Bioconductor community blog">
+<meta property="og:image:height" content="900">
+<meta property="og:image:width" content="1200">
+</head>
+
+<body class="nav-fixed quarto-light"><a id="quarto-skip-link" class="visually-hidden-focusable" href="#quarto-document-content">Skip to main content</a>
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top quarto-banner">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark" aria-label="Site">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">Bioconductor community blog</span>
+    </a>
+  </div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../about.html"> 
+<span class="menu-text">About</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../contributing.html"> 
+<span class="menu-text">Contributing</span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/bioconductor/biocblog"> <i class="bi bi-github" role="img">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://www.linkedin.com/company/bioconductor/"> <i class="bi bi-linkedin" role="img">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://bsky.app/profile/bioconductor.bsky.social"> <i class="bi bi-bluesky" role="img">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://genomic.social/@bioconductor"> <i class="bi bi-mastodon" role="img">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://www.youtube.com/user/bioconductor"> <i class="bi bi-youtube" role="img">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://chat.bioconductor.org/"> <i class="bi bi-chat-dots" role="img">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="../../index.xml"> <i class="bi bi-rss" role="img">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+            <div id="quarto-search" class="" title="Search"></div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<header id="title-block-header" class="quarto-title-block default page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      <h1 class="title">Introducing PLaMo-based AI translation for Bioconductor lessons</h1>
+                  <div>
+        <div class="description">
+          <p>Explore five language editions of the introductory Bioconductor Carpentry lesson and a GitHub-based workflow that combines local AI translation, reusable translation memory and community review.</p>
+        </div>
+      </div>
+                          <div class="quarto-categories">
+                <div class="quarto-category">education</div>
+                <div class="quarto-category">Carpentries</div>
+                <div class="quarto-category">translation</div>
+                <div class="quarto-category">AI</div>
+              </div>
+                  </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta">
+
+      <div>
+      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-contents">
+               <p><a href="https://github.com/kozo2">Kozo Nishida</a> </p>
+            </div>
+    </div>
+      
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">November 13, 2026</p>
+      </div>
+    </div>
+    
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" aria-labelledby="toc-title" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul class="collapse">
+  <li><a href="#what-is-plamo-3-translate" id="toc-what-is-plamo-3-translate" class="nav-link active" data-scroll-target="#what-is-plamo-3-translate">What is PLaMo 3 Translate?</a></li>
+  <li><a href="#explore-the-five-language-editions" id="toc-explore-the-five-language-editions" class="nav-link" data-scroll-target="#explore-the-five-language-editions">Explore the five language editions</a></li>
+  <li><a href="#how-the-translation-system-works" id="toc-how-the-translation-system-works" class="nav-link" data-scroll-target="#how-the-translation-system-works">How the translation system works</a></li>
+  <li><a href="#local-generation-reusable-community-knowledge" id="toc-local-generation-reusable-community-knowledge" class="nav-link" data-scroll-target="#local-generation-reusable-community-knowledge">Local generation, reusable community knowledge</a></li>
+  <li><a href="#help-make-the-lessons-better" id="toc-help-make-the-lessons-better" class="nav-link" data-scroll-target="#help-make-the-lessons-better">Help make the lessons better</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content quarto-banner-title-block" id="quarto-document-content" tabindex="-1">
+
+
+
+
+
+<p>In the <a href="https://blog.bioconductor.org/posts/2026-11-12-japanese-carpentries-workshops/">report on our Japanese workshops</a>, I explained why our Crowdin integration had become difficult to maintain. Keeping executable R Markdown lessons in sync required file conversions, translation synchronisation and reconstruction of buildable lessons. I remain grateful for Crowdin’s support. We are now moving to PLaMo-based AI translation directly in the lesson repositories, with code and markup protected and community review on GitHub.</p>
+<p>I am introducing a new AI-assisted translation workflow in the <a href="https://github.com/bioconductor-translations">bioconductor-translations</a> organisation, built around PLaMo 3 Translate and review on GitHub. The first lesson is <a href="https://carpentries-incubator.github.io/bioc-intro/"><em>Introduction to data analysis with R and Bioconductor</em></a>, with published editions in Japanese, Spanish, Simplified Chinese, French and Urdu. These editions are open for community review and improvement.</p>
+<section id="what-is-plamo-3-translate" class="level2">
+<h2 class="anchored" data-anchor-id="what-is-plamo-3-translate">What is PLaMo 3 Translate?</h2>
+<p>PLaMo 3 Translate is a family of large language models developed by Preferred Networks (PFN) specifically for translation. PFN’s November 5, 2026 technical article, <a href="https://www.preferred.jp/en/blog/tech/plamo-3-translate-weight-release"><em>PLaMo 3 Translate: World-Class Translation with Open Weights—Here’s How We Built It</em></a>, explains the development process and the release of downloadable model weights.</p>
+<p>PFN trains the models on source–translation pairs and further refines them to prefer better translations. Smaller models also learn from the 31B model through distillation. The family supports 53 languages and can take surrounding context and a glossary into account. These features fit our lesson workflow: we can supply nearby explanations and preferred technical terminology when translating a passage.</p>
+<p>The models come in four sizes: 0.8B, 2B, 8B and 31B parameters. Our workflow uses <a href="https://huggingface.co/pfnet/plamo-3-translate-8b-MLX-4bit"><code>pfnet/plamo-3-translate-8b-MLX-4bit</code></a>, the 8B model in a 4-bit MLX format that reduces memory use for local generation on Apple silicon Macs. The model weights are distributed under the PLaMo Community License.</p>
+</section>
+<section id="explore-the-five-language-editions" class="level2">
+<h2 class="anchored" data-anchor-id="explore-the-five-language-editions">Explore the five language editions</h2>
+<p>The introductory lesson covers organising data in spreadsheets, using R and RStudio, manipulating data with <code>dplyr</code>, and visualising data. Each language edition has a lesson website for learners and a repository for contributors:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th style="text-align: left;">Language</th>
+<th style="text-align: left;">Read the lesson</th>
+<th style="text-align: left;">Contribute on GitHub</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Japanese</td>
+<td style="text-align: left;"><a href="https://bioconductor-translations.github.io/bioc-intro-plamo3translate-ja/">Japanese lesson</a></td>
+<td style="text-align: left;"><a href="https://github.com/bioconductor-translations/bioc-intro-plamo3translate-ja">bioc-intro-plamo3translate-ja</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Spanish</td>
+<td style="text-align: left;"><a href="https://bioconductor-translations.github.io/bioc-intro-plamo3translate-es/">Spanish lesson</a></td>
+<td style="text-align: left;"><a href="https://github.com/bioconductor-translations/bioc-intro-plamo3translate-es">bioc-intro-plamo3translate-es</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Simplified Chinese</td>
+<td style="text-align: left;"><a href="https://bioconductor-translations.github.io/bioc-intro-plamo3translate-zh-hans/">Simplified Chinese lesson</a></td>
+<td style="text-align: left;"><a href="https://github.com/bioconductor-translations/bioc-intro-plamo3translate-zh-hans">bioc-intro-plamo3translate-zh-hans</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">French</td>
+<td style="text-align: left;"><a href="https://bioconductor-translations.github.io/bioc-intro-plamo3translate-fr/">French lesson</a></td>
+<td style="text-align: left;"><a href="https://github.com/bioconductor-translations/bioc-intro-plamo3translate-fr">bioc-intro-plamo3translate-fr</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Urdu</td>
+<td style="text-align: left;"><a href="https://bioconductor-translations.github.io/bioc-intro-plamo3translate-ur/">Urdu lesson</a></td>
+<td style="text-align: left;"><a href="https://github.com/bioconductor-translations/bioc-intro-plamo3translate-ur">bioc-intro-plamo3translate-ur</a></td>
+</tr>
+</tbody>
+</table>
+<p>Our Crowdin project also received Portuguese translation contributions, and I am grateful to everyone who contributed them. I am sorry that Portuguese is not included among these editions: the PLaMo translation model we currently use does not support Portuguese, which is absent from its <a href="https://huggingface.co/pfnet/plamo-3-translate-8b#supported-languages">supported-language list</a>.</p>
+<p>Translation coverage and review are still in progress. Some setup pages and interface labels remain in English. At the time of writing, the published Urdu episodes are available, but that repository’s <a href="https://github.com/bioconductor-translations/bioc-intro-plamo3translate-ur/blob/main/translation/config.json">updater configuration</a> and translation guide still refer to Japanese and need adaptation before being used to regenerate Urdu text.</p>
+</section>
+<section id="how-the-translation-system-works" class="level2">
+<h2 class="anchored" data-anchor-id="how-the-translation-system-works">How the translation system works</h2>
+<div id="fig-translation-workflow" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Workflow diagram: English lesson prose either reuses matching translation memory or is translated locally by PLaMo using a glossary and context. Protected code and lesson markup bypass generation. The reassembled lessons undergo structure checks, community review and a build. Reviewed corrections are saved to translation memory." data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-translation-workflow-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="translation-workflow.jpg" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="Workflow diagram: English lesson prose either reuses matching translation memory or is translated locally by PLaMo using a glossary and context. Protected code and lesson markup bypass generation. The reassembled lessons undergo structure checks, community review and a build. Reviewed corrections are saved to translation memory." width="1200">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-translation-workflow-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1: Matching passages reuse translation memory; new or changed prose is translated with PLaMo. Protected code and markup rejoin the text before structural checks, community review and a lesson build.
+</figcaption>
+</figure>
+</div>
+<ol type="1">
+<li><strong>Read an English source revision.</strong> The translator reads the upstream lesson’s R Markdown files from a Git revision without checking it out over the translated working files.</li>
+<li><strong>Reuse matching translations.</strong> Each translation repository stores its versioned translation memory in <code>translation/seed-cache.json</code>. This JSON file stores previous translations and review statuses by source passage and episode. Matching records can be reused, while new or changed prose is sent to the model.</li>
+<li><strong>Guide terminology and protect structure.</strong> A language-specific glossary and contextual guidance help disambiguate terms. Code blocks, inline code, link destinations and lesson markup are protected during translation, and structural checks run before lesson files are replaced.</li>
+<li><strong>Review and build.</strong> Maintainers inspect the translated text and memory changes, build the lesson, and commit the reviewed result. The translator itself does not commit or push changes.</li>
+</ol>
+<section id="shared-terminology-in-glossary.json" class="level3">
+<h3 class="anchored" data-anchor-id="shared-terminology-in-glossary.json">Shared terminology in glossary.json</h3>
+<p>Each repository keeps its preferred terminology in <code>translation/glossary.json</code>. For example, the Japanese repository’s <a href="https://github.com/bioconductor-translations/bioc-intro-plamo3translate-ja/blob/main/translation/glossary.json">translation/glossary.json</a> contains <code>source</code> and <code>target</code> term pairs, mapping “data frame” to “データフレーム” and keeping “Bioconductor” unchanged. The translator passes these pairs to the model to guide terminology consistently across episodes. Contributors can propose glossary changes through pull requests. A glossary change requires fresh generation for machine records on the next update; matching <code>reviewed</code> records retain their wording, so terminology corrections must also be applied to the reviewed translation memory where needed.</p>
+</section>
+<section id="update-a-translation-yourself" class="level3">
+<h3 class="anchored" data-anchor-id="update-a-translation-yourself">Update a translation yourself</h3>
+<p>To update a translation yourself, follow <code>translation/README.md</code> in the repository for your language. These documents cover environment setup, fetching the English source, previewing changes, generating translations, reviewing the results and building the lesson:</p>
+<ul>
+<li>Japanese: <a href="https://github.com/bioconductor-translations/bioc-intro-plamo3translate-ja/blob/main/translation/README.md">translation/README.md</a></li>
+<li>Spanish: <a href="https://github.com/bioconductor-translations/bioc-intro-plamo3translate-es/blob/main/translation/README.md">translation/README.md</a></li>
+<li>Simplified Chinese: <a href="https://github.com/bioconductor-translations/bioc-intro-plamo3translate-zh-hans/blob/main/translation/README.md">translation/README.md</a></li>
+<li>French: <a href="https://github.com/bioconductor-translations/bioc-intro-plamo3translate-fr/blob/main/translation/README.md">translation/README.md</a></li>
+</ul>
+<p>For Urdu, the updater configuration and documentation caveat above still applies.</p>
+<p>For example, in the Japanese repository, after configuring the upstream remote as described in its guide, a maintainer can run:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> fetch upstream main</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="ex">uv</span> run <span class="at">--locked</span> scripts/translate.py <span class="at">--source-ref</span> upstream/main <span class="at">--dry-run</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="ex">uv</span> run <span class="at">--locked</span> scripts/translate.py <span class="at">--source-ref</span> upstream/main <span class="at">--update-memory</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> diff <span class="at">--</span> episodes translation</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="ex">Rscript</span> scripts/build.R</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>The dry run shows which passages can be reused and which need translation, without generating new text or writing lesson files. The <code>--update-memory</code> option saves new translation records to <code>translation/seed-cache.json</code> and source provenance to <code>translation/source-manifest.json</code> for review. The local runtime cache under <code>.cache/translation/</code> is ignored by Git. Other editions may use a different remote name, so follow <code>translation/README.md</code> in the repository you are updating.</p>
+<p>The translator also checks for local edits and stops before overwriting an edited lesson. Small build adaptations are recorded separately with checks against the expected source. Images, datasets and episode ordering still need separate maintenance when the English lesson changes.</p>
+</section>
+</section>
+<section id="local-generation-reusable-community-knowledge" class="level2">
+<h2 class="anchored" data-anchor-id="local-generation-reusable-community-knowledge">Local generation, reusable community knowledge</h2>
+<p>The workflow pins the model revision and locks its Python dependencies, recording the source revision and model provenance with the translation resources.</p>
+<p>Generating new translations with the current implementation requires an Apple silicon Mac, Python 3.12 and <code>uv</code>; the first model download is about 6 GB. Planning updates and replaying cached translations can run with Python 3.12 alone on other platforms. Reading lessons and contributing a review on GitHub require no model installation.</p>
+<p>The translation memory gives community review a lasting role. You can inspect the records in the Japanese translation repository’s <a href="https://github.com/bioconductor-translations/bioc-intro-plamo3translate-ja/blob/main/translation/seed-cache.json">translation/seed-cache.json</a>. Newly generated records are marked <code>machine</code>. After checking a record in <code>translation/seed-cache.json</code>, a reviewer can mark it <code>reviewed</code> so that its wording is retained for matching source text in the same episode and language pair, even when model or glossary settings change. The French translation repository’s <a href="https://github.com/bioconductor-translations/bioc-intro-plamo3translate-fr/blob/main/translation/README.md">translation/README.md</a> explains this review process.</p>
+</section>
+<section id="help-make-the-lessons-better" class="level2">
+<h2 class="anchored" data-anchor-id="help-make-the-lessons-better">Help make the lessons better</h2>
+<p>A successful build shows that the lesson can be rendered, but readers and instructors still need to check its meaning. A translation can sound fluent while changing an exercise condition, using an unfamiliar technical term, or losing an important distinction. The Simplified Chinese translation repository’s <a href="https://github.com/bioconductor-translations/bioc-intro-plamo3translate-zh-hans/blob/main/translation/README.md">translation/README.md</a> explicitly identifies its initial translation memory as machine generated and needing review.</p>
+<p>If you use one of these languages, please try an episode and compare it with the English lesson. We especially welcome help with:</p>
+<ul>
+<li><strong>Language and terminology:</strong> suggest clearer explanations and vocabulary familiar to your local research community.</li>
+<li><strong>Exercises and teaching:</strong> check that questions, solutions and instructor notes preserve the original learning goals.</li>
+<li><strong>Corrections that carry forward:</strong> help maintainers update the glossary, context guidance and translation memory alongside the lesson text.</li>
+</ul>
+<p>Open an issue in the relevant repository with the episode name, the passage you are referring to, and a suggested correction or explanation. Pull requests are welcome too; please follow that repository’s contribution and translation guides. If you are interested in reviewing translations, adding support for another language, or translating another lesson, join the discussion in the #documentation-translation channel on the <a href="https://chat.bioconductor.org/">Bioconductor community chat</a>.</p>
+<p>Thank you to the original lesson authors and maintainers, and to everyone translating, reviewing and teaching these materials. This work builds on the community’s translation efforts described in the Japanese workshop report and is supported by the <a href="https://bioconductor.org/developers/developer-champions-program/">Bioconductor Developer Champions Program</a>.</p>
+
+
+</section>
+
+<p>
+© 2026 Bioconductor. Content is published under <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons CC-BY-4.0 License</a> for the text and <a href="https://opensource.org/licenses/BSD-3-Clause">BSD 3-Clause License</a> for any code. | <a href="https://www.r-bloggers.com">R-Bloggers</a>
+</p></main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/blog\.bioconductor\.org\/");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+      window.quartoDecorateExternalLinks = function (root) {
+     var links = (root || window.document).querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+          if (!link.classList.contains('no-external-icon')) {
+          }
+        }
+      }
+      };
+      window.quartoDecorateExternalLinks(window.document);
+    // Esc closes the popup (WCAG 1.4.13) and focus leaving both trigger and
+    // popup closes it (WCAG 2.4.11); tippy handles neither for interactive popups.
+    const hideOnEscAndFocusOut = {
+      name: 'hideOnEscAndFocusOut',
+      defaultValue: true,
+      fn(instance) {
+        const dismiss = () => {
+          // A show scheduled by the trigger delay would otherwise reopen it
+          instance.clearDelayTimeouts();
+          instance.hide();
+        };
+        const onKeyDown = (event) => {
+          if (event.key !== 'Escape') {
+            return;
+          }
+          // Keep Esc from also reaching page handlers (e.g. reveal.js overview),
+          // except an open reveal.js slide menu, which Esc should close too.
+          // The menu handles keys only when its keyboard option is on.
+          const menuHandlesEsc = window.Reveal?.getPlugin?.('menu')?.isOpen() &&
+            window.Reveal.getConfig().menu?.keyboard !== false;
+          if (!menuHandlesEsc) {
+            event.stopPropagation();
+          }
+          if (instance.popper.contains(window.document.activeElement)) {
+            // Disabled while refocusing so the focus trigger does not reopen it
+            instance.disable();
+            instance.reference.focus();
+            instance.enable();
+          }
+          dismiss();
+        };
+        const onFocusOut = (event) => {
+          const target = event.relatedTarget;
+          if (target && !instance.reference.contains(target) &&
+              !instance.popper.contains(target)) {
+            dismiss();
+          }
+        };
+        // On the trigger too: a click trigger (code-annotations: select) has no
+        // blur handling. Attached for the instance's lifetime so leaving the
+        // trigger also cancels a show still pending on the trigger delay.
+        instance.reference.addEventListener('focusout', onFocusOut);
+        return {
+          onShow() {
+            window.document.addEventListener('keydown', onKeyDown, true);
+            instance.popper.addEventListener('focusout', onFocusOut);
+          },
+          onHide() {
+            window.document.removeEventListener('keydown', onKeyDown, true);
+            instance.popper.removeEventListener('focusout', onFocusOut);
+          },
+          onDestroy() {
+            instance.reference.removeEventListener('focusout', onFocusOut);
+          },
+        };
+      },
+    };
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+        plugins: [hideOnEscAndFocusOut],
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          // Each band is positioned against its own containing block, which is
+          // not the offsetParent of the lines, so place it from client rects.
+          const placeBand = (band, firstEl, lastEl, codeBlock) => {
+            const container = band.offsetParent;
+            if (container === null) {
+              return;
+            }
+            const containerRect = container.getBoundingClientRect();
+            // Reveal.js scales slides with a transform, so convert client
+            // pixels back to the CSS pixels of the container.
+            const scale = containerRect.height / container.offsetHeight || 1;
+            const firstRect = firstEl.getBoundingClientRect();
+            const lastRect = lastEl.getBoundingClientRect();
+            const top = (firstRect.top - containerRect.top) / scale - container.clientTop + container.scrollTop;
+            const height = (lastRect.bottom - firstRect.top) / scale;
+            band.style.top = top - 2 + "px";
+            band.style.height = height + 4 + "px";
+            if (codeBlock) {
+              // Without the copy button wrapper, the containing block is wider
+              // than the code block, so span the code block explicitly.
+              const blockRect = codeBlock.getBoundingClientRect();
+              band.style.left = (blockRect.left - containerRect.left) / scale - container.clientLeft + container.scrollLeft + "px";
+              band.style.width = blockRect.width / scale + "px";
+            }
+          };
+          if (lineIds.length > 0) {
+            const el = window.document.getElementById(lineIds[0]);
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const parent = el.parentElement.parentElement;
+            // cook up a div (if necessary) and position it
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            placeBand(div, el, lastEl, parent.closest("div.sourceCode") || parent);
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            placeBand(gutterDiv, el, lastEl);
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+  <script type="application/javascript">
+  window.quartoScrollableRegionsLabels = {"code":"Scrollable code","output":"Scrollable output"};
+  </script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

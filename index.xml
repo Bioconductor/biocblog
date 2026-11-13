@@ -10,7 +10,165 @@
 <atom:link href="https://blog.bioconductor.org/index.xml" rel="self" type="application/rss+xml"/>
 <description>A blog for the Bioconductor community!</description>
 <generator>quarto-1.11.9</generator>
-<lastBuildDate>Thu, 12 Nov 2026 00:00:00 GMT</lastBuildDate>
+<lastBuildDate>Fri, 13 Nov 2026 00:00:00 GMT</lastBuildDate>
+<item>
+  <title>Introducing PLaMo-based AI translation for Bioconductor lessons</title>
+  <dc:creator>Kozo Nishida</dc:creator>
+  <link>https://blog.bioconductor.org/posts/2026-11-13-ai-translation/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<p>In the <a href="https://blog.bioconductor.org/posts/2026-11-12-japanese-carpentries-workshops/">report on our Japanese workshops</a>, I explained why our Crowdin integration had become difficult to maintain. Keeping executable R Markdown lessons in sync required file conversions, translation synchronisation and reconstruction of buildable lessons. I remain grateful for Crowdin’s support. We are now moving to PLaMo-based AI translation directly in the lesson repositories, with code and markup protected and community review on GitHub.</p>
+<p>I am introducing a new AI-assisted translation workflow in the <a href="https://github.com/bioconductor-translations">bioconductor-translations</a> organisation, built around PLaMo 3 Translate and review on GitHub. The first lesson is <a href="https://carpentries-incubator.github.io/bioc-intro/"><em>Introduction to data analysis with R and Bioconductor</em></a>, with published editions in Japanese, Spanish, Simplified Chinese, French and Urdu. These editions are open for community review and improvement.</p>
+<section id="what-is-plamo-3-translate" class="level2">
+<h2 class="anchored" data-anchor-id="what-is-plamo-3-translate">What is PLaMo 3 Translate?</h2>
+<p>PLaMo 3 Translate is a family of large language models developed by Preferred Networks (PFN) specifically for translation. PFN’s November 5, 2026 technical article, <a href="https://www.preferred.jp/en/blog/tech/plamo-3-translate-weight-release"><em>PLaMo 3 Translate: World-Class Translation with Open Weights—Here’s How We Built It</em></a>, explains the development process and the release of downloadable model weights.</p>
+<p>PFN trains the models on source–translation pairs and further refines them to prefer better translations. Smaller models also learn from the 31B model through distillation. The family supports 53 languages and can take surrounding context and a glossary into account. These features fit our lesson workflow: we can supply nearby explanations and preferred technical terminology when translating a passage.</p>
+<p>The models come in four sizes: 0.8B, 2B, 8B and 31B parameters. Our workflow uses <a href="https://huggingface.co/pfnet/plamo-3-translate-8b-MLX-4bit"><code>pfnet/plamo-3-translate-8b-MLX-4bit</code></a>, the 8B model in a 4-bit MLX format that reduces memory use for local generation on Apple silicon Macs. The model weights are distributed under the PLaMo Community License.</p>
+</section>
+<section id="explore-the-five-language-editions" class="level2">
+<h2 class="anchored" data-anchor-id="explore-the-five-language-editions">Explore the five language editions</h2>
+<p>The introductory lesson covers organising data in spreadsheets, using R and RStudio, manipulating data with <code>dplyr</code>, and visualising data. Each language edition has a lesson website for learners and a repository for contributors:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th style="text-align: left;">Language</th>
+<th style="text-align: left;">Read the lesson</th>
+<th style="text-align: left;">Contribute on GitHub</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Japanese</td>
+<td style="text-align: left;"><a href="https://bioconductor-translations.github.io/bioc-intro-plamo3translate-ja/">Japanese lesson</a></td>
+<td style="text-align: left;"><a href="https://github.com/bioconductor-translations/bioc-intro-plamo3translate-ja">bioc-intro-plamo3translate-ja</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Spanish</td>
+<td style="text-align: left;"><a href="https://bioconductor-translations.github.io/bioc-intro-plamo3translate-es/">Spanish lesson</a></td>
+<td style="text-align: left;"><a href="https://github.com/bioconductor-translations/bioc-intro-plamo3translate-es">bioc-intro-plamo3translate-es</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Simplified Chinese</td>
+<td style="text-align: left;"><a href="https://bioconductor-translations.github.io/bioc-intro-plamo3translate-zh-hans/">Simplified Chinese lesson</a></td>
+<td style="text-align: left;"><a href="https://github.com/bioconductor-translations/bioc-intro-plamo3translate-zh-hans">bioc-intro-plamo3translate-zh-hans</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">French</td>
+<td style="text-align: left;"><a href="https://bioconductor-translations.github.io/bioc-intro-plamo3translate-fr/">French lesson</a></td>
+<td style="text-align: left;"><a href="https://github.com/bioconductor-translations/bioc-intro-plamo3translate-fr">bioc-intro-plamo3translate-fr</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Urdu</td>
+<td style="text-align: left;"><a href="https://bioconductor-translations.github.io/bioc-intro-plamo3translate-ur/">Urdu lesson</a></td>
+<td style="text-align: left;"><a href="https://github.com/bioconductor-translations/bioc-intro-plamo3translate-ur">bioc-intro-plamo3translate-ur</a></td>
+</tr>
+</tbody>
+</table>
+<p>Our Crowdin project also received Portuguese translation contributions, and I am grateful to everyone who contributed them. I am sorry that Portuguese is not included among these editions: the PLaMo translation model we currently use does not support Portuguese, which is absent from its <a href="https://huggingface.co/pfnet/plamo-3-translate-8b#supported-languages">supported-language list</a>.</p>
+<p>Translation coverage and review are still in progress. Some setup pages and interface labels remain in English. At the time of writing, the published Urdu episodes are available, but that repository’s <a href="https://github.com/bioconductor-translations/bioc-intro-plamo3translate-ur/blob/main/translation/config.json">updater configuration</a> and translation guide still refer to Japanese and need adaptation before being used to regenerate Urdu text.</p>
+</section>
+<section id="how-the-translation-system-works" class="level2">
+<h2 class="anchored" data-anchor-id="how-the-translation-system-works">How the translation system works</h2>
+<div id="fig-translation-workflow" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Workflow diagram: English lesson prose either reuses matching translation memory or is translated locally by PLaMo using a glossary and context. Protected code and lesson markup bypass generation. The reassembled lessons undergo structure checks, community review and a build. Reviewed corrections are saved to translation memory." data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-translation-workflow-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="https://blog.bioconductor.org/posts/2026-11-13-ai-translation/translation-workflow.jpg" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="Workflow diagram: English lesson prose either reuses matching translation memory or is translated locally by PLaMo using a glossary and context. Protected code and lesson markup bypass generation. The reassembled lessons undergo structure checks, community review and a build. Reviewed corrections are saved to translation memory." width="1200">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-translation-workflow-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1: Matching passages reuse translation memory; new or changed prose is translated with PLaMo. Protected code and markup rejoin the text before structural checks, community review and a lesson build.
+</figcaption>
+</figure>
+</div>
+<ol type="1">
+<li><strong>Read an English source revision.</strong> The translator reads the upstream lesson’s R Markdown files from a Git revision without checking it out over the translated working files.</li>
+<li><strong>Reuse matching translations.</strong> Each translation repository stores its versioned translation memory in <code>translation/seed-cache.json</code>. This JSON file stores previous translations and review statuses by source passage and episode. Matching records can be reused, while new or changed prose is sent to the model.</li>
+<li><strong>Guide terminology and protect structure.</strong> A language-specific glossary and contextual guidance help disambiguate terms. Code blocks, inline code, link destinations and lesson markup are protected during translation, and structural checks run before lesson files are replaced.</li>
+<li><strong>Review and build.</strong> Maintainers inspect the translated text and memory changes, build the lesson, and commit the reviewed result. The translator itself does not commit or push changes.</li>
+</ol>
+<section id="shared-terminology-in-glossary.json" class="level3">
+<h3 class="anchored" data-anchor-id="shared-terminology-in-glossary.json">Shared terminology in glossary.json</h3>
+<p>Each repository keeps its preferred terminology in <code>translation/glossary.json</code>. For example, the Japanese repository’s <a href="https://github.com/bioconductor-translations/bioc-intro-plamo3translate-ja/blob/main/translation/glossary.json">translation/glossary.json</a> contains <code>source</code> and <code>target</code> term pairs, mapping “data frame” to “データフレーム” and keeping “Bioconductor” unchanged. The translator passes these pairs to the model to guide terminology consistently across episodes. Contributors can propose glossary changes through pull requests. A glossary change requires fresh generation for machine records on the next update; matching <code>reviewed</code> records retain their wording, so terminology corrections must also be applied to the reviewed translation memory where needed.</p>
+</section>
+<section id="update-a-translation-yourself" class="level3">
+<h3 class="anchored" data-anchor-id="update-a-translation-yourself">Update a translation yourself</h3>
+<p>To update a translation yourself, follow <code>translation/README.md</code> in the repository for your language. These documents cover environment setup, fetching the English source, previewing changes, generating translations, reviewing the results and building the lesson:</p>
+<ul>
+<li>Japanese: <a href="https://github.com/bioconductor-translations/bioc-intro-plamo3translate-ja/blob/main/translation/README.md">translation/README.md</a></li>
+<li>Spanish: <a href="https://github.com/bioconductor-translations/bioc-intro-plamo3translate-es/blob/main/translation/README.md">translation/README.md</a></li>
+<li>Simplified Chinese: <a href="https://github.com/bioconductor-translations/bioc-intro-plamo3translate-zh-hans/blob/main/translation/README.md">translation/README.md</a></li>
+<li>French: <a href="https://github.com/bioconductor-translations/bioc-intro-plamo3translate-fr/blob/main/translation/README.md">translation/README.md</a></li>
+</ul>
+<p>For Urdu, the updater configuration and documentation caveat above still applies.</p>
+<p>For example, in the Japanese repository, after configuring the upstream remote as described in its guide, a maintainer can run:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">git</span> fetch upstream main</span>
+<span id="cb1-2"><span class="ex" style="color: null;
+background-color: null;
+font-style: inherit;">uv</span> run <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">--locked</span> scripts/translate.py <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">--source-ref</span> upstream/main <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">--dry-run</span></span>
+<span id="cb1-3"><span class="ex" style="color: null;
+background-color: null;
+font-style: inherit;">uv</span> run <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">--locked</span> scripts/translate.py <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">--source-ref</span> upstream/main <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">--update-memory</span></span>
+<span id="cb1-4"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">git</span> diff <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">--</span> episodes translation</span>
+<span id="cb1-5"><span class="ex" style="color: null;
+background-color: null;
+font-style: inherit;">Rscript</span> scripts/build.R</span></code></pre></div></div>
+<p>The dry run shows which passages can be reused and which need translation, without generating new text or writing lesson files. The <code>--update-memory</code> option saves new translation records to <code>translation/seed-cache.json</code> and source provenance to <code>translation/source-manifest.json</code> for review. The local runtime cache under <code>.cache/translation/</code> is ignored by Git. Other editions may use a different remote name, so follow <code>translation/README.md</code> in the repository you are updating.</p>
+<p>The translator also checks for local edits and stops before overwriting an edited lesson. Small build adaptations are recorded separately with checks against the expected source. Images, datasets and episode ordering still need separate maintenance when the English lesson changes.</p>
+</section>
+</section>
+<section id="local-generation-reusable-community-knowledge" class="level2">
+<h2 class="anchored" data-anchor-id="local-generation-reusable-community-knowledge">Local generation, reusable community knowledge</h2>
+<p>The workflow pins the model revision and locks its Python dependencies, recording the source revision and model provenance with the translation resources.</p>
+<p>Generating new translations with the current implementation requires an Apple silicon Mac, Python 3.12 and <code>uv</code>; the first model download is about 6 GB. Planning updates and replaying cached translations can run with Python 3.12 alone on other platforms. Reading lessons and contributing a review on GitHub require no model installation.</p>
+<p>The translation memory gives community review a lasting role. You can inspect the records in the Japanese translation repository’s <a href="https://github.com/bioconductor-translations/bioc-intro-plamo3translate-ja/blob/main/translation/seed-cache.json">translation/seed-cache.json</a>. Newly generated records are marked <code>machine</code>. After checking a record in <code>translation/seed-cache.json</code>, a reviewer can mark it <code>reviewed</code> so that its wording is retained for matching source text in the same episode and language pair, even when model or glossary settings change. The French translation repository’s <a href="https://github.com/bioconductor-translations/bioc-intro-plamo3translate-fr/blob/main/translation/README.md">translation/README.md</a> explains this review process.</p>
+</section>
+<section id="help-make-the-lessons-better" class="level2">
+<h2 class="anchored" data-anchor-id="help-make-the-lessons-better">Help make the lessons better</h2>
+<p>A successful build shows that the lesson can be rendered, but readers and instructors still need to check its meaning. A translation can sound fluent while changing an exercise condition, using an unfamiliar technical term, or losing an important distinction. The Simplified Chinese translation repository’s <a href="https://github.com/bioconductor-translations/bioc-intro-plamo3translate-zh-hans/blob/main/translation/README.md">translation/README.md</a> explicitly identifies its initial translation memory as machine generated and needing review.</p>
+<p>If you use one of these languages, please try an episode and compare it with the English lesson. We especially welcome help with:</p>
+<ul>
+<li><strong>Language and terminology:</strong> suggest clearer explanations and vocabulary familiar to your local research community.</li>
+<li><strong>Exercises and teaching:</strong> check that questions, solutions and instructor notes preserve the original learning goals.</li>
+<li><strong>Corrections that carry forward:</strong> help maintainers update the glossary, context guidance and translation memory alongside the lesson text.</li>
+</ul>
+<p>Open an issue in the relevant repository with the episode name, the passage you are referring to, and a suggested correction or explanation. Pull requests are welcome too; please follow that repository’s contribution and translation guides. If you are interested in reviewing translations, adding support for another language, or translating another lesson, join the discussion in the #documentation-translation channel on the <a href="https://chat.bioconductor.org/">Bioconductor community chat</a>.</p>
+<p>Thank you to the original lesson authors and maintainers, and to everyone translating, reviewing and teaching these materials. This work builds on the community’s translation efforts described in the Japanese workshop report and is supported by the <a href="https://bioconductor.org/developers/developer-champions-program/">Bioconductor Developer Champions Program</a>.</p>
+
+
+</section>
+
+<p>
+© 2026 Bioconductor. Content is published under <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons CC-BY-4.0 License</a> for the text and <a href="https://opensource.org/licenses/BSD-3-Clause">BSD 3-Clause License</a> for any code. | <a href="https://www.r-bloggers.com">R-Bloggers</a>
+</p> ]]></description>
+  <category>education</category>
+  <category>Carpentries</category>
+  <category>translation</category>
+  <category>AI</category>
+  <guid>https://blog.bioconductor.org/posts/2026-11-13-ai-translation/</guid>
+  <pubDate>Fri, 13 Nov 2026 00:00:00 GMT</pubDate>
+  <media:content url="https://blog.bioconductor.org/posts/2026-11-13-ai-translation/translation-workflow.jpg" medium="image" type="image/jpeg" height="108" width="144"/>
+</item>
 <item>
   <title>Bioconductor Carpentries workshops in Japanese: lessons from Japan</title>
   <dc:creator>Kozo Nishida</dc:creator>
@@ -1488,68 +1646,6 @@ font-style: inherit;">--alpha</span> 0.05</span></code></pre></div></div>
   <guid>https://blog.bioconductor.org/posts/2026-06-19-EuroBioc2026-recap/</guid>
   <pubDate>Fri, 19 Jun 2026 00:00:00 GMT</pubDate>
   <media:content url="https://blog.bioconductor.org/posts/2026-06-19-EuroBioc2026-recap/media/eurobioc-main-image.jpg" medium="image" type="image/jpeg" height="108" width="144"/>
-</item>
-<item>
-  <title>Bioconductor-centric hackathon on spatial omics and image-derived data</title>
-  <dc:creator>Davide Risso</dc:creator>
-  <dc:creator>Helena Crowell</dc:creator>
-  <dc:creator>Wolfgang Huber</dc:creator>
-  <link>https://blog.bioconductor.org/posts/2026-06-17-venice/</link>
-  <description><![CDATA[ 
-
-
-
-
-
-<p>A Bioconductor-centric hackathon dedicated to spatial omics was organized by members of the Bioconductor community – Davide Risso (University of Padua, Italy), Helena Crowell (CNAG Barcelona, Spain), and Wolfgang Huber (EMBL) – on <strong>19-22 April on San Servolo, Italy</strong>, an island off the coast of Venice, facing the Campanile of St.&nbsp;Mark’s Square.</p>
-<p>The hackathon brought together <strong>27 researchers and software developers</strong> – from Germany, Switzerland, Italy, Spain, and the USA – to advance Bioconductor capabilities in spatial data handling and analysis, as well as the related topic of image analysis.</p>
-<p>Participants were invited based on their experience with the hackathon’s research themes and software development, followed by an open call to the Bioconductor community (and beyond). The final group of participants included a mix of early-career and senior researchers, including two <a href="https://scverse.org/">scverse</a> members and one industry researcher, with a range of expertise in spatial omics, image analysis, and software development.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="https://blog.bioconductor.org/posts/2026-06-17-venice/terrace.jpeg" class="img-fluid figure-img"></p>
-<figcaption>Picture time on a terrace overlooking St.&nbsp;Mark’s Square from San Servolo island. (Back:) Elisabeth Purdom, Wolfgang Huber, Pere Moles Serò, Rafael Irizarry, Helena Crowell, Martin Emons, Dario Righelli, Juan Henao, Sean Davis, Gabriele Sales, Mike Smith, Ilaria Billato, Patrick Danaher, Hugo Gruson, Carissa Chen, Daria Lazic, Luca Marconato, Artür Manukyan. (Front:) Davide Risso, Sviatoslav Kharuk, Michael Stadler, Samuel Gunz, Robert Castelo, Charlotte Soneson, Matteo Calgaro, Gabriel Grajeda, Riccardo Ceccaroni.</figcaption>
-</figure>
-</div>
-<p>The hackathon centered on spatial omics and other bioimaging data, with emphasis on data representation, interoperable serialization, scalable data handling, Python interoperability, interactive visualization. The hackathon ran over three days with the majority of the time spent in teams who independently developed and implemented a plan that addressed a challenge or met a goal important to team members.</p>
-<p>On the first day, the participants organized themselves into four major themes:</p>
-<ul>
-<li><strong>Spatially stratified differential expression analysis</strong><br>
-(Matteo Calgaro, Robert Castelo, Patrick Danaher, Pere Moles Serò)</li>
-<li><strong>Image and segmentation data manipulation and visualization</strong><br>
-(Riccardo Ceccaroni, Carissa Chen, Davide Risso, Mike Smith)</li>
-<li><strong>Infrastructure and interoperability of spatial data in Bioconductor</strong><br>
-(Helena Crowell, Martin Emons, Gabriel Grajeda, Hugo Gruson, Samuel Gunz, Rafael Irizarry, Daria Lazic, Luca Marconato, Charlotte Soneson, Michael Stadler)</li>
-<li><strong>Facilitating use of foundation models for the Bioconductor community</strong><br>
-(Ilaria Billato, Juan Henao, Wolfgang Huber, Sviatoslav Kharuk, Artür Manukyan, Elisabeth Purdom, Dario Righelli, Gabriele Sales)</li>
-</ul>
-<p><img src="https://blog.bioconductor.org/posts/2026-06-17-venice/working.jpeg" class="img-fluid"></p>
-<p>Each day started with a brief session in which each team set up goals for the day. Day 1 also included a single slide, five-minute <strong>project plan presentation</strong> right after lunch. This presentation mid-day served to help teams develop a focused project quickly, with the understanding that the project plan would likely change over the next 2 days.</p>
-<p>Days 1 and 2 ended with the opportunity for each team to present their work and challenges they faced that day, again with a one-slide presentation. These <strong>daily afternoon summaries</strong> were helpful to identify shared challenges, crystallize work from the day, and to provide visibility across project teams.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="https://blog.bioconductor.org/posts/2026-06-17-venice/marco.jpeg" class="img-fluid figure-img"></p>
-<figcaption>On the second day, the group journeyed across the water for a stroll through the streets of Venice towards Italian dinner. This group picture was taken on St.&nbsp;Mark’s Square (Piazza San Marco), featuring St.&nbsp;Mark’s Basilica and Campanile (bell tower) in the background.</figcaption>
-</figure>
-</div>
-<p>The hackathon ended with a <strong>concluding showcase</strong> where each team presented their progress and demonstrated their technical achievements. To ensure these developments remain accessible to the community, teams documented their work (code, vignettes, and resources) in a dedicated <strong>GitHub repository</strong>. These results have been synthesized into a <strong>collaborative preprint</strong>, with each group contributing a detailed section summarizing their specific theme and findings.</p>
-<ul>
-<li><a href="https://github.com/BiocCodingCollaborations/VeniceHackathon2026">GitHub repository</a> housing code and resources developed during the hackathon.</li>
-<li><a href="https://doi.org/10.37044/osf.io/9ej32_v1">Collaborative preprint</a> summarizing the format, themes, and outputs of the hackathon.</li>
-</ul>
-<hr>
-<p>The event was organized by the Department of Statistical Sciences of the University of Padova in collaboration with EMBL and Venice International University, funded in part by the European Research Council (ERC) Grant CoG 101171662, and supported by EMBL’s Transversal Theme Theory@EMBL.</p>
-<hr>
-
-
-
-<p>
-© 2026 Bioconductor. Content is published under <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons CC-BY-4.0 License</a> for the text and <a href="https://opensource.org/licenses/BSD-3-Clause">BSD 3-Clause License</a> for any code. | <a href="https://www.r-bloggers.com">R-Bloggers</a>
-</p> ]]></description>
-  <category>events</category>
-  <category>hackathon</category>
-  <guid>https://blog.bioconductor.org/posts/2026-06-17-venice/</guid>
-  <pubDate>Wed, 17 Jun 2026 00:00:00 GMT</pubDate>
-  <media:content url="https://blog.bioconductor.org/posts/2026-06-17-venice/terrace.jpeg" medium="image" type="image/jpeg" height="108" width="144"/>
 </item>
 </channel>
 </rss>
